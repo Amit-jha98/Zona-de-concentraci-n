@@ -67,6 +67,7 @@ export default function App() {
 
   // Feed Mode: 'curated' | 'popular' | 'live'
   const [feedMode, setFeedMode] = useState('curated');
+  const [curatedVideos, setCuratedVideos] = useState(EDUCATIONAL_VIDEOS);
   const [liveVideos, setLiveVideos] = useState(getCachedLiveFeed());
   const [popularVideos, setPopularVideos] = useState(POPULAR_CS_VIDEOS);
   const [subjectVideosCache, setSubjectVideosCache] = useState({});
@@ -75,9 +76,9 @@ export default function App() {
   const [isSearchingLive, setIsSearchingLive] = useState(false);
   const [liveSearchResults, setLiveSearchResults] = useState([]);
   
-  // Continuous Update & Auto-Sync state
+  // Continuous Update & Auto-Sync state: tracks pages per active feed key
   const [autoUpdateEnabled, setAutoUpdateEnabled] = useState(true);
-  const [streamPage, setStreamPage] = useState(1);
+  const [streamPages, setStreamPages] = useState({});
   const [isContinueLoading, setIsContinueLoading] = useState(false);
   const [updateNotification, setUpdateNotification] = useState(null);
 
@@ -324,6 +325,10 @@ export default function App() {
     setBookmarks(updated);
   };
 
+  const currentSubject = activeTab?.subject || 'all';
+  const activeFeedKey = `${feedMode}-${currentSubject}`;
+  const currentStreamPage = streamPages[activeFeedKey] || 1;
+
   // Filter videos for catalog tab
   const catalogVideos = useMemo(() => {
     if (activeTab?.type !== 'catalog') return EDUCATIONAL_VIDEOS;
@@ -333,30 +338,30 @@ export default function App() {
       return liveSearchResults;
     }
 
-    const currentSubject = activeTab.subject || 'all';
+    const currentSubj = activeTab.subject || 'all';
 
     // 2. Base list selection based on active feed mode
     let baseList = [];
     if (feedMode === 'popular') {
       baseList = popularVideos;
     } else if (feedMode === 'live') {
-      baseList = liveVideos.length > 0 ? liveVideos : EDUCATIONAL_VIDEOS;
+      baseList = liveVideos.length > 0 ? liveVideos : curatedVideos;
     } else {
-      baseList = EDUCATIONAL_VIDEOS;
+      baseList = curatedVideos;
     }
 
     // 3. Subject filter
     let list = baseList;
-    if (currentSubject !== 'all') {
-      if (currentSubject === 'gate-special') {
+    if (currentSubj !== 'all') {
+      if (currentSubj === 'gate-special') {
         list = baseList.filter(v => v.gateWeightage && v.gateWeightage.includes('High'));
       } else {
-        list = baseList.filter(v => v.subject === currentSubject);
+        list = baseList.filter(v => v.subject === currentSubj);
       }
 
       // Merge dynamically fetched videos for this subject if present
-      if (subjectVideosCache[currentSubject] && subjectVideosCache[currentSubject].length > 0) {
-        const dynamicItems = subjectVideosCache[currentSubject];
+      if (subjectVideosCache[currentSubj] && subjectVideosCache[currentSubj].length > 0) {
+        const dynamicItems = subjectVideosCache[currentSubj];
         const existingIds = new Set(list.map(v => v.id));
         const nonDuplicateDynamic = dynamicItems.filter(v => !existingIds.has(v.id));
         list = [...list, ...nonDuplicateDynamic];
@@ -365,7 +370,15 @@ export default function App() {
       // Safe Fallback: If current feed has no items for this subject (e.g. recent RSS didn't have COA),
       // seamlessly blend with verified curated lectures so user NEVER encounters an empty 0-lectures state!
       if (list.length === 0) {
-        list = EDUCATIONAL_VIDEOS.filter(v => v.subject === currentSubject);
+        list = EDUCATIONAL_VIDEOS.filter(v => v.subject === currentSubj);
+      }
+    } else {
+      // When on 'all', also merge any dynamic videos fetched for general stream
+      if (subjectVideosCache['all'] && subjectVideosCache['all'].length > 0) {
+        const dynamicItems = subjectVideosCache['all'];
+        const existingIds = new Set(list.map(v => v.id));
+        const nonDuplicateDynamic = dynamicItems.filter(v => !existingIds.has(v.id));
+        list = [...list, ...nonDuplicateDynamic];
       }
     }
 
@@ -375,7 +388,7 @@ export default function App() {
     }
 
     return list;
-  }, [activeTab, feedMode, liveVideos, popularVideos, subjectVideosCache, isSearchingLive, liveSearchResults]);
+  }, [activeTab, feedMode, curatedVideos, liveVideos, popularVideos, subjectVideosCache, isSearchingLive, liveSearchResults]);
 
   // Subject selection with auto-fetch & tab title synchronization
   const handleSelectSubject = useCallback(async (subjId) => {
@@ -414,60 +427,84 @@ export default function App() {
   // Handler for Continuous Update / Load More CS Videos stream
   const handleContinueUpdate = useCallback(async () => {
     setIsContinueLoading(true);
-    const nextPage = streamPage + 1;
-    setStreamPage(nextPage);
+    const activeKey = `${feedMode}-${currentSubject}`;
+    const currentPage = streamPages[activeKey] || 1;
+    const nextPage = currentPage + 1;
 
     try {
-      const currentSubject = activeTab?.subject || 'all';
+      let incoming = [];
 
-      if (feedMode === 'popular') {
-        const morePopular = await fetchPopularCSVideos(nextPage);
-        if (morePopular && morePopular.length > 0) {
+      if (currentSubject !== 'all') {
+        // Fetch next page specifically for this subject
+        incoming = await fetchYouTubeVideosBySubject(currentSubject, nextPage);
+        if (incoming && incoming.length > 0) {
+          setSubjectVideosCache(prev => {
+            const currentList = prev[currentSubject] || [];
+            const existingIds = new Set(currentList.map(v => v.id));
+            const freshItems = incoming.filter(v => !existingIds.has(v.id));
+            return {
+              ...prev,
+              [currentSubject]: [...currentList, ...freshItems]
+            };
+          });
+        }
+      } else if (feedMode === 'popular') {
+        incoming = await fetchPopularCSVideos(nextPage);
+        if (incoming && incoming.length > 0) {
           setPopularVideos(prev => {
             const existingIds = new Set(prev.map(v => v.id));
-            const newItems = morePopular.filter(v => !existingIds.has(v.id));
-            return [...prev, ...newItems];
+            const freshItems = incoming.filter(v => !existingIds.has(v.id));
+            return [...prev, ...freshItems];
           });
-          setVideoCache(prev => {
-            const updated = { ...prev };
-            morePopular.forEach(v => { updated[v.id] = v; });
-            return updated;
-          });
-          setUpdateNotification(`⚡ Stream Updated: Added ${morePopular.length} popular CS masterclasses`);
         }
-      } else if (feedMode === 'live' || currentSubject !== 'all') {
-        const moreSubjectVideos = await fetchYouTubeVideosBySubject(currentSubject, nextPage);
-        if (moreSubjectVideos && moreSubjectVideos.length > 0) {
-          setSubjectVideosCache(prev => ({
-            ...prev,
-            [currentSubject]: [...(prev[currentSubject] || []), ...moreSubjectVideos]
-          }));
-          setVideoCache(prev => {
-            const updated = { ...prev };
-            moreSubjectVideos.forEach(v => { updated[v.id] = v; });
-            return updated;
+      } else if (feedMode === 'live') {
+        incoming = await fetchYouTubeVideosBySubject('all', nextPage);
+        if (incoming && incoming.length > 0) {
+          setLiveVideos(prev => {
+            const existingIds = new Set(prev.map(v => v.id));
+            const freshItems = incoming.filter(v => !existingIds.has(v.id));
+            return [...prev, ...freshItems];
           });
-          setUpdateNotification(`⚡ Stream Updated: Added ${moreSubjectVideos.length} more live lectures`);
         }
       } else {
-        const moreVideos = await fetchYouTubeVideosBySubject('all', nextPage);
-        if (moreVideos && moreVideos.length > 0) {
-          setPopularVideos(prev => [...prev, ...moreVideos]);
-          setVideoCache(prev => {
-            const updated = { ...prev };
-            moreVideos.forEach(v => { updated[v.id] = v; });
-            return updated;
+        // Curated feed mode
+        incoming = await fetchYouTubeVideosBySubject('all', nextPage);
+        if (incoming && incoming.length > 0) {
+          setCuratedVideos(prev => {
+            const existingIds = new Set(prev.map(v => v.id));
+            const freshItems = incoming.filter(v => !existingIds.has(v.id));
+            return [...prev, ...freshItems];
           });
-          setUpdateNotification(`⚡ Stream Updated: Added ${moreVideos.length} CS lectures`);
         }
       }
+
+      // Add to global videoCache so all newly loaded videos play immediately
+      if (incoming && incoming.length > 0) {
+        setVideoCache(prev => {
+          const updated = { ...prev };
+          incoming.forEach(v => { updated[v.id] = v; });
+          return updated;
+        });
+
+        // Update the page counter for this specific active feed
+        setStreamPages(prev => ({
+          ...prev,
+          [activeKey]: nextPage
+        }));
+
+        setUpdateNotification(`✨ Page ${nextPage} Added: +${incoming.length} new CS lectures appended!`);
+        incrementAdShieldStat('adsBlockedCount', incoming.length * 2);
+      } else {
+        setUpdateNotification(`⚡ Stream up to date • Synchronized with YouTube`);
+      }
     } catch (e) {
-      console.warn('Error in continuous stream update:', e);
+      console.warn('Error during continuous stream update:', e);
+      setUpdateNotification(`⚡ Synchronized with YouTube`);
     } finally {
       setIsContinueLoading(false);
       setTimeout(() => setUpdateNotification(null), 4000);
     }
-  }, [streamPage, activeTab?.subject, feedMode]);
+  }, [feedMode, currentSubject, streamPages]);
 
   return (
     <div className={`edubrowse-app ${isFocusMode ? 'theater-active' : ''}`}>
@@ -566,7 +603,7 @@ export default function App() {
             updateNotification={updateNotification}
             onContinueUpdate={handleContinueUpdate}
             isContinueLoading={isContinueLoading}
-            streamPage={streamPage}
+            streamPage={currentStreamPage}
           />
         )}
       </main>

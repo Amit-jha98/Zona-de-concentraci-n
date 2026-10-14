@@ -457,22 +457,103 @@ export const fetchLiveYouTubeSearch = async (query) => {
 /**
  * Map of CS subjects to optimized educational search terms for YouTube
  */
-export const SUBJECT_SEARCH_QUERIES = {
-  coa: 'Computer Organization Architecture COA gate lecture',
-  compiler: 'Compiler Design parsing lexical gate lecture',
-  'digital-logic': 'Digital Logic Design boolean algebra gate',
-  os: 'Operating Systems process scheduling memory gate',
-  dbms: 'DBMS Database normalization SQL transaction gate',
-  networks: 'Computer Networks subnetting TCP IP gate',
-  toc: 'Theory of Computation Automata DFA Turing gate',
-  'discrete-math': 'Discrete Mathematics Linear Algebra gate',
-  'system-design': 'System Design distributed systems interview',
-  'interview-prep': 'coding interview preparation leetcode sde sheet',
-  'soft-skills': 'communication skills software engineer behavioral interview',
-  motivation: 'gate cs motivation engineering consistency study routine',
-  'gate-special': 'GATE Computer Science preparation PYQ marathon',
-  algorithms: 'Data Structures and Algorithms lecture gate',
-  all: 'computer science lecture gate'
+export const SUBJECT_PAGE_VARIATIONS = {
+  coa: [
+    'Computer Organization Architecture COA gate lecture',
+    'COA cache memory direct set associative mapping gate numericals',
+    'COA instruction pipelining hazards speedup operand forwarding gate pyq',
+    'COA addressing modes memory interleaving instruction cycle gate',
+    'Computer Organization microarchitecture CPU design ALU datapath'
+  ],
+  compiler: [
+    'Compiler Design parsing lexical gate lecture',
+    'Compiler Design first and follow LL1 parser gate pyq',
+    'Compiler Design LR0 SLR1 LALR1 CLR1 parsing conflicts gate',
+    'Compiler Design syntax directed translation SDT intermediate code'
+  ],
+  'digital-logic': [
+    'Digital Logic Design boolean algebra gate',
+    'Digital Logic K-Map minimization SOP POS gate pyq',
+    'Digital Logic multiplexers decoders combinational circuits gate',
+    'Digital Logic flip-flops counters sequential circuits state machines'
+  ],
+  os: [
+    'Operating Systems process scheduling memory gate',
+    'Operating Systems semaphores synchronization deadlocks Banker algorithm',
+    'Operating Systems paging virtual memory TLB hit ratio numericals gate',
+    'Operating Systems disk scheduling thread synchronization mutex'
+  ],
+  dbms: [
+    'DBMS Database normalization SQL transaction gate',
+    'DBMS candidate key closure 1NF 2NF 3NF BCNF decomposition gate',
+    'DBMS transaction ACID serializability conflict schedule 2PL',
+    'DBMS B-Tree B+ Tree indexing relational algebra gate pyq'
+  ],
+  networks: [
+    'Computer Networks subnetting TCP IP gate',
+    'Computer Networks CIDR subnet mask numericals IP addressing gate',
+    'Computer Networks sliding window Stop-and-Wait GBN Selective Repeat',
+    'Computer Networks TCP 3-way handshake congestion control routing'
+  ],
+  toc: [
+    'Theory of Computation Automata DFA Turing gate',
+    'Theory of Computation minimal DFA construction regular languages gate',
+    'Theory of Computation PDA context free grammar pumping lemma',
+    'Theory of Computation Turing machine decidability Halting problem'
+  ],
+  'discrete-math': [
+    'Discrete Mathematics Linear Algebra gate',
+    'Discrete Mathematics propositional first order logic validity gate',
+    'Discrete Mathematics combinatorics graph theory planarity chromatic',
+    'Discrete Mathematics eigenvalues eigenvectors rank linear systems'
+  ],
+  'system-design': [
+    'System Design distributed systems interview',
+    'System Design microservices load balancing caching Redis CDN',
+    'System Design database sharding replication CAP theorem',
+    'System Design high level architecture rate limiter URL shortener'
+  ],
+  'interview-prep': [
+    'coding interview preparation leetcode sde sheet',
+    'blind 75 leetcode medium hard dynamic programming graph patterns',
+    'take U forward striver SDE sheet roadmap placement interview',
+    'neetcode 150 algorithms mock interview FAANG coding round'
+  ],
+  'soft-skills': [
+    'communication skills software engineer behavioral interview',
+    'STAR method behavioral interview engineering examples',
+    'technical presentation skills public speaking software engineering',
+    'senior software engineer communication code review articulation'
+  ],
+  motivation: [
+    'gate cs motivation engineering consistency study routine',
+    'how to code every day avoid programmer burnout deep work',
+    'engineering discipline consistency exam focus motivation',
+    'how to overcome tech imposter syndrome software developer mindset'
+  ],
+  'gate-special': [
+    'GATE Computer Science preparation PYQ marathon',
+    'GATE CS high yield revision previous year questions solved',
+    'GATE CS 100 marks full subject marathon revision'
+  ],
+  algorithms: [
+    'Data Structures and Algorithms lecture gate',
+    'Dynamic programming memoization tabulation graph algorithms dijkstra',
+    'Binary search trees heaps sorting asymptotic analysis master theorem',
+    'Divide and conquer greedy algorithms backtracking algorithms gate'
+  ],
+  all: [
+    'computer science lecture gate',
+    'computer science engineering full course masterclass',
+    'data structures algorithms operating systems database marathon',
+    'top computer science lectures university MIT Harvard Stanford'
+  ]
+};
+
+export const getSubjectPagedQuery = (subjectId = 'coa', page = 1) => {
+  const variations = SUBJECT_PAGE_VARIATIONS[subjectId] || SUBJECT_PAGE_VARIATIONS.all;
+  const index = Math.max(0, page - 1) % variations.length;
+  return variations[index];
 };
 
 /**
@@ -526,11 +607,10 @@ export const parseYouTubeSearchHTML = (html, defaultSubject = 'algorithms') => {
 
 /**
  * Fetches real-time YouTube videos dynamically targeted to a specific subject
- * Eliminates the empty 0-lectures state!
+ * Eliminates the empty 0-lectures state and supports continuous pagination!
  */
 export const fetchYouTubeVideosBySubject = async (subjectId = 'coa', page = 1) => {
-  const query = SUBJECT_SEARCH_QUERIES[subjectId] || `${subjectId} computer science lecture`;
-  const pagedQuery = page > 1 ? `${query} part ${page}` : query;
+  const pagedQuery = getSubjectPagedQuery(subjectId, page);
 
   try {
     const searchUrl = `/api/yt-search/results?search_query=${encodeURIComponent(pagedQuery)}`;
@@ -562,6 +642,15 @@ export const fetchYouTubeVideosBySubject = async (subjectId = 'coa', page = 1) =
   return EDUCATIONAL_VIDEOS.filter(v => v.subject === subjectId);
 };
 
+const POPULAR_PAGED_QUERIES = [
+  'computer science full course masterclass lecture',
+  'computer science engineering gate comprehensive lecture',
+  'data structures algorithms system design complete course',
+  'operating systems computer networks database full lecture',
+  'computer organization compiler design theory of computation lecture',
+  'coding interview leetcode sde preparation masterclass'
+];
+
 /**
  * Fetches popular, iconic CS masterclasses with pagination/continue update
  */
@@ -570,9 +659,10 @@ export const fetchPopularCSVideos = async (page = 1) => {
     return POPULAR_CS_VIDEOS;
   }
 
-  // On page > 1, fetch additional popular/top-rated CS masterclasses from YouTube
+  // On page > 1, fetch additional popular/top-rated CS masterclasses from YouTube using rotating queries
   try {
-    const pagedQuery = `computer science full course masterclass lecture episode ${page}`;
+    const queryIndex = (page - 2) % POPULAR_PAGED_QUERIES.length;
+    const pagedQuery = POPULAR_PAGED_QUERIES[queryIndex];
     const searchUrl = `/api/yt-search/results?search_query=${encodeURIComponent(pagedQuery)}`;
     const res = await fetch(searchUrl, {
       headers: { 'Accept-Language': 'en-US,en;q=0.9' },

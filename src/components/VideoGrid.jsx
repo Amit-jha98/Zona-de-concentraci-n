@@ -335,20 +335,36 @@ export default function VideoGrid({
 
           {/* Continue Update / Continuous Load More Stream Bar */}
           <div className="continue-update-stream-container">
+            <div className="continue-stream-stats">
+              <span className="stats-dot"></span>
+              <span>Showing <strong>{videos.length} Lectures</strong> across <strong>Page {streamPage}</strong></span>
+            </div>
+
             <button
+              id="btn-continue-update"
               onClick={onContinueUpdate}
               disabled={isContinueLoading}
-              className="continue-update-btn"
+              className={`continue-update-btn ${isContinueLoading ? 'loading' : ''}`}
               title="Continuously fetch and update the feed with more YouTube CS lectures"
             >
               <RefreshCw className={`w-4 h-4 text-emerald-400 ${isContinueLoading ? 'animate-spin' : ''}`} />
               <span>
                 {isContinueLoading 
-                  ? 'Fetching More YouTube CS Lectures...' 
+                  ? `Syncing Page ${streamPage + 1} with YouTube...` 
                   : '⚡ Continue Updating • Load More CS Videos'}
               </span>
-              <span className="page-counter-badge">Page {streamPage}</span>
+              <span className="page-counter-badge">
+                {isContinueLoading ? 'Loading...' : `Page ${streamPage}`}
+              </span>
             </button>
+
+            {updateNotification && (
+              <div className="stream-update-alert">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
+                <span>{updateNotification}</span>
+              </div>
+            )}
+
             <p className="continue-update-subtext">
               Continuous live stream active • Real-time YouTube educational sync with AdShield privacy protection
             </p>
