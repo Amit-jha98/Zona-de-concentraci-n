@@ -1,6 +1,6 @@
 # EduBrowse CS
 
-A React learning app for computer science, interview preparation, communication skills, and GATE CS. The interface uses a familiar video grid, search, a study sidebar on desktop, and bottom navigation on mobile.
+A React learning app for computer science, exam and interview preparation, soft skills, lifestyle and self-improvement, and music. The interface uses a familiar video grid, search, a study sidebar on desktop, and bottom navigation on mobile.
 
 ## Run locally
 
@@ -25,6 +25,8 @@ npm start
 
 The production server defaults to http://127.0.0.1:4173. Serving only `dist/` from an unrelated static server does **not** provide the backend features.
 
+For **Vercel**, deploy this same repository with the committed `vercel.json` and `npm run build:vercel`. Connect a **Private Vercel Blob store** and configure `CRON_SECRET`, then redeploy. The serverless API prepares files within the request, stores media and manifests in Blob, and redirects file saves to signed storage URLs. See [the exact Vercel setup and verification steps](docs/VERCEL_SETUP.md). The deployed site is not updated by editing this local workspace.
+
 ## YouTube discovery and updates
 
 - Search and subject pages query YouTube across creators, rather than cycling a fixed video array.
@@ -32,7 +34,12 @@ The production server defaults to http://127.0.0.1:4173. Serving only `dist/` fr
 - Without a key, the server uses yt-dlp’s YouTube search implementation. Local search ranges are bounded at 1,000 results per query to keep requests controlled.
 - With a YouTube Data API key, the server uses official search cursors and hydrates actual durations, view counts and embed availability. Language preference uses this provider.
 - “Newest” sorts searches by upload date. Automatic refresh runs at the selected interval while the app is open and visible, and checks when connectivity or visibility returns.
-- The home feed refreshes YouTube RSS feeds from six educational channels. MIT uploads are filtered for computing and relevant mathematics. This feed is explicitly narrower than search.
+- The homepage includes live music, institutional lifestyle/self-improvement and soft-skills sections, plus recent uploads from six learning channels and the CS starter library. Each live section refreshes while the app is open, using the selected refresh interval.
+- Lifestyle and self-improvement searches original **TED, YaleCourses and Royal Institution** channels. Videos must match relevant topics and last at least five minutes; Shorts, reels, compilations, impersonated channel names and unverified reuploads are excluded. The interface offers Habits, Focus, Learning, Sleep, Stress and Happiness topic filters. The channel registry and its primary references are in `shared/selfImprovement.js`. Publisher identity and duration are checked again before playback/download; this is a publisher/format filter, not a claim that every talk has been editorially reviewed.
+- Each institutional channel has its own real pagination cursor. Results are interleaved across publishers; a failed source can retry without restarting exhausted ones. Without an API key, channel search pages are relevance ranked; the Newest option sorts available dates within loaded results and explains this limitation. The old motivation category link resolves to the replacement.
+- A shared content policy filters both search providers and every channel feed. Only CS (including its mathematical foundations), exam preparation, approved self-improvement, soft skills and music qualify. Explicitly unrelated queries are rejected before contacting YouTube. Ambiguous queries still search, but do not approve their results.
+- Direct links and downloads require server-side metadata approval. Cached bookmarks cannot bypass this check, and playback waits for approval. Music with an ambiguous title can be identified using YouTube's music category. Unverifiable videos do not play. Old saved/history items outside the categories are hidden without deleting the underlying backup data.
+- Filtering uses title and category evidence, not the actual audio/video contents. It is conservative and can exclude legitimate videos or misclassify misleading metadata; it is not a parental-control system. YouTube controls its embedded player and external website.
 - Identical requests share in-flight work; successful results are cached briefly. Network, quota and setup failures are shown as failures, never relabelled as fresh videos.
 
 YouTube determines search coverage, regional availability and result limits. This app cannot enumerate or guarantee every video on the platform. The starter library is labelled separately from live results. Updates require a running server and connection; they are not push notifications or a background service when the app is closed.
@@ -48,9 +55,15 @@ FFMPEG_PATH=
 
 Do not prefix a server key with `VITE_`. A key entered in Settings is kept in session storage, sent in a request header to this app’s backend, then used only for Google’s YouTube API. It is excluded from study backups.
 
+## Mobile playback
+
+- Fullscreen from the app or YouTube player requests landscape orientation on touch devices. Exiting restores portrait where the browser permits it and releases the orientation lock. The app fullscreen view has a dedicated exit control and respects device safe areas.
+- While video plays (including buffering after playback starts), a screen wake lock prevents automatic screen sleep. Pausing, ending, errors, leaving the player or hiding the page releases it. Returning to a visible page reacquires it if playback is still active.
+- These features use browser APIs on HTTPS (including Vercel) or localhost. Browser/OS support, rotation settings and battery restrictions can prevent orientation or wake locking; playback continues normally when a request is denied. Native iPhone fullscreen inside YouTube is controlled by Safari and cannot be forced by the parent app.
+
 ## GATE CS preparation
 
-The supplied [CS_GATE2027_Syllabus.pdf](public/CS_GATE2027_Syllabus.pdf) is the source for the track. The app contains **146 individual lessons across all 10 supplied sections**, each with:
+**146 individual lessons across all 10 supplied sections**, each with:
 
 - Three concept explanations and a key relationship.
 - A step-by-step worked example and a common misconception.
@@ -79,6 +92,8 @@ The verifier fills missing entries or entries whose queries changed. Live search
 The Download action creates a real server-side job. It chooses the best available quality up to 360p, 720p or 1080p, downloads audio and video, and uses FFmpeg to merge separate streams into a file.
 
 The queue supports progress, cancellation, two concurrent transfers and a bounded pending queue. Completed files have a separate **Save file** action that returns actual media bytes. Job metadata survives server restarts; interrupted transfers report that they need retrying.
+
+That persistent queue is for local hosting. On Vercel, preparation is awaited before reporting completion, media and job manifests are stored in private Blob storage, and Save file redirects to a short-lived signed URL. The cloud path is bounded to 150 MiB merged media and 270 seconds of preparation, with lower per-source-stream bounds for safe merging. It does not depend on instance memory or persistent local disk. See [Vercel setup](docs/VERCEL_SETUP.md) for prerequisites, expiration and upstream limitations.
 
 Files live in ignored `.downloads/`, with a 24-hour cleanup policy. Transfers have a 30-minute timeout, a source-duration limit and a per-stream file-size limit. Private, restricted or rate-limited videos can fail; errors remain visible. Download only videos you own or have permission to save. YouTube’s own offline viewing is available through its supported services.
 
@@ -111,6 +126,8 @@ Live verification scripts are separate from deterministic tests:
 node scripts/check-live.mjs --record
 node scripts/check-channels.mjs
 node scripts/check-download.mjs
+node scripts/check-content.mjs --record
+node scripts/check-self-improvement.mjs --record
 ```
 
 See [the audit and verification notes](docs/PROJECT_AUDIT.md). Format source using `npm run format`.

@@ -19,6 +19,8 @@ import {
   Home,
   Menu,
   MessageSquare,
+  Music2,
+  Sprout,
   Monitor,
   Search,
   Settings,
@@ -36,7 +38,8 @@ import {
   settingsValid,
 } from "./services/stateValidation.js";
 import { extractVideoId, uniqueVideos } from "../shared/video.js";
-import { CATEGORIES, STARTER_VIDEOS } from "./data/library.js";
+import { allowedVideos, isAllowedVideo } from "../shared/contentPolicy.js";
+import { CATEGORIES, STARTER_VIDEOS, getCategory } from "./data/library.js";
 import { GATE_LESSONS } from "./data/gate/index.js";
 import { api, getApiKey, setApiKey } from "./services/api.js";
 import Discovery from "./components/Discovery.jsx";
@@ -91,10 +94,9 @@ export default function App() {
   );
   const [videoCache, setVideoCache] = useState(() =>
     Object.fromEntries(
-      uniqueVideos([...STARTER_VIDEOS, ...saved, ...history]).map((v) => [
-        v.id,
-        v,
-      ]),
+      allowedVideos(
+        uniqueVideos([...STARTER_VIDEOS, ...saved, ...history]),
+      ).map((v) => [v.id, v]),
     ),
   );
   const [search, setSearch] = useState(
@@ -125,7 +127,7 @@ export default function App() {
   );
   const onSave = useCallback(
     (video) => {
-      if (!video?.id) return;
+      if (!video?.id || !isAllowedVideo(video)) return;
       setSaved((prev) =>
         prev.some((v) => v.id === video.id)
           ? prev.filter((v) => v.id !== video.id)
@@ -139,6 +141,7 @@ export default function App() {
   );
   const recordWatch = useCallback(
     (video, position, duration, ended = false) => {
+      if (!isAllowedVideo(video)) return;
       setHistory((prev) =>
         [
           {
@@ -236,7 +239,7 @@ export default function App() {
   const currentVideo = route.path.startsWith("/watch/")
     ? route.path.split("/")[2]
     : null;
-  const activeCategory = route.params.category || "all";
+  const activeCategory = getCategory(route.params.category)?.id || "all";
   const completed = GATE_LESSONS.filter(
     (l) => progress[l.id]?.completed,
   ).length;
@@ -265,13 +268,25 @@ export default function App() {
       icon: MessageSquare,
       active: activeCategory === "soft-skills",
     },
+    {
+      path: "/?category=self-improvement",
+      label: "Lifestyle & self-improvement",
+      icon: Sprout,
+      active: activeCategory === "self-improvement",
+    },
+    {
+      path: "/?category=music",
+      label: "Music & songs",
+      icon: Music2,
+      active: activeCategory === "music",
+    },
   ];
   const libraryItems = [
     {
       path: "/saved",
       label: "Saved videos",
       icon: Bookmark,
-      count: saved.length,
+      count: allowedVideos(saved).length,
     },
     { path: "/history", label: "Watch history", icon: Clock3 },
     {
@@ -516,14 +531,20 @@ export default function App() {
             ) : ["/saved", "/history"].includes(route.path) ? (
               <Library
                 type={route.path.slice(1)}
-                videos={route.path === "/saved" ? saved : history}
+                videos={allowedVideos(
+                  route.path === "/saved" ? saved : history,
+                )}
                 saved={saved}
                 onSave={onSave}
                 onPlay={onPlay}
                 clearHistory={() => setHistory([])}
               />
             ) : route.path === "/downloads" ? (
-              <Downloads jobs={jobs} setJobs={setJobs} notify={notify} />
+              <Downloads
+                jobs={allowedVideos(jobs)}
+                setJobs={setJobs}
+                notify={notify}
+              />
             ) : ["/", "/search"].includes(route.path) ? (
               <Discovery
                 key={`${route.path}:${activeCategory}:${route.params.q || ""}`}
@@ -533,7 +554,7 @@ export default function App() {
                 onPlay={onPlay}
                 settings={settings}
                 progress={progress}
-                history={history}
+                history={allowedVideos(history)}
                 revision={revision}
               />
             ) : (

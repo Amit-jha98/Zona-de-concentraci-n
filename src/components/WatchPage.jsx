@@ -7,7 +7,9 @@ import {
   Download,
   FileText,
   LoaderCircle,
+  Maximize,
   Maximize2,
+  Minimize,
   Play,
   Share2,
   AlertCircle,
@@ -20,6 +22,15 @@ import { rankRelated, formatDuration, VIDEO_ID } from "../../shared/video.js";
 import { downloadText } from "../services/storage.js";
 import VideoCard from "./ui/VideoCard.jsx";
 import Dialog from "./ui/Dialog.jsx";
+import {
+  createPlaybackWakeLock,
+  createPlayerFullscreen,
+} from "../services/playerEnvironment.js";
+import {
+  allowedVideos,
+  isAllowedVideo,
+  CONTENT_SCOPE_MESSAGE,
+} from "../../shared/contentPolicy.js";
 
 let iframeApi;
 function loadYouTubeAPI() {
@@ -79,13 +90,21 @@ export default function WatchPage({
     VIDEO_ID.test(id || "") ? "" : "This is not a valid YouTube video ID.",
   );
   const [playerError, setPlayerError] = useState("");
+  const [verifiedId, setVerifiedId] = useState(null);
+  const [errorCode, setErrorCode] = useState("");
+  const [verificationRevision, setVerificationRevision] = useState(0);
   const [ready, setReady] = useState(false);
   const [theater, setTheater] = useState(false);
+  const [fullscreen, setFullscreen] = useState(false);
+  const [fullscreenAvailable, setFullscreenAvailable] = useState(false);
   const [notesOpen, setNotesOpen] = useState(false);
   const [draft, setDraft] = useState("");
   const [playerRevision, setPlayerRevision] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const mountRef = useRef(null);
+  const frameRef = useRef(null);
+  const wakeLockRef = useRef(null);
+  const fullscreenRef = useRef(null);
   const playerRef = useRef(null);
   const videoRef = useRef(video);
   const watchRef = useRef(recordWatch);
@@ -93,13 +112,19 @@ export default function WatchPage({
     videoRef.current = video;
     watchRef.current = recordWatch;
   }, [video, recordWatch]);
-  const [hadInitialMetadata] = useState(Boolean(known));
   const resume = useRef(history.find((v) => v.id === id)?.position || 0);
   const playing = useRef(false);
+  const setPlaybackActive = useCallback((value) => {
+    playing.current = value;
+    wakeLockRef.current?.setPlaying(value);
+  }, []);
   const lesson = LESSON_BY_ID[lessonId];
   const isSaved = saved.some((v) => v.id === id);
   const currentNotes = notes[id] || [];
-  const related = rankRelated(video || { id }, Object.values(videoCache));
+  const related = rankRelated(
+    video || { id },
+    allowedVideos(Object.values(videoCache)),
+  );
   useEffect(() => {
     const controller = new AbortController();
     if (!VIDEO_ID.test(id || "")) {
@@ -107,19 +132,68 @@ export default function WatchPage({
     }
     api(`/video/${id}`, { signal: controller.signal })
       .then((item) => {
+        if (controller.signal.aborted) return;
+        if (item.id !== id || !isAllowedVideo(item)) {
+          const error = new Error(CONTENT_SCOPE_MESSAGE);
+          error.code = "CONTENT_NOT_ALLOWED";
+          throw error;
+        }
         setVideo((v) => ({ ...v, ...item }));
         cacheVideo(item);
+        setVerifiedId(id);
+        setError("");
       })
       .catch((e) => {
-        if (!controller.signal.aborted && !hadInitialMetadata)
+        if (!controller.signal.aborted) {
           setError(e.message);
+          setErrorCode(e.code || "VIDEO_UNAVAILABLE");
+          setVerifiedId(null);
+        }
       });
     return () => controller.abort();
-  }, [id, cacheVideo, hadInitialMetadata]);
+  }, [id, cacheVideo, verificationRevision]);
   useEffect(() => {
-    if (!VIDEO_ID.test(id || "")) return;
+    if (verifiedId !== id || !frameRef.current) return;
+    const wakeLock = createPlaybackWakeLock({ document, navigator, window });
+    const presentation = createPlayerFullscreen({
+      frame: frameRef.current,
+      document,
+      window,
+      navigator,
+      screen: window.screen,
+      onChange: setFullscreen,
+    });
+    wakeLockRef.current = wakeLock;
+    fullscreenRef.current = presentation;
+    setFullscreenAvailable(presentation.supported);
+    return () => {
+      wakeLockRef.current = null;
+      fullscreenRef.current = null;
+      wakeLock.destroy();
+      presentation.destroy();
+    };
+  }, [id, playerRevision, verifiedId]);
+  useEffect(() => {
+    if (!VIDEO_ID.test(id || "") || verifiedId !== id) return;
     let cancelled = false,
+      rejected = false,
       timer;
+    const checkPlayerVideo = () => {
+      if (rejected) return false;
+      const actualId = playerRef.current?.getVideoData?.()?.video_id;
+      if (actualId && actualId !== id) {
+        rejected = true;
+        setPlaybackActive(false);
+        playerRef.current?.stopVideo?.();
+        setVerifiedId(null);
+        setErrorCode("CONTENT_NOT_ALLOWED");
+        setError(
+          "Open videos from EduBrowse so their content can be checked before playback.",
+        );
+        return false;
+      }
+      return true;
+    };
     loadYouTubeAPI()
       .then((YT) => {
         if (cancelled || !mountRef.current) return;
@@ -133,6 +207,7 @@ export default function WatchPage({
           playerVars: {
             autoplay: 0,
             playsinline: 1,
+            fs: 1,
             rel: 0,
             origin: window.location.origin,
             start: Math.floor(resume.current),
@@ -142,8 +217,11 @@ export default function WatchPage({
               if (!cancelled) setReady(true);
             },
             onStateChange: (event) => {
-              if (cancelled) return;
-              playing.current = event.data === YT.PlayerState.PLAYING;
+              if (cancelled || !checkPlayerVideo()) return;
+              setPlaybackActive(
+                event.data === YT.PlayerState.PLAYING ||
+                  (event.data === YT.PlayerState.BUFFERING && playing.current),
+              );
               if (playing.current && videoRef.current)
                 watchRef.current(
                   videoRef.current,
@@ -160,7 +238,7 @@ export default function WatchPage({
             },
             onError: (event) => {
               if (cancelled) return;
-              playing.current = false;
+              setPlaybackActive(false);
               setPlayerError(
                 [101, 150].includes(event.data)
                   ? "The creator disabled embedded playback. Watch this lecture on YouTube."
@@ -174,7 +252,12 @@ export default function WatchPage({
           },
         });
         timer = setInterval(() => {
-          if (!playing.current || !playerRef.current?.getCurrentTime) return;
+          if (
+            !playing.current ||
+            !playerRef.current?.getCurrentTime ||
+            !checkPlayerVideo()
+          )
+            return;
           const position = playerRef.current.getCurrentTime(),
             duration = playerRef.current.getDuration();
           setCurrentTime(position);
@@ -188,11 +271,18 @@ export default function WatchPage({
     return () => {
       cancelled = true;
       clearInterval(timer);
-      playing.current = false;
+      setPlaybackActive(false);
       if (playerRef.current?.destroy) playerRef.current.destroy();
       playerRef.current = null;
     };
-  }, [id, playerRevision]);
+  }, [id, playerRevision, verifiedId, setPlaybackActive]);
+  const toggleFullscreen = async () => {
+    const success = await fullscreenRef.current?.toggle();
+    if (success === false)
+      notify(
+        "Fullscreen is unavailable. Try the fullscreen button inside the YouTube player.",
+      );
+  };
   const share = async () => {
     const url = `https://www.youtube.com/watch?v=${id}`;
     try {
@@ -234,24 +324,38 @@ export default function WatchPage({
       ].join("\n"),
     );
   const closeNotes = useCallback(() => setNotesOpen(false), []);
-  if (error && !video)
+  if (error)
     return (
       <div className="empty-state">
         <AlertCircle size={32} />
-        <h1>Video unavailable</h1>
+        <h1>
+          {errorCode === "CONTENT_NOT_ALLOWED"
+            ? "Video outside your categories"
+            : "Video unavailable"}
+        </h1>
         <p>{error}</p>
-        <a
-          className="button"
-          href={`https://www.youtube.com/watch?v=${id}`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Check on YouTube
-          <ArrowUpRight size={16} />
-        </a>
+        {errorCode !== "CONTENT_NOT_ALLOWED" && VIDEO_ID.test(id || "") && (
+          <button
+            className="button"
+            onClick={() => {
+              setError("");
+              setVerificationRevision((v) => v + 1);
+            }}
+          >
+            Retry
+          </button>
+        )}
         <button className="text-button" onClick={() => navigate("/")}>
           Back to explore
         </button>
+      </div>
+    );
+  if (verifiedId !== id)
+    return (
+      <div className="empty-state" role="status">
+        <LoaderCircle size={28} className="spin" />
+        <h1>Checking video</h1>
+        <p>Checking that this video belongs to your allowed categories.</p>
       </div>
     );
   return (
@@ -277,8 +381,18 @@ export default function WatchPage({
       </div>
       <div className="watch-layout">
         <div className="watch-main">
-          <div className="player-frame">
+          <div className="player-frame" ref={frameRef}>
             <div ref={mountRef} className="youtube-mount" />
+            <div className="fullscreen-toolbar">
+              <button
+                className="fullscreen-exit"
+                onClick={toggleFullscreen}
+                aria-label="Exit fullscreen"
+              >
+                <Minimize size={20} />
+                Exit fullscreen
+              </button>
+            </div>
             {!ready && !playerError && (
               <div className="player-loading">
                 <LoaderCircle size={28} className="spin" />
@@ -323,7 +437,7 @@ export default function WatchPage({
               </span>
               <div>
                 <strong>{video?.channel || "YouTube"}</strong>
-                <span>Educational video · YouTube</span>
+                <span>Video · YouTube</span>
               </div>
             </div>
             <div className="watch-actions">
@@ -348,6 +462,19 @@ export default function WatchPage({
                 <Download size={17} />
                 Download
               </button>
+              {fullscreenAvailable && (
+                <button
+                  className="icon-button"
+                  disabled={!ready || Boolean(playerError)}
+                  onClick={toggleFullscreen}
+                  aria-label={
+                    fullscreen ? "Exit fullscreen" : "Enter fullscreen"
+                  }
+                  title={fullscreen ? "Exit fullscreen" : "Fullscreen"}
+                >
+                  {fullscreen ? <Minimize size={18} /> : <Maximize size={18} />}
+                </button>
+              )}
               <button
                 className="icon-button desktop-only"
                 onClick={() => setTheater(!theater)}

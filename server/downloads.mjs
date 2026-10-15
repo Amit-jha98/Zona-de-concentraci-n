@@ -11,8 +11,14 @@ import {
 } from "node:fs/promises";
 import { resolve, basename, sep } from "node:path";
 import { randomUUID } from "node:crypto";
-import { downloaderPath, runTool, ServiceError } from "./youtube.mjs";
+import {
+  downloaderPath,
+  runTool,
+  ServiceError,
+  videoMetadata,
+} from "./youtube.mjs";
 import { VIDEO_ID } from "../shared/video.js";
+import { ffmpegPath, ffmpegLocationArgs, mediaFormat } from "./media-tools.mjs";
 
 const directory = resolve(process.env.DOWNLOAD_DIRECTORY || ".downloads");
 const jobs = new Map();
@@ -99,7 +105,7 @@ export async function downloadStatus() {
     const version = (await runTool(["--version"], { timeout: 5000 })).trim();
     let ffmpeg = false;
     try {
-      await execFileAsync(process.env.FFMPEG_PATH || "ffmpeg", ["-version"], {
+      await execFileAsync(ffmpegPath(), ["-version"], {
         windowsHide: true,
         timeout: 5000,
         maxBuffer: 100000,
@@ -110,6 +116,7 @@ export async function downloadStatus() {
     }
     return {
       available: true,
+      mode: "local",
       version,
       ffmpeg,
       message: ffmpeg
@@ -119,14 +126,14 @@ export async function downloadStatus() {
   } catch {
     return {
       available: false,
+      mode: "local",
       message:
         "Run npm run setup:downloads in the project folder to enable video downloads and keyless search.",
     };
   }
 }
 
-export async function createDownload(videoId, quality = "720") {
-  await initializeDownloads();
+export async function createDownload(videoId, quality = "720", key = "") {
   if (
     !VIDEO_ID.test(videoId || "") ||
     !["360", "720", "1080"].includes(quality)
@@ -136,6 +143,8 @@ export async function createDownload(videoId, quality = "720") {
       400,
       "INVALID_DOWNLOAD",
     );
+  await videoMetadata(videoId, key);
+  await initializeDownloads();
   if (!(await downloadStatus()).available)
     throw new ServiceError(
       "Download helper is not installed. Run npm run setup:downloads, then retry.",
@@ -211,15 +220,13 @@ function drain() {
       `node:${process.execPath}`,
       "--merge-output-format",
       "mp4",
-      ...(process.env.FFMPEG_PATH
-        ? ["--ffmpeg-location", process.env.FFMPEG_PATH]
-        : []),
+      ...ffmpegLocationArgs(),
       "--max-filesize",
       "2G",
       "--match-filters",
       "duration <= 18000 & !is_live",
       "-f",
-      `bestvideo[ext=mp4][height<=${job.quality}]+bestaudio[ext=m4a]/best[ext=mp4][height<=${job.quality}]/bestvideo[height<=${job.quality}]+bestaudio/best[height<=${job.quality}]`,
+      mediaFormat(job.quality),
       "-o",
       output,
       "--",
@@ -295,7 +302,7 @@ export async function getDownload(id) {
     );
   return publicJob(job);
 }
-export async function getDownloadFile(id) {
+export async function getDownloadFile(id, key = "") {
   await initializeDownloads();
   const job = jobs.get(id);
   if (
@@ -307,6 +314,7 @@ export async function getDownloadFile(id) {
       "The file is not ready. Wait for the download to finish.",
       404,
     );
+  await videoMetadata(job.videoId, key);
   return {
     path: job.file,
     size: (await stat(job.file)).size,

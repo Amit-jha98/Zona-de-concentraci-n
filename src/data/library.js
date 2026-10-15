@@ -1,8 +1,22 @@
+import { SELF_IMPROVEMENT_QUERY } from "../../shared/selfImprovement.js";
+
 export const CATEGORIES = [
   {
     id: "all",
     name: "All",
     query: "computer science algorithms programming tutorial",
+  },
+  {
+    id: "music",
+    name: "Music & songs",
+    query: "Hindi English songs official music audio",
+    scope: "music",
+  },
+  {
+    id: "self-improvement",
+    name: "Lifestyle & self-improvement",
+    query: SELF_IMPROVEMENT_QUERY,
+    scope: "self-improvement",
   },
   {
     id: "algorithms",
@@ -45,6 +59,7 @@ export const CATEGORIES = [
     id: "soft-skills",
     name: "Communication & soft skills",
     query: "communication skills workplace behavioral interview STAR",
+    scope: "soft-skills",
   },
   {
     id: "security",
@@ -57,6 +72,11 @@ export const CATEGORIES = [
     query: "cloud computing docker kubernetes devops tutorial",
   },
 ];
+
+export function getCategory(id) {
+  const canonical = id === "motivation" ? "self-improvement" : id;
+  return CATEGORIES.find((category) => category.id === canonical);
+}
 
 // Starter references only. Live search is separate and never relabels these as new uploads.
 // No invented view counts, publication dates or durations.

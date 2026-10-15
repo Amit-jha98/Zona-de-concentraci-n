@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   AlertCircle,
   ArrowDownToLine,
@@ -16,23 +16,48 @@ export function DownloadDialog({ video, onClose, addJob, notify }) {
   const [quality, setQuality] = useState("720");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [capability, setCapability] = useState(null);
+  const requestRef = useRef(null);
+  useEffect(() => {
+    const controller = new AbortController();
+    api("/health", { signal: controller.signal })
+      .then((data) => setCapability(data.downloads))
+      .catch(() => {});
+    return () => {
+      controller.abort();
+      requestRef.current?.abort();
+    };
+  }, []);
   const start = async (e) => {
     e.preventDefault();
     setBusy(true);
     setError("");
+    const controller = new AbortController();
+    requestRef.current = controller;
     try {
       const job = await api("/downloads", {
         method: "POST",
         body: { videoId: video.id, quality },
+        signal: controller.signal,
+        timeoutMs: 285000,
       });
-      addJob({ ...job, title: video.title, thumbnail: video.thumbnail });
-      notify("Download added to your queue");
+      if (controller.signal.aborted) return;
+      addJob({
+        ...job,
+        title: job.title || video.title,
+        thumbnail: job.thumbnail || video.thumbnail,
+      });
+      notify(
+        job.status === "complete"
+          ? "Video is ready. Choose Save file to download it."
+          : "Download added to your queue",
+      );
       onClose();
       navigate("/downloads");
     } catch (e) {
-      setError(e.message);
+      if (!controller.signal.aborted) setError(e.message);
     } finally {
-      setBusy(false);
+      if (!controller.signal.aborted) setBusy(false);
     }
   };
   return (
@@ -58,12 +83,30 @@ export function DownloadDialog({ video, onClose, addJob, notify }) {
         </label>
         <p className="field-help">
           The best available quality up to this resolution, with audio included.
-          Actual quality depends on the video.
+          Actual quality depends on the video. If a file is too large, try 360p.
         </p>
         <p className="field-help">
-          Save videos you own or have permission to download. Files are
-          temporarily kept by the local app server.
+          Save videos you own or have permission to download. Prepared files are
+          available for 24 hours.
         </p>
+        {capability?.mode === "cloud" && (
+          <p className="field-help">
+            Preparation can take a few minutes. Keep this window open until the
+            file is ready. Hosted downloads support files up to{" "}
+            {capability.maxSizeMB || 150} MB.
+          </p>
+        )}
+        {capability?.available === false && (
+          <div className="notice error">
+            <AlertCircle size={18} />
+            <p>{capability.message}</p>
+          </div>
+        )}
+        {busy && (
+          <p role="status" className="field-help">
+            Preparing your video with audio. This may take a few minutes.
+          </p>
+        )}
         {error && (
           <div className="notice error">
             <AlertCircle size={18} />
@@ -74,13 +117,16 @@ export function DownloadDialog({ video, onClose, addJob, notify }) {
           <button type="button" className="button" onClick={onClose}>
             Cancel
           </button>
-          <button className="button button-dark" disabled={busy}>
+          <button
+            className="button button-dark"
+            disabled={busy || capability?.available === false}
+          >
             {busy ? (
               <LoaderCircle size={16} className="spin" />
             ) : (
               <Download size={16} />
             )}
-            {busy ? "Starting…" : "Download video"}
+            {busy ? "Preparing…" : "Download video"}
           </button>
         </div>
       </form>
@@ -89,6 +135,30 @@ export function DownloadDialog({ video, onClose, addJob, notify }) {
 }
 
 export default function Downloads({ jobs, setJobs, notify }) {
+  const [saving, setSaving] = useState(null);
+  const saveFile = async (event, job) => {
+    event.preventDefault();
+    if (saving) return;
+    setSaving(job.id);
+    try {
+      const result = await api(`/downloads/${job.id}/link`);
+      if (typeof result.url !== "string")
+        throw new Error("A file link could not be prepared. Please retry.");
+      const url = new URL(result.url, window.location.origin);
+      if (!["https:", "http:"].includes(url.protocol))
+        throw new Error("Invalid download link.");
+      const anchor = document.createElement("a");
+      anchor.href = url.href;
+      anchor.download = job.filename || `${job.videoId}.mp4`;
+      document.body.append(anchor);
+      anchor.click();
+      anchor.remove();
+    } catch (error) {
+      notify(error.message);
+    } finally {
+      setSaving(null);
+    }
+  };
   const cancel = async (id) => {
     try {
       await api(`/downloads/${id}`, { method: "DELETE" });
@@ -158,9 +228,15 @@ export default function Downloads({ jobs, setJobs, notify }) {
                   className="button button-dark"
                   href={`/api/downloads/${job.id}/file`}
                   download
+                  onClick={(event) => saveFile(event, job)}
+                  aria-disabled={saving === job.id}
                 >
-                  <ArrowDownToLine size={16} />
-                  Save file
+                  {saving === job.id ? (
+                    <LoaderCircle size={16} className="spin" />
+                  ) : (
+                    <ArrowDownToLine size={16} />
+                  )}
+                  {saving === job.id ? "Preparing link…" : "Save file"}
                 </a>
               ) : ["queued", "downloading"].includes(job.status) ? (
                 <button

@@ -4,6 +4,20 @@ import { resolve } from "node:path";
 import { createHash } from "node:crypto";
 import { CHANNELS } from "../src/data/library.js";
 import {
+  allowedVideos,
+  isAllowedVideo,
+  isAllowedQuery,
+  contentDomains,
+  CONTENT_POLICY_VERSION,
+  CONTENT_SCOPES,
+  CONTENT_SCOPE_MESSAGE,
+  normalizeContentScope,
+} from "../shared/contentPolicy.js";
+import {
+  SELF_IMPROVEMENT_SOURCES,
+  SELF_IMPROVEMENT_QUERY,
+} from "../shared/selfImprovement.js";
+import {
   decodeText,
   durationSeconds,
   uniqueVideos,
@@ -36,6 +50,7 @@ export function runTool(
         "--ignore-config",
         "--no-warnings",
         "--no-color",
+        "--no-cache-dir",
         "--js-runtimes",
         `node:${process.execPath}`,
         ...args,
@@ -160,7 +175,28 @@ export async function searchVideos({
   duration = "any",
   language = "",
   key = "",
+  scope = "all",
+  channelId = "",
 }) {
+  scope = normalizeContentScope(scope);
+  if (!CONTENT_SCOPES.includes(scope))
+    throw new ServiceError("Invalid content category.", 400, "INVALID_SCOPE");
+  if (!isAllowedQuery(query))
+    throw new ServiceError(CONTENT_SCOPE_MESSAGE, 403, "CONTENT_NOT_ALLOWED");
+  if (
+    channelId &&
+    !SELF_IMPROVEMENT_SOURCES.some((source) => source.id === channelId)
+  )
+    throw new ServiceError("Invalid source channel.", 400, "INVALID_SOURCE");
+  if (scope === "self-improvement" && !channelId)
+    return searchSelfImprovement({
+      query,
+      pageToken,
+      order,
+      duration,
+      language,
+      key,
+    });
   const identity = createHash("sha256").update(key).digest("hex").slice(0, 16);
   const cacheKey = JSON.stringify({
     query,
@@ -169,6 +205,9 @@ export async function searchVideos({
     duration,
     language,
     identity,
+    scope,
+    channelId,
+    policy: CONTENT_POLICY_VERSION,
   });
   return cached(cacheKey, async () => {
     if (key) {
@@ -184,10 +223,11 @@ export async function searchVideos({
           part: "snippet",
           type: "video",
           q: query,
+          channelId: channelId || undefined,
           maxResults: 24,
           order,
           videoEmbeddable: "true",
-          safeSearch: "moderate",
+          safeSearch: "strict",
           videoDuration: duration === "concept" ? "medium" : duration,
           relevanceLanguage: language || undefined,
           pageToken: pageToken || undefined,
@@ -216,6 +256,7 @@ export async function searchVideos({
             channel: item.snippet.channelTitle,
             channelId: item.snippet.channelId,
             description: item.snippet.description,
+            categoryId: item.snippet.categoryId,
             publishedAt: item.snippet.publishedAt,
             duration: durationSeconds(item.contentDetails.duration),
             views: item.statistics?.viewCount
@@ -228,7 +269,8 @@ export async function searchVideos({
           })),
       );
       return {
-        items,
+        items: allowedVideos(items, scope),
+        excludedCount: items.length - allowedVideos(items, scope).length,
         nextPageToken: data.nextPageToken || null,
         provider: "YouTube Data API",
         fetchedAt: new Date().toISOString(),
@@ -262,7 +304,9 @@ export async function searchVideos({
       "--playlist-end",
       String(start + 23),
       "--",
-      `${order === "date" ? "ytsearchdateall" : "ytsearchall"}:${query}`,
+      channelId
+        ? `https://www.youtube.com/channel/${channelId}/search?query=${encodeURIComponent(query)}`
+        : `${order === "date" ? "ytsearchdateall" : "ytsearchall"}:${query}`,
     ]);
     const entries = raw
       .trim()
@@ -277,9 +321,13 @@ export async function searchVideos({
           title: entry.title,
           channel: entry.channel || entry.uploader || "YouTube",
           channelId: entry.channel_id,
+          isShort: /^https:\/\/(?:www\.)?youtube\.com\/shorts\//.test(
+            entry.url || "",
+          ),
           duration: entry.duration || null,
           views: entry.view_count ?? null,
           description: entry.description || "",
+          categories: entry.categories,
           publishedAt: entry.upload_date
             ? `${entry.upload_date.slice(0, 4)}-${entry.upload_date.slice(4, 6)}-${entry.upload_date.slice(6, 8)}T00:00:00Z`
             : null,
@@ -296,18 +344,132 @@ export async function searchVideos({
     else if (duration === "long")
       items = items.filter((v) => v.duration > 1200);
     return {
-      items,
+      items: allowedVideos(items, scope),
+      excludedCount: items.length - allowedVideos(items, scope).length,
       nextPageToken:
         entries.length === 24 && start + 24 <= 1000
           ? `local:${start + 24}`
           : null,
-      provider: "YouTube search",
+      provider: channelId
+        ? "YouTube original-channel search"
+        : "YouTube search",
       fetchedAt: new Date().toISOString(),
       notice: language
         ? "Language preference is available with a YouTube API key."
         : undefined,
     };
   });
+}
+
+// Each publisher has its own real continuation, so a failed feed can retry and
+// an exhausted one cannot restart or hide the remaining publishers' results.
+async function searchSelfImprovement({
+  query,
+  pageToken,
+  order,
+  duration,
+  language,
+  key,
+}) {
+  let cursors = SELF_IMPROVEMENT_SOURCES.map(() => "");
+  if (pageToken) {
+    try {
+      if (!pageToken.startsWith("sources:") || pageToken.length > 5000)
+        throw new Error();
+      const decoded = JSON.parse(
+        Buffer.from(pageToken.slice(8), "base64url").toString(),
+      );
+      if (
+        decoded.v !== 1 ||
+        !Array.isArray(decoded.p) ||
+        decoded.p.length !== cursors.length ||
+        !decoded.p.every(
+          (cursor) =>
+            cursor === null ||
+            (typeof cursor === "string" && cursor.length <= 1000),
+        )
+      )
+        throw new Error();
+      cursors = decoded.p;
+    } catch {
+      throw new ServiceError(
+        "Invalid source-search page. Refresh the results.",
+        400,
+        "INVALID_CURSOR",
+      );
+    }
+  }
+  const identity = createHash("sha256").update(key).digest("hex").slice(0, 16);
+  return cached(
+    JSON.stringify({
+      type: "institutional-search",
+      policy: CONTENT_POLICY_VERSION,
+      query,
+      pageToken,
+      order,
+      duration,
+      language,
+      identity,
+    }),
+    async () => {
+      const active = SELF_IMPROVEMENT_SOURCES.map((source, index) => ({
+        source,
+        index,
+      })).filter(({ index }) => cursors[index] !== null);
+      const results = await Promise.allSettled(
+        active.map(({ source, index }) =>
+          searchVideos({
+            query: query === SELF_IMPROVEMENT_QUERY ? source.query : query,
+            pageToken: cursors[index],
+            order,
+            duration,
+            language,
+            key,
+            scope: "self-improvement",
+            channelId: source.id,
+          }),
+        ),
+      );
+      const successful = results.filter(
+        (result) => result.status === "fulfilled",
+      );
+      if (!successful.length && active.length) throw results[0].reason;
+      const next = [...cursors];
+      for (let i = 0; i < active.length; i++)
+        if (results[i].status === "fulfilled")
+          next[active[i].index] = results[i].value.nextPageToken;
+      const lists = successful.map((result) => result.value.items);
+      const items = uniqueVideos(
+        Array.from(
+          { length: Math.max(0, ...lists.map((list) => list.length)) },
+          (_, index) => lists.map((list) => list[index]).filter(Boolean),
+        ).flat(),
+      );
+      // Channel-search pages are relevance ordered; sort known dates locally when
+      // requested rather than claiming an upload-order guarantee upstream lacks.
+      if (order === "date")
+        items.sort(
+          (a, b) =>
+            (Date.parse(b.publishedAt) || 0) - (Date.parse(a.publishedAt) || 0),
+        );
+      return {
+        items,
+        provider: "Original institutional channels",
+        fetchedAt: new Date().toISOString(),
+        nextPageToken: next.some((cursor) => cursor !== null)
+          ? `sources:${Buffer.from(JSON.stringify({ v: 1, p: next })).toString("base64url")}`
+          : null,
+        sourcesAvailable: successful.length,
+        sourcesTotal: active.length,
+        notice:
+          successful.length < active.length
+            ? "Some original-channel searches are unavailable. More results will retry them."
+            : order === "date" && !key
+              ? "Channel search returns relevance-ranked pages. Available publication dates are sorted within the loaded results."
+              : undefined,
+      };
+    },
+  );
 }
 
 const xmlText = (entry, tag) =>
@@ -338,7 +500,7 @@ export function parseFeed(xml, channel) {
 
 export async function recentUploads() {
   return cached(
-    "recent-uploads",
+    `recent-uploads:${CONTENT_POLICY_VERSION}`,
     async () => {
       const results = await Promise.allSettled(
         CHANNELS.map(async (channel) => {
@@ -348,13 +510,7 @@ export async function recentUploads() {
           );
           if (!response.ok) throw new Error("Feed unavailable");
           const videos = parseFeed(await response.text(), channel);
-          return channel.subject === "all"
-            ? videos.filter((v) =>
-                /comput|program|software|algorithm|data |network|database|discrete|linear algebra|probability|calculus|logic|system|intelligence|machine learning/i.test(
-                  v.title + " " + v.description.slice(0, 800),
-                ),
-              )
-            : videos;
+          return allowedVideos(videos);
         }),
       );
       const ok = results.filter((r) => r.status === "fulfilled");
@@ -378,9 +534,11 @@ export async function recentUploads() {
   );
 }
 
-export async function videoMetadata(id) {
+export async function videoMetadata(id, key = "") {
+  if (!VIDEO_ID.test(id || ""))
+    throw new ServiceError("Invalid YouTube video ID.", 400, "INVALID_VIDEO");
   return cached(
-    `video:${id}`,
+    `video:${CONTENT_POLICY_VERSION}:${id}:${createHash("sha256").update(key).digest("hex").slice(0, 16)}`,
     async () => {
       const response = await fetch(
         `https://www.youtube.com/oembed?url=${encodeURIComponent(`https://www.youtube.com/watch?v=${id}`)}&format=json`,
@@ -393,12 +551,70 @@ export async function videoMetadata(id) {
           "VIDEO_UNAVAILABLE",
         );
       const data = await response.json();
-      return {
+      let video = {
         id,
         title: data.title,
         channel: data.author_name,
         thumbnail: data.thumbnail_url,
         source: "youtube",
+      };
+      if (!isAllowedVideo(video)) {
+        if (!isAllowedQuery(video.title))
+          throw new ServiceError(
+            CONTENT_SCOPE_MESSAGE,
+            403,
+            "CONTENT_NOT_ALLOWED",
+          );
+        // A song may be titled only with its name. Use YouTube's actual music
+        // category, rather than trusting its query, author or description.
+        if (key) {
+          const details = await google(
+            "videos",
+            { part: "snippet,status,contentDetails", id },
+            key,
+          );
+          const item = details.items?.[0];
+          if (item && item.status?.embeddable !== false)
+            video = {
+              ...video,
+              title: item.snippet.title,
+              channelId: item.snippet.channelId,
+              categoryId: item.snippet.categoryId,
+              duration: durationSeconds(item.contentDetails?.duration),
+            };
+        } else {
+          const raw = await runTool([
+            "--dump-single-json",
+            "--skip-download",
+            "--no-playlist",
+            "--socket-timeout",
+            "12",
+            "--retries",
+            "1",
+            "--",
+            `https://www.youtube.com/watch?v=${id}`,
+          ]);
+          const item = JSON.parse(raw);
+          video = {
+            ...video,
+            title: item.title,
+            channelId: item.channel_id,
+            categories: item.categories,
+            duration: item.duration,
+            isLive: Boolean(item.is_live),
+          };
+        }
+      }
+      if (!isAllowedVideo(video))
+        throw new ServiceError(
+          CONTENT_SCOPE_MESSAGE,
+          403,
+          "CONTENT_NOT_ALLOWED",
+        );
+      return {
+        ...video,
+        contentDomains: contentDomains(video),
+        policyVersion: CONTENT_POLICY_VERSION,
       };
     },
     60 * 60_000,

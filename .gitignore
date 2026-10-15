@@ -19,6 +19,7 @@ dist-ssr
 .npm-cache/
 test-results/
 playwright-report/
+.vercel/
 
 # Editor directories and files
 .vscode/*

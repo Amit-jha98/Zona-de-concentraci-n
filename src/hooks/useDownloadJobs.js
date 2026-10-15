@@ -20,7 +20,7 @@ export function useDownloadJobs(jobs, setJobs) {
           try {
             return await api(`/downloads/${id}`, { signal: controller.signal });
           } catch (e) {
-            if (e.code === "JOB_NOT_FOUND")
+            if (["JOB_NOT_FOUND", "DOWNLOAD_EXPIRED"].includes(e.code))
               return { id, status: "failed", error: e.message };
             throw e;
           }

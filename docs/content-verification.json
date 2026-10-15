@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-10-15T15:51:16.016Z",
+  "results": [
+    {
+      "query": "cricket match highlights",
+      "blocked": true
+    },
+    {
+      "query": "PUBG gameplay",
+      "blocked": true
+    },
+    {
+      "query": "cooking recipes",
+      "blocked": true
+    },
+    {
+      "name": "music",
+      "ms": 3829,
+      "count": 24,
+      "excluded": 0,
+      "sample": [
+        {
+          "id": "Yvl6m9x5ZR0",
+          "title": "New Trending Love Songs ❤️ Best Hindi Love Songs | Latest Romantic Songs Playlist | New Song Hindi"
+        },
+        {
+          "id": "-UY4jb9NLjI",
+          "title": "NON STOP INSTAGRAM TRENDING HINDI LOVE SONG MASHUP - 2026 | SR MUSIC | #instatrendingsongs"
+        },
+        {
+          "id": "9HMVeCg2Z6U",
+          "title": "New Songs 2026 | Tu Hi Meri Dua | New Hindi Song | Ariyan Khan | Rashmika | Latest Romantic Song"
+        }
+      ]
+    },
+    {
+      "name": "motivation",
+      "ms": 3556,
+      "count": 22,
+      "excluded": 2,
+      "sample": [
+        {
+          "id": "3LwQ_sitjqk",
+          "title": "📚🔥Padhai Karne Ka Real Formula! 🎯💯|| Powerful Study Motivational Video|| Success Motivate"
+        },
+        {
+          "id": "OJFpsa5Ao6g",
+          "title": "Powerful Study Motivational Video | Study Motivational Video In Hindi By Deepak Daiya"
+        },
+        {
+          "id": "oKPAqY2OovY",
+          "title": "MUST WATCH🔥 Superb! Motivational Speech | Powerful Motivational Video For Students"
+        }
+      ]
+    },
+    {
+      "name": "soft-skills",
+      "ms": 3582,
+      "count": 19,
+      "excluded": 5,
+      "sample": [
+        {
+          "id": "RfFbA5uHqqw",
+          "title": "Master Your Communication Skills For Interviews | Watch This To Clear Any Job Interview"
+        },
+        {
+          "id": "2uM7gYuOvr4",
+          "title": "BEHAVIOURAL Interview Questions & Answers! (The STAR Technique for Behavioral Interview Questions!)"
+        },
+        {
+          "id": "WdyiUe7_3cA",
+          "title": "Answering behavioral interview questions is shockingly uncomplicated"
+        }
+      ]
+    },
+    {
+      "name": "learning-feeds",
+      "count": 31,
+      "channels": 6
+    },
+    {
+      "name": "approved-playback",
+      "id": "XB4MIexjvY0",
+      "title": "3.6 Dijkstra Algorithm - Single Source Shortest Path - Greedy Method"
+    }
+  ]
+}

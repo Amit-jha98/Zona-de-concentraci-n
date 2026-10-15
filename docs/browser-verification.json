@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-10-15T15:26:29.660Z",
+  "checkedAt": "2026-10-15T15:53:20.396Z",
   "results": [
     {
       "name": "desktop",
-      "loadedImages": 17,
+      "loadedImages": 21,
       "topicVideos": 4,
       "overflow": false,
       "offlineNotes": true,
@@ -11,7 +11,7 @@
     },
     {
       "name": "mobile",
-      "loadedImages": 10,
+      "loadedImages": 3,
       "topicVideos": 4,
       "overflow": false,
       "offlineNotes": true,

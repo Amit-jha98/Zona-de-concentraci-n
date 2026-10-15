@@ -1,4 +1,4 @@
-const CACHE = "edubrowse-shell-v1";
+const CACHE = "edubrowse-shell-v5";
 const SHELL = [
   "/",
   "/app-icon.svg",

@@ -20,6 +20,22 @@
 
 ## Verification scope
 
+The homepage crash follow-up fixes a missing-category dereference: the motivation entry had been commented out while `HomeFeed` still read its query. Home feed lookups now use the shared registry, missing categories are skipped safely, and the replacement has a legacy alias. A browser regression removes the category from the served module and confirms that other homepage sections still work without a React error.
+
+The motivation feed is replaced by lifestyle/self-improvement talks from verified original TED, YaleCourses and Royal Institution channel IDs. Both search providers and playback metadata enforce relevant topics, a five-minute minimum, and exclusions for Shorts/reels/compilations. Live verification returned 19 qualifying talks across all three sources and independently rechecked a sample's original publisher/duration before playback. See `self-improvement-verification.json`. The pasted missing-package errors occurred during dependency installation; package resolution, clean Vite build and development browser startup now succeed.
+
+The Vercel download follow-up adds a real serverless API entry point and rewrite. The previous public deployment's `/api/health` returned 404. Hosted media preparation is awaited within its invocation, followed by multipart upload and a private job manifest in Vercel Blob. File access issues a scoped signed URL, so video bytes bypass the function response body. The local persistent queue remains available for local hosting.
+
+Cloud regressions cover fresh function instances, failed uploads, cancellation, expiry, cleanup, content reapproval, parsed Vercel request bodies, redirects and JSON file links. A real short CS download produced a 4,935,896-byte MP4 containing video and audio. Production redeployment and a real Blob transfer require the project's storage connection; no account credentials were available here. Setup, operational bounds and verification steps are in `VERCEL_SETUP.md`.
+
+The content-scope follow-up adds one shared policy for CS education, exam preparation, motivation, soft skills and music. It filters both search providers, all channel feeds, old library items, topic candidates and related videos. Server metadata approval gates playback and new downloads; existing download files are checked again before serving. A cached title or pasted link cannot skip approval. Unexpected navigation inside the embedded player stops playback.
+
+The homepage now has independent live music, motivation and soft-skills sections, with category navigation and automatic refresh. Live verification returned 24 music results, 22 motivation results and 19 soft-skills results; explicit sports, gameplay and cooking queries were rejected. See `content-verification.json`. All 146 GATE lessons retain approved short-video candidates.
+
+This follow-up passed 25 unit/service tests and 26 browser tests across desktop and mobile. New regressions cover unrelated metadata, misleading descriptions and labels, search scopes, blocked direct links and downloads, delayed approval, embedded player navigation, library filtering and timed homepage refresh. Production screenshots were refreshed; both viewports fit without horizontal overflow and written lessons remain available offline.
+
+The policy classifies YouTube metadata, not audiovisual contents. It can reject legitimate videos with insufficient evidence and cannot guarantee perfect classification of misleading titles. The app does not control external YouTube pages.
+
 The test suite checks authored content structure and data integrity. It cannot certify every educational claim or replace expert review of curriculum depth.
 
 Each initial topic-video entry contains actual YouTube IDs, titles and durations. Every lesson has at least one result between 120 and 1,800 seconds. Topic matching uses titles and is documented as such. The complete lecture contents were not watched.

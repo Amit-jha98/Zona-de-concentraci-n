@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { allowedVideos } from "../../shared/contentPolicy.js";
 let catalog;
 let pending;
 function loadCatalog() {
@@ -21,7 +22,7 @@ function loadCatalog() {
 }
 export function useTopicCandidates(id) {
   const [state, setState] = useState(() => ({
-    items: catalog?.lessons?.[id]?.items || [],
+    items: allowedVideos(catalog?.lessons?.[id]?.items),
     loading: !catalog,
     checkedAt: catalog?.lessons?.[id]?.checkedAt,
   }));
@@ -31,7 +32,7 @@ export function useTopicCandidates(id) {
       .then((data) => {
         if (current)
           setState({
-            items: data.lessons?.[id]?.items || [],
+            items: allowedVideos(data.lessons?.[id]?.items),
             loading: false,
             checkedAt: data.lessons?.[id]?.checkedAt,
           });

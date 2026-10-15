@@ -9,13 +9,130 @@ import {
   AlertCircle,
   ChevronRight,
   WifiOff,
+  Music2,
+  Sprout,
+  MessageSquare,
 } from "lucide-react";
 import { useVideos } from "../hooks/useVideos.js";
 import VideoCard, { SkeletonGrid } from "./ui/VideoCard.jsx";
-import { CATEGORIES, STARTER_VIDEOS } from "../data/library.js";
+import { CATEGORIES, STARTER_VIDEOS, getCategory } from "../data/library.js";
+import { SELF_IMPROVEMENT_TOPICS } from "../../shared/selfImprovement.js";
 import { GATE_LESSONS } from "../data/gate/index.js";
 import { navigate } from "../hooks/useRoute.js";
 import { api } from "../services/api.js";
+import { allowedVideos } from "../../shared/contentPolicy.js";
+
+const HOME_FEEDS = [
+  {
+    category: "music",
+    title: "Music for your break",
+    caption: "Songs, new releases and something to unwind with.",
+    icon: Music2,
+  },
+  {
+    category: "self-improvement",
+    title: "Build a better everyday life",
+    caption:
+      "Habits, happiness and sleep. Full talks from TED, YaleCourses and the Royal Institution; at least 5 minutes.",
+    icon: Sprout,
+  },
+  {
+    category: "soft-skills",
+    title: "Build skills beyond the screen",
+    caption: "Communication, confidence and interview conversations.",
+    icon: MessageSquare,
+  },
+];
+
+function HomeFeed({ feed, saved, onSave, onPlay, settings, revision }) {
+  const category = getCategory(feed?.category);
+  const videos = useVideos(category?.query || "", {
+    scope: category?.scope || "all",
+    revision,
+    enabled: Boolean(category?.query),
+  });
+  const refreshRef = useRef(videos.refresh);
+  useEffect(() => {
+    refreshRef.current = videos.refresh;
+  });
+  useEffect(() => {
+    if (!category?.query || !settings.autoRefresh) return;
+    const refresh = () => {
+      if (document.visibilityState === "visible" && navigator.onLine)
+        refreshRef.current();
+    };
+    const timer = setInterval(refresh, (settings.refreshMinutes || 15) * 60000);
+    window.addEventListener("online", refresh);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("online", refresh);
+      document.removeEventListener("visibilitychange", refresh);
+    };
+  }, [category?.query, settings.autoRefresh, settings.refreshMinutes]);
+  if (!category) return null;
+  const Icon = feed.icon;
+  return (
+    <section className="feed-section" aria-label={feed.title}>
+      <div className="section-heading small">
+        <div className="inline-title">
+          <Icon size={20} />
+          <h2>{feed.title}</h2>
+        </div>
+        <button
+          className="text-button"
+          onClick={() => navigate(`/?category=${category.id}`)}
+        >
+          View all <ChevronRight size={16} />
+        </button>
+      </div>
+      <p className="section-caption">{feed.caption}</p>
+      {videos.loading && !videos.items.length ? (
+        <SkeletonGrid count={3} />
+      ) : videos.items.length ? (
+        <div className="video-grid">
+          {videos.items.slice(0, 3).map((video) => (
+            <VideoCard
+              key={video.id}
+              video={video}
+              onPlay={onPlay}
+              onSave={onSave}
+              saved={saved.some((v) => v.id === video.id)}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="feed-unavailable">
+          <Icon size={22} />
+          <div>
+            <strong>
+              {videos.error
+                ? "This section couldn't refresh"
+                : "No matching videos returned"}
+            </strong>
+            <p>
+              {videos.error ||
+                "Explore this category for more results from YouTube."}
+            </p>
+          </div>
+          <button
+            className="button"
+            disabled={videos.loading}
+            onClick={videos.refresh}
+          >
+            Retry
+          </button>
+        </div>
+      )}
+      {videos.error && videos.items.length > 0 && (
+        <p className="inline-warning">
+          <AlertCircle size={16} />
+          {videos.error}
+        </p>
+      )}
+    </section>
+  );
+}
 
 export default function Discovery({
   route,
@@ -28,9 +145,7 @@ export default function Discovery({
   revision,
 }) {
   const search = route.path === "/search";
-  const category =
-    CATEGORIES.find((item) => item.id === route.params.category) ||
-    CATEGORIES[0];
+  const category = getCategory(route.params.category) || CATEGORIES[0];
   const [order, setOrder] = useState(
     route.params.latest ? "date" : "relevance",
   );
@@ -45,12 +160,24 @@ export default function Discovery({
   });
   const uploadBusy = useRef(false);
   const home = !search && category.id === "all";
-  const query = search ? route.params.q || "computer science" : category.query;
+  const query = search
+    ? route.params.q || "computer science"
+    : category.id === "self-improvement"
+      ? route.params.topic || category.query
+      : category.query;
   const videos = useVideos(query, {
     order,
     duration,
     language,
     revision,
+    scope: search
+      ? "all"
+      : category.scope ||
+        (category.id === "gate"
+          ? "exam"
+          : category.id === "interview"
+            ? "all"
+            : "cs"),
     enabled: !home,
   });
   const done = GATE_LESSONS.filter(
@@ -69,7 +196,12 @@ export default function Discovery({
     try {
       const result = await api("/uploads", { signal: controller.signal });
       if (!controller.signal.aborted)
-        setUploads({ ...result, loading: false, error: "" });
+        setUploads({
+          ...result,
+          items: allowedVideos(result.items),
+          loading: false,
+          error: "",
+        });
     } catch (error) {
       if (!controller.signal.aborted)
         setUploads((prev) => ({
@@ -139,7 +271,7 @@ export default function Discovery({
           <div className="section-heading">
             <div>
               <h1>Explore</h1>
-              <p>Computer science, interview preparation and communication.</p>
+              <p>Learn, get inspired, or take a music break.</p>
             </div>
             <span className="desktop-only quiet-label">
               <span
@@ -203,6 +335,19 @@ export default function Discovery({
                 ))}
               </div>
             </section>
+          )}
+          {HOME_FEEDS.filter((feed) => getCategory(feed.category)).map(
+            (feed) => (
+              <HomeFeed
+                key={feed.category}
+                feed={feed}
+                saved={saved}
+                onSave={onSave}
+                onPlay={onPlay}
+                settings={settings}
+                revision={revision}
+              />
+            ),
           )}
           <section className="feed-section">
             <div className="section-heading small">
@@ -318,8 +463,8 @@ export default function Discovery({
                   : category.name}
               </h1>
               <p>
-                Discover lessons from across YouTube, with more results as you
-                browse.
+                CS education, exam preparation, lifestyle and self-improvement,
+                soft skills and music. Results are filtered to these categories.
               </p>
             </div>
             <button
@@ -331,6 +476,36 @@ export default function Discovery({
               Filters
             </button>
           </div>
+          {category.id === "self-improvement" && !search && (
+            <section aria-label="Self-improvement topics">
+              <p className="section-caption">
+                Original talks from TED, YaleCourses and the Royal Institution.
+                We verify channel IDs and require at least 5 minutes; Shorts and
+                compilations are excluded.
+              </p>
+              <div className="category-scroll" aria-label="Lifestyle topics">
+                <button
+                  className={`category-chip ${!route.params.topic ? "active" : ""}`}
+                  onClick={() => navigate("/?category=self-improvement")}
+                >
+                  All topics
+                </button>
+                {SELF_IMPROVEMENT_TOPICS.map((topic) => (
+                  <button
+                    key={topic}
+                    className={`category-chip ${route.params.topic === topic ? "active" : ""}`}
+                    onClick={() =>
+                      navigate(
+                        `/?category=self-improvement&topic=${encodeURIComponent(topic)}`,
+                      )
+                    }
+                  >
+                    {topic}
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
           <div className="results-toolbar">
             <div className="segmented">
               <button
@@ -372,7 +547,9 @@ export default function Discovery({
                   <option value="concept">
                     Focused concepts (up to 30 min)
                   </option>
-                  <option value="short">Under 4 minutes</option>
+                  {category.id !== "self-improvement" && (
+                    <option value="short">Under 4 minutes</option>
+                  )}
                   <option value="medium">4–20 minutes</option>
                   <option value="long">Over 20 minutes</option>
                 </select>
@@ -398,12 +575,18 @@ export default function Discovery({
             <div className="notice error">
               <AlertCircle size={20} />
               <div>
-                <strong>Search couldn’t be completed</strong>
+                <strong>
+                  {videos.errorCode === "CONTENT_NOT_ALLOWED"
+                    ? "This search is outside your categories"
+                    : "Search couldn’t be completed"}
+                </strong>
                 <p>{videos.error}</p>
               </div>
-              <button className="button" onClick={videos.refresh}>
-                Try again
-              </button>
+              {videos.errorCode !== "CONTENT_NOT_ALLOWED" && (
+                <button className="button" onClick={videos.refresh}>
+                  Try again
+                </button>
+              )}
             </div>
           )}
           {videos.loading && !videos.items.length ? (
@@ -425,16 +608,11 @@ export default function Discovery({
               <div className="empty-state">
                 <Search size={32} />
                 <h2>No matching videos</h2>
-                <p>Try a more specific topic or a different length filter.</p>
-                <a
-                  className="button"
-                  href={`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Search on YouTube
-                  <ArrowUpRight size={16} />
-                </a>
+                <p>
+                  Only CS education, exam preparation, lifestyle and
+                  self-improvement, soft skills and music are shown. Try a more
+                  specific topic, another length filter, or the next page.
+                </p>
               </div>
             )
           )}

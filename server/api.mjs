@@ -5,13 +5,8 @@ import {
   videoMetadata,
   ServiceError,
 } from "./youtube.mjs";
-import {
-  createDownload,
-  getDownload,
-  getDownloadFile,
-  downloadStatus,
-  cancelDownload,
-} from "./downloads.mjs";
+import { downloadService } from "./download-service.mjs";
+import { cloudDownloads } from "./cloud-downloads.mjs";
 import { VIDEO_ID } from "../shared/video.js";
 
 function send(res, status, data) {
@@ -25,6 +20,24 @@ function send(res, status, data) {
 async function readBody(req) {
   if (!req.headers["content-type"]?.startsWith("application/json"))
     throw new ServiceError("Expected JSON.", 415);
+  // Vercel's Node adapter may already have consumed and parsed the body.
+  if (req.body !== undefined) {
+    const raw = Buffer.isBuffer(req.body)
+      ? req.body.toString("utf8")
+      : typeof req.body === "string"
+        ? req.body
+        : JSON.stringify(req.body);
+    if (Buffer.byteLength(raw) > 4096)
+      throw new ServiceError("Request is too large.", 413);
+    try {
+      const value = JSON.parse(raw);
+      if (!value || typeof value !== "object" || Array.isArray(value))
+        throw new Error();
+      return value;
+    } catch {
+      throw new ServiceError("Invalid JSON object.", 400);
+    }
+  }
   let raw = "";
   for await (const chunk of req) {
     raw += chunk;
@@ -46,6 +59,9 @@ export async function apiHandler(req, res, next) {
   try {
     const url = new URL(req.url, "http://localhost");
     const route = url.pathname.slice(4);
+    const downloads = downloadService();
+    const youtubeKey =
+      req.headers["x-youtube-key"] || process.env.YOUTUBE_API_KEY || "";
     if (req.headers.origin) {
       const origin = new URL(req.headers.origin);
       if (origin.host !== req.headers.host)
@@ -55,8 +71,17 @@ export async function apiHandler(req, res, next) {
       return send(res, 200, {
         ok: true,
         apiKeyConfigured: Boolean(process.env.YOUTUBE_API_KEY),
-        downloads: await downloadStatus(),
+        hosting: process.env.VERCEL === "1" ? "vercel" : "local",
+        downloads: await downloads.status(),
       });
+    if (route === "/maintenance/downloads" && req.method === "GET") {
+      if (
+        !process.env.CRON_SECRET ||
+        req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}`
+      )
+        throw new ServiceError("Unauthorized.", 401, "UNAUTHORIZED");
+      return send(res, 200, await cloudDownloads.cleanup());
+    }
     if (route === "/search" && req.method === "GET") {
       const query = (url.searchParams.get("q") || "").trim();
       const order = url.searchParams.get("order") || "relevance";
@@ -69,7 +94,7 @@ export async function apiHandler(req, res, next) {
         !["relevance", "date"].includes(order) ||
         !["any", "concept", "short", "medium", "long"].includes(duration) ||
         !["", "en", "hi"].includes(language) ||
-        pageToken.length > 1000
+        pageToken.length > 5000
       )
         throw new ServiceError("Invalid search options.", 400);
       if (activeSearches >= 4)
@@ -88,8 +113,8 @@ export async function apiHandler(req, res, next) {
             order,
             duration,
             language,
-            key:
-              req.headers["x-youtube-key"] || process.env.YOUTUBE_API_KEY || "",
+            scope: url.searchParams.get("scope") || "all",
+            key: youtubeKey,
           }),
         );
       } finally {
@@ -102,20 +127,51 @@ export async function apiHandler(req, res, next) {
       const id = route.split("/")[2];
       if (!VIDEO_ID.test(id || ""))
         throw new ServiceError("Invalid YouTube video ID.", 400);
-      return send(res, 200, await videoMetadata(id));
+      return send(res, 200, await videoMetadata(id, youtubeKey));
     }
     if (route === "/downloads" && req.method === "POST") {
       const data = await readBody(req);
-      return send(res, 202, await createDownload(data.videoId, data.quality));
+      const controller = new AbortController();
+      const disconnect = () => {
+        if (!res.writableEnded) controller.abort();
+      };
+      res.on("close", disconnect);
+      try {
+        const job = await downloads.create(
+          data.videoId,
+          data.quality,
+          youtubeKey,
+          { signal: controller.signal },
+        );
+        if (!res.destroyed)
+          return send(res, job.status === "complete" ? 200 : 202, job);
+        return;
+      } finally {
+        res.off("close", disconnect);
+      }
     }
-    const match = route.match(/^\/downloads\/([a-f0-9-]{36})(\/file)?$/);
+    const match = route.match(
+      /^\/downloads\/([a-f0-9-]{36})(\/(?:file|link))?$/,
+    );
     if (match && req.method === "DELETE" && !match[2]) {
-      await cancelDownload(match[1]);
+      await downloads.cancel(match[1]);
       return send(res, 200, { cancelled: true });
     }
     if (match && req.method === "GET") {
-      if (!match[2]) return send(res, 200, await getDownload(match[1]));
-      const file = await getDownloadFile(match[1]);
+      if (!match[2]) return send(res, 200, await downloads.get(match[1]));
+      const file = await downloads.file(match[1], youtubeKey);
+      if (match[2] === "/link")
+        return send(res, 200, {
+          url: file.redirect || `/api/downloads/${match[1]}/file`,
+        });
+      if (file.redirect) {
+        res.writeHead(302, {
+          Location: file.redirect,
+          "Cache-Control": "no-store",
+          "Referrer-Policy": "no-referrer",
+        });
+        return res.end();
+      }
       res.writeHead(200, {
         "Content-Type": file.filename.endsWith(".mp4")
           ? "video/mp4"

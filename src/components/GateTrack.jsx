@@ -102,7 +102,7 @@ export function GateOverview({ progress }) {
               explained questions
             </p>
             <span className="small-text">
-              Mapped to your supplied CS_GATE2027_Syllabus.pdf.
+              Mapped to GATE-cs Syllabus.
             </span>
           </div>
         </div>
@@ -254,7 +254,7 @@ export function GateOverview({ progress }) {
       <div className="curriculum-footer">
         <BookOpen size={19} />
         <p>
-          The track follows the supplied 10-section CS syllabus. Questions are
+          The track follows the GATE-cs Syllabus. Questions are
           original concept checks, not official previous-year papers. General
           Aptitude is outside this PDF and is not included in this track.
         </p>

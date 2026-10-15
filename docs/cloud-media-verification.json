@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-15T16:08:01.262Z",
+  "id": "Or4TCkDdNt8",
+  "title": "Hasse Diagram with Example (Discrete Mathematics) Order relation & Lattice",
+  "bytes": 4935896,
+  "ms": 6280,
+  "mp4": true,
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "av1",
+        "codec_type": "video"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio"
+      }
+    ],
+    "format": {
+      "duration": "161.750204",
+      "size": "4935896"
+    }
+  },
+  "scope": "Actual cloud preparation command exercised locally. Vercel Blob upload and deployed cloud egress require the project's storage connection and redeployment."
+}

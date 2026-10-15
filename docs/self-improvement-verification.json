@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-10-15T16:35:46.207Z",
+  "count": 19,
+  "sources": [
+    {
+      "id": "UCAuUUnT6oDeKwE6v1NGQxug",
+      "name": "TED",
+      "reference": "https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy",
+      "results": 10
+    },
+    {
+      "id": "UC4EY_qnSeAP1xGsh61eOoJA",
+      "name": "YaleCourses",
+      "reference": "https://news.yale.edu/2011/04/15/yale-adds-10-new-open-yale-courses",
+      "results": 4
+    },
+    {
+      "id": "UCYeF244yNGuFefuFKqxIAXw",
+      "name": "The Royal Institution",
+      "reference": "https://www.rigb.org/about-us/what-we-do",
+      "results": 5
+    }
+  ],
+  "hasNextPage": true,
+  "sample": [
+    {
+      "id": "-moW9jvvMr4",
+      "title": "A Simple Way to Break a Bad Habit | Judson Brewer | TED",
+      "channel": "TED",
+      "channelId": "UCAuUUnT6oDeKwE6v1NGQxug",
+      "duration": 565
+    },
+    {
+      "id": "7dep9KPWp3g",
+      "title": "20. The Good Life: Happiness",
+      "channel": "YaleCourses",
+      "channelId": "UC4EY_qnSeAP1xGsh61eOoJA",
+      "duration": 2856
+    },
+    {
+      "id": "O0Uzy35uJzU",
+      "title": "Why do we sleep? The hidden science of your body clock",
+      "channel": "The Royal Institution",
+      "channelId": "UCYeF244yNGuFefuFKqxIAXw",
+      "duration": 3156
+    },
+    {
+      "id": "fxbCHn6gE3U",
+      "title": "The surprising habits of original thinkers | Adam Grant | TED",
+      "channel": "TED",
+      "channelId": "UCAuUUnT6oDeKwE6v1NGQxug",
+      "duration": 925
+    },
+    {
+      "id": "vBc5EMR_ZK4",
+      "title": "What is Happiness? - Purposes of College Education, Lecture 2",
+      "channel": "YaleCourses",
+      "channelId": "UC4EY_qnSeAP1xGsh61eOoJA",
+      "duration": 2694
+    },
+    {
+      "id": "zPInah-Wxms",
+      "title": "Essential Functions of Sleep: Learning, Memory and Changing Your Mind - with Gina Poe",
+      "channel": "The Royal Institution",
+      "channelId": "UCYeF244yNGuFefuFKqxIAXw",
+      "duration": 2205
+    },
+    {
+      "id": "myjZrpMVLRE",
+      "title": "The Simple Habit for a Happier Social Life | Nicholas Epley | TED",
+      "channel": "TED",
+      "channelId": "UCAuUUnT6oDeKwE6v1NGQxug",
+      "duration": 855
+    },
+    {
+      "id": "q6Kkq7xULSo",
+      "title": "5. The Well-Ordered Soul: Happiness and Harmony",
+      "channel": "YaleCourses",
+      "channelId": "UC4EY_qnSeAP1xGsh61eOoJA",
+      "duration": 2666
+    },
+    {
+      "id": "yyyRdXtsBmY",
+      "title": "Ri Science Podcast: The Science of Sleep - with Russell Foster, Debra Skene and Stafford Lightman",
+      "channel": "The Royal Institution",
+      "channelId": "UCYeF244yNGuFefuFKqxIAXw",
+      "duration": 3618
+    }
+  ],
+  "playback": {
+    "id": "-moW9jvvMr4",
+    "title": "A Simple Way to Break a Bad Habit | Judson Brewer | TED",
+    "channelId": "UCAuUUnT6oDeKwE6v1NGQxug",
+    "duration": 565
+  }
+}
