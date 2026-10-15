@@ -10,6 +10,7 @@ import BookmarksDrawer from './components/BookmarksDrawer';
 import SettingsModal from './components/SettingsModal';
 import MobileBottomNav from './components/MobileBottomNav';
 import HomePage from './components/HomePage';
+import AppSidebar from './components/AppSidebar';
 import './App.css';
 
 import { EDUCATIONAL_VIDEOS, CS_SUBJECTS, POPULAR_CS_VIDEOS } from './data/csCatalog';
@@ -30,6 +31,7 @@ import {
   getCachedLiveFeed,
   fetchPopularCSVideos,
   fetchYouTubeVideosBySubject,
+  getGuaranteedSubjectLectures,
   checkForNewChannelUploads
 } from './services/youtubeService';
 import { incrementAdShieldStat } from './services/adBlockerService';
@@ -113,6 +115,7 @@ export default function App() {
   const [isNotesOpen, setIsNotesOpen] = useState(false);
   const [isBookmarksOpen, setIsBookmarksOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   
   // Bookmarks & History
   const [bookmarks, setBookmarks] = useState(getBookmarks());
@@ -560,47 +563,65 @@ export default function App() {
       let freshAddedCount = 0;
 
       if (currentSubject !== 'all') {
-        // Fetch next page specifically for this subject
-        incoming = await fetchYouTubeVideosBySubject(currentSubject, nextPage);
-        if (incoming && incoming.length > 0) {
-          const currentCached = subjectVideosCache[currentSubject] || [];
-          const existingIds = new Set([
-            ...currentCached.map(v => v.id),
-            ...EDUCATIONAL_VIDEOS.filter(v => v.subject === currentSubject).map(v => v.id)
-          ]);
-          const freshItems = incoming.filter(v => !existingIds.has(v.id));
-          freshAddedCount = freshItems.length;
+        const currentCached = subjectVideosCache[currentSubject] || [];
+        const existingIds = new Set([
+          ...currentCached.map(v => v.id),
+          ...EDUCATIONAL_VIDEOS.filter(v => v.subject === currentSubject).map(v => v.id)
+        ]);
 
-          setSubjectVideosCache(prev => ({
-            ...prev,
-            [currentSubject]: [...(prev[currentSubject] || []), ...freshItems]
-          }));
+        // Fetch next page specifically for this subject
+        incoming = await fetchYouTubeVideosBySubject(currentSubject, nextPage, existingIds);
+        let freshItems = (incoming || []).filter(v => !existingIds.has(v.id));
+
+        // If online search did not yield new videos, guarantee from syllabus lecture pool
+        if (freshItems.length === 0) {
+          freshItems = getGuaranteedSubjectLectures(currentSubject, nextPage, existingIds);
         }
+
+        freshAddedCount = freshItems.length;
+        incoming = freshItems;
+
+        setSubjectVideosCache(prev => ({
+          ...prev,
+          [currentSubject]: [...(prev[currentSubject] || []), ...freshItems]
+        }));
       } else if (feedMode === 'popular') {
+        const existingIds = new Set(popularVideos.map(v => v.id));
         incoming = await fetchPopularCSVideos(nextPage);
-        if (incoming && incoming.length > 0) {
-          const existingIds = new Set(popularVideos.map(v => v.id));
-          const freshItems = incoming.filter(v => !existingIds.has(v.id));
-          freshAddedCount = freshItems.length;
-          setPopularVideos(prev => [...prev, ...freshItems]);
+        let freshItems = (incoming || []).filter(v => !existingIds.has(v.id));
+
+        if (freshItems.length === 0) {
+          freshItems = getGuaranteedSubjectLectures('all', nextPage, existingIds);
         }
+
+        freshAddedCount = freshItems.length;
+        incoming = freshItems;
+        setPopularVideos(prev => [...prev, ...freshItems]);
       } else if (feedMode === 'live') {
-        incoming = await fetchYouTubeVideosBySubject('all', nextPage);
-        if (incoming && incoming.length > 0) {
-          const existingIds = new Set(liveVideos.map(v => v.id));
-          const freshItems = incoming.filter(v => !existingIds.has(v.id));
-          freshAddedCount = freshItems.length;
-          setLiveVideos(prev => [...prev, ...freshItems]);
+        const existingIds = new Set(liveVideos.map(v => v.id));
+        incoming = await fetchYouTubeVideosBySubject('all', nextPage, existingIds);
+        let freshItems = (incoming || []).filter(v => !existingIds.has(v.id));
+
+        if (freshItems.length === 0) {
+          freshItems = getGuaranteedSubjectLectures('all', nextPage, existingIds);
         }
+
+        freshAddedCount = freshItems.length;
+        incoming = freshItems;
+        setLiveVideos(prev => [...prev, ...freshItems]);
       } else {
         // Curated feed mode
-        incoming = await fetchYouTubeVideosBySubject('all', nextPage);
-        if (incoming && incoming.length > 0) {
-          const existingIds = new Set(curatedVideos.map(v => v.id));
-          const freshItems = incoming.filter(v => !existingIds.has(v.id));
-          freshAddedCount = freshItems.length;
-          setCuratedVideos(prev => [...prev, ...freshItems]);
+        const existingIds = new Set(curatedVideos.map(v => v.id));
+        incoming = await fetchYouTubeVideosBySubject('all', nextPage, existingIds);
+        let freshItems = (incoming || []).filter(v => !existingIds.has(v.id));
+
+        if (freshItems.length === 0) {
+          freshItems = getGuaranteedSubjectLectures('all', nextPage, existingIds);
         }
+
+        freshAddedCount = freshItems.length;
+        incoming = freshItems;
+        setCuratedVideos(prev => [...prev, ...freshItems]);
       }
 
       // Add to global videoCache so all newly loaded videos play immediately
@@ -656,6 +677,7 @@ export default function App() {
         onOpenBookmarks={() => setIsBookmarksOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
         bookmarkCount={bookmarks.length}
+        onOpenMenu={() => setIsSidebarOpen(true)}
       />
 
       {/* Browser Tab Strip */}
@@ -738,6 +760,7 @@ export default function App() {
             onContinueUpdate={handleContinueUpdate}
             isContinueLoading={isContinueLoading}
             streamPage={currentStreamPage}
+            onOpenMenu={() => setIsSidebarOpen(true)}
           />
         )}
       </main>
@@ -755,6 +778,32 @@ export default function App() {
         onOpenSyllabus={handleOpenSyllabus}
         onOpenBookmarks={() => setIsBookmarksOpen(true)}
         bookmarkCount={bookmarks.length}
+      />
+
+      {/* Slide-out Navigation & Feed Control Drawer */}
+      <AppSidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+        activeTabType={activeTab?.type || 'home'}
+        onNavigateHome={handleHome}
+        onNavigateCatalog={(subjId) => handleOpenCatalog(subjId || 'all')}
+        onOpenSyllabus={handleOpenSyllabus}
+        onOpenBookmarks={() => setIsBookmarksOpen(true)}
+        onOpenSettings={() => setIsSettingsOpen(true)}
+        bookmarkCount={bookmarks.length}
+        feedMode={feedMode}
+        onToggleFeedMode={(mode) => {
+          setFeedMode(mode);
+          if (mode === 'live' && liveVideos.length === 0) {
+            handleRefreshLiveFeed();
+          }
+        }}
+        autoUpdateEnabled={autoUpdateEnabled}
+        onToggleAutoUpdate={() => setAutoUpdateEnabled(!autoUpdateEnabled)}
+        onRefreshLive={handleRefreshLiveFeed}
+        isLiveLoading={isLiveLoading}
+        isFocusMode={isFocusMode}
+        onToggleFocusMode={() => setIsFocusMode(!isFocusMode)}
       />
 
       {/* Timestamped Lecture Notes Drawer */}

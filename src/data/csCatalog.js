@@ -1,5 +1,6 @@
 // Comprehensive Curated Computer Science & GATE Video Catalog
 // All videos are 100% verified, authentic educational lectures with real YouTube IDs.
+import { EXPANDED_SUBJECT_LECTURES } from './expandedSubjectLectures.js';
 
 export const CS_SUBJECTS = [
   {
@@ -8,15 +9,71 @@ export const CS_SUBJECTS = [
     shortName: 'All',
     color: '#3b82f6',
     icon: 'Layers',
-    description: 'Comprehensive computer science & GATE preparation stream'
+    description: 'Comprehensive computer science & engineering learning stream'
   },
   {
-    id: 'gate-special',
-    name: 'GATE CS Core / PYQs',
-    shortName: 'GATE CS',
+    id: 'ai-ml',
+    name: 'Artificial Intelligence & Machine Learning',
+    shortName: 'AI & ML',
+    color: '#8b5cf6',
+    icon: 'Brain',
+    description: 'Neural networks, deep learning, NLP, computer vision, transformers, LLMs, reinforcement learning'
+  },
+  {
+    id: 'cloud-computing',
+    name: 'Cloud Computing & DevOps',
+    shortName: 'Cloud & DevOps',
+    color: '#0284c7',
+    icon: 'Cloud',
+    description: 'AWS, Azure, GCP, Docker, Kubernetes, CI/CD pipelines, Terraform, serverless architecture'
+  },
+  {
+    id: 'cyber-security',
+    name: 'Cyber Security & Ethical Hacking',
+    shortName: 'Cyber Security',
+    color: '#ef4444',
+    icon: 'ShieldCheck',
+    description: 'Network security, cryptography, penetration testing, OWASP web vulnerabilities, zero-trust'
+  },
+  {
+    id: 'data-science',
+    name: 'Data Science & Big Data Engineering',
+    shortName: 'Data Science',
+    color: '#10b981',
+    icon: 'BarChart3',
+    description: 'Pandas, NumPy, exploratory data analysis, Apache Spark, Hadoop, statistical modeling'
+  },
+  {
+    id: 'web-dev',
+    name: 'Web Development & Full Stack',
+    shortName: 'Web Dev',
     color: '#f59e0b',
-    icon: 'Award',
-    description: 'GATE specific preparation, previous year questions & high-yield revision'
+    icon: 'Globe',
+    description: 'Modern frontend (React, Next.js), backend (Node.js, Express), REST & GraphQL APIs'
+  },
+  {
+    id: 'mobile-dev',
+    name: 'Mobile Application Development',
+    shortName: 'Mobile Dev',
+    color: '#06b6d4',
+    icon: 'Smartphone',
+    description: 'Android (Kotlin, Jetpack Compose), iOS (Swift, SwiftUI), cross-platform (Flutter, React Native)'
+  },
+  {
+    id: 'software-engineering',
+    name: 'Software Engineering & Clean Architecture',
+    shortName: 'Software Eng',
+    color: '#3b82f6',
+    icon: 'Terminal',
+    description: 'Design patterns (GoF), SOLID principles, test-driven development (TDD), CI/CD, microservices'
+  },
+  {
+    id: 'blockchain',
+    name: 'Blockchain & Distributed Ledgers',
+    shortName: 'Blockchain',
+    color: '#d97706',
+    icon: 'Coins',
+    description: 'Smart contracts, Ethereum, Solidity, consensus algorithms (PoW, PoS), cryptography, Web3'
   },
   {
     id: 'algorithms',
@@ -25,6 +82,14 @@ export const CS_SUBJECTS = [
     color: '#10b981',
     icon: 'GitBranch',
     description: 'Asymptotic analysis, divide & conquer, greedy, dynamic programming, graphs, trees'
+  },
+  {
+    id: 'gate-special',
+    name: 'GATE CS Core / PYQs',
+    shortName: 'GATE CS',
+    color: '#f59e0b',
+    icon: 'Award',
+    description: 'GATE specific preparation, previous year questions & high-yield revision'
   },
   {
     id: 'os',
@@ -1127,7 +1192,8 @@ export const EDUCATIONAL_VIDEOS = [
       'Embracing boredom: training your brain to resist the urge for instant novelty'
     ],
     tags: ['deep work', 'cal newport', 'focus', 'productivity', 'motivation']
-  }
+  },
+  ...EXPANDED_SUBJECT_LECTURES
 ];
 
 // GATE Computer Science Detailed Syllabus & Progress Tracking

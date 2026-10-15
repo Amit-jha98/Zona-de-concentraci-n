@@ -12,7 +12,8 @@ import {
   Minimize2, 
   Settings, 
   AlertCircle,
-  X
+  X,
+  Menu
 } from 'lucide-react';
 import AdShieldBadge from './AdShieldBadge';
 import { checkEducationalScope, extractYouTubeVideoId } from '../services/youtubeService';
@@ -31,7 +32,8 @@ export default function BrowserChrome({
   onOpenSyllabus,
   onOpenBookmarks,
   onOpenSettings,
-  bookmarkCount = 0
+  bookmarkCount = 0,
+  onOpenMenu
 }) {
   const [inputValue, setInputValue] = useState(currentUrl || '');
   const [warningMessage, setWarningMessage] = useState(null);
@@ -83,15 +85,26 @@ export default function BrowserChrome({
 
   return (
     <header className="browser-chrome">
-      {/* OS-Style Window Dots */}
-      <div className="window-dots" aria-hidden="true">
+      {/* Left Menu / Drawer Toggle */}
+      <button
+        type="button"
+        onClick={onOpenMenu}
+        className="nav-btn menu-toggle-btn"
+        title="Open Navigation & Feed Controls (Menu)"
+        aria-label="Open Navigation & Feed Controls"
+      >
+        <Menu className="w-4 h-4 text-slate-300" />
+      </button>
+
+      {/* OS-Style Window Dots (Desktop only) */}
+      <div className="window-dots desktop-only" aria-hidden="true">
         <span className="dot dot-close"></span>
         <span className="dot dot-minimize"></span>
         <span className="dot dot-maximize"></span>
       </div>
 
       {/* History & Navigation Controls */}
-      <div className="nav-controls">
+      <div className="nav-controls desktop-only">
         <button
           onClick={onBack}
           disabled={!canGoBack}

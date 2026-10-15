@@ -43,6 +43,14 @@ function getChannelBadge(channelName = '') {
 // Category filter chips for YouTube header
 const FILTER_CHIPS = [
   { id: 'all', label: 'All' },
+  { id: 'ai-ml', label: 'AI & ML' },
+  { id: 'cloud-computing', label: 'Cloud & DevOps' },
+  { id: 'cyber-security', label: 'Cyber Security' },
+  { id: 'data-science', label: 'Data Science' },
+  { id: 'web-dev', label: 'Web Dev' },
+  { id: 'mobile-dev', label: 'Mobile Dev' },
+  { id: 'software-engineering', label: 'Software Eng' },
+  { id: 'blockchain', label: 'Blockchain' },
   { id: 'gate-special', label: 'GATE High-Yield' },
   { id: 'algorithms', label: 'Algorithms & DS' },
   { id: 'os', label: 'Operating Systems' },

@@ -25,7 +25,15 @@ import {
   X,
   ExternalLink,
   Zap,
-  CheckCircle2
+  CheckCircle2,
+  Brain,
+  Cloud,
+  ShieldCheck,
+  BarChart3,
+  Globe,
+  Smartphone,
+  Terminal,
+  Coins
 } from 'lucide-react';
 import { CS_SUBJECTS } from '../data/csCatalog';
 import VideoThumbnail from './VideoThumbnail';
@@ -45,7 +53,15 @@ const ICON_MAP = {
   Workflow,
   Briefcase,
   MessageSquareCode,
-  Flame
+  Flame,
+  Brain,
+  Cloud,
+  ShieldCheck,
+  BarChart3,
+  Globe,
+  Smartphone,
+  Terminal,
+  Coins
 };
 
 export default function VideoGrid({
@@ -68,73 +84,15 @@ export default function VideoGrid({
   updateNotification = null,
   onContinueUpdate,
   isContinueLoading = false,
-  streamPage = 1
+  streamPage = 1,
+  onOpenMenu
 }) {
   const activeSubjectObj = CS_SUBJECTS.find(s => s.id === selectedSubject);
   const activeSubjectName = activeSubjectObj ? activeSubjectObj.name : 'All CS Subjects';
 
   return (
     <div className="catalog-container">
-      {/* Feed Mode Switcher (Curated Curriculum vs Popular CS Videos vs Live YouTube Feed) */}
-      <div className="feed-mode-switcher-bar">
-        <div className="feed-mode-toggle-group">
-          {/* 1. Core CS Curriculum */}
-          <button
-            onClick={() => onToggleFeedMode('curated')}
-            className={`feed-mode-btn ${feedMode === 'curated' ? 'active' : ''}`}
-            title="Curated, vetted CS and GATE curriculum syllabus"
-          >
-            <BookOpen className="w-4 h-4 text-blue-400" />
-            <span>Core CS Curriculum</span>
-          </button>
-
-          {/* 2. Popular CS Videos */}
-          <button
-            onClick={() => onToggleFeedMode('popular')}
-            className={`feed-mode-btn ${feedMode === 'popular' ? 'active' : ''}`}
-            title="Top viewed, viral masterclasses and legendary CS courses across YouTube"
-          >
-            <Flame className="w-4 h-4 text-amber-400" />
-            <span>Popular CS Videos</span>
-            <span className="popular-hot-tag">Top Rated</span>
-          </button>
-
-          {/* 3. Live YouTube Feed (New Uploads) */}
-          <button
-            onClick={() => onToggleFeedMode('live')}
-            className={`feed-mode-btn ${feedMode === 'live' ? 'active' : ''}`}
-            title="Real-time live feed of latest uploads from top CS channels"
-          >
-            <span className="live-pulse-dot"></span>
-            <Radio className="w-4 h-4 text-emerald-400" />
-            <span>Live YouTube Feed (New Uploads)</span>
-          </button>
-        </div>
-
-        {/* Right Action Controls: Auto-Update & Refresh */}
-        <div className="feed-controls-right">
-          <button
-            onClick={onToggleAutoUpdate}
-            className={`feed-autoupdate-btn ${autoUpdateEnabled ? 'active' : ''}`}
-            title={autoUpdateEnabled ? 'Auto-Update is ON (Checks YouTube channels every 45s)' : 'Auto-Update is paused'}
-          >
-            <Zap className={`w-3.5 h-3.5 ${autoUpdateEnabled ? 'text-emerald-400' : 'text-slate-500'}`} />
-            <span>Auto-Update: {autoUpdateEnabled ? 'ON' : 'OFF'}</span>
-          </button>
-
-          <button
-            onClick={onRefreshLive}
-            disabled={isLiveLoading || isSubjectLoading}
-            className="feed-refresh-btn"
-            title="Fetch latest updates from YouTube now"
-          >
-            <RefreshCw className={`w-3.5 h-3.5 ${isLiveLoading || isSubjectLoading ? 'animate-spin' : ''}`} />
-            <span>{isLiveLoading || isSubjectLoading ? 'Syncing...' : 'Check New Uploads'}</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Floating Auto-Update Notification Banner */}
+      {/* Floating Live Update Notification Toast */}
       {updateNotification && (
         <div className="live-update-toast">
           <Sparkles className="w-4 h-4 text-emerald-400 animate-pulse" />
@@ -164,7 +122,7 @@ export default function VideoGrid({
         })}
       </div>
 
-      {/* Active Filter or Search Status Banner */}
+      {/* Active Filter or Search Status Banner - Clean & Uncluttered */}
       <div className="catalog-status-bar">
         <div className="flex items-center gap-2 flex-wrap">
           {searchQuery ? (
@@ -207,13 +165,21 @@ export default function VideoGrid({
           )}
         </div>
 
-        <button
-          onClick={onOpenSyllabus}
-          className="syllabus-cta-btn"
-        >
-          <BookOpen className="w-3.5 h-3.5 text-amber-400" />
-          <span>Interactive GATE Syllabus Checklist</span>
-        </button>
+        {/* Clean Mode & Menu Pill on the right */}
+        {feedMode !== 'curated' && onOpenMenu && (
+          <button
+            onClick={onOpenMenu}
+            className="feed-mode-indicator-chip"
+            title="Active Feed Mode - Tap to adjust in menu"
+          >
+            {feedMode === 'popular' ? (
+              <Flame className="w-3 h-3 text-amber-400" />
+            ) : (
+              <Radio className="w-3 h-3 text-emerald-400" />
+            )}
+            <span>{feedMode === 'popular' ? 'Popular Mode' : 'Live Stream'}</span>
+          </button>
+        )}
       </div>
 
       {/* Video Grid Cards */}
@@ -333,41 +299,33 @@ export default function VideoGrid({
             })}
           </div>
 
-          {/* Continue Update / Continuous Load More Stream Bar */}
-          <div className="continue-update-stream-container">
-            <div className="continue-stream-stats">
-              <span className="stats-dot"></span>
-              <span>Showing <strong>{videos.length} Lectures</strong> across <strong>Page {streamPage}</strong></span>
-            </div>
-
+          {/* Streamlined Compact Load More Section */}
+          <div className="load-more-section">
             <button
               id="btn-continue-update"
               onClick={onContinueUpdate}
               disabled={isContinueLoading}
-              className={`continue-update-btn ${isContinueLoading ? 'loading' : ''}`}
-              title="Continuously fetch and update the feed with more YouTube CS lectures"
+              className={`load-more-pill-btn ${isContinueLoading ? 'loading' : ''}`}
+              title="Load more computer science lectures for this subject"
             >
-              <RefreshCw className={`w-4 h-4 text-emerald-400 ${isContinueLoading ? 'animate-spin' : ''}`} />
+              <RefreshCw className={`w-3.5 h-3.5 text-emerald-400 ${isContinueLoading ? 'animate-spin' : ''}`} />
               <span>
                 {isContinueLoading 
-                  ? `Syncing Page ${streamPage + 1} with YouTube...` 
-                  : 'Continue Updating - Load More CS Videos'}
-              </span>
-              <span className="page-counter-badge">
-                {isContinueLoading ? 'Loading...' : `Page ${streamPage}`}
+                  ? `Loading Page ${streamPage + 1}...` 
+                  : `Load More Lectures · Page ${streamPage + 1}`}
               </span>
             </button>
 
+            <span className="load-more-counter">
+              Showing {videos.length} Lectures
+            </span>
+
             {updateNotification && (
-              <div className="stream-update-alert">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+              <div className="stream-update-alert compact">
+                <CheckCircle2 className="w-3 h-3 text-emerald-400" />
                 <span>{updateNotification}</span>
               </div>
             )}
-
-            <p className="continue-update-subtext">
-              Continuous live stream active • Real-time YouTube educational sync with AdShield privacy protection
-            </p>
           </div>
         </>
       )}
