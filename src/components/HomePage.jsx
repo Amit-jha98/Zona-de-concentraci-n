@@ -7,9 +7,10 @@ import {
   History, 
   Bookmark, 
   Award, 
-  ChevronRight,
   Sparkles,
-  Search
+  Search,
+  LayoutGrid,
+  List
 } from 'lucide-react';
 import { CS_SUBJECTS, EDUCATIONAL_VIDEOS } from '../data/csCatalog';
 import { getStrictRelatedVideos } from '../services/recommendationEngine';
@@ -68,6 +69,22 @@ export default function HomePage({
   onSearch
 }) {
   const [selectedFilter, setSelectedFilter] = useState('all');
+  const [viewMode, setViewMode] = useState(() => {
+    try {
+      return localStorage.getItem('edubrowse_home_view_mode') || 'grid';
+    } catch {
+      return 'grid';
+    }
+  });
+
+  const handleViewModeChange = (mode) => {
+    setViewMode(mode);
+    try {
+      localStorage.setItem('edubrowse_home_view_mode', mode);
+    } catch {
+      // ignore localStorage errors
+    }
+  };
 
   // Filter video suggestions based on selected filter chip
   const filteredVideos = useMemo(() => {
@@ -216,15 +233,38 @@ export default function HomePage({
       {/* 3. Main YouTube Video Grid Suggestions */}
       <section className="yt-feed-section">
         <div className="yt-feed-header">
-          <h2 className="yt-feed-title">
-            {selectedFilter === 'all' 
-              ? (history.length > 0 ? 'Recommended for you' : 'Curated CS Lectures & Masterclasses')
-              : FILTER_CHIPS.find(c => c.id === selectedFilter)?.label || 'Video Suggestions'}
-          </h2>
-          <span className="yt-feed-count">{filteredVideos.length} videos</span>
+          <div className="yt-feed-title-wrap">
+            <h2 className="yt-feed-title">
+              {selectedFilter === 'all' 
+                ? (history.length > 0 ? 'Recommended for you' : 'Curated CS Lectures & Masterclasses')
+                : FILTER_CHIPS.find(c => c.id === selectedFilter)?.label || 'Video Suggestions'}
+            </h2>
+            <span className="yt-feed-count">{filteredVideos.length} videos</span>
+          </div>
+
+          <div className="yt-view-toggle" role="group" aria-label="Layout View Mode">
+            <button
+              type="button"
+              className={`yt-view-btn ${viewMode === 'grid' ? 'active' : ''}`}
+              onClick={() => handleViewModeChange('grid')}
+              title="Grid View (Compact)"
+              aria-label="Grid View"
+            >
+              <LayoutGrid className="w-3.5 h-3.5" />
+            </button>
+            <button
+              type="button"
+              className={`yt-view-btn ${viewMode === 'list' ? 'active' : ''}`}
+              onClick={() => handleViewModeChange('list')}
+              title="List View (Dense)"
+              aria-label="List View"
+            >
+              <List className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </div>
 
-        <div className="yt-videos-grid">
+        <div className={`yt-videos-grid ${viewMode === 'list' ? 'is-list-view' : ''}`}>
           {filteredVideos.map((video) => {
             const badge = getChannelBadge(video.channel);
             const subjectMeta = CS_SUBJECTS.find(s => s.id === video.subject) || {
@@ -260,8 +300,9 @@ export default function HomePage({
                   {/* GATE High-Yield Badge on Thumbnail */}
                   {isHighYield && (
                     <div className="yt-thumb-gate-badge">
-                      <Award className="w-3 h-3 text-amber-400" />
-                      <span>{video.gateWeightage}</span>
+                      <Award className="w-3 h-3 text-amber-400 shrink-0" />
+                      <span className="yt-badge-text-full">{video.gateWeightage}</span>
+                      <span className="yt-badge-text-short">High Yield</span>
                     </div>
                   )}
 
