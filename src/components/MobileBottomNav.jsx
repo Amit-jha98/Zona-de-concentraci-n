@@ -1,18 +1,27 @@
 import React from 'react';
-import { LayoutGrid, PlayCircle, BookOpen, FileEdit, Bookmark } from 'lucide-react';
+import { Home, LayoutGrid, PlayCircle, BookOpen, Bookmark } from 'lucide-react';
 
 export default function MobileBottomNav({
   activeTabType,
   hasActiveVideo,
+  onOpenHome,
   onOpenCatalog,
   onOpenPlayer,
   onOpenSyllabus,
-  onOpenNotes,
   onOpenBookmarks,
   bookmarkCount = 0
 }) {
   return (
     <nav className="mobile-bottom-nav" aria-label="Mobile Navigation">
+      <button
+        onClick={onOpenHome}
+        className={`mobile-nav-item ${activeTabType === 'home' ? 'active' : ''}`}
+        aria-label="Home Start Page"
+      >
+        <Home className="w-5 h-5 mobile-nav-icon" />
+        <span className="mobile-nav-label">Home</span>
+      </button>
+
       <button
         onClick={onOpenCatalog}
         className={`mobile-nav-item ${activeTabType === 'catalog' ? 'active' : ''}`}
@@ -39,15 +48,6 @@ export default function MobileBottomNav({
       >
         <BookOpen className="w-5 h-5 mobile-nav-icon" />
         <span className="mobile-nav-label">Syllabus</span>
-      </button>
-
-      <button
-        onClick={onOpenNotes}
-        className="mobile-nav-item"
-        aria-label="Study Notes"
-      >
-        <FileEdit className="w-5 h-5 mobile-nav-icon" />
-        <span className="mobile-nav-label">Notes</span>
       </button>
 
       <button

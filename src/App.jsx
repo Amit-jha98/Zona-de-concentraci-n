@@ -9,6 +9,7 @@ import GateSyllabusTracker from './components/GateSyllabusTracker';
 import BookmarksDrawer from './components/BookmarksDrawer';
 import SettingsModal from './components/SettingsModal';
 import MobileBottomNav from './components/MobileBottomNav';
+import HomePage from './components/HomePage';
 import './App.css';
 
 import { EDUCATIONAL_VIDEOS, CS_SUBJECTS, POPULAR_CS_VIDEOS } from './data/csCatalog';
@@ -33,29 +34,53 @@ import {
 } from './services/youtubeService';
 import { incrementAdShieldStat } from './services/adBlockerService';
 
+const SESSION_TABS_KEY = 'edubrowse_browser_tabs';
+const SESSION_ACTIVE_TAB_KEY = 'edubrowse_active_tab_id';
+
+const DEFAULT_TABS = [
+  {
+    id: 'tab-home',
+    title: 'EduBrowse CS',
+    type: 'home'
+  },
+  {
+    id: 'tab-catalog',
+    title: 'CS & GATE Catalog',
+    type: 'catalog',
+    subject: 'all',
+    searchQuery: ''
+  },
+  {
+    id: 'tab-syllabus',
+    title: 'GATE CS Syllabus Matrix',
+    type: 'syllabus'
+  }
+];
+
 export default function App() {
-  // Browser Tabs State
-  const [tabs, setTabs] = useState([
-    {
-      id: 'tab-1',
-      title: "Dijkstra's Algorithm - Single Source Shortest Path",
-      type: 'player',
-      videoId: 'XB4MIexjvY0'
-    },
-    {
-      id: 'tab-catalog',
-      title: 'CS & GATE Catalog',
-      type: 'catalog',
-      subject: 'all',
-      searchQuery: ''
-    },
-    {
-      id: 'tab-syllabus',
-      title: 'GATE CS Syllabus Matrix',
-      type: 'syllabus'
+  // Browser Tabs State with localStorage Session Persistence
+  const [tabs, setTabs] = useState(() => {
+    try {
+      const saved = localStorage.getItem(SESSION_TABS_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
+    } catch (e) {
+      console.warn('Error reading saved session tabs:', e);
     }
-  ]);
-  const [activeTabId, setActiveTabId] = useState('tab-1');
+    return DEFAULT_TABS;
+  });
+
+  const [activeTabId, setActiveTabId] = useState(() => {
+    try {
+      const savedActive = localStorage.getItem(SESSION_ACTIVE_TAB_KEY);
+      if (savedActive) return savedActive;
+    } catch (e) {
+      console.warn('Error reading active tab:', e);
+    }
+    return 'tab-home';
+  });
 
   // Video State cache
   const [videoCache, setVideoCache] = useState(() => {
@@ -203,9 +228,22 @@ export default function App() {
     }
   }, [isSearchingLive, activeTab?.searchQuery]);
 
+  // Persist browser tabs and active tab so page refresh preserves state
+  useEffect(() => {
+    try {
+      localStorage.setItem(SESSION_TABS_KEY, JSON.stringify(tabs));
+      localStorage.setItem(SESSION_ACTIVE_TAB_KEY, activeTabId);
+    } catch (e) {
+      console.warn('Error saving session tabs:', e);
+    }
+  }, [tabs, activeTabId]);
+
   // Omnibox URL generation
   const omniboxUrl = useMemo(() => {
-    if (!activeTab) return 'edu://cs';
+    if (!activeTab) return 'edu://cs/home';
+    if (activeTab.type === 'home') {
+      return 'edu://cs/home';
+    }
     if (activeTab.type === 'player' && activeTab.videoId) {
       return `https://youtube.com/watch?v=${activeTab.videoId}`;
     }
@@ -218,7 +256,7 @@ export default function App() {
       }
       return `edu://cs/subject/${activeTab.subject || 'all'}`;
     }
-    return 'edu://cs';
+    return 'edu://cs/home';
   }, [activeTab]);
 
   // Handlers for Tabs
@@ -236,13 +274,11 @@ export default function App() {
   };
 
   const handleNewTab = () => {
-    const newId = `tab-${Date.now()}`;
+    const newId = `tab-home-${Date.now()}`;
     const newTab = {
       id: newId,
-      title: 'New CS Session',
-      type: 'catalog',
-      subject: 'all',
-      searchQuery: ''
+      title: 'EduBrowse CS',
+      type: 'home'
     };
     setTabs([...tabs, newTab]);
     setActiveTabId(newId);
@@ -253,34 +289,63 @@ export default function App() {
     if (!video || !video.id) return;
     setVideoCache(prev => ({ ...prev, [video.id]: video }));
 
-    setTabs(prev => prev.map(t => {
-      if (t.id === activeTabId) {
-        return {
+    setTabs(prev => {
+      // If currently on home or syllabus, open or replace tab
+      const playerTab = prev.find(t => t.id === activeTabId);
+      if (playerTab && (playerTab.type === 'player' || playerTab.type === 'catalog')) {
+        return prev.map(t => t.id === activeTabId ? {
           ...t,
           type: 'player',
           videoId: video.id,
           title: video.title
-        };
+        } : t);
       }
-      return t;
-    }));
+      // Otherwise open in a dedicated player tab
+      const existingPlayer = prev.find(t => t.type === 'player');
+      if (existingPlayer) {
+        setActiveTabId(existingPlayer.id);
+        return prev.map(t => t.id === existingPlayer.id ? {
+          ...t,
+          videoId: video.id,
+          title: video.title
+        } : t);
+      }
+      const newPlayerId = `tab-player-${Date.now()}`;
+      setActiveTabId(newPlayerId);
+      return [...prev, {
+        id: newPlayerId,
+        title: video.title,
+        type: 'player',
+        videoId: video.id
+      }];
+    });
   }, [activeTabId]);
 
   // Navigation from Omnibox
   const handleNavigate = ({ type, value }) => {
     if (type === 'video_id') {
+      const vidId = value;
       setTabs(prev => prev.map(t => {
         if (t.id === activeTabId) {
           return {
             ...t,
             type: 'player',
-            videoId: value,
-            title: `Loading Lecture (${value})...`
+            videoId: vidId,
+            title: `Loading Lecture (${vidId})...`
           };
         }
         return t;
       }));
     } else if (type === 'search') {
+      const valLower = value.toLowerCase().trim();
+      if (valLower === 'home' || valLower === 'edu://cs/home' || valLower === 'edu://home' || valLower === 'edu://cs') {
+        handleHome();
+        return;
+      }
+      if (valLower === 'syllabus' || valLower === 'gate' || valLower === 'edu://cs/gate-syllabus') {
+        handleOpenSyllabus();
+        return;
+      }
       setTabs(prev => prev.map(t => {
         if (t.id === activeTabId) {
           return {
@@ -295,31 +360,75 @@ export default function App() {
     }
   };
 
-  const handleHome = () => {
-    setTabs(prev => prev.map(t => {
-      if (t.id === activeTabId) {
-        return {
-          ...t,
-          type: 'catalog',
-          subject: 'all',
-          searchQuery: '',
-          title: 'CS & GATE Catalog'
-        };
-      }
-      return t;
-    }));
-  };
+  const handleHome = useCallback(() => {
+    const existing = tabs.find(t => t.type === 'home');
+    if (existing) {
+      setActiveTabId(existing.id);
+    } else {
+      const homeId = `tab-home-${Date.now()}`;
+      setTabs(prev => [{ id: homeId, title: 'EduBrowse CS', type: 'home' }, ...prev]);
+      setActiveTabId(homeId);
+    }
+  }, [tabs]);
 
-  const handleOpenSyllabus = () => {
+  const handleOpenCatalog = useCallback((subjectId = 'all') => {
+    const subjectObj = CS_SUBJECTS.find(s => s.id === subjectId);
+    const title = subjectId === 'all' ? 'CS & GATE Catalog' : `${subjectObj?.shortName || subjectId.toUpperCase()} • Catalog`;
+
+    const existing = tabs.find(t => t.type === 'catalog');
+    if (existing) {
+      setTabs(prev => prev.map(t => t.id === existing.id ? {
+        ...t,
+        subject: subjectId,
+        searchQuery: '',
+        title
+      } : t));
+      setActiveTabId(existing.id);
+    } else {
+      const catId = `tab-catalog-${Date.now()}`;
+      setTabs(prev => [...prev, {
+        id: catId,
+        title,
+        type: 'catalog',
+        subject: subjectId,
+        searchQuery: ''
+      }]);
+      setActiveTabId(catId);
+    }
+  }, [tabs]);
+
+  const handleSearchFromHome = useCallback((query) => {
+    const existing = tabs.find(t => t.type === 'catalog');
+    if (existing) {
+      setTabs(prev => prev.map(t => t.id === existing.id ? {
+        ...t,
+        searchQuery: query,
+        title: `Search: ${query}`
+      } : t));
+      setActiveTabId(existing.id);
+    } else {
+      const catId = `tab-catalog-${Date.now()}`;
+      setTabs(prev => [...prev, {
+        id: catId,
+        title: `Search: ${query}`,
+        type: 'catalog',
+        subject: 'all',
+        searchQuery: query
+      }]);
+      setActiveTabId(catId);
+    }
+  }, [tabs]);
+
+  const handleOpenSyllabus = useCallback(() => {
     const existing = tabs.find(t => t.type === 'syllabus');
     if (existing) {
       setActiveTabId(existing.id);
     } else {
       const newId = `tab-syllabus-${Date.now()}`;
-      setTabs([...tabs, { id: newId, title: 'GATE CS Syllabus', type: 'syllabus' }]);
+      setTabs(prev => [...prev, { id: newId, title: 'GATE CS Syllabus', type: 'syllabus' }]);
       setActiveTabId(newId);
     }
-  };
+  }, [tabs]);
 
   const handleToggleBookmark = (video) => {
     const updated = toggleBookmark(video);
@@ -329,6 +438,16 @@ export default function App() {
   const currentSubject = activeTab?.subject || 'all';
   const activeFeedKey = `${feedMode}-${currentSubject}`;
   const currentStreamPage = streamPages[activeFeedKey] || 1;
+
+  // Combined video suggestions for Home page
+  const allHomeVideos = useMemo(() => {
+    const map = new Map();
+    EDUCATIONAL_VIDEOS.forEach(v => map.set(v.id, v));
+    popularVideos.forEach(v => map.set(v.id, v));
+    liveVideos.forEach(v => map.set(v.id, v));
+    Object.values(videoCache).forEach(v => map.set(v.id, v));
+    return Array.from(map.values());
+  }, [videoCache, popularVideos, liveVideos]);
 
   // Filter videos for catalog tab
   const catalogVideos = useMemo(() => {
@@ -550,7 +669,17 @@ export default function App() {
 
       {/* Main Viewport Content */}
       <main className="browser-viewport">
-        {activeTab?.type === 'player' ? (
+        {activeTab?.type === 'home' ? (
+          <HomePage
+            videos={allHomeVideos}
+            history={history}
+            bookmarks={bookmarks}
+            onSelectVideo={handleSelectVideo}
+            onOpenCatalog={handleOpenCatalog}
+            onOpenSyllabus={handleOpenSyllabus}
+            onSearch={handleSearchFromHome}
+          />
+        ) : activeTab?.type === 'player' ? (
           <div className="player-layout">
             <div className="player-main-col">
               <VideoPlayer
@@ -574,12 +703,7 @@ export default function App() {
           <GateSyllabusTracker
             onSelectVideo={handleSelectVideo}
             onSelectSubject={(subjectId) => {
-              setTabs(prev => prev.map(t => t.id === activeTabId ? {
-                ...t,
-                type: 'catalog',
-                subject: subjectId,
-                title: `${subjectId.toUpperCase()} • CS Catalog`
-              } : t));
+              handleOpenCatalog(subjectId);
             }}
           />
         ) : (
@@ -620,19 +744,15 @@ export default function App() {
 
       {/* Mobile App Bottom Navigation Bar */}
       <MobileBottomNav
-        activeTabType={activeTab?.type || 'catalog'}
+        activeTabType={activeTab?.type || 'home'}
         hasActiveVideo={Boolean(tabs.some(t => t.type === 'player' && t.videoId))}
-        onOpenCatalog={() => {
-          const catalogTab = tabs.find(t => t.type === 'catalog');
-          if (catalogTab) setActiveTabId(catalogTab.id);
-          else handleHome();
-        }}
+        onOpenHome={handleHome}
+        onOpenCatalog={() => handleOpenCatalog('all')}
         onOpenPlayer={() => {
           const playerTab = tabs.find(t => t.type === 'player');
           if (playerTab) setActiveTabId(playerTab.id);
         }}
         onOpenSyllabus={handleOpenSyllabus}
-        onOpenNotes={() => setIsNotesOpen(true)}
         onOpenBookmarks={() => setIsBookmarksOpen(true)}
         bookmarkCount={bookmarks.length}
       />

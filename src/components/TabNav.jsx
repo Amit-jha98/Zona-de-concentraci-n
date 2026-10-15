@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plus, X, Globe, Play, BookOpen } from 'lucide-react';
+import { Plus, X, Globe, Play, BookOpen, Home } from 'lucide-react';
 
 export default function TabNav({ tabs, activeTabId, onSelectTab, onCloseTab, onNewTab }) {
   return (
@@ -7,6 +7,7 @@ export default function TabNav({ tabs, activeTabId, onSelectTab, onCloseTab, onN
       <div className="tabs-container">
         {tabs.map((tab) => {
           const isActive = tab.id === activeTabId;
+          const isHome = tab.type === 'home';
           const isSyllabus = tab.type === 'syllabus';
           const isPlayer = tab.type === 'player';
 
@@ -18,7 +19,9 @@ export default function TabNav({ tabs, activeTabId, onSelectTab, onCloseTab, onN
               title={tab.title}
             >
               <div className="tab-icon">
-                {isSyllabus ? (
+                {isHome ? (
+                  <Home className="w-3.5 h-3.5 text-emerald-400" />
+                ) : isSyllabus ? (
                   <BookOpen className="w-3.5 h-3.5 text-amber-400" />
                 ) : isPlayer ? (
                   <Play className="w-3.5 h-3.5 text-blue-400 fill-blue-400/20" />
