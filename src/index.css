@@ -117,3 +117,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* Color & sizing utility helpers */
+.text-emerald-400 { color: #34d399 !important; }
+.text-blue-400 { color: #60a5fa !important; }
+.text-amber-400 { color: #fbbf24 !important; }
+.text-slate-400 { color: #94a3b8 !important; }
+.text-slate-200 { color: #e2e8f0 !important; }

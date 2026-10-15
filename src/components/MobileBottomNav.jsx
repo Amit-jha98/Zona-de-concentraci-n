@@ -18,7 +18,7 @@ export default function MobileBottomNav({
         className={`mobile-nav-item ${activeTabType === 'home' ? 'active' : ''}`}
         aria-label="Home Start Page"
       >
-        <Home className="w-5 h-5 mobile-nav-icon" />
+        <Home size={20} className="mobile-nav-icon" />
         <span className="mobile-nav-label">Home</span>
       </button>
 
@@ -27,7 +27,7 @@ export default function MobileBottomNav({
         className={`mobile-nav-item ${activeTabType === 'catalog' ? 'active' : ''}`}
         aria-label="Lectures Catalog"
       >
-        <LayoutGrid className="w-5 h-5 mobile-nav-icon" />
+        <LayoutGrid size={20} className="mobile-nav-icon" />
         <span className="mobile-nav-label">Catalog</span>
       </button>
 
@@ -37,7 +37,7 @@ export default function MobileBottomNav({
         className={`mobile-nav-item ${activeTabType === 'player' ? 'active' : ''} ${!hasActiveVideo ? 'disabled' : ''}`}
         aria-label="Now Playing"
       >
-        <PlayCircle className="w-5 h-5 mobile-nav-icon" />
+        <PlayCircle size={20} className="mobile-nav-icon" />
         <span className="mobile-nav-label">Player</span>
       </button>
 
@@ -46,7 +46,7 @@ export default function MobileBottomNav({
         className={`mobile-nav-item ${activeTabType === 'syllabus' ? 'active' : ''}`}
         aria-label="GATE Syllabus Tracker"
       >
-        <BookOpen className="w-5 h-5 mobile-nav-icon" />
+        <BookOpen size={20} className="mobile-nav-icon" />
         <span className="mobile-nav-label">Syllabus</span>
       </button>
 
@@ -56,7 +56,7 @@ export default function MobileBottomNav({
         aria-label="Saved Lectures"
       >
         <div className="relative inline-flex">
-          <Bookmark className="w-5 h-5 mobile-nav-icon" />
+          <Bookmark size={20} className="mobile-nav-icon" />
           {bookmarkCount > 0 && (
             <span className="mobile-nav-badge">{bookmarkCount}</span>
           )}

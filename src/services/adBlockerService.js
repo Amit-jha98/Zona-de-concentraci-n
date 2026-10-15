@@ -60,7 +60,8 @@ export const buildAdFreeEmbedUrl = (videoId, options = {}) => {
     iv_load_policy: '3',
     playsinline: '1',
     controls: '1',
-    fs: '1'
+    fs: '1',
+    enablejsapi: '1'
   });
 
   if (startSeconds > 0) {

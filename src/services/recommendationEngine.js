@@ -23,7 +23,7 @@ export const getStrictRelatedVideos = (currentVideo, catalog = EDUCATIONAL_VIDEO
     : [];
 
   const scoredVideos = catalog
-    .filter(video => video.id !== currentId)
+    .filter(video => video && video.id && video.id !== currentId && /^[a-zA-Z0-9_-]{11}$/.test(video.id))
     .map(video => {
       let score = 0;
       let reasons = [];

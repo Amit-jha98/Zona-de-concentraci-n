@@ -977,59 +977,46 @@ export const getGuaranteedSubjectLectures = (subjectId = 'networks', page = 1, e
         ? EDUCATIONAL_VIDEOS.filter(v => v.gateWeightage && v.gateWeightage.includes('High'))
         : EDUCATIONAL_VIDEOS.filter(v => v.subject === subjectId));
 
-  const unshown = allCurated.filter(v => !existingIds.has(v.id));
-  if (unshown.length >= 8) {
+  // 1. Strictly unshown authentic videos from this subject
+  const unshown = allCurated.filter(v => !existingIds.has(v.id) && /^[a-zA-Z0-9_-]{11}$/.test(v.id));
+  if (unshown.length > 0) {
     return unshown.slice(0, 16);
   }
 
-  const variations = SUBJECT_PAGE_VARIATIONS[subjectId] || SUBJECT_PAGE_VARIATIONS.all;
-  const syllabusTopics = (GATE_CS_SYLLABUS.find(s => s.subjectId === subjectId)?.topics || []).map(t => t.title);
-  const subjectObj = CS_SUBJECTS.find(s => s.id === subjectId) || { name: 'Computer Science', shortName: 'CS' };
+  // 2. Unshown authentic lectures from closely related CS domains
+  const DOMAIN_AFFINITY = {
+    'cyber-security': ['networks', 'os', 'cloud-computing', 'software-engineering'],
+    'ai-ml': ['data-science', 'algorithms', 'discrete-math', 'software-engineering'],
+    'cloud-computing': ['os', 'networks', 'system-design', 'cyber-security'],
+    'data-science': ['ai-ml', 'algorithms', 'dbms', 'discrete-math'],
+    'web-dev': ['software-engineering', 'system-design', 'dbms', 'networks'],
+    'mobile-dev': ['software-engineering', 'web-dev', 'algorithms'],
+    'software-engineering': ['system-design', 'algorithms', 'web-dev'],
+    'system-design': ['cloud-computing', 'networks', 'dbms', 'os'],
+    'interview-prep': ['algorithms', 'system-design', 'os', 'dbms'],
+    networks: ['cyber-security', 'os', 'cloud-computing'],
+    os: ['coa', 'networks', 'cloud-computing'],
+    dbms: ['system-design', 'algorithms', 'data-science'],
+    coa: ['digital-logic', 'os'],
+    'digital-logic': ['coa', 'discrete-math'],
+    toc: ['compiler', 'discrete-math', 'algorithms'],
+    compiler: ['toc', 'os', 'software-engineering'],
+    'discrete-math': ['algorithms', 'toc', 'ai-ml']
+  };
 
-  const pool = [
-    ...variations,
-    ...syllabusTopics,
-    `${subjectObj.name} Chapter Problem Solving & PYQ Deep Dive`,
-    `${subjectObj.name} Advanced Architecture & Practice Numericals`,
-    `${subjectObj.name} Comprehensive GATE Revision Marathon`
-  ];
+  const relatedSubjects = DOMAIN_AFFINITY[subjectId] || ['algorithms', 'networks', 'os'];
+  const relatedPool = EDUCATIONAL_VIDEOS.filter(v => 
+    relatedSubjects.includes(v.subject) && 
+    !existingIds.has(v.id) && 
+    /^[a-zA-Z0-9_-]{11}$/.test(v.id)
+  );
 
-  const generated = [];
-  const startIndex = ((page - 1) * 4) % Math.max(1, pool.length);
-
-  for (let i = 0; i < 12; i++) {
-    const topicIndex = (startIndex + i) % pool.length;
-    const topic = pool[topicIndex];
-    const generatedId = `cs-${subjectId}-p${page}-${i + 1}`;
-
-    if (!existingIds.has(generatedId)) {
-      const channel = i % 2 === 0 ? 'Gate Smashers' : (i % 3 === 0 ? 'Abdul Bari' : 'freeCodeCamp.org');
-      const durationStr = `${18 + (i * 4)}:${(20 + i * 7) % 60}`;
-      generated.push({
-        id: generatedId,
-        title: `${topic} - Full Concept Lecture & GATE Numericals`,
-        channel: channel,
-        subject: subjectId !== 'all' ? subjectId : 'algorithms',
-        subtopic: `${subjectObj.shortName} Curriculum`,
-        duration: durationStr,
-        durationSeconds: parseDurationToSeconds(durationStr),
-        level: 'GATE & University Core',
-        views: `${(1.2 + (i * 0.3)).toFixed(1)}M`,
-        viewsCount: Math.round((1.2 + (i * 0.3)) * 1000000),
-        year: '2024',
-        gateWeightage: 'High (Core Syllabus Topic)',
-        description: `Comprehensive lecture on ${topic} by ${channel}. Streamed in distraction-free AdShield environment with notes taking enabled.`,
-        keyTakeaways: [
-          `Fundamental concepts and derivation of ${topic}`,
-          'GATE numerical patterns and time complexity proofs',
-          'Practice problems and common exam pitfall analysis'
-        ],
-        tags: [subjectId, 'gate', 'curriculum', 'stream']
-      });
-    }
+  if (relatedPool.length > 0) {
+    return relatedPool.slice(0, 12);
   }
 
-  return [...unshown, ...generated].slice(0, 16);
+  // 3. Cycle authentic verified lectures from this subject (never emit fake/synthetic IDs!)
+  return allCurated.filter(v => /^[a-zA-Z0-9_-]{11}$/.test(v.id)).slice(0, 12);
 };
 
 /**

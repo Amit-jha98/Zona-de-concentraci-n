@@ -60,13 +60,27 @@ const DEFAULT_TABS = [
 ];
 
 export default function App() {
-  // Browser Tabs State with localStorage Session Persistence
+  // Browser Tabs State with localStorage Session Persistence & ID Sanitization
   const [tabs, setTabs] = useState(() => {
     try {
       const saved = localStorage.getItem(SESSION_TABS_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          // Cleanse any invalid or synthetic IDs from persisted browser tabs
+          return parsed.map(tab => {
+            if (tab.type === 'player' && tab.videoId && !/^[a-zA-Z0-9_-]{11}$/.test(tab.videoId)) {
+              const fallback = EDUCATIONAL_VIDEOS.find(v => v.subject === tab.subject && /^[a-zA-Z0-9_-]{11}$/.test(v.id))
+                || EDUCATIONAL_VIDEOS[0];
+              return {
+                ...tab,
+                videoId: fallback.id,
+                title: fallback.title
+              };
+            }
+            return tab;
+          });
+        }
       }
     } catch (e) {
       console.warn('Error reading saved session tabs:', e);
@@ -88,7 +102,9 @@ export default function App() {
   const [videoCache, setVideoCache] = useState(() => {
     const map = {};
     EDUCATIONAL_VIDEOS.forEach(v => {
-      map[v.id] = v;
+      if (v && v.id && /^[a-zA-Z0-9_-]{11}$/.test(v.id)) {
+        map[v.id] = v;
+      }
     });
     return map;
   });
@@ -127,7 +143,14 @@ export default function App() {
   // Resolve current active video if in player tab
   const activeVideo = useMemo(() => {
     if (activeTab?.type === 'player' && activeTab.videoId) {
-      return videoCache[activeTab.videoId] || null;
+      const vidId = activeTab.videoId;
+      // Guard against synthetic or invalid video IDs
+      if (!/^[a-zA-Z0-9_-]{11}$/.test(vidId)) {
+        const fallback = EDUCATIONAL_VIDEOS.find(v => v.subject === activeTab.subject && /^[a-zA-Z0-9_-]{11}$/.test(v.id))
+          || EDUCATIONAL_VIDEOS[0];
+        return fallback;
+      }
+      return videoCache[vidId] || EDUCATIONAL_VIDEOS.find(v => v.id === vidId) || null;
     }
     return null;
   }, [activeTab, videoCache]);
@@ -290,7 +313,12 @@ export default function App() {
   // Video selection handler (opens video in current or active player tab)
   const handleSelectVideo = useCallback((video) => {
     if (!video || !video.id) return;
-    setVideoCache(prev => ({ ...prev, [video.id]: video }));
+    let target = video;
+    if (!/^[a-zA-Z0-9_-]{11}$/.test(video.id)) {
+      target = EDUCATIONAL_VIDEOS.find(v => v.subject === video.subject && /^[a-zA-Z0-9_-]{11}$/.test(v.id))
+        || EDUCATIONAL_VIDEOS[0];
+    }
+    setVideoCache(prev => ({ ...prev, [target.id]: target }));
 
     setTabs(prev => {
       // If currently on home or syllabus, open or replace tab
@@ -299,8 +327,8 @@ export default function App() {
         return prev.map(t => t.id === activeTabId ? {
           ...t,
           type: 'player',
-          videoId: video.id,
-          title: video.title
+          videoId: target.id,
+          title: target.title
         } : t);
       }
       // Otherwise open in a dedicated player tab
@@ -309,17 +337,17 @@ export default function App() {
         setActiveTabId(existingPlayer.id);
         return prev.map(t => t.id === existingPlayer.id ? {
           ...t,
-          videoId: video.id,
-          title: video.title
+          videoId: target.id,
+          title: target.title
         } : t);
       }
       const newPlayerId = `tab-player-${Date.now()}`;
       setActiveTabId(newPlayerId);
       return [...prev, {
         id: newPlayerId,
-        title: video.title,
+        title: target.title,
         type: 'player',
-        videoId: video.id
+        videoId: target.id
       }];
     });
   }, [activeTabId]);
