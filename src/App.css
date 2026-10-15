@@ -710,6 +710,11 @@
   box-sizing: border-box;
 }
 
+.mirror-status-row {
+  display: inline-flex;
+  align-items: center;
+}
+
 .mirror-status {
   display: inline-flex;
   align-items: center;
@@ -726,6 +731,7 @@
   box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
 }
 
+.mirror-actions-row,
 .mirror-actions {
   display: inline-flex;
   align-items: center;
@@ -3471,6 +3477,11 @@
     gap: 6px;
     background-color: var(--bg-chrome);
     border-bottom: 1px solid var(--border-subtle);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .window-dots,
@@ -3595,25 +3606,60 @@
   .player-mirror-bar {
     margin: 0 10px;
     width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    min-width: 0;
     padding: 6px 10px;
     gap: 6px;
     border-radius: 8px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mirror-status-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 0;
   }
 
   .mirror-status {
-    font-size: 10.5px;
+    font-size: 11px;
+    min-width: 0;
+    color: #a1a1aa;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
 
-  .mirror-actions {
+  .mirror-actions-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 6px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .mirror-toggle-btn,
   .mirror-link-btn,
   .mirror-fullscreen-btn {
-    font-size: 10px;
-    padding: 2.5px 6px;
+    font-size: 10.5px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    justify-content: center;
+    text-align: center;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .player-metadata-panel {
@@ -3622,7 +3668,10 @@
     border-radius: 12px;
     gap: 12px;
     width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    min-width: 0;
     box-sizing: border-box;
+    overflow: hidden;
   }
 
   /* Mobile Player Header */
@@ -3668,33 +3717,40 @@
     font-size: 11px;
   }
 
-  /* Mobile Action Buttons: 5-Item Responsive Grid */
+  /* Mobile Action Buttons: Native YouTube Mobile Scrollable Pill Strip */
   .player-actions-strip {
-    display: grid !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-    gap: 4px !important;
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 8px !important;
     width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 2px 0 4px !important;
     box-sizing: border-box !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .player-actions-strip::-webkit-scrollbar {
+    display: none !important;
   }
 
   .player-action-pill {
-    height: 36px;
-    padding: 0 2px;
-    justify-content: center;
-    font-size: 10px;
-    gap: 3px;
-    border-radius: 8px;
-    min-width: 0 !important;
-    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    height: 36px !important;
+    padding: 0 14px !important;
+    font-size: 12px !important;
+    gap: 6px !important;
+    border-radius: 999px !important;
+    min-width: fit-content !important;
+    box-sizing: border-box !important;
   }
 
   .player-action-pill span {
-    font-size: 9.5px;
-    font-weight: 500;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    min-width: 0;
+    font-size: 11.5px !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
   }
 
   .player-action-pill.fullscreen-pill {
@@ -3711,12 +3767,17 @@
 
   /* Mobile Tags Row: Horizontal Scroll */
   .player-tags-row {
+    display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap;
     gap: 6px;
     padding-bottom: 2px;
     scrollbar-width: none;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .player-tags-row::-webkit-scrollbar {

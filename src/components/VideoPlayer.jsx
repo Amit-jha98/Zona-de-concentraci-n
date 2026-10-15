@@ -298,11 +298,11 @@ export default function VideoPlayer({
 
       {/* Playback Controls & Direct Mirror Bar */}
       <div className="player-mirror-bar">
-        <div className="mirror-status">
-          <span className="mirror-dot"></span>
-          <span>{useStandardEmbed ? 'Standard YouTube Player' : 'AdShield Protected Clean Player'}</span>
-        </div>
-        <div className="mirror-actions">
+        <div className="mirror-status-row">
+          <div className="mirror-status">
+            <span className="mirror-dot"></span>
+            <span>{useStandardEmbed ? 'Standard Player' : 'AdShield Protected'}</span>
+          </div>
           <button
             type="button"
             onClick={toggleFullscreenHorizontal}
@@ -310,16 +310,18 @@ export default function VideoPlayer({
             title="Watch in Horizontal Fullscreen (Auto-Rotates)"
           >
             {isAnyFullscreen ? <Minimize2 size={12} /> : <Maximize2 size={12} />}
-            <span>{isAnyFullscreen ? 'Exit Horizontal' : 'Horizontal Fullscreen'}</span>
+            <span>{isAnyFullscreen ? 'Exit Full' : 'Landscape'}</span>
           </button>
+        </div>
 
+        <div className="mirror-actions-row">
           <button
             type="button"
             onClick={() => setUseStandardEmbed(!useStandardEmbed)}
             className="mirror-toggle-btn"
             title="Switch player if video has playback restrictions"
           >
-            {useStandardEmbed ? 'Shield Mode' : 'Trouble Playing? Switch'}
+            {useStandardEmbed ? 'Shield Mode' : 'Switch Player'}
           </button>
 
           <a
@@ -329,7 +331,7 @@ export default function VideoPlayer({
             className="mirror-link-btn"
             title="Open lecture directly on YouTube"
           >
-            Direct YouTube <ExternalLink size={12} className="inline-block" />
+            Direct YouTube <ExternalLink size={11} className="inline-block" />
           </a>
         </div>
       </div>
@@ -357,7 +359,7 @@ export default function VideoPlayer({
             </div>
           </div>
 
-          {/* Action buttons in a unified responsive strip */}
+          {/* Action buttons in a unified responsive horizontal carousel */}
           <div className="player-actions-strip">
             <button
               onClick={() => onToggleBookmark(effectiveVideo)}
@@ -405,7 +407,7 @@ export default function VideoPlayer({
               ) : (
                 <Maximize2 size={14} className="action-pill-icon text-blue-400" />
               )}
-              <span>{isAnyFullscreen ? 'Exit' : 'Full'}</span>
+              <span>{isAnyFullscreen ? 'Exit' : 'Landscape'}</span>
             </button>
 
             <a
