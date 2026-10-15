@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import { 
   Bookmark, 
   BookmarkCheck, 
@@ -12,7 +12,10 @@ import {
   ChevronDown,
   ChevronUp,
   FileEdit,
-  CheckCircle2
+  CheckCircle2,
+  Maximize2,
+  Minimize2,
+  RotateCw
 } from 'lucide-react';
 import { buildAdFreeEmbedUrl } from '../services/adBlockerService';
 import { CS_SUBJECTS, EDUCATIONAL_VIDEOS } from '../data/csCatalog';
@@ -27,6 +30,11 @@ export default function VideoPlayer({
   const [copied, setCopied] = useState(false);
   const [showTakeaways, setShowTakeaways] = useState(true);
   const [useStandardEmbed, setUseStandardEmbed] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isSimulatedHorizontal, setIsSimulatedHorizontal] = useState(false);
+  const [isRotatedLandscape, setIsRotatedLandscape] = useState(false);
+
+  const playerFrameRef = useRef(null);
 
   // Guarantee an authentic, 100% playable 11-character YouTube video ID
   const isSynthetic = !video?.id || !/^[a-zA-Z0-9_-]{11}$/.test(video.id);
@@ -44,6 +52,165 @@ export default function VideoPlayer({
     };
   }, [video, isSynthetic]);
 
+  // Screen Orientation Helpers: Lock to Horizontal (Landscape) Mode
+  const requestLandscapeOrientation = useCallback(async () => {
+    try {
+      if (screen.orientation && typeof screen.orientation.lock === 'function') {
+        await screen.orientation.lock('landscape');
+        return true;
+      } else if (screen.lockOrientation) {
+        return screen.lockOrientation('landscape');
+      } else if (screen.webkitLockOrientation) {
+        return screen.webkitLockOrientation('landscape');
+      } else if (screen.mozLockOrientation) {
+        return screen.mozLockOrientation('landscape');
+      } else if (screen.msLockOrientation) {
+        return screen.msLockOrientation('landscape');
+      }
+    } catch (err) {
+      // Permission denied or not supported by browser/OS
+      console.log('Screen orientation lock not permitted or supported:', err);
+    }
+    return false;
+  }, []);
+
+  const unlockScreenOrientation = useCallback(() => {
+    try {
+      if (screen.orientation && typeof screen.orientation.unlock === 'function') {
+        screen.orientation.unlock();
+      } else if (screen.unlockOrientation) {
+        screen.unlockOrientation();
+      } else if (screen.webkitUnlockOrientation) {
+        screen.webkitUnlockOrientation();
+      } else if (screen.mozUnlockOrientation) {
+        screen.mozUnlockOrientation();
+      } else if (screen.msUnlockOrientation) {
+        screen.msUnlockOrientation();
+      }
+    } catch (err) {
+      console.log('Screen orientation unlock error:', err);
+    }
+  }, []);
+
+  // Fullscreen change & Orientation listeners
+  useEffect(() => {
+    const handleFullscreenChange = async () => {
+      const fsElem = document.fullscreenElement ||
+        document.webkitFullscreenElement ||
+        document.mozFullScreenElement ||
+        document.msFullscreenElement;
+
+      const isFs = Boolean(fsElem);
+      setIsFullscreen(isFs);
+
+      if (isFs) {
+        // Automatically request landscape orientation on ANY fullscreen trigger (native YouTube or our button)
+        const locked = await requestLandscapeOrientation();
+        const isPortrait = window.matchMedia('(orientation: portrait)').matches || window.innerHeight > window.innerWidth;
+        
+        // If orientation lock was not applied on mobile portrait, force CSS rotation to guarantee horizontal mode
+        if (isPortrait && window.innerWidth <= 1024) {
+          setIsRotatedLandscape(!locked);
+        } else {
+          setIsRotatedLandscape(false);
+        }
+      } else {
+        // Exiting fullscreen: restore normal orientation
+        unlockScreenOrientation();
+        setIsRotatedLandscape(false);
+        setIsSimulatedHorizontal(false);
+      }
+    };
+
+    const handleResizeOrOrientation = () => {
+      const isFs = Boolean(
+        document.fullscreenElement ||
+        document.webkitFullscreenElement ||
+        isSimulatedHorizontal
+      );
+      if (isFs) {
+        const isLandscape = window.innerWidth > window.innerHeight;
+        if (isLandscape) {
+          // Device physically rotated to horizontal, CSS forced rotation not needed
+          setIsRotatedLandscape(false);
+        } else if (window.innerWidth <= 1024) {
+          setIsRotatedLandscape(true);
+        }
+      }
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+    document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+    window.addEventListener('orientationchange', handleResizeOrOrientation);
+    window.addEventListener('resize', handleResizeOrOrientation);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('mozfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('MSFullscreenChange', handleFullscreenChange);
+      window.removeEventListener('orientationchange', handleResizeOrOrientation);
+      window.removeEventListener('resize', handleResizeOrOrientation);
+    };
+  }, [requestLandscapeOrientation, unlockScreenOrientation, isSimulatedHorizontal]);
+
+  // Toggle Fullscreen & Automatic Horizontal Mode
+  const toggleFullscreenHorizontal = async () => {
+    const frame = playerFrameRef.current;
+    if (!frame) return;
+
+    const isFs = Boolean(
+      document.fullscreenElement ||
+      document.webkitFullscreenElement ||
+      isSimulatedHorizontal
+    );
+
+    if (!isFs) {
+      let nativeFsSuccess = false;
+      try {
+        if (frame.requestFullscreen) {
+          await frame.requestFullscreen();
+          nativeFsSuccess = true;
+        } else if (frame.webkitRequestFullscreen) {
+          await frame.webkitRequestFullscreen();
+          nativeFsSuccess = true;
+        } else if (frame.mozRequestFullScreen) {
+          await frame.mozRequestFullScreen();
+          nativeFsSuccess = true;
+        } else if (frame.msRequestFullscreen) {
+          await frame.msRequestFullscreen();
+          nativeFsSuccess = true;
+        }
+      } catch (err) {
+        console.warn('Native requestFullscreen failed:', err);
+      }
+
+      const locked = await requestLandscapeOrientation();
+      const isPortrait = window.matchMedia('(orientation: portrait)').matches || window.innerHeight > window.innerWidth;
+
+      // Fallback to simulated horizontal mode if fullscreen was blocked or mobile device did not rotate
+      if (!nativeFsSuccess || (isPortrait && !locked && window.innerWidth <= 1024)) {
+        setIsSimulatedHorizontal(true);
+        if (isPortrait) {
+          setIsRotatedLandscape(true);
+        }
+      }
+    } else {
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        try {
+          if (document.exitFullscreen) await document.exitFullscreen();
+          else if (document.webkitExitFullscreen) await document.webkitExitFullscreen();
+        } catch (e) {}
+      }
+      unlockScreenOrientation();
+      setIsSimulatedHorizontal(false);
+      setIsRotatedLandscape(false);
+      setIsFullscreen(false);
+    }
+  };
+
   if (!effectiveVideo) {
     return (
       <div className="player-empty-state">
@@ -58,7 +225,7 @@ export default function VideoPlayer({
     color: '#3b82f6'
   };
 
-  // Deduplicate subtopic if it repeats subjectMeta.name (e.g. "Algorithms & Data Structures" vs "Data Structures & Algorithms")
+  // Deduplicate subtopic if it repeats subjectMeta.name
   const shouldShowSubtopic = useMemo(() => {
     if (!effectiveVideo?.subtopic || !subjectMeta?.name) return false;
     const sub = effectiveVideo.subtopic.toLowerCase().replace(/[^a-z0-9]/g, ' ').trim();
@@ -83,19 +250,38 @@ export default function VideoPlayer({
     return name.slice(0, 2).toUpperCase() || 'CS';
   };
 
+  const isAnyFullscreen = isFullscreen || isSimulatedHorizontal;
+
   return (
     <div className={`video-player-wrapper ${isFocusMode ? 'focus-mode' : ''}`}>
-      {/* 16:9 Aspect Ratio IFrame Container - Clean with NO overlapping overlays */}
-      <div className="player-aspect-frame">
+      {/* 16:9 Aspect Ratio IFrame Container with Fullscreen & Automatic Horizontal Mode */}
+      <div 
+        ref={playerFrameRef}
+        className={`player-aspect-frame ${isAnyFullscreen ? 'is-fullscreen' : ''} ${isSimulatedHorizontal ? 'simulated-horizontal' : ''} ${isRotatedLandscape ? 'force-landscape-rotate' : ''}`}
+      >
         <iframe
           key={`${effectiveVideo.id}-${useStandardEmbed}`}
           src={embedUrl}
           title={effectiveVideo.title}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen; screen-wake-lock"
           allowFullScreen
           className="player-iframe"
           loading="eager"
         ></iframe>
+
+        {/* Floating Quick Exit Fullscreen Button in Horizontal/Fullscreen Mode */}
+        {(isAnyFullscreen || isRotatedLandscape) && (
+          <button
+            type="button"
+            className="player-fullscreen-exit-btn"
+            onClick={toggleFullscreenHorizontal}
+            title="Exit Horizontal Mode"
+            aria-label="Exit Horizontal Fullscreen Mode"
+          >
+            <Minimize2 size={15} />
+            <span>Exit Horizontal</span>
+          </button>
+        )}
       </div>
 
       {/* Playback Controls & Direct Mirror Bar */}
@@ -106,12 +292,24 @@ export default function VideoPlayer({
         </div>
         <div className="mirror-actions">
           <button
+            type="button"
+            onClick={toggleFullscreenHorizontal}
+            className="mirror-fullscreen-btn"
+            title="Watch in Horizontal Fullscreen (Auto-Rotates)"
+          >
+            {isAnyFullscreen ? <Minimize2 size={12} /> : <Maximize2 size={12} />}
+            <span>{isAnyFullscreen ? 'Exit Horizontal' : 'Horizontal Fullscreen'}</span>
+          </button>
+
+          <button
+            type="button"
             onClick={() => setUseStandardEmbed(!useStandardEmbed)}
             className="mirror-toggle-btn"
             title="Switch player if video has playback restrictions"
           >
-            {useStandardEmbed ? 'Shield Mode' : 'Trouble Playing? Switch Player'}
+            {useStandardEmbed ? 'Shield Mode' : 'Trouble Playing? Switch'}
           </button>
+
           <a
             href={`https://www.youtube.com/watch?v=${effectiveVideo.id}`}
             target="_blank"
@@ -147,7 +345,7 @@ export default function VideoPlayer({
             </div>
           </div>
 
-          {/* Action buttons in a unified horizontal pill strip */}
+          {/* Action buttons in a unified responsive strip */}
           <div className="player-actions-strip">
             <button
               onClick={() => onToggleBookmark(effectiveVideo)}
@@ -182,6 +380,20 @@ export default function VideoPlayer({
                 <Share2 size={14} className="action-pill-icon" />
               )}
               <span>{copied ? 'Copied' : 'Share'}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={toggleFullscreenHorizontal}
+              className={`player-action-pill fullscreen-pill ${isAnyFullscreen ? 'active' : ''}`}
+              title="Enter Horizontal Fullscreen Mode"
+            >
+              {isAnyFullscreen ? (
+                <Minimize2 size={14} className="action-pill-icon text-amber-400" />
+              ) : (
+                <Maximize2 size={14} className="action-pill-icon text-blue-400" />
+              )}
+              <span>{isAnyFullscreen ? 'Exit' : 'Horizontal'}</span>
             </button>
 
             <a
