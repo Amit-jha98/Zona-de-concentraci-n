@@ -14,7 +14,7 @@
 }
 
 .edubrowse-app.theater-active .browser-chrome {
-  background-color: #06080b;
+  background-color: #000000;
 }
 
 .edubrowse-app.theater-active .player-sidebar-col {
@@ -116,7 +116,7 @@
 .omnibox-container:focus-within {
   border-color: var(--accent-blue);
   box-shadow: 0 0 0 1px var(--accent-blue), 0 0 12px var(--accent-blue-subtle);
-  background-color: #121824;
+  background-color: #16161a;
 }
 
 .omnibox-protocol {
@@ -382,7 +382,7 @@
 .browser-tabs-strip {
   display: flex;
   align-items: center;
-  background-color: #0b0f15;
+  background-color: #09090b;
   border-bottom: 1px solid var(--border-subtle);
   padding: 4px 10px 0 10px;
   gap: 4px;
@@ -683,7 +683,7 @@
 /* Collapsible Takeaways Card */
 .takeaways-card {
   margin-top: 4px;
-  background: #0d121c;
+  background: #111113;
   border: 1px solid rgba(245, 158, 11, 0.2);
   border-radius: 8px;
   overflow: hidden;
@@ -2212,18 +2212,18 @@
   gap: 10px;
   padding: 10px 22px;
   border-radius: 8px;
-  background: #111827;
+  background: #111113;
   border: 1px solid rgba(16, 185, 129, 0.4);
-  color: #e2e8f0;
+  color: #e4e4e7;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
   transition: all var(--transition-fast);
 }
 
 .continue-update-btn:hover:not(:disabled) {
-  background: #1e293b;
+  background: #18181b;
   border-color: var(--accent-emerald);
   color: #ffffff;
   transform: translateY(-1px);
@@ -2298,6 +2298,356 @@
   background: rgba(16, 185, 129, 0.15);
   border-color: var(--accent-emerald);
   cursor: wait;
+}
+
+/* ==========================================================================
+   Mobile Responsive App Styles (Mobile-First Polish)
+   ========================================================================== */
+.mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Hide desktop macOS traffic light window dots */
+  .window-dots {
+    display: none !important;
+  }
+
+  /* Hide desktop browser tab strip on mobile in favor of bottom app bar */
+  .browser-tabs-strip {
+    display: none !important;
+  }
+
+  /* Adjust main app layout for mobile bottom nav and safe area */
+  .edubrowse-app {
+    height: 100dvh;
+    padding-bottom: calc(var(--mobile-nav-height) + var(--safe-bottom));
+  }
+
+  /* Browser Chrome Top Header */
+  .browser-chrome {
+    padding: 6px 12px;
+    height: 52px;
+    min-height: 52px;
+    gap: 8px;
+    background-color: var(--bg-chrome);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .nav-controls {
+    display: none; /* Hide back/forward on mobile to give search bar breathing room */
+  }
+
+  .omnibox-form {
+    max-width: 100%;
+    flex: 1;
+  }
+
+  .omnibox-container {
+    height: 38px;
+    padding: 0 10px;
+    background-color: #111113;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+  }
+
+  .omnibox-shortcut {
+    display: none; /* Hide 'Ctrl K' on touch devices */
+  }
+
+  .omnibox-protocol {
+    display: none; /* Hide 'edu://cs' badge on mobile */
+  }
+
+  .omnibox-input {
+    font-size: 13px;
+  }
+
+  .browser-actions {
+    gap: 6px;
+  }
+
+  .action-btn {
+    height: 36px;
+    padding: 0 8px;
+  }
+
+  .action-btn-text {
+    display: none; /* Icon only on mobile header */
+  }
+
+  /* ========================================================================
+     Video Player Mobile Fixes (Resolves text squishing and button wrapping)
+     ======================================================================== */
+  .player-layout {
+    padding: 10px;
+    gap: 14px;
+  }
+
+  .player-main-col {
+    gap: 12px;
+  }
+
+  .player-aspect-frame {
+    border-radius: 8px;
+  }
+
+  .player-metadata-panel {
+    padding: 14px 12px;
+    border-radius: 10px;
+    gap: 14px;
+  }
+
+  /* TITLE ROW FIX: Title renders full-width on top; action buttons sit cleanly underneath! */
+  .player-title-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .player-video-title {
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    color: var(--text-primary) !important;
+    word-break: break-word;
+  }
+
+  .player-quick-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .player-quick-actions .pill-btn {
+    flex: 1 1 calc(50% - 4px);
+    height: 42px !important;
+    min-height: 42px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    justify-content: center !important;
+    padding: 0 12px !important;
+  }
+
+  .player-quick-actions .pill-btn.icon-only {
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    padding: 0 !important;
+  }
+
+  /* Taxonomy Badges on Mobile */
+  .player-badges-strip {
+    gap: 6px;
+  }
+
+  .badge-subject,
+  .badge-subtopic,
+  .badge-gate,
+  .badge-channel,
+  .badge-duration {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  /* ========================================================================
+     Catalog & Feed Mobile App Styling
+     ======================================================================== */
+  .catalog-container {
+    padding: 12px;
+    gap: 14px;
+  }
+
+  .feed-mode-switcher-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0c0c0e;
+    border: 1px solid var(--border-subtle);
+  }
+
+  .feed-mode-toggle-group {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px;
+    padding-bottom: 2px;
+  }
+
+  .feed-mode-btn {
+    height: 38px;
+    padding: 6px 14px;
+    font-size: 12.5px;
+    white-space: nowrap;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .feed-controls-right {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .feed-autoupdate-btn,
+  .feed-refresh-btn {
+    flex: 1;
+    height: 38px;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+
+  /* Subject Pills on Mobile */
+  .subject-pills-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 0 8px 0;
+    gap: 6px;
+  }
+
+  .subject-pill {
+    height: 36px;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  /* Status Bar */
+  .catalog-status-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .syllabus-cta-btn {
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 12.5px;
+  }
+
+  /* Video Grid: 1 Column on Mobile */
+  .video-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  .video-card {
+    border-radius: 10px;
+  }
+
+  /* Continue Updating Button on Mobile */
+  .continue-update-stream-container {
+    padding: 24px 10px 40px;
+    width: 100%;
+  }
+
+  .continue-update-btn {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  /* Bottom Sheet Drawers on Mobile */
+  .study-notes-drawer,
+  .bookmarks-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+    top: auto !important;
+    bottom: 0 !important;
+    height: 85vh !important;
+    border-radius: 16px 16px 0 0 !important;
+    border-left: none !important;
+    border-top: 1px solid var(--border-medium) !important;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.95) !important;
+  }
+
+  /* Mobile Bottom Navigation Bar */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(var(--mobile-nav-height) + var(--safe-bottom));
+    padding-bottom: var(--safe-bottom);
+    background-color: rgba(9, 9, 11, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid #27272a;
+    z-index: 50;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .mobile-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 100%;
+    color: var(--text-muted);
+    font-size: 10.5px;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    padding: 4px 0;
+    background: transparent;
+  }
+
+  .mobile-nav-item.active {
+    color: #ffffff;
+  }
+
+  .mobile-nav-item.active .mobile-nav-icon {
+    color: var(--accent-blue);
+  }
+
+  .mobile-nav-item.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .mobile-nav-badge {
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    background-color: var(--accent-blue);
+    color: #ffffff;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 999px;
+    min-width: 14px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .player-quick-actions .pill-btn {
+    font-size: 12px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+  }
+
+  .player-video-title {
+    font-size: 15px !important;
+  }
 }
 
 

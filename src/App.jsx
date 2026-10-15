@@ -8,6 +8,7 @@ import StudyNotes from './components/StudyNotes';
 import GateSyllabusTracker from './components/GateSyllabusTracker';
 import BookmarksDrawer from './components/BookmarksDrawer';
 import SettingsModal from './components/SettingsModal';
+import MobileBottomNav from './components/MobileBottomNav';
 import './App.css';
 
 import { EDUCATIONAL_VIDEOS, CS_SUBJECTS, POPULAR_CS_VIDEOS } from './data/csCatalog';
@@ -137,7 +138,7 @@ export default function App() {
           });
           return updated;
         });
-        setUpdateNotification(`⚡ Live Feed Refreshed: ${fresh.length} uploads synchronized`);
+        setUpdateNotification(`Live Feed Refreshed: ${fresh.length} uploads synchronized`);
         setTimeout(() => setUpdateNotification(null), 4000);
       }
     } finally {
@@ -171,7 +172,7 @@ export default function App() {
             newUploads.forEach(v => { updated[v.id] = v; });
             return updated;
           });
-          setUpdateNotification(`⚡ ${newUploads.length} New CS Upload${newUploads.length > 1 ? 's' : ''} Just In!`);
+          setUpdateNotification(`${newUploads.length} New CS Upload${newUploads.length > 1 ? 's' : ''} Synchronized`);
           setTimeout(() => setUpdateNotification(null), 5000);
         }
       } catch (err) {
@@ -367,11 +368,15 @@ export default function App() {
         list = [...list, ...nonDuplicateDynamic];
       }
 
-      // Safe Fallback: If current feed has no items for this subject (e.g. recent RSS didn't have COA),
-      // seamlessly blend with verified curated lectures so user NEVER encounters an empty 0-lectures state!
-      if (list.length === 0) {
-        list = EDUCATIONAL_VIDEOS.filter(v => v.subject === currentSubj);
-      }
+      // Ensure foundational curated lectures for this subject are always available
+      const baseCurated = EDUCATIONAL_VIDEOS.filter(v => 
+        currentSubj === 'gate-special' 
+          ? (v.gateWeightage && v.gateWeightage.includes('High'))
+          : v.subject === currentSubj
+      );
+      const existingIds = new Set(list.map(v => v.id));
+      const neededCurated = baseCurated.filter(v => !existingIds.has(v.id));
+      list = [...list, ...neededCurated];
     } else {
       // When on 'all', also merge any dynamic videos fetched for general stream
       if (subjectVideosCache['all'] && subjectVideosCache['all'].length > 0) {
@@ -433,48 +438,49 @@ export default function App() {
 
     try {
       let incoming = [];
+      let freshAddedCount = 0;
 
       if (currentSubject !== 'all') {
         // Fetch next page specifically for this subject
         incoming = await fetchYouTubeVideosBySubject(currentSubject, nextPage);
         if (incoming && incoming.length > 0) {
-          setSubjectVideosCache(prev => {
-            const currentList = prev[currentSubject] || [];
-            const existingIds = new Set(currentList.map(v => v.id));
-            const freshItems = incoming.filter(v => !existingIds.has(v.id));
-            return {
-              ...prev,
-              [currentSubject]: [...currentList, ...freshItems]
-            };
-          });
+          const currentCached = subjectVideosCache[currentSubject] || [];
+          const existingIds = new Set([
+            ...currentCached.map(v => v.id),
+            ...EDUCATIONAL_VIDEOS.filter(v => v.subject === currentSubject).map(v => v.id)
+          ]);
+          const freshItems = incoming.filter(v => !existingIds.has(v.id));
+          freshAddedCount = freshItems.length;
+
+          setSubjectVideosCache(prev => ({
+            ...prev,
+            [currentSubject]: [...(prev[currentSubject] || []), ...freshItems]
+          }));
         }
       } else if (feedMode === 'popular') {
         incoming = await fetchPopularCSVideos(nextPage);
         if (incoming && incoming.length > 0) {
-          setPopularVideos(prev => {
-            const existingIds = new Set(prev.map(v => v.id));
-            const freshItems = incoming.filter(v => !existingIds.has(v.id));
-            return [...prev, ...freshItems];
-          });
+          const existingIds = new Set(popularVideos.map(v => v.id));
+          const freshItems = incoming.filter(v => !existingIds.has(v.id));
+          freshAddedCount = freshItems.length;
+          setPopularVideos(prev => [...prev, ...freshItems]);
         }
       } else if (feedMode === 'live') {
         incoming = await fetchYouTubeVideosBySubject('all', nextPage);
         if (incoming && incoming.length > 0) {
-          setLiveVideos(prev => {
-            const existingIds = new Set(prev.map(v => v.id));
-            const freshItems = incoming.filter(v => !existingIds.has(v.id));
-            return [...prev, ...freshItems];
-          });
+          const existingIds = new Set(liveVideos.map(v => v.id));
+          const freshItems = incoming.filter(v => !existingIds.has(v.id));
+          freshAddedCount = freshItems.length;
+          setLiveVideos(prev => [...prev, ...freshItems]);
         }
       } else {
         // Curated feed mode
         incoming = await fetchYouTubeVideosBySubject('all', nextPage);
         if (incoming && incoming.length > 0) {
-          setCuratedVideos(prev => {
-            const existingIds = new Set(prev.map(v => v.id));
-            const freshItems = incoming.filter(v => !existingIds.has(v.id));
-            return [...prev, ...freshItems];
-          });
+          const existingIds = new Set(curatedVideos.map(v => v.id));
+          const freshItems = incoming.filter(v => !existingIds.has(v.id));
+          freshAddedCount = freshItems.length;
+          setCuratedVideos(prev => [...prev, ...freshItems]);
         }
       }
 
@@ -492,19 +498,23 @@ export default function App() {
           [activeKey]: nextPage
         }));
 
-        setUpdateNotification(`✨ Page ${nextPage} Added: +${incoming.length} new CS lectures appended!`);
-        incrementAdShieldStat('adsBlockedCount', incoming.length * 2);
+        if (freshAddedCount > 0) {
+          setUpdateNotification(`Page ${nextPage} Added: +${freshAddedCount} new CS lectures appended`);
+          incrementAdShieldStat('adsBlockedCount', freshAddedCount * 2);
+        } else {
+          setUpdateNotification(`Page ${nextPage} Synchronized: Catalog up to date`);
+        }
       } else {
-        setUpdateNotification(`⚡ Stream up to date • Synchronized with YouTube`);
+        setUpdateNotification(`Stream synchronized with YouTube`);
       }
     } catch (e) {
       console.warn('Error during continuous stream update:', e);
-      setUpdateNotification(`⚡ Synchronized with YouTube`);
+      setUpdateNotification(`Stream synchronized with YouTube`);
     } finally {
       setIsContinueLoading(false);
       setTimeout(() => setUpdateNotification(null), 4000);
     }
-  }, [feedMode, currentSubject, streamPages]);
+  }, [feedMode, currentSubject, streamPages, subjectVideosCache, popularVideos, liveVideos, curatedVideos]);
 
   return (
     <div className={`edubrowse-app ${isFocusMode ? 'theater-active' : ''}`}>
@@ -607,6 +617,25 @@ export default function App() {
           />
         )}
       </main>
+
+      {/* Mobile App Bottom Navigation Bar */}
+      <MobileBottomNav
+        activeTabType={activeTab?.type || 'catalog'}
+        hasActiveVideo={Boolean(tabs.some(t => t.type === 'player' && t.videoId))}
+        onOpenCatalog={() => {
+          const catalogTab = tabs.find(t => t.type === 'catalog');
+          if (catalogTab) setActiveTabId(catalogTab.id);
+          else handleHome();
+        }}
+        onOpenPlayer={() => {
+          const playerTab = tabs.find(t => t.type === 'player');
+          if (playerTab) setActiveTabId(playerTab.id);
+        }}
+        onOpenSyllabus={handleOpenSyllabus}
+        onOpenNotes={() => setIsNotesOpen(true)}
+        onOpenBookmarks={() => setIsBookmarksOpen(true)}
+        bookmarkCount={bookmarks.length}
+      />
 
       {/* Timestamped Lecture Notes Drawer */}
       <StudyNotes

@@ -12,7 +12,7 @@ import {
   ChevronDown,
   ChevronUp,
   FileEdit,
-  Sparkles
+  CheckCircle2
 } from 'lucide-react';
 import { buildAdFreeEmbedUrl } from '../services/adBlockerService';
 import { CS_SUBJECTS } from '../data/csCatalog';
@@ -162,7 +162,7 @@ export default function VideoPlayer({
               onClick={() => setShowTakeaways(!showTakeaways)}
             >
               <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-amber-400" />
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                 <span className="font-medium text-xs text-slate-200">
                   Core Exam Concepts & Key Takeaways ({video.keyTakeaways.length})
                 </span>
@@ -176,7 +176,7 @@ export default function VideoPlayer({
               <ul className="takeaways-list">
                 {video.keyTakeaways.map((takeaway, idx) => (
                   <li key={idx} className="takeaway-item">
-                    <span className="takeaway-bullet">›</span>
+                    <span className="takeaway-bullet">•</span>
                     <span>{takeaway}</span>
                   </li>
                 ))}

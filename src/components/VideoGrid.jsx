@@ -96,7 +96,7 @@ export default function VideoGrid({
           >
             <Flame className="w-4 h-4 text-amber-400" />
             <span>Popular CS Videos</span>
-            <span className="popular-hot-tag">Hot</span>
+            <span className="popular-hot-tag">Top Rated</span>
           </button>
 
           {/* 3. Live YouTube Feed (New Uploads) */}
@@ -189,10 +189,10 @@ export default function VideoGrid({
             <div className="subject-headline">
               <span className="font-medium text-slate-200">
                 {feedMode === 'popular'
-                  ? `🔥 Popular CS Masterclasses • ${activeSubjectName}`
+                  ? `Popular CS Masterclasses - ${activeSubjectName}`
                   : feedMode === 'live'
-                  ? `⚡ Live YouTube Stream • ${activeSubjectName}`
-                  : `${activeSubjectName} • Core CS Curriculum`}
+                  ? `Live YouTube Stream - ${activeSubjectName}`
+                  : `${activeSubjectName} - Core CS Curriculum`}
               </span>
               <span className="count-badge">{videos.length} Lectures</span>
 
@@ -234,7 +234,7 @@ export default function VideoGrid({
           </p>
           <div className="flex gap-2 mt-4">
             <button onClick={onContinueUpdate} className="pill-btn primary">
-              ⚡ Fetch from YouTube
+              Fetch from YouTube
             </button>
             <button onClick={onClearSearch} className="pill-btn">
               Reset Filters
@@ -351,7 +351,7 @@ export default function VideoGrid({
               <span>
                 {isContinueLoading 
                   ? `Syncing Page ${streamPage + 1} with YouTube...` 
-                  : '⚡ Continue Updating • Load More CS Videos'}
+                  : 'Continue Updating - Load More CS Videos'}
               </span>
               <span className="page-counter-badge">
                 {isContinueLoading ? 'Loading...' : `Page ${streamPage}`}
@@ -360,7 +360,7 @@ export default function VideoGrid({
 
             {updateNotification && (
               <div className="stream-update-alert">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 <span>{updateNotification}</span>
               </div>
             )}

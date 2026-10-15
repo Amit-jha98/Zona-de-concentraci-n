@@ -558,43 +558,135 @@ export const getSubjectPagedQuery = (subjectId = 'coa', page = 1) => {
 
 /**
  * Extracts video items from YouTube search page HTML
+ * Supports both legacy videoRenderer and modern lockupViewModel formats
  */
 export const parseYouTubeSearchHTML = (html, defaultSubject = 'algorithms') => {
   try {
-    const jsonMatch = html.match(/var ytInitialData = ({.*?});<\/script>/);
+    const jsonMatch = html.match(/(?:var\s+ytInitialData\s*=|window\["ytInitialData"\]\s*=)\s*({.+?});\s*<\/script>/) ||
+                      html.match(/var ytInitialData = ({.*?});<\/script>/);
     if (!jsonMatch) return [];
     const data = JSON.parse(jsonMatch[1]);
     const sections = data.contents?.twoColumnSearchResultsRenderer?.primaryContents?.sectionListRenderer?.contents || [];
     const videos = [];
+    const seen = new Set();
 
     for (const sec of sections) {
       const items = sec.itemSectionRenderer?.contents || [];
       for (const item of items) {
-        const v = item.videoRenderer;
-        if (v && v.videoId && v.title?.runs?.[0]?.text) {
-          const rawTitle = v.title.runs[0].text;
+        // 1. Classic videoRenderer
+        if (item.videoRenderer) {
+          const v = item.videoRenderer;
+          const id = v.videoId;
+          const rawTitle = v.title?.runs?.[0]?.text;
           const author = v.ownerText?.runs?.[0]?.text || 'YouTube Educator';
-          const inferred = inferSubjectAndTags(rawTitle, author);
 
-          videos.push({
-            id: v.videoId,
-            title: rawTitle,
-            channel: author,
-            subject: defaultSubject !== 'all' ? defaultSubject : (inferred.subject || 'algorithms'),
-            subtopic: inferred.subtopic || 'Computer Science Stream',
-            duration: v.lengthText?.simpleText || 'Lecture',
-            level: 'YouTube Educational Stream',
-            views: v.viewCountText?.simpleText || 'Popular',
-            year: new Date().getFullYear().toString(),
-            gateWeightage: inferred.isGate ? 'GATE CS High-Yield' : 'CS Reference Lecture',
-            description: `Live video from ${author}. Streamed in distraction-free AdShield environment.`,
-            keyTakeaways: [
-              'AdShield distraction-free playback active',
-              'Subject-specific educational indexing applied',
-              'Instant notes taking and bookmarking supported'
-            ],
-            tags: [...inferred.tags, 'live-stream', defaultSubject]
-          });
+          if (id && rawTitle && !seen.has(id)) {
+            seen.add(id);
+            const inferred = inferSubjectAndTags(rawTitle, author);
+            videos.push({
+              id,
+              title: rawTitle,
+              channel: author,
+              subject: defaultSubject !== 'all' ? defaultSubject : (inferred.subject || 'algorithms'),
+              subtopic: inferred.subtopic || 'Computer Science Stream',
+              duration: v.lengthText?.simpleText || 'Lecture',
+              level: 'YouTube Educational Stream',
+              views: v.viewCountText?.simpleText || 'Popular',
+              year: new Date().getFullYear().toString(),
+              gateWeightage: inferred.isGate ? 'GATE CS High-Yield' : 'CS Reference Lecture',
+              description: `Live video from ${author}. Streamed in distraction-free AdShield environment.`,
+              keyTakeaways: [
+                'AdShield distraction-free playback active',
+                'Subject-specific educational indexing applied',
+                'Instant notes taking and bookmarking supported'
+              ],
+              tags: [...inferred.tags, 'live-stream', defaultSubject]
+            });
+          }
+        }
+        // 2. Modern lockupViewModel (used in ~80% of modern YouTube search responses)
+        else if (item.lockupViewModel) {
+          const lm = item.lockupViewModel;
+          const rawTitle = lm.metadata?.lockupMetadataViewModel?.title?.content;
+          
+          let id = lm.rendererContext?.commandContext?.onTap?.innertubeCommand?.watchEndpoint?.videoId
+            || lm.itemPlayback?.inlinePlayerData?.onSelect?.innertubeCommand?.watchEndpoint?.videoId;
+
+          if (!id) {
+            const url = lm.rendererContext?.commandContext?.onTap?.innertubeCommand?.commandMetadata?.webCommandMetadata?.url || '';
+            const m = url.match(/[?&]v=([a-zA-Z0-9_-]{11})/);
+            if (m) id = m[1];
+          }
+
+          if (!id) {
+            const thumbUrl = lm.contentImage?.collectionThumbnailViewModel?.primaryThumbnail?.thumbnailViewModel?.image?.sources?.[0]?.url || '';
+            const m = thumbUrl.match(/\/vi\/([a-zA-Z0-9_-]{11})\//);
+            if (m) id = m[1];
+          }
+
+          const author = lm.metadata?.lockupMetadataViewModel?.metadata?.contentMetadataViewModel?.metadataRows?.[0]?.metadataParts?.[0]?.text?.content || 'YouTube Educator';
+          
+          // Badge / duration if present
+          const badgeText = lm.contentImage?.collectionThumbnailViewModel?.primaryThumbnail?.thumbnailViewModel?.overlays?.[0]?.thumbnailOverlayBadgeViewModel?.thumbnailBadges?.[0]?.thumbnailBadgeViewModel?.text || 'Lecture';
+
+          if (id && rawTitle && !seen.has(id)) {
+            seen.add(id);
+            const inferred = inferSubjectAndTags(rawTitle, author);
+            videos.push({
+              id,
+              title: rawTitle,
+              channel: author,
+              subject: defaultSubject !== 'all' ? defaultSubject : (inferred.subject || 'algorithms'),
+              subtopic: inferred.subtopic || 'Computer Science Stream',
+              duration: badgeText,
+              level: 'YouTube Educational Stream',
+              views: 'Active',
+              year: new Date().getFullYear().toString(),
+              gateWeightage: inferred.isGate ? 'GATE CS High-Yield' : 'CS Reference Lecture',
+              description: `Live video from ${author}. Streamed in distraction-free AdShield environment.`,
+              keyTakeaways: [
+                'AdShield distraction-free playback active',
+                'Subject-specific educational indexing applied',
+                'Instant notes taking and bookmarking supported'
+              ],
+              tags: [...inferred.tags, 'live-stream', defaultSubject]
+            });
+          }
+
+          // 3. Extract individual syllabus lessons listed inside course / playlist lockups
+          const rows = lm.metadata?.lockupMetadataViewModel?.metadata?.contentMetadataViewModel?.metadataRows || [];
+          for (const row of rows) {
+            for (const part of row.metadataParts || []) {
+              const run = part.text?.commandRuns?.[0];
+              const subUrl = run?.onTap?.innertubeCommand?.commandMetadata?.webCommandMetadata?.url || '';
+              const subIdMatch = subUrl.match(/[?&]v=([a-zA-Z0-9_-]{11})/);
+              const subTitle = part.text?.content;
+              if (subIdMatch && subTitle && !seen.has(subIdMatch[1]) && subTitle.length > 5) {
+                const subId = subIdMatch[1];
+                seen.add(subId);
+                const subInferred = inferSubjectAndTags(subTitle, author);
+                videos.push({
+                  id: subId,
+                  title: subTitle,
+                  channel: author,
+                  subject: defaultSubject !== 'all' ? defaultSubject : (subInferred.subject || 'algorithms'),
+                  subtopic: subInferred.subtopic || 'Course Lecture',
+                  duration: 'Lecture',
+                  level: 'Syllabus Chapter',
+                  views: 'Active',
+                  year: new Date().getFullYear().toString(),
+                  gateWeightage: subInferred.isGate ? 'GATE CS High-Yield' : 'CS Chapter Lecture',
+                  description: `Syllabus lecture from ${author}. Streamed in distraction-free AdShield environment.`,
+                  keyTakeaways: [
+                    'AdShield distraction-free playback active',
+                    'Curriculum chapter indexing enabled',
+                    'Direct note-taking and revision enabled'
+                  ],
+                  tags: [...subInferred.tags, 'chapter-lecture', defaultSubject]
+                });
+              }
+            }
+          }
         }
       }
     }
@@ -664,12 +756,21 @@ export const fetchPopularCSVideos = async (page = 1) => {
     const queryIndex = (page - 2) % POPULAR_PAGED_QUERIES.length;
     const pagedQuery = POPULAR_PAGED_QUERIES[queryIndex];
     const searchUrl = `/api/yt-search/results?search_query=${encodeURIComponent(pagedQuery)}`;
-    const res = await fetch(searchUrl, {
-      headers: { 'Accept-Language': 'en-US,en;q=0.9' },
-      signal: AbortSignal.timeout(5000)
-    });
-    if (res.ok) {
-      const html = await res.text();
+    let html = '';
+
+    try {
+      const res = await fetch(searchUrl, {
+        headers: { 'Accept-Language': 'en-US,en;q=0.9' },
+        signal: AbortSignal.timeout(5000)
+      });
+      if (res.ok) html = await res.text();
+    } catch (e) {
+      const fallbackUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(`https://www.youtube.com/results?search_query=${encodeURIComponent(pagedQuery)}`)}`;
+      const res2 = await fetch(fallbackUrl, { signal: AbortSignal.timeout(6000) });
+      if (res2.ok) html = await res2.text();
+    }
+
+    if (html) {
       const parsed = parseYouTubeSearchHTML(html, 'algorithms');
       if (parsed.length > 0) {
         return parsed.map(v => ({ ...v, level: 'Popular Stream', tags: [...v.tags, 'popular'] }));
