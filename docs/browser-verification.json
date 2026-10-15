@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-15T15:26:29.660Z",
+  "results": [
+    {
+      "name": "desktop",
+      "loadedImages": 17,
+      "topicVideos": 4,
+      "overflow": false,
+      "offlineNotes": true,
+      "errors": []
+    },
+    {
+      "name": "mobile",
+      "loadedImages": 10,
+      "topicVideos": 4,
+      "overflow": false,
+      "offlineNotes": true,
+      "errors": []
+    }
+  ]
+}

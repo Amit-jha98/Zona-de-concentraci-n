@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-10-15T15:23:08.956Z",
+  "results": {
+    "uploads": {
+      "count": 83,
+      "provider": "YouTube channel feeds",
+      "channelsAvailable": 6,
+      "channelsTotal": 6,
+      "sample": [
+        {
+          "id": "rb74T3-Y_E8",
+          "title": "Diamond Problem in C++ Explained with Example"
+        },
+        {
+          "id": "VjPS2tbpo_A",
+          "title": "BPSC TRE 4.0 Computer Science Exam Pattern & Analysis"
+        },
+        {
+          "id": "soTfFFIQQ8U",
+          "title": "Design Software Systems Like a Senior Engineer – Complete Course"
+        },
+        {
+          "id": "lhS_xPPBWEs",
+          "title": "You Need to Hear This 🙌🏻 #inspiration #motivation #success #viral #trending"
+        },
+        {
+          "id": "EHBQtd142tY",
+          "title": "This Pointer in C++ Explained Simply | With Example"
+        },
+        {
+          "id": "L_qozUEBo-Y",
+          "title": "Mobile Computing in One Video | All Concepts Explained"
+        }
+      ]
+    },
+    "search": {
+      "count": 20,
+      "provider": "YouTube search",
+      "nextPageToken": "local:25",
+      "sample": [
+        {
+          "id": "XB4MIexjvY0",
+          "title": "3.6 Dijkstra Algorithm - Single Source Shortest Path - Greedy Method",
+          "duration": 1115
+        },
+        {
+          "id": "2raV0H9KqY8",
+          "title": "Shortest Path Algorithms (Dijkstra and Bellman-Ford)  - Simplified",
+          "duration": 1573
+        },
+        {
+          "id": "Gd92jSu_cZk",
+          "title": "L-4.10: Dijkstra's Algorithm - Single Source Shortest Path - Greedy Method",
+          "duration": 949
+        },
+        {
+          "id": "V6H1qAeB-l4",
+          "title": "G-32. Dijkstra's Algorithm - Using Priority Queue - C++ and Java - Part 1",
+          "duration": 1362
+        },
+        {
+          "id": "4UMlxaAFGSA",
+          "title": "Dijkstra Algorithm - Single Source Shortest Path - Greedy Method with example in hindi/urdu",
+          "duration": 596
+        },
+        {
+          "id": "bZkzH5x0SKU",
+          "title": "Dijkstras Shortest Path Algorithm Explained | With Example | Graph Theory",
+          "duration": 504
+        }
+      ]
+    },
+    "metadata": {
+      "id": "XB4MIexjvY0",
+      "title": "3.6 Dijkstra Algorithm - Single Source Shortest Path - Greedy Method",
+      "channel": "Abdul Bari",
+      "thumbnail": "https://i.ytimg.com/vi/XB4MIexjvY0/hqdefault.jpg",
+      "source": "youtube"
+    }
+  }
+}

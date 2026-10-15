@@ -1,0 +1,14 @@
+{
+  "id": "/",
+  "name": "EduBrowse CS",
+  "short_name": "EduBrowse",
+  "description": "Computer science, career skills and a structured GATE CS study track.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "/app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

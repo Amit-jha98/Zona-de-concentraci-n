@@ -1,169 +1,127 @@
 # EduBrowse CS
 
-> Distraction-Free Computer Science Education Platform and Web Browser
+A React learning app for computer science, interview preparation, communication skills, and GATE CS. The interface uses a familiar video grid, search, a study sidebar on desktop, and bottom navigation on mobile.
 
-EduBrowse CS is a specialized web platform engineered for Computer Science undergraduate education, software engineering preparation, and GATE examination candidates. The platform eliminates engagement-driven recommendation algorithms and advertising telemetry by enforcing strict educational scoping, sandboxed playback, and curriculum-aligned progression.
+## Run locally
 
----
+Requires **Node.js 22.12+**.
 
-## Architecture Overview
-
-```
-+-------------------------------------------------------------------------------+
-|                            Omnibox & Navigation Bar                           |
-+-------------------------------------------------------------------------------+
-|   Core CS Curriculum   |   Popular CS Masterclasses   |   Live YouTube Sync   |
-+-------------------------------------------------------------------------------+
-|  Taxonomy Filter (DSA, OS, DBMS, Networks, COA, TOC, System Design, etc.)    |
-+-------------------------------------------------------------------------------+
-|                                                                               |
-|   +------------------------------------+   +-------------------------------+  |
-|   |        AdShield Sandboxed          |   |       Strict Educational      |  |
-|   |         Player Container           |   |       Curriculum Sidebar      |  |
-|   |      (No Cookies / No Ads)         |   |    (Graph-Based Progression)  |  |
-|   +------------------------------------+   +-------------------------------+  |
-|   | Full-Width Title & Action Controls |                                      |
-|   | Key Takeaways & Exam Points Card   |                                      |
-|   +------------------------------------+                                      |
-|                                                                               |
-+-------------------------------------------------------------------------------+
-|   Mobile Bottom Bar: Catalog | Player | Syllabus Matrix | Notes | Bookmarks   |
-+-------------------------------------------------------------------------------+
+```sh
+npm ci
+npm run setup:downloads
+npm run dev
 ```
 
----
+Open the Local URL printed by Vite, normally http://localhost:5173. The setup command downloads the official platform-specific yt-dlp binary into ignored `.tools/` and verifies its SHA-256 checksum.
 
-## Core Systems and Technical Capabilities
+Install **FFmpeg** and make `ffmpeg` available on PATH for downloads with separate audio and video streams. It is already available on the machine used for this rebuild. An optional `FFMPEG_PATH` can point to its executable.
 
-### 1. AdShield Privacy Sandbox
-- Embedded playback utilizes `youtube-nocookie.com` with restrictive operational parameters (`rel=0`, `iv_load_policy=3`, `modestbranding=1`, `playsinline=1`).
-- Eliminates pre-roll, mid-roll, and post-roll video advertisements.
-- Blocks tracking cookies, third-party promotional cards, and algorithmic sidebar suggestions.
-- Embedded telemetry system tracks filtered distractions, blocked advertisements, and total focused study minutes.
+For a production build with working search and download endpoints:
 
-### 2. Knowledge-Graph Educational Recommendation Engine
-- Replaces engagement-optimized algorithmic feeds with a deterministic computer science taxonomy scoring system.
-- Calculates relevance metrics based on:
-  - Subject classification (Algorithms, Operating Systems, Database Systems, Computer Networks, Computer Organization, Compiler Design, Theory of Computation, Discrete Mathematics, System Design, Interview Preparation, Technical Communication).
-  - Subtopic alignment and prerequisite sequencing.
-  - Examination weightage (High-Yield GATE pyqs and foundational modules).
-- Queries falling outside computer science and engineering disciplines are automatically flagged and redirected to relevant foundational concepts.
-
-### 3. Real-Time Educational Channel Synchronization
-- Continuous live synchronization with accredited computer science channels (including MIT OpenCourseWare, Gate Smashers, freeCodeCamp, Striver takeUforward, NeetCode, Computerphile, and Abdul Bari).
-- Dual ingestion pipeline supporting InnerTube extraction (`videoRenderer` and `lockupViewModel` formats) and RSS syndication proxies.
-- Background polling mechanism detects and categorizes newly uploaded academic content without disrupting active viewing sessions.
-
-### 4. Interactive Study Tools
-- **Timestamped Note Taking**: Capture time-indexed study notes synchronized with playback, saved locally and exportable as standard Markdown (`.md`).
-- **Interactive GATE Syllabus Matrix**: Comprehensive checklist covering the entire Graduate Aptitude Test in Engineering CS syllabus with real-time progress calculations and direct lecture links.
-- **Persistent Bookmarks and History**: Session history and revision bookmarks stored locally without remote tracking requirements.
-
-### 5. Multi-Platform Responsive Design
-- **Desktop Interface**: Dual-pane workspace layout featuring collapsible sidebars, multi-tab browsing, keyboard hotkeys (`Ctrl+K` for instant search), and theater focus mode.
-- **Mobile Application Layout**: Specialized viewport adaptation incorporating an app-style bottom navigation bar, single-column responsive media layout, touch targets exceeding 40px, and dedicated action strips.
-- **Color Architecture**: Pure OLED black (`#000000`) foundation with zinc-neutral surfaces (`#09090b`, `#111113`, `#18181b`) and high-contrast typography, avoiding color fatigue.
-
----
-
-## Technology Stack
-
-- **Application Framework**: React 19
-- **Build Tooling**: Vite 8
-- **Typography**: Inter, JetBrains Mono
-- **Iconography**: Lucide React
-- **Styling Architecture**: Native CSS Custom Properties (CSS variables design system, no CSS-in-JS overhead)
-- **Data Protocols**: Public oEmbed API, YouTube XML RSS Syndication, InnerTube Search JSON Parser
-
----
-
-## Directory Structure
-
-```
-yt/
-|-- src/
-|   |-- components/
-|   |   |-- AdShieldBadge.jsx           # Privacy status indicator
-|   |   |-- BookmarksDrawer.jsx         # Saved lectures manager
-|   |   |-- BrowserChrome.jsx           # Top omnibox and navigation header
-|   |   |-- GateSyllabusTracker.jsx     # Interactive syllabus checklist
-|   |   |-- MobileBottomNav.jsx         # Mobile-first app navigation bar
-|   |   |-- RelatedEducationalVideos.jsx# Knowledge-graph recommendations
-|   |   |-- SettingsModal.jsx           # Telemetry and API key settings
-|   |   |-- StudyNotes.jsx              # Timestamped lecture notes drawer
-|   |   |-- TabNav.jsx                  # Desktop browser tab strip
-|   |   |-- VideoGrid.jsx               # Filterable lecture catalog
-|   |   |-- VideoPlayer.jsx             # Sandboxed ad-free media player
-|   |   `-- VideoThumbnail.jsx          # Optimized thumbnail component
-|   |-- data/
-|   |   `-- csCatalog.js                # Core curated syllabus curriculum
-|   |-- services/
-|   |   |-- adBlockerService.js         # Sandboxing and telemetry logic
-|   |   |-- recommendationEngine.js     # Taxonomy ranking algorithm
-|   |   `-- youtubeService.js           # Multi-source YouTube ingestion
-|   |-- App.css                         # Formal dark theme and mobile styles
-|   |-- App.jsx                         # Main application controller
-|   |-- index.css                       # Global tokens and OLED black palette
-|   `-- main.jsx                        # React root entrypoint
-|-- index.html                          # HTML5 shell with mobile viewport meta
-|-- package.json                        # Dependencies and script definitions
-`-- vite.config.js                      # Vite server and local proxy configuration
+```sh
+npm run build
+npm start
 ```
 
----
+The production server defaults to http://127.0.0.1:4173. Serving only `dist/` from an unrelated static server does **not** provide the backend features.
 
-## Local Development and Installation
+## YouTube discovery and updates
 
-### Prerequisites
-- Node.js (version 18.0.0 or higher recommended)
-- npm (version 9.0.0 or higher)
+- Search and subject pages query YouTube across creators, rather than cycling a fixed video array.
+- Search pages use real continuation information, deduplicate overlapping videos and stop when a provider returns no next page.
+- Without a key, the server uses yt-dlp’s YouTube search implementation. Local search ranges are bounded at 1,000 results per query to keep requests controlled.
+- With a YouTube Data API key, the server uses official search cursors and hydrates actual durations, view counts and embed availability. Language preference uses this provider.
+- “Newest” sorts searches by upload date. Automatic refresh runs at the selected interval while the app is open and visible, and checks when connectivity or visibility returns.
+- The home feed refreshes YouTube RSS feeds from six educational channels. MIT uploads are filtered for computing and relevant mathematics. This feed is explicitly narrower than search.
+- Identical requests share in-flight work; successful results are cached briefly. Network, quota and setup failures are shown as failures, never relabelled as fresh videos.
 
-### Installation Steps
+YouTube determines search coverage, regional availability and result limits. This app cannot enumerate or guarantee every video on the platform. The starter library is labelled separately from live results. Updates require a running server and connection; they are not push notifications or a background service when the app is closed.
 
-1. Clone or navigate to the project directory:
-   ```bash
-   cd d:/yt
-   ```
+Optional configuration:
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```sh
+# Copy .env.example to .env and configure values on your machine.
+YOUTUBE_API_KEY=your_server_side_key
+YT_DLP_PATH=
+FFMPEG_PATH=
+```
 
-3. Launch the development server:
-   ```bash
-   npm run dev
-   ```
-   The local application will be available at `http://localhost:5173/`.
+Do not prefix a server key with `VITE_`. A key entered in Settings is kept in session storage, sent in a request header to this app’s backend, then used only for Google’s YouTube API. It is excluded from study backups.
 
-4. Generate production distribution:
-   ```bash
-   npm run build
-   ```
+## GATE CS preparation
 
----
+The supplied [CS_GATE2027_Syllabus.pdf](public/CS_GATE2027_Syllabus.pdf) is the source for the track. The app contains **146 individual lessons across all 10 supplied sections**, each with:
 
-## Keyboard Shortcuts
+- Three concept explanations and a key relationship.
+- A step-by-step worked example and a common misconception.
+- Topic-specific lecture candidates between **2 and 30 minutes**.
+- Live search for additional focused lectures.
+- An original multiple-choice practice question, correct solution and explanation.
+- A revision note, Markdown export, and saved completion state.
 
-| Shortcut | Context | Function |
-| :--- | :--- | :--- |
-| `Ctrl + K` / `Cmd + K` | Global | Focus and select the Omnibox search field |
-| `Enter` | Omnibox | Execute educational search or navigate to video ID / URL |
-| `Alt + Left` | Global | Return to previous browsing view |
-| `Ctrl + R` / `Cmd + R` | Global | Synchronize current lecture feed |
+All 146 lessons have short lecture candidates checked against YouTube metadata. Title matching is not an editorial review of complete lecture contents; availability can change. The written guides are concept notes and worked examples, not a replacement for a full textbook or a collection of official past papers.
 
----
+A correct practice response enables completion. Missed questions appear in the revision prompt. No lessons are pre-completed. General Aptitude is not in the supplied PDF and is not presented as covered.
 
-## Configuration and Custom API Keys
+See [the complete topic mapping](docs/syllabus-coverage.md), [the extracted PDF text](docs/syllabus-source.txt), and [the video coverage report](docs/topic-video-report.json).
 
-EduBrowse CS operates completely out-of-the-box without requiring an API key. For environments with high request volume or corporate firewall proxy restrictions, an optional YouTube Data API v3 key can be configured:
+Refresh the initial topic-video candidates and regenerate the coverage report:
 
-1. Open the **Settings** modal via the gear icon in the navigation header.
-2. Enter your Google Cloud YouTube Data API v3 key in the designated input field.
-3. Select **Save Settings**. The key is stored locally in browser `localStorage` and never transmitted to external servers.
+```sh
+npm run videos:verify
+npm run coverage:syllabus
+```
 
----
+The verifier fills missing entries or entries whose queries changed. Live searches continue to provide new candidates without rebuilding the app.
 
-## License
+## Downloads
 
-Distributed under the MIT License. Academic and non-commercial educational use encouraged.
+The Download action creates a real server-side job. It chooses the best available quality up to 360p, 720p or 1080p, downloads audio and video, and uses FFmpeg to merge separate streams into a file.
+
+The queue supports progress, cancellation, two concurrent transfers and a bounded pending queue. Completed files have a separate **Save file** action that returns actual media bytes. Job metadata survives server restarts; interrupted transfers report that they need retrying.
+
+Files live in ignored `.downloads/`, with a 24-hour cleanup policy. Transfers have a 30-minute timeout, a source-duration limit and a per-stream file-size limit. Private, restricted or rate-limited videos can fail; errors remain visible. Download only videos you own or have permission to save. YouTube’s own offline viewing is available through its supported services.
+
+## Playback, study data and offline use
+
+The official YouTube iframe API drives playback. History records a video when it actually plays, and resume positions come from the player. Notes use the actual playback time and can seek to that point.
+
+Embedding uses YouTube’s privacy-enhanced domain. It does **not** promise to remove ads or all tracking. The fake ad-block counters and unsupported ad-free claims from the original project have been removed.
+
+Saved videos, watch history, personal notes, quiz answers and progress are browser-local. Settings provides JSON backup and restore. Existing legacy bookmarks, history and timestamped notes migrate without deleting the originals. The old pre-populated completion checklist is not treated as evidence that the new lessons were completed.
+
+The production build includes an installable web-app manifest and a service worker that caches the written study app, topic-video metadata and syllabus. After initial loading, written lessons can be reopened offline. YouTube playback, live updates and downloads still need a connection and the app server. API responses, credentials and downloaded media are never stored in the service-worker cache.
+
+## Checks
+
+```sh
+npm test
+npm run test:e2e
+npm run lint
+npm run build
+```
+
+Unit/service tests cover curriculum completeness, short video coverage, real API cursor forwarding, quota errors, RSS parsing, URL validation, malformed state, legacy migration and blocked browser storage. Browser tests cover desktop and mobile navigation, pagination, quiz progression, saved videos, notes, settings and download states with deterministic provider fixtures.
+
+Browser tests use installed Chrome on Windows; on other platforms install Playwright Chromium first with `npx playwright install chromium`.
+
+Live verification scripts are separate from deterministic tests:
+
+```sh
+node scripts/check-live.mjs --record
+node scripts/check-channels.mjs
+node scripts/check-download.mjs
+```
+
+See [the audit and verification notes](docs/PROJECT_AUDIT.md). Format source using `npm run format`.
+
+## Main files
+
+- `src/App.jsx`: application shell, routes, library and settings.
+- `src/components/GateTrack.jsx`: section overview, lessons and explained practice.
+- `src/data/gate/`: authored concept notes, examples and questions.
+- `public/gate-topic-videos.json`: real initial short lecture candidates.
+- `server/youtube.mjs`: discovery providers, feed parsing, caching and metadata.
+- `server/downloads.mjs`: bounded download jobs and durable file metadata.
+- `server/api.mjs`: validated same-origin API.
+- `server/index.mjs`: production static and API server.

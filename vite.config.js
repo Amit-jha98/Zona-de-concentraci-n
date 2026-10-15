@@ -1,21 +1,21 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+import { apiHandler } from "./server/api.mjs";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  server: {
-    proxy: {
-      '/api/yt-rss': {
-        target: 'https://www.youtube.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/yt-rss/, '')
+  plugins: [
+    react(),
+    {
+      name: "edubrowse-api",
+      configureServer(server) {
+        server.middlewares.use(apiHandler);
       },
-      '/api/yt-search': {
-        target: 'https://www.youtube.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/yt-search/, '')
-      }
-    }
-  }
-})
+      configurePreviewServer(server) {
+        server.middlewares.use(apiHandler);
+      },
+    },
+  ],
+  server: { host: "127.0.0.1" },
+  build: { chunkSizeWarningLimit: 650 },
+});

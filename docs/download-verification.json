@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-15T15:11:41.696Z",
+  "videoId": "jNQXAC9IVRw",
+  "status": "complete",
+  "bytes": 533915,
+  "filename": "jNQXAC9IVRw-360p.mp4",
+  "streams": [
+    {
+      "type": "video",
+      "codec": "av1",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "type": "audio",
+      "codec": "aac"
+    }
+  ],
+  "persistedFileEndpoint": {
+    "status": 200,
+    "mime": "video/mp4",
+    "bytes": 533915
+  }
+}

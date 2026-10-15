@@ -1,862 +1,964 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import BrowserChrome from './components/BrowserChrome';
-import TabNav from './components/TabNav';
-import VideoPlayer from './components/VideoPlayer';
-import RelatedEducationalVideos from './components/RelatedEducationalVideos';
-import VideoGrid from './components/VideoGrid';
-import StudyNotes from './components/StudyNotes';
-import GateSyllabusTracker from './components/GateSyllabusTracker';
-import BookmarksDrawer from './components/BookmarksDrawer';
-import SettingsModal from './components/SettingsModal';
-import MobileBottomNav from './components/MobileBottomNav';
-import HomePage from './components/HomePage';
-import AppSidebar from './components/AppSidebar';
-import './App.css';
+import {
+  Component,
+  Suspense,
+  lazy,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+import {
+  ArrowUpRight,
+  Bookmark,
+  Check,
+  CircleHelp,
+  Clock3,
+  Code2,
+  Download,
+  GraduationCap,
+  Home,
+  Menu,
+  MessageSquare,
+  Monitor,
+  Search,
+  Settings,
+  WifiOff,
+  X,
+} from "lucide-react";
+import Youtube from "./components/ui/YouTubeMark.jsx";
+import { useRoute, navigate, getRoute } from "./hooks/useRoute.js";
+import { useStorage } from "./hooks/useStorage.js";
+import { isRecord, downloadText } from "./services/storage.js";
+import {
+  videoList,
+  progressValid,
+  notesValid,
+  settingsValid,
+} from "./services/stateValidation.js";
+import { extractVideoId, uniqueVideos } from "../shared/video.js";
+import { CATEGORIES, STARTER_VIDEOS } from "./data/library.js";
+import { GATE_LESSONS } from "./data/gate/index.js";
+import { api, getApiKey, setApiKey } from "./services/api.js";
+import Discovery from "./components/Discovery.jsx";
+import { GateOverview, GateLesson } from "./components/GateTrack.jsx";
+import Dialog from "./components/ui/Dialog.jsx";
+import VideoCard from "./components/ui/VideoCard.jsx";
+import Downloads, { DownloadDialog } from "./components/Downloads.jsx";
+import { useDownloadJobs } from "./hooks/useDownloadJobs.js";
+import "./App.css";
 
-import { EDUCATIONAL_VIDEOS, CS_SUBJECTS, POPULAR_CS_VIDEOS } from './data/csCatalog';
-import { 
-  searchEducationalCatalog, 
-  getStrictRelatedVideos 
-} from './services/recommendationEngine';
-import { 
-  fetchVideoMetadataFromOEmbed, 
-  extractYouTubeVideoId,
-  getWatchHistory,
-  addToWatchHistory,
-  getBookmarks,
-  toggleBookmark,
-  checkEducationalScope,
-  fetchLiveCSChannelUploads,
-  fetchLiveYouTubeSearch,
-  getCachedLiveFeed,
-  fetchPopularCSVideos,
-  fetchYouTubeVideosBySubject,
-  getGuaranteedSubjectLectures,
-  checkForNewChannelUploads
-} from './services/youtubeService';
-import { incrementAdShieldStat } from './services/adBlockerService';
-
-const SESSION_TABS_KEY = 'edubrowse_browser_tabs';
-const SESSION_ACTIVE_TAB_KEY = 'edubrowse_active_tab_id';
-
-const DEFAULT_TABS = [
-  {
-    id: 'tab-home',
-    title: 'EduBrowse CS',
-    type: 'home'
-  },
-  {
-    id: 'tab-catalog',
-    title: 'CS & GATE Catalog',
-    type: 'catalog',
-    subject: 'all',
-    searchQuery: ''
-  },
-  {
-    id: 'tab-syllabus',
-    title: 'GATE CS Syllabus Matrix',
-    type: 'syllabus'
-  }
-];
+const WatchPage = lazy(() => import("./components/WatchPage.jsx"));
+const defaults = { theme: "light", autoRefresh: true, refreshMinutes: 15 };
 
 export default function App() {
-  // Browser Tabs State with localStorage Session Persistence & ID Sanitization
-  const [tabs, setTabs] = useState(() => {
-    try {
-      const saved = localStorage.getItem(SESSION_TABS_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          // Cleanse any invalid or synthetic IDs from persisted browser tabs
-          return parsed.map(tab => {
-            if (tab.type === 'player' && tab.videoId && !/^[a-zA-Z0-9_-]{11}$/.test(tab.videoId)) {
-              const fallback = EDUCATIONAL_VIDEOS.find(v => v.subject === tab.subject && /^[a-zA-Z0-9_-]{11}$/.test(v.id))
-                || EDUCATIONAL_VIDEOS[0];
-              return {
-                ...tab,
-                videoId: fallback.id,
-                title: fallback.title
-              };
-            }
-            return tab;
-          });
-        }
-      }
-    } catch (e) {
-      console.warn('Error reading saved session tabs:', e);
-    }
-    return DEFAULT_TABS;
-  });
-
-  const [activeTabId, setActiveTabId] = useState(() => {
-    try {
-      const savedActive = localStorage.getItem(SESSION_ACTIVE_TAB_KEY);
-      if (savedActive) return savedActive;
-    } catch (e) {
-      console.warn('Error reading active tab:', e);
-    }
-    return 'tab-home';
-  });
-
-  // Video State cache
-  const [videoCache, setVideoCache] = useState(() => {
-    const map = {};
-    EDUCATIONAL_VIDEOS.forEach(v => {
-      if (v && v.id && /^[a-zA-Z0-9_-]{11}$/.test(v.id)) {
-        map[v.id] = v;
-      }
-    });
-    return map;
-  });
-
-  // Feed Mode: 'curated' | 'popular' | 'live'
-  const [feedMode, setFeedMode] = useState('curated');
-  const [curatedVideos, setCuratedVideos] = useState(EDUCATIONAL_VIDEOS);
-  const [liveVideos, setLiveVideos] = useState(getCachedLiveFeed());
-  const [popularVideos, setPopularVideos] = useState(POPULAR_CS_VIDEOS);
-  const [subjectVideosCache, setSubjectVideosCache] = useState({});
-  const [isLiveLoading, setIsLiveLoading] = useState(false);
-  const [isSubjectLoading, setIsSubjectLoading] = useState(false);
-  const [isSearchingLive, setIsSearchingLive] = useState(false);
-  const [liveSearchResults, setLiveSearchResults] = useState([]);
-  
-  // Continuous Update & Auto-Sync state: tracks pages per active feed key
-  const [autoUpdateEnabled, setAutoUpdateEnabled] = useState(true);
-  const [streamPages, setStreamPages] = useState({});
-  const [isContinueLoading, setIsContinueLoading] = useState(false);
-  const [updateNotification, setUpdateNotification] = useState(null);
-
-  // UI state
-  const [isFocusMode, setIsFocusMode] = useState(false);
-  const [isNotesOpen, setIsNotesOpen] = useState(false);
-  const [isBookmarksOpen, setIsBookmarksOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  
-  // Bookmarks & History
-  const [bookmarks, setBookmarks] = useState(getBookmarks());
-  const [history, setHistory] = useState(getWatchHistory());
-
-  // Active Tab reference
-  const activeTab = tabs.find(t => t.id === activeTabId) || tabs[0];
-
-  // Resolve current active video if in player tab
-  const activeVideo = useMemo(() => {
-    if (activeTab?.type === 'player' && activeTab.videoId) {
-      const vidId = activeTab.videoId;
-      // Guard against synthetic or invalid video IDs
-      if (!/^[a-zA-Z0-9_-]{11}$/.test(vidId)) {
-        const fallback = EDUCATIONAL_VIDEOS.find(v => v.subject === activeTab.subject && /^[a-zA-Z0-9_-]{11}$/.test(v.id))
-          || EDUCATIONAL_VIDEOS[0];
-        return fallback;
-      }
-      return videoCache[vidId] || EDUCATIONAL_VIDEOS.find(v => v.id === vidId) || null;
-    }
-    return null;
-  }, [activeTab, videoCache]);
-
-  // Load video metadata if not in cache (e.g. user pasted custom URL)
-  useEffect(() => {
-    if (activeTab?.type === 'player' && activeTab.videoId && !videoCache[activeTab.videoId]) {
-      fetchVideoMetadataFromOEmbed(activeTab.videoId).then(meta => {
-        setVideoCache(prev => ({ ...prev, [meta.id]: meta }));
-        setTabs(prev => prev.map(t => t.id === activeTab.id ? { ...t, title: meta.title } : t));
-      });
-    }
-  }, [activeTab, videoCache]);
-
-  // Record watch history when active video changes
-  useEffect(() => {
-    if (activeVideo) {
-      const updatedHistory = addToWatchHistory(activeVideo);
-      if (updatedHistory) setHistory(updatedHistory);
-      incrementAdShieldStat('clickbaitFilteredCount', 4);
-    }
-  }, [activeVideo?.id]);
-
-  // Function to fetch / refresh live YouTube channel uploads
-  const handleRefreshLiveFeed = useCallback(async () => {
-    setIsLiveLoading(true);
-    try {
-      const fresh = await fetchLiveCSChannelUploads();
-      if (fresh && fresh.length > 0) {
-        setLiveVideos(fresh);
-        // Also add fresh videos to video cache
-        setVideoCache(prev => {
-          const updated = { ...prev };
-          fresh.forEach(v => {
-            updated[v.id] = v;
-          });
-          return updated;
-        });
-        setUpdateNotification(`Live Feed Refreshed: ${fresh.length} uploads synchronized`);
-        setTimeout(() => setUpdateNotification(null), 4000);
-      }
-    } finally {
-      setIsLiveLoading(false);
-    }
-  }, []);
-
-  // Pre-load live feed in the background if empty or when switching to live mode
-  useEffect(() => {
-    if (feedMode === 'live' && liveVideos.length === 0) {
-      handleRefreshLiveFeed();
-    }
-  }, [feedMode, liveVideos.length, handleRefreshLiveFeed]);
-
-  // Continuous Auto-Update Heartbeat: checks channels every 45s
-  useEffect(() => {
-    if (!autoUpdateEnabled) return;
-
-    const interval = setInterval(async () => {
-      try {
-        const knownIds = new Set(liveVideos.map(v => v.id));
-        const newUploads = await checkForNewChannelUploads(knownIds);
-        if (newUploads && newUploads.length > 0) {
-          setLiveVideos(prev => {
-            const seen = new Set(prev.map(v => v.id));
-            const freshFiltered = newUploads.filter(v => !seen.has(v.id));
-            return [...freshFiltered, ...prev];
-          });
-          setVideoCache(prev => {
-            const updated = { ...prev };
-            newUploads.forEach(v => { updated[v.id] = v; });
-            return updated;
-          });
-          setUpdateNotification(`${newUploads.length} New CS Upload${newUploads.length > 1 ? 's' : ''} Synchronized`);
-          setTimeout(() => setUpdateNotification(null), 5000);
-        }
-      } catch (err) {
-        // silent background error handling
-      }
-    }, 45000);
-
-    return () => clearInterval(interval);
-  }, [autoUpdateEnabled, liveVideos]);
-
-  // Handle live YouTube search when enabled
-  useEffect(() => {
-    if (isSearchingLive && activeTab?.searchQuery) {
-      let isMounted = true;
-      fetchLiveYouTubeSearch(activeTab.searchQuery).then(results => {
-        if (isMounted) {
-          setLiveSearchResults(results);
-          setVideoCache(prev => {
-            const updated = { ...prev };
-            results.forEach(v => {
-              updated[v.id] = v;
-            });
-            return updated;
-          });
-        }
-      });
-      return () => { isMounted = false; };
-    }
-  }, [isSearchingLive, activeTab?.searchQuery]);
-
-  // Persist browser tabs and active tab so page refresh preserves state
-  useEffect(() => {
-    try {
-      localStorage.setItem(SESSION_TABS_KEY, JSON.stringify(tabs));
-      localStorage.setItem(SESSION_ACTIVE_TAB_KEY, activeTabId);
-    } catch (e) {
-      console.warn('Error saving session tabs:', e);
-    }
-  }, [tabs, activeTabId]);
-
-  // Omnibox URL generation
-  const omniboxUrl = useMemo(() => {
-    if (!activeTab) return 'edu://cs/home';
-    if (activeTab.type === 'home') {
-      return 'edu://cs/home';
-    }
-    if (activeTab.type === 'player' && activeTab.videoId) {
-      return `edu://watch?v=${activeTab.videoId}`;
-    }
-    if (activeTab.type === 'syllabus') {
-      return 'edu://cs/gate-syllabus';
-    }
-    if (activeTab.type === 'catalog') {
-      if (activeTab.searchQuery) {
-        return `edu://cs/search?q=${encodeURIComponent(activeTab.searchQuery)}`;
-      }
-      return `edu://cs/subject/${activeTab.subject || 'all'}`;
-    }
-    return 'edu://cs/home';
-  }, [activeTab]);
-
-  // Handlers for Tabs
-  const handleSelectTab = (id) => {
-    setActiveTabId(id);
-  };
-
-  const handleCloseTab = (id) => {
-    if (tabs.length <= 1) return;
-    const remaining = tabs.filter(t => t.id !== id);
-    setTabs(remaining);
-    if (activeTabId === id) {
-      setActiveTabId(remaining[remaining.length - 1].id);
-    }
-  };
-
-  const handleNewTab = () => {
-    const newId = `tab-home-${Date.now()}`;
-    const newTab = {
-      id: newId,
-      title: 'EduBrowse CS',
-      type: 'home'
-    };
-    setTabs([...tabs, newTab]);
-    setActiveTabId(newId);
-  };
-
-  // Video selection handler (opens video in current or active player tab)
-  const handleSelectVideo = useCallback((video) => {
-    if (!video || !video.id) return;
-    let target = video;
-    if (!/^[a-zA-Z0-9_-]{11}$/.test(video.id)) {
-      target = EDUCATIONAL_VIDEOS.find(v => v.subject === video.subject && /^[a-zA-Z0-9_-]{11}$/.test(v.id))
-        || EDUCATIONAL_VIDEOS[0];
-    }
-    setVideoCache(prev => ({ ...prev, [target.id]: target }));
-
-    setTabs(prev => {
-      // If currently on home or syllabus, open or replace tab
-      const playerTab = prev.find(t => t.id === activeTabId);
-      if (playerTab && (playerTab.type === 'player' || playerTab.type === 'catalog')) {
-        return prev.map(t => t.id === activeTabId ? {
-          ...t,
-          type: 'player',
-          videoId: target.id,
-          title: target.title
-        } : t);
-      }
-      // Otherwise open in a dedicated player tab
-      const existingPlayer = prev.find(t => t.type === 'player');
-      if (existingPlayer) {
-        setActiveTabId(existingPlayer.id);
-        return prev.map(t => t.id === existingPlayer.id ? {
-          ...t,
-          videoId: target.id,
-          title: target.title
-        } : t);
-      }
-      const newPlayerId = `tab-player-${Date.now()}`;
-      setActiveTabId(newPlayerId);
-      return [...prev, {
-        id: newPlayerId,
-        title: target.title,
-        type: 'player',
-        videoId: target.id
-      }];
-    });
-  }, [activeTabId]);
-
-  // Navigation from Omnibox
-  const handleNavigate = ({ type, value }) => {
-    if (type === 'video_id') {
-      const vidId = value;
-      setTabs(prev => prev.map(t => {
-        if (t.id === activeTabId) {
-          return {
-            ...t,
-            type: 'player',
-            videoId: vidId,
-            title: `Loading Lecture (${vidId})...`
-          };
-        }
-        return t;
-      }));
-    } else if (type === 'search') {
-      const valLower = value.toLowerCase().trim();
-      if (valLower === 'home' || valLower === 'edu://cs/home' || valLower === 'edu://home' || valLower === 'edu://cs') {
-        handleHome();
-        return;
-      }
-      if (valLower === 'syllabus' || valLower === 'gate' || valLower === 'edu://cs/gate-syllabus') {
-        handleOpenSyllabus();
-        return;
-      }
-      setTabs(prev => prev.map(t => {
-        if (t.id === activeTabId) {
-          return {
-            ...t,
-            type: 'catalog',
-            searchQuery: value,
-            title: `Search: ${value}`
-          };
-        }
-        return t;
-      }));
-    }
-  };
-
-  const handleHome = useCallback(() => {
-    const existing = tabs.find(t => t.type === 'home');
-    if (existing) {
-      setActiveTabId(existing.id);
-    } else {
-      const homeId = `tab-home-${Date.now()}`;
-      setTabs(prev => [{ id: homeId, title: 'EduBrowse CS', type: 'home' }, ...prev]);
-      setActiveTabId(homeId);
-    }
-  }, [tabs]);
-
-  const handleOpenCatalog = useCallback((subjectId = 'all') => {
-    const subjectObj = CS_SUBJECTS.find(s => s.id === subjectId);
-    const title = subjectId === 'all' ? 'CS & GATE Catalog' : `${subjectObj?.shortName || subjectId.toUpperCase()} • Catalog`;
-
-    const existing = tabs.find(t => t.type === 'catalog');
-    if (existing) {
-      setTabs(prev => prev.map(t => t.id === existing.id ? {
-        ...t,
-        subject: subjectId,
-        searchQuery: '',
-        title
-      } : t));
-      setActiveTabId(existing.id);
-    } else {
-      const catId = `tab-catalog-${Date.now()}`;
-      setTabs(prev => [...prev, {
-        id: catId,
-        title,
-        type: 'catalog',
-        subject: subjectId,
-        searchQuery: ''
-      }]);
-      setActiveTabId(catId);
-    }
-  }, [tabs]);
-
-  const handleSearchFromHome = useCallback((query) => {
-    const existing = tabs.find(t => t.type === 'catalog');
-    if (existing) {
-      setTabs(prev => prev.map(t => t.id === existing.id ? {
-        ...t,
-        searchQuery: query,
-        title: `Search: ${query}`
-      } : t));
-      setActiveTabId(existing.id);
-    } else {
-      const catId = `tab-catalog-${Date.now()}`;
-      setTabs(prev => [...prev, {
-        id: catId,
-        title: `Search: ${query}`,
-        type: 'catalog',
-        subject: 'all',
-        searchQuery: query
-      }]);
-      setActiveTabId(catId);
-    }
-  }, [tabs]);
-
-  const handleOpenSyllabus = useCallback(() => {
-    const existing = tabs.find(t => t.type === 'syllabus');
-    if (existing) {
-      setActiveTabId(existing.id);
-    } else {
-      const newId = `tab-syllabus-${Date.now()}`;
-      setTabs(prev => [...prev, { id: newId, title: 'GATE CS Syllabus', type: 'syllabus' }]);
-      setActiveTabId(newId);
-    }
-  }, [tabs]);
-
-  const handleToggleBookmark = (video) => {
-    const updated = toggleBookmark(video);
-    setBookmarks(updated);
-  };
-
-  const currentSubject = activeTab?.subject || 'all';
-  const activeFeedKey = `${feedMode}-${currentSubject}`;
-  const currentStreamPage = streamPages[activeFeedKey] || 1;
-
-  // Combined video suggestions for Home page
-  const allHomeVideos = useMemo(() => {
-    const map = new Map();
-    EDUCATIONAL_VIDEOS.forEach(v => map.set(v.id, v));
-    popularVideos.forEach(v => map.set(v.id, v));
-    liveVideos.forEach(v => map.set(v.id, v));
-    Object.values(videoCache).forEach(v => map.set(v.id, v));
-    return Array.from(map.values());
-  }, [videoCache, popularVideos, liveVideos]);
-
-  // Filter videos for catalog tab
-  const catalogVideos = useMemo(() => {
-    if (activeTab?.type !== 'catalog') return EDUCATIONAL_VIDEOS;
-
-    // 1. Live search mode
-    if (isSearchingLive && activeTab.searchQuery && liveSearchResults.length > 0) {
-      return liveSearchResults;
-    }
-
-    const currentSubj = activeTab.subject || 'all';
-
-    // 2. Base list selection based on active feed mode
-    let baseList = [];
-    if (feedMode === 'popular') {
-      baseList = popularVideos;
-    } else if (feedMode === 'live') {
-      baseList = liveVideos.length > 0 ? liveVideos : curatedVideos;
-    } else {
-      baseList = curatedVideos;
-    }
-
-    // 3. Subject filter
-    let list = baseList;
-    if (currentSubj !== 'all') {
-      if (currentSubj === 'gate-special') {
-        list = baseList.filter(v => v.gateWeightage && v.gateWeightage.includes('High'));
-      } else {
-        list = baseList.filter(v => v.subject === currentSubj);
-      }
-
-      // Merge dynamically fetched videos for this subject if present
-      if (subjectVideosCache[currentSubj] && subjectVideosCache[currentSubj].length > 0) {
-        const dynamicItems = subjectVideosCache[currentSubj];
-        const existingIds = new Set(list.map(v => v.id));
-        const nonDuplicateDynamic = dynamicItems.filter(v => !existingIds.has(v.id));
-        list = [...list, ...nonDuplicateDynamic];
-      }
-
-      // Ensure foundational curated lectures for this subject are always available
-      const baseCurated = EDUCATIONAL_VIDEOS.filter(v => 
-        currentSubj === 'gate-special' 
-          ? (v.gateWeightage && v.gateWeightage.includes('High'))
-          : v.subject === currentSubj
+  const route = useRoute();
+  const [saved, setSaved, savedError] = useStorage(
+    "edubrowse_v2_saved",
+    [],
+    videoList,
+  );
+  const [history, setHistory, historyError] = useStorage(
+    "edubrowse_v2_history",
+    [],
+    videoList,
+  );
+  const [progress, setProgress, progressError] = useStorage(
+    "edubrowse_v2_gate",
+    {},
+    progressValid,
+  );
+  const [notes, setNotes, notesError] = useStorage(
+    "edubrowse_v2_notes",
+    {},
+    notesValid,
+  );
+  const [settings, setSettings] = useStorage(
+    "edubrowse_v2_settings",
+    defaults,
+    settingsValid,
+  );
+  const [jobs, setJobs] = useStorage(
+    "edubrowse_v2_downloads",
+    [],
+    (v) =>
+      Array.isArray(v) &&
+      v.every(
+        (x) =>
+          isRecord(x) &&
+          /^[a-f0-9-]{36}$/.test(x.id || "") &&
+          typeof x.status === "string",
+      ),
+  );
+  const [videoCache, setVideoCache] = useState(() =>
+    Object.fromEntries(
+      uniqueVideos([...STARTER_VIDEOS, ...saved, ...history]).map((v) => [
+        v.id,
+        v,
+      ]),
+    ),
+  );
+  const [search, setSearch] = useState(
+    route.path === "/search" ? route.params.q || "" : "",
+  );
+  const [menu, setMenu] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [download, setDownload] = useState(null);
+  const [toast, setToast] = useState("");
+  const [online, setOnline] = useState(navigator.onLine);
+  const [revision, setRevision] = useState(0);
+  const searchRef = useRef(null);
+  const notify = useCallback((message) => setToast(message), []);
+  const cacheVideo = useCallback(
+    (video) =>
+      setVideoCache((prev) => ({
+        ...prev,
+        [video.id]: { ...prev[video.id], ...video },
+      })),
+    [],
+  );
+  const onPlay = useCallback(
+    (video, lessonId) => {
+      cacheVideo(video);
+      navigate(`/watch/${video.id}${lessonId ? `?lesson=${lessonId}` : ""}`);
+    },
+    [cacheVideo],
+  );
+  const onSave = useCallback(
+    (video) => {
+      if (!video?.id) return;
+      setSaved((prev) =>
+        prev.some((v) => v.id === video.id)
+          ? prev.filter((v) => v.id !== video.id)
+          : [{ ...video, savedAt: new Date().toISOString() }, ...prev].slice(
+              0,
+              1000,
+            ),
       );
-      const existingIds = new Set(list.map(v => v.id));
-      const neededCurated = baseCurated.filter(v => !existingIds.has(v.id));
-      list = [...list, ...neededCurated];
-    } else {
-      // When on 'all', also merge any dynamic videos fetched for general stream
-      if (subjectVideosCache['all'] && subjectVideosCache['all'].length > 0) {
-        const dynamicItems = subjectVideosCache['all'];
-        const existingIds = new Set(list.map(v => v.id));
-        const nonDuplicateDynamic = dynamicItems.filter(v => !existingIds.has(v.id));
-        list = [...list, ...nonDuplicateDynamic];
+    },
+    [setSaved],
+  );
+  const recordWatch = useCallback(
+    (video, position, duration, ended = false) => {
+      setHistory((prev) =>
+        [
+          {
+            ...video,
+            position: ended ? 0 : Math.floor(position),
+            duration: duration || video.duration,
+            progress: ended ? 100 : duration ? (position / duration) * 100 : 0,
+            watchedAt: new Date().toISOString(),
+          },
+          ...prev.filter((v) => v.id !== video.id),
+        ].slice(0, 200),
+      );
+    },
+    [setHistory],
+  );
+  const closeSettings = useCallback(() => setSettingsOpen(false), []);
+  const closeMenu = useCallback(() => setMenu(false), []);
+  const closeDownload = useCallback(() => setDownload(null), []);
+  useDownloadJobs(jobs, setJobs);
+  useEffect(() => {
+    if (!toast) return;
+    const timer = setTimeout(() => setToast(""), 4000);
+    return () => clearTimeout(timer);
+  }, [toast]);
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const update = () =>
+      document.documentElement.setAttribute(
+        "data-theme",
+        settings.theme === "system"
+          ? media.matches
+            ? "dark"
+            : "light"
+          : settings.theme,
+      );
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, [settings.theme]);
+  useEffect(() => {
+    const up = () => setOnline(true),
+      down = () => setOnline(false);
+    window.addEventListener("online", up);
+    window.addEventListener("offline", down);
+    return () => {
+      window.removeEventListener("online", up);
+      window.removeEventListener("offline", down);
+    };
+  }, []);
+  useEffect(() => {
+    const handle = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        searchRef.current?.focus();
+        searchRef.current?.select();
       }
-    }
-
-    // 4. Query search filter
-    if (activeTab.searchQuery) {
-      list = searchEducationalCatalog(activeTab.searchQuery, list);
-    }
-
-    return list;
-  }, [activeTab, feedMode, curatedVideos, liveVideos, popularVideos, subjectVideosCache, isSearchingLive, liveSearchResults]);
-
-  // Subject selection with auto-fetch & tab title synchronization
-  const handleSelectSubject = useCallback(async (subjId) => {
-    const subjectObj = CS_SUBJECTS.find(s => s.id === subjId);
-    const subjectName = subjectObj ? subjectObj.shortName : 'CS';
-
-    setTabs(prev => prev.map(t => t.id === activeTabId ? {
-      ...t,
-      subject: subjId,
-      searchQuery: '',
-      title: `${subjectName} • CS Catalog`
-    } : t));
-
-    // If subject lectures aren't cached yet, fetch fresh YouTube videos for this subject in the background!
-    if (subjId !== 'all' && !subjectVideosCache[subjId]) {
-      setIsSubjectLoading(true);
-      try {
-        const dynamicVideos = await fetchYouTubeVideosBySubject(subjId, 1);
-        if (dynamicVideos && dynamicVideos.length > 0) {
-          setSubjectVideosCache(prev => ({
-            ...prev,
-            [subjId]: dynamicVideos
-          }));
-          setVideoCache(prev => {
-            const updated = { ...prev };
-            dynamicVideos.forEach(v => { updated[v.id] = v; });
-            return updated;
-          });
-        }
-      } finally {
-        setIsSubjectLoading(false);
-      }
-    }
-  }, [activeTabId, subjectVideosCache]);
-
-  // Handler for Continuous Update / Load More CS Videos stream
-  const handleContinueUpdate = useCallback(async () => {
-    setIsContinueLoading(true);
-    const activeKey = `${feedMode}-${currentSubject}`;
-    const currentPage = streamPages[activeKey] || 1;
-    const nextPage = currentPage + 1;
-
-    try {
-      let incoming = [];
-      let freshAddedCount = 0;
-
-      if (currentSubject !== 'all') {
-        const currentCached = subjectVideosCache[currentSubject] || [];
-        const existingIds = new Set([
-          ...currentCached.map(v => v.id),
-          ...EDUCATIONAL_VIDEOS.filter(v => v.subject === currentSubject).map(v => v.id)
-        ]);
-
-        // Fetch next page specifically for this subject
-        incoming = await fetchYouTubeVideosBySubject(currentSubject, nextPage, existingIds);
-        let freshItems = (incoming || []).filter(v => !existingIds.has(v.id));
-
-        // If online search did not yield new videos, guarantee from syllabus lecture pool
-        if (freshItems.length === 0) {
-          freshItems = getGuaranteedSubjectLectures(currentSubject, nextPage, existingIds);
-        }
-
-        freshAddedCount = freshItems.length;
-        incoming = freshItems;
-
-        setSubjectVideosCache(prev => ({
-          ...prev,
-          [currentSubject]: [...(prev[currentSubject] || []), ...freshItems]
-        }));
-      } else if (feedMode === 'popular') {
-        const existingIds = new Set(popularVideos.map(v => v.id));
-        incoming = await fetchPopularCSVideos(nextPage);
-        let freshItems = (incoming || []).filter(v => !existingIds.has(v.id));
-
-        if (freshItems.length === 0) {
-          freshItems = getGuaranteedSubjectLectures('all', nextPage, existingIds);
-        }
-
-        freshAddedCount = freshItems.length;
-        incoming = freshItems;
-        setPopularVideos(prev => [...prev, ...freshItems]);
-      } else if (feedMode === 'live') {
-        const existingIds = new Set(liveVideos.map(v => v.id));
-        incoming = await fetchYouTubeVideosBySubject('all', nextPage, existingIds);
-        let freshItems = (incoming || []).filter(v => !existingIds.has(v.id));
-
-        if (freshItems.length === 0) {
-          freshItems = getGuaranteedSubjectLectures('all', nextPage, existingIds);
-        }
-
-        freshAddedCount = freshItems.length;
-        incoming = freshItems;
-        setLiveVideos(prev => [...prev, ...freshItems]);
-      } else {
-        // Curated feed mode
-        const existingIds = new Set(curatedVideos.map(v => v.id));
-        incoming = await fetchYouTubeVideosBySubject('all', nextPage, existingIds);
-        let freshItems = (incoming || []).filter(v => !existingIds.has(v.id));
-
-        if (freshItems.length === 0) {
-          freshItems = getGuaranteedSubjectLectures('all', nextPage, existingIds);
-        }
-
-        freshAddedCount = freshItems.length;
-        incoming = freshItems;
-        setCuratedVideos(prev => [...prev, ...freshItems]);
-      }
-
-      // Add to global videoCache so all newly loaded videos play immediately
-      if (incoming && incoming.length > 0) {
-        setVideoCache(prev => {
-          const updated = { ...prev };
-          incoming.forEach(v => { updated[v.id] = v; });
-          return updated;
-        });
-
-        // Update the page counter for this specific active feed
-        setStreamPages(prev => ({
-          ...prev,
-          [activeKey]: nextPage
-        }));
-
-        if (freshAddedCount > 0) {
-          setUpdateNotification(`Page ${nextPage} Added: +${freshAddedCount} new CS lectures appended`);
-          incrementAdShieldStat('adsBlockedCount', freshAddedCount * 2);
-        } else {
-          setUpdateNotification(`Page ${nextPage} Synchronized: Catalog up to date`);
-        }
-      } else {
-        setUpdateNotification(`Stream synchronized with YouTube`);
-      }
-    } catch (e) {
-      console.warn('Error during continuous stream update:', e);
-      setUpdateNotification(`Stream synchronized with YouTube`);
-    } finally {
-      setIsContinueLoading(false);
-      setTimeout(() => setUpdateNotification(null), 4000);
-    }
-  }, [feedMode, currentSubject, streamPages, subjectVideosCache, popularVideos, liveVideos, curatedVideos]);
-
+    };
+    window.addEventListener("keydown", handle);
+    return () => window.removeEventListener("keydown", handle);
+  }, []);
+  useEffect(() => {
+    const changed = () => {
+      const next = getRoute();
+      setMenu(false);
+      if (next.path === "/search") setSearch(next.params.q || "");
+    };
+    window.addEventListener("hashchange", changed);
+    return () => window.removeEventListener("hashchange", changed);
+  }, []);
+  useEffect(() => {
+    document.title = `${route.path === "/gate" ? "GATE CS 2027" : route.path === "/saved" ? "Saved videos" : route.path === "/history" ? "Watch history" : route.path.startsWith("/lesson/") ? "GATE lesson" : "Learn computer science"} · EduBrowse`;
+  }, [route.path]);
+  const doSearch = (e) => {
+    e.preventDefault();
+    const text = search.trim();
+    if (!text) return;
+    const id = extractVideoId(text);
+    navigate(
+      id
+        ? `/watch/${id}`
+        : `/search?q=${encodeURIComponent(text.slice(0, 250))}`,
+    );
+    searchRef.current?.blur();
+  };
+  const addJob = useCallback(
+    (job) =>
+      setJobs((prev) =>
+        [job, ...prev.filter((j) => j.id !== job.id)].slice(0, 30),
+      ),
+    [setJobs],
+  );
+  const currentLesson = route.path.startsWith("/lesson/")
+    ? route.path.split("/")[2]
+    : null;
+  const currentVideo = route.path.startsWith("/watch/")
+    ? route.path.split("/")[2]
+    : null;
+  const activeCategory = route.params.category || "all";
+  const completed = GATE_LESSONS.filter(
+    (l) => progress[l.id]?.completed,
+  ).length;
+  const navItems = [
+    {
+      path: "/",
+      label: "Explore",
+      icon: Home,
+      active: route.path === "/" && activeCategory === "all",
+    },
+    {
+      path: "/gate",
+      label: "GATE CS 2027",
+      icon: GraduationCap,
+      active: route.path === "/gate" || !!currentLesson,
+    },
+    {
+      path: "/?category=interview",
+      label: "Interview preparation",
+      icon: Code2,
+      active: activeCategory === "interview",
+    },
+    {
+      path: "/?category=soft-skills",
+      label: "Communication & skills",
+      icon: MessageSquare,
+      active: activeCategory === "soft-skills",
+    },
+  ];
+  const libraryItems = [
+    {
+      path: "/saved",
+      label: "Saved videos",
+      icon: Bookmark,
+      count: saved.length,
+    },
+    { path: "/history", label: "Watch history", icon: Clock3 },
+    {
+      path: "/downloads",
+      label: "Downloads",
+      icon: Download,
+      count: jobs.filter((j) => ["queued", "downloading"].includes(j.status))
+        .length,
+    },
+  ];
+  const navigation = (
+    <>
+      <div className="nav-group">
+        {navItems.map((item) => {
+          const Icon = item.icon;
+          return (
+            <a
+              href={`#${item.path}`}
+              key={item.path}
+              className={`nav-item ${item.active ? "active" : ""}`}
+              aria-current={item.active ? "page" : undefined}
+              onClick={closeMenu}
+            >
+              <Icon size={20} strokeWidth={item.active ? 2 : 1.65} />
+              <span>{item.label}</span>
+            </a>
+          );
+        })}
+      </div>
+      <div className="nav-group">
+        <span className="nav-label">Your library</span>
+        {libraryItems.map((item) => {
+          const Icon = item.icon;
+          return (
+            <a
+              href={`#${item.path}`}
+              key={item.path}
+              className={`nav-item ${route.path === item.path ? "active" : ""}`}
+              aria-current={route.path === item.path ? "page" : undefined}
+              onClick={closeMenu}
+            >
+              <Icon size={20} strokeWidth={1.65} />
+              <span>{item.label}</span>
+              {item.count > 0 && (
+                <span className="nav-count">{item.count}</span>
+              )}
+            </a>
+          );
+        })}
+      </div>
+      <div className="nav-group nav-subjects">
+        <span className="nav-label">Explore subjects</span>
+        {CATEGORIES.filter((c) =>
+          [
+            "algorithms",
+            "os",
+            "dbms",
+            "networks",
+            "system-design",
+            "ai",
+            "web",
+          ].includes(c.id),
+        ).map((c) => (
+          <a
+            href={`#/?category=${c.id}`}
+            className={`nav-item ${route.path === "/" && activeCategory === c.id ? "active" : ""}`}
+            key={c.id}
+            onClick={closeMenu}
+          >
+            <span className="subject-dot" />
+            <span>{c.name}</span>
+          </a>
+        ))}
+      </div>
+      <div className="sidebar-footer">
+        <button
+          className="nav-item"
+          onClick={() => {
+            setSettingsOpen(true);
+            setMenu(false);
+          }}
+        >
+          <Settings size={19} />
+          <span>Settings</span>
+        </button>
+        <div className="device-note">
+          <Monitor size={15} />
+          <span>
+            Your progress stays
+            <br />
+            on this device.
+          </span>
+        </div>
+        <a
+          className="youtube-attribution"
+          href="https://www.youtube.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Youtube size={16} />
+          Videos from YouTube
+          <ArrowUpRight size={12} />
+        </a>
+      </div>
+    </>
+  );
   return (
-    <div className={`edubrowse-app ${isFocusMode ? 'theater-active' : ''}`}>
-      {/* Top Browser Chrome Bar */}
-      <BrowserChrome
-        currentUrl={omniboxUrl}
-        canGoBack={true}
-        canGoForward={false}
-        onBack={() => {}}
-        onForward={() => {}}
-        onReload={() => {
-          if (feedMode === 'live') handleRefreshLiveFeed();
-          else handleContinueUpdate();
+    <div className="app">
+      <a
+        className="skip-link"
+        href="#main-content"
+        onClick={(e) => {
+          e.preventDefault();
+          document.getElementById("main-content")?.focus();
         }}
-        onHome={handleHome}
-        onNavigate={handleNavigate}
-        isFocusMode={isFocusMode}
-        onToggleFocusMode={() => setIsFocusMode(!isFocusMode)}
-        onOpenSyllabus={handleOpenSyllabus}
-        onOpenBookmarks={() => setIsBookmarksOpen(true)}
-        onOpenSettings={() => setIsSettingsOpen(true)}
-        bookmarkCount={bookmarks.length}
-        onOpenMenu={() => setIsSidebarOpen(true)}
-      />
-
-      {/* Browser Tab Strip */}
-      <TabNav
-        tabs={tabs}
-        activeTabId={activeTabId}
-        onSelectTab={handleSelectTab}
-        onCloseTab={handleCloseTab}
-        onNewTab={handleNewTab}
-      />
-
-      {/* Main Viewport Content */}
-      <main className="browser-viewport">
-        {activeTab?.type === 'home' ? (
-          <HomePage
-            videos={allHomeVideos}
-            history={history}
-            bookmarks={bookmarks}
-            onSelectVideo={handleSelectVideo}
-            onOpenCatalog={handleOpenCatalog}
-            onOpenSyllabus={handleOpenSyllabus}
-            onSearch={handleSearchFromHome}
+      >
+        Skip to content
+      </a>
+      <header className="app-header">
+        <div className="brand-area">
+          <button
+            className="icon-button menu-button"
+            aria-label="Open navigation menu"
+            aria-expanded={menu}
+            onClick={() => setMenu(!menu)}
+          >
+            <Menu size={23} />
+          </button>
+          <a className="brand" href="#/" aria-label="EduBrowse home">
+            <span className="brand-symbol">
+              <PlayLogo />
+            </span>
+            <span>
+              EduBrowse<span className="brand-cs">CS</span>
+            </span>
+          </a>
+        </div>
+        <form className="global-search" onSubmit={doSearch} role="search">
+          <label className="visually-hidden" htmlFor="global-search">
+            Search videos, topics or paste a YouTube link
+          </label>
+          <input
+            id="global-search"
+            ref={searchRef}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            maxLength={250}
+            placeholder="Search a topic, skill, or YouTube link"
+            autoComplete="off"
           />
-        ) : activeTab?.type === 'player' ? (
-          <div className="player-layout">
-            <div className="player-main-col">
-              <VideoPlayer
-                video={activeVideo}
-                isBookmarked={bookmarks.some(b => b.id === activeVideo?.id)}
-                onToggleBookmark={handleToggleBookmark}
-                onOpenNotes={() => setIsNotesOpen(true)}
-                isFocusMode={isFocusMode}
-              />
-            </div>
-
-            {/* Strict Related CS Educational Videos Sidebar */}
-            <div className="player-sidebar-col">
-              <RelatedEducationalVideos
-                currentVideo={activeVideo}
-                onSelectVideo={handleSelectVideo}
-                catalog={allHomeVideos}
-              />
-            </div>
+          {search && (
+            <button
+              type="button"
+              className="search-clear icon-button"
+              onClick={() => {
+                setSearch("");
+                searchRef.current?.focus();
+              }}
+              aria-label="Clear search"
+            >
+              <X size={17} />
+            </button>
+          )}
+          <button type="submit" className="search-submit" aria-label="Search">
+            <Search size={21} />
+          </button>
+        </form>
+        <div className="header-actions">
+          <button
+            className="header-track-button"
+            onClick={() => navigate("/gate")}
+          >
+            <GraduationCap size={19} />
+            <span>Your study track</span>
+          </button>
+          <button
+            className="icon-button"
+            onClick={() => setSettingsOpen(true)}
+            aria-label="Open settings"
+          >
+            <Settings size={21} />
+          </button>
+          <span className="profile-avatar" title="Local study workspace">
+            CS
+          </span>
+        </div>
+      </header>
+      <aside className="app-sidebar">
+        <nav aria-label="Main navigation">{navigation}</nav>
+      </aside>
+      <main id="main-content" className="main-content" tabIndex={-1}>
+        {!online && (
+          <div className="connectivity-banner">
+            <WifiOff size={16} />
+            You’re offline. Written lessons and saved progress remain available
+            in this session.
           </div>
-        ) : activeTab?.type === 'syllabus' ? (
-          <GateSyllabusTracker
-            onSelectVideo={handleSelectVideo}
-            onSelectSubject={(subjectId) => {
-              handleOpenCatalog(subjectId);
-            }}
-          />
-        ) : (
-          <VideoGrid
-            videos={catalogVideos}
-            selectedSubject={activeTab?.subject || 'all'}
-            onSelectSubject={handleSelectSubject}
-            searchQuery={activeTab?.searchQuery || ''}
-            onClearSearch={() => {
-              setTabs(prev => prev.map(t => t.id === activeTabId ? {
-                ...t,
-                searchQuery: ''
-              } : t));
-            }}
-            onSelectVideo={handleSelectVideo}
-            onOpenSyllabus={handleOpenSyllabus}
-            feedMode={feedMode}
-            onToggleFeedMode={(mode) => {
-              setFeedMode(mode);
-              if (mode === 'live' && liveVideos.length === 0) {
-                handleRefreshLiveFeed();
-              }
-            }}
-            isLiveLoading={isLiveLoading}
-            isSubjectLoading={isSubjectLoading}
-            onRefreshLive={handleRefreshLiveFeed}
-            isSearchingLive={isSearchingLive}
-            onToggleSearchLive={() => setIsSearchingLive(!isSearchingLive)}
-            autoUpdateEnabled={autoUpdateEnabled}
-            onToggleAutoUpdate={() => setAutoUpdateEnabled(!autoUpdateEnabled)}
-            updateNotification={updateNotification}
-            onContinueUpdate={handleContinueUpdate}
-            isContinueLoading={isContinueLoading}
-            streamPage={currentStreamPage}
-            onOpenMenu={() => setIsSidebarOpen(true)}
-          />
         )}
+        {(savedError || historyError || progressError || notesError) && (
+          <div className="connectivity-banner">
+            Browser storage is unavailable or full. This session is kept in
+            memory; export a backup in Settings before closing.
+          </div>
+        )}
+        <AppErrorBoundary key={route.path}>
+          <Suspense
+            fallback={
+              <div className="page-loading">Loading your workspace…</div>
+            }
+          >
+            {currentVideo ? (
+              <WatchPage
+                key={currentVideo}
+                id={currentVideo}
+                lessonId={route.params.lesson}
+                videoCache={videoCache}
+                cacheVideo={cacheVideo}
+                saved={saved}
+                onSave={onSave}
+                history={history}
+                recordWatch={recordWatch}
+                notes={notes}
+                setNotes={setNotes}
+                onPlay={onPlay}
+                onDownload={setDownload}
+                notify={notify}
+              />
+            ) : currentLesson ? (
+              <GateLesson
+                key={currentLesson}
+                id={currentLesson}
+                tab={route.params.tab}
+                progress={progress}
+                updateProgress={setProgress}
+                onPlay={onPlay}
+                saved={saved}
+                onSave={onSave}
+                revision={revision}
+              />
+            ) : route.path === "/gate" ? (
+              <GateOverview progress={progress} />
+            ) : ["/saved", "/history"].includes(route.path) ? (
+              <Library
+                type={route.path.slice(1)}
+                videos={route.path === "/saved" ? saved : history}
+                saved={saved}
+                onSave={onSave}
+                onPlay={onPlay}
+                clearHistory={() => setHistory([])}
+              />
+            ) : route.path === "/downloads" ? (
+              <Downloads jobs={jobs} setJobs={setJobs} notify={notify} />
+            ) : ["/", "/search"].includes(route.path) ? (
+              <Discovery
+                key={`${route.path}:${activeCategory}:${route.params.q || ""}`}
+                route={route}
+                saved={saved}
+                onSave={onSave}
+                onPlay={onPlay}
+                settings={settings}
+                progress={progress}
+                history={history}
+                revision={revision}
+              />
+            ) : (
+              <div className="empty-state">
+                <CircleHelp size={32} />
+                <h1>Page not found</h1>
+                <button className="button" onClick={() => navigate("/")}>
+                  Back to explore
+                </button>
+              </div>
+            )}
+          </Suspense>
+        </AppErrorBoundary>
       </main>
-
-      {/* Mobile App Bottom Navigation Bar */}
-      <MobileBottomNav
-        activeTabType={activeTab?.type || 'home'}
-        hasActiveVideo={Boolean(tabs.some(t => t.type === 'player' && t.videoId))}
-        onOpenHome={handleHome}
-        onOpenCatalog={() => handleOpenCatalog('all')}
-        onOpenPlayer={() => {
-          const playerTab = tabs.find(t => t.type === 'player');
-          if (playerTab) setActiveTabId(playerTab.id);
-        }}
-        onOpenSyllabus={handleOpenSyllabus}
-        onOpenBookmarks={() => setIsBookmarksOpen(true)}
-        bookmarkCount={bookmarks.length}
-      />
-
-      {/* Slide-out Navigation & Feed Control Drawer */}
-      <AppSidebar
-        isOpen={isSidebarOpen}
-        onClose={() => setIsSidebarOpen(false)}
-        activeTabType={activeTab?.type || 'home'}
-        onNavigateHome={handleHome}
-        onNavigateCatalog={(subjId) => handleOpenCatalog(subjId || 'all')}
-        onOpenSyllabus={handleOpenSyllabus}
-        onOpenBookmarks={() => setIsBookmarksOpen(true)}
-        onOpenSettings={() => setIsSettingsOpen(true)}
-        bookmarkCount={bookmarks.length}
-        feedMode={feedMode}
-        onToggleFeedMode={(mode) => {
-          setFeedMode(mode);
-          if (mode === 'live' && liveVideos.length === 0) {
-            handleRefreshLiveFeed();
-          }
-        }}
-        autoUpdateEnabled={autoUpdateEnabled}
-        onToggleAutoUpdate={() => setAutoUpdateEnabled(!autoUpdateEnabled)}
-        onRefreshLive={handleRefreshLiveFeed}
-        isLiveLoading={isLiveLoading}
-        isFocusMode={isFocusMode}
-        onToggleFocusMode={() => setIsFocusMode(!isFocusMode)}
-      />
-
-      {/* Timestamped Lecture Notes Drawer */}
-      <StudyNotes
-        video={activeVideo}
-        isOpen={isNotesOpen}
-        onClose={() => setIsNotesOpen(false)}
-      />
-
-      {/* Bookmarks & History Library Drawer */}
-      <BookmarksDrawer
-        isOpen={isBookmarksOpen}
-        onClose={() => setIsBookmarksOpen(false)}
-        bookmarks={bookmarks}
-        history={history}
-        onSelectVideo={handleSelectVideo}
-        onRemoveBookmark={handleToggleBookmark}
-      />
-
-      {/* Browser Settings Modal */}
-      <SettingsModal
-        isOpen={isSettingsOpen}
-        onClose={() => setIsSettingsOpen(false)}
-      />
+      <nav className="mobile-nav" aria-label="Mobile navigation">
+        {[
+          {
+            path: "/",
+            label: "Explore",
+            icon: Home,
+            active: route.path === "/" || route.path === "/search",
+          },
+          {
+            path: "/gate",
+            label: "Study track",
+            icon: GraduationCap,
+            active: route.path === "/gate" || !!currentLesson,
+          },
+          {
+            path: "/saved",
+            label: "Saved",
+            icon: Bookmark,
+            active: route.path === "/saved",
+          },
+          {
+            path: "/downloads",
+            label: "Downloads",
+            icon: Download,
+            active: route.path === "/downloads",
+          },
+        ].map((item) => {
+          const Icon = item.icon;
+          return (
+            <a
+              key={item.path}
+              href={`#${item.path}`}
+              className={item.active ? "active" : ""}
+              aria-current={item.active ? "page" : undefined}
+            >
+              <Icon size={21} />
+              <span>{item.label}</span>
+            </a>
+          );
+        })}
+      </nav>
+      {menu && (
+        <Dialog title="Navigation" onClose={closeMenu}>
+          <nav className="dialog-navigation" aria-label="Expanded navigation">
+            {navigation}
+          </nav>
+        </Dialog>
+      )}
+      {settingsOpen && (
+        <SettingsDialog
+          settings={settings}
+          setSettings={setSettings}
+          onClose={closeSettings}
+          notify={notify}
+          backup={{ version: 1, saved, history, progress, notes, settings }}
+          onImport={(data) => {
+            setSaved(data.saved);
+            setHistory(data.history);
+            setProgress(data.progress);
+            setNotes(data.notes);
+            setSettings(data.settings);
+            setVideoCache(
+              Object.fromEntries(
+                uniqueVideos([
+                  ...STARTER_VIDEOS,
+                  ...data.saved,
+                  ...data.history,
+                ]).map((v) => [v.id, v]),
+              ),
+            );
+          }}
+          onKeyChanged={() => setRevision((v) => v + 1)}
+          completed={completed}
+        />
+      )}
+      {download && (
+        <DownloadDialog
+          video={download}
+          onClose={closeDownload}
+          addJob={addJob}
+          notify={notify}
+        />
+      )}
+      {toast && (
+        <div className="toast" role="status">
+          <Check size={17} />
+          {toast}
+          <button
+            className="icon-button"
+            onClick={() => setToast("")}
+            aria-label="Dismiss notification"
+          >
+            <X size={16} />
+          </button>
+        </div>
+      )}
     </div>
   );
+}
+function PlayLogo() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+      <path d="M6 4.5v9l8-4.5z" fill="currentColor" />
+    </svg>
+  );
+}
+
+function Library({ type, videos, saved, onSave, onPlay, clearHistory }) {
+  const [confirm, setConfirm] = useState(false);
+  const close = useCallback(() => setConfirm(false), []);
+  const isSaved = type === "saved";
+  return (
+    <div className="library-page page-width">
+      <div className="section-heading">
+        <div>
+          <span className="eyebrow">YOUR LIBRARY</span>
+          <h1>{isSaved ? "Saved for later" : "Watch history"}</h1>
+          <p>
+            {isSaved
+              ? `${videos.length} saved video${videos.length === 1 ? "" : "s"}. Your next learning session starts here.`
+              : "Lectures you’ve played. Pick up where you left off."}
+          </p>
+        </div>
+        {!isSaved && videos.length > 0 && (
+          <button className="button" onClick={() => setConfirm(true)}>
+            Clear history
+          </button>
+        )}
+      </div>
+      {videos.length ? (
+        <div className="video-grid">
+          {videos.map((v) => (
+            <VideoCard
+              key={v.id}
+              video={v}
+              onPlay={onPlay}
+              onSave={onSave}
+              saved={saved.some((s) => s.id === v.id)}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="empty-state">
+          {isSaved ? (
+            <Bookmark size={36} strokeWidth={1.5} />
+          ) : (
+            <Clock3 size={36} strokeWidth={1.5} />
+          )}
+          <h2>
+            {isSaved
+              ? "Make room for a good lesson"
+              : "Your learning starts here"}
+          </h2>
+          <p>
+            {isSaved
+              ? "Save a video with the bookmark button to find it here."
+              : "Play a lecture and it will appear here with your progress."}
+          </p>
+          <button className="button button-dark" onClick={() => navigate("/")}>
+            Explore videos
+          </button>
+        </div>
+      )}
+      {confirm && (
+        <Dialog title="Clear watch history?" onClose={close}>
+          <p>
+            This removes the watch history and resume positions saved on this
+            device.
+          </p>
+          <div className="dialog-actions">
+            <button className="button" onClick={close}>
+              Keep history
+            </button>
+            <button
+              className="button button-danger"
+              onClick={() => {
+                clearHistory();
+                close();
+              }}
+            >
+              Clear history
+            </button>
+          </div>
+        </Dialog>
+      )}
+    </div>
+  );
+}
+
+function SettingsDialog({
+  settings,
+  setSettings,
+  onClose,
+  notify,
+  backup,
+  onImport,
+  onKeyChanged,
+  completed,
+}) {
+  const [key, setKey] = useState(getApiKey);
+  const [health, setHealth] = useState(null);
+  const [importError, setImportError] = useState("");
+  const fileRef = useRef(null);
+  useEffect(() => {
+    const c = new AbortController();
+    api("/health", { signal: c.signal })
+      .then(setHealth)
+      .catch(() => setHealth({ ok: false }));
+    return () => c.abort();
+  }, []);
+  const save = (e) => {
+    e.preventDefault();
+    setApiKey(key);
+    onKeyChanged();
+    notify("Settings saved");
+    onClose();
+  };
+  const importFile = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    try {
+      if (file.size > 5_000_000)
+        throw new Error("Backup is too large (maximum 5 MB).");
+      const data = JSON.parse(await file.text());
+      if (
+        data.version !== 1 ||
+        !videoList(data.saved) ||
+        !videoList(data.history) ||
+        !progressValid(data.progress) ||
+        !notesValid(data.notes) ||
+        !settingsValid(data.settings)
+      )
+        throw new Error("This file is not a valid EduBrowse backup.");
+      onImport(data);
+      notify("Study backup restored");
+      onClose();
+    } catch (error) {
+      setImportError(error.message);
+    }
+    e.target.value = "";
+  };
+  return (
+    <Dialog title="Settings" onClose={onClose}>
+      <form onSubmit={save}>
+        <section className="settings-section">
+          <h3>Appearance</h3>
+          <label className="field-label">
+            Theme
+            <select
+              value={settings.theme}
+              onChange={(e) =>
+                setSettings((prev) => ({ ...prev, theme: e.target.value }))
+              }
+            >
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+              <option value="system">Use device setting</option>
+            </select>
+          </label>
+        </section>
+        <section className="settings-section">
+          <h3>Fresh videos</h3>
+          <label className="setting-switch">
+            <span>
+              <strong>Refresh automatically</strong>
+              <small>
+                Check for new results while this app is open and visible.
+              </small>
+            </span>
+            <input
+              type="checkbox"
+              checked={settings.autoRefresh}
+              onChange={(e) =>
+                setSettings((prev) => ({
+                  ...prev,
+                  autoRefresh: e.target.checked,
+                }))
+              }
+            />
+          </label>
+          <label className="field-label">
+            Refresh interval
+            <select
+              value={settings.refreshMinutes}
+              onChange={(e) =>
+                setSettings((prev) => ({
+                  ...prev,
+                  refreshMinutes: +e.target.value,
+                }))
+              }
+              disabled={!settings.autoRefresh}
+            >
+              <option value="15">Every 15 minutes</option>
+              <option value="30">Every 30 minutes</option>
+              <option value="60">Every hour</option>
+            </select>
+          </label>
+        </section>
+        <section className="settings-section">
+          <h3>YouTube connection</h3>
+          <p className="field-help">
+            Search works through the local helper, or through a YouTube Data API
+            key. A key gives official pagination and language preferences.
+          </p>
+          <label className="field-label">
+            YouTube Data API key
+            <input
+              type="password"
+              value={key}
+              onChange={(e) => setKey(e.target.value)}
+              autoComplete="off"
+              spellCheck="false"
+              placeholder="Optional · stored for this browser session"
+              maxLength={200}
+            />
+          </label>
+          <p className="field-help">
+            Sent only to this app’s backend, then to Google’s YouTube API. For a
+            shared deployment, configure YOUTUBE_API_KEY on the server.
+          </p>
+          <div className="service-status">
+            <span className={`status-dot ${health?.ok ? "" : "paused"}`} />
+            {health
+              ? health.ok
+                ? `App server connected${health.apiKeyConfigured ? " · server API key configured" : ""}`
+                : "App server unavailable"
+              : "Checking app server…"}
+          </div>
+          <div className="service-status">
+            <span
+              className={`status-dot ${health?.downloads?.available ? "" : "paused"}`}
+            />
+            {health?.downloads?.available
+              ? `Download helper ready · ${health.downloads.version}`
+              : health?.downloads?.message || "Checking download helper…"}
+          </div>
+        </section>
+        <section className="settings-section">
+          <h3>Your study data</h3>
+          <p className="field-help">
+            {completed} completed lessons. Saved videos, notes and progress are
+            stored in this browser. Back them up before switching devices.
+          </p>
+          <div className="data-actions">
+            <button
+              type="button"
+              className="button"
+              onClick={() =>
+                downloadText(
+                  "edubrowse-study-backup.json",
+                  JSON.stringify(backup, null, 2),
+                  "application/json",
+                )
+              }
+            >
+              <Download size={15} />
+              Export backup
+            </button>
+            <button
+              type="button"
+              className="button"
+              onClick={() => fileRef.current?.click()}
+            >
+              Restore backup
+            </button>
+            <input
+              className="visually-hidden"
+              ref={fileRef}
+              type="file"
+              accept=".json,application/json"
+              onChange={importFile}
+            />
+          </div>
+          {importError && (
+            <p className="danger-text" role="alert">
+              {importError}
+            </p>
+          )}
+        </section>
+        <div className="dialog-actions">
+          <button type="button" className="button" onClick={onClose}>
+            Close
+          </button>
+          <button className="button button-dark" type="submit">
+            Save settings
+          </button>
+        </div>
+      </form>
+    </Dialog>
+  );
+}
+class AppErrorBoundary extends Component {
+  state = { failed: false };
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+  render() {
+    if (this.state.failed)
+      return (
+        <div className="empty-state">
+          <CircleHelp size={32} />
+          <h1>This view couldn’t load</h1>
+          <p>Your saved work is still on this device. Reload to try again.</p>
+          <button className="button" onClick={() => window.location.reload()}>
+            Reload app
+          </button>
+          <a className="text-button" href="#/">
+            Back to explore
+          </a>
+        </div>
+      );
+    return this.props.children;
+  }
 }

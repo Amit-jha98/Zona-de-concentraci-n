@@ -1,0 +1,10 @@
+node_modules
+dist
+.tools
+.downloads
+.npm-cache
+test-results
+package-lock.json
+public/gate-topic-videos.json
+docs/*verification.json
+docs/topic-video-report.json

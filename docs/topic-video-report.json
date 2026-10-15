@@ -1,0 +1,3518 @@
+{
+  "checkedAt": "2026-10-15T15:05:20.823Z",
+  "total": 146,
+  "resolved": 146,
+  "missing": [],
+  "matches": [
+    {
+      "id": "first-order-logic",
+      "videos": [
+        {
+          "id": "Aw3EOSr64j0",
+          "title": "Lec-45: How to write First order/Predicate logic | Artificial Intelligence",
+          "duration": 564
+        },
+        {
+          "id": "ARywou8HLQk",
+          "title": "Introduction to First Order Logic",
+          "duration": 320
+        },
+        {
+          "id": "lLT0lHR6LSo",
+          "title": "05 Propositional and first order logic | Discrete Mathematics | GATE | YouGate",
+          "duration": 949
+        },
+        {
+          "id": "fg0iJvjBHIE",
+          "title": "04 Propositional and first order logic | Discrete Mathematics | GATE | YouGate",
+          "duration": 765
+        }
+      ]
+    },
+    {
+      "id": "sets",
+      "videos": [
+        {
+          "id": "16AkfMtxnX8",
+          "title": "12. Operations on Sets (Union, Intersection, Difference, Complement of a Set) | Set Theory",
+          "duration": 683
+        },
+        {
+          "id": "pvkwUb-bBGY",
+          "title": "set operations discrete math | HINDI |Niharika Panda",
+          "duration": 335
+        },
+        {
+          "id": "s-hRgTgdVe4",
+          "title": "Countability of Sets | Similar Sets, Finite Sets, Infinite Sets, Uncountable set | Real Analysis",
+          "duration": 1050
+        },
+        {
+          "id": "wGLTV8MgLlA",
+          "title": "Discrete Mathematics | Set Theory Explained from Scratch | By Dr. Gajendra Purohit",
+          "duration": 1481
+        }
+      ]
+    },
+    {
+      "id": "propositional-logic",
+      "videos": [
+        {
+          "id": "7S6jHzi8vkk",
+          "title": "Propositional Logic | Conjunction, Disjunction & Negation | Discrete Mathematics | By Gp sir",
+          "duration": 1258
+        },
+        {
+          "id": "519FvcUQqYU",
+          "title": "Lec-43: Propositional Logic | Artificial Intelligence",
+          "duration": 707
+        },
+        {
+          "id": "6490tKrGEic",
+          "title": "Lec-27: Propositional Logic in Artificial Intelligence | Knowledge Representation | All Imp Points",
+          "duration": 740
+        },
+        {
+          "id": "Z1KaRsHMzCE",
+          "title": "GATE 2027 CS & IT | Engineering Mathematics | Propositional & First Order Logic | PYQs | Video 1.1",
+          "duration": 540
+        }
+      ]
+    },
+    {
+      "id": "functions",
+      "videos": [
+        {
+          "id": "r2pvNu4sY6s",
+          "title": "Function|Types of Functions|Discrete Mathematics | Lecture 01|All University|Pradeep Giri Si",
+          "duration": 657
+        },
+        {
+          "id": "DPpzYLbS2h8",
+          "title": "3.9 Onto Functions in Discrete Maths in hindi | Surjective Function | Surjection",
+          "duration": 283
+        },
+        {
+          "id": "YqT-DAmvi3I",
+          "title": "One to one and onto functions | Relations and Functions | Class XII | Mathematics | Khan Academy",
+          "duration": 294
+        },
+        {
+          "id": "icOLoZ02W8E",
+          "title": "3.1 Functions In Discrete Mathematics in Hindi | Basic Functions In Mathematics | What Is Function",
+          "duration": 482
+        }
+      ]
+    },
+    {
+      "id": "relations",
+      "videos": [
+        {
+          "id": "wr9SkmlEhhI",
+          "title": "Equivalence Relations And Equivalence Classes: The Basics | GATE Computer Science Engineering",
+          "duration": 829
+        },
+        {
+          "id": "cG4_TiAbKzU",
+          "title": "Equivalence Classes | Sets, Relations and Functions | Engineering Mathematics - PAATHSHALA PANDIT",
+          "duration": 1320
+        },
+        {
+          "id": "CmZzZsaof8g",
+          "title": "2.13 Equivalence Classes and Partition in Discrete Maths",
+          "duration": 660
+        },
+        {
+          "id": "TbCk79SoCYw",
+          "title": "Equivalence Classes",
+          "duration": 439
+        }
+      ]
+    },
+    {
+      "id": "partial-orders",
+      "videos": [
+        {
+          "id": "R36F8CWAi2k",
+          "title": "PARTIAL ORDERS - DISCRETE MATHEMATICS",
+          "duration": 1146
+        },
+        {
+          "id": "h5Lv5ZeNl0g",
+          "title": "Partial Order Relation | POSET in Discrete Mathematics",
+          "duration": 506
+        },
+        {
+          "id": "qC2reWAo2mc",
+          "title": "Discrete Mathematics Lecture 5 | Partial Order Relation | POSET in Discrete Mathematics By GP Sir",
+          "duration": 1283
+        },
+        {
+          "id": "Or4TCkDdNt8",
+          "title": "Hasse Diagram with Example (Discrete Mathematics) Order relation & Lattice",
+          "duration": 162
+        }
+      ]
+    },
+    {
+      "id": "monoids",
+      "videos": [
+        {
+          "id": "zy1vSMWZ3-c",
+          "title": "Groups , Semigroups ,Monoids, Abelian Groups | Group Theory | Ritzymaths",
+          "duration": 1353
+        },
+        {
+          "id": "QHEjAVrrh70",
+          "title": "08- What Is Sub Monoid, Sub Semigroups, Subgroups In Group Theory In Discrete Mathematics In HINDI",
+          "duration": 717
+        },
+        {
+          "id": "hpNgvdVK0l4",
+          "title": "Semigroups and Abelian Algebraic Structures",
+          "duration": 656
+        }
+      ]
+    },
+    {
+      "id": "lattices",
+      "videos": [
+        {
+          "id": "baW6GFnqEuo",
+          "title": "TYPES OF LATTICES | DISCRETE STRUCTURE AND THEORY OF LOGIC | LECTURE 02 BY MS. VIBHA SRIVASTAVA | AK",
+          "duration": 1009
+        },
+        {
+          "id": "LdcROw3qSIY",
+          "title": "SET THEORY, RELATIONS, POSET AND LATTICES | DSTL | LECTURE 01 BY MR. SURENDRA KUMAR | AKGEC",
+          "duration": 1397
+        },
+        {
+          "id": "KsU6jRwrLj0",
+          "title": "2.27 | Sub Lattices in Discrete Mathematics in HINDI |  Lattice Poset  Hasse Diagram",
+          "duration": 471
+        }
+      ]
+    },
+    {
+      "id": "groups",
+      "videos": [
+        {
+          "id": "wx676fYedZ0",
+          "title": "Algebraic Structure|Group Theory| Discrete Mathematics|Lecture 05|Cyclic Group|Subgroups",
+          "duration": 1088
+        },
+        {
+          "id": "fuCqvCXS2OM",
+          "title": "Group Theory | Groups in One Shot by GP Sir",
+          "duration": 1790
+        },
+        {
+          "id": "yDQhErltWUg",
+          "title": "Group Theory | Cyclic Group | Generator Of Cyclic Group | Discrete Mathematics",
+          "duration": 1307
+        },
+        {
+          "id": "emPwdLMWPWA",
+          "title": "Group Theory | Abelian & Cyclic Group in One Shot by GP Sir",
+          "duration": 1423
+        }
+      ]
+    },
+    {
+      "id": "graph-connectivity",
+      "videos": [
+        {
+          "id": "FJqqHfplYEY",
+          "title": "Graph Theory #16: Cut Set | Cut Vertex | Articulation Point | Cut Edge | Edge & Vertex Connectivity",
+          "duration": 992
+        },
+        {
+          "id": "F_I-5HbwUkE",
+          "title": "Connectivity in graph || Discrete Mathematics",
+          "duration": 309
+        },
+        {
+          "id": "j3L87qJEuCQ",
+          "title": "DM-40-Graphs -Connectivity",
+          "duration": 816
+        },
+        {
+          "id": "9esCn0awd5k",
+          "title": "6.11 Connected Components |How to find Connected Components in Graph | Graph Theory",
+          "duration": 1237
+        }
+      ]
+    },
+    {
+      "id": "graph-matching",
+      "videos": [
+        {
+          "id": "JYfiEDr-oBk",
+          "title": "37- Maximal, Maximum, Perfect Matching in Graph Thoery",
+          "duration": 757
+        },
+        {
+          "id": "OQ1-Eqhmu7A",
+          "title": "Maximum Bipartite Matching: Finding Optimal Pairings in Bipartite Graphs",
+          "duration": 672
+        },
+        {
+          "id": "sd1_-heJNjs",
+          "title": "Lesson 101 Part II: Bipartite Graphs and Matchings | Hall's Marriage Theorem | New Graphs from Old",
+          "duration": 1245
+        },
+        {
+          "id": "HWHjQdNC-7Y",
+          "title": "Bipartite Graphs and Maximum Matching",
+          "duration": 338
+        }
+      ]
+    },
+    {
+      "id": "graph-colouring",
+      "videos": [
+        {
+          "id": "HKRFK8W5JlE",
+          "title": "Graph Theory | Graph Coloring & Chromatic Number of Graph | Discrete Mathematics by GP Sir",
+          "duration": 716
+        },
+        {
+          "id": "yelUNp4l740",
+          "title": "13- Bipartite Graph in Discrete Mathematics",
+          "duration": 482
+        },
+        {
+          "id": "KvcUTjueGp4",
+          "title": "Chromatic Numbers of Special Graphs (Kₙ, Kₘ,ₙ, Cₙ) | Discrete Mathematics §10.8",
+          "duration": 375
+        },
+        {
+          "id": "v-qjYIhxVxs",
+          "title": "Graph Coloring & the Chapter 10 Story, Tied Together | Discrete Mathematics §10.8 Recap",
+          "duration": 293
+        }
+      ]
+    },
+    {
+      "id": "counting",
+      "videos": [
+        {
+          "id": "bohSynua_Jc",
+          "title": "L20: Principle of Inclusion Exclusion | Examples | Discrete Mathematics Lectures in Hindi",
+          "duration": 421
+        },
+        {
+          "id": "MA_zYFPlRNo",
+          "title": "9. Principle of Inclusion Exclusion kya hai || Questions on Inclusion Exclusion principle #settheory",
+          "duration": 1158
+        },
+        {
+          "id": "P76WbXX_oSo",
+          "title": "Lecture 3 | Algebra | Inclusion-Exclusion Principle | Derangement | Mathematical Science | CSIR NET",
+          "duration": 1357
+        },
+        {
+          "id": "WVTVkhzvhOs",
+          "title": "Mastering Dearrangement and Inclusion Exclusion Principle for |GATE Computer Science Engineering",
+          "duration": 1262
+        }
+      ]
+    },
+    {
+      "id": "recurrences",
+      "videos": [
+        {
+          "id": "aO0rDHmpyII",
+          "title": "Recurrence Relations   Lec 3 Types of Recurrences Coursera",
+          "duration": 772
+        },
+        {
+          "id": "F-DWW_aoeEM",
+          "title": "RECURRENCE RELATIONS | DISCRETE MATHEMATICS | LECTURE 05 BY MS  MANI DUBLISH | AKGEC",
+          "duration": 1195
+        },
+        {
+          "id": "NW-naslChdo",
+          "title": "L-2.1: What is Recurrence Relation| How to Write Binary Search Recurrence Relation|How we Solve them",
+          "duration": 435
+        },
+        {
+          "id": "1sZxmHICwUU",
+          "title": "Recurrence Relation | Solution of Recurrence Relation | Discrete Mathematics by Gp sir",
+          "duration": 1581
+        }
+      ]
+    },
+    {
+      "id": "generating-functions",
+      "videos": [
+        {
+          "id": "raTpiUKDD2A",
+          "title": "Generating Functions in Discrete Mathematics | Solving Reccurence Relation using Generating Function",
+          "duration": 594
+        },
+        {
+          "id": "rcMHO1YM3HM",
+          "title": "MCS for GATE CS 2024 | Discrete Math | L-18 | Generating Functions | Basics | Ghanshyam Naredi Sir",
+          "duration": 773
+        },
+        {
+          "id": "TLN76vdZGoY",
+          "title": "Numeric Function and Generating Function | Discrete Mathematics by Gp sir",
+          "duration": 988
+        },
+        {
+          "id": "50_00fkUlj0",
+          "title": "PROBABILITY | MATHEMATICAL EXPECTATION | Lecture 06 | Moment Generating Function and Central Moment",
+          "duration": 1126
+        }
+      ]
+    },
+    {
+      "id": "matrices",
+      "videos": [
+        {
+          "id": "2btWX0cO6Cg",
+          "title": "MATRICES|Rank of Matrix| Normal Form |LECTURE 04|PRADEEP GIRI SIR",
+          "duration": 1102
+        },
+        {
+          "id": "HOKCXJGgTYw",
+          "title": "Lec-13: Rank of Matrix (Echelon Form Method) | Linear Algebra",
+          "duration": 464
+        },
+        {
+          "id": "FT5H0L_fFWc",
+          "title": "Rank of Matrix Explained in Hindi | Engineering Mathematics",
+          "duration": 320
+        },
+        {
+          "id": "MjL22mmi9ZA",
+          "title": "Lec-12: Rank of Matrix (Minor Method) | Linear Algebra",
+          "duration": 781
+        }
+      ]
+    },
+    {
+      "id": "linear-equations",
+      "videos": [
+        {
+          "id": "sSjB7ccnM_I",
+          "title": "System of Linear Equations | Consistency & Inconsistency | Matrices | By GP Sir",
+          "duration": 1477
+        },
+        {
+          "id": "bAJLtUzhBQI",
+          "title": "Matrix Theory - Consistency of System of linear Equations (Lecture-5) #Matrix #GATE #IITJAM #CSIRNET",
+          "duration": 1285
+        },
+        {
+          "id": "Gp0hi_0-G6o",
+          "title": "Linear Algebra : System of Linear Equations in Urdu / Hindi - PPSC - FPSC - BS Mathematics",
+          "duration": 570
+        },
+        {
+          "id": "cfO7IvXp9zg",
+          "title": "Lec-10: Non Homogeneous System | Linear Algebra",
+          "duration": 771
+        }
+      ]
+    },
+    {
+      "id": "determinants",
+      "videos": [
+        {
+          "id": "TKcyiQua_6g",
+          "title": "Lec-6: Determinant, Minors And Cofactors | Linear Algebra",
+          "duration": 604
+        }
+      ]
+    },
+    {
+      "id": "lu-decomposition",
+      "videos": [
+        {
+          "id": "dwu2A3-lTGU",
+          "title": "LU Decomposition Method | Numerical Methods | Solution of Linear Equation",
+          "duration": 1141
+        },
+        {
+          "id": "PAat5sF1shc",
+          "title": "Lecture 11a.  LU Decomposition | Shortcut to Find Decomposition | Linear Algebra | Sachin Mittal",
+          "duration": 1524
+        },
+        {
+          "id": "GynMOmJLMDo",
+          "title": "Lecture 08: LU Decomposition",
+          "duration": 1520
+        },
+        {
+          "id": "3rDVKSkUxyM",
+          "title": "LU Decomposition Method | Triangularization Method | Linear Algebra | EM | GATE | Akash Shukla",
+          "duration": 1393
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "videos": [
+        {
+          "id": "I1zhiKC6OR8",
+          "title": "Limits | Calculus | Previous Year GATE Questions | Engineering Mathematics  | Shrenik Jain sir",
+          "duration": 1765
+        },
+        {
+          "id": "lznfgDjxhdA",
+          "title": "L-Hospital Rule | Limits Tricks | MH-CET | Mathematics | How to solve in Minimum Time",
+          "duration": 528
+        },
+        {
+          "id": "YNstP0ESndU",
+          "title": "Calculus 1 - Introduction to Limits",
+          "duration": 1220
+        },
+        {
+          "id": "PuVuNRqsNW0",
+          "title": "3 WAYS TO SOLVE LIMITS",
+          "duration": 300
+        }
+      ]
+    },
+    {
+      "id": "eigenvalues",
+      "videos": [
+        {
+          "id": "1wjXVdwzgX8",
+          "title": "Eigenvalues and Eigenvectors | Properties and Important Result | Matrices",
+          "duration": 1461
+        },
+        {
+          "id": "Ca6AWNkJaXw",
+          "title": "Lecture 8a. Introduction to Eigenvalues and Eigenvectors | Geometric Interpretations |Linear Algebra",
+          "duration": 1410
+        }
+      ]
+    },
+    {
+      "id": "continuity-differentiability",
+      "videos": [
+        {
+          "id": "vkGhs0AmIbM",
+          "title": "Continuity & Differentiability | Calculus | Previous Year GATE Questions | Engineering Mathematics",
+          "duration": 1688
+        },
+        {
+          "id": "SAO8tm0gR50",
+          "title": "Differentiability Explained in Hindi l Engineering Mathematics Series",
+          "duration": 406
+        }
+      ]
+    },
+    {
+      "id": "maxima-minima",
+      "videos": [
+        {
+          "id": "WHrfaVu4BMQ",
+          "title": "GATE Foundation Batch | How To Find Maxima and Minima | All Branches",
+          "duration": 1190
+        },
+        {
+          "id": "gLIyYFPoXpc",
+          "title": "Differential Calculus | Maxima and Minima of Function of Two Variables | By GP Sir",
+          "duration": 1799
+        },
+        {
+          "id": "at9McBrSC28",
+          "title": "Maxima and Minima  Engineering mathematics lecture for GATE 2017 part-25",
+          "duration": 1116
+        },
+        {
+          "id": "xwOhlrBGYiE",
+          "title": "MAXIMA AND MINIMA |ONE SHOT |ALL UNIVERSITY|ENGINEERING MATHEMATICS|PRADEEP GIRI SIR",
+          "duration": 697
+        }
+      ]
+    },
+    {
+      "id": "mean-value-theorem",
+      "videos": [
+        {
+          "id": "6BikQbeW32k",
+          "title": "Lec.- 19 mean value theorems ENGINEERING MATH for gate",
+          "duration": 1008
+        },
+        {
+          "id": "_rLizW7giT4",
+          "title": "Real Analysis | Mean Value Theorem | Lagrange's Mean Value Theorem - Proof & Examples",
+          "duration": 785
+        },
+        {
+          "id": "IFtjDDB8fzo",
+          "title": "Real Analysis | Mean Value Theorem | Rolle's Theorem - Proof & Examples",
+          "duration": 954
+        },
+        {
+          "id": "MdiKUW5a2pA",
+          "title": "Mean Value Theorems | Calculus | Master Engineering Maths in 20 Hours | By Ankit sir",
+          "duration": 680
+        }
+      ]
+    },
+    {
+      "id": "integration",
+      "videos": [
+        {
+          "id": "989TJ-9_ERI",
+          "title": "INTEGRATION SOLVED PROBLEM 1,2,3,4,5 (DEFINITE INTEGRATION AND INDEFINITE INTEGRATION)",
+          "duration": 820
+        },
+        {
+          "id": "UOWPbxuaiAA",
+          "title": "Engineering Mathematics | Definite Integration | Calculus by GP Sir",
+          "duration": 864
+        },
+        {
+          "id": "-Kb-2GR2PG0",
+          "title": "Lec.- 23 Definite and Improper Integral ENGINEERING MATH for gate,  I GATE  I ISRO I BARC I Lectures",
+          "duration": 987
+        }
+      ]
+    },
+    {
+      "id": "conditional-bayes",
+      "videos": [
+        {
+          "id": "tLz7muFImYk",
+          "title": "Lecture 13 Questions based on conditional  probability and bayes theorem Part 02",
+          "duration": 1030
+        },
+        {
+          "id": "mXXYtKsWYtg",
+          "title": "Bayes' Theorem | Probability | By GP Sir",
+          "duration": 1474
+        },
+        {
+          "id": "ZZouuAa_OtA",
+          "title": "COMBINATORICS AND DISCRETE PROBABILITY |Conditional Probability|Baye's Theorem | LECTURE 04",
+          "duration": 1437
+        },
+        {
+          "id": "SfVwSAQyGmk",
+          "title": "Bayes Theorem Probability | Engineering Mathematics | Probability for GATE 2024 | BYJU'S GATE",
+          "duration": 1145
+        }
+      ]
+    },
+    {
+      "id": "random-variables",
+      "videos": [
+        {
+          "id": "7MJ3b_J_ZCE",
+          "title": "Random Variable, Probability Mass Function, Distribution Function",
+          "duration": 1118
+        },
+        {
+          "id": "Vydwz53i--c",
+          "title": "Discrete Random Variable & Probability Mass Function | By GP Sir",
+          "duration": 1386
+        },
+        {
+          "id": "l0ecMiNUZu8",
+          "title": "Random Variable, Probability Density Function, Cumulative Distribution Function",
+          "duration": 1282
+        },
+        {
+          "id": "Pso9zEKF5_Q",
+          "title": "Continuous Random Variable & Probability Density Function | By GP Sir",
+          "duration": 1453
+        }
+      ]
+    },
+    {
+      "id": "mean-variance",
+      "videos": [
+        {
+          "id": "NW4fH0lfPZQ",
+          "title": "Mathematical Expectation l Variance l Standard Deviation",
+          "duration": 1462
+        },
+        {
+          "id": "1jfHFNSPJO0",
+          "title": "Lec-16: Mean, Variance and Standard Deviation of Distribution | Probability and Statistics",
+          "duration": 1679
+        },
+        {
+          "id": "D9xfxOzOwrQ",
+          "title": "Lec-21: Standard Deviation & Variance with Examples",
+          "duration": 496
+        },
+        {
+          "id": "H2Ji-Q4MfqU",
+          "title": "Mathematical Expectation, Variance Of Continuous & Discrete Random Variable",
+          "duration": 768
+        }
+      ]
+    },
+    {
+      "id": "median-mode",
+      "videos": [
+        {
+          "id": "keLk7odKCsE",
+          "title": "Lec-20: Mean, Median, Mode with Real Life examples | Machine Learning",
+          "duration": 461
+        },
+        {
+          "id": "ecY2x1xU1mE",
+          "title": "Lec-19: Mean, Median & Mode | Probability and Statistics",
+          "duration": 783
+        },
+        {
+          "id": "ebKcDCfxU18",
+          "title": "Engineering Mathematics: A Deep Dive into Probability, Mean, Median & Mode | GATE | CSE",
+          "duration": 899
+        },
+        {
+          "id": "kzcC53_eOxs",
+          "title": "Lec-21: Mean, Median And Mode of Grouped Data | Probability and Statistics",
+          "duration": 1055
+        }
+      ]
+    },
+    {
+      "id": "uniform-distribution",
+      "videos": [
+        {
+          "id": "n_1Z-HVemP0",
+          "title": "Lec-26: Uniform Distribution | Probability and Statistics",
+          "duration": 567
+        },
+        {
+          "id": "dxp6nvBeqNI",
+          "title": "Mastering Uniform Distribution in Engineering Mathematics Q-1 | GATE | COMPUTER SCIENCE ENGINEERING",
+          "duration": 253
+        },
+        {
+          "id": "iezACZxlc88",
+          "title": "Mastering Uniform Distribution in Engineering Mathematics | GATE | COMPUTER SCIENCE ENGINEERING",
+          "duration": 355
+        },
+        {
+          "id": "bSmREV3vJiU",
+          "title": "Probability for GATE DA/CS: L37 | Continuous Uniform Distribution | Sachin Mittal | Ex Amazon",
+          "duration": 1548
+        }
+      ]
+    },
+    {
+      "id": "normal-distribution",
+      "videos": [
+        {
+          "id": "4rHwrkc-w9Y",
+          "title": "Lec-24: Normal Distribution | Probability and Statistics",
+          "duration": 935
+        },
+        {
+          "id": "5nalI6_fw3M",
+          "title": "Normal Distribution | Mean and Variance | By GP Sir",
+          "duration": 1120
+        },
+        {
+          "id": "2CGvLkj-V4Q",
+          "title": "Normal Distribution Explained in Hindi | Statistics Series",
+          "duration": 551
+        },
+        {
+          "id": "sF4GNr6eHEc",
+          "title": "Normal Distribution | Probability Distribution | Numericals | Mathematics | Btech Bsc BCA BBA B.com",
+          "duration": 757
+        }
+      ]
+    },
+    {
+      "id": "exponential-distribution",
+      "videos": [
+        {
+          "id": "QrcbgIMiVBg",
+          "title": "Exponential Distribution | By GP Sir",
+          "duration": 1233
+        },
+        {
+          "id": "y7q9U35R9v8",
+          "title": "Lec-27: Exponential Distribution | Probability and Statistics",
+          "duration": 558
+        },
+        {
+          "id": "DVH7zOD5ubE",
+          "title": "Exponential Distribution Explained - Engineering Mathematics | GATE | COMPUTER SCIENCE ENGINEERING",
+          "duration": 388
+        },
+        {
+          "id": "RVDDgjgNPM4",
+          "title": "Probability for GATE DA/CS: L40 | Exponential Distribution | Sachin Mittal | Ex Amazon",
+          "duration": 1086
+        }
+      ]
+    },
+    {
+      "id": "poisson-distribution",
+      "videos": [
+        {
+          "id": "O0W_EtXQMhQ",
+          "title": "Poisson Distribution | By GP Sir",
+          "duration": 1091
+        },
+        {
+          "id": "zv7_EwPyzCo",
+          "title": "Lec-20: Poisson Distribution | Probability and Statistics",
+          "duration": 677
+        },
+        {
+          "id": "xFR7TUOVu-A",
+          "title": "PROBABILITY DISTRIBUTION | POISSON DISTRIBUTION | All university | PRADEEP GIRI SIR",
+          "duration": 1509
+        },
+        {
+          "id": "V3tZ6VLVbak",
+          "title": "Poisson Distribution | Probability Distribution problems | Mathematics | Btech | BSc | BCA | BBA",
+          "duration": 621
+        }
+      ]
+    },
+    {
+      "id": "binomial-distribution",
+      "videos": [
+        {
+          "id": "L-Jk1bT7mUs",
+          "title": "Binomial Distribution | Engineering Mathematics | GATE 2024 | Coffee with Concept BYJU'S",
+          "duration": 1341
+        },
+        {
+          "id": "iQkHE77Jizs",
+          "title": "Binomial Distribution | Mean and Variance | By GP Sir",
+          "duration": 1757
+        },
+        {
+          "id": "IFhvaO_b5ds",
+          "title": "Lec-18: Binomial or Bernoulli Distribution | Probability and Statistics",
+          "duration": 1470
+        },
+        {
+          "id": "hbVDrKkRols",
+          "title": "Theoretical Probability Distribution Introduction || Binomial distribution vs Poisson's distribution",
+          "duration": 667
+        }
+      ]
+    },
+    {
+      "id": "boolean-algebra",
+      "videos": [
+        {
+          "id": "EW_2MhFu7tE",
+          "title": "Logic Gates | Boolean Algebra | Types of Logic Gates | AND, OR, NOT, NOR, NAND",
+          "duration": 1298
+        },
+        {
+          "id": "rTtQueml98M",
+          "title": "Logic Gates | Boolean Algebra | semiconductor Electronics | 12th Physics Term 2 #cbse",
+          "duration": 1112
+        },
+        {
+          "id": "9TdA2JPje2U",
+          "title": "Boolean Algebra in Digital Logic Design in Hindi / Urdu",
+          "duration": 515
+        },
+        {
+          "id": "7JGKHg7TQvc",
+          "title": "Laws of Boolean Algebra in Digital Logic Design Urdu/Hindi",
+          "duration": 557
+        }
+      ]
+    },
+    {
+      "id": "algebraic-minimization",
+      "videos": [
+        {
+          "id": "DgsvuhG7ShI",
+          "title": "Lec-7: Canonical Sum of Product (SOP) with example",
+          "duration": 415
+        },
+        {
+          "id": "y-aYzGdlM-8",
+          "title": "Lec 11: K-Map Minimization Explained | Introduction to Karnaugh Map | Digital Electronics",
+          "duration": 284
+        },
+        {
+          "id": "MhWxPLwAsPA",
+          "title": "Canonical Form and Standard Form in Boolean Algebra | Digital Logic Design Gate Lectures in Hindi",
+          "duration": 549
+        },
+        {
+          "id": "HO89lqPptxo",
+          "title": "SOP and POS Forms - Concept and Solved Example",
+          "duration": 630
+        }
+      ]
+    },
+    {
+      "id": "tabular-minimization",
+      "videos": [
+        {
+          "id": "l1jgq0R5EwQ",
+          "title": "Quine-McCluskey Minimization Technique (Tabular Method)",
+          "duration": 1423
+        },
+        {
+          "id": "C4tEnepSFDw",
+          "title": "TABULAR METHOD – QUINE McCLUSKEY METHOD | DIGITAL LOGIC | GATE 2027 New Syllabus By Sweta Kumari",
+          "duration": 1437
+        },
+        {
+          "id": "dXhiGcRauuw",
+          "title": "Unit 1 Quine McCluskey Method Or Tabular Method",
+          "duration": 850
+        },
+        {
+          "id": "pcFUeY1gFJ0",
+          "title": "Lesson 127: Minimization of Circuits | The Quine–McCluskey Method",
+          "duration": 1026
+        }
+      ]
+    },
+    {
+      "id": "karnaugh-maps",
+      "videos": [
+        {
+          "id": "RO5alU6PpSU",
+          "title": "Introduction to Karnaugh Maps - Combinational Logic Circuits, Functions, & Truth Tables",
+          "duration": 1784
+        },
+        {
+          "id": "FPrcIhqNPVo",
+          "title": "Karnaugh Map (K' Map) - Part 1",
+          "duration": 1545
+        },
+        {
+          "id": "y-aYzGdlM-8",
+          "title": "Lec 11: K-Map Minimization Explained | Introduction to Karnaugh Map | Digital Electronics",
+          "duration": 284
+        },
+        {
+          "id": "JRR8RCKMKjA",
+          "title": "What is K-Map? full Explanation | Karnaugh Map",
+          "duration": 1313
+        }
+      ]
+    },
+    {
+      "id": "adders",
+      "videos": [
+        {
+          "id": "UR45buZHcNE",
+          "title": "what is Adders? full explanation in hindi | what is Half Adder",
+          "duration": 525
+        },
+        {
+          "id": "5XbRIVWFRIw",
+          "title": "Half Adder and Full Adder Explained | The Full Adder using Half Adder",
+          "duration": 860
+        },
+        {
+          "id": "vptzrX50HL0",
+          "title": "Look Ahead Carry Adder | Look ahead Carry Generator | Ripple Adder | Carry Propagation Delay",
+          "duration": 605
+        },
+        {
+          "id": "cG7VMY1u3NA",
+          "title": "Half Adder and Full Adder: Structures and Functions Explained | Computer Organization & Architecture",
+          "duration": 1138
+        }
+      ]
+    },
+    {
+      "id": "multiplexers-decoders",
+      "videos": [
+        {
+          "id": "p6yPvw88BJk",
+          "title": "Lec -18: Introduction to Multiplexer | What are Multiplexers | Digital Electronics",
+          "duration": 359
+        }
+      ]
+    },
+    {
+      "id": "latches-flipflops",
+      "videos": [
+        {
+          "id": "RYRybnsHo3I",
+          "title": "Part 5.2 #Latches and #FlipFlops #SequentialCircuits in Digital Electronics in Hindi",
+          "duration": 601
+        },
+        {
+          "id": "1OM3Bd8GXUo",
+          "title": "Flip Flop In Digital Electronics | Types Of Flip Flops Circuits | Flip Flop In Digital Logic design",
+          "duration": 1369
+        },
+        {
+          "id": "Q5VkHhA0Lpw",
+          "title": "Flip-Flop explain in hindi | digital electronics",
+          "duration": 203
+        },
+        {
+          "id": "LTtuYeSmJ2g",
+          "title": "Latch and Flip-Flop Explained | Difference between the Latch and Flip-Flop",
+          "duration": 590
+        }
+      ]
+    },
+    {
+      "id": "fsm-design",
+      "videos": [
+        {
+          "id": "PUB1goqGtRQ",
+          "title": "Lecture 35: Finite State Machine",
+          "duration": 1597
+        },
+        {
+          "id": "m8j95CWr2xQ",
+          "title": "Finite State Machine",
+          "duration": 182
+        },
+        {
+          "id": "nHQqJuL_tPE",
+          "title": "GATE CSE 1994 FSM Finite State Machine for Addition of two integers | Question: 3.3",
+          "duration": 894
+        },
+        {
+          "id": "q795VGZyFA0",
+          "title": "LEC-3 | TOC |FINITE STATE MACHINE (FSM) DEFINITION | GATE | NET | KVS-PGT | HPSC-PGT",
+          "duration": 742
+        }
+      ]
+    },
+    {
+      "id": "counters-registers",
+      "videos": [
+        {
+          "id": "16P7TgqQlTA",
+          "title": "Introduction to Registers and Counters | Sequential Circuits | Digital Logic Design | DLD",
+          "duration": 967
+        },
+        {
+          "id": "R2nQDQOCYIg",
+          "title": "Synchronous Counters | Design, Working, Types & Timing Diagram | Digital Logic Design | COA",
+          "duration": 730
+        },
+        {
+          "id": "pfkoMvzJgh4",
+          "title": "Introduction to Asynchronous Counters | Ripple Counters, Working, Timing & Applications | DLD | COA",
+          "duration": 765
+        },
+        {
+          "id": "Mxfsl5dhsyo",
+          "title": "Lec - 41:Introduction to Counters | Digital Electronics",
+          "duration": 858
+        }
+      ]
+    },
+    {
+      "id": "fixed-point",
+      "videos": [
+        {
+          "id": "RkdTTRo-AqU",
+          "title": "GATE 2021: Fixed and Floating-Point Representation (Easiest Approach) | Sweta Kumari",
+          "duration": 1075
+        },
+        {
+          "id": "fqo7IcyIVRs",
+          "title": "Fixed point representation and floating point representation|fixed point representation in hindi.",
+          "duration": 249
+        },
+        {
+          "id": "Mm5-vELMfoQ",
+          "title": "Fixed Point Representation in Computer Architecture | COA Lecture 4 |Explained|",
+          "duration": 834
+        },
+        {
+          "id": "LAxxdmAM0iU",
+          "title": "Lec 71 Floating & Fixed Point Representation || Digital Electronics || GATE-2022",
+          "duration": 1500
+        }
+      ]
+    },
+    {
+      "id": "number-systems",
+      "videos": [
+        {
+          "id": "8axGxOc2P-E",
+          "title": "Binary to Decimal | Octal | Hexadecimal Conversions (Part-1) | Digital Logic Design GATE Lectures",
+          "duration": 705
+        },
+        {
+          "id": "-gyDAMNyu_Y",
+          "title": "Decimal To Binary, Octal, & Hexadecimal Number System conversion in Hindi | CSE GYAN",
+          "duration": 400
+        },
+        {
+          "id": "FFDMzbrEXaE",
+          "title": "Number Systems Introduction - Decimal, Binary, Octal & Hexadecimal",
+          "duration": 657
+        },
+        {
+          "id": "Wlm-hck1sD0",
+          "title": "Number System in Digital Electronics | Binary, Decimal, Octal & Hexadecimal | Gate Logic",
+          "duration": 793
+        }
+      ]
+    },
+    {
+      "id": "floating-point",
+      "videos": [
+        {
+          "id": "T_Wxrp-2DZQ",
+          "title": "Floating Point Number Representation in IEEE 754 in Hindi | COA Lectures",
+          "duration": 980
+        },
+        {
+          "id": "9lLpAFapndo",
+          "title": "Floating point representation | IEEE 754 | COA | Lec-06 | Bhanu Priya",
+          "duration": 493
+        },
+        {
+          "id": "zFIB8lrRcRE",
+          "title": "Decimal to IEEE 754 Floating Point Representation",
+          "duration": 580
+        },
+        {
+          "id": "OddnlwoABx8",
+          "title": "Fixed & Floating Point Representation | IEEE 754 |  | CST203/ECT203/EET206/ITT203 | KTU",
+          "duration": 1368
+        }
+      ]
+    },
+    {
+      "id": "instruction-set",
+      "videos": [
+        {
+          "id": "t7t_Br0dkM8",
+          "title": "Lec 09 - Instruction Formats &  Instruction Types - Control Unit in COA Full Explanation | CSE GYAN",
+          "duration": 456
+        },
+        {
+          "id": "WAO_W6Hpzyk",
+          "title": "L-1.13: What is Instruction Format | Understand Computer Organisation with Simple Story",
+          "duration": 640
+        },
+        {
+          "id": "p96qw3BVdPo",
+          "title": "What is Instruction Set in Computer Science Urdu/Hindi",
+          "duration": 298
+        },
+        {
+          "id": "r6PChksvxp8",
+          "title": "L-1.7: Types of Instructions in General Purpose Computer | Computer Organization and Architecture",
+          "duration": 311
+        }
+      ]
+    },
+    {
+      "id": "addressing-modes",
+      "videos": [
+        {
+          "id": "_CH4cm5PhK8",
+          "title": "L-2.1: What is Addressing Mode | Various Types of Addressing Modes | COA",
+          "duration": 705
+        },
+        {
+          "id": "bM2PyN-EIS0",
+          "title": "Addressing Modes in Computer Organization & Architecture: Types and Examples | COA",
+          "duration": 1738
+        },
+        {
+          "id": "5A677So9epQ",
+          "title": "L-2.7: Direct Addressing Mode || Computer Organization and Architecture",
+          "duration": 291
+        }
+      ]
+    },
+    {
+      "id": "alu-design",
+      "videos": [
+        {
+          "id": "PE6e16BMY9Q",
+          "title": "Computer Organization #54: Data Path, ALU & Control Unit",
+          "duration": 658
+        },
+        {
+          "id": "ROxdsQp21ow",
+          "title": "Overview of Arithmetic Logic Unit (ALU) implementation in COA | Introduction of ALU",
+          "duration": 499
+        },
+        {
+          "id": "celWgEn9CIE",
+          "title": "GATE & ESE 2024 | Computer Organization - ALU and Data Path | By Vijaya Kumar Sir | MADE EASY",
+          "duration": 935
+        },
+        {
+          "id": "rHIxhtZdjIM",
+          "title": "Mastering ALU Design: Digital Circuits Explained | GATE Part 1",
+          "duration": 1007
+        }
+      ]
+    },
+    {
+      "id": "hardwired-control",
+      "videos": [
+        {
+          "id": "1q2JKX3qg-4",
+          "title": "Hardwired Control Unit in Hindi  |  COA | Computer Organization and Architecture Lectures",
+          "duration": 529
+        },
+        {
+          "id": "kt-OdnKBbwA",
+          "title": "Introduction of Control Unit | Hardwired & Microprogrammed Unit | Computer System & Architecture",
+          "duration": 596
+        },
+        {
+          "id": "yqbsNiNF3Ts",
+          "title": "L-1.22 Hardwired Control Unit in Computer Architecture | Block Diagram | Working | COA | CSA",
+          "duration": 674
+        },
+        {
+          "id": "MxvZQLR6zqM",
+          "title": "Hardwired Control unit in Computer Organization | COA | Lec-41 | Bhanu Priya",
+          "duration": 745
+        }
+      ]
+    },
+    {
+      "id": "microprogrammed-control",
+      "videos": [
+        {
+          "id": "CBrkYQQz_-Q",
+          "title": "L-1.23 Microprogrammed Control Unit in Computer Architecture | Block Diagram | Working | COA | CSA",
+          "duration": 936
+        },
+        {
+          "id": "ctVN-6LKMVY",
+          "title": "Microprogrammed control unit- lecture25/coa",
+          "duration": 406
+        },
+        {
+          "id": "JxtbhvrM3_g",
+          "title": "Design of microprogrammed control unit (part 1) |COA Lecture series",
+          "duration": 801
+        },
+        {
+          "id": "kt-OdnKBbwA",
+          "title": "Introduction of Control Unit | Hardwired & Microprogrammed Unit | Computer System & Architecture",
+          "duration": 596
+        }
+      ]
+    },
+    {
+      "id": "memory-interfacing",
+      "videos": [
+        {
+          "id": "HC9PmityDbs",
+          "title": "U1 L26 | Address Decoding | MemoryMapping | memory interfacing example",
+          "duration": 519
+        },
+        {
+          "id": "OplWrO31n88",
+          "title": "Memory Interfacing (Part 2) | Address Decoding | Schematic Diagram",
+          "duration": 792
+        },
+        {
+          "id": "gASOyhZcUvg",
+          "title": "Microprocessor And Microcontroller| Memory Address Decoding, Interfacing with External ROM and RAM|",
+          "duration": 1680
+        },
+        {
+          "id": "w00HX4avFrM",
+          "title": "KEE602 Microcontroller 8051 Memory Address Decoding Interfacing External RAM ROM On Chip Off Chip",
+          "duration": 985
+        }
+      ]
+    },
+    {
+      "id": "cache-mapping",
+      "videos": [
+        {
+          "id": "m1dA7D6c3C0",
+          "title": "L-3.5: What is Cache Mapping || Cache Mapping techniques || Computer Organisation and Architecture",
+          "duration": 460
+        },
+        {
+          "id": "eObN3u3eAnU",
+          "title": "L-3.6: Direct Mapping with Example in Hindi | Cache Mapping | Computer Organisation and Architecture",
+          "duration": 1323
+        },
+        {
+          "id": "ukaXXAzSFMo",
+          "title": "Cache Mapping and its Methods | Direct Mapping | Associative Mapping | Set Associative Mapping |",
+          "duration": 1092
+        },
+        {
+          "id": "hhLdy3J9oqg",
+          "title": "L-3.9 What is Cache Mapping? | Cache Mapping Types | Memory Organisation| CSA | COA | Shanu Kuttan",
+          "duration": 282
+        }
+      ]
+    },
+    {
+      "id": "memory-hierarchy",
+      "videos": [
+        {
+          "id": "zwovvWfkuSg",
+          "title": "L-3.1: Memory Hierarchy in Computer Architecture | Access time, Speed, Size, Cost | All Imp Points",
+          "duration": 452
+        },
+        {
+          "id": "mDdFd5Jmrqs",
+          "title": "Lecture 29 : MEMORY HIERARCHY DESIGN (PART 2)",
+          "duration": 1709
+        },
+        {
+          "id": "DH_VcjjTOq0",
+          "title": "Memory Hierarchy | Locality of Reference- Spatial Locality,Temporal Locality | Computer Architecture",
+          "duration": 1275
+        },
+        {
+          "id": "luYhjVYWLZo",
+          "title": "Memory Hierarchy in Computer Organization | COA Lecture #computerscience #coa #ugcnet #gate",
+          "duration": 467
+        }
+      ]
+    },
+    {
+      "id": "cache-policies",
+      "videos": [
+        {
+          "id": "7lxAfszjy68",
+          "title": "Cache Replacement Policies - RR, FIFO, LIFO, & Optimal",
+          "duration": 914
+        },
+        {
+          "id": "_Hh-NcdbHCY",
+          "title": "Cache Replacement Policies - MRU, LRU, Pseudo-LRU, & LFU",
+          "duration": 1760
+        },
+        {
+          "id": "lDWpKWsKb-k",
+          "title": "How to Remember Write Through and write Back Cache Updation Policies || OS",
+          "duration": 178
+        },
+        {
+          "id": "F7F5E-u57KU",
+          "title": "CIS 351 Video 50: Cache Replacement Policies",
+          "duration": 383
+        }
+      ]
+    },
+    {
+      "id": "instruction-pipelining",
+      "videos": [
+        {
+          "id": "mZvRLfsSAEc",
+          "title": "Instruction pipelining | 4 stage instruction pipelining | Pipelining concept",
+          "duration": 1003
+        },
+        {
+          "id": "wjxfItZXO8E",
+          "title": "Introduction to Pipelining | Instruction Pipeline || Computer Organization & Architecture",
+          "duration": 635
+        },
+        {
+          "id": "nv0yAm5gc-E",
+          "title": "L-4.2: Pipelining Introduction and structure | Computer Organisation",
+          "duration": 234
+        },
+        {
+          "id": "HlRmLU4F6hI",
+          "title": "Introduction to Pipelining | Pipelining in Computer Architecture",
+          "duration": 754
+        }
+      ]
+    },
+    {
+      "id": "interrupts-dma",
+      "videos": [
+        {
+          "id": "qiaEGFh4D_I",
+          "title": "Computer Organization #68: Full Concept of DMA | Direct Memory Access | DMA | Modes of DMA Transfer",
+          "duration": 447
+        }
+      ]
+    },
+    {
+      "id": "pipeline-hazards",
+      "videos": [
+        {
+          "id": "shsu8yZuZDE",
+          "title": "Data dependency in pipeline conflicts | Data hazards in pipelining | COA Lecture Series",
+          "duration": 779
+        },
+        {
+          "id": "nC6csdXEkzU",
+          "title": "HAZARDS DURING PIPELINING (Operand Forwarding and Delay the Pipe Technique)",
+          "duration": 528
+        },
+        {
+          "id": "srlgaJgaxRE",
+          "title": "L-4.6: What is Hazard in Pipelining | various types of Hazards | computer Architecture",
+          "duration": 629
+        },
+        {
+          "id": "E4DSh98dHkY",
+          "title": "Data Hazards in Pipelining | RAW, WAW and WAR Hazards | Pipelining | Computer Architecture",
+          "duration": 942
+        }
+      ]
+    },
+    {
+      "id": "c-types-control",
+      "videos": [
+        {
+          "id": "_6K2FKZhmqU",
+          "title": "5.1 Control flow and basic data types. Operator precedence and associativity",
+          "duration": 603
+        },
+        {
+          "id": "AquOdf9orxg",
+          "title": "Lec-8: Data Types in C++ | C++ by Varun sir | @gatesmashers",
+          "duration": 433
+        },
+        {
+          "id": "NyT9vvSBoeo",
+          "title": "C_10 Data Types in C - Part 1 | C Programming Tutorials for Beginners",
+          "duration": 1190
+        },
+        {
+          "id": "EcUGDTs4RyY",
+          "title": "Variables & Data Types In C: C Tutorial In Hindi #6",
+          "duration": 1201
+        }
+      ]
+    },
+    {
+      "id": "c-pointers",
+      "videos": [
+        {
+          "id": "ePJxpxsnkGw",
+          "title": "Arrays & Pointers Arithmetic in C++ | C++ Tutorials for Beginners #13",
+          "duration": 1342
+        },
+        {
+          "id": "NEXUBozrLVw",
+          "title": "Lec-35: Pointer Arithmetic is WAY EASIER Than You Think With C++ Arrays",
+          "duration": 598
+        },
+        {
+          "id": "Ayo5St0tMhw",
+          "title": "C_75 Pointers in C-part 5 | Pointer Arithmetic (Addition) with program",
+          "duration": 1398
+        },
+        {
+          "id": "lCDGo7rK3ms",
+          "title": "Using Pointers to Print 2D Arrays",
+          "duration": 251
+        }
+      ]
+    },
+    {
+      "id": "c-memory",
+      "videos": [
+        {
+          "id": "-gGYuQuHISs",
+          "title": "dynamic memory allocation | malloc function, calloc function, realloc function, free function | pps",
+          "duration": 479
+        },
+        {
+          "id": "q6_lN-CQN2s",
+          "title": "Lec-36: Static vs Dynamic Memory Allocation in C++ | Memory Management",
+          "duration": 503
+        },
+        {
+          "id": "7RNesIP9Ot0",
+          "title": "Dynamic Memory Allocation in C|| malloc, calloc, realloc, free|| 3 minutes master|| Neverquit",
+          "duration": 278
+        },
+        {
+          "id": "0okYTk6ksnM",
+          "title": "IOCL GE 2026 : C programming Part -2 | Most Expected Questions | Dynamic and Static Scoping",
+          "duration": 1523
+        }
+      ]
+    },
+    {
+      "id": "recursion",
+      "videos": [
+        {
+          "id": "ZZfOYIymr2Y",
+          "title": "Recursion & Call Stack | Recursion & Call Stack | Selection With Sathi",
+          "duration": 732
+        },
+        {
+          "id": "KdlmSpjU-AE",
+          "title": "DSA Basics: Recursion, Call Stack, Recursion Tree and Tail Recursion",
+          "duration": 1613
+        },
+        {
+          "id": "azXr6nTaD9M",
+          "title": "Recursion in Programming | Smallest Recursive Program | Recursion using stack",
+          "duration": 454
+        },
+        {
+          "id": "rxHnzxRHGhQ",
+          "title": "Lec 49: Introduction to Recursion | Recursion Using Stack | Stack Applications | Data Structures",
+          "duration": 783
+        }
+      ]
+    },
+    {
+      "id": "arrays",
+      "videos": [
+        {
+          "id": "BNA6Sb1wM8E",
+          "title": "Lec-6: 2D Arrays | Addressing in 2D Arrays | Row Major Order",
+          "duration": 501
+        },
+        {
+          "id": "mzfhcfa0Ra0",
+          "title": "Lec-7: 3D Arrays | Addressing in 3D Arrays | Row Major Order",
+          "duration": 728
+        },
+        {
+          "id": "GJ6w1EP-jgI",
+          "title": "2D Arrays | Addressing in 2D (Two Dimensional) Array | C++ Course #lec48",
+          "duration": 1297
+        },
+        {
+          "id": "3iyy13Fb6Sg",
+          "title": "GATE CSE 1998 Q.49 || Arrays || Data Structure || GATE Insights Version: CSE",
+          "duration": 300
+        }
+      ]
+    },
+    {
+      "id": "stacks",
+      "videos": [
+        {
+          "id": "dc4bfoxIbu8",
+          "title": "Lec-42: Postfix Expression Evaluation | Stack Application | Data Structure",
+          "duration": 652
+        },
+        {
+          "id": "0X-fV-1ir9c",
+          "title": "Introduction to STACKS | Data Structures & Algorithms | Lecture 66",
+          "duration": 1331
+        },
+        {
+          "id": "M2c8D-MCAck",
+          "title": "Infix, Prefix and Postfix Expressions | Data Structures",
+          "duration": 947
+        },
+        {
+          "id": "422Q_yx2yA8",
+          "title": "Infix, Prefix and Postfix Expressions",
+          "duration": 1614
+        }
+      ]
+    },
+    {
+      "id": "linked-lists",
+      "videos": [
+        {
+          "id": "818gGdKTB_U",
+          "title": "Lec-28: Introduction to Doubly Linked List | Data Structure",
+          "duration": 597
+        },
+        {
+          "id": "3TIwxyiR5NU",
+          "title": "Ch-3.1: Singly linked list,Circular linked list| Data Structure Lectures for GATE CS",
+          "duration": 1010
+        },
+        {
+          "id": "tHdOXbtvRQc",
+          "title": "Singly Linked List in Data Structures | Creation & Display with Code | GATE CSE",
+          "duration": 1315
+        },
+        {
+          "id": "kbDG61UQ9M4",
+          "title": "2.7 | Doubly Linked List | Traversal in Doubly Linked list | Data Structure and algorithm | DSA ",
+          "duration": 1032
+        }
+      ]
+    },
+    {
+      "id": "queues",
+      "videos": [
+        {
+          "id": "4mKKolshFD0",
+          "title": "L78. Circular Queue",
+          "duration": 1117
+        },
+        {
+          "id": "ifkmen-8IYs",
+          "title": "Circular Queue | GATE Data Structures & Algorithms",
+          "duration": 1429
+        },
+        {
+          "id": "KqTJ5MAUj80",
+          "title": "Introduction to Circular Queue in Data Structures",
+          "duration": 1465
+        }
+      ]
+    },
+    {
+      "id": "trees-traversals",
+      "videos": [
+        {
+          "id": "z0Vnno96_MA",
+          "title": "Lec-52: Introduction to Trees | Binary Tree, Almost Complete Binary Tree, Full BT, Complete",
+          "duration": 646
+        },
+        {
+          "id": "Um_sAan1LO4",
+          "title": "Binary Trees Explained in 4 Minutes!",
+          "duration": 245
+        },
+        {
+          "id": "-b2lciNd2L4",
+          "title": "5.5 Binary Tree Traversals (Inorder, Preorder and Postorder) | Data structures and algorithms",
+          "duration": 667
+        },
+        {
+          "id": "sXABdGalFNg",
+          "title": "Lec-53: Binary Search Tree in Data Structure | Insertion and Traversal in BST",
+          "duration": 662
+        }
+      ]
+    },
+    {
+      "id": "binary-search-trees",
+      "videos": [
+        {
+          "id": "cySVml6e_Fc",
+          "title": "5.10 Binary Search Trees (BST) - Insertion and Deletion | DSA Full Course",
+          "duration": 1001
+        },
+        {
+          "id": "sXABdGalFNg",
+          "title": "Lec-53: Binary Search Tree in Data Structure | Insertion and Traversal in BST",
+          "duration": 662
+        },
+        {
+          "id": "I_JuQ5ayPmc",
+          "title": "L-3.12: Introduction to Trees (Binary Tree, Almost Complete Binary Tree, Full BT, Complete BT, BST)",
+          "duration": 645
+        }
+      ]
+    },
+    {
+      "id": "binary-heaps",
+      "videos": [
+        {
+          "id": "AE5I0xACpZs",
+          "title": "What Is a Binary Heap?",
+          "duration": 525
+        },
+        {
+          "id": "_OrrPKLdFM8",
+          "title": "Build Max Heap || Build Max Heap Time Complexity || Heapsort || GATECSE || DAA",
+          "duration": 956
+        },
+        {
+          "id": "0wPlzMU-k00",
+          "title": "Heaps in 3 minutes — Intro",
+          "duration": 209
+        },
+        {
+          "id": "U7iED4L4oy8",
+          "title": "What is Binary Heap, Max Heap, Min Heap, Heap | Data Structure & Algorithm | Hello World",
+          "duration": 549
+        }
+      ]
+    },
+    {
+      "id": "graph-representations",
+      "videos": [
+        {
+          "id": "RpgyCJBbl5E",
+          "title": "Introduction to Graphs | Data Structure & Algorithms",
+          "duration": 1568
+        },
+        {
+          "id": "N2P7w22tN9c",
+          "title": "L-4.15: BFS & DFS | Breadth First Search | Depth First Search | Graph Traversing | DAA",
+          "duration": 676
+        },
+        {
+          "id": "5hPfm_uqXmw",
+          "title": "6.1 Graph Representation in Data Structure(Graph Theory)|Adjacency Matrix and Adjacency List",
+          "duration": 732
+        },
+        {
+          "id": "5eKDQmTzX2A",
+          "title": "Introduction to Graph Theory | Basics of Graph Theory | Imp for GATE and UGC NET",
+          "duration": 663
+        }
+      ]
+    },
+    {
+      "id": "asymptotic-analysis",
+      "videos": [
+        {
+          "id": "jOMxKsUd6e0",
+          "title": "Time and Space Complexity explained in literally 5 minutes | Big O | Concepts made simple ep -1",
+          "duration": 343
+        },
+        {
+          "id": "QovOdd80A4s",
+          "title": "Lecture 11: Time & Space Complexity || How to avoid Time Limit Exceeded [TLE]",
+          "duration": 1752
+        },
+        {
+          "id": "Espr3UdCd4U",
+          "title": "performance analysis of an algorithm | time complexity and space complexity | Daa | ns lectures",
+          "duration": 711
+        },
+        {
+          "id": "yTKqJunZpto",
+          "title": "Finding Space and Time Complexity of Recursive Algorithms | Analysis and Calculation | Part 1",
+          "duration": 1765
+        }
+      ]
+    },
+    {
+      "id": "algorithm-recurrences",
+      "videos": [
+        {
+          "id": "RfCLBskLIwo",
+          "title": "Master Theorem for divide and conquer recurrences | Master method for time complexity  | shortcut",
+          "duration": 1058
+        },
+        {
+          "id": "zm1bYF4Xl3E",
+          "title": "Master Theorem for Solving Recurrence | In Hindi | Algorithm design and analysis",
+          "duration": 715
+        },
+        {
+          "id": "RjtFpGJ8sxY",
+          "title": "Master Theorem for Subtract and Conquer Recurrences",
+          "duration": 531
+        },
+        {
+          "id": "4V30R3I1vLI",
+          "title": "2.1.1 Recurrence Relation (T(n)= T(n-1) + 1) #1",
+          "duration": 823
+        }
+      ]
+    },
+    {
+      "id": "searching",
+      "videos": [
+        {
+          "id": "goqe7OZrJt4",
+          "title": "Data Structure Searching (Linear & Binary) | Learn Coding",
+          "duration": 1171
+        },
+        {
+          "id": "sSYQ1H9-Vks",
+          "title": "Linear search vs Binary search",
+          "duration": 256
+        },
+        {
+          "id": "t9gErvSVid0",
+          "title": "Lec-14: Linear Search in Data Structure by #Naina Mam | Time Complexity",
+          "duration": 748
+        },
+        {
+          "id": "9HlbVEVt_Y0",
+          "title": "Lec-15: Binary Search in Data Structure by #Naina Mam",
+          "duration": 633
+        }
+      ]
+    },
+    {
+      "id": "quicksort",
+      "videos": [
+        {
+          "id": "RajaRfMJF4I",
+          "title": "Quicksort",
+          "duration": 1026
+        },
+        {
+          "id": "BMd3V0XLJ7I",
+          "title": "Ch 4.10:Questions based on Quicksort | Algorithm GATE lectures by Monalisa Pradhan",
+          "duration": 398
+        },
+        {
+          "id": "7h1s2SojIRw",
+          "title": "2.8.1  QuickSort Algorithm",
+          "duration": 823
+        }
+      ]
+    },
+    {
+      "id": "comparison-sorting",
+      "videos": [
+        {
+          "id": "7mB-DXJfJe0",
+          "title": "comparison and non comparison based sorting | stable and inplace sorting | GATE(CSE) | UGC-NET(CS)",
+          "duration": 412
+        },
+        {
+          "id": "6emxEYmwJ0c",
+          "title": "Sorting Algorithms: Stable, Unstable, In-Place Out-Place Comparison, Non-Comparison Sorting |GATE CS",
+          "duration": 1200
+        },
+        {
+          "id": "EpikE3xMQ6w",
+          "title": "Sorting concept, order, stability with Example",
+          "duration": 185
+        },
+        {
+          "id": "aNoJ60psCs0",
+          "title": "2.1 Introduction to Sorting Algorithm | Time Complexity | Stable/Unstable | Internal/External",
+          "duration": 693
+        }
+      ]
+    },
+    {
+      "id": "noncomparison-sorting",
+      "videos": [
+        {
+          "id": "Uf4NDT1I7qk",
+          "title": "Linear Time Sorting Algorithms: Counting Sort, Radix Sort, Bucket Sort Explained | VU Gate",
+          "duration": 404
+        },
+        {
+          "id": "d2jEyEuhZk8",
+          "title": "DAA24: Sorting in Linear Time| Counting Sort Algorithm, Examples TIme And Space complexity",
+          "duration": 1354
+        },
+        {
+          "id": "8KDsAO64_pI",
+          "title": "Counting and Radix Sort",
+          "duration": 1767
+        },
+        {
+          "id": "9QSgBO9yjKU",
+          "title": "L-3.9: Radix Sort | Easiest explanation with example",
+          "duration": 365
+        }
+      ]
+    },
+    {
+      "id": "hashing",
+      "videos": [
+        {
+          "id": "j612Fj-mgCY",
+          "title": "L-6.2: Collision Resolution Techniques in Hashing | What are the collision resolution techniques?",
+          "duration": 333
+        },
+        {
+          "id": "JMFb9J5EOuc",
+          "title": "Hashing : Lec_3A | Collision Resolution Techniques|Algorithm GATE CSE/ DA Full Course #gate #gatecse",
+          "duration": 1797
+        },
+        {
+          "id": "1P7ygNSe9lY",
+          "title": "L-6.7: Double Hashing | Collision Resolution Technique",
+          "duration": 628
+        },
+        {
+          "id": "X2s250e1-RM",
+          "title": "Collision Resolution: Open Addressing & Linear Probing | Hashing | GATE Data Structures & Algorithms",
+          "duration": 1352
+        }
+      ]
+    },
+    {
+      "id": "greedy",
+      "videos": [
+        {
+          "id": "4ZlRH0eK-qQ",
+          "title": "3.5 Prims and Kruskals Algorithms - Greedy Method",
+          "duration": 1212
+        },
+        {
+          "id": "xZfmHVi7FMg",
+          "title": "Fractional Knapsack Problem using Greedy Method | Example | Data structures and algorithms",
+          "duration": 716
+        },
+        {
+          "id": "nUShpavQae8",
+          "title": "Interval Scheduling ( Greedy Algorithm ) - Algorithms",
+          "duration": 654
+        },
+        {
+          "id": "zH4z15UpABs",
+          "title": "Scheduling to Minimize Maximum Lateness ( Greedy Algorithm ) - Algorithms",
+          "duration": 791
+        }
+      ]
+    },
+    {
+      "id": "divide-conquer",
+      "videos": [
+        {
+          "id": "I8w2XN0w-fQ",
+          "title": "L-3.0: Divide and Conquer | Algorithm",
+          "duration": 243
+        },
+        {
+          "id": "VEtQODGjrMc",
+          "title": "Divide and Conquer in Algorithms || GATECSE || DAA",
+          "duration": 447
+        },
+        {
+          "id": "IjGYhkxEOQw",
+          "title": "Lecture-18: Introduction to Divide and Conquer || basics of Divide and Conquer || Recursion #gatecse",
+          "duration": 1307
+        },
+        {
+          "id": "BY0VlYPjaWY",
+          "title": "Masters Method for Divide and Conquer Recursive Relation | Fatafat Concepts | L 5 | Ankush Sir",
+          "duration": 534
+        }
+      ]
+    },
+    {
+      "id": "dynamic-programming",
+      "videos": [
+        {
+          "id": "0BhhiQGDbEA",
+          "title": "L-5.1: Introduction to Dynamic Programming | Greedy Vs Dynamic Programming | Algorithm(DAA)",
+          "duration": 548
+        },
+        {
+          "id": "jHGgXV27qtk",
+          "title": "Longest Common Subsequence- Dynamic Programming | Data structures and algorithms",
+          "duration": 1547
+        },
+        {
+          "id": "i8NqAEsZn54",
+          "title": "L-5.3: 0/1 Knapsack Problem |Dynamic Programming |Recursive Equation |Recursion Tree Time Complexity",
+          "duration": 1024
+        },
+        {
+          "id": "-UoE0M2FSdU",
+          "title": "Longest Common Subsequence Using Dynamic Programming || GATECSE || DAA",
+          "duration": 1295
+        }
+      ]
+    },
+    {
+      "id": "graph-traversals",
+      "videos": [
+        {
+          "id": "N2P7w22tN9c",
+          "title": "L-4.15: BFS & DFS | Breadth First Search | Depth First Search | Graph Traversing | DAA",
+          "duration": 676
+        },
+        {
+          "id": "pcKY4hjDrxk",
+          "title": "5.1 Graph Traversals - BFS & DFS -Breadth First Search and Depth First Search",
+          "duration": 1111
+        },
+        {
+          "id": "vf-cxgUXcMk",
+          "title": "6.2 BFS and DFS Graph Traversals| Breadth First Search and Depth First Search | Data structures",
+          "duration": 1227
+        },
+        {
+          "id": "3ZMiS3MLuHo",
+          "title": "Graph Traversals | BFS & DFS | Breadth First search and Depth First Search 🔥DSA |Algorithms ",
+          "duration": 567
+        }
+      ]
+    },
+    {
+      "id": "minimum-spanning-trees",
+      "videos": [
+        {
+          "id": "sNL3gpBkc5o",
+          "title": "Prims and Kruskal algorithm | Prim's algorithm for minimum spanning trees |  Kruskal's-Greedy Method",
+          "duration": 911
+        },
+        {
+          "id": "8JAyNk1hxBw",
+          "title": "Kruskal's algorithm for minimum spanning trees | Prim's algorithm for minimum spanning tree |Ganitya",
+          "duration": 799
+        },
+        {
+          "id": "_KX8GDvRzBc",
+          "title": "L-4.9: Prim's Algorithm for Minimum Cost Spanning Tree | Prims vs Kruskal",
+          "duration": 595
+        },
+        {
+          "id": "jA5zsQT2Hiw",
+          "title": "Prim's algorithm for minimum spanning trees in Hindi ( Example ) | Data Structure",
+          "duration": 417
+        }
+      ]
+    },
+    {
+      "id": "dfa",
+      "videos": [
+        {
+          "id": "kLDLKMD4Ow4",
+          "title": "2.3 Finite Automata | DFA | Deterministic finite Automata | FLAT | TOC | Theory of Computation ",
+          "duration": 1262
+        },
+        {
+          "id": "DL5SV11kB8c",
+          "title": "THEORY OF COMPUTATION | FINITE AUTOMATA | LECTURE 01 | ALL UNIVERSITY | PRADEEP GIRI SIR",
+          "duration": 1139
+        }
+      ]
+    },
+    {
+      "id": "shortest-paths",
+      "videos": [
+        {
+          "id": "8oryfacYSnI",
+          "title": "12.21 Introduction to Shortest Path Algorithms | Bellman Ford | Dijkstra | Floyd Warshall Algorithms",
+          "duration": 425
+        },
+        {
+          "id": "SiI03wnREt4",
+          "title": "L-4.13: Bellman Ford Algorithm | Dijkstra's Vs Bellman Ford | Single Source Shortest Path",
+          "duration": 992
+        },
+        {
+          "id": "c5vQS40VBcU",
+          "title": "L-5.7: Introduction to All Pair Shortest Path (Floyd Warshall Algorithm)",
+          "duration": 384
+        },
+        {
+          "id": "pgNE06YbDZ8",
+          "title": "L-5.8: Floyd Warshall Working with example | All Pair Shortest Path Algorithm",
+          "duration": 1531
+        }
+      ]
+    },
+    {
+      "id": "nfa",
+      "videos": [
+        {
+          "id": "HWiX08FF1us",
+          "title": "Subset Construction method NFA to DFA conversion example (a|b)*abb | Theory of Computation| TOC | CD",
+          "duration": 988
+        },
+        {
+          "id": "LT3wwkpt7ak",
+          "title": "Thompson Construction (Regular Expression to NFA)| Examples RE TO NFA | Thomson method in CD, in TOC",
+          "duration": 444
+        }
+      ]
+    },
+    {
+      "id": "regular-expressions",
+      "videos": [
+        {
+          "id": "rjG5LwbqAp4",
+          "title": "Lec-29: Regular Expressions in TOC with examples | Formal Definition",
+          "duration": 599
+        },
+        {
+          "id": "2k8r4HGdxBw",
+          "title": "Lec-34: Closure properties of regular languages in TOC",
+          "duration": 573
+        },
+        {
+          "id": "LE1VC9LypOQ",
+          "title": "Closure Property of Regular Languages | Closure under COMPLEMENT | TOC |GATE UGCNET#ugcnet#gate#toc",
+          "duration": 569
+        },
+        {
+          "id": "Q-HAP2Ade8I",
+          "title": "Lec-41: Homomorphism in Regular Languages | closure Properties | TOC",
+          "duration": 332
+        }
+      ]
+    },
+    {
+      "id": "dfa-minimization",
+      "videos": [
+        {
+          "id": "afJ4pE5qGc4",
+          "title": "Minimization of DFA using Equivalence Theorem | TOC Tutorial | UGC NET CS / GATE",
+          "duration": 878
+        },
+        {
+          "id": "A7eKj_GXam0",
+          "title": "Lec-15: Minimization of DFA in Hindi with example | TOC",
+          "duration": 1056
+        },
+        {
+          "id": "44-dJ0kF2Uk",
+          "title": "lec-14 : Equivalence of DFA with examples",
+          "duration": 531
+        },
+        {
+          "id": "dqNzWE1PcIg",
+          "title": "MINIMIZATION OF DFA | TAFL | LECTURE 01 BY MR. Y N PRAJAPATI | AKGEC",
+          "duration": 1547
+        }
+      ]
+    },
+    {
+      "id": "pumping-regular",
+      "videos": [
+        {
+          "id": "WdmbZnUesRw",
+          "title": "Lec-33: Pumping lemma for regular languages in TOC with examples",
+          "duration": 720
+        },
+        {
+          "id": "dikEDuepOtI",
+          "title": "Pumping Lemma (For Regular Languages)",
+          "duration": 488
+        },
+        {
+          "id": "VZ3RsbQ-I7g",
+          "title": "Theory of Computation: Pumping Lemma for Regular Languages",
+          "duration": 753
+        },
+        {
+          "id": "Ty9tpikilAo",
+          "title": "Pumping Lemma (For Regular Languages) | Example 1",
+          "duration": 856
+        }
+      ]
+    },
+    {
+      "id": "context-free-grammars",
+      "videos": [
+        {
+          "id": "SlSA9vEXCm4",
+          "title": "Lec-46: What is Context free grammar in TOC | Formal Definition",
+          "duration": 477
+        },
+        {
+          "id": "NQHQdCkAH04",
+          "title": "9.1 Context Free Language | Context Free Grammar and Pushdown Automata | CFG",
+          "duration": 461
+        },
+        {
+          "id": "eDAOxyZkl68",
+          "title": "Lec-47: Convert Context free language to Context free grammar with examples | TOC",
+          "duration": 948
+        },
+        {
+          "id": "7SRWbmTEH5I",
+          "title": "THEORY OF COMPUTATION | Context Free Grammar and Language | LECTURE 02| ALL UNIVERSITY | PRADEEP SIR",
+          "duration": 1028
+        }
+      ]
+    },
+    {
+      "id": "pushdown-automata",
+      "videos": [
+        {
+          "id": "7lcwlNNCP1E",
+          "title": "Lec-55: What is Pushdown Automata in TOC | Definition & Explanation in Hindi",
+          "duration": 658
+        },
+        {
+          "id": "Zg_L5yuNdFI",
+          "title": "Introduction to Pushdown Automata ( PDA ) 🔥",
+          "duration": 1294
+        },
+        {
+          "id": "Gi44PRorYow",
+          "title": "9.2 Pushdown Automata PDA | Pushdown Automata explained in Detail | Theory of Computation | TOC",
+          "duration": 1121
+        },
+        {
+          "id": "Lf8yACvGK_w",
+          "title": "Introduction to PDA ||  Pushdown Automata TOC || Automata Theory",
+          "duration": 1478
+        }
+      ]
+    },
+    {
+      "id": "cfl-pumping-closure",
+      "videos": [
+        {
+          "id": "0KsU-gavbE4",
+          "title": "Lec-44: Closure Properties of CFL (Context Free Languages) with explanation in Hindi",
+          "duration": 537
+        },
+        {
+          "id": "ww4m4UJTbWE",
+          "title": "Pumping Lemma for CFL | TOC | Lec-75 | Bhanu Priya",
+          "duration": 533
+        },
+        {
+          "id": "91Ukv82n6T4",
+          "title": "Pumping Lemma example | CFL | Part-1/2 | TOC | Lec-76 | Bhanu Priya",
+          "duration": 447
+        },
+        {
+          "id": "7WBhmnXKeJ4",
+          "title": "Closure properties of CFL with proof  | Context free languages Properties | TOC| Automata Theory",
+          "duration": 725
+        }
+      ]
+    },
+    {
+      "id": "turing-machines",
+      "videos": [
+        {
+          "id": "mwU9cAm3FgE",
+          "title": "5.4 Turing Recognizable | Turing Decidable Languages | Theory of Computation | FLAT | TOC ",
+          "duration": 804
+        },
+        {
+          "id": "LE_7krgRGt8",
+          "title": "Lec-59: Introduction to Turing Machine and its Definition in Hindi | TOC",
+          "duration": 543
+        },
+        {
+          "id": "sX5_9xjr-9Q",
+          "title": "13.1 Basics of Turing Machine | Theory of Computation | Automata Theory | TOC",
+          "duration": 996
+        },
+        {
+          "id": "bzg3FO9Y1SM",
+          "title": "☠️ Turing machine | TM | HINDI | introduction| theory tuple tau| uses | computation| | input tape",
+          "duration": 291
+        }
+      ]
+    },
+    {
+      "id": "undecidability",
+      "videos": [
+        {
+          "id": "VwVyWRs9Y30",
+          "title": "Undecidability I Decidability | Reduction Problem (C83)",
+          "duration": 591
+        },
+        {
+          "id": "FvqG9RQWIQc",
+          "title": "Lec-65: Decidability & Undecidability table in toc for all languages",
+          "duration": 477
+        },
+        {
+          "id": "FQhfj_7evJs",
+          "title": "Decidable and Undecidable Problem | Undecidability | GATECSE | TOC",
+          "duration": 1385
+        },
+        {
+          "id": "qmXl4yflY5I",
+          "title": "Rice’s Theorem | Undecidability Problem | GATECSE | TOC",
+          "duration": 1012
+        }
+      ]
+    },
+    {
+      "id": "lexical-analysis",
+      "videos": [
+        {
+          "id": "BgNdtk9h8Ok",
+          "title": "Lec-3: Lexical Analysis in Compiler Design with Examples",
+          "duration": 550
+        },
+        {
+          "id": "JBsp_6Z4XDQ",
+          "title": "Lexical Analysis in Compiler Design | In Hindi | Easy Explanation",
+          "duration": 601
+        },
+        {
+          "id": "rluLxCFPsjk",
+          "title": "Compiler Design Lecture | Introduction to lexical analyser and Grammars | 13",
+          "duration": 975
+        },
+        {
+          "id": "hGuXUIefVkc",
+          "title": "Lec-7: What is Parsing & Types of Parsers | Syntax Analysis",
+          "duration": 578
+        }
+      ]
+    },
+    {
+      "id": "first-follow",
+      "videos": [
+        {
+          "id": "GmtNjYEVpSA",
+          "title": "Compiler Design Lecture 19| Why Predictive Parser uses FIRST & FOLLOW | By  Shivangi Bhadouria",
+          "duration": 590
+        },
+        {
+          "id": "UXYqQ_CJsVE",
+          "title": "Lec-5: Find First() in Compiler Design | First() & Follow() | Compiler Design",
+          "duration": 637
+        },
+        {
+          "id": "WUwG50xJ9vc",
+          "title": "Lec-6: Find FOLLOW() in Compiler Design | Learn First() & Follow() in Easiest way",
+          "duration": 567
+        },
+        {
+          "id": "oOCromcWnfc",
+          "title": "FIRST() and FOLLOW() Functions",
+          "duration": 713
+        }
+      ]
+    },
+    {
+      "id": "ll-parsing",
+      "videos": [
+        {
+          "id": "WTxdKQmsfho",
+          "title": "Lec-8: LL(1) Parsing Table | Check Whether a Grammar is LL(1) or Not",
+          "duration": 657
+        },
+        {
+          "id": "hGuXUIefVkc",
+          "title": "Lec-7: What is Parsing & Types of Parsers | Syntax Analysis",
+          "duration": 578
+        },
+        {
+          "id": "BNfNBYnKjp8",
+          "title": "What is LL(1) Parser | LL1 Parsing Algorithm | Top down Parsing | Compiler Design",
+          "duration": 1267
+        },
+        {
+          "id": "QoOALbef3ZM",
+          "title": "Compiler Design: Predictive Parsing-LL(1)",
+          "duration": 1527
+        }
+      ]
+    },
+    {
+      "id": "lr-parsing",
+      "videos": [
+        {
+          "id": "Z1Hu9TIef9k",
+          "title": "Lec-12: SLR(1) Parsing Table | Check Whether a Grammar is SLR(1) or Not | Bottom-Up Parser",
+          "duration": 466
+        },
+        {
+          "id": "dXxyts4tHks",
+          "title": "LR(0) Parsing Table | Check Grammar is SLR(1) or Not | Bottom-Up Parsing | Compiler Design",
+          "duration": 1296
+        },
+        {
+          "id": "6HQgX086DYw",
+          "title": "Compiler Design | Facts related to Parsing LL(1), LR(0), SLR(1), LALR(1), CLR(1), LR(1) | 85",
+          "duration": 410
+        },
+        {
+          "id": "J4ZME5KOB-s",
+          "title": "Lec-11: LR(0) Parsing Table | Check Whether a Grammar is LR(0) or not | Bottom-Up Parser",
+          "duration": 1006
+        }
+      ]
+    },
+    {
+      "id": "runtime-environments",
+      "videos": [
+        {
+          "id": "KXGmusDhq8E",
+          "title": "Activation Records in Compiler Design in Hindi | Compiler Design Gate Tutorials",
+          "duration": 698
+        },
+        {
+          "id": "5TZocZ1JR0s",
+          "title": "Runtime Environment in Compiler Design | Activation Tree, Control Stack, Scope of Declaration",
+          "duration": 302
+        },
+        {
+          "id": "UvBX4WiwIbE",
+          "title": "Activation Tree Concepts : Runtime Environment In Compiler Design",
+          "duration": 215
+        },
+        {
+          "id": "ZrnalLBZQbw",
+          "title": "Activation Records In Compiler Design: GATE Preparation",
+          "duration": 761
+        }
+      ]
+    },
+    {
+      "id": "syntax-directed-translation",
+      "videos": [
+        {
+          "id": "_CloXDbYAAg",
+          "title": "Lec-17: What is SDT(Syntax Directed Translation) & its Applications | Semantic Analysis",
+          "duration": 391
+        },
+        {
+          "id": "155qkb0goHU",
+          "title": "Introduction to Syntax Directed Definition (SDD)| Syntax Directed Translation | Compiler Design",
+          "duration": 922
+        },
+        {
+          "id": "v7FTF_ERR5Q",
+          "title": "GATE 2024 Concept Series | Compiler Design-Syntax Directed Translation |CS |By Prasad Sir| MADE EASY",
+          "duration": 958
+        },
+        {
+          "id": "6w9AU_LgfM4",
+          "title": "Syntax Directed Translation (SDT) Explained in Hindi l Compiler Design Course",
+          "duration": 303
+        }
+      ]
+    },
+    {
+      "id": "intermediate-code",
+      "videos": [
+        {
+          "id": "j-bLeUysUiE",
+          "title": "Lec-22: Intermediate Code Generation with example",
+          "duration": 492
+        },
+        {
+          "id": "yMUw2MxzNec",
+          "title": "Intermediate Code Generation with Examples | Compiler Design",
+          "duration": 771
+        },
+        {
+          "id": "TEpAEb6omhA",
+          "title": "MCS for GATE CS 2024 | CD | L-19| Intermediate Code Generation (ICG) | Backpatching | Amit Goyal Sir",
+          "duration": 1175
+        },
+        {
+          "id": "23LxnQis9bc",
+          "title": "L-5.1| Compiler Design| Intermediate code Generation (Hindi + English) | Animesh Tayal | GATE CS",
+          "duration": 1076
+        }
+      ]
+    },
+    {
+      "id": "liveness-analysis",
+      "videos": [
+        {
+          "id": "ERzKug9_9tg",
+          "title": "Lec-31: Liveness Analysis in Code optimization | Dataflow analysis",
+          "duration": 908
+        },
+        {
+          "id": "TLmcTXtOBKA",
+          "title": "Liveness Analysis in Compiler Design | Code optimization | Dataflow analysis",
+          "duration": 1168
+        },
+        {
+          "id": "jCZzH5Y8wrg",
+          "title": "CD | Liveness Analysis | Example -1 | Ravindrababu Ravula | Free GATE CS Classes",
+          "duration": 460
+        },
+        {
+          "id": "clb4tnEm8l4",
+          "title": "Lec-24: Peephole Optimization in Compiler | Dead code elimination | Strength reduction",
+          "duration": 619
+        }
+      ]
+    },
+    {
+      "id": "basic-blocks",
+      "videos": [
+        {
+          "id": "IGrHRulR0Uc",
+          "title": "Basic Blocks and Flow Graphs | Code Optimization | Compiler Design",
+          "duration": 966
+        },
+        {
+          "id": "rq1Xo0TUkA4",
+          "title": "Lec-30: Local vs Global Optimization | Scope of Optimization",
+          "duration": 536
+        },
+        {
+          "id": "ltFjSK_78Ew",
+          "title": "Code Optimization in Compiler Design | Local optimization and global optimization techniques in C",
+          "duration": 524
+        },
+        {
+          "id": "tKnNqiU4gCI",
+          "title": "Lec-28: What is Control Flow Graph | Basic Blocks",
+          "duration": 609
+        }
+      ]
+    },
+    {
+      "id": "constant-propagation",
+      "videos": [
+        {
+          "id": "ckx1aWLrx6U",
+          "title": "Constant Propagation in Compiler Design | Constant Folding in compiler design | Local optimization",
+          "duration": 461
+        },
+        {
+          "id": "3Gjgj9d0QiM",
+          "title": "Arithmetic Simplification, Strength Reduction & Constant Folding in Compiler Design | GATE",
+          "duration": 326
+        },
+        {
+          "id": "V7jrYM8Q6QQ",
+          "title": "Optimization: Loop Jamming, Constant Folding and Strength Reduction",
+          "duration": 704
+        }
+      ]
+    },
+    {
+      "id": "common-subexpressions",
+      "videos": [
+        {
+          "id": "U1RVsnNhaAA",
+          "title": "Common Subexpression Elimination in Compiler Design | common subexpression algorithm in compiler",
+          "duration": 307
+        },
+        {
+          "id": "-8nJw1oKmMs",
+          "title": "Common Subexpression Elimination Explainer Video",
+          "duration": 400
+        },
+        {
+          "id": "cqoMZDWTMXk",
+          "title": "CD51: Code Optimization Method|Common sub-expression Elimination|Copy Propagation in Compiler Design",
+          "duration": 725
+        },
+        {
+          "id": "clb4tnEm8l4",
+          "title": "Lec-24: Peephole Optimization in Compiler | Dead code elimination | Strength reduction",
+          "duration": 619
+        }
+      ]
+    },
+    {
+      "id": "system-calls",
+      "videos": [
+        {
+          "id": "tWPa-rZiGM8",
+          "title": "L-1.7: System Calls in Operating system and its types in Hindi",
+          "duration": 607
+        },
+        {
+          "id": "ZBDEB7fNcCw",
+          "title": "System Call Execution & Interrupts Explained | Operating System | GATE CSE",
+          "duration": 1501
+        },
+        {
+          "id": "lhToWeuWWfw",
+          "title": "System Calls",
+          "duration": 759
+        },
+        {
+          "id": "4bPGTMSLJzU",
+          "title": "⚡System Calls in Operating System | Complete Guide ",
+          "duration": 572
+        }
+      ]
+    },
+    {
+      "id": "processes",
+      "videos": [
+        {
+          "id": "2dJdHMpCLIg",
+          "title": "L-1.5: Process States in Operating System| Schedulers(Long term,Short term,Medium term)",
+          "duration": 1254
+        },
+        {
+          "id": "OrM7nZcxXZU",
+          "title": "Process Management (Processes and Threads)",
+          "duration": 452
+        },
+        {
+          "id": "p8xWDZwndZQ",
+          "title": "Part 1 | Process Concepts | fork() System Call | Operations on Process | Operating Systems | OS |",
+          "duration": 891
+        },
+        {
+          "id": "g_kLI2pkNC4",
+          "title": "#12 Introduction to Processes | Introduction to Operating Systems",
+          "duration": 1080
+        }
+      ]
+    },
+    {
+      "id": "threads",
+      "videos": [
+        {
+          "id": "v4RDTSgTBNc",
+          "title": "Threads in operating system || Multithreading || OS",
+          "duration": 693
+        },
+        {
+          "id": "j7145-Dj7k4",
+          "title": "Threads in Operating System in hindi | Threads and Multithreading in operating system | Lec-10",
+          "duration": 342
+        },
+        {
+          "id": "ITc09gOrqZk",
+          "title": "L-1.11: Process Vs Threads in Operating System",
+          "duration": 677
+        },
+        {
+          "id": "wdGqZi7TT_Y",
+          "title": "Operating System Multithreading Model | UGC NET Computer Science by Aditi Mam | Bits & Bytes",
+          "duration": 338
+        }
+      ]
+    },
+    {
+      "id": "ipc",
+      "videos": [
+        {
+          "id": "BFy98aymjuw",
+          "title": "Operating System | Inter Process Communication (IPC) | Computer Science By Aditi Mam | Bits & Bytes",
+          "duration": 1108
+        },
+        {
+          "id": "QOHyB94zG54",
+          "title": "Inter Process Communication Explained in Hindi l ERTOS Course l OS Course",
+          "duration": 522
+        },
+        {
+          "id": "GF-1DYoX9wo",
+          "title": "Inter-process Communication (IPC) in Operating System Urdu/Hindi",
+          "duration": 244
+        },
+        {
+          "id": "-GUSNnRt2U8",
+          "title": "Inter-Process Communication (IPC) in Operating System | operating system tutorial | code Hacker",
+          "duration": 555
+        }
+      ]
+    },
+    {
+      "id": "race-conditions",
+      "videos": [
+        {
+          "id": "0ugd3KJKBd4",
+          "title": "Exploring Critical Sections And Race Condition In GATE Operating System",
+          "duration": 533
+        },
+        {
+          "id": "NKG37ovkmUQ",
+          "title": "Critical Section And Race Condition ll Operating System ll Explained with Example in Hindi",
+          "duration": 594
+        },
+        {
+          "id": "B6D8HGBEt1g",
+          "title": "Process Synchronization In Operating System | Critical Section and Race Condition | With Example",
+          "duration": 994
+        },
+        {
+          "id": "NSLFXpS_1K4",
+          "title": "Critical Section & Race Condition | Operating System | Module 4 Lecture 3 | All Universities",
+          "duration": 1631
+        }
+      ]
+    },
+    {
+      "id": "semaphores",
+      "videos": [
+        {
+          "id": "VcVbUbPNIfw",
+          "title": "4.8 Semaphores in Process Synchronization in OS",
+          "duration": 1168
+        },
+        {
+          "id": "VfIrVgBee5c",
+          "title": "Lec-22:Classical Problems of Synchronization–Bounded Buffer Problem | For GATE, NET,University Exams",
+          "duration": 1101
+        },
+        {
+          "id": "kM11E7TXvQc",
+          "title": "OS - classical problems of synchronization",
+          "duration": 1144
+        },
+        {
+          "id": "5BIXGnhwhxA",
+          "title": "Part 7: Introduction to Semaphores | Concurrency and Synchronization | Operating Systems Lectures",
+          "duration": 1263
+        }
+      ]
+    },
+    {
+      "id": "deadlocks",
+      "videos": [
+        {
+          "id": "U7zKBXg-YOI",
+          "title": "5.3 #DeadlockHandling #DeadlockPrevention #DeadlockAvoidance Deadlock Detection in Hindi",
+          "duration": 806
+        },
+        {
+          "id": "R0EsxSB4TMo",
+          "title": "Deadlock Avoidance in operating system Urdu/Hindi",
+          "duration": 388
+        },
+        {
+          "id": "xei1ScyF3XQ",
+          "title": "Operating System | Deadlock Prevention Strategies | Computer Science By Aditi Mam | Bits & Bytes",
+          "duration": 549
+        },
+        {
+          "id": "ElXlWNkK6ks",
+          "title": "Deadlock Prevention in Operating System | GATE CSE & Semester Exams",
+          "duration": 1174
+        }
+      ]
+    },
+    {
+      "id": "cpu-scheduling",
+      "videos": [
+        {
+          "id": "PHiK0YunA64",
+          "title": "CPU Scheduling (Part I) - Key Metrics",
+          "duration": 907
+        },
+        {
+          "id": "n7Owxwfr6Ko",
+          "title": "L-2.2: What is Arrival, Burst, Completion, Turnaround, Waiting and Response time in CPU Scheduling",
+          "duration": 539
+        },
+        {
+          "id": "zFnrUVqtiOY",
+          "title": "L-2.1: Process Scheduling Algorithms (Preemption Vs Non-Preemption) | CPU Scheduling in OS",
+          "duration": 631
+        },
+        {
+          "id": "YMl_oAZqUXQ",
+          "title": "Operating System | Parameters of CPU Scheduling | UGC NET Computer Science by Aditi Mam",
+          "duration": 920
+        }
+      ]
+    },
+    {
+      "id": "paging",
+      "videos": [
+        {
+          "id": "N7pJsMnHL80",
+          "title": "Lec-46: Address to Space Translation | Paging in OS | Memory Management",
+          "duration": 806
+        },
+        {
+          "id": "y0C_ebmI2a8",
+          "title": "6.5 Simple Paging | Virtual Address | Physical Address | Memory Management | Operating System ",
+          "duration": 1522
+        },
+        {
+          "id": "6c-mOFZwP_8",
+          "title": "L-5.9: What is Paging | Memory management |  Operating System",
+          "duration": 1554
+        },
+        {
+          "id": "phtUK3h3KeI",
+          "title": "6.8 | Inverter Paging | Segmentation | Memory Management | Operating System ",
+          "duration": 526
+        }
+      ]
+    },
+    {
+      "id": "virtual-memory",
+      "videos": [
+        {
+          "id": "SmojXwfh578",
+          "title": "Virtual Memory : Frame Allocation and Page Replacement Basics Explained in Hindi",
+          "duration": 358
+        },
+        {
+          "id": "o2_iCzS9-ZQ",
+          "title": "L-5.19: Virtual Memory | Page fault | Significance of virtual memory | Operating System",
+          "duration": 1218
+        },
+        {
+          "id": "8rcUs5RutX0",
+          "title": "L-5.22: Page Replacement Introduction | FIFO Page Replacement algorithm | Operating System",
+          "duration": 967
+        },
+        {
+          "id": "rBlMk2EUPxI",
+          "title": "Virtual Memory ll Need Of Virtual Memory ll Operating System ll Explained in Hindi",
+          "duration": 435
+        }
+      ]
+    },
+    {
+      "id": "io-scheduling",
+      "videos": [
+        {
+          "id": "9uoa_p8q47Y",
+          "title": "L-6.3: Disk Scheduling Algorithm | Operating System",
+          "duration": 368
+        },
+        {
+          "id": "fkTyoe0JaY4",
+          "title": "DISK SCHEDULING  | OPERATING SYSTEM | LECTURE 01 BY MR. MADHUP AGRAWAL | AKGEC",
+          "duration": 1618
+        },
+        {
+          "id": "t0eBnALU6pE",
+          "title": "Disk Scheduling in Operating System || Disk Scheduling Algorithm || OS",
+          "duration": 639
+        },
+        {
+          "id": "3jhe-2qV_V0",
+          "title": "💿 Disk Scheduling Algorithms | SSTF, SCAN, C-SCAN, LOOK 🔄 | OS Most Important for GATE & University",
+          "duration": 1123
+        }
+      ]
+    },
+    {
+      "id": "file-systems",
+      "videos": [
+        {
+          "id": "S4OoZf2awUQ",
+          "title": "Master OS FILE SYSTEMS: Allocation Methods & the UNIX Inode (Includes Solved Numerical)",
+          "duration": 1633
+        },
+        {
+          "id": "S6lLRz7SQUw",
+          "title": "L-7.6: Indexed File Allocation in Operating System",
+          "duration": 643
+        },
+        {
+          "id": "irGdM3iIS54",
+          "title": "L-7.5: Linked List allocation in file allocation with example | Operating system",
+          "duration": 655
+        },
+        {
+          "id": "gK6L3v1b8AM",
+          "title": "Allocation Methods | File Allocation Methods | Contiguous | linked | indexed | chain | os | files",
+          "duration": 661
+        }
+      ]
+    },
+    {
+      "id": "relational-model",
+      "videos": [
+        {
+          "id": "aKIuEhCUdXY",
+          "title": "19. Integrity constraints in relational model",
+          "duration": 287
+        },
+        {
+          "id": "d7Y5-An2sXg",
+          "title": "Relational model & Integrity Constraints| DBMS MCQs | Gate|Net|Pgt|PSU",
+          "duration": 1268
+        },
+        {
+          "id": "VyTNsblZFrI",
+          "title": "18. concept of keys in relational model",
+          "duration": 839
+        },
+        {
+          "id": "8GuVuSEpr68",
+          "title": "Relational Model-Key Constraints | DBMS GATE 2024| Sudhakar Reddy| MACSGATE",
+          "duration": 1185
+        }
+      ]
+    },
+    {
+      "id": "er-model",
+      "videos": [
+        {
+          "id": "XxIeoK9Jgo0",
+          "title": "DBMS | Unit-1 | Lecture - 14 | Entity Relationship (ER) Model Concepts | AKTU B.Tech CSE | Hindi",
+          "duration": 1757
+        },
+        {
+          "id": "YuKxc9AWQQk",
+          "title": "Enhanced Entity Relationship Diagram - EERD ( Complete in one go)",
+          "duration": 1122
+        },
+        {
+          "id": "0zJksIvd_IQ",
+          "title": "ENTITY RELATIONSHIP MODEL IN DBMS | COMPUTER TEACHER| KRIES | GPSTR | VTU |ER DIAGRAM IN KANNADA|CSE",
+          "duration": 1416
+        },
+        {
+          "id": "s6MH7f3SnsY",
+          "title": "Lec-18: One to One relationship in DBMS in Hindi",
+          "duration": 1004
+        }
+      ]
+    },
+    {
+      "id": "relational-algebra",
+      "videos": [
+        {
+          "id": "4YilEjkNPrQ",
+          "title": "Lec-50: Introduction to Relational Algebra | Database Management System",
+          "duration": 264
+        },
+        {
+          "id": "PcwAb3NkeGQ",
+          "title": "Relational Algebra in DBMS with examples Urdu/Hindi",
+          "duration": 245
+        },
+        {
+          "id": "lbvCaETL2FI",
+          "title": "Lec-56: Division Operation in Relational Algebra | Database Management System",
+          "duration": 883
+        },
+        {
+          "id": "AepLj_C4ywM",
+          "title": "6.2 Introduction To Relational Algebra in DBMS in Hindi",
+          "duration": 605
+        }
+      ]
+    },
+    {
+      "id": "tuple-calculus",
+      "videos": [
+        {
+          "id": "sUIomh75ySg",
+          "title": "DBMS - Safety of Expressions of Domain and Tuple Relational Calculus",
+          "duration": 145
+        },
+        {
+          "id": "4xb6ODQ9XFM",
+          "title": "Tuple Relational Calculus (Formal Definition)",
+          "duration": 773
+        },
+        {
+          "id": "zhf3nkoz4ds",
+          "title": "Tuple Relational Calculus (Formal Definition)",
+          "duration": 738
+        },
+        {
+          "id": "rehooKpBueQ",
+          "title": "DBMS-Lesson 13-Tuple relational calculus part3",
+          "duration": 1109
+        }
+      ]
+    },
+    {
+      "id": "sql-joins",
+      "videos": [
+        {
+          "id": "H6988OpZKTU",
+          "title": "Complete SQL JOINS For Beginners | SQL JOIN Queries with Examples | SQL Tutorial in Hindi 11",
+          "duration": 1245
+        },
+        {
+          "id": "bonJEipf3VU",
+          "title": "Lec-83: Difference between Joins, Nested Subquery and Correlated Subquery | Most Imp Concept of SQL",
+          "duration": 957
+        },
+        {
+          "id": "pn9OI3sSKFE",
+          "title": "Lec-80: How Aggregate Functions work on NULL Values | SQL | DBMS",
+          "duration": 443
+        },
+        {
+          "id": "RQhF6MbwG-k",
+          "title": "97. HANDLING NULL IN SQL",
+          "duration": 1340
+        }
+      ]
+    },
+    {
+      "id": "sql-grouping",
+      "videos": [
+        {
+          "id": "apNmMWgFFRg",
+          "title": "Lec-69: SQL Queries and Subqueries (part-3) | Group By clause  | Database Management System",
+          "duration": 552
+        },
+        {
+          "id": "_yog7h4BokQ",
+          "title": "Lec-67: SQL Queries and Subqueries (part-1) | Database Management System",
+          "duration": 538
+        },
+        {
+          "id": "iPEmGpI3OGU",
+          "title": "Lec-71: SQL Queries and Subqueries (part-4) | Having clause | Database Management System",
+          "duration": 662
+        },
+        {
+          "id": "4uOwq0ASCtc",
+          "title": "Lec-72: SQL Queries and Subqueries (part-5)  | Database Management System",
+          "duration": 690
+        }
+      ]
+    },
+    {
+      "id": "functional-dependencies",
+      "videos": [
+        {
+          "id": "9QaPf3muohk",
+          "title": "Closure of Functional Dependencies | DBMS 19 | GATE CSE",
+          "duration": 573
+        },
+        {
+          "id": "Uj-Kk1imAcI",
+          "title": "Lec 25: Closure of an Attribute in Functional Dependency | Attribute Closure | DBMS/IMS | GATE CSE",
+          "duration": 642
+        },
+        {
+          "id": "UQXcUXONjkg",
+          "title": "Closure of attributes/ functional dependency, inference rules || Lec No.- 3 ||GATE/UGC NET CS 2026",
+          "duration": 1735
+        },
+        {
+          "id": "McZOuAok3i4",
+          "title": "8 Attribute Closure and Functional Dependency",
+          "duration": 589
+        }
+      ]
+    },
+    {
+      "id": "normal-forms",
+      "videos": [
+        {
+          "id": "EGEwkad_llA",
+          "title": "Lec-33: All Normal Forms with Real life examples | 1NF 2NF 3NF BCNF 4NF 5NF | All in One",
+          "duration": 675
+        },
+        {
+          "id": "IBEuwmYsMKI",
+          "title": "normalization in dbms | normal forms | 1nf, 2nf, 3nf, bcnf, 4nf, 5nf normal forms with examples",
+          "duration": 1254
+        },
+        {
+          "id": "xMBdhyLzm88",
+          "title": "1NF, 2NF, 3NF, BCNF, 4NF, 5NF, 6NF, Normal Forms, DBMS [Lec 10] GATE,NET, TRB-PG, RRBJE,ITOfficers",
+          "duration": 957
+        },
+        {
+          "id": "qmbdlqq7tb0",
+          "title": "Complete Guide to Normalization in DBMS| 1NF, 2NF, 3NF & BCNF",
+          "duration": 1462
+        }
+      ]
+    },
+    {
+      "id": "decomposition",
+      "videos": [
+        {
+          "id": "BNJ5sJnqkJ8",
+          "title": "Lec 40: Lossy & Lossless Decomposition in DBMS | Lossless Join & Dependency Preservation | GATE CSE",
+          "duration": 843
+        },
+        {
+          "id": "zSe6aqnvuQU",
+          "title": "8. 🔗 Joins in DBMS | 🍹 Lossless Decomposition & Dependency Preservation Explained! 🚀",
+          "duration": 801
+        },
+        {
+          "id": "4rs43ByB37M",
+          "title": "2.9 | Properties of Decomposition | Lossless Join Decomposition | Dependency Preserving | Lossy Join",
+          "duration": 1225
+        },
+        {
+          "id": "87YR_F-EgTQ",
+          "title": "Properties of Decomposition (Lossless-Join Decomposition, Dependency Preserving Decomposition) | 31",
+          "duration": 307
+        }
+      ]
+    },
+    {
+      "id": "b-plus-trees",
+      "videos": [
+        {
+          "id": "f5d6Za7B08M",
+          "title": "DBMS | B trees and B+ Trees | The Most Expected topics for GATE 2023",
+          "duration": 1344
+        },
+        {
+          "id": "K1a2Bk8NrYQ",
+          "title": "Understanding B-Trees: The Data Structure Behind Modern Databases",
+          "duration": 759
+        }
+      ]
+    },
+    {
+      "id": "file-organization",
+      "videos": [
+        {
+          "id": "7qIjQZ6o0BA",
+          "title": "Introduction to File Organization: Sequential, Direct, and Indexed Sequential File Organization.",
+          "duration": 546
+        },
+        {
+          "id": "_SuKrHbAeJo",
+          "title": "Introduction To File Organization Explained in Hindi l Database Management System Course",
+          "duration": 328
+        },
+        {
+          "id": "3I8ULKcrUTM",
+          "title": "L8.1 | Introduction to File Organization | DBMS file organization | File Organization in DBMS",
+          "duration": 192
+        },
+        {
+          "id": "2Dz7H-eMyJg",
+          "title": "FILE ORGANIZATION IN DATABASE",
+          "duration": 445
+        }
+      ]
+    },
+    {
+      "id": "concurrency-recovery",
+      "videos": [
+        {
+          "id": "94C0V7f2zm4",
+          "title": "Lec-100:Shared Exclusive Locking Protocol with Example | Concurrency Control | DBMS | Part-1",
+          "duration": 404
+        },
+        {
+          "id": "gJa2uVQDesU",
+          "title": "Strict and Rigorous 2-Phase Locking Protocol | Concurrency Control - DBMS",
+          "duration": 475
+        },
+        {
+          "id": "BkgZqawZLo0",
+          "title": "7.27- (Eng) Two Phase Locking In Lock Based Protocols In DBMS | Concurrency Control Technique",
+          "duration": 207
+        },
+        {
+          "id": "rUIFbk-beCw",
+          "title": "7.27- Two Phase Locking In Lock Based Protocols In DBMS | Concurrency Control Technique In DBMS",
+          "duration": 243
+        }
+      ]
+    },
+    {
+      "id": "transactions",
+      "videos": [
+        {
+          "id": "-GS0OxFJsYQ",
+          "title": "Lec-88: ACID Properties of a Transaction | Database Management System",
+          "duration": 838
+        },
+        {
+          "id": "I9ZKE2qeDzo",
+          "title": "DBMS Transaction & It's State (ACID Property) | Learn Coding",
+          "duration": 444
+        },
+        {
+          "id": "s57648-bbOs",
+          "title": "ACID Properties ll DBMS ll Atomicity,Consistency,Isolation,Durability Explained in Hindi",
+          "duration": 350
+        },
+        {
+          "id": "WnQWUn8nzVk",
+          "title": "L7.3 | ACID Properties of a Transaction | Transaction Properties  in Database Management System",
+          "duration": 728
+        }
+      ]
+    },
+    {
+      "id": "serializability",
+      "videos": [
+        {
+          "id": "zv0ba0Iok1Y",
+          "title": "Lec-98: Conflict Serializability | Precedence Graph | Transaction | DBMS",
+          "duration": 738
+        },
+        {
+          "id": "2AZNyETiFFo",
+          "title": "Checking Conflict Serializability in Database Management System (DBMS) For GATE CSE 2023 Exam",
+          "duration": 1152
+        },
+        {
+          "id": "OKsWBeKov-k",
+          "title": "L7.24 | GATE 2012 | Conflict Serializability | Precedence Graph | How to test Conflict Serializable",
+          "duration": 232
+        },
+        {
+          "id": "24k2CZ8CKU8",
+          "title": "conflict serializability in dbms in hindi | conflict serializability in hindi | DBMS lectures #115",
+          "duration": 608
+        }
+      ]
+    },
+    {
+      "id": "network-performance",
+      "videos": [
+        {
+          "id": "gABLuHhqCjY",
+          "title": "Understanding Bandwidth and Bandwidth Delay Product || Lesson 23 |Computer Networks |Learning Monkey",
+          "duration": 584
+        },
+        {
+          "id": "TW_VdrRa06o",
+          "title": "1.12 Bandwidth, Throughput, Latency (Delay), Packet Loss, Jitter || Network Performance",
+          "duration": 1459
+        },
+        {
+          "id": "UDQiC_U-QNc",
+          "title": "[HINDI] Networking Basics | Part #28 | Network Layer | Performance Measures | Bandwidth, Delay",
+          "duration": 1305
+        },
+        {
+          "id": "cDVNU2j26Bs",
+          "title": "Lec-98 : Bandwidth vs. Throughput vs. Latency | Computer Networks",
+          "duration": 376
+        }
+      ]
+    },
+    {
+      "id": "network-layering",
+      "videos": [
+        {
+          "id": "TVr0RZ1-74g",
+          "title": "TCP/IP Protocol Suite with Real Life Examples | Why TCP/IP Used | Fundamentals of Networking",
+          "duration": 567
+        },
+        {
+          "id": "FewtLNsjtRA",
+          "title": "Layering in Computer Networks",
+          "duration": 425
+        },
+        {
+          "id": "GfaHdjApnhU",
+          "title": "Lec-4: TCP/IP Protocol Suite | Internet Protocol Suite | OSI vs TCP/IP",
+          "duration": 406
+        },
+        {
+          "id": "rA0p0ouD3aE",
+          "title": "Lec-61: What is Routing Protocols | Various types of Routing Protocols",
+          "duration": 417
+        }
+      ]
+    },
+    {
+      "id": "network-switching",
+      "videos": [
+        {
+          "id": "-S-NThI_79o",
+          "title": "Lec-19: Datagram Switching Vs Virtual Circuit Switching in Packet Switching | Computer Networks",
+          "duration": 686
+        },
+        {
+          "id": "1lOQYEfteao",
+          "title": "Lec06-Packet Switching:Datagram and Virtual Circuit Approach; Computer Networks",
+          "duration": 772
+        },
+        {
+          "id": "Zic2mDvSEu0",
+          "title": "datagram vs virtual circuit in packet switching",
+          "duration": 632
+        },
+        {
+          "id": "MfgHmdpRma4",
+          "title": "20. Datagram vs Virtual Circuit Switching | Types of Packet Switching | GATE & UGC NET",
+          "duration": 278
+        }
+      ]
+    },
+    {
+      "id": "error-detection",
+      "videos": [
+        {
+          "id": "I6jrEGENisA",
+          "title": "Error Detection and Correction Codes || Parity check || checksum || CRC || #digitalelectronics",
+          "duration": 456
+        },
+        {
+          "id": "Hms8yylfuOg",
+          "title": "CN 10 : Error Detection & Correction Methods | Parity Bits | Checksum | Cyclic Redundancy Check",
+          "duration": 546
+        },
+        {
+          "id": "bbW08icQQgw",
+          "title": "Parity Checking & Checksum Error Detection in Hindi | Computer Network Lectures in Hindi",
+          "duration": 569
+        },
+        {
+          "id": "xE0TE3yf5DY",
+          "title": "Lec-25_Parity Checking & Checksum (Error Detection Techniques) | Computer Networks | IT Engineering",
+          "duration": 1046
+        }
+      ]
+    },
+    {
+      "id": "flow-control-arq",
+      "videos": [
+        {
+          "id": "2wWrKz4MZnw",
+          "title": "L26: Introduction of Flow Control in Data Link Layer | Automatic Review Request(ARQ) | DCN Lectures",
+          "duration": 744
+        },
+        {
+          "id": "yNedVgNyE8Q",
+          "title": "Lec-26: Various Flow Control Protocols | Stop&Wait , GoBackN & Selective repeat in Data Link Layer",
+          "duration": 976
+        },
+        {
+          "id": "jXl6drIzw5U",
+          "title": "Flow Control in Data Link Layer 🔥",
+          "duration": 451
+        },
+        {
+          "id": "M2NpBf9r6x4",
+          "title": "25. Go-Back-N ARQ Protocol Explained | Sliding Window | Flow Control in Computer Networks",
+          "duration": 856
+        }
+      ]
+    },
+    {
+      "id": "medium-access",
+      "videos": [
+        {
+          "id": "BebeCv-iPaU",
+          "title": "7.2 Carrier Sense Multiple Access | CSMA | CSMA/CD | Medium Access Control | Computer Network ",
+          "duration": 822
+        },
+        {
+          "id": "akNJeXuq9Jk",
+          "title": "7.3 Complete Ethernet | Medium Access Control | Computer Network ",
+          "duration": 750
+        },
+        {
+          "id": "G0h0dC4Zycs",
+          "title": "Lec-32: Various Media Access Control Protocols in Data Link Layer | Computer Networks",
+          "duration": 490
+        },
+        {
+          "id": "KJrS-zwsm1w",
+          "title": "Media Access Control (MAC) Address Part-1 Explained in Hindi",
+          "duration": 411
+        }
+      ]
+    },
+    {
+      "id": "ethernet",
+      "videos": [
+        {
+          "id": "HbgUb0bK31Q",
+          "title": "Ethernet & Switching Explained | Ethernet Frame, MAC Table, Hub vs Switch | CCNA English",
+          "duration": 506
+        },
+        {
+          "id": "ewpq3qxx5Ls",
+          "title": "Lec-39: Ethernet Frame Format (IEEE-802.3) in Data Link Layer",
+          "duration": 637
+        },
+        {
+          "id": "_UzLBb3VkjU",
+          "title": "Ethernet Protocol Explained | How Ethernet Works | Industrial Automation Networking 2025",
+          "duration": 802
+        },
+        {
+          "id": "zRreKw_EDgw",
+          "title": "Ethernet (IEEE 802.3) Explained | LAN Technology, Working, Frame Format & Standards",
+          "duration": 366
+        }
+      ]
+    },
+    {
+      "id": "routing",
+      "videos": [
+        {
+          "id": "Zl2uf1mH4Yo",
+          "title": "Gate 2008 and 2005 pyq CN | count to infinity (distance vector and link state routing)",
+          "duration": 967
+        },
+        {
+          "id": "oFfMOEckzzQ",
+          "title": "Gate 2008 and 2005 pyq CN | count to infinity (distance vector and link state routing)",
+          "duration": 831
+        },
+        {
+          "id": "kW6zV-040SY",
+          "title": "Lec-64: Link state routing in computer networks in Hindi",
+          "duration": 876
+        },
+        {
+          "id": "5ZuP5qjbKSI",
+          "title": "Lec-62: Distance vector routing algorithm in hindi | Computer Networks",
+          "duration": 1560
+        }
+      ]
+    },
+    {
+      "id": "ipv4-cidr",
+      "videos": [
+        {
+          "id": "ANeuwC4b5E0",
+          "title": "Lec 3.4: Supernetting Explained | Route Aggregation, CIDR & Longest Prefix Match | GATE CS/IT",
+          "duration": 372
+        },
+        {
+          "id": "be_JvppRhTI",
+          "title": "Webinar on Longest Prefix Matching - Part 2",
+          "duration": 541
+        },
+        {
+          "id": "N-ywmOpWehE",
+          "title": "Lec-48: What is Classless Addressing (CIDR) in Hindi | CIDR vs Classful Addressing",
+          "duration": 1002
+        },
+        {
+          "id": "7u0XnqS-5xs",
+          "title": "Lec - 20 : What is CIDR Addressing | Classless Inter-Domain Routing with Examples | Most Important",
+          "duration": 856
+        }
+      ]
+    },
+    {
+      "id": "ipv4-fragmentation",
+      "videos": [
+        {
+          "id": "k8VgrqDOIUo",
+          "title": "Lec-55: Fragmentation(MTU) of IPv4 Datagram | Identification, Flags and Fragment Offset | Networks",
+          "duration": 802
+        },
+        {
+          "id": "zoFSxIuS5Ro",
+          "title": "Lec-54: IPv4 Header Format – All Fields Explained in Hindi | Computer Networks",
+          "duration": 1105
+        },
+        {
+          "id": "W1UzRlh1gNc",
+          "title": "Lec-56: Options & Padding in IPv4 Header | Computer Networks",
+          "duration": 502
+        },
+        {
+          "id": "Q4XIoOhNg3o",
+          "title": "[HINDI] Networking Basics | Part #35 | Network layer | IP Fragmentation",
+          "duration": 1057
+        }
+      ]
+    },
+    {
+      "id": "nat",
+      "videos": [
+        {
+          "id": "47PUj7OSGkA",
+          "title": "Lec-66: NAT Explained - Network Address Translation with example in Hindi",
+          "duration": 588
+        },
+        {
+          "id": "6sEM926jCNk",
+          "title": "What is NAT? Understand Network Address Translation in Simple Hindi",
+          "duration": 565
+        },
+        {
+          "id": "_M1acbiv7GQ",
+          "title": "Lec 24 Network Address Translation (NAT) || Computer Networks || CS & IT || GATE-2023-24",
+          "duration": 1327
+        },
+        {
+          "id": "kiytvXSprV4",
+          "title": "Network Address Translation - NAT",
+          "duration": 399
+        }
+      ]
+    },
+    {
+      "id": "tcp-flow-control",
+      "videos": [
+        {
+          "id": "c8aet11HNxg",
+          "title": "Lec-69: TCP: Transmission control protocol | TCP Header | Transport layer | part -1",
+          "duration": 891
+        },
+        {
+          "id": "BS85HeMT_8s",
+          "title": "Understanding Handshaking & Flow Control 💡 | Computer Organization Lecture",
+          "duration": 916
+        },
+        {
+          "id": "x5l5Z1j62iQ",
+          "title": "L61: Transmission Control Protocol(TCP) Introduction | Features, Segment Format, 3 – way Handshaking",
+          "duration": 1062
+        },
+        {
+          "id": "TVr0RZ1-74g",
+          "title": "TCP/IP Protocol Suite with Real Life Examples | Why TCP/IP Used | Fundamentals of Networking",
+          "duration": 567
+        }
+      ]
+    },
+    {
+      "id": "tcp-congestion",
+      "videos": [
+        {
+          "id": "0bc_T_pEZmo",
+          "title": "Lec-74: TCP Congestion Control in Computer Networks in Hindi",
+          "duration": 759
+        },
+        {
+          "id": "RBbqDGD6n1I",
+          "title": "CN 25 : TCP Congestion Control with Example",
+          "duration": 522
+        },
+        {
+          "id": "B6xyM3-W6_c",
+          "title": "TCP Congestion Control Explained: CSE Question 1 | GATE | COMPUTER SCIENCE ENGINEERING",
+          "duration": 457
+        },
+        {
+          "id": "PU8_UK8CnXI",
+          "title": "4.5 TCP Congestion Control , Computer Network",
+          "duration": 1384
+        }
+      ]
+    },
+    {
+      "id": "socket-api",
+      "videos": [
+        {
+          "id": "io2G2yW1Qk8",
+          "title": "TCP Client Server Implementation in C | Socket Programming in C",
+          "duration": 1269
+        },
+        {
+          "id": "aFFKFc7ixYk",
+          "title": "TCP Socket Programming in C | Client Server Explained in Telugu",
+          "duration": 863
+        },
+        {
+          "id": "XXfdzwEsxFk",
+          "title": "The Linux socket API explained",
+          "duration": 921
+        },
+        {
+          "id": "r7mZ11j_3lo",
+          "title": "Network Socket in C (Server)",
+          "duration": 401
+        }
+      ]
+    },
+    {
+      "id": "dns",
+      "videos": [
+        {
+          "id": "7Ut_1DpXipY",
+          "title": "DNS Resolution Explained | How Internet Finds IP Address | Master Backend Series Part 7.2",
+          "duration": 1261
+        },
+        {
+          "id": "t6QwWAcgBUA",
+          "title": "How DNS Works | DNS Resolution Explained Step by Step",
+          "duration": 540
+        },
+        {
+          "id": "f19KCM_xxxk",
+          "title": "DNS Records Explained in Hindi 🔥 - What is DNS & DNS Record Types 🤔",
+          "duration": 664
+        },
+        {
+          "id": "rCYwFQL41eM",
+          "title": "DNS Query Process Explained in Hindi | DNS Resolution Step-by-Step | DNS Part 4",
+          "duration": 450
+        }
+      ]
+    },
+    {
+      "id": "http",
+      "videos": [
+        {
+          "id": "pnoWCK82apU",
+          "title": "Lec-83: HTTP, FTP, SMTP, POP | All Application Layer Protocols | Computer Networks",
+          "duration": 1065
+        },
+        {
+          "id": "09h6oVlFuj4",
+          "title": "HTTP Message Format - HTTP Header Format - HTTP Message Format - HTTP Header Format",
+          "duration": 477
+        },
+        {
+          "id": "ow26AVnCaGw",
+          "title": "Protocols | Types of Protocols | Stateful and Stateless protocols | Syntax, Semantics & Timing Hindi",
+          "duration": 991
+        }
+      ]
+    }
+  ]
+}
