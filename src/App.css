@@ -3671,7 +3671,7 @@
   /* Mobile Action Buttons: 5-Item Responsive Grid */
   .player-actions-strip {
     display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
     gap: 4px !important;
     width: 100% !important;
     box-sizing: border-box !important;
@@ -3684,7 +3684,8 @@
     font-size: 10px;
     gap: 3px;
     border-radius: 8px;
-    min-width: 0;
+    min-width: 0 !important;
+    overflow: hidden !important;
   }
 
   .player-action-pill span {
@@ -3693,6 +3694,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    min-width: 0;
   }
 
   .player-action-pill.fullscreen-pill {

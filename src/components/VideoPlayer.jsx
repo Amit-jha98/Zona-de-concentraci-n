@@ -405,7 +405,7 @@ export default function VideoPlayer({
               ) : (
                 <Maximize2 size={14} className="action-pill-icon text-blue-400" />
               )}
-              <span>{isAnyFullscreen ? 'Exit' : 'Horizontal'}</span>
+              <span>{isAnyFullscreen ? 'Exit' : 'Full'}</span>
             </button>
 
             <a
