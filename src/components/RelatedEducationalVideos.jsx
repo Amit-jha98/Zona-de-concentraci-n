@@ -15,13 +15,14 @@ import VideoThumbnail from './VideoThumbnail';
 
 export default function RelatedEducationalVideos({
   currentVideo,
-  onSelectVideo
+  onSelectVideo,
+  catalog = EDUCATIONAL_VIDEOS
 }) {
   const [filterMode, setFilterMode] = useState('all'); // 'all', 'gate-only', 'same-channel'
 
   // Calculate strictly related CS educational videos
   const relatedVideos = useMemo(() => {
-    const raw = getStrictRelatedVideos(currentVideo, EDUCATIONAL_VIDEOS, 10);
+    const raw = getStrictRelatedVideos(currentVideo, catalog, 12);
     if (filterMode === 'gate-only') {
       return raw.filter(v => v.gateWeightage && v.gateWeightage.includes('High'));
     }

@@ -33,9 +33,14 @@ import {
   Globe,
   Smartphone,
   Terminal,
-  Coins
+  Coins,
+  ArrowUpDown,
+  SlidersHorizontal,
+  List,
+  LayoutGrid
 } from 'lucide-react';
 import { CS_SUBJECTS } from '../data/csCatalog';
+import { sortAndFilterVideos } from '../services/youtubeService';
 import VideoThumbnail from './VideoThumbnail';
 
 const ICON_MAP = {
@@ -87,8 +92,16 @@ export default function VideoGrid({
   streamPage = 1,
   onOpenMenu
 }) {
+  const [sortBy, setSortBy] = React.useState('popular');
+  const [durationFilter, setDurationFilter] = React.useState('all');
+  const [viewMode, setViewMode] = React.useState('grid');
+
   const activeSubjectObj = CS_SUBJECTS.find(s => s.id === selectedSubject);
   const activeSubjectName = activeSubjectObj ? activeSubjectObj.name : 'All CS Subjects';
+
+  const displayedVideos = React.useMemo(() => {
+    return sortAndFilterVideos(videos, { sortBy, durationFilter });
+  }, [videos, sortBy, durationFilter]);
 
   return (
     <div className="catalog-container">
@@ -145,20 +158,20 @@ export default function VideoGrid({
             </div>
           ) : (
             <div className="subject-headline">
-              <span className="font-medium text-slate-200">
+              <span className="font-semibold text-slate-100">
                 {feedMode === 'popular'
                   ? `Popular CS Masterclasses - ${activeSubjectName}`
                   : feedMode === 'live'
                   ? `Live YouTube Stream - ${activeSubjectName}`
-                  : `${activeSubjectName} - Core CS Curriculum`}
+                  : `${activeSubjectName} - Complete YouTube Curriculum`}
               </span>
-              <span className="count-badge">{videos.length} Lectures</span>
+              <span className="count-badge">{displayedVideos.length} Available Videos</span>
 
               {/* Dynamic live fetching indicator */}
               {isSubjectLoading && (
                 <span className="subject-syncing-badge">
                   <RefreshCw className="w-3 h-3 animate-spin text-emerald-400" />
-                  <span>Syncing live YouTube videos...</span>
+                  <span>Fetching live YouTube videos...</span>
                 </span>
               )}
             </div>
@@ -182,6 +195,111 @@ export default function VideoGrid({
         )}
       </div>
 
+      {/* Sleek Industry-Standard Sort & Filter Toolbar */}
+      <div className="catalog-toolbar">
+        {/* Sort Options Group */}
+        <div className="toolbar-sort-group">
+          <span className="toolbar-label">
+            <ArrowUpDown className="w-3 h-3 text-slate-400" />
+            <span>Sort:</span>
+          </span>
+          <div className="toolbar-pills-row">
+            <button
+              onClick={() => setSortBy('popular')}
+              className={`toolbar-pill ${sortBy === 'popular' ? 'active' : ''}`}
+              title="Sort by most viewed YouTube videos"
+            >
+              <Flame className="w-3 h-3 text-amber-400" />
+              <span>Most Viewed</span>
+            </button>
+            <button
+              onClick={() => setSortBy('longest')}
+              className={`toolbar-pill ${sortBy === 'longest' ? 'active' : ''}`}
+              title="Sort by full courses and longest lectures first"
+            >
+              <Clock className="w-3 h-3 text-blue-400" />
+              <span>Full Courses</span>
+            </button>
+            <button
+              onClick={() => setSortBy('shortest')}
+              className={`toolbar-pill ${sortBy === 'shortest' ? 'active' : ''}`}
+              title="Sort by quick concept tutorials"
+            >
+              <Zap className="w-3 h-3 text-emerald-400" />
+              <span>Quick Concepts</span>
+            </button>
+            <button
+              onClick={() => setSortBy('newest')}
+              className={`toolbar-pill ${sortBy === 'newest' ? 'active' : ''}`}
+              title="Sort by newest uploads"
+            >
+              <Sparkles className="w-3 h-3 text-purple-400" />
+              <span>Newest First</span>
+            </button>
+            <button
+              onClick={() => setSortBy('relevant')}
+              className={`toolbar-pill ${sortBy === 'relevant' ? 'active' : ''}`}
+              title="Sort by core curriculum & exam yield"
+            >
+              <Award className="w-3 h-3 text-cyan-400" />
+              <span>Syllabus Order</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Right Controls: Duration Filter & View Mode */}
+        <div className="toolbar-right-group">
+          <div className="duration-filter-pills">
+            <button
+              onClick={() => setDurationFilter('all')}
+              className={`duration-pill ${durationFilter === 'all' ? 'active' : ''}`}
+            >
+              All
+            </button>
+            <button
+              onClick={() => setDurationFilter('course')}
+              className={`duration-pill ${durationFilter === 'course' ? 'active' : ''}`}
+              title="Full courses longer than 1 hour"
+            >
+              &gt; 1h
+            </button>
+            <button
+              onClick={() => setDurationFilter('lecture')}
+              className={`duration-pill ${durationFilter === 'lecture' ? 'active' : ''}`}
+              title="Lectures between 20 and 60 minutes"
+            >
+              20-60m
+            </button>
+            <button
+              onClick={() => setDurationFilter('quick')}
+              className={`duration-pill ${durationFilter === 'quick' ? 'active' : ''}`}
+              title="Quick lessons under 20 minutes"
+            >
+              &lt; 20m
+            </button>
+          </div>
+
+          <div className="view-mode-toggle">
+            <button
+              onClick={() => setViewMode('grid')}
+              className={`view-mode-btn ${viewMode === 'grid' ? 'active' : ''}`}
+              title="Grid View"
+              aria-label="Grid View"
+            >
+              <LayoutGrid className="w-3.5 h-3.5" />
+            </button>
+            <button
+              onClick={() => setViewMode('list')}
+              className={`view-mode-btn ${viewMode === 'list' ? 'active' : ''}`}
+              title="List View"
+              aria-label="List View"
+            >
+              <List className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </div>
+      </div>
+
       {/* Video Grid Cards */}
       {isLiveLoading ? (
         <div className="empty-catalog-state">
@@ -191,26 +309,26 @@ export default function VideoGrid({
             Fetching the freshest uploads from Gate Smashers, Striver, NeetCode, freeCodeCamp, and MIT OpenCourseWare.
           </p>
         </div>
-      ) : videos.length === 0 ? (
+      ) : displayedVideos.length === 0 ? (
         <div className="empty-catalog-state">
           <Search className="w-8 h-8 text-slate-500 mb-2" />
           <h3 className="text-sm font-semibold text-slate-300">No CS Lectures Matched</h3>
           <p className="text-xs text-slate-400 max-w-sm mt-1">
-            Try a different filter or click Continue Updating to pull real-time videos from YouTube.
+            No videos matched the current duration filter. Click Reset Filters or pull more real-time videos from YouTube.
           </p>
           <div className="flex gap-2 mt-4">
-            <button onClick={onContinueUpdate} className="pill-btn primary">
-              Fetch from YouTube
+            <button onClick={() => setDurationFilter('all')} className="pill-btn primary">
+              Show All Durations
             </button>
-            <button onClick={onClearSearch} className="pill-btn">
-              Reset Filters
+            <button onClick={onContinueUpdate} className="pill-btn">
+              Load More From YouTube
             </button>
           </div>
         </div>
       ) : (
         <>
-          <div className="video-cards-grid">
-            {videos.map((video) => {
+          <div className={`video-cards-grid ${viewMode === 'list' ? 'is-list-view' : ''}`}>
+            {displayedVideos.map((video) => {
               const subject = CS_SUBJECTS.find(s => s.id === video.subject) || {
                 color: '#3b82f6',
                 shortName: 'CS'

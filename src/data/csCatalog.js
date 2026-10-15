@@ -189,7 +189,7 @@ export const CS_SUBJECTS = [
   }
 ];
 
-export const EDUCATIONAL_VIDEOS = [
+const BASE_EDUCATIONAL_VIDEOS = [
   // ================= ALGORITHMS & DATA STRUCTURES =================
   {
     id: 'XB4MIexjvY0',
@@ -1771,4 +1771,20 @@ export const POPULAR_CS_VIDEOS = [
     tags: ['primeagen', 'algorithms', 'data structures', 'popular', 'systems']
   }
 ];
+
+// Unified Educational Videos Repository: merges foundational core courses with the expanded multi-domain CS library
+export const EDUCATIONAL_VIDEOS = (() => {
+  const seen = new Set();
+  const merged = [];
+  const allSources = [...BASE_EDUCATIONAL_VIDEOS, ...(EXPANDED_SUBJECT_LECTURES || [])];
+
+  for (const v of allSources) {
+    if (v && v.id && !seen.has(v.id)) {
+      seen.add(v.id);
+      merged.push(v);
+    }
+  }
+  return merged;
+})();
+
 

@@ -1702,6 +1702,378 @@ export const EXPANDED_SUBJECT_LECTURES = [
       'Auditing smart contracts using static analysis tools'
     ],
     tags: ['blockchain', 'ethereum', 'solidity', 'smart contracts', 'erc20', 'evm']
+  },
+
+  // ================= EXPANDED CYBER SECURITY & PENETRATION TESTING =================
+  {
+    id: 's19BxFpdlec',
+    title: 'Network Security Fundamentals - Firewalls, IDS, IPS & Packet Inspection',
+    channel: 'freeCodeCamp.org',
+    subject: 'cyber-security',
+    subtopic: 'Network Defense & Infrastructure',
+    duration: '2:40:15',
+    level: 'Core Security',
+    views: '1.4M',
+    year: '2023',
+    gateWeightage: 'Network Security Architecture',
+    description: 'Deep dive into securing networks: perimeter defense, IDS/IPS signatures, deep packet inspection, VPN tunneling protocols (IPSec, OpenVPN, WireGuard), and zero-trust segmentation.',
+    keyTakeaways: [
+      'Stateless vs Stateful firewalls and Next-Gen Application Layer Firewalls (WAF)',
+      'Intrusion Detection (IDS) vs Intrusion Prevention (IPS) inline deployment',
+      'IPSec architecture: Authentication Header (AH) vs Encapsulating Security Payload (ESP)',
+      'Implementing Zero Trust Network Architecture (ZTNA)'
+    ],
+    tags: ['cyber-security', 'network security', 'firewall', 'ids', 'ips', 'vpn']
+  },
+  {
+    id: '1uYnQOmP-l4',
+    title: 'Web Application Security & Bug Bounty Hunting - Complete Hands-On Course',
+    channel: 'freeCodeCamp.org',
+    subject: 'cyber-security',
+    subtopic: 'Web App Exploitation',
+    duration: '4:18:22',
+    level: 'Advanced Web Security',
+    views: '2.1M',
+    year: '2023',
+    gateWeightage: 'Web Application Vulnerabilities',
+    description: 'Comprehensive bug bounty and web penetration testing guide: reconnaissance, directory fuzzing, parameter tampering, SSRF, IDOR, and privilege escalation.',
+    keyTakeaways: [
+      'Insecure Direct Object References (IDOR) testing and access control flaws',
+      'Server-Side Request Forgery (SSRF) and cloud metadata exfiltration',
+      'Content Security Policy (CSP) bypasses and mitigation strategies',
+      'Responsible vulnerability reporting and CVSS score calculation'
+    ],
+    tags: ['cyber-security', 'bug bounty', 'idor', 'ssrf', 'web security', 'pentesting']
+  },
+  {
+    id: 'qXZh_5o4jE8',
+    title: 'Cryptography and Public Key Infrastructure (PKI) - Full University Course',
+    channel: 'freeCodeCamp.org',
+    subject: 'cyber-security',
+    subtopic: 'Mathematical Cryptography',
+    duration: '3:30:10',
+    level: 'Undergraduate / GATE',
+    views: '980K',
+    year: '2022',
+    gateWeightage: 'GATE CS Cryptography High-Yield',
+    description: 'Rigorous mathematical course on cryptography: modular arithmetic, Diffie-Hellman key exchange, Elliptic Curve Cryptography (ECC), SHA-3, and zero-knowledge proofs.',
+    keyTakeaways: [
+      'Discrete logarithm problem and Diffie-Hellman key agreement',
+      'Elliptic Curve Cryptography (ECC) advantages over traditional RSA',
+      'Cryptographic nonce usage and preventing replay attacks',
+      'Certificate Authorities (CA), X.509 certificates, and TLS handshakes'
+    ],
+    tags: ['cyber-security', 'cryptography', 'diffie hellman', 'ecc', 'gate pyq', 'math']
+  },
+  {
+    id: 'Ul106_mK6e0',
+    title: 'SOC Analyst Full Course - Security Operations Center & SIEM Analysis',
+    channel: 'freeCodeCamp.org',
+    subject: 'cyber-security',
+    subtopic: 'Defensive Security & SOC',
+    duration: '5:45:00',
+    level: 'Blue Team Engineering',
+    views: '1.7M',
+    year: '2023',
+    gateWeightage: 'Security Operations & Incident Response',
+    description: 'Master defensive cybersecurity in a Security Operations Center: incident response triage, SIEM log analysis with Splunk, threat hunting with MITRE ATT&CK, and forensic investigation.',
+    keyTakeaways: [
+      'The Incident Response lifecycle (Preparation, Detection, Containment, Eradication, Recovery)',
+      'Mapping attacker behavior to the MITRE ATT&CK matrix',
+      'SIEM correlation rules, alert triage, and log parsing in Splunk/Elastic',
+      'Memory and disk forensics using Volatility and Autopsy'
+    ],
+    tags: ['cyber-security', 'soc', 'blue team', 'siem', 'splunk', 'incident response']
+  },
+  {
+    id: 'WcQfG_U2oU8',
+    title: 'Wireshark Tutorial for Beginners - Packet Sniffing & Traffic Analysis',
+    channel: 'NetworkChuck',
+    subject: 'cyber-security',
+    subtopic: 'Packet Analysis & Forensics',
+    duration: '26:15',
+    level: 'Practical Networking',
+    views: '3.1M',
+    year: '2022',
+    gateWeightage: 'Packet Analysis & TCP Diagnostics',
+    description: 'Hands-on Wireshark course: capturing packets, filtering protocols, analyzing TCP 3-way handshakes, identifying cleartext credentials, and spotting network anomalies.',
+    keyTakeaways: [
+      'Capturing live interfaces and configuring promiscuous mode',
+      'Writing display filters: ip.addr, tcp.port, http.request, dns',
+      'Following TCP streams to reconstruct application payload data',
+      'Detecting ARP poisoning, port scans, and SYN flood attacks'
+    ],
+    tags: ['cyber-security', 'wireshark', 'networkchuck', 'packet analysis', 'forensics']
+  },
+
+  // ================= EXPANDED AI & MACHINE LEARNING =================
+  {
+    id: 'i_LwzRVP7bg',
+    title: 'Stanford CS229: Machine Learning - Lecture 1 (Supervised Learning & Regression)',
+    channel: 'Stanford Online / Andrew Ng',
+    subject: 'ai-ml',
+    subtopic: 'Machine Learning Theory',
+    duration: '1:19:12',
+    level: 'Stanford University Graduate',
+    views: '5.2M',
+    year: '2019',
+    gateWeightage: 'Core Machine Learning',
+    description: 'Iconic Stanford CS229 lecture by Andrew Ng: supervised vs unsupervised learning, linear regression, cost functions, gradient descent derivation, and LMS algorithm.',
+    keyTakeaways: [
+      'Supervised vs Unsupervised learning mathematical formulations',
+      'Mean Squared Error (MSE) loss function derivation and convexity',
+      'Batch Gradient Descent vs Stochastic Gradient Descent update rules',
+      'Normal equation derivation: theta = (X^T * X)^(-1) * X^T * y'
+    ],
+    tags: ['ai-ml', 'andrew ng', 'cs229', 'stanford', 'machine learning', 'regression']
+  },
+  {
+    id: 'wjZofJX0v4U',
+    title: 'Visualizing Attention and Transformers - How LLMs Process Text',
+    channel: '3Blue1Brown',
+    subject: 'ai-ml',
+    subtopic: 'Transformer Architecture',
+    duration: '26:45',
+    level: 'Advanced Deep Learning',
+    views: '4.8M',
+    year: '2024',
+    gateWeightage: 'Generative AI & LLMs',
+    description: 'Magnificent visual walkthrough of the Transformer architecture: query, key, and value vectors, scaled dot-product attention, multi-head attention, and embedding matrices.',
+    keyTakeaways: [
+      'Attention matrix computation: Softmax((Q * K^T) / sqrt(d_k)) * V',
+      'Why Query and Key dot products calculate contextual semantic similarity',
+      'Multi-head attention projecting representation across multiple subspaces',
+      'How positional encoding allows parallel processing without recurrent recurrence'
+    ],
+    tags: ['ai-ml', 'transformers', 'attention', '3blue1brown', 'llm', 'deep learning']
+  },
+  {
+    id: 'tPYj3fFJGjk',
+    title: 'PyTorch for Deep Learning & Neural Networks - Full Course',
+    channel: 'freeCodeCamp.org',
+    subject: 'ai-ml',
+    subtopic: 'PyTorch Framework',
+    duration: '25:40:00',
+    level: 'Production Deep Learning',
+    views: '3.6M',
+    year: '2022',
+    gateWeightage: 'Deep Learning Implementation',
+    description: 'Comprehensive PyTorch masterclass: tensor math, autograd engine, building neural networks, computer vision with CNNs, transfer learning, and deploying models.',
+    keyTakeaways: [
+      'PyTorch Tensor operations, GPU acceleration via CUDA, and dynamic compute graphs',
+      'Implementing forward pass, loss computation, and loss.backward() backprop',
+      'Dataset and DataLoader pipelines with image augmentations',
+      'Exporting PyTorch models to ONNX and TorchScript for production inference'
+    ],
+    tags: ['ai-ml', 'pytorch', 'deep learning', 'neural networks', 'freecodecamp']
+  },
+  {
+    id: 'cdg478N4AOM',
+    title: 'Reinforcement Learning Course - Q-Learning, Policy Gradients & Deep Q Networks',
+    channel: 'freeCodeCamp.org',
+    subject: 'ai-ml',
+    subtopic: 'Reinforcement Learning',
+    duration: '8:12:30',
+    level: 'Advanced AI',
+    views: '890K',
+    year: '2021',
+    gateWeightage: 'Markov Decision Processes & RL',
+    description: 'Master Reinforcement Learning from foundations: Markov Decision Processes (MDP), Bellman equations, tabular Q-learning, Policy Gradients, and Deep Q Networks (DQN).',
+    keyTakeaways: [
+      'Markov Decision Process 5-tuple: (S, A, P, R, gamma)',
+      'Bellman Optimality Equations for V*(s) and Q*(s, a)',
+      'Exploration vs Exploitation trade-off (epsilon-greedy strategy)',
+      'Deep Q Networks with experience replay buffer and target networks'
+    ],
+    tags: ['ai-ml', 'reinforcement learning', 'q learning', 'dqn', 'bellman', 'freecodecamp']
+  },
+
+  // ================= EXPANDED CLOUD & DEVOPS =================
+  {
+    id: 'SOTamWNgDKc',
+    title: 'AWS Certified Solutions Architect Associate Full Course - Pass the Exam!',
+    channel: 'freeCodeCamp.org',
+    subject: 'cloud-computing',
+    subtopic: 'Cloud Architecture & AWS',
+    duration: '10:25:00',
+    level: 'Professional Certification',
+    views: '1.9M',
+    year: '2023',
+    gateWeightage: 'High-Availability Cloud Architecture',
+    description: 'Comprehensive curriculum for AWS Solutions Architect: multi-region resilient architecture, auto-scaling groups, application load balancers, RDS Aurora, SQS/SNS messaging, and IAM security.',
+    keyTakeaways: [
+      'Designing highly available, fault-tolerant, and decoupled architectures on AWS',
+      'Multi-AZ vs Multi-Region deployments and Disaster Recovery strategies (RTO/RPO)',
+      'Decoupled asynchronous processing using SQS message queues and SNS pub/sub',
+      'Securing cloud resources via IAM policies, KMS encryption, and VPC Peering'
+    ],
+    tags: ['cloud-computing', 'aws', 'solutions architect', 'cloud', 'devops', 'freecodecamp']
+  },
+  {
+    id: 'N_7l0X3aWmg',
+    title: 'Microsoft Azure Fundamentals Certification Course (AZ-900) - Pass the Exam!',
+    channel: 'freeCodeCamp.org',
+    subject: 'cloud-computing',
+    subtopic: 'Azure Cloud Architecture',
+    duration: '3:15:00',
+    level: 'Industry Certification',
+    views: '1.5M',
+    year: '2023',
+    gateWeightage: 'Azure Cloud Services',
+    description: 'Complete hands-on masterclass for Microsoft Azure: Azure Resource Manager, Virtual Machines, Azure App Service, Virtual Networks, Blob Storage, and Azure Entra ID (Active Directory).',
+    keyTakeaways: [
+      'Azure core architectural components: Geographies, Regions, and Availability Zones',
+      'Compute options: Virtual Machines, Azure Container Instances, and Azure Functions',
+      'Azure Virtual Network (VNet), Subnets, NSGs, and VPN Gateway connectivity',
+      'Identity management, RBAC role-based access control, and Azure Policy governance'
+    ],
+    tags: ['cloud-computing', 'azure', 'az900', 'microsoft', 'cloud', 'devops']
+  },
+
+  // ================= EXPANDED WEB DEVELOPMENT =================
+  {
+    id: 'bMknfKXIFA8',
+    title: 'React Course - Beginner\'s Tutorial for React JavaScript Library [2024]',
+    channel: 'freeCodeCamp.org',
+    subject: 'web-dev',
+    subtopic: 'Frontend & React',
+    duration: '11:55:00',
+    level: 'Comprehensive Frontend',
+    views: '5.8M',
+    year: '2024',
+    gateWeightage: 'Modern Frontend Engineering',
+    description: 'Comprehensive React masterclass: JSX syntax, components, props, useState, useEffect, conditional rendering, forms, custom hooks, and state management.',
+    keyTakeaways: [
+      'Virtual DOM reconciliation algorithm and component render lifecycle',
+      'Managing state immutably with useState and useReducer',
+      'Handling side effects, API calls, and cleanup with useEffect',
+      'Building performant custom hooks and Context API state stores'
+    ],
+    tags: ['web-dev', 'react', 'javascript', 'frontend', 'freecodecamp', 'hooks']
+  },
+  {
+    id: 'Oe421EPjeBE',
+    title: 'Node.js and Express.js - Full Course for Beginners',
+    channel: 'freeCodeCamp.org',
+    subject: 'web-dev',
+    subtopic: 'Backend & Server Engineering',
+    duration: '8:16:00',
+    level: 'Production Backend',
+    views: '3.9M',
+    year: '2022',
+    gateWeightage: 'REST APIs & Server Architecture',
+    description: 'Master backend web development: Node.js event loop, libuv, modules, file system, streams, buffers, building RESTful APIs with Express, middleware, and MongoDB integration.',
+    keyTakeaways: [
+      'Node.js single-threaded asynchronous non-blocking event loop architecture',
+      'Express routing, parameter handling, and custom middleware pipelines',
+      'CRUD REST API design, HTTP status codes, and input validation',
+      'Database connection pooling and schema modeling with Mongoose'
+    ],
+    tags: ['web-dev', 'nodejs', 'express', 'backend', 'rest api', 'javascript']
+  },
+  {
+    id: 'C-52AI_ojyQ',
+    title: 'Next.js 14 Full Course 2024 - Server Components, Server Actions & App Router',
+    channel: 'freeCodeCamp.org',
+    subject: 'web-dev',
+    subtopic: 'Full Stack & SSR',
+    duration: '5:30:00',
+    level: 'Production Full Stack',
+    views: '1.2M',
+    year: '2024',
+    gateWeightage: 'Modern Full Stack Engineering',
+    description: 'Learn modern Next.js with App Router: React Server Components (RSC), Client Components, Server Actions, Dynamic Routing, Streaming with Suspense, and SEO optimization.',
+    keyTakeaways: [
+      'React Server Components (RSC) vs Client Components mental model',
+      'Server Actions replacing traditional REST API endpoint routes',
+      'Streaming HTML and progressive hydration with Suspense boundaries',
+      'Static Site Generation (SSG), Incremental Static Regeneration (ISR), and SSR'
+    ],
+    tags: ['web-dev', 'nextjs', 'react', 'full stack', 'ssr', 'server components']
+  },
+
+  // ================= EXPANDED DATA SCIENCE & BIG DATA =================
+  {
+    id: 'LHBE6Q9XlzI',
+    title: 'Python for Data Science - Full Course for Beginners',
+    channel: 'freeCodeCamp.org',
+    subject: 'data-science',
+    subtopic: 'Data Analysis & Scientific Python',
+    duration: '12:00:00',
+    level: 'Core Foundations',
+    views: '4.2M',
+    year: '2022',
+    gateWeightage: 'Data Science Core',
+    description: 'Comprehensive guide to scientific Python: NumPy ndarrays, vectorized operations, Pandas DataFrames, data cleaning, exploratory analysis, and Matplotlib visualizations.',
+    keyTakeaways: [
+      'NumPy memory layouts, broadcasting rules, and vectorized array calculations',
+      'Pandas data indexing, filtering, groupby aggregations, and merging DataFrames',
+      'Handling missing values, outlier detection, and data normalization',
+      'Plotting statistical distributions with Matplotlib and Seaborn'
+    ],
+    tags: ['data-science', 'python', 'pandas', 'numpy', 'data analysis', 'freecodecamp']
+  },
+  {
+    id: '_aWzGGNrcV8',
+    title: 'Apache Spark with Python (PySpark) - Big Data Engineering Full Course',
+    channel: 'freeCodeCamp.org',
+    subject: 'data-science',
+    subtopic: 'Big Data & Distributed Computing',
+    duration: '3:45:00',
+    level: 'Big Data Engineering',
+    views: '920K',
+    year: '2023',
+    gateWeightage: 'Distributed Data Systems',
+    description: 'Master big data processing with Apache Spark and PySpark: RDDs, DataFrames, Spark SQL, transformations vs actions, lazy evaluation, cluster architecture, and partitioned shuffles.',
+    keyTakeaways: [
+      'Spark Master-Worker cluster architecture (Driver, Cluster Manager, Executors)',
+      'Resilient Distributed Datasets (RDD) immutability and lineage graph fault tolerance',
+      'Transformations (map, filter) vs Actions (count, collect) and lazy evaluation',
+      'Optimizing query plans using the Catalyst Optimizer and Tungsten engine'
+    ],
+    tags: ['data-science', 'spark', 'pyspark', 'big data', 'distributed systems']
+  },
+
+  // ================= EXPANDED SYSTEM DESIGN =================
+  {
+    id: 'i53Gi_K3o7I',
+    title: 'System Design for Beginners Course - Distributed Systems & Scalability',
+    channel: 'freeCodeCamp.org',
+    subject: 'system-design',
+    subtopic: 'Scalability & System Architecture',
+    duration: '1:45:00',
+    level: 'Production System Design',
+    views: '3.1M',
+    year: '2023',
+    gateWeightage: 'System Design Core',
+    description: 'Essential primer on designing massive-scale web architectures: vertical vs horizontal scaling, load balancers, database replication, caching layers, CDNs, and microservices.',
+    keyTakeaways: [
+      'Horizontal vs Vertical scaling and the CAP Theorem (Consistency, Availability, Partition Tolerance)',
+      'Load balancing algorithms (Round Robin, Least Connections, Consistent Hashing)',
+      'Caching patterns: Cache-Aside, Write-Through, Write-Behind, and eviction policies (LRU)',
+      'Database scaling: Master-Slave read replicas, horizontal sharding, and database indexing'
+    ],
+    tags: ['system-design', 'distributed systems', 'scalability', 'architecture', 'freecodecamp']
+  },
+  {
+    id: 'xpDnVSmDvn0',
+    title: 'Microservices Architecture Explained - Design Patterns, APIs & Event Bus',
+    channel: 'freeCodeCamp.org',
+    subject: 'system-design',
+    subtopic: 'Microservices & Event-Driven Systems',
+    duration: '2:10:00',
+    level: 'Enterprise Architecture',
+    views: '1.8M',
+    year: '2022',
+    gateWeightage: 'Microservices Architecture',
+    description: 'Learn modern microservices design: decomposing monoliths, API Gateway pattern, Service Discovery, Event-Driven Architecture with Kafka, and Distributed Tracing.',
+    keyTakeaways: [
+      'Monolithic vs Microservice architecture tradeoffs and Domain-Driven Design (DDD)',
+      'API Gateway pattern for authentication, rate limiting, and request routing',
+      'Asynchronous event-driven communication using Apache Kafka and RabbitMQ',
+      'Managing distributed transactions using the Saga Pattern (Choreography vs Orchestration)'
+    ],
+    tags: ['system-design', 'microservices', 'kafka', 'api gateway', 'architecture']
   }
 ];
 

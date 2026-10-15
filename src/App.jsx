@@ -248,7 +248,7 @@ export default function App() {
       return 'edu://cs/home';
     }
     if (activeTab.type === 'player' && activeTab.videoId) {
-      return `https://youtube.com/watch?v=${activeTab.videoId}`;
+      return `edu://watch?v=${activeTab.videoId}`;
     }
     if (activeTab.type === 'syllabus') {
       return 'edu://cs/gate-syllabus';
@@ -718,6 +718,7 @@ export default function App() {
               <RelatedEducationalVideos
                 currentVideo={activeVideo}
                 onSelectVideo={handleSelectVideo}
+                catalog={allHomeVideos}
               />
             </div>
           </div>

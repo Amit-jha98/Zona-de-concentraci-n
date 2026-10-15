@@ -49,9 +49,15 @@ export default function VideoPlayer({
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const getChannelInitials = (name = '') => {
+    const words = name.trim().split(/\s+/);
+    if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase();
+    return name.slice(0, 2).toUpperCase() || 'CS';
+  };
+
   return (
     <div className={`video-player-wrapper ${isFocusMode ? 'focus-mode' : ''}`}>
-      {/* 16:9 Aspect Ratio IFrame Container with AdShield Privacy Sandbox */}
+      {/* 16:9 Aspect Ratio IFrame Container - Clean with NO overlapping overlays */}
       <div className="player-aspect-frame">
         <iframe
           key={`${video.id}-${useStandardEmbed}`}
@@ -62,99 +68,106 @@ export default function VideoPlayer({
           className="player-iframe"
           loading="eager"
         ></iframe>
-
-        {/* Subtle Watermark Badge inside frame showing AdShield status */}
-        <div className="player-shield-watermark" aria-hidden="true">
-          <ShieldCheck className="w-3 h-3 text-emerald-400" />
-          <span>{useStandardEmbed ? 'Direct Embed Mode' : 'AdShield Clean Stream'}</span>
-        </div>
       </div>
 
-      {/* Video Details & Meta Header */}
+      {/* Video Details & Modern Clutter-Free Meta Header */}
       <div className="player-metadata-panel">
-        <div className="player-title-row">
-          <h1 className="player-video-title">{video.title}</h1>
-          
-          <div className="player-quick-actions">
+        <h1 className="player-video-title">{video.title}</h1>
+
+        {/* Unified Channel & Action Bar (Clean single-row UX on desktop & mobile) */}
+        <div className="player-channel-bar">
+          <div className="player-channel-info">
+            <div className="channel-avatar-circle">
+              {getChannelInitials(video.channel)}
+            </div>
+            <div className="channel-text-col">
+              <div className="channel-name-row">
+                <span className="channel-name">{video.channel}</span>
+                <span className="verified-check" title="Verified Educator">✓</span>
+              </div>
+              <div className="channel-meta-sub">
+                <span>{video.views || 'Active'}</span>
+                {video.duration && <span>• {video.duration}</span>}
+                {video.year && <span>• {video.year}</span>}
+              </div>
+            </div>
+          </div>
+
+          {/* Action buttons in a unified horizontal pill strip */}
+          <div className="player-actions-strip">
             <button
               onClick={() => onToggleBookmark(video)}
-              className={`pill-btn ${isBookmarked ? 'bookmarked' : ''}`}
+              className={`player-action-pill ${isBookmarked ? 'saved' : ''}`}
               title={isBookmarked ? 'Remove Bookmark' : 'Save for Revision'}
             >
               {isBookmarked ? (
-                <>
-                  <BookmarkCheck className="w-3.5 h-3.5 text-blue-400" />
-                  <span>Saved</span>
-                </>
+                <BookmarkCheck className="w-3.5 h-3.5 text-blue-400" />
               ) : (
-                <>
-                  <Bookmark className="w-3.5 h-3.5" />
-                  <span>Bookmark</span>
-                </>
+                <Bookmark className="w-3.5 h-3.5" />
               )}
+              <span>{isBookmarked ? 'Saved' : 'Save'}</span>
             </button>
 
             <button
               onClick={onOpenNotes}
-              className="pill-btn primary"
+              className="player-action-pill notes"
               title="Open Lecture Notes Drawer"
             >
-              <FileEdit className="w-3.5 h-3.5" />
-              <span>Study Notes</span>
+              <FileEdit className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Notes</span>
+            </button>
+
+            <button
+              onClick={handleShare}
+              className="player-action-pill"
+              title="Copy YouTube Link"
+            >
+              {copied ? (
+                <Check className="w-3.5 h-3.5 text-emerald-400" />
+              ) : (
+                <Share2 className="w-3.5 h-3.5" />
+              )}
+              <span>{copied ? 'Copied' : 'Share'}</span>
             </button>
 
             <a
               href={`https://www.youtube.com/watch?v=${video.id}`}
               target="_blank"
               rel="noreferrer noopener"
-              className="pill-btn"
-              title="Watch directly on YouTube (if embed is restricted)"
+              className="player-action-pill"
+              title="Watch directly on YouTube"
             >
-              <ExternalLink className="w-3.5 h-3.5" />
+              <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
               <span>YouTube</span>
             </a>
-
-            <button
-              onClick={handleShare}
-              className="pill-btn icon-only"
-              title="Copy YouTube Link"
-            >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Share2 className="w-3.5 h-3.5" />}
-            </button>
           </div>
         </div>
 
-        {/* Taxonomy Badges */}
-        <div className="player-badges-strip">
-          <div className="badge-subject" style={{ borderColor: subjectMeta.color }}>
-            <span className="badge-dot" style={{ backgroundColor: subjectMeta.color }}></span>
+        {/* Clean Taxonomy & Feature Tags */}
+        <div className="player-tags-row">
+          <div className="player-tag-pill" style={{ '--tag-color': subjectMeta.color }}>
+            <span className="tag-dot" style={{ backgroundColor: subjectMeta.color }}></span>
             <span>{subjectMeta.name}</span>
           </div>
 
           {video.subtopic && (
-            <span className="badge-subtopic">{video.subtopic}</span>
+            <span className="player-tag-subtopic">{video.subtopic}</span>
           )}
 
           {video.gateWeightage && (
-            <span className="badge-gate">
+            <span className="player-tag-gate">
               <Award className="w-3 h-3 text-amber-400" />
-              <span>GATE: {video.gateWeightage}</span>
+              <span>{video.gateWeightage}</span>
             </span>
           )}
 
-          <span className="badge-channel">
-            <span>By {video.channel}</span>
+          <span className="player-adshield-pill">
+            <ShieldCheck className="w-3 h-3 text-emerald-400" />
+            <span>AdShield Protected</span>
           </span>
-
-          {video.duration && (
-            <span className="badge-duration">
-              <Clock className="w-3 h-3 text-slate-400" />
-              <span>{video.duration}</span>
-            </span>
-          )}
         </div>
 
-        {/* Collapsible Key Takeaways & Revision Notes Card */}
+        {/* Collapsible Key Takeaways Card */}
         {video.keyTakeaways && video.keyTakeaways.length > 0 && (
           <div className="takeaways-card">
             <div 
@@ -163,7 +176,7 @@ export default function VideoPlayer({
             >
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span className="font-medium text-xs text-slate-200">
+                <span className="font-semibold text-xs text-slate-200">
                   Core Exam Concepts & Key Takeaways ({video.keyTakeaways.length})
                 </span>
               </div>
@@ -176,7 +189,7 @@ export default function VideoPlayer({
               <ul className="takeaways-list">
                 {video.keyTakeaways.map((takeaway, idx) => (
                   <li key={idx} className="takeaway-item">
-                    <span className="takeaway-bullet">•</span>
+                    <span className="takeaway-bullet">✓</span>
                     <span>{takeaway}</span>
                   </li>
                 ))}
@@ -185,7 +198,7 @@ export default function VideoPlayer({
           </div>
         )}
 
-        {/* Video Description */}
+        {/* Clean Video Description */}
         {video.description && (
           <div className="video-description-box">
             <p className="description-text">{video.description}</p>
