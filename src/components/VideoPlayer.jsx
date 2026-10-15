@@ -269,18 +269,30 @@ export default function VideoPlayer({
           loading="eager"
         ></iframe>
 
-        {/* Floating Quick Exit Fullscreen Button in Horizontal/Fullscreen Mode */}
+        {/* Floating Quick Controls Overlay in Horizontal/Fullscreen Mode */}
         {(isAnyFullscreen || isRotatedLandscape) && (
-          <button
-            type="button"
-            className="player-fullscreen-exit-btn"
-            onClick={toggleFullscreenHorizontal}
-            title="Exit Horizontal Mode"
-            aria-label="Exit Horizontal Fullscreen Mode"
-          >
-            <Minimize2 size={15} />
-            <span>Exit Horizontal</span>
-          </button>
+          <div className="player-fullscreen-controls-overlay">
+            <button
+              type="button"
+              className="player-fullscreen-ctrl-btn rotate"
+              onClick={() => setIsRotatedLandscape(prev => !prev)}
+              title="Rotate 90° for Horizontal Display"
+              aria-label="Rotate Orientation 90°"
+            >
+              <RotateCw size={14} />
+              <span>Rotate 90°</span>
+            </button>
+            <button
+              type="button"
+              className="player-fullscreen-ctrl-btn exit"
+              onClick={toggleFullscreenHorizontal}
+              title="Exit Horizontal Mode"
+              aria-label="Exit Horizontal Fullscreen Mode"
+            >
+              <Minimize2 size={14} />
+              <span>Exit Horizontal</span>
+            </button>
+          </div>
         )}
       </div>
 
