@@ -558,11 +558,11 @@
 .player-metadata-panel {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
-  padding: 18px 20px;
+  padding: 20px;
 }
 
 .player-title-row {
@@ -577,44 +577,59 @@
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.4;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.3px;
+  flex: 1;
+  min-width: 0;
 }
 
 .player-quick-actions {
   display: flex;
   align-items: center;
   gap: 8px;
-  shrink: 0;
+  flex-shrink: 0;
 }
 
 .pill-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 6px;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 16px;
+  height: 36px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-subtle);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--text-secondary);
-  transition: all var(--transition-fast);
+  transition: all var(--transition-smooth);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
 }
 
 .pill-btn:hover {
   background: var(--bg-surface-hover);
   color: var(--text-primary);
   border-color: var(--border-medium);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pill-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .pill-btn.primary {
-  background: var(--accent-blue-subtle);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(59, 130, 246, 0.18));
   border-color: rgba(56, 189, 248, 0.4);
   color: var(--accent-blue);
 }
 
 .pill-btn.primary:hover {
-  background: rgba(56, 189, 248, 0.2);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(59, 130, 246, 0.28));
+  border-color: rgba(56, 189, 248, 0.6);
 }
 
 .pill-btn.bookmarked {
@@ -623,60 +638,73 @@
   color: var(--accent-blue);
 }
 
+.pill-btn.icon-only {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
 /* Taxonomy Badges */
 .player-badges-strip {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
+  padding: 4px 0;
 }
 
 .badge-subject {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 3px 8px;
-  border-radius: 4px;
+  padding: 5px 10px;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text-primary);
+  transition: background var(--transition-fast);
+}
+
+.badge-subject:hover {
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .badge-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
 }
 
 .badge-subtopic {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-secondary);
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-subtle);
-  padding: 3px 8px;
-  border-radius: 4px;
+  padding: 5px 10px;
+  border-radius: 6px;
 }
 
 .badge-gate {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  font-size: 11px;
-  font-weight: 500;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
   color: var(--accent-amber);
   background: var(--accent-amber-subtle);
   border: 1px solid rgba(245, 158, 11, 0.3);
-  padding: 3px 8px;
-  border-radius: 4px;
+  padding: 5px 10px;
+  border-radius: 6px;
 }
 
 .badge-channel, .badge-duration {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  font-size: 11px;
+  gap: 5px;
+  font-size: 12px;
   color: var(--text-muted);
 }
 
@@ -964,28 +992,36 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
+  padding: 7px 14px;
+  height: 34px;
   border-radius: 999px;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 500;
   color: var(--text-secondary);
   white-space: nowrap;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-smooth);
+  cursor: pointer;
 }
 
 .subject-pill:hover {
   background: var(--bg-surface-hover);
   color: var(--text-primary);
   border-color: var(--border-medium);
+  transform: translateY(-1px);
+}
+
+.subject-pill:active {
+  transform: translateY(0);
 }
 
 .subject-pill.active {
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--pill-accent, var(--accent-blue));
   color: var(--text-primary);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  font-weight: 600;
 }
 
 /* Catalog Status Banner */
@@ -1066,16 +1102,21 @@
   flex-direction: column;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   transition: all var(--transition-smooth);
 }
 
 .video-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: var(--border-medium);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.video-card:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .video-card-thumb {
@@ -1166,7 +1207,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 14px;
+  padding: 14px 16px 16px;
   flex: 1;
 }
 
@@ -2324,18 +2365,18 @@
     padding-bottom: calc(var(--mobile-nav-height) + var(--safe-bottom));
   }
 
-  /* Browser Chrome Top Header */
+  /* Browser Chrome Top Header - cleaner mobile header */
   .browser-chrome {
-    padding: 6px 12px;
-    height: 52px;
-    min-height: 52px;
-    gap: 8px;
+    padding: 6px 10px;
+    height: 48px;
+    min-height: 48px;
+    gap: 6px;
     background-color: var(--bg-chrome);
     border-bottom: 1px solid var(--border-subtle);
   }
 
   .nav-controls {
-    display: none; /* Hide back/forward on mobile to give search bar breathing room */
+    display: none;
   }
 
   .omnibox-form {
@@ -2344,128 +2385,165 @@
   }
 
   .omnibox-container {
-    height: 38px;
+    height: 36px;
     padding: 0 10px;
     background-color: #111113;
     border: 1px solid var(--border-subtle);
-    border-radius: 8px;
+    border-radius: 10px;
   }
 
   .omnibox-shortcut {
-    display: none; /* Hide 'Ctrl K' on touch devices */
+    display: none;
   }
 
   .omnibox-protocol {
-    display: none; /* Hide 'edu://cs' badge on mobile */
+    display: none;
   }
 
   .omnibox-input {
-    font-size: 13px;
+    font-size: 13.5px;
   }
 
   .browser-actions {
-    gap: 6px;
+    gap: 4px;
   }
 
   .action-btn {
     height: 36px;
-    padding: 0 8px;
-  }
-
-  .action-btn-text {
-    display: none; /* Icon only on mobile header */
-  }
-
-  /* ========================================================================
-     Video Player Mobile Fixes (Resolves text squishing and button wrapping)
-     ======================================================================== */
-  .player-layout {
-    padding: 10px;
-    gap: 14px;
-  }
-
-  .player-main-col {
-    gap: 12px;
-  }
-
-  .player-aspect-frame {
+    width: 36px;
+    padding: 0;
+    justify-content: center;
     border-radius: 8px;
   }
 
-  .player-metadata-panel {
-    padding: 14px 12px;
+  .action-btn-text {
+    display: none;
+  }
+
+  /* Tighter AdShield pill on mobile */
+  .adshield-pill {
+    padding: 4px 8px;
+    height: 32px;
+    gap: 5px;
+  }
+
+  .adshield-label {
+    font-size: 11px;
+  }
+
+  /* ========================================================================
+     Video Player Mobile - Refined Layout
+     ======================================================================== */
+  .player-layout {
+    padding: 8px;
+    gap: 10px;
+  }
+
+  .player-main-col {
+    gap: 10px;
+  }
+
+  .player-aspect-frame {
     border-radius: 10px;
+  }
+
+  .player-metadata-panel {
+    padding: 16px 14px;
+    border-radius: 12px;
     gap: 14px;
   }
 
-  /* TITLE ROW FIX: Title renders full-width on top; action buttons sit cleanly underneath! */
+  /* Title stacks on top, actions below in a clean grid */
   .player-title-row {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 12px !important;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
   }
 
   .player-video-title {
-    font-size: 16px !important;
-    line-height: 1.35 !important;
-    font-weight: 600 !important;
-    width: 100% !important;
-    color: var(--text-primary) !important;
+    font-size: 17px;
+    line-height: 1.35;
+    font-weight: 600;
+    width: 100%;
+    color: var(--text-primary);
     word-break: break-word;
   }
 
+  /* Action buttons: uniform 4-item grid for perfect balance */
   .player-quick-actions {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 8px;
+    width: 100%;
   }
 
   .player-quick-actions .pill-btn {
-    flex: 1 1 calc(50% - 4px);
-    height: 42px !important;
-    min-height: 42px !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    border-radius: 8px !important;
-    justify-content: center !important;
-    padding: 0 12px !important;
+    height: 44px;
+    min-height: 44px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 0 10px;
   }
 
   .player-quick-actions .pill-btn.icon-only {
-    flex: 0 0 42px !important;
-    width: 42px !important;
-    padding: 0 !important;
+    width: 44px;
+    height: 44px;
+    padding: 0;
   }
 
-  /* Taxonomy Badges on Mobile */
+  /* Taxonomy Badges: horizontal scroll if too many */
   .player-badges-strip {
     gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .player-badges-strip::-webkit-scrollbar {
+    display: none;
   }
 
   .badge-subject,
   .badge-subtopic,
-  .badge-gate,
+  .badge-gate {
+    font-size: 11.5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+
   .badge-channel,
   .badge-duration {
-    font-size: 11px;
-    padding: 4px 8px;
+    font-size: 11.5px;
+    flex-shrink: 0;
+  }
+
+  /* Takeaways card tighter on mobile */
+  .takeaways-card {
+    border-radius: 10px;
+  }
+
+  .takeaways-header {
+    padding: 12px 14px;
   }
 
   /* ========================================================================
      Catalog & Feed Mobile App Styling
      ======================================================================== */
   .catalog-container {
-    padding: 12px;
-    gap: 14px;
+    padding: 10px;
+    gap: 12px;
   }
 
   .feed-mode-switcher-bar {
     flex-direction: column;
     align-items: stretch;
-    gap: 10px;
+    gap: 8px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
     background-color: #0c0c0e;
     border: 1px solid var(--border-subtle);
   }
@@ -2477,46 +2555,55 @@
     -webkit-overflow-scrolling: touch;
     gap: 6px;
     padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .feed-mode-toggle-group::-webkit-scrollbar {
+    display: none;
   }
 
   .feed-mode-btn {
-    height: 38px;
+    height: 40px;
     padding: 6px 14px;
     font-size: 12.5px;
     white-space: nowrap;
-    border-radius: 8px;
+    border-radius: 10px;
     flex-shrink: 0;
   }
 
   .feed-controls-right {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
     gap: 8px;
   }
 
   .feed-autoupdate-btn,
   .feed-refresh-btn {
-    flex: 1;
-    height: 38px;
+    height: 40px;
     justify-content: center;
     font-size: 12px;
-    border-radius: 8px;
+    border-radius: 10px;
   }
 
   /* Subject Pills on Mobile */
   .subject-pills-bar {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 4px 0 8px 0;
+    padding: 2px 0 6px 0;
     gap: 6px;
+    scrollbar-width: none;
+  }
+
+  .subject-pills-bar::-webkit-scrollbar {
+    display: none;
   }
 
   .subject-pill {
     height: 36px;
-    padding: 6px 12px;
+    padding: 6px 14px;
     font-size: 12px;
-    border-radius: 8px;
+    border-radius: 999px;
     flex-shrink: 0;
   }
 
@@ -2525,41 +2612,54 @@
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 10px 12px;
+    border-radius: 10px;
   }
 
   .syllabus-cta-btn {
     width: 100%;
-    height: 40px;
+    height: 42px;
     justify-content: center;
-    border-radius: 8px;
-    font-size: 12.5px;
+    border-radius: 10px;
+    font-size: 13px;
   }
 
   /* Video Grid: 1 Column on Mobile */
   .video-cards-grid {
     grid-template-columns: 1fr !important;
-    gap: 14px;
+    gap: 12px;
   }
 
   .video-card {
-    border-radius: 10px;
+    border-radius: 12px;
+  }
+
+  .video-card-body {
+    padding: 12px 14px 14px;
+  }
+
+  .card-title {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .card-author-row {
+    font-size: 12px;
   }
 
   /* Continue Updating Button on Mobile */
   .continue-update-stream-container {
-    padding: 24px 10px 40px;
+    padding: 20px 10px 36px;
     width: 100%;
   }
 
   .continue-update-btn {
     width: 100%;
-    height: 48px;
-    min-height: 48px;
+    height: 50px;
+    min-height: 50px;
     justify-content: center;
     font-size: 14px;
-    border-radius: 10px;
+    border-radius: 12px;
   }
 
   /* Bottom Sheet Drawers on Mobile */
@@ -2576,7 +2676,7 @@
     box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.95) !important;
   }
 
-  /* Mobile Bottom Navigation Bar */
+  /* Mobile Bottom Navigation Bar - polished app-like feel */
   .mobile-bottom-nav {
     display: flex;
     position: fixed;
@@ -2585,10 +2685,10 @@
     right: 0;
     height: calc(var(--mobile-nav-height) + var(--safe-bottom));
     padding-bottom: var(--safe-bottom);
-    background-color: rgba(9, 9, 11, 0.96);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-top: 1px solid #27272a;
+    background-color: rgba(9, 9, 11, 0.97);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-top: 1px solid rgba(39, 39, 42, 0.8);
     z-index: 50;
     justify-content: space-around;
     align-items: center;
@@ -2600,18 +2700,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 2px;
     height: 100%;
     color: var(--text-muted);
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 500;
-    transition: color var(--transition-fast);
-    padding: 4px 0;
+    transition: all var(--transition-fast);
+    padding: 6px 0 2px;
     background: transparent;
+    position: relative;
   }
 
   .mobile-nav-item.active {
     color: #ffffff;
+  }
+
+  .mobile-nav-item.active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: var(--accent-blue);
+    border-radius: 0 0 2px 2px;
   }
 
   .mobile-nav-item.active .mobile-nav-icon {
@@ -2623,10 +2736,15 @@
     pointer-events: none;
   }
 
+  .mobile-nav-label {
+    font-size: 10px;
+    letter-spacing: 0.2px;
+  }
+
   .mobile-nav-badge {
     position: absolute;
-    top: -4px;
-    right: -8px;
+    top: 2px;
+    right: calc(50% - 20px);
     background-color: var(--accent-blue);
     color: #ffffff;
     font-size: 9px;
@@ -2635,20 +2753,38 @@
     border-radius: 999px;
     min-width: 14px;
     text-align: center;
+    line-height: 12px;
+  }
+
+  /* Related Sidebar as compact list on mobile */
+  .related-videos-sidebar {
+    border-radius: 12px;
   }
 }
 
 @media (max-width: 480px) {
+  .player-quick-actions {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
   .player-quick-actions .pill-btn {
-    font-size: 12px !important;
-    height: 38px !important;
-    min-height: 38px !important;
+    font-size: 12.5px !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    border-radius: 10px !important;
+  }
+
+  .player-quick-actions .pill-btn.icon-only {
+    width: 42px !important;
+    height: 42px !important;
   }
 
   .player-video-title {
-    font-size: 15px !important;
+    font-size: 15.5px !important;
+  }
+
+  .feed-mode-btn {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }
-
-
-
