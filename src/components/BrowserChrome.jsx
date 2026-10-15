@@ -173,7 +173,7 @@ export default function BrowserChrome({
 
         <button
           onClick={onOpenSyllabus}
-          className="action-btn"
+          className="action-btn desktop-only"
           title="GATE CS Syllabus Checklist"
         >
           <BookOpen className="w-4 h-4 text-amber-400" />
@@ -182,7 +182,7 @@ export default function BrowserChrome({
 
         <button
           onClick={onOpenBookmarks}
-          className="action-btn"
+          className="action-btn desktop-only"
           title="Saved Lectures"
         >
           <Bookmark className="w-4 h-4 text-blue-400" />
@@ -191,7 +191,7 @@ export default function BrowserChrome({
 
         <button
           onClick={onToggleFocusMode}
-          className={`action-btn ${isFocusMode ? 'active' : ''}`}
+          className={`action-btn desktop-only ${isFocusMode ? 'active' : ''}`}
           title={isFocusMode ? 'Exit Theater Focus Mode' : 'Enter Theater Focus Mode'}
         >
           {isFocusMode ? (

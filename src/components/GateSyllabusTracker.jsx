@@ -70,12 +70,23 @@ export default function GateSyllabusTracker({ onSelectVideo, onSelectSubject }) 
       {/* Syllabus Header Dashboard */}
       <div className="syllabus-hero-card">
         <div className="syllabus-hero-content">
-          <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-amber-400" />
-            <h1 className="syllabus-hero-title">Official GATE CS Syllabus & Knowledge Matrix</h1>
+          <div className="syllabus-hero-header">
+            <div className="flex items-center gap-2">
+              <Award className="w-5 h-5 text-amber-400 shrink-0" />
+              <h1 className="syllabus-hero-title">GATE CS Syllabus Matrix</h1>
+            </div>
+            <button 
+              onClick={handleResetProgress}
+              className="syllabus-reset-btn"
+              title="Reset checklist progress"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span>Reset</span>
+            </button>
           </div>
+
           <p className="syllabus-hero-sub">
-            Track syllabus coverage across all 9 core subjects. Launch verified high-yield video lectures for any topic.
+            Track syllabus coverage across all 9 core subjects. Mark topics completed and launch high-yield lectures directly.
           </p>
 
           <div className="syllabus-progress-stats">
@@ -86,18 +97,11 @@ export default function GateSyllabusTracker({ onSelectVideo, onSelectSubject }) 
               ></div>
             </div>
 
-            <div className="flex items-center justify-between text-xs mt-2 text-slate-300">
-              <span className="font-semibold text-emerald-400">
-                {completedTopics} of {totalTopics} Core Topics Mastered ({percentComplete}%)
+            <div className="syllabus-stats-row">
+              <span className="syllabus-stats-highlight">
+                {completedTopics} of {totalTopics} Core Topics Mastered
               </span>
-              <button 
-                onClick={handleResetProgress}
-                className="text-slate-400 hover:text-rose-400 flex items-center gap-1 transition-colors"
-                title="Reset checklist"
-              >
-                <RotateCcw className="w-3 h-3" />
-                <span>Reset</span>
-              </button>
+              <span className="syllabus-percent-badge">{percentComplete}% Complete</span>
             </div>
           </div>
         </div>
@@ -116,14 +120,22 @@ export default function GateSyllabusTracker({ onSelectVideo, onSelectSubject }) 
           return (
             <div key={subj.subjectId} className="syllabus-subject-card">
               <div className="subj-card-header">
-                <div>
-                  <div className="flex items-center gap-2">
+                <div className="subj-header-left">
+                  <div className="subj-title-row">
                     <h2 className="subj-name">{subj.name}</h2>
                     <span className="subj-weightage-pill">{subj.weightage}</span>
                   </div>
-                  <span className="subj-progress-text">
-                    {subjectCompleted}/{subjectTotal} Topics • {subjectPercent}%
-                  </span>
+                  <div className="subj-progress-info">
+                    <span className="subj-progress-text">
+                      {subjectCompleted}/{subjectTotal} Topics • {subjectPercent}%
+                    </span>
+                    <div className="subj-mini-progress-track">
+                      <div 
+                        className="subj-mini-progress-fill" 
+                        style={{ width: `${subjectPercent}%` }}
+                      />
+                    </div>
+                  </div>
                 </div>
 
                 {matchedLecture && (
@@ -132,8 +144,8 @@ export default function GateSyllabusTracker({ onSelectVideo, onSelectSubject }) 
                     className="subj-play-lecture-btn"
                     title={`Watch high-yield lecture on ${subj.name}`}
                   >
-                    <Play className="w-3 h-3 fill-emerald-400 text-emerald-400" />
-                    <span>Watch Lecture</span>
+                    <Play className="w-3 h-3 fill-emerald-400 text-emerald-400 shrink-0" />
+                    <span>Watch</span>
                   </button>
                 )}
               </div>
@@ -148,11 +160,13 @@ export default function GateSyllabusTracker({ onSelectVideo, onSelectSubject }) 
                     role="checkbox"
                     aria-checked={topic.done}
                   >
-                    {topic.done ? (
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                    ) : (
-                      <Circle className="w-4 h-4 text-slate-500 shrink-0" />
-                    )}
+                    <span className="topic-checkbox-icon">
+                      {topic.done ? (
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                      ) : (
+                        <Circle className="w-4 h-4 text-slate-500 shrink-0" />
+                      )}
+                    </span>
                     <span className="topic-title">{topic.title}</span>
                   </li>
                 ))}
