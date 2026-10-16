@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2024-cs1-paper",
+    "url": "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS124S5.pdf",
+    "bytes": 834514
+  },
+  {
+    "id": "2024-cs2-paper",
+    "url": "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS224S6.pdf",
+    "bytes": 886167
+  },
+  {
+    "id": "2024-cs1-key",
+    "url": "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS1FinalAnswerKey.pdf",
+    "bytes": 313008
+  },
+  {
+    "id": "2024-cs2-key",
+    "url": "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf",
+    "bytes": 313035
+  },
+  {
+    "id": "2025-cs1-paper",
+    "url": "https://gate2027.iitm.ac.in/static/doc/download/2025/CS1.pdf",
+    "error": "2025-cs1-paper: HTTP 404"
+  },
+  {
+    "id": "2025-cs2-paper",
+    "url": "https://gate2027.iitm.ac.in/static/doc/download/2025/CS2.pdf",
+    "error": "2025-cs2-paper: HTTP 404"
+  },
+  {
+    "id": "2025-cs1-key",
+    "url": "https://gate2027.iitm.ac.in/static/doc/download/2025/CS1_Keys.pdf",
+    "error": "2025-cs1-key: HTTP 404"
+  },
+  {
+    "id": "2025-cs2-key",
+    "url": "https://gate2027.iitm.ac.in/static/doc/download/2025/CS2_Keys.pdf",
+    "error": "2025-cs2-key: HTTP 404"
+  }
+]

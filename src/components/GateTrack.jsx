@@ -21,6 +21,8 @@ import {
 import {
   GATE_SECTIONS,
   GATE_LESSONS,
+  EXAM_LESSONS,
+  APTITUDE_SECTION,
   LESSON_BY_ID,
   SYLLABUS_SOURCE,
   lessonMarkdown,
@@ -31,6 +33,10 @@ import { useVideos } from "../hooks/useVideos.js";
 import { useTopicCandidates } from "../hooks/useTopicCandidates.js";
 import { uniqueVideos } from "../../shared/video.js";
 import VideoCard, { SkeletonGrid } from "./ui/VideoCard.jsx";
+import TopicPractice from "./TopicPractice.jsx";
+import TopicTutor from "./TopicTutor.jsx";
+import RichText from "./ui/RichText.jsx";
+import "./learning.css";
 
 export function GateOverview({ progress }) {
   const [expanded, setExpanded] = useState(null);
@@ -129,6 +135,7 @@ export function GateOverview({ progress }) {
           <ArrowRight size={16} />
         </button>
       </div>
+      <section className="gate-exam-entry" aria-label="Mock exam preparation"><div><span className="eyebrow">PUT YOUR PREPARATION TO THE TEST</span><h2>Practise full GATE papers</h2><p>Timed PYQ mocks, official-key scoring, worked solutions and topic-by-topic review.</p></div><button className="button button-dark" onClick={() => navigate("/mocks")}>Open mock exams<ArrowRight size={17} /></button></section>
       {revision.length > 0 && (
         <div className="revision-strip">
           <Lightbulb size={19} />
@@ -252,11 +259,12 @@ export function GateOverview({ progress }) {
         </div>
       )}
       <div className="curriculum-footer">
+        <div className="aptitude-supplement"><h2>General Aptitude supplement</h2><p>The full GATE paper includes 15 marks of aptitude. These lessons supplement your supplied CS syllabus.</p><div className="aptitude-links">{APTITUDE_SECTION.lessons.map((lesson) => <button key={lesson.id} className="button" onClick={() => navigate(`/lesson/${lesson.id}`)}>{lesson.title}<ChevronRight size={16} /></button>)}</div></div>
+      </div>
+      <div className="curriculum-footer">
         <BookOpen size={19} />
         <p>
-          The track follows the GATE-cs Syllabus. Questions are
-          original concept checks, not official previous-year papers. General
-          Aptitude is outside this PDF and is not included in this track.
+          The CS track follows the supplied syllabus. Practice includes original concept checks and topic-mapped official past-year questions. The aptitude supplement supports full-paper mock exams.
         </p>
       </div>
     </div>
@@ -302,8 +310,8 @@ export function GateLesson({
         </button>
       </div>
     );
-  const index = GATE_LESSONS.findIndex((item) => item.id === id);
-  const section = GATE_SECTIONS.find((s) => s.id === lesson.sectionId);
+  const index = EXAM_LESSONS.findIndex((item) => item.id === id);
+  const section = [...GATE_SECTIONS, APTITUDE_SECTION].find((s) => s.id === lesson.sectionId);
   const state = progress[id] || {};
   const answeredCorrectly = lesson.quiz.every(
     (q) => state.answers?.[q.id]?.correct,
@@ -317,8 +325,8 @@ export function GateLesson({
   ];
   const complete = () => {
     setState({ completed: true, completedAt: new Date().toISOString() });
-    if (GATE_LESSONS[index + 1])
-      navigate(`/lesson/${GATE_LESSONS[index + 1].id}`);
+    if (EXAM_LESSONS[index + 1])
+      navigate(`/lesson/${EXAM_LESSONS[index + 1].id}`);
   };
   return (
     <div className="lesson-page page-width">
@@ -377,10 +385,10 @@ export function GateLesson({
               Suggested before this:{" "}
               <button
                 onClick={() =>
-                  navigate(`/lesson/${GATE_LESSONS[index - 1].id}`)
+                  navigate(`/lesson/${EXAM_LESSONS[index - 1].id}`)
                 }
               >
-                {GATE_LESSONS[index - 1].title}
+                {EXAM_LESSONS[index - 1].title}
               </button>
             </p>
           )}
@@ -473,15 +481,10 @@ export function GateLesson({
                 </div>
                 <div className="further-reading">
                   <span>Further reading</span>
-                  <a
-                    href={section.reference.url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {section.reference.label}
-                    <ExternalLink size={14} />
-                  </a>
+                  <a href={section.reference.url} target="_blank" rel="noreferrer">{section.reference.label}<ExternalLink size={14} /></a>
                 </div>
+                {lesson.examGuide?.length > 0 && <section className="lesson-exam-guide"><h2>Prepare at GATE depth</h2>{lesson.examGuide.map((item) => <section key={item.title}><h3>{item.title}</h3><RichText>{item.body}</RichText></section>)}</section>}
+                <TopicTutor key={lesson.id} lessonId={lesson.id} title={lesson.title} />
                 <label className="personal-note-label">
                   Your revision note
                   <textarea
@@ -657,6 +660,7 @@ export function GateLesson({
                     }
                   />
                 ))}
+                <TopicPractice lesson={lesson} saved={state.pyqAnswers} onAnswer={(questionId, answer) => setState({ pyqAnswers: { ...state.pyqAnswers, [questionId]: answer } })} />
                 <div className="completion-box">
                   <div>
                     <h3>
@@ -690,27 +694,27 @@ export function GateLesson({
             {index > 0 ? (
               <button
                 onClick={() =>
-                  navigate(`/lesson/${GATE_LESSONS[index - 1].id}`)
+                  navigate(`/lesson/${EXAM_LESSONS[index - 1].id}`)
                 }
               >
                 <ArrowLeft size={17} />
                 <span>
                   <small>Previous concept</small>
-                  {GATE_LESSONS[index - 1].title}
+                  {EXAM_LESSONS[index - 1].title}
                 </span>
               </button>
             ) : (
               <span />
             )}
-            {index < GATE_LESSONS.length - 1 && (
+            {index < EXAM_LESSONS.length - 1 && (
               <button
                 onClick={() =>
-                  navigate(`/lesson/${GATE_LESSONS[index + 1].id}`)
+                  navigate(`/lesson/${EXAM_LESSONS[index + 1].id}`)
                 }
               >
                 <span>
                   <small>Next concept</small>
-                  {GATE_LESSONS[index + 1].title}
+                  {EXAM_LESSONS[index + 1].title}
                 </span>
                 <ArrowRight size={17} />
               </button>

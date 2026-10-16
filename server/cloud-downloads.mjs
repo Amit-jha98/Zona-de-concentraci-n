@@ -1,4 +1,4 @@
-import * as Blob from "@vercel/blob";
+import { cloudinaryConfigured, cloudinaryStorage } from "./cloudinary-storage.mjs";
 import { createReadStream, existsSync } from "node:fs";
 import { mkdtemp, rm, stat } from "node:fs/promises";
 import { tmpdir } from "node:os";
@@ -16,19 +16,15 @@ import { VIDEO_ID } from "../shared/video.js";
 
 const PREFIX = "edubrowse-downloads/";
 export const CLOUD_DOWNLOAD_LIMITS = {
-  maxBytes: 150 * 1024 * 1024,
+  maxBytes: 100 * 1024 * 1024,
   timeoutMs: 270000,
   retentionMs: 86400000,
 };
 const validJobId = (id) => /^[a-f0-9-]{36}$/.test(id || "");
-const configured = () =>
-  Boolean(
-    process.env.BLOB_READ_WRITE_TOKEN ||
-      (process.env.BLOB_STORE_ID && process.env.VERCEL_OIDC_TOKEN),
-  );
+const configured = cloudinaryConfigured;
 const missingStorage = () =>
   new ServiceError(
-    "Downloads need storage on this deployment. Connect a Private Vercel Blob store to this project, then redeploy.",
+    "Downloads need Cloudinary storage. Configure CLOUDINARY_URL (or the cloud name, API key and API secret) on the server, then redeploy.",
     503,
     "DOWNLOAD_STORAGE_REQUIRED",
   );
@@ -121,7 +117,7 @@ export async function renderCloudMedia(
 }
 
 export function createCloudDownloadService({
-  blob = Blob,
+  blob = cloudinaryStorage,
   render = renderCloudMedia,
   approve = videoMetadata,
   isConfigured = configured,
@@ -162,7 +158,7 @@ export function createCloudDownloadService({
   const expired = (job) => Date.parse(job.expiresAt) <= now();
   return {
     async status() {
-      const result = { mode: "cloud", maxSizeMB: 150, preparationSeconds: 270 };
+      const result = { mode: "cloud", storage: "cloudinary", maxSizeMB: 100, preparationSeconds: 270 };
       if (!isConfigured())
         return {
           ...result,
@@ -258,7 +254,7 @@ export function createCloudDownloadService({
           filename,
           filePath,
           size: info.size,
-          storage: "vercel-blob",
+          storage: "cloudinary",
           createdAt: new Date(now()).toISOString(),
           expiresAt: new Date(
             now() + CLOUD_DOWNLOAD_LIMITS.retentionMs,
@@ -286,7 +282,7 @@ export function createCloudDownloadService({
           );
         if (error.name?.startsWith("Blob"))
           throw new ServiceError(
-            "Download storage is unavailable. Check that a Private Vercel Blob store is connected to this deployment, then retry.",
+            "Cloudinary storage is unavailable. Check the server credentials and account limits, then retry.",
             503,
             "DOWNLOAD_STORAGE_ERROR",
           );

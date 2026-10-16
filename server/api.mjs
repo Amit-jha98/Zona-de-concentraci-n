@@ -8,6 +8,8 @@ import {
 import { downloadService } from "./download-service.mjs";
 import { cloudDownloads } from "./cloud-downloads.mjs";
 import { VIDEO_ID } from "../shared/video.js";
+import { answerTopicQuestion, createTutorLimiter } from "./tutor.mjs";
+import { geminiConfigured } from "./gemini-client.mjs";
 
 function send(res, status, data) {
   res.writeHead(status, {
@@ -17,7 +19,7 @@ function send(res, status, data) {
   });
   res.end(JSON.stringify(data));
 }
-async function readBody(req) {
+async function readBody(req, limit = 4096) {
   if (!req.headers["content-type"]?.startsWith("application/json"))
     throw new ServiceError("Expected JSON.", 415);
   // Vercel's Node adapter may already have consumed and parsed the body.
@@ -27,7 +29,7 @@ async function readBody(req) {
       : typeof req.body === "string"
         ? req.body
         : JSON.stringify(req.body);
-    if (Buffer.byteLength(raw) > 4096)
+    if (Buffer.byteLength(raw) > limit)
       throw new ServiceError("Request is too large.", 413);
     try {
       const value = JSON.parse(raw);
@@ -41,7 +43,7 @@ async function readBody(req) {
   let raw = "";
   for await (const chunk of req) {
     raw += chunk;
-    if (raw.length > 4096) throw new ServiceError("Request is too large.", 413);
+    if (Buffer.byteLength(raw) > limit) throw new ServiceError("Request is too large.", 413);
   }
   try {
     const value = JSON.parse(raw);
@@ -54,6 +56,7 @@ async function readBody(req) {
 }
 
 let activeSearches = 0;
+const tutorLimiter = createTutorLimiter();
 export async function apiHandler(req, res, next) {
   if (!req.url.startsWith("/api/")) return next?.();
   try {
@@ -72,8 +75,24 @@ export async function apiHandler(req, res, next) {
         ok: true,
         apiKeyConfigured: Boolean(process.env.YOUTUBE_API_KEY),
         hosting: process.env.VERCEL === "1" ? "vercel" : "local",
+        tutor: { configured: geminiConfigured() },
         downloads: await downloads.status(),
       });
+    if (route === "/tutor" && req.method === "POST") {
+      const data = await readBody(req, 64000);
+      const release = tutorLimiter.enter(process.env.VERCEL === "1" ? String(req.headers["x-forwarded-for"] || req.socket?.remoteAddress || "unknown").split(",")[0].trim() : req.socket?.remoteAddress || "local");
+      const controller = new AbortController();
+      const disconnect = () => { if (!res.writableEnded) controller.abort(); };
+      res.on("close", disconnect);
+      try {
+        const reply = await answerTopicQuestion(data, { signal: AbortSignal.any([controller.signal, AbortSignal.timeout(55000)]) });
+        if (!res.destroyed) return send(res, 200, reply);
+        return;
+      } finally {
+        res.off("close", disconnect);
+        release();
+      }
+    }
     if (route === "/maintenance/downloads" && req.method === "GET") {
       if (
         !process.env.CRON_SECRET ||

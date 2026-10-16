@@ -1,0 +1,194 @@
+2023-cs-q1 | MCQ 1m | KEY B
+Q.1 We reached the station late, and _______ missed the train. (A) near (B) nearly (C) u tterly (D) mostly
+
+2023-cs-q2 | MCQ 1m | KEY MTA
+Q.2 Kind : _______ : : Often : Frequently (By word meaning) (A) Mean (B) Type (C) Cruel (D) Kindly
+
+2023-cs-q3 | MCQ 1m | KEY A
+Q. 3 A series of natural numbers 𝐹 1 , 𝐹 2 , 𝐹 3 , 𝐹 4 , 𝐹 5 , 𝐹 6 , 𝐹 7 , … obeys 𝐹 𝑛 + 1 = 𝐹 𝑛 + 𝐹 𝑛 − 1 for all integers 𝑛 ≥ 2 . If 𝐹 6 = 37 , and 𝐹 7 = 60 , then what is 𝐹 1 ? (A) 4 (B) 5 (C) 8 (D) 9
+
+2023-cs-q4 | MCQ 1m | KEY A
+Q.4 A survey for a certain year found that 90 % of pregnant women received medical care at l east once before giving birth . Of these women, 60 % received medical care from doctors, while 4 0 % received medical care from other health care providers. Given this information , which one of the following statements can be inferred with certainty ? (A) More than half of the pregnant women received medical care at least once from a doctor. (B) Less than half of the pregnant women received medical care at least once from a doctor. (C) More than half of the pregnant women received medical care at mo st once from a doctor. (D) Less than half of the pregnant women received medical care at most once from a doctor.
+
+2023-cs-q5 | MCQ 1m | KEY C
+Q. 5 Looking at the surface of a smooth 3 - dimensional object from the outside, which one of the following options is TRUE ? (A) The surface of the object must be concave everywhere. (B) The surface of the object must be convex everywhere. (C) The surface of the object may be concave in some places and convex in other places. (D) The object can have edges , but no corners.
+
+2023-cs-q6 | MCQ 2m | KEY D
+Q.6 The country of Zombieland is in distress since more than 75% of its working population is suffering from serious health issues. Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population w as one of the leading causes of their health issues. As one of the measures to address the problem, the Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work. Based only on the information provided above , which one of the following statements can be logically inferred with certainty ? (A) All the working population of Zombieland will henceforth ride bicycles to work. (B) Riding bicycle s will ensure that all of the working population of Zombieland is free of health issues. (C) The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory. (D) The Government of Zombieland believes that riding bicycl es is a form of physical exercise.
+
+2023-cs-q7 | MCQ 2m | KEY C
+Q. 7 Consider two functions of time ( 𝑡 ) , 2 𝑓 ( 𝑡 ) = 0 . 01 𝑡 𝑔 ( 𝑡 ) = 4 𝑡 where 0 < 𝑡 < ∞ . Now consider the following two statements: (i) For some 𝑡 > 0 , 𝑔 ( 𝑡 ) > 𝑓 ( 𝑡 ) . (ii) There exists a 𝑇 , such that 𝑓 ( 𝑡 ) > 𝑔 ( 𝑡 ) for all 𝑡 > 𝑇 . Which one of the following options is TRUE ? (A) o nly ( i ) is correct (B) o nly (ii) is correct (C) b oth (i) and (ii) are correct (D) n either (i) nor (ii) is correct
+
+2023-cs-q8 | MCQ 2m | KEY D
+Q. 8 Which one of the following sentence sequences create s a coherent narrative ? (i) Once on the terrace, on her way to her small room in the corner, she notices the man right away. (ii) She begins to pant by the time she has climbed all the stairs. (iii) Mina has bought vegetables and rice at the market, so her bags are heavy. (iv) He was leaning against the parapet, watching the traffic below. (A) ( i ) , ( ii ) , ( iv ) , ( iii ) (B) ( ii ) , ( iii ) , ( i ) , ( iv ) (C) ( iv ) , ( ii ) , ( i ) , ( iii ) (D) ( iii ) , ( ii ) , ( i ) , ( iv )
+
+2023-cs-q9 | MCQ 2m | KEY B
+Q.9 f ( x ) and g ( y ) are functions of x and y , respectively, and f ( x ) = g ( y ) for all real values of 𝑥 and 𝑦 . Which one of the following options is necessarily TRUE for all x and y ? (A) f ( x ) = 0 and g ( y ) = 0 (B) f ( x ) = g ( y ) = constant (C) f ( x )  constant and g ( y )  constant (D) f ( x ) + g ( y ) = f ( x ) − g ( y )
+
+2023-cs-q10 | MCQ 2m | KEY A
+Q. 10 Which one of the options best describes the transformation of the 2 - dimensional figure P to Q , and then to R , as shown ? (A) Operation 1 : A clockwise rotation by 90º about an axis perpendicular to the plane of the figure Operation 2 : A reflection along a horizontal line (B) Operation 1 : A counter clockwise rotation by 90º about an axis perpendicular to the plane of the figure Operation 2 : A reflection along a horizontal line (C) Operation 1 : A clockwise rotation by 90º about an axis perpendicular to the plane of the figure Operation 2 : A reflection along a vertic al line (D) Operation 1 : A counter clockwise rotation by 180º about an axis perpendicular to the plane of the figure Operation 2 : A reflection along a vertic al line
+
+2023-cs-q11 | MCQ 1m | KEY B
+Q.11 Consider the following statements regarding the front-end and back-end of a compiler. S1 : The front-end includes phases that are independent of the target hardware. S2 : The back-end includes phases that are specific to the target hardware. S3 : The back-end includes phases that are specific to the programming language used in the source code. Identify the CORRECT option. (A) Only S1 is TRUE. (B) Only S1 and S2 are TRUE. (C) S1 , S2 , and S3 are all TRUE. (D) Only S1 and S3 are TRUE.
+
+2023-cs-q12 | MCQ 1m | KEY B
+Q.12 Which one of the following sequences when stored in an array at locations A [1] , . . . , A [10] forms a max-heap? (A) 23, 17, 10, 6, 13, 14, 1, 5, 7, 12 (B) 23, 17, 14, 7, 13, 10, 1, 5, 6, 12 (C) 23, 17, 14, 6, 13, 10, 1, 5, 7, 15 (D) 23, 14, 17, 1, 10, 13, 16, 12, 7, 5
+
+2023-cs-q13 | MCQ 1m | KEY D
+Q.13 Let SLLdel be a function that deletes a node in a singly-linked list given a pointer to the node and a pointer to the head of the list. Similarly, let DLLdel be another function that deletes a node in a doubly-linked list given a pointer to the node and a pointer to the head of the list. Let n denote the number of nodes in each of the linked lists. Which one of the following choices is TRUE about the worst-case time complexity of SLLdel and DLLdel ? (A) SLLdel is O (1) and DLLdel is O ( n ) (B) Both SLLdel and DLLdel are O (log( n )) (C) Both SLLdel and DLLdel are O (1) (D) SLLdel is O ( n ) and DLLdel is O (1)
+
+2023-cs-q14 | MCQ 1m | KEY C
+Q.14 Consider the Deterministic Finite-state Automaton (DFA) A shown below. The DFA runs on the alphabet { 0 , 1 } , and has the set of states { s, p, q, r } , with s being the start state and p being the only final state. 0 1 1 s p q 1 0 0 r 0,1 Which one of the following regular expressions correctly describes the language accepted by A ? ∗ ∗ (A) 1(0 11) ∗ (B) 0(0 + 1) ∗ (C) 1(0 + 11) ∗ ∗ (D) 1(110 )
+
+2023-cs-q15 | MCQ 1m | KEY A
+Q.15 The Lucas sequence L n is defined by the recurrence relation: L n = L n − 1 + L n − 2 , for n ≥ 3 , with L 1 = 1 and L 2 = 3. Which one of the options given is TRUE? ( √ ) n ( √ ) n 1 + 5 1 −  5 (A) L n = + 2 2 ( √ ) n ( √ ) n 1 + 5 1 −  5 (B) L n = − 2 3 ( √ ) n ( √ ) n 1 + 5 1 −  5 (C) L n = + 2 3 ( √ ) n ( √ ) n 1 + 5 1 −  5 (D) L n = − 2 2
+
+2023-cs-q16 | MCQ 1m | KEY A
+Q.16 Which one of the options given below refers to the degree (or arity) of a relation in relational database systems? (A) Number of attributes of its relation schema. (B) Number of tuples stored in the relation. (C) Number of entries in the relation. (D) Number of distinct domains of its relation schema.
+
+2023-cs-q17 | MCQ 1m | KEY B
+Q.17 Suppose two hosts are connected by a point-to-point link and they are configured to use Stop-and-Wait protocol for reliable data transfer. Identify in which one of the following scenarios, the utilization of the link is the lowest. (A) Longer link length and lower transmission rate (B) Longer link length and higher transmission rate (C) Shorter link length and lower transmission rate (D) Shorter link length and higher transmission rate
+
+2023-cs-q18 | MCQ 1m | KEY B
+Q.18 Let ⎡ ⎤ 1 2 3 4 ⎢ 4 1 2 3 ⎥ A = ⎢ ⎥ ⎣ 3 4 1 2 ⎦ 2 3 4 1 and ⎡ ⎤ 3 4 1 2 ⎢ 4 1 2 3 ⎥ B = ⎢ ⎥ . ⎣ 1 2 3 4 ⎦ 2 3 4 1 Let det ( A ) and det ( B ) denote the determinants of the matrices A and B , respectively. Which one of the options given below is TRUE? (A) det ( A ) = det ( B ) (B) det ( B ) = − det ( A ) (C) det ( A ) = 0 (D) det ( AB ) = det ( A ) + det ( B )
+
+2023-cs-q19 | MCQ 1m | KEY C
+Q.19 Consider the following definition of a lexical token id for an identifier in a program- ming language, using extended regular expressions: letter → [A-Za-z] digit → [0-9] ∗ id → letter ( letter | digit ) Which one of the following Non-deterministic Finite-state Automata with  - transitions accepts the set of valid identifiers? (A double-circle denotes a final state) letter letter digit  (A) letter  letter  digit (B)  letter   letter digit   (C)  letter letter digit (D)
+
+2023-cs-q20 | MCQ 1m | KEY C
+Q.20 An algorithm has to store several keys generated by an adversary in a hash table. The adversary is malicious who tries to maximize the number of collisions. Let k be the number of keys, m be the number of slots in the hash table, and k > m . Which one of the following is the best hashing strategy to counteract the adversary? (A) Division method, i.e., use the hash function h ( k ) = k mod m . (B) Multiplication method, i.e., use the hash function h ( k ) =  m ( kA −  kA  )  , where A is a carefully chosen constant. (C) Universal hashing method. (D) If k is a prime number, use Division method. Otherwise, use Multiplication method.
+
+2023-cs-q21 | MCQ 1m | KEY B
+Q.21 The output of a 2-input multiplexer is connected back to one of its inputs as shown in the figure. Multiplexer 0 Q 1 S Match the functional equivalence of this circuit to one of the following options. (A) D Flip-flop (B) D Latch (C) Half-adder (D) Demultiplexer
+
+2023-cs-q22 | MSQ 1m | KEY B, C, D
+Q.22 Which one or more of the following need to be saved on a context switch from one thread (T1) of a process to another thread (T2) of the same process? (A) Page table base register (B) Stack pointer (C) Program counter (D) General purpose registers
+
+2023-cs-q23 | MSQ 1m | KEY C, D
+Q.23 Which one or more of the following options guarantee that a computer system will transition from user mode to kernel mode? (A) Function Call (B) malloc Call (C) Page Fault (D) System Call
+
+2023-cs-q24 | MSQ 1m | KEY A, C, D
+Q.24 Which of the following statements is/are CORRECT? (A) The intersection of two regular languages is regular. (B) The intersection of two context-free languages is context-free. (C) The intersection of two recursive languages is recursive. (D) The intersection of two recursively enumerable languages is recursively enumerable.
+
+2023-cs-q25 | MSQ 1m | KEY A, C
+Q.25 Which of the following statements is/are INCORRECT about the OSPF (Open Shortest Path First) routing protocol used in the Internet? (A) OSPF implements Bellman-Ford algorithm to find shortest paths. (B) OSPF uses Dijkstra’s shortest path algorithm to implement least-cost path routing. (C) OSPF is used as an inter-domain routing protocol. (D) OSPF implements hierarchical routing.
+
+2023-cs-q26 | MSQ 1m | KEY B, C
+Q.26 Geetha has a conjecture about integers, which is of the form ( ) ∀ x P ( x ) = ⇒ ∃ yQ ( x, y ) , where P is a statement about integers, and Q is a statement about pairs of integers. Which of the following (one or more) option(s) would imply Geetha’s conjecture? ( ) (A) ∃ x P ( x ) ∧ ∀ yQ ( x, y ) (B) ∀ x ∀ yQ ( x, y ) ( ) (C) ∃ y ∀ x P ( x ) = ⇒ Q ( x, y ) ( ) (D) ∃ x P ( x ) ∧ ∃ yQ ( x, y )
+
+2023-cs-q27 | MSQ 1m | KEY A, C, D or C, D
+Q.27 Which one or more of the following CPU scheduling algorithms can potentially cause starvation? (A) First-in First-Out (B) Round Robin (C) Priority Scheduling (D) Shortest Job First
+
+2023-cs-q28 | MSQ 1m | KEY B, D
+Q.28 Let 3 2 f ( x ) = x + 15 x − 33 x − 36 be a real-valued function. Which of the following statements is/are TRUE? (A) f ( x ) does not have a local maximum. (B) f ( x ) has a local maximum. (C) f ( x ) does not have a local minimum. (D) f ( x ) has a local minimum.
+
+2023-cs-q29 | MSQ 1m | KEY A, C
+2 Q.29 Let f and g be functions of natural numbers given by f ( n ) = n and g ( n ) = n . Which of the following statements is/are TRUE? (A) f ∈ O ( g ) (B) f ∈ Ω( g ) (C) f ∈ o ( g ) (D) f ∈ Θ( g )
+
+2023-cs-q30 | NAT 1m | KEY to 2 OR 4 to 4
+Q.30 Let A be the adjacency matrix of the graph with vertices { 1 , 2 , 3 , 4 , 5 } . 3 5 2 1 4 Let λ 1 , λ 2 , λ 3 , λ 4 , and λ 5 be the five eigenvalues of A . Note that these eigenvalues need not be distinct. The value of λ 1 + λ 2 + λ 3 + λ 4 + λ 5 = .
+
+2023-cs-q31 | NAT 1m | KEY 0 to 0
+Q.31 The value of the definite integral ∫ ∫ ∫ 3 2 1 ( ) 2 3 4 x y − z d z d y d x − 3 − 2 − 1 is . (Rounded off to the nearest integer)
+
+2023-cs-q32 | NAT 1m | KEY 110 to 110
+Q.32 A particular number is written as 132 in radix-4 representation. The same number in radix-5 representation is .
+
+2023-cs-q33 | NAT 1m | KEY 2040 to 2040
+Q.33 Consider a 3-stage pipelined processor having a delay of 10 ns (nanoseconds), 20 ns, and 14 ns, for the first, second, and the third stages, respectively. Assume that there is no other delay and the processor does not suffer from any pipeline hazards. Also assume that one instruction is fetched every cycle. The total execution time for executing 100 instructions on this processor is ns.
+
+2023-cs-q34 | NAT 1m | KEY 10.2 to 10.2
+Q.34 A keyboard connected to a computer is used at a rate of 1 keystroke per second. The computer system polls the keyboard every 10 ms (milli seconds) to check for a keystroke and consumes 100 μ s (micro seconds) for each poll. If it is determined after polling that a key has been pressed, the system consumes an additional 200 μ s to process the keystroke. Let T 1 denote the fraction of a second spent in polling and processing a keystroke. In an alternative implementation, the system uses interrupts instead of polling. An interrupt is raised for every keystroke. It takes a total of 1 ms for servicing an interrupt and processing a keystroke. Let T 2 denote the fraction of a second spent in servicing the interrupt and processing a keystroke. T 1 The ratio is . (Rounded off to one decimal place) T 2
+
+2023-cs-q35 | NAT 1m | KEY 7 to 7
+Q.35 The integer value printed by the ANSI-C program given below is . #include<stdio.h> int funcp(){ static int x = 1; x++; return x; } int main(){ int x,y; x = funcp(); y = funcp()+x; printf("%d\n", (x+y)); return 0; }
+
+2023-cs-q36 | MCQ 2m | KEY A
+Q.36 Consider the following program: int main() int f1() int f2(int X) int f3() { { { { f1(); return(1); f3(); return(5); f2(2); } if (X==1) } f3(); return f1(); return(0); else } return (X*f2(X-1)); } Which one of the following options represents the activation tree corresponding to the main function? main f1 f2 f3 f3 f2 f3 f1 (A) main f1 f2 f3 (B) f3 f1 main f1 f2 (C) f3 f1 main f1 f2 f3 (D) f3 f2 f1
+
+2023-cs-q37 | MCQ 2m | KEY D
+Q.37 Consider the control flow graph shown. ENTRY B1 i = m − 1 j = n a = 10 B2 i = i + 1 j = j − 1 B3 a = 20 B4 i = a + 1 EXIT Which one of the following choices correctly lists the set of live variables at the exit point of each basic block? (A) B1: {} , B2: { a } , B3: { a } , B4: { a } (B) B1: { i , j } , B2: { a } , B3: { a } , B4: { i } (C) B1: { a , i , j } , B2: { a , i , j } , B3: { a , i } , B4: { a } (D) B1: { a , i , j } , B2: { a , j } , B3: { a , j } , B4: { a , i , j }
+
+2023-cs-q38 | MCQ 2m | KEY C
+Q.38 Consider the two functions incr and decr shown below. incr(){ decr(){ wait(s); wait(s); X = X+1; X = X-1; signal(s); signal(s); } } There are 5 threads each invoking i ncr once, and 3 threads each invoking d ecr once, on the same shared variable X . The initial value of X is 10. Suppose there are two implementations of the semaphore s , as follows: I-1: s is a binary semaphore initialized to 1. I-2: s is a counting semaphore initialized to 2. Let V1, V2 be the values of X at the end of execution of all the threads with implementations I-1 , I-2 , respectively. Which one of the following choices corresponds to the minimum possible values of V1, V2, respectively? (A) 15, 7 (B) 7, 7 (C) 12, 7 (D) 12, 8
+
+2023-cs-q39 | MCQ 2m | KEY B
+Q.39 Consider the context-free grammar G below S → aSb | X X → aX | Xb | a | b , where S and X are non-terminals, and a and b are terminal symbols. The starting non-terminal is S . Which one of the following statements is CORRECT? ∗ (A) The language generated by G is ( a + b ) ∗ ∗ (B) The language generated by G is a ( a + b ) b ∗ ∗ (C) The language generated by G is a b ( a + b ) (D) The language generated by G is not a regular language
+
+2023-cs-q40 | MCQ 2m | KEY A
+Q.40 Consider the pushdown automaton (PDA) P below, which runs on the input alpha- bet { a, b } , has stack alphabet {⊥ , A } , and has three states { s, p, q } , with s being the start state. A transition from state u to state v , labelled c/X/γ , where c is an input symbol or  , X is a stack symbol, and γ is a string of stack symbols, represents the fact that in state u , the PDA can read c from the input, with X on the top of its stack, pop X from the stack, push in the string γ on the stack, and go to state v . In the initial configuration, the stack has only the symbol ⊥ in it. The PDA accepts by empty stack. a/ ⊥ /A ⊥ a/A/AA b/A/ b/A/ s p /A/ /A/ q /A/ / ⊥ / Which one of the following options correctly describes the language accepted by P ? m n (A) { a b | 1 ≤ m and n < m } m n (B) { a b | 0 ≤ n ≤ m } m n (C) { a b | 0 ≤ m and 0 ≤ n } m n (D) { a | 0 ≤ m } ∪ { b | 0 ≤ n }
+
+2023-cs-q41 | MCQ 2m | KEY B
+Q.41 Consider the given C-code and its corresponding assembly code, with a few operands U1 – U4 being unknown. Some useful information as well as the semantics of each unique assembly instruction is annotated as inline comments in the code. The memory is byte-addressable. //C-code ;assembly-code (; indicates comments) ;r1-r5 are 32-bit integer registers ;initialize r1=0, r2=10 ;initialize r3, r4 with base address of a, b int a[10], b[10], i; L01: jeq r1, r2, end ;if(r1==r2) goto end // int is 32-bit L02: lw r5, 0(r4) ;r5 <- Memory[r4+0] for (i=0; i<10;i++) L03: shl r5, r5, U1 ;r5 <- r5 << U1 a[i] = b[i] * 8; L04: sw r5, 0(r3) ;Memory[r3+0] <- r5 L05: add r3, r3, U2 ;r3 <- r3+U2 L06: add r4, r4, U3 L07: add r1, r1, 1 L08: jmp U4 ;goto U4 L09: end Which one of the following options is a CORRECT replacement for operands in the position ( U1 , U2 , U3 , U4 ) in the above assembly code? (A) (8, 4, 1, L02 ) (B) (3, 4, 4, L01 ) (C) (8, 1, 1, L02 ) (D) (3, 1, 1, L01 )
+
+2023-cs-q42 | MCQ 2m | KEY C
+Q.42 A 4 kilobyte (KB) byte-addressable memory is realized using four 1 KB memory blocks. Two input address lines (IA4 and IA3) are connected to the chip select (CS) port of these memory blocks through a decoder as shown in the figure. The remaining ten input address lines from IA11–IA0 are connected to the address port of these blocks. The chip select (CS) is active high. MSB IA11 IA10 IA9 IA8 10-bit IA7 IA6 1KB memory 1KB memory 1KB memory 1KB memory IA5 IA2 IA1 IA0 LSB Addr Addr Addr Addr Decoder X1 CS X2 CS X3 CS X4 CS Q0 IA4 A1 Q1 IA3 A0 Q2 Q3 The input memory addresses (IA11–IA0), in decimal, for the starting locations (Addr=0) of each block (indicated as X1, X2, X3, X4 in the figure) are among the options given below. Which one of the following options is CORRECT? (A) (0, 1, 2, 3) (B) (0, 1024, 2048, 3072) (C) (0, 8, 16, 24) (D) (0, 0, 0, 0)
+
+2023-cs-q43 | MCQ 2m | KEY A
+Q.43 Consider a sequential digital circuit consisting of T flip-flops and D flip-flops as shown in the figure. CLKIN is the clock input to the circuit. At the beginning, Q1, Q2 and Q3 have values 0, 1 and 1, respectively. T D T Q Q Q Q1 Q2 Q3 CLKIN CLK CLK CLK Which one of the given values of (Q1, Q2, Q3) can NEVER be obtained with this digital circuit? (A) (0, 0, 1) (B) (1, 0, 0) (C) (1, 0, 1) (D) (1, 1, 1)
+
+2023-cs-q44 | MCQ 2m | KEY C
+Q.44 A Boolean digital circuit is composed using two 4-input multiplexers (M1 and M2) and one 2-input multiplexer (M3) as shown in the figure. X0–X7 are the inputs of the multiplexers M1 and M2 and could be connected to either 0 or 1. The select lines of the multiplexers are connected to Boolean variables A, B and C as shown. Multiplexer X0 0 M1 X1 1 Q X2 2 Multiplexer X3 3 S1 S0 0 A M3 C Q Multiplexer 1 X4 0 S M2 X5 1 Q X6 2 X7 3 S1 S0 A C B Which one of the following set of values of (X0, X1, X2, X3, X4, X5, X6, X7) will realise the Boolean function A + A . C + A . B . C? (A) (1, 1, 0, 0, 1, 1, 1, 0) (B) (1, 1, 0, 0, 1, 1, 0, 1) (C) (1, 1, 0, 1, 1, 1, 0, 0) (D) (0, 0, 1, 1, 0, 1, 1, 1)
+
+2023-cs-q45 | MCQ 2m | KEY C
+Q.45 Consider the IEEE-754 single precision floating point numbers P= 0xC1800000 and Q= 0x3F5C2EF4 . Which one of the following corresponds to the product of these numbers (i.e., P × Q), represented in the IEEE-754 single precision format? (A) 0x404C2EF4 (B) 0x405C2EF4 (C) 0xC15C2EF4 (D) 0xC14C2EF4
+
+2023-cs-q46 | MCQ 2m | KEY B
+Q.46 Let A be a priority queue for maintaining a set of elements. Suppose A is implemented using a max-heap data structure. The operation Extract-Max( A ) extracts and deletes the maximum element from A . The operation Insert( A , key ) inserts a new element key in A . The properties of a max-heap are preserved at the end of each of these operations. When A contains n elements, which one of the following statements about the worst case running time of these two operations is TRUE? (A) Both Extract-Max( A ) and Insert( A , key ) run in O (1). (B) Both Extract-Max( A ) and Insert( A , key ) run in O (log( n )). (C) Extract-Max( A ) runs in O (1) whereas Insert( A , key ) runs in O ( n ). (D) Extract-Max( A ) runs in O (1) whereas Insert( A , key ) runs in O (log( n )).
+
+2023-cs-q47 | MCQ 2m | KEY C
+Q.47 Consider the C function foo and the binary tree shown. typedef struct node { int val; 10 struct node *left, *right; } node; 5 11 int foo(node *p) { int retval; 3 8 13 if (p == NULL) return 0; else { retval = p->val + foo(p->left) + foo(p->right); printf("%d ", retval); return retval; } } When foo is called with a pointer to the root node of the given binary tree, what will it print? (A) 3 8 5 13 11 10 (B) 3 5 8 10 11 13 (C) 3 8 16 13 24 50 (D) 3 16 8 50 24 13
+
+2023-cs-q48 | MCQ 2m | KEY D
+Q.48 Let U = { 1 , 2 , . . . , n } , where n is a large positive integer greater than 1000. Let k be a positive integer less than n . Let A, B be subsets of U with | A | = | B | = k and A ∩ B = ∅ . We say that a permutation of U separates A from B if one of the following is true. - All members of A appear in the permutation before any of the members of B . - All members of B appear in the permutation before any of the members of A . How many permutations of U separate A from B ? (A) n ! ( ) n (B) ( n − 2 k )! 2 k ( ) n 2 (C) ( n − 2 k )! ( k !) 2 k ( ) n 2 (D) 2 ( n − 2 k )! ( k !) 2 k
+
+2023-cs-q49 | MSQ 2m | KEY B, C, D
+Q.49 Let f : A → B be an onto (or surjective) function, where A and B are nonempty sets. Define an equivalence relation ∼ on the set A as a 1 ∼ a 2 if f ( a 1 ) = f ( a 2 ) , where a 1 , a 2 ∈ A . Let E = { [ x ] : x ∈ A } be the set of all the equivalence classes under ∼ . Define a new mapping F : E → B as F ([ x ]) = f ( x ) , for all the equivalence classes [ x ] in E . Which of the following statements is/are TRUE? (A) F is NOT well-defined. (B) F is an onto (or surjective) function. (C) F is a one-to-one (or injective) function. (D) F is a bijective function.
+
+2023-cs-q50 | MSQ 2m | KEY B, C, D
+Q.50 Suppose you are asked to design a new reliable byte-stream transport protocol like TCP. This protocol, named myTCP , runs over a 100 Mbps network with Round Trip Time of 150 milliseconds and the maximum segment lifetime of 2 minutes. Which of the following is/are valid lengths of the Sequence Number field in the myTCP header? (A) 30 bits (B) 32 bits (C) 34 bits (D) 36 bits
+
+2023-cs-q51 | MSQ 2m | KEY A, D
+X Q.51 Let X be a set and 2 denote the powerset of X . X Define a binary operation Δ on 2 as follows: A Δ B = ( A − B ) ∪ ( B − A ) . X Let H = (2 , Δ). Which of the following statements about H is/are correct? (A) H is a group. (B) Every element in H has an inverse, but H is NOT a group. X (C) For every A ∈ 2 , the inverse of A is the complement of A . X (D) For every A ∈ 2 , the inverse of A is A .
+
+2023-cs-q52 | MSQ 2m | KEY C, D
+Q.52 Suppose in a web browser, you click on the www.gate-2023.in URL. The browser cache is empty. The IP address for this URL is not cached in your local host, so a DNS lookup is triggered (by the local DNS server deployed on your local host) over the 3-tier DNS hierarchy in an iterative mode. No resource records are cached anywhere across all DNS servers. Let RTT denote the round trip time between your local host and DNS servers in the DNS hierarchy. The round trip time between the local host and the web server hosting www.gate-2023.in is also equal to RTT. The HTML file associated with the URL is small enough to have negligible transmission time and negligible rendering time by your web browser, which references 10 equally small objects on the same web server. Which of the following statements is/are CORRECT about the minimum elapsed time between clicking on the URL and your browser fully rendering it? (A) 7 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections. (B) 5 RTTs, in case of persistent HTTP with pipelining. (C) 9 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections. (D) 6 RTTs, in case of persistent HTTP with pipelining.
+
+2023-cs-q53 | MSQ 2m | KEY C, D
+Q.53 Consider a random experiment where two fair coins are tossed. Let A be the event that denotes HEAD on both the throws, B be the event that denotes HEAD on the first throw, and C be the event that denotes HEAD on the second throw. Which of the following statements is/are TRUE? (A) A and B are independent. (B) A and C are independent. (C) B and C are independent. (D) Prob( B | C ) = Prob( B )
+
+2023-cs-q54 | MSQ 2m | KEY A, D
+Q.54 Consider functions Function 1 and Function 2 expressed in pseudocode as follows: Function 1 Function 2 while n > 1 do for i = 1 to 100 ∗ n do for i = 1 to n do x = x + 1; x = x + 1; end for end for n =  n/ 2  ; end while Let f 1 ( n ) and f 2 ( n ) denote the number of times the statement “ x = x + 1” is executed in Function 1 and Function 2 , respectively. Which of the following statements is/are TRUE? (A) f 1 ( n ) ∈ Θ( f 2 ( n )) (B) f 1 ( n ) ∈ o ( f 2 ( n )) (C) f 1 ( n ) ∈ ω ( f 2 ( n )) (D) f 1 ( n ) ∈ O ( n )
+
+2023-cs-q55 | MSQ 2m | KEY A, B
+Q.55 Let G be a simple, finite, undirected graph with vertex set { v 1 , . . . , v n } . Let Δ( G ) denote the maximum degree of G and let N = { 1 , 2 , . . . } denote the set of all possible colors. Color the vertices of G using the following greedy strategy: for i = 1 , . . . , n color( v i ) ← min { j ∈ N : no neighbour of v i is colored j } Which of the following statements is/are TRUE? (A) This procedure results in a proper vertex coloring of G . (B) The number of colors used is at most Δ( G ) + 1. (C) The number of colors used is at most Δ( G ). (D) The number of colors used is equal to the chromatic number of G .
+
+2023-cs-q56 | NAT 2m | KEY 5040 to 5040
+U Q.56 Let U = { 1 , 2 , 3 } . Let 2 denote the powerset of U . Consider an undirected graph U U G whose vertex set is 2 . For any A, B ∈ 2 , ( A, B ) is an edge in G if and only if (i) A  = B , and (ii) either A  B or B  A . For any vertex A in G , the set of all possible orderings in which the vertices of G can be visited in a Breadth First Search (BFS) starting from A is denoted by B ( A ). If ∅ denotes the empty set, then the cardinality of B ( ∅ ) is .
+
+2023-cs-q57 | NAT 2m | KEY 4096 to 4096
+Q.57 Consider the following two-dimensional array D in the C programming language, which is stored in row-major order: int D[ 128 ][ 128 ] ; Demand paging is used for allocating memory and each physical page frame holds 512 elements of the array D . The Least Recently Used (LRU) page-replacement policy is used by the operating system. A total of 30 physical page frames are allocated to a process which executes the following code snippet: for (int i = 0; i < 128; i++) for (int j = 0; j < 128; j++) D[j][i] *= 10; The number of page faults generated during the execution of this code snippet is .
+
+2023-cs-q58 | NAT 2m | KEY 5 to 5
+Q.58 Consider a computer system with 57-bit virtual addressing using multi-level tree-structured page tables with L levels for virtual to physical address translation. The page size is 4 KB (1 KB = 1024 B) and a page table entry at any of the levels occupies 8 bytes. The value of L is .
+
+2023-cs-q59 | NAT 2m | KEY 8 to 8
+Q.59 Consider a sequence a of elements a 0 = 1, a 1 = 5, a 2 = 7, a 3 = 8, a 4 = 9, and a 5 = 2. The following operations are performed on a stack S and a queue Q , both of which are initially empty. I: push the elements of a from a 0 to a 5 in that order into S . II: enqueue the elements of a from a 0 to a 5 in that order into Q . III: pop an element from S . IV: dequeue an element from Q . V: pop an element from S . VI: dequeue an element from Q . VII: dequeue an element from Q and push the same element into S . VIII: Repeat operation VII three times. IX: pop an element from S . X: pop an element from S . The top element of S after executing the above operations is .
+
+2023-cs-q60 | NAT 2m | KEY 2.374 to 2.376
+Q.60 Consider the syntax directed translation given by the following grammar and se- mantic rules. Here N , I , F and B are non-terminals. N is the starting non-terminal, and #, 0 and 1 are lexical tokens corresponding to input letters “#”, “0” and “1”, respectively. X. val denotes the synthesized attribute (a numeric value) associated with a non-terminal X . I 1 and F 1 denote occurrences of I and F on the right hand side of a production, respectively. For the tokens 0 and 1 , 0 . val = 0 and 1 . val = 1. N → I # F N. val = I. val + F. val I → I 1 B I. val = (2 I 1 . val ) + B. val I → B I. val = B. val 1 F → B F 1 F. val = ( B. val + F . val ) 2 1 1 F → B F. val = B. val 2 B → 0 B. val = 0 . val B → 1 B. val = 1 . val The value computed by the translation scheme for the input string 10#011 is . (Rounded off to three decimal places)
+
+2023-cs-q61 | NAT 2m | KEY to 2
+Q.61 Consider the following table named Student in a relational database. The primary key of this table is rollNum. Student rollNum name gender marks 1 Naman M 62 2 Aliya F 70 3 Aliya F 80 4 James M 82 5 Swati F 65 The SQL query below is executed on this database. SELECT * FROM Student WHERE gender = ‘F’ AND marks > 65; The number of rows returned by the query is .
+
+2023-cs-q62 | NAT 2m | KEY 6 to 6
+Q.62 Consider a database of fixed-length records, stored as an ordered file. The database has 25,000 records, with each record being 100 bytes, of which the primary key occupies 15 bytes. The data file is block-aligned in that each data record is fully contained within a block. The database is indexed by a primary index file, which is also stored as a block-aligned ordered file. The figure below depicts this indexing scheme. Data File Primary Key Other Fields (15 Bytes) (85 Bytes) Index File Block Anchor Block Primary Key Pointer Suppose the block size of the file system is 1024 bytes, and a pointer to a block occupies 5 bytes. The system uses binary search on the index file to search for a record with a given key. You may assume that a binary search on an index file of b blocks takes  log 2 b  block accesses in the worst case. Given a key, the number of block accesses required to identify the block in the data file that may contain a record with the key, in the worst case, is .
+
+2023-cs-q63 | NAT 2m | KEY 4 to 4
+Q.63 Consider the language L over the alphabet { 0 , 1 } , given below: ∗ L = { w ∈ { 0 , 1 } | w does not contain three or more consecutive 1’s } . The minimum number of states in a Deterministic Finite-State Automaton (DFA) for L is .
+
+2023-cs-q64 | NAT 2m | KEY 19 to 19
+Q.64 An 8-way set associative cache of size 64 KB (1 KB = 1024 bytes) is used in a system with 32-bit address. The address is sub-divided into TAG, INDEX, and BLOCK OFFSET. The number of bits in the TAG is .
+
+2023-cs-q65 | NAT 2m | KEY 3 to 3
+Q.65 The forwarding table of a router is shown below. Subnet Number Subnet Mask Interface ID 200.150.0.0 255.255.0.0 1 200.150.64.0 255.255.224.0 2 200.150.68.0 255.255.255.0 3 200.150.68.64 255.255.255.224 4 Default 0 A packet addressed to a destination address 200.150.68.118 arrives at the router. It will be forwarded to the interface with ID .

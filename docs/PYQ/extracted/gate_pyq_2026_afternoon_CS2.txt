@@ -1,0 +1,681 @@
+
+--- PAGE 1 ---
+General Aptitude (GA) 
+Q.1   –   Q.5 Carry ONE mark Each 
+Q. 1   Expedite, Hasten, Hurry, __________ 
+Fill the blank by choosing a word with a meaning similar to that of the words 
+given   above. 
+(A)   Accelerate 
+(B)   Retard 
+(C)   Provide 
+(D)   Disable Organizing Institute: IIT Guwahati Page 1 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 2 ---
+Q. 2   A black square PQRS has been cut into two parts. One part of it is shown in 
+Panel I. Which one of the shapes in Panel II is the other part? 
+(A)   (i) 
+(B)   (ii) 
+(C)   (iii) 
+(D)   (iv) Organizing Institute: IIT Guwahati Page 2 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 3 ---
+Q. 3   A day can only be cloudy or sunny. The probability of a day being cloudy is 0.5, 
+independent of the condition on other days. What is the probability that in any 
+given four days, there will be three cloudy days and one sunny day? 
+(A)   1/4 
+(B)   3/4 
+(C)   2/3 
+(D)   3/8 Organizing Institute: IIT Guwahati Page 3 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 4 ---
+Q. 4   The values of Stock A and Stock B on a particular day are Rs. 50 and Rs. 80, 
+respectively. An investor invests Rs. 100 in Stock A and Rs. 80 in Stock B. He 
+sells all the stocks the next day when the value of Stock A is Rs. 55 and Stock B 
+is Rs. 70. The pr ofit made by the investor is Rs. ________ 
+(A)   0 
+(B)   5 
+(C)   10 
+(D)   20 
+Q.5   ‘When it   is   rain ing , peacocks dance.’ 
+Based   only   on this sentence, which one of the following   options   is necessarily 
+true ? 
+(A)   Peacocks dance only when it   is   rain ing . 
+(B)   When peacocks dance, it   is   rain ing. 
+(C)   When peacocks are not dancing, it is not raining. 
+(D)   When it   is   not rain ing , peacocks do not dance. Organizing Institute: IIT Guwahati Page 4 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 5 ---
+Q.6   –   Q.10 Carry TWO marks Each 
+Q.6   Water : P :: Food : Q 
+Choose the P and Q combination from the   options below to form a meaningful 
+analogy. 
+(A)   P = Thirst; Q = Hunger 
+(B)   P = Drink ;   Q =   Hunger 
+(C)   P =   Thirst;   Q =   Satiated 
+(D)   P =   Wet;   Q =   Critic Organizing Institute: IIT Guwahati Page 5 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 6 ---
+Q.7   Two tiles are missing in Panel I. Which one of the options in Panel II is the 
+appropriate choice for the missing tiles? 
+(A)   (i) 
+(B)   (ii) 
+(C)   (iii) 
+(D)   (iv) Organizing Institute: IIT Guwahati Page 6 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 7 ---
+Q .8   Figures (i) and (ii)   represent   inter city   highway systems .   The black dots represent 
+cities and the line segments between them represent intercity highways. 
+A salesperson needs to make a trip. She needs to start from a city, visit each of the 
+remaining cities exactly once, and finally return to the same city from   which she 
+started. 
+Which   one of the following options is then true ? 
+( A )   Such a trip is possible for (i), but not for (ii). 
+( B )   Such a trip is possible for   (ii) , but not for (i). 
+( C )   Such a trip is possible for both (i) and (ii). 
+( D )   Such a   trip is possible neither for (i) nor for (ii). Organizing Institute: IIT Guwahati Page 7 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 8 ---
+Q. 9   The figure in Panel I below is a grid of cells with four rows and four columns. 
+The numbers on the top and on the left represent the number of cells that are to 
+be shaded in that column and row, r espectively. Which one of the options shown 
+in Panel II below represents the grid shaded correctly? 
+(A)   (i) 
+(B)   (ii) 
+(C)   (iii) 
+(D)   (iv) Organizing Institute: IIT Guwahati Page 8 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 9 ---
+Q. 10   An unbiased six - faced dice whose faces are marked with numbers 1, 2, 3, 4, 5, 
+and 6 is rolled twice in succession and the number on the top face is recorded 
+each time. The probability that the sum of the two recorded numbers is a prime 
+number is ________ 
+(A)   3 
+36 
+(B)   13 
+36 
+(C)   15 
+36 
+(D)   19 
+36 Organizing Institute: IIT Guwahati Page 9 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 10 ---
+Q.1 1   –   Q. 3 5   Carry ONE mark Each 
+Q.1 1   For two different persons   𝑥   and   𝑦 , the predicate   𝑀 ( 𝑥 ,   𝑦 )   denotes that   x   knows   y . 
+Consider the following statement. 
+There is a person   who does not know anyone else, but that   person is known by 
+everyone else. 
+Which one of the following expressions   represents   the above statement ? 
+(A)   ( ∃ 𝑦 ) ( ∀ 𝑥 )   ( ( 𝑥   ≠   𝑦 )   →   ( 𝑀 ( 𝑥 ,   𝑦 )   ∧   ¬ 𝑀 ( 𝑦 ,   𝑥 ) ) ) 
+(B)   ( ∀ 𝑦 ) ( ∃ 𝑥 )   ( ( 𝑥   ≠   𝑦 )   →   ( 𝑀 ( 𝑥 ,   𝑦 )   ∧   ¬ 𝑀 ( 𝑦 ,   𝑥 ) ) ) 
+(C)   ( ∃ 𝑦 ) ( ∃ 𝑥 )   ( ( 𝑥   ≠   𝑦 )   →   ( 𝑀 ( 𝑥 ,   𝑦 )   ∧   ¬ 𝑀 ( 𝑦 ,   𝑥 ) ) ) 
+(D)   ( ∀ 𝑦 ) ( ∀ 𝑥 )   ( ( 𝑥   ≠   𝑦 )   →   ( 𝑀 ( 𝑥 ,   𝑦 )   ∧   ¬ 𝑀 ( 𝑦 ,   𝑥 ) ) ) Organizing Institute: IIT Guwahati Page 10 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 11 ---
+Q.12   The s et   T   represents various tr aversals over binary tree. The s et   S   represents the 
+order of visiting nodes during a traversal. 
+T   S 
+I: Inorder   L: left subtree, node, right subtree 
+II: Preorder   M: node,   left subtree ,   right subtree 
+III: Postorder   N:   left subtree ,   right subtree , node 
+Which one of the following is the correct match from   T   to   S   ? 
+(A)   I   –   L, II   –   M, III   –   N 
+(B)   I   –   M, II   –   L, III   –   N 
+(C)   I   –   N , II   –   M, III   –   L 
+(D)   I   –   L , II   –   N ,   III   –   M Organizing Institute: IIT Guwahati Page 11 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 12 ---
+Q. 13   Which one of the following statements is equiva lent to the following assertion? 
+Turing machine   𝑀   decides   the   language   𝐿   ⊆   { 0 , 1 } ∗ 
+(A)   Turing machine   𝑀   halts   on   all input strings in   { 0 , 1 } ∗ 
+(B)   Turing machine   𝑀   accepts all input strings in   𝐿 
+(C)   Turing machine   𝑀   rejects all input strings in   { 0 , 1 } ∗   −   𝐿 
+(D)   Turing machine   𝑀   accepts all input strings in   𝐿   and rejects all input strings in 
+{ 0 , 1 } ∗   −   𝐿 
+Q. 14   The probability density function   𝑓 ( 𝑥 )   of a random variable   𝑋   which takes real 
+values is 
+𝑓 ( 𝑥 )   =   1 
+3 √ 2 𝜋   exp ( −   𝑥 2 
+18 ) ,   𝑥   ∈   ( − ∞ ,   + ∞ ) 
+Which one of the following statements is correct about the random variable   𝑋   ? 
+(A)   𝑋   is   an exponential random variable 
+(B)   𝑋   is   a normal random variable 
+(C)   𝑋   is   a Poisson random variable 
+(D)   𝑋   is   a uniform random variable Organizing Institute: IIT Guwahati Page 12 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 13 ---
+Q. 15   In the context of DBMS ,   consider the two sets   T   and   S   g iven   below. 
+T   S 
+I: Logical schema   L:   Views 
+II: Physical schema   M: File organization and indexes 
+III: External schema   N:   Relations 
+Which one of the following is the correct match from   T   to   S   ? 
+(A)   I   –   L, II   –   M, III   –   N 
+(B)   I   –   M, II   –   L, III   –   N 
+(C)   I   –   N , II   –   M, III   –   L 
+(D)   I   –   N , II   –   L ,   III   –   M Organizing Institute: IIT Guwahati Page 13 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 14 ---
+Q.16   Which one   of the following options is   not   a property of Boolean Algebra? 
+Note :   + is OR operation,   .   is AND operation, and   ′   is NOT operation 
+(A)   𝑎   +   𝑏   =   𝑏   +   𝑎 
+(B)   𝑎   .   𝑎 ′   =   1 
+(C)   𝑎   +   𝑎 ′   =   1 
+(D)   𝑎   .   𝑏   =   𝑏   .   𝑎 
+Q. 17   In   C   runtime environment, which one of the following is stored in heap? 
+(A)   A   static   variable declared   in side   a function 
+(B)   An array of integers declared   in side   a function 
+(C)   A dynamically allocated array of integers   created using   malloc ()   function call 
+(D)   Return address   of a function Organizing Institute: IIT Guwahati Page 14 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 15 ---
+Q. 18   Consider the following two statements about interrupt   handling mechanisms   in a 
+CPU. 
+S1:   In   non - vectored interrupt   mechanism,   it usually takes more time to start   the 
+Interrupt Service Routine ( ISR )   when compared to that   in a vectored interrupt 
+mechanism . 
+S2: In daisy - chain interrupt mechanism, the CPU polls all the input devices 
+individually to determine the source of the interrupt. 
+Which one of the following options is correct with respect to S1 and S2   ? 
+(A)   Both S1 and S2 are true 
+(B)   Both S1 and   S2 are false 
+(C)   S1 is true   and   S2 is false 
+(D)   S1 is false   and   S2 is true Organizing Institute: IIT Guwahati Page 15 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 16 ---
+Q. 19   Consider   the following   three   ANSI - C programs , P1, P2, and P3. 
+P1   P2   P3 
+#include   <stdio.h> 
+int a=5; 
+int main(){ 
+int a=7; 
+return(0); 
+} 
+#include   <stdio.h> 
+int main(){ 
+int a=5; 
+int a=7; 
+return(0); 
+} 
+#include   <stdio.h> 
+int main(){ 
+int a=5; 
+float a=7; 
+return(0); 
+} 
+Which one of the following statements is true? 
+(A)   Only   P1   will compile without any error 
+(B)   Only P2 will compile without any   error 
+(C)   Only P3 will compile without any error 
+(D)   All three programs P1, P2,   and   P3 will compile without any error Organizing Institute: IIT Guwahati Page 16 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 17 ---
+Q.20   Consider concurrent execution of two transaction s   𝑇 1   and   𝑇 2   in a DBMS , both of 
+which access a data object   𝐴 .   For these two transactions to not conflict on   𝐴 , w hich 
+one of the following statements must be true? 
+(A)   Both   𝑇 1   and   𝑇 2   only read   𝐴 
+(B)   𝑇 1   reads   𝐴   and   𝑇 2   writes   𝐴 
+(C)   𝑇 1   writes   𝐴   and   𝑇 2   reads   𝐴 
+(D)   Both   𝑇 1   and   𝑇 2   write   𝐴 
+Q. 21   Consider a file of size 4 million bytes   being transferred between two hosts 
+connected via a path consisting of three consecutive link s of bandwidth 2   Mbps, 
+500 k bps ,   and 1 Mbps, respectively.   All processing delays and propagation delays 
+are negligible.   Assum e   that there is no other background traffic over the path   and 
+no other additional overhead to transfer the file. 
+Which one of the following   is   the   total   time   (in seconds)   to tran sfer   the file ? 
+Note : 1M=10 6 , 1k=10 3 
+(A)   731 
+(B)   64 
+(C)   8 
+(D)   16 Organizing Institute: IIT Guwahati Page 17 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 18 ---
+Q.22   Which one of the following protocols may   need to   broadcast some of its messages? 
+(A)   SMTP 
+(B)   FTP 
+(C)   DHCP 
+(D)   HTTP 
+Q .23   Which one of the following CPU scheduling algorithms   cannot   be preemptive? 
+(A)   Shortest Remaining Time First   (SRTF) Scheduling 
+(B)   First Come First Serve (FCFS) Scheduling 
+(C)   Round Robin Scheduling 
+(D)   Priority   Scheduling Organizing Institute: IIT Guwahati Page 18 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 19 ---
+Q.24   Consider the following functions, where   𝑛   is a positive integer. 
+𝑛 1 / 3   ,   log ( 𝑛 )   ,   log ( 𝑛 ! ) ,   2 log ( 𝑛 ) 
+Which one of the following options lists the functions in increasing order   of 
+asymptotic growth rate? 
+Note : Assume the base of   log   to be 2. 
+(A)   log ( 𝑛 )   ,   𝑛 1 / 3 ,   2 log ( 𝑛 )   ,   log ( 𝑛 ! ) 
+(B)   𝑛 1 / 3 ,   log ( 𝑛 )   ,   log ( 𝑛 ! )   ,   2 log ( 𝑛 ) 
+(C)   log ( 𝑛 )   ,   𝑛 1 / 3 ,   log ( 𝑛 ! )   ,   2 log ( 𝑛 ) 
+(D)   2 log ( 𝑛 )   ,   𝑛 1 / 3 ,   log ( 𝑛 )   ,   log ( 𝑛 ! ) Organizing Institute: IIT Guwahati Page 19 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 20 ---
+Q. 25   Which of the following can be recurrence relation (s)   corresponding to   an algorithm 
+with time complexity   Θ ( 𝑛 ) ? 
+(A)   𝑇 ( 𝑛 )   =   𝑇 ( 𝑛   −   1 )   +   1 ,   𝑇 ( 1 )   =   1 
+(B)   𝑇 ( 𝑛 )   =   2 𝑇   ( 𝑛 
+2 )   +   1 ,   𝑇 ( 1 )   =   1 
+(C)   𝑇 ( 𝑛 )   =   2 𝑇   ( 𝑛 
+2 )   +   𝑛 ,   𝑇 ( 1 )   =   1 
+(D)   𝑇 ( 𝑛 )   =   𝑇 ( 𝑛   −   1 )   +   𝑛 ,   𝑇 ( 1 )   =   1 
+Q. 26   Let   𝑅   be a binary relation on the set   { 1 ,   2 ,   …   ,   10 } , where   ( 𝑥 ,   𝑦 )   ∈   𝑅   if the product 
+of   𝑥   and   𝑦   is square of an integer. Which of the following properties is/are satisfied 
+by   𝑅 ? 
+(A)   Reflexive 
+(B)   Symmetric 
+(C)   Transitive 
+(D)   Antisymmetric Organizing Institute: IIT Guwahati Page 20 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 21 ---
+Q. 27   For a real number   𝑎 ,   let   𝐼 ( 𝑎 )   =   ∫   ( 3 𝑥 2   −   𝑎𝑥   +   1 )   𝑑𝑥 
+1 
+− 1   . Which of the following 
+statements is/are true? 
+(A)   The value of   𝐼 ( 𝑎 )   is independent of the value of   𝑎 
+(B)   The value of   𝐼 ( 𝑎 )   can vary with   the value of   𝑎 
+(C)   There exists   𝑎   ∈   ( − ∞ ,   + ∞ )   such that   𝐼 ( 𝑎 )   is a positive real number 
+(D)   There exists   𝑎   ∈   ( − ∞ ,   + ∞ )   such that   𝐼 ( 𝑎 )   is a negative real number 
+Q. 28   In a system, numbers are represented using 4 - bit two’s complement form. Consider 
+four numbers   𝑁 1   = 1011,   𝑁 2   = 1101,   𝑁 3   = 1010 and   𝑁 4   = 1001 in the system. 
+Which of the following operations will result in arithmetic overflow? 
+(A)   𝑁 1   +   𝑁 2 
+(B)   𝑁 2   +   𝑁 3 
+(C)   𝑁 3   −   𝑁 4 
+(D)   𝑁 1   +   𝑁 4 Organizing Institute: IIT Guwahati Page 21 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 22 ---
+Q. 29   Which of the following grammars is/are ambiguous? 
+(A)   𝑆   →   𝑎𝑆𝑏   |   𝜖 
+(B)   𝐸   →   𝐸   +   𝐸   |   𝐸   ∗   𝐸   |   𝑖𝑑 
+(C)   𝑆   →   𝑎𝑆   |   𝑆𝑎   |   𝜖 
+(D)   𝑆   →   𝑎𝑆   |   𝜖 
+Q. 30   The keys 5, 28, 19, 15, 26, 33, 12, 17, 10 are inserted into a hash table using the 
+hash function   ℎ ( 𝑘 )   =   𝑘   𝑚𝑜𝑑   9 . The   c ollisions are resolved by chaining . After all 
+the   keys are   insert ed , the   length of the longest chain is __________ .   ( answer in 
+integer ) 
+Q. 31   Consider the system of linear equations given below. 
+𝑎𝑥   +   𝑦   =   𝑏 
+16 𝑥   +   𝑎𝑦   =   24 
+Suppose the values of   a   and   b   are chosen such that the system of linear equations 
+produce multiple solutions.   Then   the product   of   a   and   b   is   __________ .   ( answer in 
+integer ) 
+Q. 32   Consider an array   𝐴   =   [ 10 ,   7 ,   8 ,   19 ,   41 ,   35 ,   25 ,   31 ] . Suppose the merge sort 
+algorithm is executed on array   𝐴   to sort it in increasing order. The merge sort 
+algorithm will carry out a total of 7 merge operations. 
+A merge operation on   sorted left array   𝐿   and sorted right array   𝑅   is said to be void 
+if the output of the merge operation is   the elements of   array   𝐿   followed by   the 
+elements of   array   𝑅 . 
+The   number   of   void   merge   operations   among   these   7   merge   operations 
+is   __________.   ( answer in integer ) Organizing Institute: IIT Guwahati Page 22 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 23 ---
+Q. 33   If a n IP   network use s   a   sub net   mask of 255.255.240.0, the maximum n umber of IP 
+addresses that can   be   assigned to network   interfaces is   __________.   ( answer in 
+integer ) 
+Q. 34   The 32 - bit IEEE 754 single precision   representation   of a number is 0xC2710000. 
+The number in decimal representation   is _ _______.   ( rounded off to two decimal 
+places ) 
+Q. 35   A lexical analyzer uses the following token definitions 
+   𝑙𝑒𝑡𝑡𝑒𝑟   →   [ 𝐴   −   𝑍𝑎   −   𝑧 ] 
+   𝑑𝑖𝑔𝑖𝑡   →   [ 0   −   9 ] 
+   𝑖𝑑   →   𝑙𝑒𝑡𝑡𝑒𝑟   ( 𝑙𝑒𝑡𝑡𝑒𝑟   |   𝑑𝑖𝑔𝑖𝑡 ) * 
+   𝑛𝑢𝑚𝑏𝑒𝑟   →   𝑑𝑖𝑔𝑖 𝑡 + 
+   𝑤𝑠   →   ( 𝑏𝑙𝑎𝑛𝑘   |   𝑡𝑎𝑏   |   𝑛𝑒𝑤𝑙𝑖𝑛𝑒 ) + 
+For   the   string   given below, 
+𝑥 1   23 𝑚𝑚   78   𝑦   7 𝑧   𝑧𝑧 5   14 𝐴   8 𝐻   𝐴𝑎𝑌𝑐𝐷 
+the number of tokens (excluding   𝑤𝑠 ) that will be produced by the lexical analyzer 
+is   __________.   ( answer in integer ) Organizing Institute: IIT Guwahati Page 23 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 24 ---
+Q. 3 6   –   Q. 6 5   Carry TWO marks Each 
+Q.36   Consider a complete   graph   𝐾 𝑛   with   𝑛   vertices ( 𝑛   >   4 ).   Note that m ultiple spanning 
+trees can be constructed over   𝐾 𝑛 . Each of these spanning trees   is   represented as   a 
+set   of edges .   The   Jaccard coefficient between any two sets is defined as the ratio of 
+the   size of   the   intersection   of the two sets   to the size of   the   union   of the two sets . 
+Which one of the following options gives t he lowest possible value for   the Jaccard 
+c oefficient between   any two spanning trees of   𝐾 𝑛   ? 
+(A)   1 
+𝑛 
+(B)   1 
+2 𝑛   −   3 
+(C)   0 
+(D)   1 
+𝑛   −   1 Organizing Institute: IIT Guwahati Page 24 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 25 ---
+Q. 37   Let   𝐺   be a weighted directed acyclic graph with   𝑚   edges and   𝑛   vertices. Given   𝐺 
+and a source vertex   𝑠   in   𝐺 , which one of the following options gives the worst case 
+time complexity of the fastest algorithm to find the lengths of shortest paths from   𝑠 
+to all vertices that are reachable from   𝑠   in   𝐺 ? 
+(A)   Θ ( 𝑚   +   𝑛 ) 
+(B)   Θ ( 𝑚   +   𝑛   log ( 𝑛 ) ) 
+(C)   Θ ( 𝑛𝑚 ) 
+(D)   Θ ( 𝑛 3 ) 
+Q. 38   Consider a n array   𝐴   of integers of size   𝑛 .   The indices of   𝐴   run from   1   to   𝑛 .   An 
+algorithm is to be designed to check whether   𝐴   satisfies the condition given below. 
+∀ 𝑖 ,   𝑗   ∈   { 1 ,   …   ,   𝑛   −   1 }   such that   𝑖   >   𝑗 ,   ( 𝐴 [ 𝑖   +   1 ]   −   𝐴 [ 𝑖 ] )   >   ( 𝐴 [ 𝑗   +   1 ]   −   𝐴 [ 𝑗 ] ) 
+Which one of the   following gives the worst case time complexity of the fastest 
+algorithm that can be designed for the problem? 
+(A)   Θ ( 𝑛 ) 
+(B)   Θ ( log ( 𝑛 ) ) 
+(C)   Θ ( 𝑛   log ( 𝑛 ) ) 
+(D)   Θ ( 𝑛 2 ) Organizing Institute: IIT Guwahati Page 25 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 26 ---
+Q.39   Consider a table   𝑇 , where the elements   𝑇 [ 𝑖 ] [ 𝑗 ] ,   0   ≤   𝑖 ,   𝑗   ≤   𝑛 ,   represent the cost of 
+the optimal solutions of different subproblems of a problem that is being solved 
+using a dynamic programming algorithm. The recursive formulation to compute the 
+table entries is as follows: 
+𝑇 [ 0 ] [ 𝑘 ]   =   𝑇 [ 𝑘 ] [ 0 ]   =   1   for   𝑘   =   0 , 1 , 2 ,   …   ,   𝑛 
+𝑇 [ 𝑖 ] [ 𝑗 ]   =   2 𝑇 [ 𝑖   −   1 ] [ 𝑗 ]   +   3 𝑇 [ 𝑖 ] [ 𝑗   −   1 ]   for   1   ≤   𝑖 ,   𝑗   ≤   𝑛 
+Consider the following two algorithms to compute entries of   𝑇 .   Assume that for 
+both the algorithms,   for all   0   ≤   𝑖 ,   𝑗   ≤   𝑛 ,   𝑇 [ 𝑖 ] [ 𝑗 ]   has been initialized to 1. 
+A lgorithm   𝐵 𝑘 ,   𝑘   ∈   { 1 , 2 }   is   said to be   correct if and only if   it calculates   the   correct 
+value s   of   𝑇 [ 𝑖 ] [ 𝑗 ] ,   for all   0   ≤   𝑖 ,   𝑗   ≤   𝑛 , (as per the recursive formulation)   at the end 
+of the   execution of the   algorithm   𝐵 𝑘 . 
+Which one of the following statements is true? 
+(A)   Both algorithms   𝐵 1   and   𝐵 2   are correct 
+(B)   Algorithm   𝐵 1   is correct, but algorithm   𝐵 2   is incorrect 
+(C)   Algorithm   𝐵 2   is correct, but algorithm   𝐵 1   is incorrect 
+(D)   Both algorithms   𝐵 1   and   𝐵 2   are incorrect 
+Algorithm   𝐵 2 :   For   𝑠   =   2 ,   3 ,   …   ,   2 𝑛 
+For   𝑖   =   1 ,   2 ,   …   ,   𝑛 
+For   𝑗   =   1 ,   2 ,   …   ,   𝑛 
+If ( 𝑖   +   𝑗   = =   𝑠 ) 
+𝑇 [ 𝑖 ] [ 𝑗 ]   =   2 𝑇 [ 𝑖   −   1 ] [ 𝑗 ]   +   3 𝑇 [ 𝑖 ] [ 𝑗   −   1 ] 
+Algorithm   𝐵 1 :   For   𝑖   =   1 ,   2 ,   …   ,   𝑛 
+For   𝑗   =   1 ,   2 ,   …   ,   𝑛 
+𝑇 [ 𝑖 ] [ 𝑗 ]   =   2 𝑇 [ 𝑖   −   1 ] [ 𝑗 ]   +   3 𝑇 [ 𝑖 ] [ 𝑗   −   1 ] Organizing Institute: IIT Guwahati Page 26 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 27 ---
+Q.40   Consider the following 4 - variable Boolean function 
+𝐹 ( 𝐴 ,   𝐵 ,   𝐶 ,   𝐷 )   =   Σ 𝑚 ( 0 ,   1 ,   2 ,   3 ,   8 ,   9 ,   10 ,   11 ) 
+Consider   𝐴   as MSB,   𝐷   as LSB.   Which one of the following options represents the 
+minimal sum of products form for the above function? 
+Note :   +   is OR operation,   .   is AND operation,   ′   is NOT operation 
+(A)   𝐴 ′   +   𝐵 ′   +   𝐶 ′   +   𝐷 ′ 
+(B)   𝐵 ′ 
+(C)   𝐴 ′ .   𝐵 ′   +   𝐴   .   𝐵 
+(D)   𝐴 ′ Organizing Institute: IIT Guwahati Page 27 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 28 ---
+Q. 41   Consider   the   canonical   𝐿𝑅 ( 0 )   parsing of the grammar below using terminals 
+{ 𝑎 ,   𝑏 ,   𝑐 }   and   non - terminals   { 𝐴 ,   𝐵 ,   𝐶 ,   𝑆 }   with   𝑆   as the start symbol. 
+𝑆   →   𝐴𝐶𝐵 
+𝐴   →   𝑎𝐴   |   𝜖 
+𝐶   →   𝑐𝐶   |   𝜖 
+𝐵   →   𝑏𝐵   |   𝑏 
+Which one of the following options gives the number of shift - reduce conflicts that 
+will occur in the   𝐿𝑅 ( 0 )   ACTION table? 
+(A)   2 
+(B)   3 
+(C)   4 
+(D)   5 Organizing Institute: IIT Guwahati Page 28 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 29 ---
+Q. 42   In the context of schema normalization in relational DBMS, consider a set F of 
+functional   dependencies. The set of all functional dependencies implied by F is 
+called the closure of F. To comp ute the closure of F, Armstrong’ s Axioms can be 
+applied. Consider   𝑋 ,   𝑌 ,   and   𝑍   as sets of attributes over a relational schem a. The three 
+rules of Armstr ong’ s Axioms are described as follows. 
+Reflexivity : If   𝑌   ⊆   𝑋   , then   𝑋   →   𝑌 
+Augmentation : If   𝑋   →   𝑌 , then   𝑋𝑍   →   𝑌𝑍   for any Z 
+Transitivity : If   𝑋   →   𝑌   and   𝑌   →   𝑍 , then   𝑋   →   𝑍 
+T he   additional   rule of Union   is defined   as follows. 
+Union:   If   𝑋   →   𝑌   and   𝑋   →   𝑍 , then   𝑋   →   𝑌𝑍 
+It can be proved that the additional rule of Union is also implied by the three rules 
+of Arms trong’s Axioms. L isted   below are   four   combinations   of these three rules. 
+Which one of the se combinations   is both necessary and sufficient for the proof   ? 
+(A)   Reflexivity,   Augmentation, and Transitivity 
+(B)   Reflexivity and Augmentation 
+(C)   Transitivity 
+(D)   Augmentation   and Transitivity Organizing Institute: IIT Guwahati Page 29 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 30 ---
+Q. 43   Consider the transmission of   data   bits 110001011 over a link that uses Cyclic 
+Redundancy Check (CRC) code for error detection. If the generator bit pattern is 
+given to be 1001, which one of the following options shows the remainder bit 
+pattern appended to the data bits before transmission ? 
+(A)   011 
+(B)   101 
+(C)   000 
+(D)   100 
+Q. 4 4   Consider a processor that has 16 general purpose registers and it uses 2 - byte 
+instruction format for all its instructions. Variable - sized opcodes are permitted. 
+There are three different types of   instructions; M - type, R - type, and C - type. Each 
+M - type instruction has 2 register operands and a 6 - bit immediate operand. Each R - 
+type instruction has 3 register operands. Each C - type instruction has a register 
+operand and a 6 - bit offset value. If there are   2 unique M - type opcodes and 7 unique 
+R - type opcodes, which one of the following options gives the maximum number of 
+unique opcodes possible for C - type instructions? 
+(A)   8 
+(B)   4 
+(C)   64 
+(D)   16 Organizing Institute: IIT Guwahati Page 30 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 31 ---
+Q. 4 5   Consid er the control flow graph given below. 
+Whi ch one of the following options is   the set of live variables at the exit point of 
+each basic block? 
+(A)   B1:{a, b, c, e, f}, B2:{d, e}, B3:{b, c, e, f}, B4 : ∅ 
+(B)   B1: ∅ , B2:{d, e}, B3:{a, c, f}, B4 : ∅ 
+(C)   B1:{ a, b, c, e, f}, B2:{d, e}, B3:{c, e, f},   B4 : ∅ 
+(D)   B1: ∅ , B2:{d, e, f}, B3:{a ,   b, c, e, f}, B4 : ∅ Organizing Institute: IIT Guwahati Page 31 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 32 ---
+Q. 4 6   An index in a DBMS is said to be dense if an index entry appears   for   every 
+search - key value in the indexed file. Otherwise it is called a sparse index. Consid er 
+the following two statements. 
+S1: A h ash index must be a dense index 
+S2: A   𝐵 +   t ree index can be a sparse index 
+Which one of the following options is correct? 
+(A)   Both S1 and S2 are   true 
+(B)   Both S1 and S2 are   false 
+(C)   S1 is   true   and S2 is   false 
+(D)   S1 is   false   and S2 is   true Organizing Institute: IIT Guwahati Page 32 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 33 ---
+Q. 4 7   Consider the following two finite automata   𝐷 1   and   𝐷 2 . 
+Which of the following statements is/are true? 
+(A)   𝐿 ( 𝐷 1 )   =   𝐿 ( 𝐷 2 ) 
+(B)   𝐿 ( 𝐷 1 )   is a proper subset of   𝐿 ( 𝐷 2 ) 
+(C)   𝐿 ( 𝐷 1 )   ∩   𝐿 ( 𝐷 2 )   =   {   𝜖 } 
+(D)   ( 𝐿 ( 𝐷 1 )   ∪   𝐿 ( 𝐷 2 ) ) ∗   consists of all strings in   { 0 , 1 } ∗   whose length is divisible by   3 Organizing Institute: IIT Guwahati Page 33 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 34 ---
+Q.4 8   Let   Σ   =   { 𝑎 ,   𝑏 ,   𝑐 ,   𝑑 }   and let   𝐿   =   { 𝑎 𝑖 𝑏 𝑗 𝑐 𝑘 𝑑 ℓ   ∣   𝑖 ,   𝑗 ,   𝑘 ,   ℓ   ≥   0 } . 
+Which of the following constraints ensure(s) that the language   𝐿   is context - free? 
+(A)   𝑖   +   𝑘   =   𝑗   +   ℓ 
+(B)   𝑖   =   𝑘   and   𝑗   =   ℓ 
+(C)   𝑖   =   ℓ   and   𝑗   =   𝑘 
+(D)   𝑖   +   𝑗   =   𝑘   +   ℓ Organizing Institute: IIT Guwahati Page 34 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 35 ---
+Q. 49   Consider a binary search tree (BST) with   𝑛   leaf nodes ( 𝑛   >   0 ). Given any node   𝑉 , 
+the key present in the node is denoted as   𝑉𝑎𝑙 ( 𝑉 ) . All the keys present in the   given 
+BST are distinct.   The k eys belong to the set of real numbers. 
+For   a node   𝑉 ,   let   𝑆𝑢𝑐 ( 𝑉 )   denote the node that is   its inorder successor. If a node   𝑉 
+does not have   an   inorder successor ,   then   𝑆𝑢𝑐 ( 𝑉 )   is   𝑁𝑈𝐿𝐿 . As there are no 
+duplicates ,   if   𝑆𝑢𝑐 ( 𝑉 )   is no t   𝑁𝑈𝐿𝐿 ,   t hen   𝑉𝑎𝑙 ( 𝑉 )   <   𝑉𝑎𝑙 ( 𝑆𝑢𝑐 ( 𝑉 ) ) . 
+Cor responding to every leaf node   𝐿 𝑖   that has   a   non - NULL   𝑆𝑢𝑐 ( 𝐿 𝑖 ) ,   a   new key   𝑘 𝑖 
+with the following property   is to be inserted into the BST. 
+𝑉𝑎𝑙 ( 𝐿 𝑖 )   <   𝑘 𝑖   <   𝑉𝑎𝑙 ( 𝑆𝑢𝑐 ( 𝐿 𝑖 ) ) 
+Let   𝐾   represent the   list   of   all such   new keys   to be inserted   into the BST. 
+Which of the following statements   is/ are true ? 
+(A)   𝐾   cannot have any duplicates 
+(B)   𝐾   will have at least one element 
+(C)   After inserting all keys from   𝐾 , the height of the BST   can increase at most by   one 
+(D)   Number of nodes in   the   BST will double after inserting all keys from   𝐾 Organizing Institute: IIT Guwahati Page 35 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 36 ---
+Q. 5 0   Consider   a stack   𝑆   and a queue   𝑄 . Both of them are   initially   empty and have   the 
+capacity to store ten elements   each . The elements   1 ,   2 ,   3 ,   4 ,   and   5   arrive   one by one, 
+in   that   order.   When   an   element arrives ,   it   is assigned either to   𝑆   ( pushed on   𝑆   )   or 
+to   𝑄   (enqueued   to   𝑄 ) .   Once   all   the   five elements   are stored ,   the output is generated 
+in two steps. First, stack   S   is emptied by popping all elements .   Then   queue   𝑄   is 
+emptied by   dequeueing all   elements .   T he output   obtained by following this process 
+is   4   3   1   2   5   . 
+Given the output,   the objective is   to predict whether   an element   was assigned to   𝑆 
+or   𝑄 . 
+W hich of the following   options   is/are   possible valid assignment ( s )   of the 
+elements ? 
+Note:   In the options, the notation   𝑥𝑆   denotes that element   𝑥   was assigned to   𝑆   and 
+𝑦𝑄   denotes that element   𝑦   was assigned to   𝑄 . 
+(A)   1 𝑆 ,   2 𝑄 ,   3 𝑆 ,   4 𝑆 ,   5 𝑄 
+(B)   1 𝑄 ,   2 𝑄 ,   3 𝑆 ,   4 𝑆 ,   5 𝑄 
+(C)   1 𝑄 ,   2 𝑄 ,   3 𝑄 ,   4 𝑆 ,   5 𝑆 
+(D)   1 𝑆 ,   2 𝑆 ,   3 𝑆 ,   4 𝑄 ,   5 𝑄 Organizing Institute: IIT Guwahati Page 36 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 37 ---
+Q. 5 1   Consider three processes   P1, P2, and P3   running identical code, as shown in the 
+pseudocode below.   A   and   B   are two binary semaphores initialized to   1   and   0 , 
+respectively.   X   is a shared variable initialized to 0. Each line in the pseudocode is 
+executed atomically. 
+Pseudocode   of P1, P2,   and   P3 
+Wait(A); 
+Print ( * ) ; 
+X = X+1; 
+If (X == 2) 
+{ 
+Print ( $ ) ; 
+Signal(B); 
+} 
+Signal(A); 
+Wait(B); 
+Print ( # ) ; 
+Signal(B); 
+Assume that any of the three processes can start to execute first and c ontext 
+switching can happen between these processes   at any arb itrary time and in any 
+arbitrary order . 
+Which of the following patterns is/are possible to be generated as   an   outcome of the 
+execution of these three processes? 
+(A)   **$*### 
+(B)   **$#*## 
+(C)   **$##*# 
+(D)   ***$### Organizing Institute: IIT Guwahati Page 37 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 38 ---
+Q. 5 2   Consider a system with a processor and a   4   KB direct mapped cache with block size 
+of   16   bytes. The system has a 16 MB physical memory. Four words P,   Q,   R ,   and S 
+are accessed by the processor in the same order 10 times.   That is, t here are   a total 
+of   40 memo ry references in the sequence P,   Q,   R,   S,   P,   Q,   R,   S,… 
+Assume   that   the cache memory is initially empty. The physical addresses of the 
+words   are given below (1 word =1 byte). 
+P: 0x845B32, Q: 0x84 5 B 26 , R: 0x845B 36 , S: 0x84 6B32 
+Which of the following   statements is/are true? 
+Note:   1K=2 10   and 1M=2 20 
+(A)   Every access to   P   results in a cache miss 
+(B)   Every access to   R   results in a cache   hit 
+(C)   Every access to   Q   results in a cache miss 
+(D)   Except the first access to   S , all subsequent accesses to   S   result in cache hits 
+Q. 5 3   To keep track of free blocks in a file system, one of the two approaches is generally 
+used   –   using bitmaps (bit vectors) or using linked lists. Consider that the linked list 
+approach is used to keep track of free blocks   in a file system. Assume that the dis k 
+size is 16 GB, block size is   2 KB, and block numbers used are 32 - bit long. A single 
+pointer of size 4 bytes is used in each block of the list to point to the next block of 
+the list. The number of blocks required to ho ld the free disk block numbers is 
+____________. ( answer in integer ) 
+Note :   1K=2 10   and 1G =2 3 0 Organizing Institute: IIT Guwahati Page 38 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 39 ---
+Q. 5 4   A system has a Translation Lookaside Buffer (TLB) that has a   reach   of 1 MB. TLB 
+reach is defined as the total amount of physical memory that can be accessed 
+through the TLB entries. The paging system uses pages of size 4 KB. The virtual 
+address space is 64 GB and physical address space is 1 GB. If each TLB entry stores 
+a 4 - bit process id, page number, frame number, and a 2 - bit control field , then   t he 
+size of   the TLB (in bytes) is   ___________. ( answer in integer ) 
+Note : 1K=2 10 , 1M=2 20 ,   1G=2 30 
+Q. 5 5   Consider contiguous allocation of physical memory to processes using variable 
+partitioning scheme. Suppose there are 8 holes in the memory of sizes 20 KB, 4 KB, 
+25 KB , 18 KB, 7 KB, 9 KB, 15 KB, and 12 KB. Assume that no two holes are 
+adjacent.   Two p rocess es   P1 of size 16 KB   and   P2 of size 9 KB arrive in that   order, 
+and they are allocated memory using the best - fit technique. After allocating space 
+to P1 and P2, the number of holes of size less than 8 KB is   ____________. ( answer 
+in integer ) 
+Note:   1K=2 10 
+Q. 5 6   Consider a system with 1 MB physical memory and a word len gth of 1 byte. The 
+system uses a direct mapped cache, with block numbers starting from 0. The word 
+with physical address 0xA2C28 is mapped to the cache block number 176 10 . The 
+maximum possible size of the cache (in KB) for this configuration   is _ __________. 
+( answer in integer ) 
+Note:   1K=2 10   and 1M=2 20 
+Q. 5 7   A non - pipelined instruction execution unit that operates at   1.6 GHz   clock takes an 
+average of 5 clock cycles to complete the execution of an instruction. To improve 
+the performance, the system was pipelined with a goal of achieving an average 
+throughput of one instruction per clock cycle. However, it could operate only at 
+1.2 GHz due to pipeline overheads. While executing a program in the pipelined 
+design,   30% of instructions encountered   a stall of   2 cycles due to pipeline hazards . 
+The speed - up obtained by   the pipelined design over the   non - pipelined one for this 
+program   is   _ __________.   ( rounded off to two decimal places ) 
+Note : 1G=10 9 Organizing Institute: IIT Guwahati Page 39 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 40 ---
+Q. 5 8   Consider a   new   TCP connection   between a sender and a receiver.   The receiver 
+advertised window is constant at   48   KB, the maximum segment size   (MSS)   is 
+2   KB, and the slow start threshold   for TCP congestion control   is 16   KB.   Assume 
+that there are no timeouts or duplicate acknowledgements.   The number of rounds 
+of   transmission   required   for the congestion   control algorithm   of   the   TCP connection 
+to reach   the   congestion avoidance phase is   _____ ______.   ( answer in integer ) 
+Note : 1K=2 10 
+Q. 59   Consider the digital circuit shown below with two input l ines A and B, two select 
+lines   S0 and S1, and an output line Y. The blocks Q and M represent active high 
+2:4   decoder   and   4 - to - 1   multiplexer,   respectively.   Out   of   16   possible   input 
+combinations, the number of combinations that produce Y=1 is   ____________. 
+( answer in integer ) 
+Note:   O ne   input   combination is an instance of   [A B S1 S0] . 
+Q. 6 0   Consider   the following   ANSI - C program . 
+#include   <stdio.h> 
+int main(){ 
+int *ptr, a,   b,   c; 
+a=5; b=11; c=20; 
+ptr=&a; *ptr=c; ptr=&c; 
+a=*(&b); c=*ptr - a; 
+printf("%d",c); 
+return(0); 
+} 
+The output of this program is   ____________.   ( answer in integer ) 
+Note : Assume that the program compiles   and runs successfully. Organizing Institute: IIT Guwahati Page 40 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 41 ---
+Q. 6 1   Consider the   following   ANSI - C   functio n. 
+int func(int start, int end){ 
+int length=end+1 - start; 
+if((length<1)||(start<0)||(end<0)){ return(0); } 
+if(length%3==0){ 
+return(func(start+1,   end)); 
+}   else   if(length%3==1){ 
+return(1+func(start, end - 1)); 
+}   else   { 
+return(func(start+2, end)); 
+} 
+} 
+The maximum possible value that can be returned from this function is 
+____________.   ( answer in integer ) 
+Note : Ignore syntax errors (if any) in the function. 
+Q. 6 2   The determinant of a   4   ×   4   matrix   A   is 3. The value of the determinant of   2A   is 
+____________. ( answer in integer ) 
+Q. 6 3   Suppose an unbiased coin is tossed 6 times. Each coin toss is independent of all 
+previous coin tosses. Let   𝐸 1   be the event that among the second, fourth, and sixth 
+coin tosses, there are at least two heads. Let   𝐸 2   be the event that among the first, 
+secon d, third, and fifth coin tosses, there are equal number of heads and tails. 
+The conditional probability   P ( 𝐸 1 |   𝐸 2 )   is equal to   ____________.   ( rounded off to 
+one   decimal place ) 
+Q. 6 4   Consider a function   𝑓 :   ( 0 , 1 )   →   { 0 ,   1 }   defined as follows . 
+For a real number   𝑟   ∈   ( 0 , 1 )   ,   𝑓 ( 𝑟 )   =   1   if the second digit after the decimal point 
+in   𝑟   is one of the four digits 2, 3, 6 and 7.   Otherwise,   𝑓 ( 𝑟 )   is equal to 0. 
+The number of points   in (0,1)   at which   𝑓   is discontinuous   is _ __________.   ( answer 
+in integer ) Organizing Institute: IIT Guwahati Page 41 of 42 Computer Science & Information Technology (CS2) 
+
+--- PAGE 42 ---
+Q.6 5   It is necessary to design a link - layer protocol between two hosts that are directly 
+connected over a lossless link of length 3000 kilometers. Assume that the link 
+bandwidth is   10 8   bits per second   and that the propagation delay in the link is   5 
+nanoseconds   per meter. Every transmitted data byte is assigned a unique sequence 
+number. 
+Let   𝑁   be the minimum number of bits needed for the sequence number field in the 
+protocol header such that 
+i.   the sequence numbers do not wrap around before 60 seconds, and 
+ii.   the maxi mum utilization of the link is achieved. 
+The value of   𝑁   is ______.   ( answer in integer ) Organizing Institute: IIT Guwahati Page 42 of 42 Computer Science & Information Technology (CS2) 

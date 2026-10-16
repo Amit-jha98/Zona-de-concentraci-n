@@ -20,6 +20,11 @@ dist-ssr
 test-results/
 playwright-report/
 .vercel/
+.gemini/
+.claude/
+.ollama/
+*keys.json
+
 
 # Editor directories and files
 .vscode/*

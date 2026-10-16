@@ -1,0 +1,1243 @@
+[
+  {
+    "id": "2025-cs1-q1",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 1,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Q.1 Ravi had ______ younger brother who taught at ______ university. He was widely regarded as ______ honorable man. Select the option with the correct sequence of articles to fill in the blanks. (A) a; a; an (B) the; an; a (C) a; an; a (D) an; an; a",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q01-1.webp",
+        "width": 1072,
+        "height": 1110,
+        "page": 1
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q2",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 2,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Q. 2 The CEO’s decision to downsize the workforce was considered myopic because it sacrificed long - term stability to accommodate short - term gains. Select the most appropriate option that can replace the word “myopic” without changing the meaning of the sentence. (A) visionary (B) shortsighted (C) progressive (D) i nnovative",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q02-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q3",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 3,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "Q. 3 The average marks obtained by a class in an examination were calculated as 30.8. However, while checking the marks entered, the teacher found that the marks of one student were entered incorrectly as 24 instead of 42. After correcting the marks, the average becomes 31.4. How many students does the class have? (A) 25 (B) 28 (C) 30 (D) 32",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q03-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q4",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 4,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Q. 4 Consider the relationships among P, Q, R, S, and T: • P is the brother of Q. • S is the daughter of Q. • T is the sister of S. • R is the mother of Q. The following statements are made based on the relationships given above. (1) R is the grandmother of S. (2) P is the uncle of S and T. (3) R has only one son. (4) Q has only one daughter. Which one of the following options is correct? (A) Both (1) and (2) are true. (B) Both (1) and (3) are true. (C) Only (3) is true. (D) Only (4) is true.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q04-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q5",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 5,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "Q. 5 According to the map shown in the figure, w hich one of the following statement s is correct? Note: The figure shown is representative. Library Canteen Physics Lab Hospital 1st Main Road 5th Cross Road Chemistry Hostel s Lab N Classrooms W E S (A) The l ibrary is located to the northwest of the canteen . (B) The h ospital is located to the east of the chemistry lab . (C) The c hemistry lab is to the southeast of physics lab . (D) The c lassrooms and canteen are next to each other .",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q05-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q6",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 6,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Q. 6 “I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one’s pocket: the pocket - knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past.” (From G.K. Chesterton’s “A Piece of Chalk”) Based only on the information provided in the above passage, which one of the following statements is true? (A) The author of the passage carries a mirror in his pocket to reflect upon things. (B) The author of the passage had decided to write a poem on epics. (C) The pocket - knife is described as the infant of the sword. (D) Epics are described as too inconvenient to write.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q06-1.webp",
+        "width": 1072,
+        "height": 1069,
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q7",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 7,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Q. 7 In the diagram, the lines QR and ST are parallel to each other. The shortest distance between these two lines is half the shortest distance between the point P and line QR. What is the ratio of the area of the triangle PST to the area of the trapezium SQRT? Note: The figure shown is representative. P S T Q R (A) 1 3 (B) 1 4 (C) 2 5 (D) 1 2",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q07-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 7
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q8",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 8,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Q. 8 A fair six - faced dice, with the faces labelled ‘1’, ‘2’, ‘3’, ‘4’, ‘5’, and ‘6’, is rolled thrice. What is the probability of rolling ‘6’ exactly once? (A) 75 216 (B) 1 6 (C) 1 18 (D) 25 216",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q08-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q9",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 9,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Q. 9 A square paper, shown in figure (I), is folded along the dotted lines as shown in the figures (II) and (III). Then a few cuts are made as shown in figure (IV). Which one of the following patterns will be obtained when the paper is unfolded? Note: The figures shown are representative. (I) (I I ) (I II ) (I V ) (A) (B) (C) (D)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q09-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q10",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 10,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 2,
+    "prompt": "Q. 10 A shop has 4 distinct flavors of ice - cream . One can purchase any number of scoops of any flavor . The order in which the scoops are purchased is inconsequential. If one wants to purchase 3 scoops of ice - cream, i n how many ways can one make th at purchase? (A) 4 (B) 20 (C) 24 (D) 48 Q.1 1 – Q. 3 5 Carry ONE mark Each",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q10-1.webp",
+        "width": 1072,
+        "height": 670,
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q11",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 11,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Q. 11 Suppose a program is running on a non - pipelined single processor computer system. The computer is connected to an external device that can interrupt the processor asynchronously. The processor needs to execute the interrupt service routine (ISR) to serve this interrupt. The following steps (not necessarily in order) are taken b y the processor when the interrupt arrives: (i) The processor saves the content of the program counter. (ii) The program counter is loaded with the start address of the ISR. (iii) The processor finishes the present instruction. Which ONE of the following is the CORRECT sequence of steps? ( A ) (iii), (i), (ii) ( B ) (i), (iii), (ii)\n( C ) (i), (ii), (iii) ( D ) (iii), (ii), (i)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q11-1.webp",
+        "width": 1072,
+        "height": 511,
+        "page": 10
+      },
+      {
+        "src": "/pyq/2025-cs1/q11-2.webp",
+        "width": 1072,
+        "height": 1257,
+        "page": 11
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q12",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 12,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "Q. 12 Which ONE of the following statements is FALSE regarding the symbol table? (A) Symbol tabl e is responsible for keeping track of the scope of variables. (B) Symbol table can be implemented using a binary search tree. (C) Symbo l table is not required after the parsing phase. (D) Symbol table is created during the lexical analysis phase.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q12-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q13",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 13,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Q. 13 Which ONE of the following techniques used in compiler code optimization uses live variable analysis? (A) Run - time function call management (B) Register assignment to variables (C) Strength reduction (D) Constant folding",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q13-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q14",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 14,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Q. 14 Consider a demand paging memory management system with 32 - bit logical address, 20 - bit physical address, and page size of 2048 bytes. Assuming that the memory is byte addressable , what is the maximum number of entries in the page table? 21 (A) 2 20 (B) 2 2 2 (C) 2 2 4 (D) 2",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q14-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q15",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 15,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "Q. 15 A schedule of three database transactions 𝑇 1 , 𝑇 2 , and 𝑇 3 is shown . 𝑅 𝑖 ( 𝐴 ) and 𝑊 𝑖 ( 𝐴 ) denote read and write of data item 𝐴 by transaction 𝑇 𝑖 , 𝑖 = 1 , 2 , 3 . The transaction 𝑇 1 aborts at the end. Wh ich other transaction(s) will be required to be rolled back? 𝑅 1 ( 𝑋 ) 𝑊 1 ( 𝑌 ) 𝑅 2 ( 𝑋 ) 𝑅 2 ( 𝑌 ) 𝑅 3 ( 𝑌 ) 𝐴𝐵𝑂𝑅𝑇 ( 𝑇 1 ) (A) Only 𝑇 2 (B) Only 𝑇 3 (C) Both 𝑇 2 and 𝑇 3 (D) Neither 𝑇 2 nor 𝑇 3",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q15-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 15
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q16",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 16,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Q.16 Identify the ONE CORRECT matching between the OSI layers and the ir corresponding functionalities as shown . OSI Layers Functionalities (a) Network layer (I) Packet routing (b) Transport layer (II) Framing and error handling (c) Datalink layer (III) Host to host communication ( A ) (a) - (I), (b) - (II), (c) - (III) ( B ) ( a ) - (I) , ( b ) - (III) , ( c ) - (II) ( C ) (a) - (II), (b) - (I), (c) - (III) ( D ) (a) - (III), (b) - (II), (c) - (I)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q16-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q17",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 17,
+    "type": "MCQ",
+    "officialKey": "D",
+    "marks": 1,
+    "prompt": "Q.17 𝑔 ( . ) is a function from 𝐴 to 𝐵 , 𝑓 ( . ) is a function from 𝐵 to 𝐶 , and their composition defined as 𝑓 ( 𝑔 ( . ) ) is a mapping from 𝐴 to 𝐶 . If 𝑓 ( . ) and 𝑓 ( 𝑔 ( . ) ) ar e onto ( surjective) functions, which ONE of the following is TRUE about the function 𝑔 ( . ) ? (A) 𝑔 ( . ) must be an onto (surjective) function. (B) 𝑔 ( . ) must be a one - to - one (injective) function. (C) 𝑔 ( . ) must be a bijective function, that is, both one - to - one and onto. (D) 𝑔 ( . ) is not required to be a one - to - one or onto function.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q17-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q18",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 18,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Q.18 Let 𝐺 be any undirected graph with positive edge weights, and 𝑇 be a minimum spanning tree of 𝐺 . For any two vertices , 𝑢 and 𝑣 , let 𝑑 1 ( 𝑢 , 𝑣 ) and 𝑑 2 ( 𝑢 , 𝑣 ) be the shortest distances between 𝑢 and 𝑣 in 𝐺 and 𝑇 , respectively. W hich ONE of the option s is CORRECT for all possible 𝐺 , 𝑇 , 𝑢 and 𝑣 ? (A) 𝑑 1 ( 𝑢 , 𝑣 ) = 𝑑 2 ( 𝑢 , 𝑣 ) (B) 𝑑 1 ( 𝑢 , 𝑣 ) ≤ 𝑑 2 ( 𝑢 , 𝑣 ) (C) 𝑑 1 ( 𝑢 , 𝑣 ) ≥ 𝑑 2 ( 𝑢 , 𝑣 ) (D) 𝑑 1 ( 𝑢 , 𝑣 ) ≠ 𝑑 2 ( 𝑢 , 𝑣 )",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q18-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q19",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 19,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Q. 19 Consider the following context - free grammar 𝐺 , where 𝑆 , 𝐴 , and 𝐵 are the variables (non - terminals), 𝑎 and 𝑏 are the terminal symbols, 𝑆 is the start variable , and the rules of 𝐺 are described as: 𝑆 → 𝑎𝑎𝐵 | 𝐴𝑏𝑏 𝐴 → 𝑎 | 𝑎𝐴 𝐵 → 𝑏 | 𝑏𝐵 Which ONE of the language s 𝐿 ( 𝐺 ) is accepted by 𝐺 ? 2 𝑛 𝑛 2 (A) 𝐿 ( 𝐺 ) = { 𝑎 𝑏 | 𝑛 ≥ 1 } ∪ { 𝑎 𝑏 | 𝑛 ≥ 1 } 𝑛 2 𝑛 2 𝑛 𝑛 (B) 𝐿 ( 𝐺 ) = { 𝑎 𝑏 | 𝑛 ≥ 1 } ∪ { 𝑎 𝑏 | 𝑛 ≥ 1 } 𝑛 𝑛 (C) 𝐿 ( 𝐺 ) = { 𝑎 𝑏 | 𝑛 ≥ 1 } 2 𝑛 2 𝑛 (D) 𝐿 ( 𝐺 ) = { 𝑎 𝑏 | 𝑛 ≥ 1 }",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q19-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q20",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 20,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Q.20 𝑛 𝑇 ( 𝑛 ) = 2 𝑇 ( 𝑛 − 1 ) + 𝑛 2 for 𝑛 > 0 , 𝑇 ( 0 ) = 1 . Which ONE of the following options is CORRECT? 2 𝑛 (A) 𝑇 ( 𝑛 ) = Θ ( 𝑛 2 ) 𝑛 (B) 𝑇 ( 𝑛 ) = Θ ( 𝑛 2 ) 2 𝑛 (C) 𝑇 ( 𝑛 ) = Θ ( ( log 𝑛 ) 2 ) 𝑛 (D) 𝑇 ( 𝑛 ) = Θ ( 4 )",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q20-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q21",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 21,
+    "type": "MSQ",
+    "officialKey": "B;D",
+    "marks": 1,
+    "prompt": "+ Q. 21 Consider the following 𝐵 tree with 5 nodes, in which a node can store at mos t 3 key values. + T he value 23 is now inserted in the 𝐵 tree. Which of the following options(s) is/are CORRECT? (A) None of the nodes will split. (B) At least one node will split and redistribute. (C) The total number o f nodes will remain same. (D) The height of the tree will increase.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q21-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q22",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 22,
+    "type": "MSQ",
+    "officialKey": "B;D",
+    "marks": 1,
+    "prompt": "Q.22 Consider the 3 - way handshaking protocol for TCP connection establishme nt. Let the three packets exchanged during the connection establishment be denoted as P1, P2, and P3 , in order. Which of the following option(s) is/are TRUE with respect to TCP header flags that are set in the packets ? (A) P3 : SYN = 1, ACK = 1 (B) P2: SYN = 1, ACK = 1 (C) P2 : SYN = 0, ACK = 1 (D) P1 : SYN = 1",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q22-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 22
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q23",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 23,
+    "type": "MSQ",
+    "officialKey": "A;D",
+    "marks": 1,
+    "prompt": "Q.23 real - valued constant . Which of the following option(s) is/are CORRECT? 𝑥 + 𝑘𝑦 = 1 𝑘𝑥 + 𝑦 = − 1 (A) There is exactly one value of 𝑘 for which the above system of equations has no solution. (B) There exist an infinite number of values of 𝑘 for which the system of equations has no solution. (C) There exists exactly one value of 𝑘 for which the system of equations has exactly one so l ution . (D) There exists exactly one value of 𝑘 for which the system of equations has an infinite number of solutions.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q23-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q24",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 24,
+    "type": "MSQ",
+    "officialKey": "B;D",
+    "marks": 1,
+    "prompt": "Q. 24 Let 𝑋 b e a 3 - variable Boolean function that produces output as ‘ 1 ’ when at least two of the input variables are ‘ 1 ’ . Which of the follo wing statement(s) is/are CORRECT , where 𝑎 , 𝑏 , 𝑐 , 𝑑 , 𝑒 are Boolean variables? (A) 𝑋 ( 𝑎 , 𝑏 , 𝑋 ( 𝑐 , 𝑑 , 𝑒 ) ) = 𝑋 ( 𝑋 ( 𝑎 , 𝑏 , 𝑐 ) , 𝑑 , 𝑒 ) (B) 𝑋 ( 𝑎 , 𝑏 , 𝑋 ( 𝑎 , 𝑏 , 𝑐 ) ) = 𝑋 ( 𝑎 , 𝑏 , 𝑐 ) (C) 𝑋 ( 𝑎 , 𝑏 , 𝑋 ( 𝑎 , 𝑐 , 𝑑 ) ) = ( 𝑋 ( 𝑎 , 𝑏 , 𝑎 ) AND 𝑋 ( 𝑐 , 𝑑 , 𝑐 ) ) (D) 𝑋 ( 𝑎 , 𝑏 , 𝑐 ) = 𝑋 ( 𝑎 , 𝑋 ( 𝑎 , 𝑏 , 𝑐 ) , 𝑋 ( 𝑎 , 𝑐 , 𝑐 ) )",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q24-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q25",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 25,
+    "type": "MSQ",
+    "officialKey": "B;D",
+    "marks": 1,
+    "prompt": "Q. 25 The number − 6 can be represented as 1010 in 4 - bit 2’s complement representation. Which of the following is/are CORRECT 2’s complement representation(s) of − 6 ? (A) 1000 1010 in 8 - bits (B) 1111 1010 in 8 - bits (C) 1000 0000 0000 1010 in 16 - bits (D) 1111 1111 1111 1010 in 16 - bits",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q25-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 25
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q26",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 26,
+    "type": "MSQ",
+    "officialKey": "A;B",
+    "marks": 1,
+    "prompt": "Q.26 Which of the fo llowing statement(s) is/are TRU E for any binary search tree (BST) having 𝑛 distinct integers? (A) The maximum length of a path from the root node to any other node is ( 𝑛 − 1 ) . (B) An inorder traversal will always produce a sorted sequence of elements. (C) Finding an element takes 𝑂 ( log 2 𝑛 ) time in the worst case. (D) Every BST is also a Min - Heap.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q26-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 26
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q27",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 27,
+    "type": "MSQ",
+    "officialKey": "A;B;C",
+    "marks": 1,
+    "prompt": "Q. 27 A partial data path of a processor is given in the figu re, where RA, RB, and RZ are 32 - bit registers. Which option(s) is/are CORRECT related to arithmetic operations using the data path as shown? (A) The data path can implement arithmetic operations involving two registers. (B) The data path can implement arithmetic operations involving one register and one immediate value. (C) The data path can implement arithmetic operations involving two immediate values. (D) The data path can only implement arithmetic operations involving one register and one immediate value.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q27-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q28",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 28,
+    "type": "MSQ",
+    "officialKey": "D",
+    "marks": 1,
+    "prompt": "Q. 28 A regular language 𝐿 is accepted by a non - deterministic finite automaton (NFA) with 𝑛 states. Which of the following statement(s) is/are FALSE? (A) 𝐿 may have an accepting NFA with < 𝑛 states. (B) 𝐿 may have an accepting DFA with < 𝑛 states. 𝑛 (C) There exists a DFA with ≤ 2 states that accepts 𝐿 . 𝑛 (D) Every DFA that accepts 𝐿 has > 2 states.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q28-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q29",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 29,
+    "type": "NAT",
+    "officialKey": "21 to 21",
+    "marks": 1,
+    "prompt": "Q. 29 Suppose in a multiprogramming environment, the following C program segment is executed. A process goes into I/O queue whenever an I/O related operation is performed. Assume that there will always be a context switch whenever a process requests for an I/O , and also whenever the process returns from an I/O . T he number of times the process will enter the ready queue during its lifetime ( not counting the time the process enters the ready queue when it is run initially ) is _______ . (Answer in integer) int main() { int x=0,i=0; scanf( \" %d \" ,&x) ; for(i=0; i<20; i++) { x = x+20; printf( \" %d \\ n \" ,x); } return 0; }",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q29-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q30",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 30,
+    "type": "NAT",
+    "officialKey": "195 to 195",
+    "marks": 1,
+    "prompt": "Q.30 Let 𝑆 be the set of all ternary strings defined over the alphabet { 𝑎 , 𝑏 , 𝑐 } . Consider all strings in 𝑆 that contain at least one occurrence of two consecutive symbols, that is, “aa”, “bb” or “cc”. The number of such strings of length 5 that are possible is _______. (Answer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q30-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q31",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 31,
+    "type": "NAT",
+    "officialKey": "-2.1 to -1.9",
+    "marks": 1,
+    "prompt": "Q.31 Consider the given function 𝑓 ( 𝑥 ) . 𝑎𝑥 + 𝑏 for 𝑥 < 1 𝑓 ( 𝑥 ) = { 3 2 𝑥 + 𝑥 + 1 for 𝑥 ≥ 1 If the function is diff erentiable everywhere, the value of 𝑏 must be ________. ( rounded off to one decimal place )",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q31-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q32",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 32,
+    "type": "NAT",
+    "officialKey": "0.49 to 0.51",
+    "marks": 1,
+    "prompt": "Q.32 A box contains 5 coins: 4 regular coins and 1 fake coin. When a regular coin is tossed, the probability 𝑃 ( ℎ 𝑒𝑎𝑑 ) = 0 . 5 and for a fake coin, 𝑃 ( ℎ 𝑒𝑎𝑑 ) = 1 . You pick a coin at random and toss it twice, and get two heads. The probability that the coin you have chosen is the fake coin is _______. ( ro unded off to two decimal places)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q32-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 32
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q33",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 33,
+    "type": "NAT",
+    "officialKey": "435 to 435",
+    "marks": 1,
+    "prompt": "Q.33 The pseudocode of a function fun() is given below: fun(int A[0,…,n - 1]){ for i=0 to n - 2 for j=0 to n - i - 2 if (A[j]>A[j+1]) then swap A[j] and A[j+1] } Let 𝐴 [ 0 , … , 29 ] be an array storing 30 distinct integers in descending order. The number of swap operations that will be performed, if the function fun() is called with 𝐴 [ 0 , … , 29 ] as argument, is __________. (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q33-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q34",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 34,
+    "type": "NAT",
+    "officialKey": "25 to 25",
+    "marks": 1,
+    "prompt": "Q.34 #include <stdio.h> void foo(int *p, int x) { *p=x; } int main(){ int *z ; int a = 20, b = 25; z = &a; foo (z, b); printf(\"%d\",a); return 0; } The output of the given C program is __________. (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q34-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 34
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q35",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 35,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 1,
+    "prompt": "Q.35 The height of any rooted tree is defined as the maximum number of edges in the path from the root node to any leaf node. Suppose a Min - H eap 𝑇 stores 32 keys. T he height of 𝑇 is _____________. (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q35-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q36",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 36,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Q. 36 Consider a memory system with 1M bytes of main memory and 16K bytes of cache memory . Assume that the processor generates 20 - bit memory address, and the cache block size is 16 bytes. If the cache uses direct mapping, how many bits will be 10 required to store all the tag values? [Assume memory is byte addressable, 1K=2 , 20 1M=2 .] 10 (A) 6 × 2 10 (B) 8 × 2 12 (C) 2 14 (D) 2",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q36-1.webp",
+        "width": 1072,
+        "height": 1151,
+        "page": 36
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q37",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 37,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 2,
+    "prompt": "Q. 37 A processor has 64 general - purpose registers and 50 distinct instruction types. An instruction is encoded in 32 - bits. What is the maximum number of bits that can be used to store the imm ediate operand for the given instruction? ADD R1, #25 // R1 = R1 + 25 (A) 16 (B) 20 (C) 22 (D) 24",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q37-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 37
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q38",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 38,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Q.38 A computer has two processors, 𝑀 1 and 𝑀 2 . Four processes 𝑃 1 , 𝑃 2 , 𝑃 3 , 𝑃 4 with CPU bursts of 20, 16, 25, and 10 milliseconds, respectively, arrive at the same time and these are the only processes in the system. The scheduler uses non - preemptive priority scheduling , with priorities decided as follows : • 𝑀 1 uses priority of execution for the processes as , 𝑃 1 > 𝑃 3 > 𝑃 2 > 𝑃 4 , i.e., 𝑃 1 and 𝑃 4 have highest and lowest priorities, respectively. • 𝑀 2 uses priority of execution for the processes as , 𝑃 2 > 𝑃 3 > 𝑃 4 > 𝑃 1 , i.e., 𝑃 2 and 𝑃 1 have highest and lowest priorities, respectively. A process 𝑃 𝑖 is scheduled to a processor 𝑀 𝑘 , if the processor is free and no other process 𝑃 𝑗 is waiting with higher priority. At any given point of time, a process can be allocated to any one of the free processors without violating the execution priority rules. Ignore the context switch time. What will be the average waiting time of the process es in milliseconds? (A) 9.00 (B) 8.75 (C) 6.50 (D) 7.50",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q38-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q39",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 39,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Q. 39 Consider two relations describing 𝑡𝑒𝑎𝑚𝑠 and 𝑝𝑙𝑎𝑦𝑒𝑟𝑠 in a sports league: • 𝑡𝑒𝑎𝑚𝑠 ( 𝑡𝑖𝑑 , 𝑡𝑛𝑎𝑚𝑒 ) : 𝑡𝑖𝑑 , 𝑡𝑛𝑎𝑚 e are team - id and team - name, respectively • 𝑝𝑙𝑎𝑦𝑒𝑟𝑠 ( 𝑝𝑖𝑑 , 𝑝𝑛𝑎𝑚𝑒 , 𝑡𝑖𝑑 ) : 𝑝𝑖𝑑 , 𝑝𝑛𝑎𝑚𝑒 , and 𝑡𝑖𝑑 denote player - id, player - name and the team - id of the player, respectively Which ONE of the following tuple relational calculus queries returns the name of the players who play for the team having 𝑡𝑛𝑎𝑚𝑒 as ′ 𝑀𝐼 ′ ? (A) { 𝑝 . 𝑝𝑛𝑎𝑚𝑒 | 𝑝 ∈ 𝑝𝑙𝑎𝑦𝑒𝑟𝑠 ∧ ∃ 𝑡 ( 𝑡 ∈ 𝑡𝑒𝑎𝑚𝑠 ∧ 𝑝 . 𝑡𝑖𝑑 = 𝑡 . 𝑡𝑖𝑑 ∧ 𝑡 . 𝑡𝑛𝑎𝑚𝑒 = ′ 𝑀𝐼 ′ ) } (B) { 𝑝 . 𝑝𝑛𝑎𝑚𝑒 | 𝑝 ∈ 𝑡𝑒𝑎𝑚𝑠 ∧ ∃ 𝑡 ( 𝑡 ∈ 𝑝𝑙𝑎𝑦𝑒𝑟𝑠 ∧ 𝑝 . 𝑡𝑖𝑑 = 𝑡 . 𝑡𝑖𝑑 ∧ 𝑡 . 𝑡𝑛𝑎𝑚𝑒 = ′ 𝑀𝐼 ′ ) } (C) { 𝑝 . 𝑝𝑛𝑎𝑚𝑒 | 𝑝 ∈ 𝑝𝑙𝑎𝑦𝑒𝑟𝑠 ∧ ∃ 𝑡 ( 𝑡 ∈ 𝑡𝑒𝑎𝑚𝑠 ∧ 𝑡 . 𝑡𝑛𝑎𝑚𝑒 = ′ 𝑀𝐼 ′ ) } (D) { 𝑝 . 𝑝𝑛𝑎𝑚𝑒 | 𝑝 ∈ 𝑡𝑒𝑎𝑚𝑠 ∧ ∃ 𝑡 ( 𝑡 ∈ 𝑝𝑙𝑎𝑦𝑒𝑟𝑠 ∧ 𝑡 . 𝑡𝑛𝑎𝑚𝑒 = ′ 𝑀𝐼 ′ ) }",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q39-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 39
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q40",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 40,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Q. 40 A packet with the destination IP address 145.36.109.70 arrives at a router wh ose routing table is shown . Which interface will the packet be forwarded to? (A) E3 (B) E1 (C) E2 (D) E5",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q40-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q41",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 41,
+    "type": "MCQ",
+    "officialKey": "D",
+    "marks": 2,
+    "prompt": "Q.41 1 1 𝐴 = [ ] 1 − 1 13 What are the eigenvalues of the matrix 𝐴 ? (A) 1 , − 1 (B) 2 √ 2 , − 2 √ 2 (C) 4 √ 2 , − 4 √ 2 (D) 64 √ 2 , − 64 √ 2",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q41-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q42",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 42,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Q. 42 Consider the following four variable Boolean function in sum - of - product form 𝐹 ( 𝑏 3 , 𝑏 2 , 𝑏 1 , 𝑏 0 ) = ∑ ( 0 , 2 , 4 , 8 , 10 , 11 , 12 ) . where the value of the function is computed by considering 𝑏 3 𝑏 2 𝑏 1 𝑏 0 as a 4 - bit binary number, where 𝑏 3 denotes the most significant bit and 𝑏 0 denotes the least significant bit. Note that there are no don’t care terms. Which ONE of the following options is the CORRECT minimized Boolean expression for 𝐹 ? (A) 𝑏 ̅ 1 𝑏 ̅ 0 + 𝑏 ̅ 2 𝑏 ̅ 0 + 𝑏 1 𝑏 ̅ 2 𝑏 3 (B) 𝑏 ̅ 1 𝑏 ̅ 0 + 𝑏 ̅ 2 𝑏 ̅ 0 (C) 𝑏 ̅ 2 𝑏 ̅ 0 + 𝑏 1 𝑏 2 𝑏 3 (D) 𝑏 ̅ 0 𝑏 ̅ 2 + 𝑏 ̅ 3",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q42-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q43",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 43,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Q.43 Let 𝐺 ( 𝑉 , 𝐸 ) be an undirected and unweighted graph with 100 vertices. Let 𝑑 ( 𝑢 , 𝑣 ) d e note the number of edges in a shortest path betw een vertices 𝑢 and 𝑣 in 𝑉 . Let the maximum value of 𝑑 ( 𝑢 , 𝑣 ) , 𝑢 , 𝑣 ∈ 𝑉 such that 𝑢 ≠ 𝑣 , be 30 . Let 𝑇 be any breadth - first - search tree of 𝐺 . W hich ONE of the given option s is CORRECT for every such graph 𝐺 ? (A) The height of 𝑇 is exactly 15 . (B) The height of 𝑇 is exactly 30 . (C) The height of 𝑇 is at least 15 . (D) The height of 𝑇 is at least 30 .",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q43-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q44",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 44,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Q. 44 Consider the following two languages over the alphabet { 𝑎 , 𝑏 } : + + 𝐿 1 = { 𝛼𝛽𝛼 | 𝛼 ∈ { 𝑎 , 𝑏 } AND 𝛽 ∈ { 𝑎 , 𝑏 } } + + 𝐿 2 = { 𝛼𝛽𝛼 | 𝛼 ∈ { 𝑎 } AND 𝛽 ∈ { 𝑎 , 𝑏 } } Which ONE of the following statements is CORRECT? (A) Both 𝐿 1 and 𝐿 2 are regular languages. (B) 𝐿 1 is a regular language but 𝐿 2 is not a regular language. (C) 𝐿 1 is not a regular language but 𝐿 2 is a regular language. (D) Neither 𝐿 1 nor 𝐿 2 is a regular language.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q44-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 44
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q45",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 45,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Q. 45 Consider the following two languages over the alphabet { 𝑎 , 𝑏 , 𝑐 } , where 𝑚 and 𝑛 are natural numbers . 𝑚 𝑚 𝑚 + 𝑛 𝐿 1 = { 𝑎 𝑏 𝑐 | 𝑚 , 𝑛 ≥ 1 } 𝑚 𝑛 𝑚 + 𝑛 𝐿 2 = { 𝑎 𝑏 𝑐 | 𝑚 , 𝑛 ≥ 1 } Which ONE of the following statements is CORRECT? (A) Both 𝐿 1 and 𝐿 2 are context - free languages. (B) 𝐿 1 is a context - free language but 𝐿 2 is not a context - free language. (C) 𝐿 1 is not a context - free language but 𝐿 2 is a context - free language. (D) Neither 𝐿 1 nor 𝐿 2 are context - free languages.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q45-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q46",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 46,
+    "type": "MSQ",
+    "officialKey": "A;D",
+    "marks": 2,
+    "prompt": "Q. 46 Which of the following statement(s) is/are TRUE while computing First and Follow during top down parsing by a compiler? (A) For a production 𝐴 → 𝜖 , 𝜖 will be added to 𝐹𝑖𝑟𝑠𝑡 ( 𝐴 ) . (B) If there is any input right end marker , it will be added to 𝐹𝑖𝑟𝑠𝑡 ( 𝑆 ) , where 𝑆 is the start symbol. (C) For a production 𝐴 → 𝜖 , 𝜖 will be added to 𝐹𝑜𝑙𝑙𝑜𝑤 ( 𝐴 ) . (D) If there is any input right end marker , it will be added to 𝐹𝑜𝑙𝑙𝑜𝑤 ( 𝑆 ) , where 𝑆 is the start symbol.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q46-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q47",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 47,
+    "type": "MSQ",
+    "officialKey": "B;C",
+    "marks": 2,
+    "prompt": "Q. 47 Consider a relational schema 𝑡𝑒𝑎𝑚 ( 𝑛𝑎𝑚𝑒 , 𝑐𝑖𝑡𝑦 , 𝑜𝑤𝑛𝑒𝑟 ) , with functional dependencies { 𝑛𝑎𝑚𝑒 → 𝑐𝑖𝑡𝑦 , 𝑛𝑎𝑚𝑒 → 𝑜𝑤𝑛𝑒𝑟 } . The relation 𝑡𝑒𝑎𝑚 is decomposed into two relations, 𝑡 1 ( 𝑛𝑎𝑚𝑒 , 𝑐𝑖𝑡𝑦 ) and 𝑡 2 ( 𝑛𝑎𝑚𝑒 , 𝑜𝑤𝑛𝑒𝑟 ) . Which of the following statement(s) is/are TRUE? (A) The relation 𝑡𝑒𝑎𝑚 is NOT in BCNF. (B) The relation s 𝑡 1 and 𝑡 2 are in BCNF. (C) The decomposition constitutes a lossless join. (D) The relation 𝑡𝑒𝑎𝑚 is NOT in 3 NF.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q47-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 47
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q48",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 48,
+    "type": "MSQ",
+    "officialKey": "B;D",
+    "marks": 2,
+    "prompt": "Q.48 Which of the following predicate logic formulae/formula is/are CORRECT representation(s) of the statement: “ Everyone has exactly one mother ”? The meanings of the predicates used are: • 𝑚𝑜𝑡 ℎ 𝑒𝑟 ( 𝑦 , 𝑥 ) : 𝑦 is the mother of 𝑥 • 𝑛𝑜𝑡𝑒𝑞 ( 𝑥 , 𝑦 ) : 𝑥 and 𝑦 are not equal (A) ∀ 𝑥 ∃ 𝑦 ∃ 𝑧 ( 𝑚𝑜𝑡 ℎ 𝑒𝑟 ( 𝑦 , 𝑥 ) ∧ ¬ 𝑚𝑜𝑡 ℎ 𝑒𝑟 ( 𝑧 , 𝑥 ) ) (B) ∀ 𝑥 ∃ 𝑦 [ 𝑚𝑜𝑡 ℎ 𝑒𝑟 ( 𝑦 , 𝑥 ) ∧ ∀ 𝑧 ( 𝑛𝑜𝑡𝑒𝑞 ( 𝑧 , 𝑦 ) → ¬ 𝑚𝑜𝑡 ℎ 𝑒𝑟 ( 𝑧 , 𝑥 ) ) ] (C) ∀ 𝑥 ∀ 𝑦 [ 𝑚𝑜𝑡 ℎ 𝑒𝑟 ( 𝑦 , 𝑥 ) → ∃ 𝑧 ( 𝑚𝑜𝑡 ℎ 𝑒𝑟 ( 𝑧 , 𝑥 ) ∧ ¬ 𝑛𝑜𝑡𝑒𝑞 ( 𝑧 , 𝑦 ) ) ] (D) ∀ 𝑥 ∃ 𝑦 [ 𝑚𝑜𝑡 ℎ 𝑒𝑟 ( 𝑦 , 𝑥 ) ∧ ¬ ∃ 𝑧 ( 𝑛𝑜𝑡𝑒𝑞 ( 𝑧 , 𝑦 ) ∧ 𝑚𝑜𝑡 ℎ 𝑒𝑟 ( 𝑧 , 𝑥 ) ) ]",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q48-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 48
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q49",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 49,
+    "type": "MSQ",
+    "officialKey": "B",
+    "marks": 2,
+    "prompt": "Q.49 𝐴 = { 0 , 1 , 2 , 3 , … } is the set of non - negative integers . Let Ϝ be the set of functions from 𝐴 to itself. For any two functions , 𝑓 1 , 𝑓 2 ∈ Ϝ , we define ( 𝑓 1 ⨀ 𝑓 2 ) ( 𝑛 ) = 𝑓 1 ( 𝑛 ) + 𝑓 2 ( 𝑛 ) for every number 𝑛 in 𝐴 . Which of the following is/are CORRECT about the mathematical structure ( Ϝ , ⨀ ) ? (A) ( Ϝ , ⨀ ) is an Abelian group . (B) ( Ϝ , ⨀ ) is an Abelian monoid . (C) ( Ϝ , ⨀ ) is a non - Abelian group . (D) ( Ϝ , ⨀ ) is a non - Abelian monoid .",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q49-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q50",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 50,
+    "type": "MSQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Q.50 Consider the following deterministic finite automaton (DFA) defined over the alphabet, Σ = { 𝑎 , 𝑏 } . Identify which of the following language ( s ) is/are accepted by the given DFA. (A) The set of all strings containing an even number of 𝑏 ’ s. (B) The set of all strings containing the pattern 𝑏𝑎𝑏 . (C) The set of all strings ending with the pattern 𝑏𝑎𝑏 . (D) The set of all strings not containing the pattern 𝑎𝑏𝑎 .",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q50-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 50
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q51",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 51,
+    "type": "NAT",
+    "officialKey": "65468 to 65468",
+    "marks": 2,
+    "prompt": "Q. 51 A disk of size 512M bytes is divided into blocks of 64K bytes. A file is stored in the disk using linked allocation. In linked allocation, each data block reserves 4 bytes to store the pointer to the next data block. The link part of the last data block co ntains a NULL pointer (also of 4 bytes). Suppose a file of 1M bytes needs to be 10 20 stored in the disk. Assume, 1K = 2 and 1M = 2 . The amount of space in bytes that will be wasted due to internal fragmentation is ______ . (Answer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q51-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 51
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q52",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 52,
+    "type": "NAT",
+    "officialKey": "6 to 6",
+    "marks": 2,
+    "prompt": "Q .52 Refer to the given 3 - address code sequence. This code sequence is s plit into basic blocks. The num ber of basic blocks is ________ . (A nswer in integer) 1001: i = 1 1002: j = 1 1003: t1 = 10*i 1004: t2 = t1+j 1005: t3 = 8*t2 1006: t4 = t3 - 88 1007: a[t4] = 0.0 1008: j = j+1 1009: if j <= 10 goto 1003 1010: i = i+1 1011: if i <= 10 goto 1002 1012: i = 1 1013: t5 = i - 1 1014: t6 = 88*t5 1015: a[t6] = 1.0 1016: i = i+1 1017: if i <= 10 goto 1013",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q52-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 52
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q53",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 53,
+    "type": "NAT",
+    "officialKey": "11.83 to 11.87",
+    "marks": 2,
+    "prompt": "Q. 53 A computer has a memory hierarchy consisting of two - level cache (L1 and L2) and a main memory. If the processor needs to access data from memory, it first looks into L1 cache. If the data is not found in L1 cache, it goes to L2 cache. If it fails to get th e data from L2 cache, it goes to main memory, where the data is definitely available. Hit rates and access times of various memory units ar e shown in the figure. T he average memory access time in nanoseconds ( ns ) is ________. ( ro unded off to two decimal pl aces)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q53-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 53
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q54",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 54,
+    "type": "NAT",
+    "officialKey": "6 to 6",
+    "marks": 2,
+    "prompt": "Q. 54 In optimal page replacement algorithm, information about all future page references is available to the operating system (OS). A modification of the optimal page replacem ent algorithm is as follows: The OS correctly predicts only up to next 4 page references (including the current page) at the time of allocating a frame to a page. A process accesses the pages in the following order of page numbers : 1 , 3 , 2 , 4 , 2 , 3 , 1 , 2 , 4 , 3 , 1 , 4 . If the system has three memory frames that are initially empty, the number of page faults that will occur during execution of the process is ________ . (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q54-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 54
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q55",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 55,
+    "type": "NAT",
+    "officialKey": "26 to 26",
+    "marks": 2,
+    "prompt": "Q .55 Consider the following database tables of a sports league. player(pid,pname,age) team(tid,tname,city,cid) coach(cid,cname) members(pid,tid) An instance of the table and a n SQL query are given . player coach team members SELECT MIN(P.age) FROM player P WHERE P.pid IN ( SELECT M.pid FROM team T, coach C, members M WHERE C.cname = ' Mark ' AND T.cid = C.cid AND M.tid = T.tid ) T he value retu rned by the given SQL query is ______ . ( A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q55-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 55
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q56",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 56,
+    "type": "NAT",
+    "officialKey": "0.949 to 0.952",
+    "marks": 2,
+    "prompt": "Q .56 Suppose a 5 - bit message is transmitted from a source to a destination through a noisy channel. The probability that a bit of the message gets flipped during transmission is 0.01. Flipping of each bit is indep endent of one another. T he probability that the message is delivered error - free to the destination is ______ . ( rounded off to three decimal places )",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q56-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 56
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q57",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 57,
+    "type": "NAT",
+    "officialKey": "7 to 7",
+    "marks": 2,
+    "prompt": "Q. 57 Suppose a message of size 15000 bytes is transmitted from a source to a destination using IPv4 protocol via two routers as sh own in the figure . Each router has a defined maximum transmission unit (MTU) as shown in the figur e, including IP header. The number of fragments that will be delivered to the destination is ________ . (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q57-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 57
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q58",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 58,
+    "type": "NAT",
+    "officialKey": "0.300 to 0.302",
+    "marks": 2,
+    "prompt": "Q.58 Consider a probability distribution given by the density function 𝑃 ( 𝑥 ) . 2 𝐶 𝑥 , for 1 ≤ 𝑥 ≤ 4 𝑃 ( 𝑥 ) = { 0 , for 𝑥 < 1 or 𝑥 > 4 T he probability that 𝑥 lies between 2 and 3, i.e., 𝑃 ( 2 ≤ 𝑥 ≤ 3 ) is __________. ( roun ded off to three decimal places)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q58-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 58
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q59",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 59,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 2,
+    "prompt": "Q. 59 Consider a finite state machine (FSM) with one input 𝑋 and one output 𝑓 , represented by the given state transit ion table. T he minimum number of stat es required to realize this FSM is ________ . (A nswer in integer) Present state Next state Output 𝑓 𝑋 = 0 𝑋 = 1 𝑋 = 0 𝑋 = 1 A F B 0 0 B D C 0 0 C F E 0 0 D G A 1 0 E D C 0 0 F F B 1 1 G G H 0 1 H G A 1 0",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q59-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 59
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q60",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 60,
+    "type": "NAT",
+    "officialKey": "7 to 8",
+    "marks": 2,
+    "prompt": "Q. 60 Consider the given sequential circuit designed using D - Flip - flops. The circuit is initialized with some value (initial state). T he number of distinct states the circuit will go through before retu rning back to the initial state is _________ . (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q60-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 60
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q61",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 61,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 2,
+    "prompt": "Q.61 #include <stdio.h> int foo(int S[],int size) { if (size == 0) return 0; if(size == 1) return 1; if(S[0] != S[1]) return 1+foo(S+1,size - 1); return foo(S+1, siz e - 1) ; } int main() { int A[ ]={0,1,2,2,2,0,0,1,1} ; printf(\"%d\",foo(A,9)) ; return 0 ; } The value printed by the given C program is _______ . (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q61-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q62",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 62,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 2,
+    "prompt": "Q.62 Let LIST be a datatype for an implementation of linked list defined as follows: typedef struct list { int data; struct list *next; } LIST; Suppose a program has created two linked lists, L1 and L2, whose contents are given in the figure below (code for creating L1 and L2 is not provided here). L1 contains 9 nodes, and L2 contains 7 nodes. Consider the following C program segment that modifies the list L1. The number of nodes that will be there in L1 aft er the execution of t he code segment is ________ . (A nswer in integer) int find (int query, LIST * list) { while (list != NULL) { if (list - >data == query) return 1; list = list - >next; } return 0; } int main () { … … … ptr1=L1; ptr2=L2; while ( ptr1 - >next != NULL ) { query = ptr1 - >next - >data; if (find (query, L2)) ptr1 - >next = ptr1 - >next - >next; else ptr1 = ptr1 - >next; } … … … return 0; }",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q62-1.webp",
+        "width": 1072,
+        "height": 1193,
+        "page": 62
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q63",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 63,
+    "type": "NAT",
+    "officialKey": "46 to 46",
+    "marks": 2,
+    "prompt": "Q.63 Consider the following C program: #include <stdio.h> int gate (int n) { int d, t, newnum, turn ; newnum = turn = 0; t=1; while (n>=t) t *= 10; t /=10; while (t>0) { d = n/t ; n = n%t ; t /= 10; if (turn) newnum = 10*newnum + d ; turn = (turn + 1) % 2 ; } return newnum; } int main () { printf (\"%d\", gate(14362)) ; return 0; } The value printed by the given C program is _______ . (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q63-1.webp",
+        "width": 1072,
+        "height": 1151,
+        "page": 63
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q64",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 64,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 2,
+    "prompt": "Q.64 T he maximum value of 𝑥 such that the edge between the nodes B and C is included in every minimum spanni ng tree of the given graph is _________ . (answer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q64-1.webp",
+        "width": 1072,
+        "height": 507,
+        "page": 64
+      }
+    ]
+  },
+  {
+    "id": "2025-cs1-q65",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 65,
+    "type": "NAT",
+    "officialKey": "10 to 11",
+    "marks": 2,
+    "prompt": "Q.65 In a double hashing scheme, ℎ 1 ( 𝑘 ) = 𝑘 mod 11 and ℎ 2 ( 𝑘 ) = 1 + ( 𝑘 mod 7 ) are the auxiliary hash functions. The size 𝑚 of the hash table is 11 . The hash function for the i - th probe in the open address table is [ ℎ 1 ( 𝑘 ) + 𝑖 ℎ 2 ( 𝑘 ) ] mod 𝑚 . The following keys are inserted in the give n order: 63, 50, 25, 79, 67, 24. The slot at which key 24 gets stored is ___________. ( Answer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q65-1.webp",
+        "width": 1072,
+        "height": 673,
+        "page": 64
+      }
+    ]
+  }
+]

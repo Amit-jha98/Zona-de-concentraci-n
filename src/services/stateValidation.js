@@ -1,5 +1,6 @@
 import { VIDEO_ID, uniqueVideos, durationSeconds } from "../../shared/video.js";
 import { isRecord, read, write } from "./storage.js";
+import { examResponseValid } from "./examState.js";
 export const videoList = (value) =>
   Array.isArray(value) &&
   value.length <= 1000 &&
@@ -20,6 +21,8 @@ export const progressValid = (value) =>
       (v.personalNote == null ||
         (typeof v.personalNote === "string" &&
           v.personalNote.length <= 10000)) &&
+      (v.pyqAnswers == null ||
+        (isRecord(v.pyqAnswers || {}) && Object.keys(v.pyqAnswers || {}).length <= 1000 && Object.values(v.pyqAnswers || {}).every((answer) => isRecord(answer) && examResponseValid(answer.response) && typeof answer.correct === "boolean"))) &&
       (v.answers == null ||
         (isRecord(v.answers) &&
           Object.values(v.answers).every(

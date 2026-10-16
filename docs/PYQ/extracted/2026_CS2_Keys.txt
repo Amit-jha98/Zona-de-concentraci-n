@@ -1,0 +1,74 @@
+
+--- PAGE 1 ---
+Page   1   of   2 
+Answer Key for   Computer Science & Information Technology   ( CS - 2 ) 
+Q. No.   Session   Question Type   Section   Key/Range   Marks 
+1   4   MCQ   GA   A   1 
+2   4   MCQ   GA   C   1 
+3   4   MCQ   GA   A   1 
+4   4   MCQ   GA   A   1 
+5   4   MCQ   GA   C   1 
+6   4   MCQ   GA   A   2 
+7   4   MCQ   GA   A   2 
+8   4   MCQ   GA   A   2 
+9   4   MCQ   GA   B   2 
+10   4   MCQ   GA   C   2 
+11   4   MCQ   CS - 2   A   1 
+12   4   MCQ   CS - 2   A   1 
+13   4   MCQ   CS - 2   D   1 
+14   4   MCQ   CS - 2   B   1 
+15   4   MCQ   CS - 2   C   1 
+16   4   MCQ   CS - 2   B   1 
+17   4   MCQ   CS - 2   C   1 
+18   4   MCQ   CS - 2   C   1 
+19   4   MCQ   CS - 2   A   1 
+20   4   MCQ   CS - 2   A   1 
+21   4   MCQ   CS - 2   B   1 
+22   4   MCQ   CS - 2   C   1 
+23   4   MCQ   CS - 2   B   1 
+24   4   MCQ   CS - 2   A   1 
+25   4   MSQ   CS - 2   A;B   1 
+26   4   MSQ   CS - 2   A;B;C   1 
+27   4   MSQ   CS - 2   A;C   1 
+28   4   MSQ   CS - 2   B;D   1 
+29   4   MSQ   CS - 2   B;C   1 
+30   4   NAT   CS - 2   3 to 3   1 
+31   4   NAT   CS - 2   24 to   24   1 
+32   4   NAT   CS - 2   3 to 3   1 
+33   4   NAT   CS - 2   4094 to 4094   1 
+34   4   NAT   CS - 2   - 60.25 to   - 60.25   1 
+35   4   NAT   CS - 2   13 to 13   1 
+36   4   MCQ   CS - 2   C   2 
+37   4   MCQ   CS - 2   A   2 
+
+--- PAGE 2 ---
+Page   2   of   2 
+Q. No.   Session   Question Type   Section   Key/Range   Marks 
+38   4   MCQ   CS - 2   A   2 
+39   4   MCQ   CS - 2   A   2 
+40   4   MCQ   CS - 2   B   2 
+41   4   MCQ   CS - 2   D   2 
+42   4   MCQ   CS - 2   D   2 
+43   4   MCQ   CS - 2   D   2 
+44   4   MCQ   CS - 2   B   2 
+45   4   MCQ   CS - 2   A   2 
+46   4   MCQ   CS - 2   A   2 
+47   4   MSQ   CS - 2   C;D   2 
+48   4   MSQ   CS - 2   A;C;D   2 
+49   4   MSQ   CS - 2   A;C   2 
+50   4   MSQ   CS - 2   A;B   2 
+51   4   MSQ   CS - 2   A;B;C   2 
+52   4   MSQ   CS - 2   A;B   2 
+53   4   NAT   CS - 2   16417 to 16417   2 
+54   4   NAT   CS - 2   1536 to   1536   2 
+55   4   NAT   CS - 2   3 to 3   2 
+56   4   NAT   CS - 2   128 to 128   2 
+57   4   NAT   CS - 2   2.30 to 2.40   2 
+58   4   NAT   CS - 2   4 to 4   2 
+59   4   NAT   CS - 2   6 to 6   2 
+60   4   NAT   CS - 2   9 to 9   2 
+61   4   NAT   CS - 2   1 to 1   2 
+62   4   NAT   CS - 2   48 to 48   2 
+63   4   NAT   CS - 2   0.5 to 0.5   2 
+64   4   NAT   CS - 2   40 to 40   2 
+65   4   NAT   CS - 2   30 to 30   2 

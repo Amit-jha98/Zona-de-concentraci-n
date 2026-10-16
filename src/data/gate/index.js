@@ -8,6 +8,8 @@ import compilers from "./compilers.js";
 import systems from "./systems.js";
 import databases from "./databases.js";
 import networks from "./networks.js";
+import aptitude from "./aptitude.js";
+import enrichment from "./examEnrichment.json" with { type: "json" };
 
 // Section names and coverage follow the supplied PDF, not an assumed exam syllabus.
 export const GATE_SECTIONS = [
@@ -22,18 +24,24 @@ export const GATE_SECTIONS = [
   databases,
   networks,
 ];
+for (const section of [...GATE_SECTIONS, aptitude]) {
+  section.lessons = section.lessons.map((lesson) => ({ ...lesson, ...enrichment[lesson.id] }));
+}
 export const GATE_LESSONS = GATE_SECTIONS.flatMap((item) => item.lessons);
+export const APTITUDE_SECTION = aptitude;
+export const EXAM_LESSONS = [...GATE_LESSONS, ...aptitude.lessons];
 export const LESSON_BY_ID = Object.fromEntries(
-  GATE_LESSONS.map((item) => [item.id, item]),
+  EXAM_LESSONS.map((item) => [item.id, item]),
 );
 export const SYLLABUS_SOURCE = "/CS_GATE2027_Syllabus.pdf";
 export const CONTENT_VERSION = 1;
 export function lessonMarkdown(lesson) {
   return [
     `# ${lesson.title}`,
-    `GATE CS · Section ${GATE_SECTIONS.find((s) => s.id === lesson.sectionId)?.number}: ${lesson.sectionTitle}`,
+    `GATE CS · Section ${[...GATE_SECTIONS, aptitude].find((s) => s.id === lesson.sectionId)?.number}: ${lesson.sectionTitle}`,
     "",
     ...lesson.notes.map((text) => text + "\n"),
+    ...(lesson.examGuide ? ["## GATE examination guide", ...lesson.examGuide.map((item) => `### ${item.title}\n${item.body}\n`)] : []),
     "## Key relationship",
     lesson.formula,
     "",
@@ -53,6 +61,6 @@ export function lessonMarkdown(lesson) {
       "",
     ]),
     `Source syllabus: ${SYLLABUS_SOURCE}`,
-    "Practice questions are original concept checks, not official GATE past papers.",
+    "Concept checks above are original practice. Topic-mapped official PYQs and further exam-level practice are available in the app's Practice tab.",
   ].join("\n");
 }

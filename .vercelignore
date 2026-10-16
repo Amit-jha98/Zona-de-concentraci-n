@@ -1,0 +1,9 @@
+keys.json
+*keys.json
+*credentials*.json
+*.pem
+.env*
+docs/
+tests/
+test-results/
+playwright-report/

@@ -3,10 +3,12 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { migrateLegacyData } from "./services/stateValidation.js";
+import { Analytics } from "@vercel/analytics/react";
 
 migrateLegacyData();
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Analytics />
     <App />
   </StrictMode>,
 );

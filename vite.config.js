@@ -16,6 +16,9 @@ export default defineConfig({
       },
     },
   ],
-  server: { host: "127.0.0.1" },
+  server: {
+    host: "127.0.0.1",
+    fs: { deny: ["**/.env*", "**/.git/**", "**/*keys.json", "**/*credentials*.json", "**/*.{crt,pem}"] },
+  },
   build: { chunkSizeWarningLimit: 650 },
 });

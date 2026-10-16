@@ -1,5 +1,6 @@
 import * as local from "./downloads.mjs";
 import { cloudDownloads } from "./cloud-downloads.mjs";
+import { cloudinaryConfigured } from "./cloudinary-storage.mjs";
 
 const localDownloads = {
   status: local.downloadStatus,
@@ -9,4 +10,4 @@ const localDownloads = {
   cancel: local.cancelDownload,
 };
 export const downloadService = () =>
-  process.env.VERCEL === "1" ? cloudDownloads : localDownloads;
+  process.env.VERCEL === "1" || cloudinaryConfigured() ? cloudDownloads : localDownloads;

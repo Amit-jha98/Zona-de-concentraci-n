@@ -1,0 +1,786 @@
+
+--- PAGE 1 ---
+General Aptitude (GA) 
+Q.1   –   Q.5 Carry ONE mark Each 
+Q.1   The antonym of the word protagonist is ________. 
+(A)   agnostic 
+(B)   antagonist 
+(C)   arsonist 
+(D)   anarchist Organizing Institute: IIT Guwahati Page 1 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 2 ---
+Q. 2   The figure shows two 4 - tile patterns. 
+Either one or both of the patterns can be used any number of times and in any 
+orientation to construct a new pattern. Which   one of the options below   cannot   be 
+constructed by using only these two 4 - tile patterns assuming there are no overlaps 
+among them? 
+(A) 
+(B) 
+(C) 
+(D) Organizing Institute: IIT Guwahati Page 2 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 3 ---
+Q .3   Consider a knock - out   women’s   badminton   singles   tournament   where there are no 
+ties. T he loser   in each game   is eliminated from the tournament .   Every player 
+plays until she is defeated or remains the last undefeated player. The last 
+undefeated player is declared the winner of the tournament.   If there are 64 players 
+in the beginning   of the t ournament , how many games should be played in total to 
+dec lare   the winner   of the tournament ? 
+(A)   127 
+(B)   64 
+(C)   63 
+(D)   3 2 Organizing Institute: IIT Guwahati Page 3 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 4 ---
+Q. 4   A student needs to enroll for a minimum of 60 credits. A student cannot enroll for 
+more than 70 credits.   The credits are divided amongst project and three distinct 
+sets of courses namely, core courses, specialization courses, and elective courses. 
+It is compulsory for a student to enroll for exactly 15 credits of core courses and 
+exactly 20 credits of projec t.   In addition, a   student has to   enroll for   a minimum of 
+10 credits of specialization courses .   The maximum credits of elective courses that 
+a student can enroll for is ______ 
+(A)   10 
+(B)   15 
+(C)   20 
+(D)   25 
+Q.5   ‘When the teacher is in the room, all students stand silently. ’ 
+If the above statement is true, which one of the following statements   is   not 
+necessarily   true? 
+(A)   If any student is not standing silently, then the teacher is not in the room. 
+(B)   When the teacher is in the room, all students are silent. 
+(C)   If all students are standing, then the teacher is in the room. 
+(D)   When the teacher is in the room, all students are standing. Organizing Institute: IIT Guwahati Page 4 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 5 ---
+Q.6   –   Q.10 Carry TWO marks Each 
+Q.6   Combinatorics deals with   problems involving counting. For example, “How many 
+distinct arrangements of N distinct objects in M spaces on a circle are possible?” 
+is a typical problem in combinatorics. This kind of counting is sometimes used in 
+the modeling of several physical pheno mena. Often, in such models, the different 
+combinatorial possibilities are assigned probability values. Assigning probabilities 
+enables the computation of the average values of physical quantities. 
+Consider the following statements: 
+P: Combinatorics is alw ays invoked in the modeling of physical phenomena. 
+Q: Modeling some physical phenomena involves assigning probabilities to 
+combinatorial possibilities in order to compute average values of physical 
+quantities. 
+Based on the passage above, what can be   inferred about statements P and Q? 
+(A)   P is False and Q is False 
+(B)   P is False and Q is True 
+(C)   P is True and Q is False 
+(D)   P is True and Q is True Organizing Institute: IIT Guwahati Page 5 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 6 ---
+Q. 7   In Panel I of the figure below, the front view and top view of a structure are 
+shown. Which one of the 3D structures shown in Panel II possesses the views 
+shown in Panel I? 
+(A)   (i) 
+(B)   (ii) 
+(C)   (iii) 
+(D)   (iv) Organizing Institute: IIT Guwahati Page 6 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 7 ---
+Q.8   For positive real numbers   𝑆   and   𝐾 , the function   𝐻 𝐾 ( 𝑆 )   is defined as: 
+𝐻 𝐾 ( 𝑆 )   =   max ( 𝑆   −   𝐾 ,   0 ) .   The max function is defined as: 
+max ( 𝑎 ,   𝑏 )   =   { 𝑎 ,   when   𝑎   >   𝑏 
+𝑏 ,   when   𝑎   ≤   𝑏 
+The graph below shows the plot of a   function   𝑁 ( 𝑆 )   versus   𝑆 . 
+𝑁 ( 𝑆 )   can be expressed as   _____. 
+(A)   𝐻 10 ( 𝑆 )   −   𝐻 20 ( 𝑆 ) 
+(B)   𝐻 10 ( 𝑆 )   −   2 𝐻 20 ( 𝑆 ) 
+(C)   − 𝐻 10 ( 𝑆 )   +   𝐻 20 ( 𝑆 ) 
+(D)   𝐻 15 ( 𝑆 )   −   𝐻 20 ( 𝑆 ) Organizing Institute: IIT Guwahati Page 7 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 8 ---
+Q.9   In the 2020 summer Olympics’ Javelin throw finals, Neeraj Chopra exhibited a 
+spectacular performance to win the gold medal.   The s ilver medal was won by 
+Jakub Vadlejch and   the b ronze   medal was won by Vitezlav Vesely. There were 
+six rounds of throws with   each athlete having one throw per round.   T he best of 
+all   the   throws of each athlete   is   considered for the medal. Following were the 
+observations   about the throws : 
+i.   The first and second   rounds   were dominated by Neeraj Chopra with a gold 
+medal performance in his second throw, while the other two   athletes   did 
+not have any medal winning throws   in these rounds . 
+ii.   The   throws in the last round   by both Jakub Vadlejch and Vitezlav Vesely 
+were fouls and were not considered for scoring. 
+iii.   After four rounds, Vitezlav Vesely was in   the   second position and could 
+not improve upon his best throw in the succeeding rounds. 
+iv.   In t he fourth round , the   throw b y Jakub Vadlejch was the best in that 
+round. 
+In which round did Vitezlav Vesely have his best throw? 
+(A)   Third 
+(B)   Fourth 
+(C)   Fifth 
+(D)   Sixth Organizing Institute: IIT Guwahati Page 8 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 9 ---
+Q. 10   An unbiased six - faced dice whose faces are marked with numbers 1, 2, 3, 4, 5, 
+and 6 is rolled twice in succession and the number on the top face is recorded 
+each time. The probability that the number appearing in the second roll is an 
+integer multiple of the number appearing in the first roll is __________ 
+(A)   1 
+6 
+(B)   5 
+18 
+(C)   7 
+18 
+(D)   5 
+6 Organizing Institute: IIT Guwahati Page 9 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 10 ---
+Q.1 1   –   Q. 3 5   Carry ONE mark Each 
+Q.11   An urn contains one red ball and one blue ball. At each step, a ball is   picked 
+uniformly at random from the urn ,   and this   ball together with another ball of the 
+same color is put back in the urn.   The probability that there are equal number of red 
+and blue balls after two steps is 
+(A)   1/4 
+(B)   1/3 
+(C)   1/2 
+(D)   2/3 
+Q. 12   Consider   4   ×   4   matrices with their elements from   { 𝟎 ,   𝟏 } .   The number of such 
+matrices with even number of   𝟏 s   in every row and every column is 
+(A)   512 
+(B)   1025 
+(C)   1023 
+(D)   255 Organizing Institute: IIT Guwahati Page 10 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 11 ---
+Q. 13   For   𝑛   >   1 , t he maximum multiplicity of any eigenvalue of an   𝑛   ×   𝑛   matrix   with 
+elements from   ℝ   is 
+(A)   𝑛 
+(B)   𝑛   −   1 
+(C)   1 
+(D)   𝑛   +   1 
+Q.1 4   Match each addressing mode in   List I   with a data e lement   or an e lement   of a data 
+structure (in a high - level language)   in   List II : 
+List I   List II 
+P. Immediate   1. Element of an array 
+Q. Indirect   2. Pointer 
+R. Base with   index   3. Element of a record 
+S. Base with offset/displacement   4. Constant 
+(A)   P – 4, Q – 3 , R – 1 , S – 2 
+(B)   P – 4, Q – 2, R – 1, S – 3 
+(C)   P – 1 , Q – 4, R – 3, S – 2 
+(D)   P – 2, Q – 3, R – 1, S – 4 Organizing Institute: IIT Guwahati Page 11 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 12 ---
+Q.15   Consider a processor P   whose in struction set architecture is the load - store 
+architecture.   The instruction format is such that the first operand of any instruction 
+is the destination operand. 
+Which   one   of the following sequences of instructions corresponds to the high - level 
+language stat ement   Z = X + Y ? 
+Note : X, Y, and Z are memory operands. R0, R1, and R2 are registers. 
+(A)   ADD Z, X, Y 
+(B)   LOAD R0, X 
+ADD Z, R0, Y 
+(C)   ADD R0, X, Y 
+STORE   Z ,   R0 
+(D)   LOAD R0, X 
+LOAD R1, Y 
+ADD R2, R 0, R1 
+STORE Z, R2 Organizing Institute: IIT Guwahati Page 12 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 13 ---
+Q. 16   Which   one   of the following dependencies among the register operands   of different 
+instructions   can cause a data hazard in a pipelined processor? 
+(A)   Read - after - read 
+(B)   Read - after - write 
+(C)   Write - after - read 
+(D)   Write - after - write Organizing Institute: IIT Guwahati Page 13 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 14 ---
+Q. 1 7   Consider the   following recurrence relations: 
+For all   𝑛   >   1 , 
+𝑇 1 ( 𝑛 )   =   4 𝑇 1   ( 𝑛 
+2 )   +   𝑇 2 ( 𝑛 ) 
+𝑇 2 ( 𝑛 )   =   5 𝑇 2   ( 𝑛 
+4 )   +   Θ ( log 2   𝑛 ) 
+Assume that for all   𝑛   ≤   1 ,   𝑇 1 ( 𝑛 )   =   1   and   𝑇 2 ( 𝑛 )   =   1 . 
+Which   one   of the following   options   is   correct ? 
+(A)   𝑇 1 ( 𝑛 )   =   Θ ( 𝑛 2 ) 
+(B)   𝑇 1 ( 𝑛 )   =   Θ ( 𝑛 2   log 2   𝑛 ) 
+(C)   𝑇 1 ( 𝑛 )   =   Θ ( 𝑛 log 4   5 ) 
+(D)   𝑇 1 ( 𝑛 )   =   Θ ( 𝑛 log 4   5   log 2   𝑛 ) Organizing Institute: IIT Guwahati Page 14 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 15 ---
+Q.18   With re spect   to   a TCP connection between a client and a server , w hich   one   of the 
+following statements is   true ? 
+(A)   The client   and server   use a two - way handshake mechanism   before   the   start of data 
+transmission 
+(B)   The server   cannot   initiate closing   of the connection   before   the client   initiates 
+closing of   the connectio n 
+(C)   The TCP connection is half - duplex 
+(D)   The client and server can initiate   closing of   the   connection   at the same time 
+Q. 19   Which of the following statements is/are true with respect to the interaction of a 
+web browser with a web server using HTTP 1.1? 
+(A)   HTTP 1.1 facilitates downloading multiple objects of the same webpage over the 
+same TCP connection, if the objects are stored in the same server 
+(B)   HTTP 1.1   facilitates   downloading multiple objects   of   the same webpage   over the 
+same TCP connection, even if they are stored in different servers 
+(C)   HTTP 1.1 facilitates sending a request for downloading one object without waiting 
+for a previously requested object to be downloaded completely 
+(D)   HTTP 1.1 facilitates downl oading multiple webpages on the same server to be 
+downloaded over a single TCP connection Organizing Institute: IIT Guwahati Page 15 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 16 ---
+Q. 20   Let   𝑛   >   1 .   Consider an   𝑛   ×   𝑛   matrix   𝑀   with its elements from   ℝ .   Let the vector 
+( 0 ,   1 ,   0 ,   0 ,   …   ,   0 )   ∈   ℝ 𝑛   be in the null space of   𝑀 . 
+Which of the following   options   is/are always   correct ? 
+(A)   D eterminant of   𝑀   is 1 
+(B)   D eterminant of   𝑀   is 0 
+(C)   R ank of   𝑀   is 1 
+(D)   There are at least two non - zero vectors in the null space of   𝑀 
+Q. 21   Consider the following Boolean expression of a function 
+F   : 
+𝐹 ( 𝑃 ,   𝑄 )   =   ( 𝑃 ̅   +   𝑄 )   ⊕   ( 𝑃 ̅   𝑄 ) 
+Which of the following   expressions   is/are equivalent   to 
+F   ? 
+(A)   𝑃   ⊕   𝑄 ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ 
+(B)   𝑃   ⊕   𝑄 
+(C)   𝑃 ̅   ⊕   𝑄 
+(D)   𝑃 ̅   ⊕   𝑄 ̅ Organizing Institute: IIT Guwahati Page 16 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 17 ---
+Q.22   Consider the 8 - bit signed integers   𝑋 ,   𝑌   and   𝑍   represented using the   sign - magnitude 
+form. The binary representations of   𝑋   and   𝑌   are as follows: 
+𝑋 : 1 0110100   𝑌 : 01001100 
+Which of the following operations   to compute   𝑍   result(s) in an arithmetic 
+overflow? 
+(A)   𝑍   =   𝑋   +   𝑌 
+(B)   𝑍   =   𝑋   −   𝑌 
+(C)   𝑍   =   − 𝑋   +   𝑌 
+(D)   𝑍   =   − 𝑋   −   𝑌 Organizing Institute: IIT Guwahati Page 17 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 18 ---
+Q .23   Let   𝑛   be an odd number greater than 100.   Consider a binary minheap with 
+𝑛   elements stored in an array   𝑃   whose index starts from   1 . 
+W hich of the following indices of   𝑃   d o / does   NOT correspond to a ny   leaf node of 
+the minheap? 
+(A)   𝑛   +   1 
+2 
+(B)   𝑛   −   1 
+2 
+(C)   𝑛   −   3 
+2 
+(D)   𝑛 Organizing Institute: IIT Guwahati Page 18 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 19 ---
+Q. 24   Consider a hash table   𝑃 [ 0 ,   1 ,   …   ,   10 ]   that is   initially   empty. The hash table is 
+maintained using open   addressing with linear probing . T he hash function used is 
+ℎ ( 𝑥 )   =   ( 𝑥   +   7 )   mod   11 . 
+Consider the following sequence of insertions performed on   𝑃 : 
+1 ,   13 ,   22 ,   15 ,   11 ,   24 
+Which of the following positions in the hash table is/are empty   after the se   insertions 
+are performed ? 
+(A)   0 
+(B)   10 
+(C)   2 
+(D)   1 Organizing Institute: IIT Guwahati Page 19 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 20 ---
+Q.25   Consider the   following   grammar   where   𝑆   is the start symbol, and   𝑎   and   𝑏   are 
+terminal symbols. 
+𝑆   →   𝑎𝑆𝑏𝑆   ∣   𝑏𝑆   ∣   ϵ 
+Which of the following statements is/are   true ? 
+(A)   The grammar is ambiguous 
+(B)   The string   𝑎𝑏𝑏   has two distinct derivations in this grammar 
+(C)   The string   𝑎𝑏𝑎𝑏   has only one rightmost derivation 
+(D)   The language generated by the grammar is undecidable 
+Q. 26   Let   M   be a   nondeterministic finite automaton (NFA)   with 6 states   over a finite 
+alphabet. 
+Which of the following options CANNOT be the number of states in the minimal 
+deterministic finite automaton ( DFA )   that is equivalent to   𝑀   ? 
+(A)   32 
+(B)   65 
+(C)   1 
+(D)   128 Organizing Institute: IIT Guwahati Page 20 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 21 ---
+Q.27   Consider the following C statements: 
+char *str1 =   " Hello;   /*   S tatement S1 */ 
+char *str2 =   " Hello; " ;   /*   S tatement S2 */ 
+int *str3 =   " Hello " ;   /*   S tatement S3 */ 
+Which of the following options is/are   correct ? 
+(A)   S1   and   S2   have syntactic errors 
+(B)   S 2   has a lexical error and   S3   has a syntactic error 
+(C)   S1   has a lexical error and   S3   has a semantic error 
+(D)   S1   has a syntactic error and   S3   has a semantic error 
+Q. 28   Which of the following statements is/are   true ? 
+(A)   LL(1) parser   uses   backtracking 
+(B)   For a grammar to be LL(1), it must be   left - recursive 
+(C)   For a grammar to be LL(1), it must be left - factored 
+(D)   The LL(1) parsers are more powerful than the SLR parsers Organizing Institute: IIT Guwahati Page 21 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 22 ---
+Q.29   With respect to deadlocks in an operating system, which of the following 
+statements is/are FALSE? 
+(A)   Banker’s algorithm is used to prevent deadlocks 
+(B)   Deadlock formation can be prevented by ensuring that the hold and wait 
+condition is not allowed 
+(C)   An assignment edge in a resource allocation graph is marked from a process to a 
+resource 
+(D)   A safe   state guarantees that all processes can finish without formation of a 
+deadlock 
+Q. 30   Let   𝑃 ,   𝑄 ,   𝑅   and   𝑆   be the attributes of a relation in a relational schema.   Let   𝑋   ⟶   𝑌 
+indicate functional dependency in the context of a relational database , where 
+𝑋 ,   𝑌   ⊆   { 𝑃 ,   𝑄 ,   𝑅 ,   𝑆 } . 
+Which of the following options is/are   always   true ? 
+(A)   If   (   { 𝑃 ,   𝑄 }   ⟶   { 𝑅 }   and   { 𝑃 }   ⟶   { 𝑅 }   ) , then   { 𝑄 }   ⟶   { 𝑅 } 
+(B)   If   { 𝑃 ,   𝑄 }   ⟶   { 𝑅 } ,   then   (   { 𝑃 }   ⟶   { 𝑅 }   or   { 𝑄 }   ⟶   { 𝑅 }   ) 
+(C)   If   (   { 𝑃 }   ⟶   { 𝑅 }   and   { 𝑄 }   ⟶   { 𝑆 }   ) , then   { 𝑃 ,   𝑄 }   ⟶   { 𝑅 ,   𝑆 } 
+(D)   If   { 𝑃 }   ⟶   { 𝑅 } , then   { 𝑃 ,   𝑄 }   ⟶   { 𝑅 } Organizing Institute: IIT Guwahati Page 22 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 23 ---
+Q. 31   In the context of relational database normalization, which of the following 
+statements is/are   true ? 
+(A)   It is always possible to obtain a dependency - preserving 3NF decomposition of a 
+relation 
+(B)   It is   always possible to obtain a dependency - preserving 1NF decomposition of a 
+relation 
+(C)   It is   not   always possible to obtain a dependency - preserving BCNF decomposition 
+of a relation 
+(D)   It is   not   always possible to obtain a dependency - preserving 2NF decomposition of 
+a relation 
+Q. 32   Consider the function   𝑓 :   ℝ   →   ℝ   defined as follows: 
+𝑓 ( 𝑥 )   =   { 𝑐 1 𝑒 𝑥   −   𝑐 2   log e   ( 1 
+𝑥 )   ,   if   𝑥   >   0 
+3   otherwise 
+where   𝑐 1   ,   𝑐 2   ∈   ℝ . 
+If   𝑓   is continuous at   𝑥   =   0 , then   𝑐 1   +   𝑐 2   =   ______ ___.   ( answer   in integer ) 
+Q .33   The height of a binary tree is the number of edges in the longest path from the root 
+to a leaf in the tree. The maximum possible height of a full binary tree with 
+23 nodes   is   ___ _____ _ .   ( answer   in integer ) Organizing Institute: IIT Guwahati Page 23 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 24 ---
+Q .34   Consider   the following program in C : 
+#include <stdio.h> 
+void func(int i, int   j) { 
+if(i < j) { 
+int i = 0; 
+while (i < 10) { 
+j += 2; 
+i++; 
+} 
+} 
+printf("%d", i); 
+} 
+int main() { 
+int i = 9, j = 10; 
+func(i, j); 
+return 0; 
+} 
+The output of the program is   ______ ___ .   ( answer   in integer ) 
+Note : Assume that the program compiles and runs successfully. 
+Q.35   Consider a system consisting of   𝑘   instances of a resource   𝑅 , being shared by 
+5   processes. Assume that each process requires a maximum of two instances of 
+resource   𝑅   and a process can request or release only one instance at a time. Further, 
+a process can request the second instance of the resource only after acquiring the 
+first in stance. 
+The minimum value of   𝑘   for the system to be deadlock - free is ______ __ .   ( answer 
+in integer ) Organizing Institute: IIT Guwahati Page 24 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 25 ---
+Q. 3 6   –   Q. 6 5   Carry TWO marks Each 
+Q. 36   Consider the real valued variables   X, Y   and   Z   represented using the IEEE 754 single - 
+precision floating - point format. The binary representations of   X   and   Y   in hexadecimal 
+notation are as follows: 
+X : 35C00000   Y : 34A00000 
+Let   𝑍   =   𝑋   +   𝑌 . 
+Which   one   of the following is the binary representation   of   𝑍 ,   in hexadecimal 
+notation? 
+(A)   35C80000 
+(B)   35CC0000 
+(C)   35E80000 
+(D)   35EC0000 Organizing Institute: IIT Guwahati Page 25 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 26 ---
+Q. 37   Consider a 2 - bit saturating up/down counter that performs the saturating up count 
+when the input   P   is 0, and the saturating down count when   P   is 1. The   N ext   S tate 
+table   of the counter is   as shown . The counter is built as a synchronous sequential 
+circuit using D flip - flops. 
+Input   Current 
+State 
+Next 
+State 
+𝑃   𝑄 1   𝑄 0   𝑄 1 
++   𝑄 0 
++ 
+0   0   0   0   1 
+0   0   1   1   0 
+0   1   0   1   1 
+0   1   1   1   1 
+1   0   0   0   0 
+1   0   1   0   0 
+1   1   0   0   1 
+1   1   1   1   0 
+Which   one   of the   following   options corresponds to the expressions for the inputs   of 
+the D flip - flops ,   𝐷 1   and   𝐷 0 ? 
+(A)   𝐷 1   =   𝑃   𝑄 1   +   𝑃 ̅   𝑄 0   +   𝑄 1 𝑄 0   𝐷 0   =   𝑃   𝑄 0   +   𝑃 ̅   𝑄 1   +   𝑄 1   𝑄 0 ̅ ̅ ̅ 
+(B)   𝐷 1   =   𝑃 ̅   𝑄 1   +   𝑃 ̅   𝑄 0   +   𝑄 1 𝑄 0   𝐷 0   =   𝑃 ̅   𝑄 0 ̅ ̅ ̅   +   𝑃  ̅   𝑄 1   +   𝑄 1   𝑄 0 ̅ ̅ ̅ 
+(C)   𝐷 1   =   𝑃 ̅   𝑄 1 ̅ ̅ ̅   +   𝑃  ̅   𝑄 0   +   𝑄 1   𝑄 0   𝐷 0   =   𝑃 ̅   𝑄 0   +   𝑃 ̅   𝑄 1   +   𝑄 1   𝑄 0 ̅ ̅ ̅ 
+(D)   𝐷 1   =   𝑃   𝑄 1 ̅ ̅ ̅   +   𝑃 ̅   𝑄 0   +   𝑄 1   𝑄 0   𝐷 0   =   𝑃   𝑄 0 ̅ ̅ ̅   +   𝑃 ̅   𝑄 1   +   𝑄 1   𝑄 0 ̅ ̅ ̅ Organizing Institute: IIT Guwahati Page 26 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 27 ---
+Q. 38   The   size of the   physical address space of a processor is   2 32   bytes. The capacity of a 
+cache memory unit is   2 23   bytes. The cache block size is 1 28 byte s. The cache 
+memory unit can be built as a direct mapped cache or as a   𝐾 - way set - associative 
+cache, where   𝐾   =   2 𝐿   and   𝐿   ∈   { 1 ,   2 ,   3 } .   Let the length of the TAG field be   𝑀   bits 
+for the direct mapped cache, and   𝑁   bits for the set - associative cache. 
+Which   one   of the following options is   true ? 
+(A)   𝑁   =   𝑀   +   𝐿 
+(B)   𝑁   =   𝑀   −   𝐿 
+(C)   𝑁   =   𝑀   +   𝐾 
+(D)   𝑁   =   𝑀   −   𝐾 Organizing Institute: IIT Guwahati Page 27 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 28 ---
+Q .39   Consider the following   code snippet   in C language   that computes the number of 
+nodes   in a non - empty singly linked list pointed to by the pointer variable   head . 
+struct node{ 
+int elt; 
+struct node *next; 
+}; 
+int   get ListSize   (struct node *head) 
+{ 
+if(   E1   ) return 1; 
+return   E2 ; 
+} 
+Which   one   of   the   following   options   gives   the   correct   replacements   for   the 
+expressions   E1   and   E2 ? 
+(A)   E1 :   head == NULL 
+E2 :   1   +   getListSize (head) 
+(B)   E1 :   head - >next == NULL 
+E2 :   1   +   getListSize (head - >next) 
+(C)   E1 :   head == NULL 
+E2 :   1   +   getListSize (head - >next) 
+(D)   E1 :   head - >next == NULL 
+E2 :   1   +   getListSize (head) Organizing Institute: IIT Guwahati Page 28 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 29 ---
+Q .40   Let   𝑃   be the   set   of   all   integers from   1   to   15 .   Consider an y   order of insertion of the 
+elements of   𝑃   into a   b inary   s earch   t ree   that   creates a complete binary tree. 
+Which   one   of the following   elements   can NEVER be the third element that is 
+inserted? 
+(A)   4 
+(B)   2 
+(C)   10 
+(D)   5 Organizing Institute: IIT Guwahati Page 29 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 30 ---
+Q.41   Let   𝐺 ( 𝑉 ,   𝐸 )   be an undirected, edge - weighted graph   with integer weights .   The weight 
+of a path is the sum of the weights of the edges in that path. The length of a path is 
+the number of edges in that path. 
+Let   𝑠   ∈   𝑉   be a vertex in   𝐺 . For every   𝑢   ∈   𝑉   and for every   𝑘   ≥   0 , let   𝑑 𝑘 ( 𝑢 )   denote 
+the   weight   of   a   shortest path   (in terms of weight)   from   𝑠   to   𝑢   of length at most   𝑘 . If 
+there is no path   from   𝑠   to   𝑢   of length at most   𝑘 , then   𝑑 𝑘 ( 𝑢 )   =   ∞ . 
+Consider the   statements: 
+S1:   For every   𝑘   ≥   0   and   𝑢   ∈   𝑉 ,   𝑑 𝑘 + 1 ( 𝑢 )   ≤   𝑑 𝑘 ( 𝑢 ) . 
+S2:   For every   ( 𝑢 ,   𝑣 )   ∈   𝐸 ,   if   ( 𝑢 ,   𝑣 )   is part of   a   shortest path   (in terms of 
+weight)   from   𝑠   to   𝑣 , then for every   𝑘   ≥   0 ,   𝑑 𝑘 ( 𝑢 )   ≤   𝑑 𝑘 ( 𝑣 ) . 
+Which   one   of the following   options   is   correct ? 
+(A)   Only S1 is true 
+(B)   Only S2 is true 
+(C)   Both S1 and S2 are true 
+(D)   Neither   S1   nor   S2   is true Organizing Institute: IIT Guwahati Page 30 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 31 ---
+Q. 42   Consider the control flow graph shown in the figure. 
+Which   one   of the following options correctly lists the set of redundant expressions 
+(common subexpressions) in the basic blocks B4 and B5? 
+Note:   All the variables are integers . 
+(A)   B4:   {   𝑏   +   𝑖   } 
+B5:   {   𝑐   +   𝑚   } 
+(B)   B4:   {   𝑔   ∗   𝑘   } 
+B5:   {   𝑐   +   𝑚   } 
+(C)   B4:   {   𝑔   ∗   𝑘 ,   𝑏   +   𝑖   } 
+B5:   {   } 
+(D)   B4:   {   𝑔   ∗   𝑘   } 
+B5:   {   } Organizing Institute: IIT Guwahati Page 31 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 32 ---
+Q. 43   Consider a relational   database   schema with two relations   𝑅 ( 𝑃 ,   𝑄 )   and   𝑆 ( 𝑋 ,   𝑌 ) . 
+Let   𝐸   =   { ⟨ 𝑢 ⟩   ∣   ∃ 𝑣   ∃ 𝑤   ⟨ 𝑢 ,   𝑣 ⟩   ∈   𝑅   ∧   ⟨ 𝑣 ,   𝑤 ⟩   ∈   𝑆 }   be   a   tuple relational calculus 
+expression. 
+Which   one   of the following relational algebraic expressions is equivalent to   𝐸   ? 
+(A)   𝛱 𝑃 ( 𝑅   ⋈ 𝑅 . 𝑃 = 𝑆 . 𝑋   𝑆 ) 
+(B)   𝛱 𝑃 ( 𝑆   ⋈ 𝑆 . 𝑋 = 𝑅 . 𝑄   𝑅 ) 
+(C)   𝛱 𝑃 ( 𝑅   ⋈ 𝑅 . 𝑃 = 𝑆 . 𝑌   𝑆 ) 
+(D)   𝛱 𝑃 ( 𝑆   ⋈ 𝑆 . 𝑌 = 𝑅 . 𝑄   𝑅 ) Organizing Institute: IIT Guwahati Page 32 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 33 ---
+Q.44   A TCP sender successfully establishes   a   connection with a TCP receiver and starts 
+the transmission of segments. The   TCP congestion control mechanism’s   slow - start 
+threshold   is   set to 10000   segments .   Assume that the round - trip time is fixed at 
+1 millisecond. Assume that the sender always has data to send, the segments are 
+numbered from 1, and no segment is lost. Let   𝑡   denote the time   (in milliseconds)   at 
+which   the transmission of   segment number 2000   starts. 
+Which   one   of the following options is   correct ? 
+(A)   9   ≤   𝑡   <   10 
+(B)   10   ≤   𝑡   <   11 
+(C)   11   ≤   𝑡   <   12 
+(D)   12   ≤   𝑡   <   13 Organizing Institute: IIT Guwahati Page 33 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 34 ---
+Q. 45   Consider the implementation of sliding window protocol over a lossless link, with a 
+window size of   𝑊   frames, where each frame is of size 1000 bits (including header). 
+The bandwidth of the link is 100 kbps (1k = 10 3 ) and the one - way propagation delay 
+is 100 milliseconds. Assume that processing times at the sender and receiver are zero 
+and the transmission time of acknowledgements is also zero. Which one of the 
+following options gives the minimum size of   𝑊   (in number   of frames) required to 
+achieve   100%   link utilization? 
+(A)   10 
+(B)   21 
+(C)   20 
+(D)   11 Organizing Institute: IIT Guwahati Page 34 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 35 ---
+Q. 46   Let   𝑓 :   ℝ   →   ℝ   be defined as follows: 
+𝑓 ( 𝑥 )   =   ( | 𝑥 | 
+2   −   𝑥 )   ( 𝑥   −   | 𝑥 | 
+2   ) 
+Which of the following statements is/are   true ? 
+(A)   𝑓   has a local maximum 
+(B)   𝑓   has a   local minimum 
+(C)   𝑓 ′   is continuous over   ℝ 
+(D)   𝑓 ′   is not differentiable over   ℝ 
+Q.47   Let   𝐺 ( 𝑉 ,   𝐸 )   be a simple, undirected graph. A vertex cover of   𝐺   is a subset 
+𝑉 ′   ⊆   𝑉   such that for every   ( 𝑢 ,   𝑣 )   ∈   𝐸 ,   𝑢   ∈   𝑉 ′ or   𝑣   ∈   𝑉 ′ . Let the size of the smallest 
+vertex cover in   𝐺   be   𝑘 .   Let   𝑆   be any vertex cover of size   𝑘 . 
+For a vertex   𝑣   ∈   𝑉 , which of the following constraints will   always   ensure that 
+𝑣   ∈   𝑆   ? 
+(A)   The degree of   𝑣   is at least   𝑘   +   1 
+(B)   The vertex   𝑣   is on a path of length   𝑘   +   1 
+(C)   The vertex   𝑣   is on a cycle of length   𝑘   +   1 
+(D)   The vertex   𝑣   is   a   part of a clique of size   𝑘 Organizing Institute: IIT Guwahati Page 35 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 36 ---
+Q. 48   Consider a Boolean function   F   with the following minterm expression: 
+𝐹 ( 𝑃 ,   𝑄 ,   𝑅 ,   𝑆 )   =   ∑   𝑚   ( 1 ,   2 ,   3 ,   4 ,   5 ,   7 ,   10 ,   12 ,   13 ,   14 ) 
+Which of the following options is/are the minimal sum - of - products expression(s) 
+of   F   ? 
+(A)   𝑃 ̅   𝑆   +   𝑄 𝑅 ̅   +   𝑃 ̅   𝑄 ̅   𝑅   +   𝑄 ̅   𝑅 𝑆 ̅ 
+(B)   𝑃 ̅   𝑆   +   𝑄 𝑅 ̅   +   𝑃 ̅   𝑄 ̅   𝑅   +   𝑃𝑅 𝑆 ̅ 
+(C)   𝑃 ̅   𝑆   +   𝑄 𝑅 ̅   +   𝑃𝑄 𝑆 ̅   +   𝑃𝑅 𝑆 ̅ 
+(D)   𝑃 ̅   𝑆   +   𝑄 𝑅 ̅   +   𝑃𝑄 𝑆 ̅   +   𝑄 ̅   𝑅 𝑆 ̅ Organizing Institute: IIT Guwahati Page 36 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 37 ---
+Q.49   Let   𝐺 ( 𝑉 ,   𝐸 )   be a simple, undirected, edge - weighted graph with unique edge weights. 
+Which of the following statements about the minimum spanning trees (MST) 
+of   𝐺   is/are   true ? 
+(A)   In every cycle   𝐶   of   𝐺 , the edge with the largest weight in   𝐶   is   not   in any MST 
+(B)   In every cycle   𝐶   of   𝐺 , the edge with the smallest weight in   𝐶   is in every MST 
+(C)   For every vertex   𝑣   ∈   𝑉 , the edge with the largest weight incident on   𝑣   is   not   in any 
+MST 
+(D)   For every vertex   𝑣   ∈   𝑉 , the edge with the smallest weight incident on   𝑣   is in every 
+MST Organizing Institute: IIT Guwahati Page 37 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 38 ---
+Q.50   Consider the following pseudocode for depth - first search (DFS) algorithm which 
+takes a directed graph   𝐺 ( 𝑉 ,   𝐸 )   as input, where   𝑑 [ 𝑣 ]   and   𝑓 [ 𝑣 ]   are the discovery time 
+and finishing time, respectively, of the vertex   𝑣   ∈   𝑉 . 
+𝐷𝐹𝑆 ( 𝐺 ) : 
+𝑢𝑛𝑚𝑎𝑟𝑘   𝑎𝑙𝑙   𝑣   ∈   𝑉 
+𝑡   ←   0 
+𝑓𝑜𝑟   𝑒𝑎𝑐 ℎ   𝑣   ∈   𝑉 
+𝑖𝑓   𝑣   𝑖𝑠   𝑢𝑛𝑚𝑎𝑟𝑘𝑒𝑑 
+𝑡   ←   𝐸𝑥𝑝𝑙𝑜𝑟𝑒 ( 𝐺 ,   𝑣 ,   𝑡 ) 
+𝑒𝑛𝑑   𝑖𝑓 
+𝑒𝑛𝑑   𝑓𝑜𝑟 
+𝐸𝑥𝑝𝑙𝑜𝑟𝑒 ( 𝐺 ,   𝑣 ,   𝑡 ) : 
+𝑚𝑎𝑟𝑘   𝑣 
+𝑡   ←   𝑡   +   1 
+𝑑 [ 𝑣 ]   ←   𝑡 
+𝑓𝑜𝑟   𝑒𝑎𝑐 ℎ   ( 𝑣 ,   𝑤 )   ∈   𝐸 
+𝑖𝑓   𝑤   𝑖𝑠   𝑢𝑛𝑚𝑎𝑟𝑘𝑒𝑑 
+𝑡   ←   𝐸𝑥𝑝𝑙𝑜𝑟𝑒 ( 𝐺 ,   𝑤 ,   𝑡 ) 
+𝑒𝑛𝑑   𝑖𝑓 
+𝑒𝑛𝑑   𝑓𝑜𝑟 
+𝑡   ←   𝑡   +   1 
+𝑓 [ 𝑣 ]   ←   𝑡 
+𝑟𝑒𝑡𝑢𝑟𝑛   𝑡 
+Suppose that the input directed graph   𝐺 ( 𝑉 ,   𝐸 )   is a directed acyclic graph (DAG). 
+For an edge   ( 𝑢 ,   𝑣 )   ∈   𝐸 , which of the following options will NEVER be   correct ? 
+(A)   𝑑 [ 𝑢 ]   <   𝑑 [ 𝑣 ]   <   𝑓 [ 𝑣 ]   <   𝑓 [ 𝑢 ] 
+(B)   𝑑 [ 𝑣 ]   <   𝑑 [ 𝑢 ]   <   𝑓 [ 𝑢 ]   <   𝑓 [ 𝑣 ] 
+(C)   𝑑 [ 𝑣 ]   <   𝑓 [ 𝑣 ]   <   𝑑 [ 𝑢 ]   <   𝑓 [ 𝑢 ] 
+(D)   𝑑 [ 𝑢 ]   <   𝑑 [ 𝑣 ]   <   𝑓 [ 𝑢 ]   <   𝑓 [ 𝑣 ] Organizing Institute: IIT Guwahati Page 38 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 39 ---
+Q.51   Let   𝐿 1   and   𝐿 2   be two languages over a finite alphabet, such that   𝐿 1   ∩   𝐿 2   and   𝐿 2   are 
+regular languages. 
+Which of the following statements is/are   always true ? 
+(A)   𝐿 1   is regular 
+(B)   𝐿 1   ∪   𝐿 2   is regular 
+(C)   𝐿 2   is context - free 
+(D)   𝐿 1   is context - free Organizing Institute: IIT Guwahati Page 39 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 40 ---
+Q. 52   Consider the following context - free grammar   𝐺 . 
+𝑆   →   𝑎𝑏𝑎𝐴𝐵𝐴𝑏𝑏𝑎 
+𝐴   →   𝑎𝑎𝐵𝐵𝐴𝑏   |   𝑏𝐵𝑎𝑏𝑎𝑎 
+𝐵   →   𝑎𝐵𝑏   |   𝑎𝑏 
+In the above grammar,   𝑆   is the start symbol,   𝑎   and   𝑏   are terminal symbols, and   𝐴   and 
+𝐵   are non - terminal symbols. 
+Let   𝐿 ( 𝐺 )   be the language generated by the grammar   𝐺 . For a string   𝑠   ∈   𝐿 ( 𝐺 ) , let 
+𝑛 1 ( 𝑠 )   be the number of   𝑎 ’s in   𝑠   and   𝑛 2 ( 𝑠 )   be the number of   𝑏 ’s in   𝑠 . 
+Which of the following   statements   is/are true? 
+(A)   There is a string   𝑠   ∈   𝐿 ( 𝐺 )   such that   𝑛 1 ( 𝑠 )   <   𝑛 2 ( 𝑠 ) 
+(B)   For every string   𝑠   ∈   𝐿 ( 𝐺 ) ,   𝑛 1 ( 𝑠 )   ≥   𝑛 2 ( 𝑠 ) 
+(C)   There is a string   𝑠   ∈   𝐿 ( 𝐺 )   such that   𝑛 1 ( 𝑠 )   >   2 𝑛 2 ( 𝑠 ) 
+(D)   For every string   𝑠   ∈   𝐿 ( 𝐺 ) ,   𝑛 1 ( 𝑠 )   ≤   2 𝑛 2 ( 𝑠 ) Organizing Institute: IIT Guwahati Page 40 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 41 ---
+Q. 53   Consider the   following   two s yntax - d irected   d efinitions SDD 1 and SDD2   for type 
+declarations. 
+𝐷   is the start symbol , and   𝑖𝑛𝑡 ,   𝑓𝑙𝑜𝑎𝑡   and   𝑖𝑑   are the three terminals.   The non - terminal 
+𝑉 1   is the same as   𝑉   and the non - terminal   𝐷 1   is the same as   𝐷 . Here,   the   subscript is 
+used to differentiate the grammar symbols on the two sides of a production.   The 
+function   𝑝𝑢𝑡   updates the symbol table wit h the type information for an identifier. 
+Let   P and Q be the languages specified by grammars G1 and G2, respectively. 
+Which of the following statements is/are   true ? 
+SDD1 
+Grammar 
+(G1) 
+Semantic Rules 
+𝐷   →   𝑇   𝑉   𝐷 .   𝑡𝑦𝑝𝑒   =   𝑇 .   𝑡𝑦𝑝𝑒 
+𝑉 .   𝑡𝑦𝑝𝑒   =   𝑇 .   𝑡𝑦𝑝𝑒 
+𝑇   →   𝑖𝑛𝑡   𝑇 .   𝑡𝑦𝑝𝑒   =   𝑖𝑛𝑡 
+𝑇   →   𝑓𝑙𝑜𝑎𝑡   𝑇 .   𝑡𝑦𝑝𝑒   =   𝑓𝑙𝑜𝑎𝑡 
+𝑉   →   𝑉 1   𝑖𝑑   𝑉 1 .   𝑡𝑦𝑝𝑒   =   𝑉 .   𝑡𝑦𝑝𝑒 
+𝑝𝑢𝑡 ( 𝑖𝑑 .   𝑒𝑛𝑡𝑟𝑦 ,   𝑉 .   𝑡𝑦𝑝𝑒 ) 
+𝑉   →   𝑖𝑑   𝑝𝑢𝑡 ( 𝑖𝑑 .   𝑒𝑛𝑡𝑟𝑦 ,   𝑉 .   𝑡𝑦𝑝𝑒 ) 
+SDD2 
+Grammar 
+(G2) 
+Semantic Rules 
+𝐷   →   𝐷 1   𝑖𝑑   𝐷 .   𝑡𝑦𝑝𝑒   =   𝐷 1 .   𝑡𝑦𝑝𝑒 
+𝑝𝑢𝑡 ( 𝑖𝑑 .   𝑒𝑛𝑡𝑟𝑦 ,   𝐷 1 .   𝑡𝑦𝑝𝑒 ) 
+𝐷   →   𝑇   𝑖𝑑   𝐷 .   𝑡𝑦𝑝𝑒   =   𝑇 .   𝑡𝑦𝑝𝑒 
+𝑝𝑢𝑡 ( 𝑖𝑑 .   𝑒𝑛𝑡𝑟𝑦 ,   𝑇 .   𝑡𝑦𝑝𝑒 ) 
+𝑇   →   𝑖𝑛𝑡   𝑇 .   𝑡𝑦𝑝𝑒   =   𝑖𝑛𝑡 
+𝑇   →   𝑓𝑙𝑜𝑎𝑡   𝑇 .   𝑡𝑦𝑝𝑒   =   𝑓𝑙𝑜𝑎𝑡 
+(A)   The languages P and Q are the same 
+(B)   SDD2 is S - attributed and contains only   synthesized attributes 
+(C)   SDD1 is L - attributed and contains only inherited attributes 
+(D)   The specifications of SDD1 and SDD2 are such that the same entries get added to 
+the symbol table Organizing Institute: IIT Guwahati Page 41 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 42 ---
+Q.54   Consider a system that has a cache memory unit and a memo ry management unit 
+(MMU). The address input to the cache memory is a physical address. The MMU 
+has a translation lookaside buffer (TLB). Assume that when a page is evicted from 
+the main memory, the corresponding blocks in the cache are marked as invalid. 
+For a given memory reference, which of the following sequences of events can 
+NEVER happen? 
+(A)   TLB miss, Page table hit, Cache hit 
+(B)   TLB   hit , Page table   miss , Cache hit 
+(C)   TLB miss, Page table miss, Cache hit 
+(D)   TLB   miss , Page table miss, Cache   miss Organizing Institute: IIT Guwahati Page 42 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 43 ---
+Q.55   An undirected, unweighted , simple   graph   𝐺 ( 𝑉 ,   𝐸 )   is said to be 2 - colorable if there 
+exists a function   𝑐 :   𝑉   →   { 0 ,   1 }   such that for every   ( 𝑢 ,   𝑣 )   ∈   𝐸 ,   𝑐 ( 𝑢 )   ≠   𝑐 ( 𝑣 ) . 
+Which of the following statements about 2 - colorable graphs is/are   true ? 
+(A)   If   𝐺   is 2 - colorable, then   𝐺   may contain cycles of odd length 
+(B)   If   𝐺   is 2 - colorable, then   𝐺   may contain cycles of even length 
+(C)   An optimal algorithm for testing whether   𝐺   is 2 - colorable runs in time   Θ ( | 𝑉 |   +   | 𝐸 | ) , 
+if   𝐺   is represented as an   adjacency list 
+(D)   An optimal algorithm for testing whether   𝐺   is 2 - colorable runs in time   Θ ( | 𝐸 |   log | 𝑉 | ) , 
+if   𝐺   is represented as an adjacency list 
+Q. 56   A n ISP having an address block 202.16.0.0/15 assigns a block of 6000 IP addresses 
+to a client, using the classless internet domain routing (CIDR) super - netting 
+approach. Which of the following address blocks can be assigned by the ISP? 
+(A)   202.16.0.0/19 
+(B)   202.17.64.0/19 
+(C)   202.16.32.0/19 
+(D)   202.17.24.0/19 Organizing Institute: IIT Guwahati Page 43 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 44 ---
+Q. 57   Let   𝐺   be an undirected graph, which is a path on 8 vertices. The number of matchings 
+in   𝐺   is ______.   ( answer in integer ) 
+Q. 58   Let   𝑋   be a random variable which takes values in the set {1, 2, 3, 4, 5, 6, 7, 8}. 
+Further,   Pr ( 𝑋   =   1 )   =   Pr ( 𝑋   =   2 )   =   Pr ( 𝑋   =   5 )   =   Pr ( 𝑋   =   7 )   =   1 
+6   and 
+Pr ( 𝑋   =   3 )   =   Pr ( 𝑋   =   4 )   =   Pr ( 𝑋   =   6 )   =   Pr ( 𝑋   =   8 )   =   1 
+12   . 
+The expected value of   𝑋 , denoted by   𝐸 [ 𝑋 ] , is equal to ___________. ( rounded off 
+to   two   decimal place s ) 
+Q. 59   Consider a hard disk with a rotational speed of 15000 rpm. The time to move the 
+read/write head from a track to its adjacent track is 1 millisecond. Initially, the head 
+is on track 0. The number of sectors per track is 400. The secto r size is 1024 bytes. 
+It is necessary to transfer data from 10 randomly located sectors in each of the 
+following tracks in   the   order: 5, 12 and 7. 
+The total time for the data transfer   (in   milliseconds )   from the hard disk is   ______ ___ . 
+( rounded off to   one   decimal place ) 
+Q. 60   The EX stage of a pipelined processor performs the memory read operations for 
+LOAD instructions, and the operations for the arithmetic and logic instructions. Let 
+𝑡 𝐸𝑋   denote the time   taken by the EX stage to perform the operation for an instruction. 
+For each instruction type, the values of   𝑡 𝐸𝑋   and   M   (the number of instructions of that 
+type in a sequence of 100 instructions for a program P), are given in the table   below . 
+The durati on of the pipeline clock cycle is 1 nanosecond. Assume that the latch time 
+for the interstage buffers in the pipeline is negligible. 
+When program P is executed, the number of clock cycles for which the pipeline is 
+stalled due to structural hazards in the EX stage is ______.   ( answer in integer ) 
+Instruction   𝑡 𝐸𝑋   in 
+nanoseconds 
+𝑀 
+LOAD   1.8   15 
+IMUL   1.5   10 
+IDIV   2.5   5 
+FADD   1.7   10 
+FSUB   1.7   5 
+FMUL   2.8   15 
+FDIV   3.2   5 
+All other 
+instructions 
+Less than 
+1.0 
+35 Organizing Institute: IIT Guwahati Page 44 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 45 ---
+Q .61   Consider the recursive functions   represented by the following code segment: 
+int bar(int n){ 
+if (n == 1) return 0; 
+else return 1 + bar(n/2); 
+} 
+int foo(int n){ 
+if (n == 1) return 1; 
+else return 1 + foo(bar(n)); 
+} 
+The smallest positive integer   n   for which   foo(n)   returns   5 is ______.   ( answer in 
+integer ) 
+Note : Ignore syntax errors (if any) in the function. 
+Q .62   The following sequence corresponds to the preorder traversal of a binary search 
+tree   𝑇 : 
+50, 25, 13, 40, 30, 47, 75, 60, 70, 80, 77 
+The position of the element 60 in the postorder traversal of   𝑇   is ______.   ( answer in 
+integer ) 
+Note:   The position begins with 1. Organizing Institute: IIT Guwahati Page 45 of 46 Computer Science & Information Technology (CS1) 
+
+--- PAGE 46 ---
+Q.63   Consider the following program snippet. Assume that the program compiles and runs 
+successfully. Further, assume that the   fork ()   system call is always successful in 
+creating a process. 
+int main () { 
+int i; 
+for (i = 0; i < 3; i++){ 
+if (fork() == 0){ 
+continue; 
+} 
+break; 
+} 
+printf("Hello!"); 
+return 0; 
+} 
+The total number of times that   the   printf   statement gets executed is ________. 
+( answer in integer ) 
+Q. 64   Consider a CPU that has   to execute two types of processes. The first type, 
+Actuators (A) ,   require s   a CPU burst of 6 seconds. The second type, Controllers (C) , 
+require s   a CPU burst of 8 seconds.   A new process of type A arrives   at time   𝑡   = 10, 
+20, 30, 40, and 50 (in seconds). Similarly, a new process of type C arrives at time   𝑡   = 
+11, 22, 33, 44, and 55 (in seconds). The CPU scheduling policy is First Come First 
+Serve (FCFS). The first process of type A starts running at   𝑡   =   10   second s . The 
+average waiting time ( in seconds ) for the 10 processes is   ___________. ( rounded off 
+to one   decimal place ) 
+Q. 65   Consider   a relational database schema with a relation   𝑅 ( 𝐴 ,   𝐵 ,   𝐶 ,   𝐷 ) .   If   { 𝐴 ,   𝐵 }   and 
+{ 𝐴 ,   𝐶 }   are the only two candidate keys of the relation   𝑅 , then the number   of superkeys 
+of relation   𝑅   is ______.   ( answer in integer ) Organizing Institute: IIT Guwahati Page 46 of 46 Computer Science & Information Technology (CS1) 

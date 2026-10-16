@@ -1,0 +1,194 @@
+2024-cs1-q1 | MCQ 1m | KEY A
+Q.1 If ‘→’ denotes increasing order of intensity, then the meaning of the words [dry → arid → parched] is analogous to [diet → fast → ________ ]. Which one of the given options is appropriate to fill the blank? (A) starve (B) reject (C) feast (D) deny
+
+2024-cs1-q2 | MCQ 1m | KEY D
+Q. 2 If two distinct non - zero real variables 𝑥 and 𝑦 are such that ( 𝑥 + 𝑦 ) is proportional 𝑥 to ( 𝑥 − 𝑦 ) then the value of 𝑦 (A) depends on 𝑥𝑦 (B) depends only on 𝑥 and not on 𝑦 (C) depends only on 𝑦 and not on 𝑥 (D) is a constant
+
+2024-cs1-q3 | MCQ 1m | KEY A
+Q. 3 Consider the following sample of numbers: 9, 18, 11, 14, 15, 17, 10, 69 , 11, 13 The median of the sample is (A) 13.5 (B) 14 (C) 11 (D) 18.7
+
+2024-cs1-q4 | MCQ 1m | KEY C
+Q. 4 The number of coins of ₹1, ₹5, and ₹10 denominations that a person has are in the ratio 5:3:13. Of the total amount, the percentage of money in ₹5 coins is (A) 21% 2 (B) 14 % 7 (C) 10% (D) 30%
+
+2024-cs1-q5 | MCQ 1m | KEY A
+Q. 5 For positive non - zero real variables 𝑝 and 𝑞 , if 2 2 log ( 𝑝 + 𝑞 ) = log 𝑝 + log 𝑞 + 2 log 3 , 4 4 𝑝 + 𝑞 then, the value of is 2 2 𝑝 𝑞 (A) 79 (B) 81 (C) 9 (D) 83
+
+2024-cs1-q6 | MCQ 2m | KEY C
+Q. 6 In the given text, the blanks are numbered (i) − (iv). Select the best match for all the blanks. (i) (ii) Steve was advised to keep his head before heading to bat; (iii) for , while he had a head batting, he could only do so with a cool head (iv) s his shoulders. (A) (i) down (ii) down (iii) on (iv) for (B) (i) on (ii) down (iii) for (iv) on (C) (i) down (ii) out (iii) for (iv) on (D) (i) on (ii) out (iii) on (iv) for
+
+2024-cs1-q7 | MCQ 2m | KEY A
+Q. 7 A rectangular paper sheet of dimensions 54 cm × 4 cm is taken. The two longer edges of the sheet are joined together to create a cylindrical tube. A cube whose surface area is equal to the area of the sheet is also taken. Then, the ratio of the volume of the cylindrical tube to the volume of the cube is (A) 1/π (B) 2 /π (C) 3 /π (D) 4 /π
+
+2024-cs1-q8 | MCQ 2m | KEY C
+Q. 8 The pie chart presents the percentage contribution of different macronutrients to a typical 2,000 kcal diet of a person. Macronutrient energy contribution Trans fat 5% Saturated fat 20% Carbohydrates 35% Unsaturated fat 20% Proteins 20% The typical energy density (kcal/g) of these macronutrients is given in the table. Macronutrient Energy density (kcal/g) Carbohydrates 4 Proteins 4 Unsaturated fat 9 Saturated fat 9 Trans fat 9 The total fat (all three types), in grams, this person consumes is (A) 44.4 (B) 77.8 (C) 100 (D) 3,600
+
+2024-cs1-q9 | MCQ 2m | KEY A
+Q. 9 A rectangular paper of 20 cm × 8 cm is folded 3 times. Each fold is made along the line of symmetry, which is perpendicular to its long edge. The perimeter of the final folded sheet (in cm) is (A) 18 (B) 24 (C) 20 (D) 21
+
+2024-cs1-q10 | MCQ 2m | KEY A
+Q. 10 The least number of squares to be added in the figure to make AB a line of symmetry is (A) 6 (B) 4 (C) 5 (D) 7
+
+2024-cs1-q11 | MCQ 1m | KEY D
+3 Q.1 1 Let 𝑓 : ℝ → ℝ be a function such that 𝑓 ( 𝑥 ) = max { 𝑥 , 𝑥 } , 𝑥 ∈ ℝ , where ℝ is the set of all real numbers. The set of all points where 𝑓 ( 𝑥 ) is NOT differentiable is (A) { − 1 , 1 , 2 } (B) { − 2 , − 1 , 1 } (C) { 0 , 1 } (D) { − 1 , 0 , 1 }
+
+2024-cs1-q12 | MCQ 1m | KEY B
+Q.12 The product of all eigenvalues of the matrix [ 4 5 6 ] is 7 8 9 (A) − 1 (B) 0 (C) 1 (D) 2
+
+2024-cs1-q13 | MCQ 1m | KEY B
+Q.13 Consider a system that uses 5 bit s for representing signed integers in 2’s c omplement format . In this system, two integers 𝐴 and 𝐵 are represented as 𝐴 =01010 and 𝐵 =11010. Which one of the following operations will result in either an arithmetic overflow or an arithmetic underflow? (A) 𝐴 + 𝐵 (B) 𝐴 − 𝐵 (C) 𝐵 − 𝐴 (D) 2 ∗ 𝐵
+
+2024-cs1-q14 | MCQ 1m | KEY B
+Q.14 Consider a permutation sampled uniformly at random from the set of all permutations of { 1 , 2 , 3 , ⋯ , 𝑛 } for some 𝑛 ≥ 4 . Let 𝑋 be the event that 1 occurs before 2 in the permutation , and 𝑌 the event that 3 occurs before 4. Which one of the following statements is TRUE? (A) The events 𝑋 and 𝑌 are mutually exclusive (B) The events 𝑋 and 𝑌 are independent (C) Either event 𝑋 or 𝑌 must occur (D) Event 𝑋 is more likely than event 𝑌
+
+2024-cs1-q15 | MCQ 1m | KEY C
+Q.15 Which one of the following statements is FALSE? In the cycle stealing mode of DMA, one word of data is transferred between an I/O (A) device and main memory in a stolen cycl e For bulk data transfer, the burst mode of DMA has a higher throughput than the (B) cycle stealing mode Programmed I/O mechanism has a better CPU utilization than the interrupt driven (C) I/O mechanism The CPU can start executing an interrupt service routine faster with vectored (D) interrupts than with non - vectored interrupts
+
+2024-cs1-q16 | MCQ 1m | KEY C
+Q. 16 A user starts browsing a webpage hosted at a remote server. The browser opens a single TCP connection to fetch the entire webpage from the server. The webpage consists of a top - level index page with multiple embedded image objects. Assume that all caches (e.g., DNS cache, browser cache) are all initially empty. The fo llowing packets leave the user’s computer in some order. (i) HTTP GET request for the index page (ii) DNS request to resolve the web server’s name to its IP address (iii) HTTP GET request for an image object (iv) TCP SYN to open a connection to the web server Which one of th e following is the CORRECT chronological order (earliest in time to latest) of the packets leaving the computer ? (A) (iv), (ii), (iii), (i) (B) (ii), (iv), (iii), (i) (C) (ii), (iv), (i), (iii) (D) (iv), (ii), (i), (iii)
+
+2024-cs1-q17 | MCQ 1m | KEY A
+Q.17 Given an integer array of size N , we want to check if the array is sorted (in either ascending or descending order) . An algorithm solves this problem by making a single pass through the array and comparing each element of the array only with its adjacent elements . The worst - case time complexity of this algorithm is (A) both Ο ( 𝑁 ) and Ω ( 𝑁 ) (B) Ο ( 𝑁 ) but not Ω ( 𝑁 ) (C) Ω ( 𝑁 ) but not Ο ( 𝑁 ) (D) neither Ο ( 𝑁 ) nor Ω ( 𝑁 )
+
+2024-cs1-q18 | MCQ 1m | KEY C
+Q.18 Consider the following C program: #include <stdio.h> int main(){ int a = 6; int b = 0; while(a < 10) { a = a / 12 + 1; a += b;} printf( ” %d”, a); return 0;} Which one of the following statements is CORRECT? (A) The program prints 9 as output (B) The program prints 10 as output (C) The program gets stuck in an infinite loop (D) The program prints 6 as output
+
+2024-cs1-q19 | MCQ 1m | KEY C
+Q.19 Consider the following C program: #include <stdio.h> void fX(){ void fX(); char a; int main(){ if((a=getchar()) != ’ \ n’) fX(); fX(); return 0;} if(a != ’ \ n’) putchar(a);} Assume that the input to the program from the command line is 1234 followed by a newline character . Which one of the following statements is CORRECT? (A) The program will not terminate (B) The program will terminate with no output (C) The program will terminate with 4321 as output (D) The program will terminate with 1234 as output
+
+2024-cs1-q20 | MCQ 1m | KEY D
+Q. 20 Let S be the specification: "Instructors teach courses. Students register for courses. Courses are allocated classrooms. Instructors guide students." Which one of the following ER diagrams CORRECTLY represents S? (A) (i) (B) (ii) (C) (iii) (D) (iv)
+
+2024-cs1-q21 | MCQ 1m | KEY A
+Q.2 1 In a B+ tree, the requirement of a t least half - full (50%) node occupancy is relaxed for which one of the following cases? (A) O nly the root node (B) A ll leaf nodes (C) A ll internal nodes (D) O nly the leftmost leaf node
+
+2024-cs1-q22 | MSQ 1m | KEY A;C
+Q. 22 Which of the fo llowing statements about a relation R in first normal form (1NF) is/ are TRUE ? (A) R can have a multi - attribute key (B) R cannot have a foreign key (C) R cannot have a composite attribute (D) R can not have more than one candidate key
+
+2024-cs1-q23 | MSQ 1m | KEY C;D
+Q.23 Let 𝐿 1 , 𝐿 2 be two regular languages and 𝐿 3 a language which is not regular. Which of the following statements is/are always TRUE? (A) 𝐿 1 = 𝐿 2 if and only if 𝐿 1 ∩ 𝐿 ̅ ̅ ̅ 2 = 𝜙 (B) 𝐿 1 ∪ 𝐿 3 is not regular (C) 𝐿 ̅ ̅ ̅ 3 is not regular (D) 𝐿 ̅ ̅ ̅ 1 ∪ 𝐿 ̅ ̅ ̅ 2 is regular
+
+2024-cs1-q24 | MSQ 1m | KEY D
+Q. 24 Which of the following statements about threads is/are TRUE? (A) Threads can only be implemented in kernel space (B) Each thread has its own file descriptor table for open files (C) All the threads belonging to a process share a common stack (D) Threads belonging to a process are by default not protected from each other
+
+2024-cs1-q25 | MSQ 1m | KEY B;C
+Q. 25 Which of the following process state transitions is/are NOT possible? (A) Running to Ready (B) Waiting to Running (C) Ready to Waiting (D) Running to Terminated
+
+2024-cs1-q26 | MSQ 1m | KEY A;D
+Q.26 Which of the following is/are Bottom - Up Parser(s)? (A) Shift - reduce Parser (B) Predictive Parser (C) LL(1) Parser (D) LR Parser
+
+2024-cs1-q27 | MSQ 1m | KEY B;C
+Q.27 Let 𝐴 and 𝐵 be two events in a probability space with 𝑃 ( 𝐴 ) = 0 . 3 , 𝑃 ( 𝐵 ) = 0 . 5 , and 𝑃 ( 𝐴 ∩ 𝐵 ) = 0 . 1 . Which of the following statements is/are TRUE? (A) The two events 𝐴 and 𝐵 are independent (B) 𝑃 ( 𝐴 ∪ 𝐵 ) = 0 . 7 𝑐 𝑐 (C) 𝑃 ( 𝐴 ∩ 𝐵 ) = 0 . 2 , where 𝐵 is the complement of the event 𝐵 𝑐 𝑐 𝑐 𝑐 𝑃 ( 𝐴 ∩ 𝐵 ) = 0 . 4 , where 𝐴 and 𝐵 are the complements of the events 𝐴 and 𝐵 , (D) respectively
+
+2024-cs1-q28 | MSQ 1m | KEY A;C
+Q. 28 Consider the circuit shown below where the gates may have propagation delays. Assume that all signal transitions occur instantaneously and that wires have no delays. Which of the following statements about the circuit is/are CORRECT? (A) With no propagation delays , the output 𝒀 is always logic Zero (B) With no propagation delays, the output 𝒀 is always logic One With propagation delays, the output 𝒀 can have a transient logic One after 𝑿 (C) transitions from logic Zero to logic One With propagation delays, the output 𝒀 can have a transient logic Zero after 𝑿 (D) transitions from logic One to logic Zero
+
+2024-cs1-q29 | MSQ 1m | KEY A;D
+Q. 29 TCP client P successfully establishes a connection to TCP server Q. Let 𝑁 𝑃 denote the sequence number in the SYN sent from P to Q. Let 𝑁 𝑄 denote the acknowledgement number in the SYN ACK from Q to P. Which of the following statements is/are CORRECT? (A) The sequence number 𝑁 𝑃 is chosen randomly by P (B) The sequence number 𝑁 𝑃 is always 0 for a new connection (C) The acknowledgement number 𝑁 𝑄 is equal to 𝑁 𝑃 (D) The acknowledgement number 𝑁 𝑄 is equal to 𝑁 𝑃 + 1
+
+2024-cs1-q30 | MSQ 1m | KEY A;B;C
+Q. 30 Consider a 5 - stage pipelined processor with Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Register Writeback (WB) stages. Which of the following statements about forwarding is/are CORRECT? In a pipelined execution, forwarding means the result from a source stage of an (A) earlier instruction is passed on to the destination stage of a later instruction In forwarding, data from the output of the MEM stage can be passed on to the (B) input of the EX stage of the next instruction (C) Forwarding cannot prevent all pipeline stalls Forwarding does not require any extra hardware to retrieve the data from the (D) pipeline stages
+
+2024-cs1-q31 | MSQ 1m | KEY A;C
+Q. 31 Which of the following field s is/are modified in the IP header of a packet going out of a network address translation (NAT) device from an internal network to an external network? (A) Source IP (B) Destination IP (C) Header Checksum (D) Total Length
+
+2024-cs1-q32 | NAT 1m | KEY 2 to 2
+Q.32 Let 𝐴 and 𝐵 be non - empty finite sets such that there exist one - to - one and onto functions (i) from 𝐴 to 𝐵 and (ii) from 𝐴 × 𝐴 to 𝐴 ∪ 𝐵 . The number of possible values of | 𝐴 | is __________
+
+2024-cs1-q33 | NAT 1m | KEY 6 to 6
+Q. 33 Consider the operator precedence and associativity rules for the integer arithmetic operators given in the table below. Operator Precedence Associativity + Highest Left − High Right ∗ Medium Right / Low Right The value of the expression 3 + 1 + 5 ∗ 2 / 7 + 2 − 4 − 7 − 6 / 2 as per the above rules is __________
+
+2024-cs1-q34 | NAT 1m | KEY 16 to 16
+Q. 34 The number of spanning trees i n a complete graph of 4 vertices labelled A, B, C, and D is _________
+
+2024-cs1-q35 | NAT 1m | KEY 2 to 2
+Q. 35 Consider the following two relations, R ( A , B ) and S ( A , C ) : 𝑹 𝑺 𝑨 𝑩 𝑨 𝑪 10 20 10 90 20 30 30 45 30 40 40 80 30 50 50 95 The total number of tuples obtained by evaluating the following expression 𝝈 ( 𝑩 < 𝑪 𝑹 ⋈ ) 𝑹 . 𝑨 = 𝑺 . 𝑨 𝑺 is _________
+
+2024-cs1-q36 | MCQ 2m | KEY B
+Consider a network path P — Q — R between nodes P and R via router Q. Node P Q. 36 6 send s a file of size 10 byte s to R via this path by splitting the file into chunks of 3 10 byte s each . Node P send s these chunks one after the other without any wait time between the successive chunk transmissions. A ssume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU. 6 Each of the links P — Q and Q — R has a bandwidth of 10 bit s /sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P — Q and transmit on link Q — R. Assume P starts transmitting the chunks at time 𝑡 = 0 . Which one of the following options gives the time ( in seconds , rounded off to 3 decimal places ) at which R rece ives all the chunks of the file ? (A) 8.000 (B) 8.008 (C) 15.992 (D) 16.000
+
+2024-cs1-q37 | MCQ 2m | KEY A
+Q.37 Consider the following syntax - directed definition (SDD). 𝑆 → 𝐷𝐻𝑇𝑈 { 𝑆 . 𝑣𝑎𝑙 = 𝐷 . 𝑣𝑎𝑙 + 𝐻 . 𝑣𝑎𝑙 + 𝑇 . 𝑣𝑎𝑙 + 𝑈 . 𝑣𝑎𝑙 ; } 𝐷 → " M" 𝐷 1 { 𝐷 . 𝑣𝑎𝑙 = 5 + 𝐷 1 . 𝑣𝑎𝑙 ; } 𝐷 → 𝜖 { 𝐷 . 𝑣𝑎𝑙 = − 5 ; } 𝐻 → " L" 𝐻 1 { 𝐻 . 𝑣𝑎𝑙 = 5 ∗ 10 + 𝐻 1 . 𝑣𝑎𝑙 ; } 𝐻 → 𝜖 { 𝐻 . 𝑣𝑎𝑙 = − 10 ; } 𝑇 → " C" 𝑇 1 { 𝑇 . 𝑣𝑎𝑙 = 5 ∗ 100 + 𝑇 1 . 𝑣𝑎𝑙 ; } 𝑇 → 𝜖 { 𝑇 . 𝑣𝑎𝑙 = − 5 ; } 𝑈 → " K " { 𝑈 . 𝑣𝑎𝑙 = 5 ; } Given " MMLK" as the input, w hich one of the following options is the CORRECT value computed by the SDD (in the attribute 𝑆 . 𝑣𝑎𝑙 )? (A) 45 (B) 50 (C) 55 (D) 65
+
+2024-cs1-q38 | MCQ 2m | KEY A
+Q. 38 Consider the following grammar 𝐺 , with 𝑆 as the start symbol . The grammar 𝐺 has three incomplete productions denoted by ( 1 ) , ( 2 ) , and ( 3 ) . 𝑆 → 𝑑𝑎𝑇 | ( 1 ) 𝑇 → 𝑎𝑆 | 𝑏𝑇 | ( 2 ) 𝑅 → ( 3 ) | 𝜖 The set of terminals is { 𝑎 , 𝑏 , 𝑐 , 𝑑 , 𝑓 }. The FIRST and FOLLOW sets of the different non - terminals are as follows. FIRST( 𝑆 ) = { 𝑐 , 𝑑 , 𝑓 } , FIRST( 𝑇 ) = { 𝑎 , 𝑏 , 𝜖 } , FIRST( 𝑅 ) = { 𝑐 , 𝜖 } FOLLOW( 𝑆 ) = FOLLOW( 𝑇 ) = { 𝑐 , 𝑓 , $ } , FOLLOW( 𝑅 ) = { 𝑓 } Which one of the following options CORRECTLY fills in the incomplete productions? (A) (1) 𝑆 → 𝑅𝑓 (2) 𝑇 → 𝜖 (3) 𝑅 → 𝑐𝑇𝑅 (B) (1) 𝑆 → 𝑓𝑅 (2) 𝑇 → 𝜖 (3) 𝑅 → 𝑐𝑇𝑅 (C) (1) 𝑆 → 𝑓𝑅 (2) 𝑇 → 𝑐𝑇 (3) 𝑅 → 𝑐𝑅 (D) (1) 𝑆 → 𝑅𝑓 (2) 𝑇 → 𝑐𝑇 (3) 𝑅 → 𝑐𝑅
+
+2024-cs1-q39 | MCQ 2m | KEY D
+Q. 39 Consider the following pseudo - code. 𝐿 1 : 𝑡 1 = − 1 𝐿 2 : 𝑡 2 = 0 𝐿 3 : 𝑡 3 = 0 𝐿 4 : 𝑡 4 = 4 ∗ 𝑡 3 𝐿 5 : 𝑡 5 = 4 ∗ 𝑡 2 𝐿 6 : 𝑡 6 = 𝑡 5 ∗ 𝑀 𝐿 7 : 𝑡 7 = 𝑡 4 + 𝑡 6 𝐿 8 : 𝑡 8 = 𝑎 [ 𝑡 7 ] 𝐿 9 : if 𝑡 8 < = 𝑚𝑎𝑥 goto 𝐿 11 𝐿 10 : 𝑡 1 = 𝑡 8 𝐿 11 : 𝑡 3 = 𝑡 3 + 1 𝐿 12 : if 𝑡 3 < 𝑀 goto 𝐿 4 𝐿 13 : 𝑡 2 = 𝑡 2 + 1 𝐿 14 : if 𝑡 2 < 𝑁 goto 𝐿 3 𝐿 15 : 𝑚𝑎𝑥 = 𝑡 1 Which one of the following options CORRECTLY specifies the number of basic blocks and the number of instructions in the largest basic block, respectively ? (A) 6 and 6 (B) 6 and 7 (C) 7 and 7 (D) 7 and 6
+
+2024-cs1-q40 | MCQ 2m | KEY A
+Q. 40 Consider the following two threads T1 and T2 that update two shared variables a and b . Assume that initially a = b = 1 . Though context switching between threads can happen at any time, each statement of T1 or T2 is executed atomically without interruptio n. T1 T2 a = a + 1; b = 2 * b; b = b + 1; a = 2 * a; Which one of the following options lists all the possible combinations of values of a and b after both T1 and T2 finish execution? (A) ( a = 4, b = 4 ); ( a = 3, b = 3 ); ( a = 4, b = 3 ) (B) ( a = 3, b = 4 ); ( a = 4, b = 3 ); ( a = 3, b = 3 ) (C) ( a = 4, b = 4 ); ( a = 4, b = 3 ); ( a = 3, b = 4 ) (D) ( a = 2, b = 2 ); ( a = 2, b = 3 ); ( a = 3, b = 4 )
+
+2024-cs1-q41 | MCQ 2m | KEY D
+Q. 41 An array [82 , 101 , 90 , 11 , 111 , 75 , 33 , 131 , 44 , 93] is heapified. Which one of the following options represent s the first three elements in the heapified arra y? (A) 82 , 90 , 101 (B) 82 , 11 , 93 (C) 131 , 11 , 93 (D) 131 , 111 , 90
+
+2024-cs1-q42 | MCQ 2m | KEY A
+Q. 42 Consider the following recurrence relation: √ 𝑛 𝑇 ( √ 𝑛 ) + 𝑛 for 𝑛 ≥ 1 , 𝑇 ( 𝑛 ) = { 1 for 𝑛 = 1 . Which one of the following options is CORRECT? (A) 𝑇 ( 𝑛 ) = Θ ( 𝑛 log log 𝑛 ) (B) 𝑇 ( 𝑛 ) = Θ ( 𝑛 log 𝑛 ) 2 (C) 𝑇 ( 𝑛 ) = Θ ( 𝑛 log 𝑛 ) 2 (D) 𝑇 ( 𝑛 ) = Θ ( 𝑛 log log 𝑛 )
+
+2024-cs1-q43 | MCQ 2m | KEY A
+Q. 43 Consider a binary min - heap containing 105 distinct elements. Let 𝑘 be the index (in the underlying array) of the maximum element stored in the heap. The number of possible values of 𝑘 is (A) 53 (B) 52 (C) 27 (D) 1
+
+2024-cs1-q44 | MSQ 2m | KEY B;C;D
+Q. 44 T he symbol → indicates f unction al dependency in the context of a relational database. W hich of the following options is/are TRUE? (A) ( 𝑋 , 𝑌 ) → ( 𝑍 , 𝑊 ) implies 𝑋 → ( 𝑍 , 𝑊 ) (B) ( 𝑋 , 𝑌 ) → ( 𝑍 , 𝑊 ) implies ( 𝑋 , 𝑌 ) → 𝑍 (C) ( ( 𝑋 , 𝑌 ) → 𝑍 and 𝑊 → 𝑌 ) implies ( 𝑋 , 𝑊 ) → 𝑍 (D) ( 𝑋 → 𝑌 and 𝑌 → 𝑍 ) implies 𝑋 → 𝑍
+
+2024-cs1-q45 | MSQ 2m | KEY C
+Q. 45 Let 𝐺 be a directed graph and 𝑇 a depth first search (DFS) spanning tree in 𝐺 that is rooted at a vertex 𝑣 . Suppose 𝑇 is also a breadth first search (BFS) tree in 𝐺 , rooted at 𝑣 . Which of the following statements is/are TRUE for every such graph 𝐺 and tr ee 𝑇 ? (A) There are no back - edges in 𝐺 with respect to the tree 𝑇 (B) There are no cross - edges in 𝐺 with respect to the tree 𝑇 (C) There are no forward - edges in 𝐺 with respect to the tree 𝑇 (D) The only edges in 𝐺 are the edges in 𝑇
+
+2024-cs1-q46 | MSQ 2m | KEY B;C;D
+Q. 46 Consider the following read - write schedule 𝑆 over three transactions 𝑇 1 , 𝑇 2 , and 𝑇 3 , where t he subscripts in the schedule indicate transaction IDs : 𝑆 : 𝑟 1 ( 𝑧 ) ; 𝑤 1 ( 𝑧 ) ; 𝑟 2 ( 𝑥 ) ; 𝑟 3 ( 𝑦 ) ; 𝑤 3 ( 𝑦 ) ; 𝑟 2 ( 𝑦 ) ; 𝑤 2 ( 𝑥 ) ; 𝑤 2 ( 𝑦 ) ; Which of the following transaction schedules is/are conflict equivalent to 𝑆 ? (A) 𝑇 1 𝑇 2 𝑇 3 (B) 𝑇 1 𝑇 3 𝑇 2 (C) 𝑇 3 𝑇 2 𝑇 1 (D) 𝑇 3 𝑇 1 𝑇 2
+
+2024-cs1-q47 | MSQ 2m | KEY A;B
+Q. 47 Consider a Boolean expression given by 𝐹 ( 𝑋 , 𝑌 , 𝑍 ) = ∑ ( 3 , 5 , 6 , 7 ) . Which of the following statements is/are CORRECT? (A) 𝐹 ( 𝑋 , 𝑌 , 𝑍 ) = Π ( 0 , 1 , 2 , 4 ) (B) 𝐹 ( 𝑋 , 𝑌 , 𝑍 ) = 𝑋𝑌 + 𝑌𝑍 + 𝑋𝑍 (C) 𝐹 ( 𝑋 , 𝑌 , 𝑍 ) is independent of input 𝑌 (D) 𝐹 ( 𝑋 , 𝑌 , 𝑍 ) is independent of input 𝑋
+
+2024-cs1-q48 | MSQ 2m | KEY B;D
+Q. 4 8 Consider the following C function definition. int f (int x, int y) { for (int i=0; i<y; i++) { x=x+x+y; } return x; } Which of the following statements is/are TRUE about the above function? 20 (A) If the inputs are x =20, y =10, then the return value is greater than 2 20 (B) If the inputs are x = 20, y =20, then the return value is greater than 2 10 (C) If the inputs are x = 20, y =10, then the return value is less than 2 20 (D) If the inputs are x = 10, y =20, then the return value is greater than 2
+
+2024-cs1-q49 | MSQ 2m | KEY A
+Q. 49 Let 𝐴 be any 𝑛 × 𝑚 matrix , where 𝑚 > 𝑛 . Which of the following statements is/are TRUE about the system of linear equations 𝐴𝑥 = 0 ? (A) There exist at least 𝑚 − 𝑛 linearly independent solutions to this system There exist 𝑚 − 𝑛 linearly independent vectors such that every solution is a linear (B) combination of these vectors (C) There exists a non - zero solution in which at least 𝑚 − 𝑛 variables are 0 (D) There exists a solution in which at least 𝑛 variables are non - zero
+
+2024-cs1-q50 | MSQ 2m | KEY B;C
+∗ Q. 5 0 Consider the 5 - state DFA 𝑀 accepting the language 𝐿 ( 𝑀 ) ⊂ ( 0 + 1 ) shown ∗ ′ below. For any string 𝑤 ∈ ( 0 + 1 ) let 𝑛 0 ( 𝑤 ) be the number of 0 𝑠 in 𝑤 and 𝑛 1 ( 𝑤 ) be the number of 1′ 𝑠 in 𝑤 . Which of the following statements is/are FALSE? (A) States 2 and 4 are distinguishable in 𝑀 (B) States 3 and 4 are distinguishable in 𝑀 (C) States 2 and 5 are distinguishable in 𝑀 (D) Any string 𝑤 with 𝑛 ( 0 𝑤 ) = 𝑛 1 ( 𝑤 ) is in 𝐿 ( 𝑀 )
+
+2024-cs1-q51 | MSQ 2m | KEY B;C
+Q. 5 1 The chromatic number of a graph is the minimum number of colours used in a proper colouring of the graph. Let 𝐺 be any graph with 𝑛 vertices and chromatic number 𝑘 . Which of the following statements is/are always TRUE? (A) 𝐺 contains a complete sub graph with 𝑘 vertices (B) 𝐺 contains an independent set of size at least 𝑛 / 𝑘 (C) 𝐺 contains at least 𝑘 ( 𝑘 − 1 ) / 2 edges (D) 𝐺 contains a vertex of degree at least 𝑘
+
+2024-cs1-q52 | MSQ 2m | KEY B;D
+Q. 5 2 Consider the operators ◊ and □ defined by 𝑎 ◊ 𝑏 = 𝑎 + 2 𝑏 , 𝑎 □ 𝑏 = 𝑎𝑏 , for positive integers. Which of the following statements is/are TRUE? (A) Operator ◊ obeys the associative law (B) Operator □ obeys the associative law (C) Operator ◊ over the operator □ obeys the distributive law (D) Operator □ over the operator ◊ obeys the distributive law
+
+2024-cs1-q53 | MSQ 2m | KEY B;C
+Q .5 3 Consider two set - associative cache memory architectures: WBC , which uses the write back policy , and WTC , which uses the write through policy. Both of them use the LRU ( Least Recently Used ) block replacement policy. The cache memory is connected to the main memory. Which of the following statements is/are TRUE? (A) A read miss in WBC never evicts a dirty block A read miss in WTC never triggers a write back operation of a cache block to (B) main memory (C) A write hit in WBC can modify the value of the dirty bit of a cache block A write miss in WTC always writes the victim cache block to main memory (D) before loading the missed block to the cache
+
+2024-cs1-q54 | NAT 2m | KEY 4096 to 4096
+Q.54 Consider a 512 GB hard disk with 32 storage surfaces. There are 4096 sectors per track and each sector holds 1024 bytes of data. The number of cylind ers in the hard disk is _________
+
+2024-cs1-q55 | NAT 2m | KEY 3 to 3
+Q. 55 The baseline execution time of a program on a 2 GHz single core machine is 100 nanoseconds ( ns ). The code corresponding to 90% of the execution time can be fully parallelized. The overhead for using an additional core is 10 ns when running on a multicore system. Assume that all cores in the multicore system run their share of the parallelized code for an equal amount of time. The number of cores that minimize the execution time of the program is ________
+
+2024-cs1-q56 | NAT 2m | KEY 3.00 to 3.00
+Q. 56 A given program has 25% load/store instructions. Suppose the ideal CPI (cycles per instruction) without any memory stalls is 2. The program exhibits 2% miss rate on instruction cache and 8% miss rate on data cache. The miss penalty is 100 cycles. The speedup ( rounded off to two decimal places ) achieved with a perfect cache (i.e., with NO data or instruction cache misses) is ________ _
+
+2024-cs1-q57 | NAT 2m | KEY 14 to 14
+Q. 57 Consider the following code snippet using the fork() and wait() system calls. Assume that the code compiles and runs correctly, and that the system calls run successfully without any errors. int x = 3 ; while(x > 0) { fork(); print f(" hello"); wait( NULL ); x -- ; } The total number of times the printf statement is executed is _______
+
+2024-cs1-q58 | NAT 2m | KEY 40 to 40
+Q. 58 Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation “/N” in a prefix indicates a subne t mask with the most significant N bits set to 1. Prefix Next hop router 10.1.1.0/24 R1 10.1.1.128/25 R2 10.1.1.64/26 R3 10.1.1.192/26 R4 This router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are 10.1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205 . The number of packets forwarded via the next hop router R2 is _______
+
+2024-cs1-q59 | NAT 2m | KEY 179 to 179
+Q. 59 Let 𝐺 = ( 𝑉 , Σ , 𝑆 , 𝑃 ) be a context - free grammar in Chomsky Normal Form with Σ = { 𝑎 , 𝑏 , 𝑐 } and 𝑉 containing 10 variable symbols including the start 30 30 30 symbol 𝑆 . The string 𝑤 = 𝑎 𝑏 𝑐 is derivable from 𝑆 . The number of steps ∗ (application of rules) in the derivation 𝑆 → 𝑤 is _________
+
+2024-cs1-q60 | NAT 2m | KEY 60 to 60
+Q. 60 The number of edges present in the forest generated by the DFS traversal of a n undirected graph 𝐺 with 100 vertices is 40. The number of connected components in 𝐺 is _________
+
+2024-cs1-q61 | NAT 2m | KEY 44 to 44
+Q. 61 Consider the following two regular expressions over the alphabet { 0 , 1 } : ∗ ∗ 𝑟 = 0 + 1 ∗ ∗ 𝑠 = 0 1 + 1 0 The total number of strings of length less than or equal to 5 , which are neither in 𝑟 nor in 𝑠 , is _________
+
+2024-cs1-q62 | NAT 2m | KEY 6596 to 6596
+Q. 62 Consider a memory management system that uses a page size of 2 KB. Assume that both the physical and virtual addresses start from 0. Assume that the pages 0, 1, 2, and 3 are stored in the page frames 1, 3, 2, and 0, respectively. T he physical address ( in decimal format ) corresponding to the virtual address 2500 ( in decimal format ) is _________
+
+2024-cs1-q63 | NAT 2m | KEY 0.370 to 0.380
+Q. 63 A bag contains 10 red balls and 15 blue balls. Two balls are drawn randomly without replacement. Given that the first ball drawn is red, the probability ( rounded off to 3 decimal places ) that both balls drawn are red is ________ _
+
+2024-cs1-q64 | NAT 2m | KEY 4 to 4
+Q. 6 4 Consider a digital logic circuit consisting of three 2 - to - 1 multiplexers M1, M2, and M3 as shown below. X1 and X2 are inputs of M1 . X3 and X4 are inputs of M2 . A, B, and C are select lines of M1, M2, and M3, respectively. X 1 0 Q 1 X 2 1 M 1 S 1 0 A Y M 3 1 S 3 X 3 0 C Q 2 M 2 X 4 1 S 2 B For an instance of inputs X1=1, X2=1, X3=0 , and X4=0 , the number of combinations of A, B, C that give the output Y=1 is _________
+
+2024-cs1-q65 | NAT 2m | KEY 6 to 6
+Q. 6 5 Consider sending an IP datagram of size 1420 bytes (including 20 bytes of IP header) from a sender to a receiver over a path of two links with a router between them. The first link (sender to router) has an MTU (Maximum Transmission Unit) size of 542 bytes , while the second link (router to receiver) has an MTU size of 360 bytes. The number of fragments that would be delivered at the receiver is ________

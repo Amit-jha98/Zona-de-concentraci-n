@@ -43,7 +43,7 @@ import { CATEGORIES, STARTER_VIDEOS, getCategory } from "./data/library.js";
 import { GATE_LESSONS } from "./data/gate/index.js";
 import { api, getApiKey, setApiKey } from "./services/api.js";
 import Discovery from "./components/Discovery.jsx";
-import { GateOverview, GateLesson } from "./components/GateTrack.jsx";
+import { examAttemptsValid } from "./services/examState.js";
 import Dialog from "./components/ui/Dialog.jsx";
 import VideoCard from "./components/ui/VideoCard.jsx";
 import Downloads, { DownloadDialog } from "./components/Downloads.jsx";
@@ -51,6 +51,10 @@ import { useDownloadJobs } from "./hooks/useDownloadJobs.js";
 import "./App.css";
 
 const WatchPage = lazy(() => import("./components/WatchPage.jsx"));
+const GateOverview = lazy(() => import("./components/GateTrack.jsx").then((module) => ({ default: module.GateOverview })));
+const GateLesson = lazy(() => import("./components/GateTrack.jsx").then((module) => ({ default: module.GateLesson })));
+const MockExamHub = lazy(() => import("./components/MockExams.jsx").then((module) => ({ default: module.MockExamHub })));
+const MockExam = lazy(() => import("./components/MockExams.jsx").then((module) => ({ default: module.MockExam })));
 const defaults = { theme: "light", autoRefresh: true, refreshMinutes: 15 };
 
 export default function App() {
@@ -75,6 +79,7 @@ export default function App() {
     {},
     notesValid,
   );
+  const [examAttempts, setExamAttempts, examStorageError] = useStorage("edubrowse_v3_exams", [], examAttemptsValid);
   const [settings, setSettings] = useStorage(
     "edubrowse_v2_settings",
     defaults,
@@ -485,7 +490,7 @@ export default function App() {
             in this session.
           </div>
         )}
-        {(savedError || historyError || progressError || notesError) && (
+        {(savedError || historyError || progressError || notesError || examStorageError) && (
           <div className="connectivity-banner">
             Browser storage is unavailable or full. This session is kept in
             memory; export a backup in Settings before closing.
@@ -526,6 +531,10 @@ export default function App() {
                 onSave={onSave}
                 revision={revision}
               />
+            ) : route.path === "/mocks" ? (
+              <MockExamHub attempts={examAttempts} />
+            ) : route.path.startsWith("/mock/") ? (
+              <MockExam key={`${route.path}:${route.params.attempt || "new"}`} examId={route.path.split("/")[2]} attemptId={route.params.attempt} attempts={examAttempts} setAttempts={setExamAttempts} />
             ) : route.path === "/gate" ? (
               <GateOverview progress={progress} />
             ) : ["/saved", "/history"].includes(route.path) ? (
@@ -623,13 +632,14 @@ export default function App() {
           setSettings={setSettings}
           onClose={closeSettings}
           notify={notify}
-          backup={{ version: 1, saved, history, progress, notes, settings }}
+          backup={{ version: 2, saved, history, progress, notes, settings, attempts: examAttempts }}
           onImport={(data) => {
             setSaved(data.saved);
             setHistory(data.history);
             setProgress(data.progress);
             setNotes(data.notes);
             setSettings(data.settings);
+            if (data.attempts) setExamAttempts(data.attempts);
             setVideoCache(
               Object.fromEntries(
                 uniqueVideos([
@@ -794,7 +804,8 @@ function SettingsDialog({
         throw new Error("Backup is too large (maximum 5 MB).");
       const data = JSON.parse(await file.text());
       if (
-        data.version !== 1 ||
+        ![1, 2].includes(data.version) ||
+        data.version === 2 && !examAttemptsValid(data.attempts) ||
         !videoList(data.saved) ||
         !videoList(data.history) ||
         !progressValid(data.progress) ||
@@ -902,7 +913,7 @@ function SettingsDialog({
               className={`status-dot ${health?.downloads?.available ? "" : "paused"}`}
             />
             {health?.downloads?.available
-              ? `Download helper ready · ${health.downloads.version}`
+              ? health.downloads.mode === "cloud" ? "Cloudinary downloads ready" : `Download helper ready${health.downloads.version ? ` · ${health.downloads.version}` : ""}`
               : health?.downloads?.message || "Checking download helper…"}
           </div>
         </section>
