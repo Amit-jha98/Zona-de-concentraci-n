@@ -6,7 +6,7 @@ export async function generateGemini({
   system,
   json = false,
   maxOutputTokens = 4096,
-  model = process.env.GEMINI_MODEL || "gemini-3-flash-preview",
+  model = process.env.GEMINI_MODEL || "gemini-3.1-flash-lite",
   signal,
   fetchImpl = fetch,
   key = process.env.GEMINI_API_KEY,

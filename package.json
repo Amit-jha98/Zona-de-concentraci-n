@@ -17,11 +17,12 @@
     "syllabus:extract": "node scripts/read-syllabus.mjs",
     "format": "prettier --write api src server shared scripts tests public/sw.js vite.config.js playwright.config.js vercel.json index.html",
     "coverage:syllabus": "node scripts/coverage-report.mjs",
-    "videos:verify": "node scripts/build-topic-videos.mjs"
+    "videos:verify": "node scripts/build-topic-videos.mjs",
+    "pyq:extract": "node scripts/build-pyq-assets.mjs",
+    "pyq:build": "node scripts/build-study-content.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
-    "@vercel/blob": "^2.8.2",
     "cloudinary": "^2.11.0",
     "ffmpeg-static": "^5.3.0",
     "lucide-react": "^1.57.0",

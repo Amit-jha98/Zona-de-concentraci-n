@@ -7,8 +7,8 @@
     "api/handler.js": {
       "maxDuration": 300,
       "supportsCancellation": true,
-      "includeFiles": "{.tools/yt-dlp,node_modules/ffmpeg-static/ffmpeg}",
-      "excludeFiles": "{docs/**,tests/**,.downloads/**,.tools/*.exe,public/**}"
+      "includeFiles": "{.tools/yt-dlp,node_modules/ffmpeg-static/ffmpeg,public/gate-pyq-bank.json,public/gate-exam-notes/*.json}",
+      "excludeFiles": "{docs/**,tests/**,.downloads/**,.tools/*.exe,public/pyq/**,public/*.pdf}"
     }
   },
   "rewrites": [

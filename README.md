@@ -25,7 +25,7 @@ npm start
 
 The production server defaults to http://127.0.0.1:4173. Serving only `dist/` from an unrelated static server does **not** provide the backend features.
 
-For **Vercel**, deploy this same repository with the committed `vercel.json` and `npm run build:vercel`. Connect a **Private Vercel Blob store** and configure `CRON_SECRET`, then redeploy. The serverless API prepares files within the request, stores media and manifests in Blob, and redirects file saves to signed storage URLs. See [the exact Vercel setup and verification steps](docs/VERCEL_SETUP.md). The deployed site is not updated by editing this local workspace.
+For **Vercel**, deploy this repository with `vercel.json` and `npm run build:vercel`. Configure server-side `CLOUDINARY_URL`, `GEMINI_API_KEY` and `CRON_SECRET`, then redeploy. Downloads use authenticated Cloudinary media and private job manifests; Save file redirects to an expiring signed attachment URL. See [deployment setup](docs/VERCEL_SETUP.md). Editing this workspace does not update the deployed site.
 
 ## YouTube discovery and updates
 
@@ -47,8 +47,12 @@ YouTube determines search coverage, regional availability and result limits. Thi
 Optional configuration:
 
 ```sh
-# Copy .env.example to .env and configure values on your machine.
+# Create an ignored .env and configure values on your machine.
 YOUTUBE_API_KEY=your_server_side_key
+CLOUDINARY_URL=cloudinary://API_KEY:API_SECRET@CLOUD_NAME
+GEMINI_API_KEY=your_server_side_gemini_key
+GEMINI_MODEL=gemini-3.1-flash-lite
+GEMINI_DAILY_REQUEST_LIMIT=18
 YT_DLP_PATH=
 FFMPEG_PATH=
 ```
@@ -72,9 +76,21 @@ Do not prefix a server key with `VITE_`. A key entered in Settings is kept in se
 - An original multiple-choice practice question, correct solution and explanation.
 - A revision note, Markdown export, and saved completion state.
 
-All 146 lessons have short lecture candidates checked against YouTube metadata. Title matching is not an editorial review of complete lecture contents; availability can change. The written guides are concept notes and worked examples, not a replacement for a full textbook or a collection of official past papers.
+All 146 lessons have short lecture candidates checked against YouTube metadata. Title matching is not an editorial review of complete lectures; availability can change. The supplied papers add **455 PYQs with final-key scoring, retained original question images, topic mappings and worked explanations**. There are **7 complete original papers and 3 mixed timed mocks**, each 65 questions, 100 marks and 180 minutes. Mixed mocks do not overlap each other. Explanations are app-authored study material, not official institute solutions.
 
-A correct practice response enables completion. Missed questions appear in the revision prompt. No lessons are pre-completed. General Aptitude is not in the supplied PDF and is not presented as covered.
+A correct foundation response enables completion. Missed concept checks and topic practice appear in revision prompts. A separate **4-lesson General Aptitude supplement** supports full papers without changing the ten-section CS syllabus. All **150 lessons** have an expanded exam guide and an additional original numerical problem, making **300 original questions plus 455 PYQs**. The supplied papers directly map to 131 lesson concepts; the other concepts retain original practice rather than fabricated PYQs.
+
+Mocks autosave responses and their absolute deadline on this device. Reloading or leaving does not restart the timer. Review includes MCQ negative marks, exact-set MSQ scoring, inclusive numerical ranges, marks-to-all questions, flags, worked solutions and topic links. Study backups include the most recent 30 mock attempts.
+
+Gemini is used **only when a student sends a doubt** from a lesson or a submitted exam review. Notes, quizzes, mappings and builds make no Gemini requests. Repeated identical conversations share successful cached answers for six hours; concurrent duplicates share one request. Replies are bounded to 1536 output tokens, with per-IP/concurrency limits and a default 18-call daily budget per running server instance. Google enforces the project's actual free-tier quota; multiple Vercel instances do not share this in-memory budget or cache. No automatic retry or paid-tier fallback is used. API keys stay server-side, and chat text is excluded from study backups.
+
+Recompile all authored material **offline** after editing the source files:
+
+```sh
+npm run pyq:build
+```
+
+The authored solutions are in `scripts/author-*.mjs`, guides in `scripts/notes/`, and provenance/coverage in [the PYQ audit](docs/PYQ/README.md). Static `public/gate-pyq-bank.json`, `public/gate-exam-notes/` and `public/pyq/` must be deployed together. The ordinary app build consumes these committed files.
 
 See [the complete topic mapping](docs/syllabus-coverage.md), [the extracted PDF text](docs/syllabus-source.txt), and [the video coverage report](docs/topic-video-report.json).
 
@@ -93,7 +109,7 @@ The Download action creates a real server-side job. It chooses the best availabl
 
 The queue supports progress, cancellation, two concurrent transfers and a bounded pending queue. Completed files have a separate **Save file** action that returns actual media bytes. Job metadata survives server restarts; interrupted transfers report that they need retrying.
 
-That persistent queue is for local hosting. On Vercel, preparation is awaited before reporting completion, media and job manifests are stored in private Blob storage, and Save file redirects to a short-lived signed URL. The cloud path is bounded to 150 MiB merged media and 270 seconds of preparation, with lower per-source-stream bounds for safe merging. It does not depend on instance memory or persistent local disk. See [Vercel setup](docs/VERCEL_SETUP.md) for prerequisites, expiration and upstream limitations.
+Without Cloudinary, local hosting uses the persistent local queue. With Cloudinary configured, including on Vercel, preparation is awaited before reporting completion, and authenticated media and manifests persist in Cloudinary across server instances. The hosted path is bounded to **100 MiB** merged media and 270 seconds, with a 75 MiB bound per source stream. See [Vercel setup](docs/VERCEL_SETUP.md) for credentials, retention and upstream limits.
 
 Files live in ignored `.downloads/`, with a 24-hour cleanup policy. Transfers have a 30-minute timeout, a source-duration limit and a per-stream file-size limit. Private, restricted or rate-limited videos can fail; errors remain visible. Download only videos you own or have permission to save. YouTube’s own offline viewing is available through its supported services.
 
@@ -105,7 +121,7 @@ Embedding uses YouTube’s privacy-enhanced domain. It does **not** promise to r
 
 Saved videos, watch history, personal notes, quiz answers and progress are browser-local. Settings provides JSON backup and restore. Existing legacy bookmarks, history and timestamped notes migrate without deleting the originals. The old pre-populated completion checklist is not treated as evidence that the new lessons were completed.
 
-The production build includes an installable web-app manifest and a service worker that caches the written study app, topic-video metadata and syllabus. After initial loading, written lessons can be reopened offline. YouTube playback, live updates and downloads still need a connection and the app server. API responses, credentials and downloaded media are never stored in the service-worker cache.
+The production build includes an installable app manifest and service worker. The question bank and syllabus are cached; visited exam guides and question images are cached on demand. After they load once, those materials can reopen offline. Live video, downloads and Gemini need a connection. API responses, credentials, chat responses and downloaded media never enter the service-worker cache.
 
 ## Checks
 

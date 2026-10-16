@@ -378,13 +378,14 @@ test("GATE lesson quiz explains mistakes, persists success, and advances progres
   await expect(
     page.getByRole("button", { name: "Complete & continue" }),
   ).toBeDisabled();
-  await page.getByRole("radio").nth(0).check();
-  await page.getByRole("button", { name: "Check answer" }).click();
-  await expect(page.getByRole("status")).toContainText("Not quite");
-  await page.getByRole("button", { name: "Try again", exact: true }).click();
-  await page.getByRole("radio").nth(1).check();
-  await page.getByRole("button", { name: "Check answer" }).click();
-  await expect(page.getByRole("status")).toContainText("Correct");
+  const foundation = page.locator(".practice-content > .quiz-card").first();
+  await foundation.getByRole("radio").nth(0).check();
+  await foundation.getByRole("button", { name: "Check answer" }).click();
+  await expect(foundation.getByRole("status")).toContainText("Not quite");
+  await foundation.getByRole("button", { name: "Try again", exact: true }).click();
+  await foundation.getByRole("radio").nth(1).check();
+  await foundation.getByRole("button", { name: "Check answer" }).click();
+  await expect(foundation.getByRole("status")).toContainText("Correct");
   await page.getByRole("button", { name: "Complete & continue" }).click();
   await expect(page).toHaveURL(/first-order-logic/);
   await page.goto("/#/gate");
@@ -551,14 +552,14 @@ test("an unconfigured Vercel deployment explains the storage setup instead of of
           available: false,
           mode: "cloud",
           message:
-            "Connect a Private Vercel Blob store to this project, then redeploy.",
+            "Downloads need Cloudinary storage. Configure CLOUDINARY_URL on the server, then redeploy.",
         },
       }),
     }),
   );
   await page.goto("/#/watch/XB4MIexjvY0");
   await page.getByRole("button", { name: "Download", exact: true }).click();
-  await expect(page.getByRole("dialog")).toContainText("Private Vercel Blob");
+  await expect(page.getByRole("dialog")).toContainText("Cloudinary storage");
   await expect(
     page.getByRole("button", { name: "Download video", exact: true }),
   ).toBeDisabled();

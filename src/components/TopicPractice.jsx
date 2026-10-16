@@ -12,7 +12,8 @@ export default function TopicPractice({ lesson, saved = {}, onAnswer }) {
     {loading && <p role="status"><LoaderCircle size={17} className="spin" />Loading topic questions…</p>}
     {error && <div className="notice error" role="alert"><p>{error}</p><button className="button" onClick={retry}>Retry question bank</button></div>}
     {bank && !questions.length && <p className="notice">No question in the supplied 2023–2026 papers is directly mapped to this concept. Use the exam-level practice below; this topic still belongs to the syllabus.</p>}
-    {visible.map((question) => <PracticeQuestion key={question.id} question={question} saved={saved[question.id]} onAnswer={(answer) => onAnswer(question.id, answer)} />)}
-    {lesson.advancedQuiz?.length > 0 && <section className="advanced-practice" aria-label="Exam-level concept questions"><h2>Exam-level concept practice</h2><p className="field-help">Additional original questions that develop the techniques used in past papers.</p>{lesson.advancedQuiz.map((question) => <PracticeQuestion key={question.id} question={question} saved={saved[question.id]} onAnswer={(answer) => onAnswer(question.id, answer)} />)}</section>}
+    {visible.map((question) => <PracticeQuestion key={question.id} question={question} saved={saved[question.id]} tutorLessonId={lesson.id} onAnswer={(answer) => onAnswer(question.id, answer)} />)}
+    {lesson.advancedQuiz?.length > 0 && <section className="advanced-practice" aria-label="Exam-level concept questions"><h2>Exam-level concept practice</h2><p className="field-help">Additional original questions that develop the techniques used in past papers.</p>{lesson.advancedQuiz.map((question) => <PracticeQuestion key={question.id} question={question} saved={saved[question.id]} tutorLessonId={lesson.id} onAnswer={(answer) => onAnswer(question.id, answer)} />)}</section>}
+    {questions.length > 0 && <p className="source-caption">Questions and final answer keys are from the respective GATE papers. Worked explanations are study material authored for this app.</p>}
   </section>;
 }

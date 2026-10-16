@@ -31,6 +31,7 @@ import { navigate } from "../hooks/useRoute.js";
 import { downloadText } from "../services/storage.js";
 import { useVideos } from "../hooks/useVideos.js";
 import { useTopicCandidates } from "../hooks/useTopicCandidates.js";
+import { useExamNotes } from "../hooks/useExamNotes.js";
 import { uniqueVideos } from "../../shared/video.js";
 import VideoCard, { SkeletonGrid } from "./ui/VideoCard.jsx";
 import TopicPractice from "./TopicPractice.jsx";
@@ -47,7 +48,7 @@ export function GateOverview({ progress }) {
   const next =
     GATE_LESSONS.find((l) => !progress[l.id]?.completed) || GATE_LESSONS[0];
   const revision = GATE_LESSONS.filter((l) =>
-    Object.values(progress[l.id]?.answers || {}).some(
+    [...Object.values(progress[l.id]?.answers || {}), ...Object.values(progress[l.id]?.pyqAnswers || {})].some(
       (a) => a.correct === false,
     ),
   );
@@ -281,7 +282,8 @@ export function GateLesson({
   onSave,
   revision,
 }) {
-  const lesson = LESSON_BY_ID[id];
+  const enrichment = useExamNotes(LESSON_BY_ID[id] ? id : null);
+  const lesson = LESSON_BY_ID[id] ? { ...LESSON_BY_ID[id], ...enrichment.value } : null;
   const [tab, setTab] = useState(
     ["notes", "videos", "practice"].includes(requestedTab)
       ? requestedTab
@@ -448,6 +450,7 @@ export function GateLesson({
                   </span>
                   <button
                     className="text-button"
+                    disabled={!enrichment.value}
                     onClick={() =>
                       downloadText(`${id}-notes.md`, lessonMarkdown(lesson))
                     }
@@ -483,6 +486,8 @@ export function GateLesson({
                   <span>Further reading</span>
                   <a href={section.reference.url} target="_blank" rel="noreferrer">{section.reference.label}<ExternalLink size={14} /></a>
                 </div>
+                {enrichment.loading && <p role="status">Loading exam guide…</p>}
+                {enrichment.error && <div className="notice" role="alert"><p>{enrichment.error}</p><button className="button" onClick={enrichment.retry}>Retry exam guide</button></div>}
                 {lesson.examGuide?.length > 0 && <section className="lesson-exam-guide"><h2>Prepare at GATE depth</h2>{lesson.examGuide.map((item) => <section key={item.title}><h3>{item.title}</h3><RichText>{item.body}</RichText></section>)}</section>}
                 <TopicTutor key={lesson.id} lessonId={lesson.id} title={lesson.title} />
                 <label className="personal-note-label">
@@ -681,7 +686,7 @@ export function GateLesson({
                     disabled={!answeredCorrectly}
                     onClick={complete}
                   >
-                    {index === GATE_LESSONS.length - 1
+                    {index === EXAM_LESSONS.length - 1
                       ? "Mark complete"
                       : "Complete & continue"}
                     <ArrowRight size={16} />

@@ -38,6 +38,20 @@
 .question-meta { display: flex; gap: 14px; align-items: center; justify-content: space-between; margin-bottom: 22px; font-size: 12px; }
 .question-meta > span { color: var(--secondary); }
 .question-stem { font-size: 16px; margin-bottom: 24px; }
+.source-answer-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.source-answer-options .quiz-option { justify-content: center; min-height: 52px; padding: 10px; }
+.question-text-alternative { font-size: 13px; color: var(--secondary); margin: 12px 0 24px; }
+.question-text-alternative summary { cursor: pointer; padding: 8px 0; }
+.question-text-alternative > ol { padding-left: 24px; }
+.exam-topic-review { margin: 22px 0; border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; }
+.exam-topic-review summary { cursor: pointer; font-weight: 600; }
+.exam-topic-review > p { color: var(--secondary); font-size: 13px; }
+.topic-review-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 24px; }
+.topic-review-list > button { display: flex; gap: 12px; align-items: center; justify-content: space-between; padding: 12px 0; text-align: left; border-bottom: 1px solid var(--line); font-size: 13px; }
+.topic-review-list span { flex: 1; }
+.topic-review-list small { display: block; color: var(--secondary); margin-top: 4px; }
+.topic-review-list strong { flex-shrink: 0; font-variant-numeric: tabular-nums; font-size: 12px; }
+@media (max-width: 650px) { .topic-review-list { grid-template-columns: 1fr; } }
 .question-source { border: 1px solid var(--line); border-radius: 7px; margin: 16px 0 24px; }
 .question-source > summary { padding: 12px 16px; color: var(--secondary); font-size: 12px; cursor: pointer; }
 .question-source-images { background: #fff; border-radius: 0 0 7px 7px; overflow: hidden; }
@@ -51,6 +65,8 @@
 .pyq-card .quiz-options .rich-text { flex: 1; }
 .quiz-option .rich-text p { margin: 0; }
 .pyq-card > fieldset, .exam-question > fieldset { border: 0; padding: 0; margin: 0 0 22px; min-width: 0; }
+.pyq-card > form > fieldset { border: 0; padding: 0; margin: 0 0 22px; min-width: 0; }
+.quiz-card legend.visually-hidden, .exam-question legend.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .numerical-answer { margin: 20px 0; }
 .numerical-answer label { display: block; font-weight: 600; margin-bottom: 10px; }
 .numerical-answer > div { display: flex; gap: 8px; max-width: 360px; }

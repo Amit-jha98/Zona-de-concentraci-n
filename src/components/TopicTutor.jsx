@@ -50,13 +50,13 @@ export default function TopicTutor({ lessonId, title, questionId, studentAnswer,
       <button className="icon-button" aria-label="Close topic tutor" onClick={() => { request.current?.abort(); setBusy(false); setOpen(false); }}><X size={18} /></button></div>
     <div className="tutor-messages" aria-live="polite" aria-busy={busy}>
       {!messages.length && <div className="tutor-welcome"><p>{questionId ? "Ask for a different derivation, a hint about your mistake, or a simpler example." : "Work through a difficult step, test an idea, or ask for another example from this lesson."}</p>
-        <div className="tutor-prompts">{(questionId ? ["Explain the solution step by step", "What mistake might lead to my answer?"] : ["Explain the main idea with an example", "Give me a GATE-level practice problem"]).map((text) => <button className="button" key={text} onClick={() => send(text)}>{text}</button>)}</div></div>}
+        <div className="tutor-prompts">{(questionId ? ["Explain the step I missed", "What mistake might lead to my answer?"] : ["Clarify the key assumption", "Explain the worked example"]).map((text) => <button className="button" key={text} onClick={() => { setDraft(text); input.current?.focus(); }}>{text}</button>)}</div></div>}
       {messages.map((message, index) => <div key={index} className={`tutor-message ${message.role}`}><span>{message.role === "user" ? "You" : "Gemini tutor"}</span><RichText>{message.content}</RichText></div>)}
       {busy && <p className="tutor-thinking" role="status"><LoaderCircle size={16} className="spin" />Working through your question…</p>}
       {error && <div className="notice error" role="alert"><p>{error}</p><button className="text-button" onClick={retry}><RotateCcw size={15} />Edit and retry</button></div>}
       <div ref={end} />
     </div>
     <form className="tutor-composer" onSubmit={(event) => { event.preventDefault(); send(draft); }}><label className="visually-hidden" htmlFor={`tutor-${questionId || lessonId}`}>Your question about {title}</label><textarea ref={input} id={`tutor-${questionId || lessonId}`} value={draft} maxLength={3000} rows={2} placeholder="Ask a question about this topic…" onChange={(event) => setDraft(event.target.value)} disabled={busy} /><button className="button button-dark" type="submit" aria-label="Send question" disabled={busy || !draft.trim()}><ArrowUp size={19} /></button></form>
-    <p className="tutor-disclosure">Questions are sent to Google Gemini. AI explanations can be mistaken; compare with the worked solution and official key.</p>
+    <p className="tutor-disclosure">Gemini is used only when you send a doubt. Notes, quizzes and worked solutions use no AI quota. Answers are limited and repeated doubts may use a cached response. Check AI explanations against the worked solution and final key.</p>
   </section>;
 }

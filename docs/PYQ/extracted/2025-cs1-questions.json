@@ -13,7 +13,7 @@
       {
         "src": "/pyq/2025-cs1/q01-1.webp",
         "width": 1072,
-        "height": 1110,
+        "height": 568,
         "page": 1
       }
     ]
@@ -32,7 +32,7 @@
       {
         "src": "/pyq/2025-cs1/q02-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 592,
         "page": 2
       }
     ]
@@ -51,7 +51,7 @@
       {
         "src": "/pyq/2025-cs1/q03-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 570,
         "page": 3
       }
     ]
@@ -70,7 +70,7 @@
       {
         "src": "/pyq/2025-cs1/q04-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 902,
         "page": 4
       }
     ]
@@ -89,7 +89,7 @@
       {
         "src": "/pyq/2025-cs1/q05-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 1005,
         "page": 5
       }
     ]
@@ -108,7 +108,7 @@
       {
         "src": "/pyq/2025-cs1/q06-1.webp",
         "width": 1072,
-        "height": 1069,
+        "height": 738,
         "page": 6
       }
     ]
@@ -127,7 +127,7 @@
       {
         "src": "/pyq/2025-cs1/q07-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 895,
         "page": 7
       }
     ]
@@ -146,7 +146,7 @@
       {
         "src": "/pyq/2025-cs1/q08-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 617,
         "page": 8
       }
     ]
@@ -165,7 +165,7 @@
       {
         "src": "/pyq/2025-cs1/q09-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 1105,
         "page": 9
       }
     ]
@@ -184,7 +184,7 @@
       {
         "src": "/pyq/2025-cs1/q10-1.webp",
         "width": 1072,
-        "height": 670,
+        "height": 669,
         "page": 10
       }
     ]
@@ -203,13 +203,13 @@
       {
         "src": "/pyq/2025-cs1/q11-1.webp",
         "width": 1072,
-        "height": 511,
+        "height": 512,
         "page": 10
       },
       {
         "src": "/pyq/2025-cs1/q11-2.webp",
         "width": 1072,
-        "height": 1257,
+        "height": 215,
         "page": 11
       }
     ]
@@ -228,7 +228,7 @@
       {
         "src": "/pyq/2025-cs1/q12-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 427,
         "page": 12
       }
     ]
@@ -247,7 +247,7 @@
       {
         "src": "/pyq/2025-cs1/q13-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 452,
         "page": 13
       }
     ]
@@ -266,7 +266,7 @@
       {
         "src": "/pyq/2025-cs1/q14-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 501,
         "page": 14
       }
     ]
@@ -285,7 +285,7 @@
       {
         "src": "/pyq/2025-cs1/q15-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 503,
         "page": 15
       }
     ]
@@ -304,7 +304,7 @@
       {
         "src": "/pyq/2025-cs1/q16-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 710,
         "page": 16
       }
     ]
@@ -323,7 +323,7 @@
       {
         "src": "/pyq/2025-cs1/q17-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 531,
         "page": 17
       }
     ]
@@ -342,7 +342,7 @@
       {
         "src": "/pyq/2025-cs1/q18-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 505,
         "page": 18
       }
     ]
@@ -361,7 +361,7 @@
       {
         "src": "/pyq/2025-cs1/q19-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 669,
         "page": 19
       }
     ]
@@ -375,12 +375,12 @@
     "type": "MCQ",
     "officialKey": "A",
     "marks": 1,
-    "prompt": "Q.20 𝑛 𝑇 ( 𝑛 ) = 2 𝑇 ( 𝑛 − 1 ) + 𝑛 2 for 𝑛 > 0 , 𝑇 ( 0 ) = 1 . Which ONE of the following options is CORRECT? 2 𝑛 (A) 𝑇 ( 𝑛 ) = Θ ( 𝑛 2 ) 𝑛 (B) 𝑇 ( 𝑛 ) = Θ ( 𝑛 2 ) 2 𝑛 (C) 𝑇 ( 𝑛 ) = Θ ( ( log 𝑛 ) 2 ) 𝑛 (D) 𝑇 ( 𝑛 ) = Θ ( 4 )",
+    "prompt": "Consider the following recurrence relation: Q.20 𝑛 𝑇 ( 𝑛 ) = 2 𝑇 ( 𝑛 − 1 ) + 𝑛 2 for 𝑛 > 0 , 𝑇 ( 0 ) = 1 . Which ONE of the following options is CORRECT? 2 𝑛 (A) 𝑇 ( 𝑛 ) = Θ ( 𝑛 2 ) 𝑛 (B) 𝑇 ( 𝑛 ) = Θ ( 𝑛 2 ) 2 𝑛 (C) 𝑇 ( 𝑛 ) = Θ ( ( log 𝑛 ) 2 ) 𝑛 (D) 𝑇 ( 𝑛 ) = Θ ( 4 )",
     "images": [
       {
         "src": "/pyq/2025-cs1/q20-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 500,
         "page": 20
       }
     ]
@@ -399,7 +399,7 @@
       {
         "src": "/pyq/2025-cs1/q21-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 623,
         "page": 21
       }
     ]
@@ -418,7 +418,7 @@
       {
         "src": "/pyq/2025-cs1/q22-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 503,
         "page": 22
       }
     ]
@@ -432,12 +432,12 @@
     "type": "MSQ",
     "officialKey": "A;D",
     "marks": 1,
-    "prompt": "Q.23 real - valued constant . Which of the following option(s) is/are CORRECT? 𝑥 + 𝑘𝑦 = 1 𝑘𝑥 + 𝑦 = − 1 (A) There is exactly one value of 𝑘 for which the above system of equations has no solution. (B) There exist an infinite number of values of 𝑘 for which the system of equations has no solution. (C) There exists exactly one value of 𝑘 for which the system of equations has exactly one so l ution . (D) There exists exactly one value of 𝑘 for which the system of equations has an infinite number of solutions.",
+    "prompt": "Consider the given system of linear equations for variables 𝑥 and 𝑦 , where 𝑘 is a Q.23 real - valued constant . Which of the following option(s) is/are CORRECT? 𝑥 + 𝑘𝑦 = 1 𝑘𝑥 + 𝑦 = − 1 (A) There is exactly one value of 𝑘 for which the above system of equations has no solution. (B) There exist an infinite number of values of 𝑘 for which the system of equations has no solution. (C) There exists exactly one value of 𝑘 for which the system of equations has exactly one so l ution . (D) There exists exactly one value of 𝑘 for which the system of equations has an infinite number of solutions.",
     "images": [
       {
         "src": "/pyq/2025-cs1/q23-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 574,
         "page": 23
       }
     ]
@@ -456,7 +456,7 @@
       {
         "src": "/pyq/2025-cs1/q24-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 480,
         "page": 24
       }
     ]
@@ -475,7 +475,7 @@
       {
         "src": "/pyq/2025-cs1/q25-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 453,
         "page": 25
       }
     ]
@@ -494,7 +494,7 @@
       {
         "src": "/pyq/2025-cs1/q26-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 453,
         "page": 26
       }
     ]
@@ -513,7 +513,7 @@
       {
         "src": "/pyq/2025-cs1/q27-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 870,
         "page": 27
       }
     ]
@@ -532,7 +532,7 @@
       {
         "src": "/pyq/2025-cs1/q28-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 455,
         "page": 28
       }
     ]
@@ -551,7 +551,7 @@
       {
         "src": "/pyq/2025-cs1/q29-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 592,
         "page": 29
       }
     ]
@@ -570,7 +570,7 @@
       {
         "src": "/pyq/2025-cs1/q30-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 227,
         "page": 30
       }
     ]
@@ -589,7 +589,7 @@
       {
         "src": "/pyq/2025-cs1/q31-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 291,
         "page": 31
       }
     ]
@@ -608,7 +608,7 @@
       {
         "src": "/pyq/2025-cs1/q32-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 158,
         "page": 32
       }
     ]
@@ -627,7 +627,7 @@
       {
         "src": "/pyq/2025-cs1/q33-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 399,
         "page": 33
       }
     ]
@@ -646,7 +646,7 @@
       {
         "src": "/pyq/2025-cs1/q34-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 449,
         "page": 34
       }
     ]
@@ -665,7 +665,7 @@
       {
         "src": "/pyq/2025-cs1/q35-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 248,
         "page": 35
       }
     ]
@@ -684,7 +684,7 @@
       {
         "src": "/pyq/2025-cs1/q36-1.webp",
         "width": 1072,
-        "height": 1151,
+        "height": 529,
         "page": 36
       }
     ]
@@ -703,7 +703,7 @@
       {
         "src": "/pyq/2025-cs1/q37-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 523,
         "page": 37
       }
     ]
@@ -722,7 +722,7 @@
       {
         "src": "/pyq/2025-cs1/q38-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 777,
         "page": 38
       }
     ]
@@ -741,7 +741,7 @@
       {
         "src": "/pyq/2025-cs1/q39-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 601,
         "page": 39
       }
     ]
@@ -760,7 +760,7 @@
       {
         "src": "/pyq/2025-cs1/q40-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 705,
         "page": 40
       }
     ]
@@ -774,12 +774,12 @@
     "type": "MCQ",
     "officialKey": "D",
     "marks": 2,
-    "prompt": "Q.41 1 1 𝐴 = [ ] 1 − 1 13 What are the eigenvalues of the matrix 𝐴 ? (A) 1 , − 1 (B) 2 √ 2 , − 2 √ 2 (C) 4 √ 2 , − 4 √ 2 (D) 64 √ 2 , − 64 √ 2",
+    "prompt": "Let 𝐴 be a 2 × 2 matrix as given . Q.41 1 1 𝐴 = [ ] 1 − 1 13 What are the eigenvalues of the matrix 𝐴 ? (A) 1 , − 1 (B) 2 √ 2 , − 2 √ 2 (C) 4 √ 2 , − 4 √ 2 (D) 64 √ 2 , − 64 √ 2",
     "images": [
       {
         "src": "/pyq/2025-cs1/q41-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 442,
         "page": 41
       }
     ]
@@ -798,7 +798,7 @@
       {
         "src": "/pyq/2025-cs1/q42-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 603,
         "page": 42
       }
     ]
@@ -817,7 +817,7 @@
       {
         "src": "/pyq/2025-cs1/q43-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 531,
         "page": 43
       }
     ]
@@ -836,7 +836,7 @@
       {
         "src": "/pyq/2025-cs1/q44-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 570,
         "page": 44
       }
     ]
@@ -855,7 +855,7 @@
       {
         "src": "/pyq/2025-cs1/q45-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 596,
         "page": 45
       }
     ]
@@ -874,7 +874,7 @@
       {
         "src": "/pyq/2025-cs1/q46-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 503,
         "page": 46
       }
     ]
@@ -893,7 +893,7 @@
       {
         "src": "/pyq/2025-cs1/q47-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 527,
         "page": 47
       }
     ]
@@ -912,7 +912,7 @@
       {
         "src": "/pyq/2025-cs1/q48-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 584,
         "page": 48
       }
     ]
@@ -931,7 +931,7 @@
       {
         "src": "/pyq/2025-cs1/q49-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 507,
         "page": 49
       }
     ]
@@ -950,7 +950,7 @@
       {
         "src": "/pyq/2025-cs1/q50-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 654,
         "page": 50
       }
     ]
@@ -969,7 +969,7 @@
       {
         "src": "/pyq/2025-cs1/q51-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 276,
         "page": 51
       }
     ]
@@ -988,7 +988,7 @@
       {
         "src": "/pyq/2025-cs1/q52-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 712,
         "page": 52
       }
     ]
@@ -1007,7 +1007,7 @@
       {
         "src": "/pyq/2025-cs1/q53-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 880,
         "page": 53
       }
     ]
@@ -1026,7 +1026,7 @@
       {
         "src": "/pyq/2025-cs1/q54-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 462,
         "page": 54
       }
     ]
@@ -1045,7 +1045,7 @@
       {
         "src": "/pyq/2025-cs1/q55-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 813,
         "page": 55
       }
     ]
@@ -1064,7 +1064,7 @@
       {
         "src": "/pyq/2025-cs1/q56-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 251,
         "page": 56
       }
     ]
@@ -1083,7 +1083,7 @@
       {
         "src": "/pyq/2025-cs1/q57-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 560,
         "page": 57
       }
     ]
@@ -1102,7 +1102,7 @@
       {
         "src": "/pyq/2025-cs1/q58-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 226,
         "page": 58
       }
     ]
@@ -1121,7 +1121,7 @@
       {
         "src": "/pyq/2025-cs1/q59-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 650,
         "page": 59
       }
     ]
@@ -1140,7 +1140,7 @@
       {
         "src": "/pyq/2025-cs1/q60-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 602,
         "page": 60
       }
     ]
@@ -1159,7 +1159,7 @@
       {
         "src": "/pyq/2025-cs1/q61-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 449,
         "page": 61
       }
     ]
@@ -1178,7 +1178,7 @@
       {
         "src": "/pyq/2025-cs1/q62-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 1096,
         "page": 62
       }
     ]
@@ -1197,7 +1197,7 @@
       {
         "src": "/pyq/2025-cs1/q63-1.webp",
         "width": 1072,
-        "height": 1151,
+        "height": 721,
         "page": 63
       }
     ]
@@ -1216,7 +1216,7 @@
       {
         "src": "/pyq/2025-cs1/q64-1.webp",
         "width": 1072,
-        "height": 507,
+        "height": 446,
         "page": 64
       }
     ]
@@ -1235,7 +1235,7 @@
       {
         "src": "/pyq/2025-cs1/q65-1.webp",
         "width": 1072,
-        "height": 673,
+        "height": 274,
         "page": 64
       }
     ]

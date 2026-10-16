@@ -1,0 +1,13 @@
+{
+  "2023-cs-q19": {
+    "lessonIds": ["nfa", "lexical-analysis"],
+    "options": ["Automaton (A) in the original diagram.", "Automaton (B) in the original diagram.", "Automaton (C) in the original diagram.", "Automaton (D) in the original diagram."],
+    "solution": "1. The required language is $\\text{letter}(\\text{letter}\\mid\\text{digit})^*$. A valid identifier must consume one letter before accepting; after that, it may consume any sequence of letters and digits.\n2. In **(A)**, the lower $\\epsilon$ arrow goes from the start state directly to the accepting state. It bypasses the compulsory first letter. The machine therefore accepts the empty string and a digit-only string such as `1`, which are invalid identifiers.\n3. In **(B)**, after the first letter the machine chooses a letters-only loop or a digits-only loop. There is no transition between these branches. Consequently it cannot accept a mixed suffix such as the suffix `1a` in `a1a`.\n4. In **(C)**, the first transition consumes a letter and reaches an accepting state. From there, epsilon branches choose a letter or a digit; the rightmost state returns by epsilon to the accepting state. Each repetition may choose either branch independently. This accepts exactly the required language, including a single letter and arbitrary mixed suffixes.\n5. In **(D)**, the feedback cycle consumes a letter followed by a digit as a pair. After the compulsory initial letter, strings such as `aa` and `a1` cannot finish in the accepting state.\n6. Therefore **(C)** is the only correct automaton.",
+    "reviewNote": "Checked all transition arrows directly against the retained original source image; corrected the direction of option A's epsilon edge."
+  },
+  "2023-cs-q21": {
+    "prompt": "The output of a 2-input multiplexer is connected back to input 0, as shown in the original circuit diagram. Input 1 is an external data input and S is the select input. Match the functional equivalence of this circuit to one of the following options.",
+    "lessonIds": ["latches-flipflops", "multiplexers-decoders"],
+    "reviewNote": "Checked the feedback connection and select input against the original circuit image."
+  }
+}

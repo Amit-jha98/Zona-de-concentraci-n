@@ -39,7 +39,7 @@ for (const [path, expected] of [
       path,
       status: response.status,
       ...(path === "/api/health"
-        ? { hosting: data.hosting, downloads: data.downloads }
+        ? { hosting: data.hosting, downloads: data.downloads, tutor: data.tutor }
         : { code: data.code }),
     }),
   );

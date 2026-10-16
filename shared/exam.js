@@ -1,4 +1,5 @@
 export function officialAnswer(type, key) {
+  key = String(key).replace(/-\s+(?=\d)/g, "-");
   if (/MTA/i.test(key)) return { kind: "all" };
   if (type === "NAT") {
     const ranges = [...key.matchAll(/(-?\d+(?:\.\d+)?)\s+to\s+(-?\d+(?:\.\d+)?)/gi)]

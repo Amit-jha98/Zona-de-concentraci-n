@@ -1,0 +1,2936 @@
+[
+  {
+    "id": "2023-cs-q1",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 1,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "We reached the station late, and _______ missed the train.",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q01-1.webp",
+        "width": 1072,
+        "height": 427,
+        "page": 1
+      }
+    ],
+    "options": [
+      "near",
+      "nearly",
+      "utterly",
+      "mostly"
+    ],
+    "lessonIds": [
+      "ga-verbal"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. The blank modifies the verb ‘missed’, so it needs an adverb.\n2. ‘Nearly missed’ means almost missed: despite arriving late, they just caught the train. ‘Near’ cannot serve this role here.\n3. ‘Utterly’ and ‘mostly’ do not express this narrowly avoided event. Choose **B, nearly**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Verbal ability, grammar and comprehension",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q2",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 2,
+    "type": "MCQ",
+    "officialKey": "MTA",
+    "marks": 1,
+    "prompt": "Kind : _______ : : Often : Frequently\n\n(By word meaning)",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q02-1.webp",
+        "width": 1072,
+        "height": 543,
+        "page": 1
+      }
+    ],
+    "options": [
+      "Mean",
+      "Type",
+      "Cruel",
+      "Kindly"
+    ],
+    "lessonIds": [
+      "ga-verbal"
+    ],
+    "accepted": {
+      "kind": "all"
+    },
+    "solvedAnswer": [],
+    "solution": "1. ‘Often’ and ‘frequently’ are synonyms, so the first pair should have the same relationship.\n2. ‘Kind’ can mean a category, in which case ‘type’ is a synonym; as an adjective it can mean considerate. The options make the intended sense disputable.\n3. The final official key designates this question **marks to all**. The app awards its one mark to every attempt, including an unanswered response, rather than imposing a single option.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Verbal ability, grammar and comprehension",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q3",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 3,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "A series of natural numbers $F_1, F_2, F_3, F_4, F_5, F_6, F_7, \\dots$ obeys $F_{n+1} = F_n + F_{n-1}$ for all integers $n \\ge 2$. \n\nIf $F_6 = 37$, and $F_7 = 60$, then what is $F_1$ ?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q03-1.webp",
+        "width": 1072,
+        "height": 569,
+        "page": 2
+      }
+    ],
+    "options": [
+      "4",
+      "5",
+      "8",
+      "9"
+    ],
+    "lessonIds": [
+      "ga-quantitative"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. Run the recurrence backwards using F(n−1)=F(n+1)−F(n).\n2. F5=60−37=23; F4=37−23=14; F3=23−14=9; F2=14−9=5.\n3. F1=9−5=**4**, option A. Forward checking gives 4,5,9,14,23,37,60.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Quantitative aptitude and data interpretation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q4",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 4,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "A survey for a certain year found that 90% of pregnant women received medical care at least once before giving birth. Of these women, 60% received medical care from doctors, while 40% received medical care from other health care providers.\n\nGiven this information, which one of the following statements can be inferred with certainty?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q04-1.webp",
+        "width": 1072,
+        "height": 647,
+        "page": 3
+      }
+    ],
+    "options": [
+      "More than half of the pregnant women received medical care at least once from a doctor.",
+      "Less than half of the pregnant women received medical care at least once from a doctor.",
+      "More than half of the pregnant women received medical care at most once from a doctor.",
+      "Less than half of the pregnant women received medical care at most once from a doctor."
+    ],
+    "lessonIds": [
+      "ga-quantitative"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. Take 100 pregnant women as the population. Exactly 90 received care at least once.\n2. Of these 90, 60% received care from doctors: 0.60×90=54. Thus 54% of the entire population did so.\n3. This exceeds one half, giving **A**. The information does not count the number of visits and therefore cannot establish an ‘at most once’ assertion.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Quantitative aptitude and data interpretation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q5",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 5,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "Looking at the surface of a smooth 3-dimensional object from the outside, which one of the following options is TRUE?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q05-1.webp",
+        "width": 1072,
+        "height": 521,
+        "page": 3
+      }
+    ],
+    "options": [
+      "The surface of the object must be concave everywhere.",
+      "The surface of the object must be convex everywhere.",
+      "The surface of the object may be concave in some places and convex in other places.",
+      "The object can have edges, but no corners."
+    ],
+    "lessonIds": [
+      "ga-spatial"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. Smoothness excludes sharp changes of surface normal, such as a cube’s edges and corners. It does not require one sign of curvature everywhere.\n2. A smooth object with a rounded indentation has concave portions viewed from outside and convex portions elsewhere.\n3. Therefore **C** is possible. A and B make unjustified universal claims; D conflicts with a smooth surface.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Spatial and visual reasoning",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q6",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 6,
+    "type": "MCQ",
+    "officialKey": "D",
+    "marks": 2,
+    "prompt": "The country of Zombieland is in distress since more than 75% of its working population is suffering from serious health issues. Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population was one of the leading causes of their health issues. As one of the measures to address the problem, the Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work.\n\nBased only on the information provided above, which one of the following statements can be logically inferred with certainty?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q06-1.webp",
+        "width": 1072,
+        "height": 776,
+        "page": 4
+      }
+    ],
+    "options": [
+      "All the working population of Zombieland will henceforth ride bicycles to work.",
+      "Riding bicycles will ensure that all of the working population of Zombieland is free of health issues.",
+      "The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory.",
+      "The Government of Zombieland believes that riding bicycles is a form of physical exercise."
+    ],
+    "lessonIds": [
+      "ga-reasoning"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      3
+    ],
+    "solution": "1. The stated cause is insufficient exercise, and the chosen response rewards cycling to work.\n2. For that intervention to address the stated cause, the government must regard cycling as exercise. This supports **D**.\n3. An incentive guarantees neither universal adoption nor perfect health. The passage also does not say experts recommended a mandate, eliminating A, B and C.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Analytical and logical reasoning",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q7",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 7,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "For t>0, f(t)=0.01t² and g(t)=4t. (i) For some t>0, g(t)>f(t). (ii) There exists T such that f(t)>g(t) for every t>T. Which statements are true?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q07-1.webp",
+        "width": 1072,
+        "height": 803,
+        "page": 5
+      }
+    ],
+    "options": [
+      "only (i) is correct",
+      "only (ii) is correct",
+      "both (i) and (ii) are correct",
+      "neither (i) nor (ii) is correct"
+    ],
+    "lessonIds": [
+      "ga-quantitative"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. Compare 4t with 0.01t² for t>0. Dividing by t gives 4 versus 0.01t.\n2. For 0<t<400, g(t)>f(t), so statement (i) is true; for example t=1 gives 4>0.01.\n3. For every t>400, f(t)>g(t). Taking T=400 proves (ii). Both statements hold: **C**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Quantitative aptitude and data interpretation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q8",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 8,
+    "type": "MCQ",
+    "officialKey": "D",
+    "marks": 2,
+    "prompt": "Which one of the following sentence sequences creates a coherent narrative?\n(i) Once on the terrace, on her way to her small room in the corner, she notices the man right away.\n(ii) She begins to pant by the time she has climbed all the stairs.\n(iii) Mina has bought vegetables and rice at the market, so her bags are heavy.\n(iv) He was leaning against the parapet, watching the traffic below.",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q08-1.webp",
+        "width": 1072,
+        "height": 598,
+        "page": 6
+      }
+    ],
+    "options": [
+      "(i), (ii), (iv), (iii)",
+      "(ii), (iii), (i), (iv)",
+      "(iv), (ii), (i), (iii)",
+      "(iii), (ii), (i), (iv)"
+    ],
+    "lessonIds": [
+      "ga-verbal"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      3
+    ],
+    "solution": "1. Sentence (iii) introduces Mina’s shopping and the reason her bags are heavy.\n2. Sentence (ii) follows as she climbs the stairs; (i) places her on the terrace and introduces the man she notices.\n3. Sentence (iv) uses ‘He’ to describe that already introduced man. The coherent order is **(iii),(ii),(i),(iv)**, option D.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Verbal ability, grammar and comprehension",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q9",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 9,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 2,
+    "prompt": "$f(x)$ and $g(y)$ are functions of $x$ and $y$, respectively, and $f(x) = g(y)$ for all real values of $x$ and $y$. Which one of the following options is necessarily TRUE for all $x$ and $y$?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q09-1.webp",
+        "width": 1072,
+        "height": 532,
+        "page": 6
+      }
+    ],
+    "options": [
+      "$f(x) = 0$ and $g(y) = 0$",
+      "$f(x) = g(y) = \\text{constant}$",
+      "$f(x) \\neq \\text{constant}$ and $g(y) \\neq \\text{constant}$",
+      "$f(x) + g(y) = f(x) - g(y)$"
+    ],
+    "lessonIds": [
+      "ga-reasoning"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Fix any y=y0. The hypothesis says f(x)=g(y0) for every x, so f must be constant.\n2. Similarly fix x=x0 to show g(y)=f(x0) for every y. Their constants are equal.\n3. The common constant need not be zero. Thus **B**, and neither A nor the equality in D is forced.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Analytical and logical reasoning",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q10",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 10,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Which one of the options best describes the transformation of the 2-dimensional figure **P** to **Q**, and then to **R**, as shown?\n\nSee the original diagram below.",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q10-1.webp",
+        "width": 1072,
+        "height": 966,
+        "page": 7
+      }
+    ],
+    "options": [
+      "Operation 1: A clockwise rotation by $90^\\circ$ about an axis perpendicular to the plane of the figure\nOperation 2: A reflection along a horizontal line",
+      "Operation 1: A counter clockwise rotation by $90^\\circ$ about an axis perpendicular to the plane of the figure\nOperation 2: A reflection along a horizontal line",
+      "Operation 1: A clockwise rotation by $90^\\circ$ about an axis perpendicular to the plane of the figure\nOperation 2: A reflection along a vertical line",
+      "Operation 1: A counter clockwise rotation by $180^\\circ$ about an axis perpendicular to the plane of the figure\nOperation 2: A reflection along a vertical line"
+    ],
+    "lessonIds": [
+      "ga-spatial"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. Follow a distinctive part of P, rather than the outline alone: its orientation in Q corresponds to a **90° clockwise rotation** in the plane.\n2. Comparing Q with R, left/right placement is retained while top/bottom placement is reversed. That is reflection across a **horizontal** line.\n3. These are the two operations in **A**. A reflection reverses handedness; a rotation preserves it.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Spatial and visual reasoning",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q11",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 11,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Consider the following statements regarding the front-end and back-end of a compiler.\n\n$S_1$: The front-end includes phases that are independent of the target hardware.\n$S_2$: The back-end includes phases that are specific to the target hardware.\n$S_3$: The back-end includes phases that are specific to the programming language used in the source code.\n\nIdentify the CORRECT option.",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q11-1.webp",
+        "width": 1102,
+        "height": 740,
+        "page": 8
+      }
+    ],
+    "options": [
+      "Only $S_1$ is TRUE.",
+      "Only $S_1$ and $S_2$ are TRUE.",
+      "Only $S_1$, $S_2$, and $S_3$ are all TRUE.",
+      "Only $S_1$ and $S_3$ are TRUE."
+    ],
+    "lessonIds": [
+      "lexical-analysis"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Lexical, syntax and semantic analysis concern the source language and produce an intermediate representation; they need not know the target instruction set. S1 is true.\n2. Register allocation, instruction selection and target-code emission depend on the target architecture. S2 is true.\n3. The intermediate representation decouples the back end from the source language, so S3 is false. Choose **B**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Lexical analysis",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q12",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 12,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Which one of the following sequences when stored in an array at locations $A[1], \\dots, A[10]$ forms a max-heap?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q12-1.webp",
+        "width": 1102,
+        "height": 586,
+        "page": 9
+      }
+    ],
+    "options": [
+      "23, 17, 10, 6, 13, 14, 1, 5, 7, 12",
+      "23, 17, 14, 7, 13, 10, 1, 5, 6, 12",
+      "23, 17, 14, 6, 13, 10, 1, 5, 7, 15",
+      "23, 14, 17, 1, 10, 13, 16, 12, 7, 5"
+    ],
+    "lessonIds": [
+      "binary-heaps"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. A one-based max-heap requires A[i]≥A[2i] and A[i]≥A[2i+1] whenever those children exist.\n2. B satisfies every comparison: 23≥17,14; 17≥7,13; 14≥10,1; 7≥5,6; 13≥12.\n3. A fails at 10<14 and 6<7; C at 6<7 or 13<15; D at 1<12. Only **B** is a max-heap.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Binary heaps and priority queues",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q13",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 13,
+    "type": "MCQ",
+    "officialKey": "D",
+    "marks": 1,
+    "prompt": "Let SLLdel be a function that deletes a node in a singly-linked list given a pointer to the node and a pointer to the head of the list. Similarly, let DLLdel be another function that deletes a node in a doubly-linked list given a pointer to the node and a pointer to the head of the list. Let $n$ denote the number of nodes in each of the linked lists. Which one of the following choices is TRUE about the worst-case time complexity of SLLdel and DLLdel?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q13-1.webp",
+        "width": 1102,
+        "height": 711,
+        "page": 10
+      }
+    ],
+    "options": [
+      "SLLdel is $O(1)$ and DLLdel is $O(n)$ ",
+      "Both SLLdel and DLLdel are $O(\\log(n))$ ",
+      "Both SLLdel and DLLdel are $O(1)$ ",
+      "SLLdel is $O(n)$ and DLLdel is $O(1)$ "
+    ],
+    "lessonIds": [
+      "linked-lists"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      3
+    ],
+    "solution": "1. Deleting the tail of a singly linked list requires finding its predecessor from the head. A pointer to the tail alone cannot perform the usual successor-copy trick. Worst case: O(n).\n2. A doubly linked node has a predecessor pointer, so its neighbours and the head can be updated in O(1), including boundary cases.\n3. Hence **D**: SLLdel O(n), DLLdel O(1).",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Singly and doubly linked lists",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q14",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 14,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "Consider the Deterministic Finite-state Automaton (DFA) $\\mathcal{A}$ shown below. The DFA runs on the alphabet $\\{0, 1\\}$, and has the set of states $\\{s, p, q, r\\}$, with $s$ being the start state and $p$ being the only final state.\n\n<img src=\"https://example.com/dfa_diagram.png\" alt=\"DFA with states s, p, q, r. s is start, p is final. s --1--> p, s --0--> r, p --0--> p, p --1--> q, q --1--> p, q --0--> r, r --0,1--> r.\">\n\nWhich one of the following regular expressions correctly describes the language accepted by $\\mathcal{A}$?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q14-1.webp",
+        "width": 1102,
+        "height": 904,
+        "page": 11
+      }
+    ],
+    "options": [
+      "$1(0^*11)^*$",
+      "$0(0+1)^*$",
+      "$1(0+11)^*$",
+      "$1(110^*)^*$"
+    ],
+    "lessonIds": [
+      "regular-expressions"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. The first symbol must be 1 to move from start s to accepting p; a first 0 goes to the rejecting sink r.\n2. At p, a 0 loops to p. A 1 moves to q, where only another 1 returns to p; 0 instead goes to r.\n3. Every returning segment is therefore 0 or 11. The accepted expression is **1(0+11)***, option C.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Regular expressions and closure",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q15",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 15,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "The Lucas sequence $L_n$ is defined by the recurrence relation:\n$$L_n = L_{n-1} + L_{n-2}, \\quad \\text{for } n \\ge 3,$$\nwith $L_1 = 1$ and $L_2 = 3$.\n\nWhich one of the options given is TRUE?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q15-1.webp",
+        "width": 1102,
+        "height": 883,
+        "page": 12
+      }
+    ],
+    "options": [
+      "$L_n = \\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n + \\left(\\frac{1 - \\sqrt{5}}{2}\\right)^n$",
+      "$L_n = \\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n - \\left(\\frac{1 - \\sqrt{5}}{3}\\right)^n$",
+      "$L_n = \\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n + \\left(\\frac{1 - \\sqrt{5}}{3}\\right)^n$",
+      "$L_n = \\left(\\frac{1 + \\sqrt{5}}{2}\\right)^n - \\left(\\frac{1 - \\sqrt{5}}{2}\\right)^n$"
+    ],
+    "lessonIds": [
+      "recurrences"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. The characteristic equation is r²−r−1=0, with roots α=(1+√5)/2 and β=(1−√5)/2.\n2. The sequence αⁿ+βⁿ obeys the recurrence since each root satisfies r²=r+1. At n=1 it is α+β=1; at n=2 it is (α+β)²−2αβ=3.\n3. These initial values uniquely determine the recurrence, proving **A**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Recurrence relations",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q16",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 16,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Which one of the options given below refers to the degree (or arity) of a relation in relational database systems?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q16-1.webp",
+        "width": 1102,
+        "height": 585,
+        "page": 13
+      }
+    ],
+    "options": [
+      "Number of attributes of its relation schema.",
+      "Number of tuples stored in the relation.",
+      "Number of entries in the relation.",
+      "Number of distinct domains of its relation schema."
+    ],
+    "lessonIds": [
+      "relational-model"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. The degree or arity is the number of named attributes in a relation schema, independent of its current contents.\n2. The number of rows is its cardinality. The number of cells depends on both degree and cardinality.\n3. Several attributes may share a domain, so counting distinct domains also gives the wrong definition. Choose **A**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Relational model, keys and integrity constraints",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q17",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 17,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Suppose two hosts are connected by a point-to-point link and they are configured to use Stop-and-Wait protocol for reliable data transfer. Identify in which one of the following scenarios, the utilization of the link is the lowest.",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q17-1.webp",
+        "width": 1102,
+        "height": 611,
+        "page": 14
+      }
+    ],
+    "options": [
+      "Longer link length and lower transmission rate",
+      "Longer link length and higher transmission rate",
+      "Shorter link length and lower transmission rate",
+      "Shorter link length and higher transmission rate"
+    ],
+    "lessonIds": [
+      "flow-control-arq"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. With negligible ACK transmission time, stop-and-wait utilization is Ttx/(Ttx+2Tprop)=1/(1+2Tprop/Ttx).\n2. A longer link increases propagation time. A higher transmission rate reduces the time to send a fixed packet. Both increase the ratio Tprop/Ttx.\n3. Utilization is therefore lowest for a **longer link and higher rate**, option B.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Link flow control and ARQ",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q18",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 18,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Let \n$$A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 4 & 1 & 2 & 3 \\\\ 3 & 4 & 1 & 2 \\\\ 2 & 3 & 4 & 1 \\end{bmatrix}$$\nand \n$$B = \\begin{bmatrix} 3 & 4 & 1 & 2 \\\\ 4 & 1 & 2 & 3 \\\\ 1 & 2 & 3 & 4 \\\\ 2 & 3 & 4 & 1 \\end{bmatrix}.$$\nLet $\\det(A)$ and $\\det(B)$ denote the determinants of the matrices $A$ and $B$, respectively. Which one of the options given below is TRUE?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q18-1.webp",
+        "width": 1102,
+        "height": 907,
+        "page": 15
+      }
+    ],
+    "options": [
+      "$\\det(A) = \\det(B)$",
+      "$\\det(B) = -\\det(A)$",
+      "$\\det(A) = 0$",
+      "$\\det(AB) = \\det(A) + \\det(B)$"
+    ],
+    "lessonIds": [
+      "determinants"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. B is obtained from A by exchanging rows 1 and 3; the other rows are unchanged.\n2. A single row swap reverses the determinant’s sign, so det(B)=−det(A).\n3. A is nonsingular (its determinant is −160), so the equality in A and the zero claim in C do not apply. Determinants of products multiply rather than add. Choose **B**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Determinants and invertibility",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q19",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 19,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "Consider the following definition of a lexical token **id** for an identifier in a programming language, using extended regular expressions:\n\n$$\\begin{aligned} \\text{letter} &\\to [A-Za-z] \\\\ \\text{digit} &\\to [0-9] \\\\ \\text{id} &\\to \\text{letter (letter | digit)}^* \\end{aligned}$$\n\nWhich one of the following Non-deterministic Finite-state Automata with $\\epsilon$-transitions accepts the set of valid identifiers? (A double-circle denotes a final state)",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q19-1.webp",
+        "width": 1102,
+        "height": 1067,
+        "page": 16
+      }
+    ],
+    "options": [
+      "Automaton (A) showing a start state with a 'letter' transition to a final state, which has a self-loop for 'letter' and 'digit' and an epsilon transition back to the start state.",
+      "Automaton (B) showing a start state with a 'letter' transition to a final state, which then branches via epsilon transitions to two separate final states, each with its own self-loop (one for 'letter', one for 'digit').",
+      "Automaton (C) showing a start state with a 'letter' transition to a final state, followed by a standard Thompson construction for the Kleene star of the union (letter | digit).",
+      "Automaton (D) showing a start state with a 'letter' transition to a final state, which then has a 'letter' transition to a state, followed by a 'digit' transition to another state, with an epsilon transition back to the first final state."
+    ],
+    "lessonIds": [
+      "nfa",
+      "lexical-analysis"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. A valid identifier must consume one letter, then any mixture of letters and digits. A permits an epsilon bypass of that first letter, accepting an empty or digit-only string.\n2. B chooses a letters-only or digits-only continuation and cannot generate an arbitrarily mixed suffix. D forces paired letter/digit cycles.\n3. C alone permits independent letter/digit choices after the compulsory first letter. Choose **C**.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Nondeterminism and subset construction",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q20",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 20,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "An algorithm has to store several keys generated by an adversary in a hash table. The adversary is malicious who tries to maximize the number of collisions. Let $k$ be the number of keys, $m$ be the number of slots in the hash table, and $k > m$. Which one of the following is the best hashing strategy to counteract the adversary?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q20-1.webp",
+        "width": 1102,
+        "height": 686,
+        "page": 18
+      }
+    ],
+    "options": [
+      "Division method, i.e., use the hash function $h(k) = k \\pmod m$.",
+      "Multiplication method, i.e., use the hash function $h(k) = \\lfloor m(kA - \\lfloor kA \\rfloor) \\rfloor$, where $A$ is a carefully chosen constant.",
+      "Universal hashing method.",
+      "If $k$ is a prime number, use Division method. Otherwise, use Multiplication method."
+    ],
+    "lessonIds": [
+      "hashing"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. A deterministic publicly known division or multiplication hash can be defeated by choosing many keys with the same hash value. Choosing constants carefully does not remove that adversarial knowledge.\n2. Universal hashing selects a function randomly from a family whose collision probability for any two distinct fixed keys is bounded.\n3. This makes collision guarantees independent of the adversary’s fixed key set. Choose **C**; it does not promise zero collisions when k>m.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Hashing and collision resolution",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q21",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 21,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "The output of a 2-input multiplexer is connected back to one of its inputs as shown in the figure.\n\n\n\nSee the original diagram below.\n\n\n\nMatch the functional equivalence of this circuit to one of the following options.",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q21-1.webp",
+        "width": 1102,
+        "height": 846,
+        "page": 19
+      }
+    ],
+    "options": [
+      "D Flip-flop",
+      "D Latch",
+      "Half-adder",
+      "Demultiplexer"
+    ],
+    "lessonIds": [
+      "latches-flipflops",
+      "multiplexers-decoders"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Let D be input 1. The feedback connection puts Q on input 0, giving Q(next)=S·D+¬S·Q.\n2. When S=1, the output follows D. When S=0, the feedback retains the previous output.\n3. This is a level-sensitive **D latch**, option B. An edge-triggered flip-flop requires edge-sensitive behaviour absent from this circuit.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Latches and flip-flops",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q22",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 22,
+    "type": "MSQ",
+    "officialKey": "B, C, D",
+    "marks": 1,
+    "prompt": "Which one or more of the following need to be saved on a context switch from one thread (T1) of a process to another thread (T2) of the same process?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q22-1.webp",
+        "width": 1102,
+        "height": 586,
+        "page": 20
+      }
+    ],
+    "options": [
+      "Page table base register",
+      "Stack pointer",
+      "Program counter",
+      "General purpose registers"
+    ],
+    "lessonIds": [
+      "threads"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      2,
+      3
+    ],
+    "solution": "1. Threads of the same process share its virtual address space, so the page-table base need not change. A is not required here.\n2. Each thread has its own current instruction, stack and register values. Save/restore the program counter, stack pointer and general-purpose registers to resume the correct execution.\n3. Therefore **B,C,D** are required.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Threads and multithreading",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q23",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 23,
+    "type": "MSQ",
+    "officialKey": "C, D",
+    "marks": 1,
+    "prompt": "Which one or more of the following options guarantee that a computer system will transition from user mode to kernel mode?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q23-1.webp",
+        "width": 1102,
+        "height": 581,
+        "page": 21
+      }
+    ],
+    "options": [
+      "Function Call",
+      "malloc Call",
+      "Page Fault",
+      "System Call"
+    ],
+    "lessonIds": [
+      "system-calls"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2,
+      3
+    ],
+    "solution": "1. A normal function call can stay entirely in user mode. malloc may satisfy a request from an existing user-space allocation, so neither A nor B guarantees a transition.\n2. A page fault is an exception handled by the kernel. A system call explicitly invokes a kernel service through the protected entry mechanism.\n3. Thus **C,D** guarantee user-to-kernel transition.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "System calls and execution modes",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q24",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 24,
+    "type": "MSQ",
+    "officialKey": "A, C, D",
+    "marks": 1,
+    "prompt": "Which of the following statements is/are CORRECT?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q24-1.webp",
+        "width": 1102,
+        "height": 563,
+        "page": 22
+      }
+    ],
+    "options": [
+      "The intersection of two regular languages is regular.",
+      "The intersection of two context-free languages is context-free.",
+      "The intersection of two recursive languages is recursive.",
+      "The intersection of two recursively enumerable languages is recursively enumerable."
+    ],
+    "lessonIds": [
+      "cfl-pumping-closure"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      2,
+      3
+    ],
+    "solution": "1. Regular languages are closed under intersection by the product-DFA construction: A is true.\n2. CFLs are not: intersect {aⁿbⁿcᵐ} with {aᵐbⁿcⁿ} to obtain non-CFL {aⁿbⁿcⁿ}. B is false.\n3. For recursive languages, run both terminating deciders. For recognizable languages, dovetail both recognizers and accept when both accept. Hence C and D are true. Select **A,C,D**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "CFL pumping lemma and closure properties",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q25",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 25,
+    "type": "MSQ",
+    "officialKey": "A, C",
+    "marks": 1,
+    "prompt": "Which of the following statements is/are INCORRECT about the OSPF (Open Shortest Path First) routing protocol used in the Internet?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q25-1.webp",
+        "width": 1102,
+        "height": 586,
+        "page": 23
+      }
+    ],
+    "options": [
+      "OSPF implements Bellman-Ford algorithm to find shortest paths.",
+      "OSPF uses Dijkstra’s shortest path algorithm to implement least-cost path routing.",
+      "OSPF is used as an inter-domain routing protocol.",
+      "OSPF implements hierarchical routing."
+    ],
+    "lessonIds": [
+      "routing"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      2
+    ],
+    "solution": "1. OSPF is an intra-domain link-state protocol. Its shortest-path-first calculation uses Dijkstra’s algorithm, so B is correct and A is incorrect.\n2. Inter-domain routing is performed by protocols such as BGP, making C incorrect.\n3. OSPF supports hierarchical areas with a backbone, so D is correct. The question asks for **incorrect** statements: **A,C**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Distance-vector and link-state routing",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q26",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 26,
+    "type": "MSQ",
+    "officialKey": "B, C",
+    "marks": 1,
+    "prompt": "Geetha has a conjecture about integers, which is of the form \n$$\\forall x (P(x) \\implies \\exists y Q(x, y)),$$\nwhere $P$ is a statement about integers, and $Q$ is a statement about pairs of integers. Which of the following (one or more) option(s) would imply Geetha’s conjecture?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q26-1.webp",
+        "width": 1102,
+        "height": 729,
+        "page": 24
+      }
+    ],
+    "options": [
+      "$\\exists x (P(x) \\land \\forall y Q(x, y))$",
+      "$\\forall x \\forall y Q(x, y)$",
+      "$\\exists y \\forall x (P(x) \\implies Q(x, y))$",
+      "$\\exists x (P(x) \\land \\exists y Q(x, y))$"
+    ],
+    "lessonIds": [
+      "first-order-logic"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      2
+    ],
+    "solution": "1. The target requires a witness y for each x that satisfies P(x).\n2. B makes Q(x,y) true for all x,y; over the stated nonempty integer domain any y is a witness. C supplies one common y for all relevant x, which is stronger than allowing a separate witness for each x.\n3. A and D concern only some x and say nothing about other x satisfying P. Therefore select **B,C**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "First-order logic and quantifiers",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q27",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 27,
+    "type": "MSQ",
+    "officialKey": "A, C, D or C, D",
+    "marks": 1,
+    "prompt": "Which one or more of the following CPU scheduling algorithms can potentially cause starvation?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q27-1.webp",
+        "width": 1102,
+        "height": 581,
+        "page": 25
+      }
+    ],
+    "options": [
+      "First-in First-Out",
+      "Round Robin",
+      "Priority Scheduling",
+      "Shortest Job First"
+    ],
+    "lessonIds": [
+      "cpu-scheduling"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      2,
+      3
+    ],
+    "solution": "1. Priority scheduling may indefinitely postpone a low-priority job when higher-priority jobs keep arriving. SJF may similarly postpone a long job. Thus C and D can starve.\n2. Round robin repeatedly grants each ready process a finite time quantum, preventing this form of starvation. Ordinary FIFO with finite bursts also eventually serves each queued job.\n3. The final key accepts **C,D** as well as **A,C,D**. The app preserves both accepted sets rather than silently choosing one interpretation.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "CPU scheduling and performance metrics",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q28",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 28,
+    "type": "MSQ",
+    "officialKey": "B, D",
+    "marks": 1,
+    "prompt": "For f(x)=x³+15x²−33x−36, which statements about existence of a local maximum and local minimum are true?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q28-1.webp",
+        "width": 1102,
+        "height": 676,
+        "page": 26
+      }
+    ],
+    "options": [
+      "$f(x)$ does not have a local maximum.",
+      "$f(x)$ has a local maximum.",
+      "$f(x)$ does not have a local minimum.",
+      "$f(x)$ has a local minimum."
+    ],
+    "lessonIds": [
+      "maxima-minima"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      3
+    ],
+    "solution": "1. For f(x)=x³+15x²−33x−36, f′(x)=3(x−1)(x+11), so stationary points are −11 and 1.\n2. f″(x)=6x+30. At −11 it is −36<0, giving a local maximum; at 1 it is 36>0, giving a local minimum.\n3. Therefore both existence assertions **B,D** are true; A and C are false.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Maxima and minima",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q29",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 29,
+    "type": "MSQ",
+    "officialKey": "A, C",
+    "marks": 1,
+    "prompt": "Let f(n)=n and g(n)=n² for positive natural numbers. Which of f∈O(g), f∈Ω(g), f∈o(g), and f∈Θ(g) are true?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q29-1.webp",
+        "width": 1102,
+        "height": 586,
+        "page": 27
+      }
+    ],
+    "options": [
+      "$f \\in O(g)$",
+      "$f \\in \\Omega(g)$",
+      "$f \\in o(g)$",
+      "$f \\in \\Theta(g)$"
+    ],
+    "lessonIds": [
+      "asymptotic-analysis"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      2
+    ],
+    "solution": "1. f(n)=n and g(n)=n² give f(n)/g(n)=1/n→0.\n2. This proves f∈o(g), and little-o also implies f∈O(g).\n3. A lower bound f∈Ω(g) fails because no positive constant times n² stays below n eventually. Consequently f∈Θ(g) also fails. Select **A,C**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Asymptotic time and space complexity",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q30",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 30,
+    "type": "NAT",
+    "officialKey": "2 to 2 OR 4 to 4",
+    "marks": 1,
+    "prompt": "Let A be the adjacency matrix of the shown five-vertex graph, with self-loops at vertices 3 and 4. What is the sum of its five eigenvalues, including multiplicities?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q30-1.webp",
+        "width": 1102,
+        "height": 632,
+        "page": 28
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "eigenvalues"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    "solvedAnswer": "2",
+    "solution": "1. The sum of all eigenvalues, counted with algebraic multiplicity, equals trace(A), the sum of diagonal entries. Edges between different vertices do not affect this sum.\n2. The diagram has self-loops at vertices 3 and 4. If a loop contributes 1 to the adjacency diagonal, trace(A)=2.\n3. The convention counting an undirected loop twice gives 4 instead. The final key explicitly accepts **2 or 4**; the app retains both ranges.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Eigenvalues and eigenvectors",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q31",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 31,
+    "type": "NAT",
+    "officialKey": "0 to 0",
+    "marks": 1,
+    "prompt": "Evaluate $\\int_{-3}^{3}\\int_{-2}^{2}\\int_{-1}^{1}(4xy^2-z^3)\\,dz\\,dy\\,dx$ to the nearest integer.",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q31-1.webp",
+        "width": 1102,
+        "height": 366,
+        "page": 29
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "integration"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": "0",
+    "solution": "1. The integrand 4xy²−z³ is integrated over symmetric bounds x∈[−3,3], y∈[−2,2], z∈[−1,1].\n2. The first term is odd in x, so its integral over [−3,3] is zero for every fixed y,z. The second is odd in z and integrates to zero over [−1,1].\n3. Linearity gives a total integral of **0**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Definite and indefinite integration",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q32",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 32,
+    "type": "NAT",
+    "officialKey": "110 to 110",
+    "marks": 1,
+    "prompt": "A particular number is written as $132$ in radix-4 representation. The same number in radix-5 representation is _______.",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q32-1.webp",
+        "width": 1102,
+        "height": 270,
+        "page": 30
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "number-systems"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          110,
+          110
+        ]
+      ]
+    },
+    "solvedAnswer": "110",
+    "solution": "1. Expand the radix-4 number: (132)₄=1×4²+3×4+2=30 in decimal.\n2. Repeated division by 5 gives 30=6×5+0 and 6=1×5+1, then 1=0×5+1.\n3. Read remainders backwards: **110** in radix 5. Check: 1×25+1×5+0=30.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Binary, octal, hexadecimal and signed representations",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q33",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 33,
+    "type": "NAT",
+    "officialKey": "2040 to 2040",
+    "marks": 1,
+    "prompt": "Consider a 3-stage pipelined processor having a delay of 10 ns (nanoseconds), 20 ns, and 14 ns, for the first, second, and the third stages, respectively. Assume that there is no other delay and the processor does not suffer from any pipeline hazards. Also assume that one instruction is fetched every cycle. The total execution time for executing 100 instructions on this processor is ___________ ns.",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q33-1.webp",
+        "width": 1102,
+        "height": 396,
+        "page": 31
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "instruction-pipelining"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          2040,
+          2040
+        ]
+      ]
+    },
+    "solvedAnswer": "2040",
+    "solution": "1. With no register overhead, the clock period is the slowest stage: max(10,20,14)=20 ns.\n2. An initially empty k-stage pipeline needs n+k−1 cycles to complete n instructions without hazards. Here that is 100+3−1=102 cycles.\n3. Total time is 102×20=**2040 ns**; using the sum of stage delays as the clock period would be incorrect.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Instruction pipelining and throughput",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q34",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 34,
+    "type": "NAT",
+    "officialKey": "10.2 to 10.2",
+    "marks": 1,
+    "prompt": "A keyboard connected to a computer is used at a rate of 1 keystroke per second. The computer system polls the keyboard every 10 ms (milli seconds) to check for a keystroke and consumes 100 $\\mu$s (micro seconds) for each poll. If it is determined after polling that a key has been pressed, the system consumes an additional 200 $\\mu$s to process the keystroke. Let $T_1$ denote the fraction of a second spent in polling and processing a keystroke.\n\nIn an alternative implementation, the system uses interrupts instead of polling. An interrupt is raised for every keystroke. It takes a total of 1 ms for servicing an interrupt and processing a keystroke. Let $T_2$ denote the fraction of a second spent in servicing the interrupt and processing a keystroke.\n\nThe ratio $\\frac{T_1}{T_2}$ is ___________. (Rounded off to one decimal place)",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q34-1.webp",
+        "width": 1102,
+        "height": 575,
+        "page": 32
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "interrupts-dma"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          10.2,
+          10.2
+        ]
+      ]
+    },
+    "solvedAnswer": "10.2",
+    "solution": "1. Polling every 10 ms makes 100 polls per second. At 100 μs each, this consumes 10,000 μs=10 ms. Processing the one keystroke adds 0.2 ms.\n2. Thus T1=0.0102 seconds per second. Interrupt handling consumes 1 ms per keystroke, so T2=0.001.\n3. Their ratio is 0.0102/0.001=**10.2**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "I/O interfaces, interrupts and DMA",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q35",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 35,
+    "type": "NAT",
+    "officialKey": "7 to 7",
+    "marks": 1,
+    "prompt": "The integer value printed by the ANSI-C program given below is __________.\n\n```c\n#include<stdio.h>\nint funcp(){\n    static int x = 1;\n    x++;\n    return x;\n}\nint main(){\n    int x,y;\n    x = funcp();\n    y = funcp()+x;\n    printf(\"%d\\n\", (x+y));\n    return 0;\n}\n```",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q35-1.webp",
+        "width": 1102,
+        "height": 674,
+        "page": 33
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "c-memory"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          7,
+          7
+        ]
+      ]
+    },
+    "solvedAnswer": "7",
+    "solution": "1. The static local x is initialized once to 1 and retains its value between calls.\n2. The first funcp call increments it to 2, so main’s x=2. The second increments the static variable to 3, making y=3+2=5.\n3. main prints x+y=2+5=**7**. The two variables named x have different scope.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "C functions, scope and dynamic memory",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q36",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 36,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Consider the following program:\n\n```c\nint main()      int f1()        int f2(int X)           int f3()\n{               {               {                       {\n    f1();           return(1);      f3();                   return(5);\n    f2(2);      }                   if (X==1)           }\n    f3();                               return f1();\n    return(0);                      else\n}                                       return (X*f2(X-1));\n                                }\n```\n\nWhich one of the following options represents the activation tree corresponding to the main function?\n\n(A) See the original diagram below.\n(B) See the original diagram below.\n(C) See the original diagram below.\n(D) See the original diagram below.",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q36-1.webp",
+        "width": 1102,
+        "height": 1099,
+        "page": 35
+      }
+    ],
+    "options": [
+      "Option (A)",
+      "Option (B)",
+      "Option (C)",
+      "Option (D)"
+    ],
+    "lessonIds": [
+      "runtime-environments"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. main calls f1, then f2(2), then f3: these are its direct children in chronological order.\n2. f2(2) first calls f3, then recursively f2(1). That recursive call first invokes f3 and then f1 before returning.\n3. The resulting nested call tree has main children f1,f2,f3; the middle f2 has f3,f2 children, and the inner f2 has f3,f1 children. This is **A**.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Runtime environments and activation records",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q37",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 37,
+    "type": "MCQ",
+    "officialKey": "D",
+    "marks": 2,
+    "prompt": "Consider the control flow graph shown. \n\n- B1: `i = m - 1`, `j = n`, `a = 10`\n- B2: `i = i + 1`, `j = j - 1`\n- B3: `a = 20`\n- B4: `i = a + 1`\n\nEdges: B1 → B2, B2 → B3, B2 → B4, B3 → B4, B4 → B2. \n\nWhich one of the following choices correctly lists the set of live variables at the exit point of each basic block?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q37-1.webp",
+        "width": 1102,
+        "height": 1064,
+        "page": 37
+      }
+    ],
+    "options": [
+      "B1: {} , B2: { a } , B3: { a } , B4: { a }",
+      "B1: { i , j } , B2: { a } , B3: { a } , B4: { i }",
+      "B1: { a , i , j } , B2: { a , i , j } , B3: { a , i } , B4: { a }",
+      "B1: { a , i , j } , B2: { a , j } , B3: { a , j } , B4: { a , i , j }"
+    ],
+    "lessonIds": [
+      "liveness-analysis"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      3
+    ],
+    "solution": "1. Use OUT(B)=union of successor IN sets, and IN(B)=USE(B)∪(OUT(B)−DEF(B)). The back edge B4→B2 matters even though B4 also reaches EXIT.\n2. B2 uses old i,j and defines i,j; B3 defines a; B4 uses a and defines i. Iterating to a fixed point gives IN(B2)={a,i,j} and IN(B4)={a,j}.\n3. Consequently OUT(B1)={a,i,j}, OUT(B2)={a,j}, OUT(B3)={a,j}, OUT(B4)={a,i,j}. Choose **D**.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Liveness analysis and dead code",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q38",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 38,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Consider the two functions `incr` and `decr` shown below:\n\n```c\nincr(){ wait(s); X = X+1; signal(s); }\ndecr(){ wait(s); X = X-1; signal(s); }\n```\n\nThere are 5 threads each invoking `incr` once, and 3 threads each invoking `decr` once, on the same shared variable `X`. The initial value of `X` is 10. \n\n- I-1: `s` is a binary semaphore initialized to 1.\n- I-2: `s` is a counting semaphore initialized to 2.\n\nLet V1, V2 be the values of `X` at the end of execution. Which one of the following choices corresponds to the minimum possible values of V1, V2, respectively?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q38-1.webp",
+        "width": 1102,
+        "height": 1060,
+        "page": 39
+      }
+    ],
+    "options": [
+      "15, 7",
+      "7, 7",
+      "12, 7",
+      "12, 8"
+    ],
+    "lessonIds": [
+      "semaphores",
+      "race-conditions"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. A binary semaphore serializes all updates, so V1=10+5−3=12.\n2. With two permits, let one decr thread read 10 and pause before writing. Using the other permit, run all five incr threads to completion, temporarily taking X to 15. Then resume the paused decr: its stale write sets X to 9.\n3. Run the remaining two decrements serially to obtain 8 then **7**. Three decrements cannot reduce the starting value by more than three; this schedule achieves that bound. Therefore **(12,7), C**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Mutexes, semaphores and classical synchronization",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q39",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 39,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 2,
+    "prompt": "For the grammar S→aSb | X and X→aX | Xb | a | b, with start S, which statement describes its language?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q39-1.webp",
+        "width": 1102,
+        "height": 755,
+        "page": 40
+      }
+    ],
+    "options": [
+      "$(a+b)^*$",
+      "$a^*(a+b)b^*$",
+      "$a^*b^*(a+b)$",
+      "The language is not regular"
+    ],
+    "lessonIds": [
+      "context-free-grammars"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. X→aX adds leading a’s; X→Xb adds trailing b’s; termination X→a or X→b leaves one central symbol. Hence L(X)=a*(a+b)b*. It cannot generate a b followed later by an a.\n2. Wrapping any such string with S→aSb adds one leading a and one trailing b, keeping it in L(X). Conversely S→X already produces every string in L(X).\n3. Thus L(S)=a*(a+b)b*, a regular nonempty language. Choose **B**, not D merely because the grammar is context-free.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Context-free grammars and derivations",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q40",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 40,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Consider the pushdown automaton (PDA) P below, which runs on the input alphabet {a, b}, has stack alphabet {⊥, A}, and has three states {s, p, q}, with s being the start state. A transition from state u to state v, labelled c/X/γ, where c is an input symbol or ε, X is a stack symbol, and γ is a string of stack symbols, represents the fact that in state u, the PDA can read c from the input, with X on the top of its stack, pop X from the stack, push in the string γ on the stack, and go to state v. In the initial configuration, the stack has only the symbol ⊥ in it. The PDA accepts by empty stack.\n\nTransitions:\n- s: a/⊥/A⊥, a/A/AA, b/A/ε\n- s → p: ε/A/ε\n- p: b/A/ε\n- p → q: ε/A/ε\n- q: ε/A/ε, ε/⊥/ε\n\nWhich one of the following options correctly describes the language accepted by P?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q40-1.webp",
+        "width": 1102,
+        "height": 1062,
+        "page": 41
+      }
+    ],
+    "options": [
+      "$\\{a^m b^n:1\\le m, 0\\le n<m\\}$",
+      "$\\{a^m b^n:0\\le n\\le m\\}$",
+      "$\\{a^m b^n:0\\le m,0\\le n\\}$",
+      "$\\{a^m:m\\ge0\\}\\cup\\{b^n:n\\ge0\\}$"
+    ],
+    "lessonIds": [
+      "pushdown-automata"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. In state s, every a pushes one A. Entering p consumes a b and pops an A; further b’s in p also pop one A each. Thus the input has form aᵐbⁿ.\n2. To reach q, the PDA must pop an additional A on an epsilon transition. That requires at least one A remaining after all n b’s: m>n. This also excludes m=0.\n3. In q, the rest of the stack is removed by epsilon moves. Therefore the language is **{aᵐbⁿ | m≥1, 0≤n<m}**, option A.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Pushdown automata",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q41",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 41,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 2,
+    "prompt": "Consider the given C-code and its corresponding assembly code, with a few operands U1 – U4 being unknown. The memory is byte-addressable.\n\n```c\nint a[10], b[10], i;\nfor (i=0; i<10;i++)\n    a[i] = b[i] * 8;\n```\n\nAssembly:\nL01: jeq r1, r2, end\nL02: lw r5, 0(r4)\nL03: shl r5, r5, U1\nL04: sw r5, 0(r3)\nL05: add r3, r3, U2\nL06: add r4, r4, U3\nL07: add r1, r1, 1\nL08: jmp U4\nL09: end\n\nWhich one of the following options is a CORRECT replacement for operands (U1, U2, U3, U4)?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q41-1.webp",
+        "width": 1102,
+        "height": 1082,
+        "page": 42
+      }
+    ],
+    "options": [
+      "(8, 4, 1, L02)",
+      "(3, 4, 4, L01)",
+      "(8, 1, 1, L02)",
+      "(3, 1, 1, L01)"
+    ],
+    "lessonIds": [
+      "instruction-set"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Multiplication by 8 is a left shift by log₂8=3, so U1=3.\n2. Each int is 32 bits=4 bytes and memory is byte-addressable, so both array pointers advance by 4: U2=U3=4.\n3. The loop must recheck its termination condition before the next load, so U4=L01. The tuple is **(3,4,4,L01), B**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Instruction sets and instruction formats",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q42",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 42,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "A 4 kilobyte (KB) byte-addressable memory is realized using four 1 KB memory blocks. Two input address lines (IA4 and IA3) are connected to the chip select (CS) port of these memory blocks through a decoder as shown in the figure. The remaining ten input address lines from IA11–IA0 are connected to the address port of these blocks. The chip select (CS) is active high. MSB IA11 IA10 IA9 IA8 10-bit IA7 IA6 1KB memory 1KB memory 1KB memory 1KB memory IA5 IA2 IA1 IA0 LSB Addr Addr Addr Addr Decoder X1 CS X2 CS X3 CS X4 CS Q0 IA4 A1 Q1 IA3 A0 Q2 Q3 The input memory addresses (IA11–IA0), in decimal, for the starting locations (Addr=0) of each block (indicated as X1, X2, X3, X4 in the figure) are among the options given below. Which one of the following options is CORRECT?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q42-1.webp",
+        "width": 1102,
+        "height": 1040,
+        "page": 43
+      }
+    ],
+    "options": [
+      "(0, 1, 2, 3)",
+      "(0, 1024, 2048, 3072)",
+      "(0, 8, 16, 24)",
+      "(0, 0, 0, 0)"
+    ],
+    "lessonIds": [
+      "memory-interfacing"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. A block’s internal address is formed from all input bits except IA4 and IA3. Internal Addr=0 requires all those other bits to be zero.\n2. The selected chip is determined by IA4 IA3=00,01,10,11. These bits have decimal weights 16 and 8.\n3. The four first input addresses are consequently **0,8,16,24**, option C. Chip-selection lines need not be the highest-order address lines.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Memory interfacing and address decoding",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q43",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 43,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Consider a sequential digital circuit consisting of T flip-flops and D flip-flops as shown in the figure. CLKIN is the clock input to the circuit. At the beginning, $Q_1, Q_2$ and $Q_3$ have values 0, 1 and 1, respectively.\n\nWhich one of the given values of $(Q_1, Q_2, Q_3)$ can NEVER be obtained with this digital circuit?\n\n(The circuit consists of three flip-flops in series: a T flip-flop with output $Q_1$, a D flip-flop with output $Q_2$, and another T flip-flop with output $Q_3$. The input to the first T flip-flop is the inverted output of $Q_3$. The input to the D flip-flop is $Q_1$. The input to the second T flip-flop is $Q_2$. All flip-flops are triggered by the same CLKIN.)",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q43-1.webp",
+        "width": 1102,
+        "height": 957,
+        "page": 45
+      }
+    ],
+    "options": [
+      "(0, 0, 1)",
+      "(1, 0, 0)",
+      "(1, 0, 1)",
+      "(1, 1, 1)"
+    ],
+    "lessonIds": [
+      "fsm-design",
+      "latches-flipflops"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. From the circuit: Q1(next)=Q1 XOR ¬Q3, Q2(next)=Q1, Q3(next)=Q3 XOR Q2. Evaluate all right sides using the old state at each common clock edge.\n2. Starting at 011, the cycle is 011→000→100→010→101→111→110→011.\n3. All three other offered states occur; **001 never occurs**, so choose A.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Finite-state circuit design",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q44",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 44,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "A Boolean digital circuit is composed using two 4-input multiplexers (M1 and M2) and one 2-input multiplexer (M3) as shown in the figure. $X_0$–$X_7$ are the inputs of the multiplexers M1 and M2 and could be connected to either 0 or 1. The select lines of the multiplexers are connected to Boolean variables A, B and C as shown.\n\nWhich one of the following set of values of $(X_0, X_1, X_2, X_3, X_4, X_5, X_6, X_7)$ will realise the Boolean function $\\overline{A} + \\overline{A} \\cdot \\overline{C} + A \\cdot \\overline{B} \\cdot C$?\n\n(In the diagram, M1 and M2 are 4-to-1 MUXes with select lines $S_1=A$ and $S_0=C$. M3 is a 2-to-1 MUX with select line $S=B$. The output of M1 goes to input 0 of M3, and the output of M2 goes to input 1 of M3.)",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q44-1.webp",
+        "width": 1102,
+        "height": 1037,
+        "page": 46
+      }
+    ],
+    "options": [
+      "(1, 1, 0, 0, 1, 1, 1, 0)",
+      "(1, 1, 0, 0, 1, 1, 0, 1)",
+      "(1, 1, 0, 1, 1, 1, 0, 0)",
+      "(0, 0, 1, 1, 0, 1, 1, 1)"
+    ],
+    "lessonIds": [
+      "multiplexers-decoders"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. The target simplifies by absorption to F=¬A+A¬BC. M3 selects M1 for B=0 and M2 for B=1.\n2. For B=0, F=¬A+AC. In select order AC=00,01,10,11, M1 needs (1,1,0,1). For B=1, F=¬A, so M2 needs (1,1,0,0).\n3. Concatenating gives **(1,1,0,1,1,1,0,0)**, option C. Keep select order A,C, rather than A,B.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Multiplexers, decoders and encoders",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q45",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 45,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Consider the IEEE-754 single precision floating point numbers $P= 0xC1800000$ and $Q= 0x3F5C2EF4$. Which one of the following corresponds to the product of these numbers (i.e., $P \\times Q$), represented in the IEEE-754 single precision format?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q45-1.webp",
+        "width": 1102,
+        "height": 638,
+        "page": 48
+      }
+    ],
+    "options": [
+      "0x404C2EF4",
+      "0x405C2EF4",
+      "0xC15C2EF4",
+      "0xC14C2EF4"
+    ],
+    "lessonIds": [
+      "floating-point"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. P has sign 1, biased exponent 131 and zero fraction, representing −2⁴=−16. Q is positive and normalized with biased exponent 126.\n2. Multiplying by −16 flips the sign and adds four to Q’s exponent. Its significand is unchanged and no rounding is needed for this power-of-two scaling.\n3. Set sign=1, biased exponent=130 and retain Q’s fraction bits: **0xC15C2EF4**, option C.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "IEEE 754 floating-point representation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q46",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 46,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 2,
+    "prompt": "Let $A$ be a priority queue for maintaining a set of elements. Suppose $A$ is implemented using a max-heap data structure. The operation $\\text{Extract-Max}(A)$ extracts and deletes the maximum element from $A$. The operation $\\text{Insert}(A, key)$ inserts a new element $key$ in $A$. The properties of a max-heap are preserved at the end of each of these operations. When $A$ contains $n$ elements, which one of the following statements about the worst case running time of these two operations is TRUE?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q46-1.webp",
+        "width": 1102,
+        "height": 741,
+        "page": 49
+      }
+    ],
+    "options": [
+      "Both $\\text{Extract-Max}(A)$ and $\\text{Insert}(A, key)$ run in $O(1)$.",
+      "Both $\\text{Extract-Max}(A)$ and $\\text{Insert}(A, key)$ run in $O(\\log(n))$.",
+      "$\\text{Extract-Max}(A)$ runs in $O(1)$ whereas $\\text{Insert}(A, key)$ runs in $O(n)$.",
+      "$\\text{Extract-Max}(A)$ runs in $O(1)$ whereas $\\text{Insert}(A, key)$ runs in $O(\\log(n))$."
+    ],
+    "lessonIds": [
+      "binary-heaps"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Extract-Max removes the root, moves the final leaf to the root, and sifts down along a root-to-leaf path.\n2. Insert appends a leaf and may sift it up to the root. A binary heap with n nodes has height Θ(log n).\n3. Both operations may traverse that entire height in the worst case, giving **O(log n) for both, B**. Merely reading the maximum is O(1), unlike extracting it.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Binary heaps and priority queues",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q47",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 47,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Consider the C function `foo` and the binary tree shown.\n\n```c\ntypedef struct node {\n    int val;\n    struct node *left, *right;\n} node;\n\nint foo(node *p) {\n    int retval;\n    if (p == NULL) return 0;\n    else {\n        retval = p->val + foo(p->left) + foo(p->right);\n        printf(\"%d \", retval);\n        return retval;\n    }\n}\n```\n\nWhen `foo` is called with a pointer to the root node of the given binary tree, what will it print?\n\n(The binary tree has root 10. Root 10 has left child 5 and right child 11. Node 5 has left child 3 and right child 8. Node 11 has right child 13.)",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q47-1.webp",
+        "width": 1102,
+        "height": 1013,
+        "page": 50
+      }
+    ],
+    "options": [
+      "3 8 5 13 11 10",
+      "3 5 8 10 11 13",
+      "3 8 16 13 24 50",
+      "3 16 8 50 24 13"
+    ],
+    "lessonIds": [
+      "trees-traversals"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. The function recursively processes both children before printing, so output order is postorder. Each printed value is the sum of that node’s subtree, not its own key.\n2. Leaves print 3,8; their parent prints 5+3+8=16. The right subtree prints 13 then 11+13=24.\n3. The root prints 10+16+24=50. Output: **3 8 16 13 24 50**, option C.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Trees and binary-tree traversals",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q48",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 48,
+    "type": "MCQ",
+    "officialKey": "D",
+    "marks": 2,
+    "prompt": "Let $U = \\{ 1, 2, ..., n \\}$, where $n$ is a large positive integer greater than 1000. Let $k$ be a positive integer less than $n$. Let $A, B$ be subsets of $U$ with $|A| = |B| = k$ and $A \\cap B = \\emptyset$. We say that a permutation of $U$ separates $A$ from $B$ if one of the following is true.\n- All members of $A$ appear in the permutation before any of the members of $B$.\n- All members of $B$ appear in the permutation before any of the members of $A$.\n\nHow many permutations of $U$ separate $A$ from $B$?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q48-1.webp",
+        "width": 1102,
+        "height": 846,
+        "page": 51
+      }
+    ],
+    "options": [
+      "$n!$",
+      "$\\binom{n}{2k} (n - 2k)!$",
+      "$\\binom{n}{2k} (n - 2k)! (k!)^2$",
+      "$2 \\binom{n}{2k} (n - 2k)! (k!)^2$"
+    ],
+    "lessonIds": [
+      "counting"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      3
+    ],
+    "solution": "1. Select the 2k positions occupied by A∪B: binomial(n,2k) choices.\n2. There are two possible block orders in those selected positions: all A before all B, or the reverse. Arrange each k-element set internally in k! ways, independently.\n3. Arrange the remaining elements in (n−2k)! ways. Multiplying gives **2·binomial(n,2k)·(k!)²·(n−2k)!**, option D.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Counting and inclusion–exclusion",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q49",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 49,
+    "type": "MSQ",
+    "officialKey": "B, C, D",
+    "marks": 2,
+    "prompt": "Let $f : A \\to B$ be an onto (or surjective) function, where $A$ and $B$ are nonempty sets. Define an equivalence relation $\\sim$ on the set $A$ as $a_1 \\sim a_2$ if $f(a_1) = f(a_2)$, where $a_1, a_2 \\in A$. Let $\\mathcal{E} = \\{[x] : x \\in A\\}$ be the set of all the equivalence classes under $\\sim$. Define a new mapping $F : \\mathcal{E} \\to B$ as $F([x]) = f(x)$, for all the equivalence classes $[x]$ in $\\mathcal{E}$. Which of the following statements is/are TRUE?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q49-1.webp",
+        "width": 1102,
+        "height": 802,
+        "page": 52
+      }
+    ],
+    "options": [
+      "F is NOT well-defined.",
+      "F is an onto (or surjective) function.",
+      "F is a one-to-one (or injective) function.",
+      "F is a bijective function."
+    ],
+    "lessonIds": [
+      "relations",
+      "functions"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      2,
+      3
+    ],
+    "solution": "1. If x and x′ represent the same equivalence class, f(x)=f(x′), so F([x]) is independent of the chosen representative. A is false.\n2. For any b∈B, surjectivity of f gives x with f(x)=b, so F is onto. If F([x])=F([y]), then f(x)=f(y), which means [x]=[y]; hence F is injective.\n3. Both properties make F bijective. Select **B,C,D**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Relations and equivalence classes",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q50",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 50,
+    "type": "MSQ",
+    "officialKey": "B, C, D",
+    "marks": 2,
+    "prompt": "Suppose you are asked to design a new reliable byte-stream transport protocol like TCP. This protocol, named myTCP, runs over a 100 Mbps network with Round Trip Time of 150 milliseconds and the maximum segment lifetime of 2 minutes. Which of the following is/are valid lengths of the Sequence Number field in the myTCP header?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q50-1.webp",
+        "width": 1102,
+        "height": 690,
+        "page": 53
+      }
+    ],
+    "options": [
+      "30 bits",
+      "32 bits",
+      "34 bits",
+      "36 bits"
+    ],
+    "lessonIds": [
+      "tcp-flow-control"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          2,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      2,
+      3
+    ],
+    "solution": "1. A byte-oriented sequence space must not wrap within the maximum segment lifetime. The data rate is 100×10⁶/8=12.5×10⁶ bytes/s.\n2. In 120 s the sender can transmit 1.5×10⁹ bytes. Since 2³⁰≈1.074×10⁹<1.5×10⁹, 30 bits is insufficient. Even 31 bits would suffice.\n3. Thus all listed larger widths **32,34,36**, options **B,C,D**, are valid. RTT is not the relevant lifetime bound here.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "TCP reliability, handshake and flow control",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q51",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 51,
+    "type": "MSQ",
+    "officialKey": "A, D",
+    "marks": 2,
+    "prompt": "Let $X$ be a set and $2^X$ denote the powerset of $X$. Define a binary operation $\\Delta$ on $2^X$ as follows: $A \\Delta B = (A - B) \\cup (B - A)$. Let $H = (2^X, \\Delta)$. Which of the following statements about $H$ is/are correct?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q51-1.webp",
+        "width": 1102,
+        "height": 681,
+        "page": 54
+      }
+    ],
+    "options": [
+      "H is a group.",
+      "Every element in H has an inverse, but H is NOT a group.",
+      "For every $A \\in 2^X$, the inverse of A is the complement of A.",
+      "For every $A \\in 2^X$, the inverse of A is A."
+    ],
+    "lessonIds": [
+      "groups"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      3
+    ],
+    "solution": "1. Symmetric difference corresponds to XOR of membership bits, so it is closed and associative on the power set; it is also commutative.\n2. The identity is ∅, since A△∅=A. Every set is its own inverse because A△A=∅. Therefore H is a group.\n3. The complement is not the inverse in general: A△Aᶜ=X rather than ∅ for nonempty X. Select **A,D**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Groups and cyclic groups",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q52",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 52,
+    "type": "MSQ",
+    "officialKey": "C, D",
+    "marks": 2,
+    "prompt": "Suppose in a web browser, you click on the `www.gate-2023.in` URL. The browser cache is empty. The IP address for this URL is not cached in your local host, so a DNS lookup is triggered (by the local DNS server deployed on your local host) over the 3-tier DNS hierarchy in an iterative mode. No resource records are cached anywhere across all DNS servers. Let RTT denote the round trip time between your local host and DNS servers in the DNS hierarchy. The round trip time between the local host and the web server hosting `www.gate-2023.in` is also equal to RTT. The HTML file associated with the URL is small enough to have negligible transmission time and negligible rendering time by your web browser, which references 10 equally small objects on the same web server. Which of the following statements is/are CORRECT about the minimum elapsed time between clicking on the URL and your browser fully rendering it?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q52-1.webp",
+        "width": 1102,
+        "height": 923,
+        "page": 55
+      }
+    ],
+    "options": [
+      "7 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections.",
+      "5 RTTs, in case of persistent HTTP with pipelining.",
+      "9 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections.",
+      "6 RTTs, in case of persistent HTTP with pipelining."
+    ],
+    "lessonIds": [
+      "dns",
+      "http"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2,
+      3
+    ],
+    "solution": "1. With iterative uncached lookup over root, TLD and authoritative tiers, DNS costs 3 RTTs. Fetching the base HTML adds 1 RTT for TCP setup and 1 RTT for request/response: total 5.\n2. Non-persistent HTTP with five parallel connections fetches ten objects in two batches, each costing 2 RTTs. Total=3+2+4=**9 RTTs**, C.\n3. Persistent pipelining reuses the connection and fetches all references in one further RTT: **6 RTTs**, D. Select **C,D**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "DNS resolution and records",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q53",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 53,
+    "type": "MSQ",
+    "officialKey": "C, D",
+    "marks": 2,
+    "prompt": "Consider a random experiment where two fair coins are tossed. Let $A$ be the event that denotes HEAD on both the throws, $B$ be the event that denotes HEAD on the first throw, and $C$ be the event that denotes HEAD on the second throw. Which of the following statements is/are TRUE?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q53-1.webp",
+        "width": 1102,
+        "height": 638,
+        "page": 56
+      }
+    ],
+    "options": [
+      "A and B are independent.",
+      "A and C are independent.",
+      "B and C are independent.",
+      "Prob( B | C ) = Prob( B )"
+    ],
+    "lessonIds": [
+      "conditional-bayes"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2,
+      3
+    ],
+    "solution": "1. The equally likely outcomes are HH,HT,TH,TT. P(A)=1/4 and P(B)=P(C)=1/2.\n2. P(A∩B)=P(A∩C)=1/4, which is not (1/4)(1/2); A is dependent on both B and C. Thus options A and B are false.\n3. P(B∩C)=1/4=P(B)P(C), and P(B|C)=(1/4)/(1/2)=1/2=P(B). Select **C,D**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Conditional probability and Bayes’ theorem",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q54",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 54,
+    "type": "MSQ",
+    "officialKey": "A, D",
+    "marks": 2,
+    "prompt": "Consider functions **Function_1** and **Function_2** expressed in pseudocode as follows:\n\n**Function_1**\n```\nwhile n > 1 do\n    for i = 1 to n do\n        x = x + 1;\n    end for\n    n = floor(n/2);\nend while\n```\n\n**Function_2**\n```\nfor i = 1 to 100 * n do\n    x = x + 1;\nend for\n```\n\nLet $f_1(n)$ and $f_2(n)$ denote the number of times the statement “$x = x + 1$” is executed in **Function_1** and **Function_2**, respectively. Which of the following statements is/are TRUE?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q54-1.webp",
+        "width": 1102,
+        "height": 930,
+        "page": 57
+      }
+    ],
+    "options": [
+      "f_1(n) ∈ Θ(f_2(n))",
+      "f_1(n) ∈ o(f_2(n))",
+      "f_1(n) ∈ ω(f_2(n))",
+      "f_1(n) ∈ O(n)"
+    ],
+    "lessonIds": [
+      "asymptotic-analysis"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      3
+    ],
+    "solution": "1. Function 1 executes n+floor(n/2)+floor(n/4)+… increments. This is at least n and less than 2n for n>1, hence Θ(n).\n2. Function 2 executes 100n increments, also Θ(n). Constant multipliers do not alter the asymptotic class.\n3. Therefore f1∈Θ(f2) and f1∈O(n); neither little-o nor little-omega holds. Select **A,D**.",
+    "pitfall": "",
+    "hasDiagram": false,
+    "testedConcept": "Asymptotic time and space complexity",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q55",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 55,
+    "type": "MSQ",
+    "officialKey": "A, B",
+    "marks": 2,
+    "prompt": "Let G be a simple, finite, undirected graph with vertex set { v 1 , . . . , v n } . Let Δ( G ) denote the maximum degree of G and let N = { 1 , 2 , . . . } denote the set of all possible colors. Color the vertices of G using the following greedy strategy: for i = 1 , . . . , n color( v i ) ← min { j ∈ N : no neighbour of v i is colored j } Which of the following statements is/are TRUE?",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q55-1.webp",
+        "width": 1102,
+        "height": 733,
+        "page": 58
+      }
+    ],
+    "options": [
+      "This procedure results in a proper vertex coloring of G .",
+      "The number of colors used is at most Δ( G ) + 1.",
+      "The number of colors used is at most Δ( G ).",
+      "The number of colors used is equal to the chromatic number of G ."
+    ],
+    "lessonIds": [
+      "graph-colouring"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      1
+    ],
+    "solution": "1. When a vertex is processed, it avoids every colour used by an already coloured neighbour. Later neighbours must likewise avoid its colour, so the final colouring is proper: A.\n2. At most Δ(G) neighbour colours can be forbidden. Among the first Δ(G)+1 colours, at least one is available: B.\n3. A clique on Δ+1 vertices disproves C. Greedy colouring can use more colours than optimal depending on vertex order, disproving D. Select **A,B**.",
+    "pitfall": "",
+    "testedConcept": "Graph colouring",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q56",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 56,
+    "type": "NAT",
+    "officialKey": "5040 to 5040",
+    "marks": 2,
+    "prompt": "U Let U = { 1 , 2 , 3 } . Let 2 denote the powerset of U . Consider an undirected graph U U G whose vertex set is 2 . For any A, B ∈ 2 , ( A, B ) is an edge in G if and only if (i) A  = B , and (ii) either A  B or B  A . For any vertex A in G , the set of all possible orderings in which the vertices of G can be visited in a Breadth First Search (BFS) starting from A is denoted by B ( A ). If ∅ denotes the empty set, then the cardinality of B ( ∅ ) is .",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q56-1.webp",
+        "width": 1102,
+        "height": 402,
+        "page": 59
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "graph-traversals",
+      "sets"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          5040,
+          5040
+        ]
+      ]
+    },
+    "solvedAnswer": "5040",
+    "solution": "1. The power set of {1,2,3} has 2³=8 vertices. The empty set is a proper subset of every other vertex, so it is adjacent to all seven.\n2. BFS starting at ∅ discovers those seven vertices in its first adjacency scan. Every one is at distance 1; there are no further undiscovered vertices to constrain their order.\n3. All 7! orders are possible, giving **5040**.",
+    "pitfall": "",
+    "testedConcept": "Breadth-first and depth-first search",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q57",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 57,
+    "type": "NAT",
+    "officialKey": "4096 to 4096",
+    "marks": 2,
+    "prompt": "Consider the following two-dimensional array D in the C programming language, which is stored in row-major order: int D[ 128 ][ 128 ] ; Demand paging is used for allocating memory and each physical page frame holds 512 elements of the array D . The Least Recently Used (LRU) page-replacement policy is used by the operating system. A total of 30 physical page frames are allocated to a process which executes the following code snippet: for (int i = 0; i < 128; i++) for (int j = 0; j < 128; j++) D[j][i] *= 10; The number of page faults generated during the execution of this code snippet is .",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q57-1.webp",
+        "width": 1102,
+        "height": 614,
+        "page": 60
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "virtual-memory",
+      "arrays"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          4096,
+          4096
+        ]
+      ]
+    },
+    "solvedAnswer": "4096",
+    "solution": "1. A page holds 512 array elements, or four complete rows of length 128. The array spans 128/4=32 pages.\n2. For a fixed column i, consecutive groups of four row accesses touch pages 0 through 31. The first access in each group faults; the next three hit. Only 30 frames are available.\n3. Each column revisits a page after accessing the other 31 pages, so LRU has evicted it. Thus every column incurs 32 faults: 128×32=**4096**.",
+    "pitfall": "",
+    "testedConcept": "Virtual memory and page replacement",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q58",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 58,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 2,
+    "prompt": "Consider a computer system with 57-bit virtual addressing using multi-level tree-structured page tables with L levels for virtual to physical address translation. The page size is 4 KB (1 KB = 1024 B) and a page table entry at any of the levels occupies 8 bytes. The value of L is .",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q58-1.webp",
+        "width": 1102,
+        "height": 370,
+        "page": 61
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "paging"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    "solvedAnswer": "5",
+    "solution": "1. A 4 KB page has a 12-bit offset, leaving 57−12=45 virtual page-number bits.\n2. A page-sized page table contains 4096/8=512 entries, so each level indexes 9 bits.\n3. Required levels L=ceil(45/9)=**5**. The offset bits do not require another table level.",
+    "pitfall": "",
+    "testedConcept": "Memory management, paging and address translation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q59",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 59,
+    "type": "NAT",
+    "officialKey": "8 to 8",
+    "marks": 2,
+    "prompt": "Consider a sequence a of elements a 0 = 1, a 1 = 5, a 2 = 7, a 3 = 8, a 4 = 9, and a 5 = 2. The following operations are performed on a stack S and a queue Q , both of which are initially empty. I: push the elements of a from a 0 to a 5 in that order into S . II: enqueue the elements of a from a 0 to a 5 in that order into Q . III: pop an element from S . IV: dequeue an element from Q . V: pop an element from S . VI: dequeue an element from Q . VII: dequeue an element from Q and push the same element into S . VIII: Repeat operation VII three times. IX: pop an element from S . X: pop an element from S . The top element of S after executing the above operations is .",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q59-1.webp",
+        "width": 1102,
+        "height": 780,
+        "page": 62
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "stacks",
+      "queues"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    "solvedAnswer": "8",
+    "solution": "1. After loading, S from bottom to top is [1,5,7,8,9,2], and Q from front to rear is [1,5,7,8,9,2].\n2. Operations III–VI remove stack elements 2,9 and queue elements 1,5. S=[1,5,7,8], Q=[7,8,9,2]. Operations VII–VIII transfer all four queue elements onto S, producing [1,5,7,8,7,8,9,2].\n3. Operations IX–X pop 2 then 9, leaving **8** at the top.",
+    "pitfall": "",
+    "testedConcept": "Stacks and expression evaluation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q60",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 60,
+    "type": "NAT",
+    "officialKey": "2.374 to 2.376",
+    "marks": 2,
+    "prompt": "Consider the syntax directed translation given by the following grammar and se- mantic rules. Here N , I , F and B are non-terminals. N is the starting non-terminal, and #, 0 and 1 are lexical tokens corresponding to input letters “#”, “0” and “1”, respectively. X. val denotes the synthesized attribute (a numeric value) associated with a non-terminal X . I 1 and F 1 denote occurrences of I and F on the right hand side of a production, respectively. For the tokens 0 and 1 , 0 . val = 0 and 1 . val = 1. N → I # F N. val = I. val + F. val I → I 1 B I. val = (2 I 1 . val ) + B. val I → B I. val = B. val 1 F → B F 1 F. val = ( B. val + F . val ) 2 1 1 F → B F. val = B. val 2 B → 0 B. val = 0 . val B → 1 B. val = 1 . val The value computed by the translation scheme for the input string 10#011 is . (Rounded off to three decimal places)",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q60-1.webp",
+        "width": 1102,
+        "height": 742,
+        "page": 63
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "syntax-directed-translation"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          2.374,
+          2.376
+        ]
+      ]
+    },
+    "solvedAnswer": "2.375",
+    "solution": "1. The integer attribute uses I→I1 B with value 2I1.val+B.val, so input 10 has value 2.\n2. The fractional attribute for 011 is computed from right to left: F(1)=1/2; F(11)=(1+1/2)/2=3/4; F(011)=(0+3/4)/2=3/8.\n3. N.val=2+3/8=**2.375**, within the official interval [2.374,2.376].",
+    "pitfall": "",
+    "testedConcept": "Syntax-directed translation and attributes",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q61",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 61,
+    "type": "NAT",
+    "officialKey": "2 to 2",
+    "marks": 2,
+    "prompt": "Consider the following table named Student in a relational database. The primary key of this table is rollNum. Student rollNum name gender marks 1 Naman M 62 2 Aliya F 70 3 Aliya F 80 4 James M 82 5 Swati F 65 The SQL query below is executed on this database. SELECT * FROM Student WHERE gender = ‘F’ AND marks > 65; The number of rows returned by the query is .",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q61-1.webp",
+        "width": 1102,
+        "height": 708,
+        "page": 64
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "sql-joins"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": "2",
+    "solution": "1. Apply both WHERE conditions to each row. Naman and James fail gender='F'. Swati has marks=65 and fails the strict comparison marks>65.\n2. Aliya’s rows with rollNum 2 and 3 both pass, with marks 70 and 80.\n3. SELECT * does not apply DISTINCT, and the different roll numbers make them separate records. The result has **2 rows**.",
+    "pitfall": "",
+    "testedConcept": "SQL SELECT, joins and NULL",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q62",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 62,
+    "type": "NAT",
+    "officialKey": "6 to 6",
+    "marks": 2,
+    "prompt": "Consider a database of fixed-length records, stored as an ordered file. The database has 25,000 records, with each record being 100 bytes, of which the primary key occupies 15 bytes. The data file is block-aligned in that each data record is fully contained within a block. The database is indexed by a primary index file, which is also stored as a block-aligned ordered file. The figure below depicts this indexing scheme. Data File Primary Key Other Fields (15 Bytes) (85 Bytes) Index File Block Anchor Block Primary Key Pointer Suppose the block size of the file system is 1024 bytes, and a pointer to a block occupies 5 bytes. The system uses binary search on the index file to search for a record with a given key. You may assume that a binary search on an index file of b blocks takes  log 2 b  block accesses in the worst case. Given a key, the number of block accesses required to identify the block in the data file that may contain a record with the key, in the worst case, is .",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q62-1.webp",
+        "width": 1102,
+        "height": 1050,
+        "page": 65
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "file-organization"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          6,
+          6
+        ]
+      ]
+    },
+    "solvedAnswer": "6",
+    "solution": "1. Each 1024-byte data block holds floor(1024/100)=10 complete records. There are 25,000/10=2,500 data blocks, hence 2,500 sparse primary-index entries.\n2. An index entry is 15+5=20 bytes, giving floor(1024/20)=51 entries per block. The index occupies ceil(2500/51)=50 blocks.\n3. The stated worst-case search cost is ceil(log₂50)=**6 block accesses**. The question asks to identify the candidate data block, not to read its contents, so do not add another access.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "File organization and index fundamentals",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q63",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 63,
+    "type": "NAT",
+    "officialKey": "4 to 4",
+    "marks": 2,
+    "prompt": "Consider the language L over the alphabet { 0 , 1 } , given below: ∗ L = { w ∈ { 0 , 1 } | w does not contain three or more consecutive 1’s } . The minimum number of states in a Deterministic Finite-State Automaton (DFA) for L is .",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q63-1.webp",
+        "width": 1102,
+        "height": 361,
+        "page": 67
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "dfa-minimization"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    "solvedAnswer": "4",
+    "solution": "1. Track the current trailing run of 1’s: length 0,1,2, plus a rejecting sink once 111 occurs. A 0 resets any safe run to length 0; a 1 advances it or enters the sink.\n2. The three safe states are distinguishable by suffixes: 11 distinguishes lengths 0 and 1, while 1 distinguishes length 2 from lengths 0 or 1. The sink differs by accepting status.\n3. All four states are reachable and pairwise distinguishable, so the minimum is **4**.",
+    "pitfall": "",
+    "testedConcept": "DFA equivalence and minimization",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q64",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 64,
+    "type": "NAT",
+    "officialKey": "19 to 19",
+    "marks": 2,
+    "prompt": "An 8-way set associative cache of size 64 KB (1 KB = 1024 bytes) is used in a system with 32-bit address. The address is sub-divided into TAG, INDEX, and BLOCK OFFSET. The number of bits in the TAG is .",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q64-1.webp",
+        "width": 1102,
+        "height": 344,
+        "page": 68
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "cache-mapping"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          19,
+          19
+        ]
+      ]
+    },
+    "solvedAnswer": "19",
+    "solution": "1. If the block size is 2ᵇ bytes, the cache has 2¹⁶/2ᵇ blocks and 2¹³/2ᵇ sets because it is 8-way.\n2. Hence index bits=13−b and offset bits=b. Their sum is 13 regardless of the unspecified block size.\n3. The remaining address bits form the tag: 32−13=**19**.",
+    "pitfall": "",
+    "testedConcept": "Cache mapping and address fields",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2023-cs-q65",
+    "paperId": "2023-cs",
+    "year": 2023,
+    "set": "CS",
+    "number": 65,
+    "type": "NAT",
+    "officialKey": "3 to 3",
+    "marks": 2,
+    "prompt": "The forwarding table of a router is shown below. Subnet Number Subnet Mask Interface ID 200.150.0.0 255.255.0.0 1 200.150.64.0 255.255.224.0 2 200.150.68.0 255.255.255.0 3 200.150.68.64 255.255.255.224 4 Default 0 A packet addressed to a destination address 200.150.68.118 arrives at the router. It will be forwarded to the interface with ID .",
+    "images": [
+      {
+        "src": "/pyq/2023-cs/q65-1.webp",
+        "width": 1102,
+        "height": 486,
+        "page": 69
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "ipv4-cidr"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": "3",
+    "solution": "1. Destination 200.150.68.118 matches 200.150.0.0/16 and 200.150.64.0/19. It also matches 200.150.68.0/24.\n2. The /27 prefix 200.150.68.64 covers last-octet values 64–95, so it does not match 118.\n3. Among matching entries, /24 is longest and maps to interface **3**. Routing uses prefix length, not table order.",
+    "pitfall": "",
+    "testedConcept": "IPv4 addressing, CIDR and longest-prefix matching",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  }
+]

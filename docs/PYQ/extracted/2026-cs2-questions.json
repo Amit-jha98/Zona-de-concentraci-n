@@ -13,7 +13,7 @@
       {
         "src": "/pyq/2026-cs2/q01-1.webp",
         "width": 1072,
-        "height": 1118,
+        "height": 568,
         "page": 1
       }
     ]
@@ -32,7 +32,7 @@
       {
         "src": "/pyq/2026-cs2/q02-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1023,
         "page": 2
       }
     ]
@@ -51,7 +51,7 @@
       {
         "src": "/pyq/2026-cs2/q03-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 593,
         "page": 3
       }
     ]
@@ -70,7 +70,7 @@
       {
         "src": "/pyq/2026-cs2/q04-1.webp",
         "width": 1072,
-        "height": 545,
+        "height": 503,
         "page": 4
       }
     ]
@@ -89,7 +89,7 @@
       {
         "src": "/pyq/2026-cs2/q05-1.webp",
         "width": 1072,
-        "height": 643,
+        "height": 568,
         "page": 4
       }
     ]
@@ -108,7 +108,7 @@
       {
         "src": "/pyq/2026-cs2/q06-1.webp",
         "width": 1072,
-        "height": 1159,
+        "height": 568,
         "page": 5
       }
     ]
@@ -127,7 +127,7 @@
       {
         "src": "/pyq/2026-cs2/q07-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1126,
         "page": 6
       }
     ]
@@ -146,7 +146,7 @@
       {
         "src": "/pyq/2026-cs2/q08-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 992,
         "page": 7
       }
     ]
@@ -165,7 +165,7 @@
       {
         "src": "/pyq/2026-cs2/q09-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1107,
         "page": 8
       }
     ]
@@ -184,13 +184,13 @@
       {
         "src": "/pyq/2026-cs2/q10-1.webp",
         "width": 1072,
-        "height": 1077,
+        "height": 667,
         "page": 9
       },
       {
         "src": "/pyq/2026-cs2/q10-2.webp",
         "width": 1072,
-        "height": 127,
+        "height": 92,
         "page": 10
       }
     ]
@@ -228,7 +228,7 @@
       {
         "src": "/pyq/2026-cs2/q12-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1201,
         "page": 11
       }
     ]
@@ -247,7 +247,7 @@
       {
         "src": "/pyq/2026-cs2/q13-1.webp",
         "width": 1072,
-        "height": 538,
+        "height": 495,
         "page": 12
       }
     ]
@@ -266,7 +266,7 @@
       {
         "src": "/pyq/2026-cs2/q14-1.webp",
         "width": 1072,
-        "height": 650,
+        "height": 648,
         "page": 12
       }
     ]
@@ -285,7 +285,7 @@
       {
         "src": "/pyq/2026-cs2/q15-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1201,
         "page": 13
       }
     ]
@@ -304,7 +304,7 @@
       {
         "src": "/pyq/2026-cs2/q16-1.webp",
         "width": 1072,
-        "height": 598,
+        "height": 487,
         "page": 14
       }
     ]
@@ -323,7 +323,7 @@
       {
         "src": "/pyq/2026-cs2/q17-1.webp",
         "width": 1072,
-        "height": 590,
+        "height": 567,
         "page": 14
       }
     ]
@@ -342,7 +342,7 @@
       {
         "src": "/pyq/2026-cs2/q18-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1201,
         "page": 15
       }
     ]
@@ -361,7 +361,7 @@
       {
         "src": "/pyq/2026-cs2/q19-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1201,
         "page": 16
       }
     ]
@@ -380,7 +380,7 @@
       {
         "src": "/pyq/2026-cs2/q20-1.webp",
         "width": 1072,
-        "height": 523,
+        "height": 480,
         "page": 17
       }
     ]
@@ -399,7 +399,7 @@
       {
         "src": "/pyq/2026-cs2/q21-1.webp",
         "width": 1072,
-        "height": 665,
+        "height": 656,
         "page": 17
       }
     ]
@@ -418,7 +418,7 @@
       {
         "src": "/pyq/2026-cs2/q22-1.webp",
         "width": 1072,
-        "height": 539,
+        "height": 428,
         "page": 18
       }
     ]
@@ -456,7 +456,7 @@
       {
         "src": "/pyq/2026-cs2/q24-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1154,
         "page": 19
       }
     ]
@@ -475,7 +475,7 @@
       {
         "src": "/pyq/2026-cs2/q25-1.webp",
         "width": 1072,
-        "height": 604,
+        "height": 493,
         "page": 20
       }
     ]
@@ -494,7 +494,7 @@
       {
         "src": "/pyq/2026-cs2/q26-1.webp",
         "width": 1072,
-        "height": 584,
+        "height": 479,
         "page": 20
       }
     ]
@@ -513,7 +513,7 @@
       {
         "src": "/pyq/2026-cs2/q27-1.webp",
         "width": 1072,
-        "height": 576,
+        "height": 465,
         "page": 21
       }
     ]
@@ -551,7 +551,7 @@
       {
         "src": "/pyq/2026-cs2/q29-1.webp",
         "width": 1072,
-        "height": 472,
+        "height": 430,
         "page": 22
       }
     ]
@@ -570,7 +570,7 @@
       {
         "src": "/pyq/2026-cs2/q30-1.webp",
         "width": 1072,
-        "height": 132,
+        "height": 130,
         "page": 22
       }
     ]
@@ -589,7 +589,7 @@
       {
         "src": "/pyq/2026-cs2/q31-1.webp",
         "width": 1072,
-        "height": 247,
+        "height": 245,
         "page": 22
       }
     ]
@@ -608,7 +608,7 @@
       {
         "src": "/pyq/2026-cs2/q32-1.webp",
         "width": 1072,
-        "height": 313,
+        "height": 303,
         "page": 22
       }
     ]
@@ -627,7 +627,7 @@
       {
         "src": "/pyq/2026-cs2/q33-1.webp",
         "width": 1072,
-        "height": 106,
+        "height": 105,
         "page": 23
       }
     ]
@@ -646,7 +646,7 @@
       {
         "src": "/pyq/2026-cs2/q34-1.webp",
         "width": 1072,
-        "height": 107,
+        "height": 105,
         "page": 23
       }
     ]
@@ -665,7 +665,7 @@
       {
         "src": "/pyq/2026-cs2/q35-1.webp",
         "width": 1072,
-        "height": 963,
+        "height": 449,
         "page": 23
       }
     ]
@@ -684,7 +684,7 @@
       {
         "src": "/pyq/2026-cs2/q36-1.webp",
         "width": 1072,
-        "height": 1159,
+        "height": 1123,
         "page": 24
       }
     ]
@@ -703,7 +703,7 @@
       {
         "src": "/pyq/2026-cs2/q37-1.webp",
         "width": 1072,
-        "height": 549,
+        "height": 506,
         "page": 25
       }
     ]
@@ -741,7 +741,7 @@
       {
         "src": "/pyq/2026-cs2/q39-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1175,
         "page": 26
       }
     ]
@@ -760,7 +760,7 @@
       {
         "src": "/pyq/2026-cs2/q40-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1146,
         "page": 27
       }
     ]
@@ -779,7 +779,7 @@
       {
         "src": "/pyq/2026-cs2/q41-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1195,
         "page": 28
       }
     ]
@@ -798,7 +798,7 @@
       {
         "src": "/pyq/2026-cs2/q42-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1192,
         "page": 29
       }
     ]
@@ -817,7 +817,7 @@
       {
         "src": "/pyq/2026-cs2/q43-1.webp",
         "width": 1072,
-        "height": 545,
+        "height": 503,
         "page": 30
       }
     ]
@@ -836,7 +836,7 @@
       {
         "src": "/pyq/2026-cs2/q44-1.webp",
         "width": 1072,
-        "height": 643,
+        "height": 601,
         "page": 30
       }
     ]
@@ -855,7 +855,7 @@
       {
         "src": "/pyq/2026-cs2/q45-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1141,
         "page": 31
       }
     ]
@@ -874,7 +874,7 @@
       {
         "src": "/pyq/2026-cs2/q46-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1183,
         "page": 32
       }
     ]
@@ -893,7 +893,7 @@
       {
         "src": "/pyq/2026-cs2/q47-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1182,
         "page": 33
       }
     ]
@@ -912,7 +912,7 @@
       {
         "src": "/pyq/2026-cs2/q48-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1190,
         "page": 34
       }
     ]
@@ -931,7 +931,7 @@
       {
         "src": "/pyq/2026-cs2/q49-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1183,
         "page": 35
       }
     ]
@@ -950,7 +950,7 @@
       {
         "src": "/pyq/2026-cs2/q50-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 795,
         "page": 36
       }
     ]
@@ -969,7 +969,7 @@
       {
         "src": "/pyq/2026-cs2/q51-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 1045,
         "page": 37
       }
     ]
@@ -988,7 +988,7 @@
       {
         "src": "/pyq/2026-cs2/q52-1.webp",
         "width": 1072,
-        "height": 895,
+        "height": 714,
         "page": 38
       }
     ]
@@ -1007,7 +1007,7 @@
       {
         "src": "/pyq/2026-cs2/q53-1.webp",
         "width": 1072,
-        "height": 293,
+        "height": 278,
         "page": 38
       }
     ]
@@ -1026,7 +1026,7 @@
       {
         "src": "/pyq/2026-cs2/q54-1.webp",
         "width": 1072,
-        "height": 227,
+        "height": 226,
         "page": 39
       }
     ]
@@ -1045,7 +1045,7 @@
       {
         "src": "/pyq/2026-cs2/q55-1.webp",
         "width": 1072,
-        "height": 252,
+        "height": 251,
         "page": 39
       }
     ]
@@ -1064,7 +1064,7 @@
       {
         "src": "/pyq/2026-cs2/q56-1.webp",
         "width": 1072,
-        "height": 203,
+        "height": 201,
         "page": 39
       }
     ]
@@ -1083,7 +1083,7 @@
       {
         "src": "/pyq/2026-cs2/q57-1.webp",
         "width": 1072,
-        "height": 482,
+        "height": 454,
         "page": 39
       }
     ]
@@ -1102,7 +1102,7 @@
       {
         "src": "/pyq/2026-cs2/q58-1.webp",
         "width": 1072,
-        "height": 227,
+        "height": 226,
         "page": 40
       }
     ]
@@ -1121,7 +1121,7 @@
       {
         "src": "/pyq/2026-cs2/q59-1.webp",
         "width": 1072,
-        "height": 432,
+        "height": 430,
         "page": 40
       }
     ]
@@ -1140,7 +1140,7 @@
       {
         "src": "/pyq/2026-cs2/q60-1.webp",
         "width": 1072,
-        "height": 517,
+        "height": 510,
         "page": 40
       }
     ]
@@ -1159,7 +1159,7 @@
       {
         "src": "/pyq/2026-cs2/q61-1.webp",
         "width": 1072,
-        "height": 582,
+        "height": 583,
         "page": 41
       }
     ]
@@ -1197,7 +1197,7 @@
       {
         "src": "/pyq/2026-cs2/q63-1.webp",
         "width": 1072,
-        "height": 204,
+        "height": 203,
         "page": 41
       }
     ]
@@ -1216,7 +1216,7 @@
       {
         "src": "/pyq/2026-cs2/q64-1.webp",
         "width": 1072,
-        "height": 295,
+        "height": 269,
         "page": 41
       }
     ]
@@ -1235,7 +1235,7 @@
       {
         "src": "/pyq/2026-cs2/q65-1.webp",
         "width": 1072,
-        "height": 1200,
+        "height": 373,
         "page": 42
       }
     ]

@@ -9,7 +9,6 @@ import systems from "./systems.js";
 import databases from "./databases.js";
 import networks from "./networks.js";
 import aptitude from "./aptitude.js";
-import enrichment from "./examEnrichment.json" with { type: "json" };
 
 // Section names and coverage follow the supplied PDF, not an assumed exam syllabus.
 export const GATE_SECTIONS = [
@@ -24,9 +23,6 @@ export const GATE_SECTIONS = [
   databases,
   networks,
 ];
-for (const section of [...GATE_SECTIONS, aptitude]) {
-  section.lessons = section.lessons.map((lesson) => ({ ...lesson, ...enrichment[lesson.id] }));
-}
 export const GATE_LESSONS = GATE_SECTIONS.flatMap((item) => item.lessons);
 export const APTITUDE_SECTION = aptitude;
 export const EXAM_LESSONS = [...GATE_LESSONS, ...aptitude.lessons];

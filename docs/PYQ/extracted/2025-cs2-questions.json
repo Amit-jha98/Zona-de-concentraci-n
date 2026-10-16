@@ -13,7 +13,7 @@
       {
         "src": "/pyq/2025-cs2/q01-1.webp",
         "width": 1072,
-        "height": 1106,
+        "height": 567,
         "page": 1
       }
     ]
@@ -32,7 +32,7 @@
       {
         "src": "/pyq/2025-cs2/q02-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 542,
         "page": 2
       }
     ]
@@ -51,7 +51,7 @@
       {
         "src": "/pyq/2025-cs2/q03-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 551,
         "page": 3
       }
     ]
@@ -70,7 +70,7 @@
       {
         "src": "/pyq/2025-cs2/q04-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 870,
         "page": 4
       }
     ]
@@ -89,7 +89,7 @@
       {
         "src": "/pyq/2025-cs2/q05-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 524,
         "page": 5
       }
     ]
@@ -108,7 +108,7 @@
       {
         "src": "/pyq/2025-cs2/q06-1.webp",
         "width": 1072,
-        "height": 1151,
+        "height": 567,
         "page": 6
       }
     ]
@@ -127,7 +127,7 @@
       {
         "src": "/pyq/2025-cs2/q07-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 521,
         "page": 7
       }
     ]
@@ -146,7 +146,7 @@
       {
         "src": "/pyq/2025-cs2/q08-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 768,
         "page": 8
       }
     ]
@@ -165,7 +165,7 @@
       {
         "src": "/pyq/2025-cs2/q09-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 829,
         "page": 9
       }
     ]
@@ -184,7 +184,7 @@
       {
         "src": "/pyq/2025-cs2/q10-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 864,
         "page": 10
       }
     ]
@@ -203,7 +203,7 @@
       {
         "src": "/pyq/2025-cs2/q11-1.webp",
         "width": 1072,
-        "height": 564,
+        "height": 523,
         "page": 11
       }
     ]
@@ -222,7 +222,7 @@
       {
         "src": "/pyq/2025-cs2/q12-1.webp",
         "width": 1072,
-        "height": 575,
+        "height": 513,
         "page": 11
       }
     ]
@@ -241,7 +241,7 @@
       {
         "src": "/pyq/2025-cs2/q13-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 684,
         "page": 12
       }
     ]
@@ -260,7 +260,7 @@
       {
         "src": "/pyq/2025-cs2/q14-1.webp",
         "width": 1072,
-        "height": 588,
+        "height": 544,
         "page": 13
       }
     ]
@@ -279,7 +279,7 @@
       {
         "src": "/pyq/2025-cs2/q15-1.webp",
         "width": 1072,
-        "height": 593,
+        "height": 560,
         "page": 13
       }
     ]
@@ -298,7 +298,7 @@
       {
         "src": "/pyq/2025-cs2/q16-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 619,
         "page": 14
       }
     ]
@@ -317,7 +317,7 @@
       {
         "src": "/pyq/2025-cs2/q17-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 743,
         "page": 15
       }
     ]
@@ -336,7 +336,7 @@
       {
         "src": "/pyq/2025-cs2/q18-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 570,
         "page": 16
       }
     ]
@@ -355,7 +355,7 @@
       {
         "src": "/pyq/2025-cs2/q19-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 1026,
         "page": 17
       }
     ]
@@ -374,7 +374,7 @@
       {
         "src": "/pyq/2025-cs2/q20-1.webp",
         "width": 1072,
-        "height": 544,
+        "height": 500,
         "page": 18
       }
     ]
@@ -393,7 +393,7 @@
       {
         "src": "/pyq/2025-cs2/q21-1.webp",
         "width": 1072,
-        "height": 637,
+        "height": 620,
         "page": 18
       }
     ]
@@ -412,7 +412,7 @@
       {
         "src": "/pyq/2025-cs2/q22-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 739,
         "page": 19
       }
     ]
@@ -431,7 +431,7 @@
       {
         "src": "/pyq/2025-cs2/q23-1.webp",
         "width": 1072,
-        "height": 616,
+        "height": 573,
         "page": 20
       }
     ]
@@ -450,7 +450,7 @@
       {
         "src": "/pyq/2025-cs2/q24-1.webp",
         "width": 1072,
-        "height": 564,
+        "height": 521,
         "page": 20
       }
     ]
@@ -469,7 +469,7 @@
       {
         "src": "/pyq/2025-cs2/q25-1.webp",
         "width": 1072,
-        "height": 545,
+        "height": 501,
         "page": 21
       }
     ]
@@ -507,7 +507,7 @@
       {
         "src": "/pyq/2025-cs2/q27-1.webp",
         "width": 1072,
-        "height": 643,
+        "height": 600,
         "page": 22
       }
     ]
@@ -526,7 +526,7 @@
       {
         "src": "/pyq/2025-cs2/q28-1.webp",
         "width": 1072,
-        "height": 537,
+        "height": 496,
         "page": 22
       }
     ]
@@ -545,7 +545,7 @@
       {
         "src": "/pyq/2025-cs2/q29-1.webp",
         "width": 1072,
-        "height": 1192,
+        "height": 547,
         "page": 23
       }
     ]
@@ -564,7 +564,7 @@
       {
         "src": "/pyq/2025-cs2/q30-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 861,
         "page": 24
       }
     ]
@@ -583,7 +583,7 @@
       {
         "src": "/pyq/2025-cs2/q31-1.webp",
         "width": 1072,
-        "height": 847,
+        "height": 803,
         "page": 25
       }
     ]
@@ -602,7 +602,7 @@
       {
         "src": "/pyq/2025-cs2/q32-1.webp",
         "width": 1072,
-        "height": 334,
+        "height": 294,
         "page": 25
       }
     ]
@@ -621,7 +621,7 @@
       {
         "src": "/pyq/2025-cs2/q33-1.webp",
         "width": 1072,
-        "height": 341,
+        "height": 297,
         "page": 26
       }
     ]
@@ -640,7 +640,7 @@
       {
         "src": "/pyq/2025-cs2/q34-1.webp",
         "width": 1072,
-        "height": 175,
+        "height": 132,
         "page": 26
       }
     ]
@@ -659,7 +659,7 @@
       {
         "src": "/pyq/2025-cs2/q35-1.webp",
         "width": 1072,
-        "height": 652,
+        "height": 227,
         "page": 26
       }
     ]
@@ -678,7 +678,7 @@
       {
         "src": "/pyq/2025-cs2/q36-1.webp",
         "width": 1072,
-        "height": 1151,
+        "height": 651,
         "page": 27
       }
     ]
@@ -697,7 +697,7 @@
       {
         "src": "/pyq/2025-cs2/q37-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 593,
         "page": 28
       }
     ]
@@ -716,7 +716,7 @@
       {
         "src": "/pyq/2025-cs2/q38-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 759,
         "page": 29
       }
     ]
@@ -735,7 +735,7 @@
       {
         "src": "/pyq/2025-cs2/q39-1.webp",
         "width": 1072,
-        "height": 591,
+        "height": 548,
         "page": 30
       }
     ]
@@ -754,7 +754,7 @@
       {
         "src": "/pyq/2025-cs2/q40-1.webp",
         "width": 1072,
-        "height": 589,
+        "height": 570,
         "page": 30
       }
     ]
@@ -773,7 +773,7 @@
       {
         "src": "/pyq/2025-cs2/q41-1.webp",
         "width": 1072,
-        "height": 620,
+        "height": 576,
         "page": 31
       }
     ]
@@ -792,7 +792,7 @@
       {
         "src": "/pyq/2025-cs2/q42-1.webp",
         "width": 1072,
-        "height": 561,
+        "height": 548,
         "page": 31
       }
     ]
@@ -811,7 +811,7 @@
       {
         "src": "/pyq/2025-cs2/q43-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 786,
         "page": 32
       }
     ]
@@ -830,7 +830,7 @@
       {
         "src": "/pyq/2025-cs2/q44-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 667,
         "page": 33
       }
     ]
@@ -849,7 +849,7 @@
       {
         "src": "/pyq/2025-cs2/q45-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 785,
         "page": 34
       }
     ]
@@ -868,7 +868,7 @@
       {
         "src": "/pyq/2025-cs2/q46-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 661,
         "page": 35
       }
     ]
@@ -887,7 +887,7 @@
       {
         "src": "/pyq/2025-cs2/q47-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 828,
         "page": 36
       }
     ]
@@ -906,7 +906,7 @@
       {
         "src": "/pyq/2025-cs2/q48-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 824,
         "page": 37
       }
     ]
@@ -925,7 +925,7 @@
       {
         "src": "/pyq/2025-cs2/q49-1.webp",
         "width": 1072,
-        "height": 616,
+        "height": 572,
         "page": 38
       }
     ]
@@ -944,7 +944,7 @@
       {
         "src": "/pyq/2025-cs2/q50-1.webp",
         "width": 1072,
-        "height": 565,
+        "height": 504,
         "page": 38
       }
     ]
@@ -963,7 +963,7 @@
       {
         "src": "/pyq/2025-cs2/q51-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 826,
         "page": 39
       }
     ]
@@ -982,7 +982,7 @@
       {
         "src": "/pyq/2025-cs2/q52-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 571,
         "page": 40
       }
     ]
@@ -1001,7 +1001,7 @@
       {
         "src": "/pyq/2025-cs2/q53-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 822,
         "page": 41
       }
     ]
@@ -1020,7 +1020,7 @@
       {
         "src": "/pyq/2025-cs2/q54-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 1028,
         "page": 42
       }
     ]
@@ -1034,12 +1034,12 @@
     "type": "NAT",
     "officialKey": "4.0 to 4.0",
     "marks": 2,
-    "prompt": "Q. 55 Given a computing system with two levels of cache (L1 and L2) and a main memory. The first level (L1) cache access time is 1 nanosecond ( ns ) and the “hit rate” for L1 cache is 90% while the processor is accessing the data from L1 cache. Whereas, for the second level (L2) cache, the “hit rate” is 80% and the “miss penalty” for transferring data from L2 cache to L1 cache is 10 ns . The “miss penalty” for the data to be transferred from main memory to L2 cache is 100 ns . Then the average memory access time in this system in nanoseconds is ___________ . ( rounded off to one decimal place) A 5 - stage instruction pipeline has stage delays of 180, 250, 150, 170, and 250,",
+    "prompt": "Q. 55 Given a computing system with two levels of cache (L1 and L2) and a main memory. The first level (L1) cache access time is 1 nanosecond ( ns ) and the “hit rate” for L1 cache is 90% while the processor is accessing the data from L1 cache. Whereas, for the second level (L2) cache, the “hit rate” is 80% and the “miss penalty” for transferring data from L2 cache to L1 cache is 10 ns . The “miss penalty” for the data to be transferred from main memory to L2 cache is 100 ns . Then the average memory access time in this system in nanoseconds is ___________ . ( rounded off to one decimal place)",
     "images": [
       {
         "src": "/pyq/2025-cs2/q55-1.webp",
         "width": 1072,
-        "height": 368,
+        "height": 278,
         "page": 43
       }
     ]
@@ -1053,12 +1053,12 @@
     "type": "NAT",
     "officialKey": "260.20 to 261.20",
     "marks": 2,
-    "prompt": "Q. 56 Assume that there are no pipeline stalls due to branches and other hazards. The time taken to process 1000 instruct ions in microseconds is __________ . (rounded off to two decimal places)",
+    "prompt": "A 5 - stage instruction pipeline has stage delays of 180, 250, 150, 170, and 250, respectively, in nanoseconds. The delay of an inter - stage latch is 10 nanoseconds. Q. 56 Assume that there are no pipeline stalls due to branches and other hazards. The time taken to process 1000 instruct ions in microseconds is __________ . (rounded off to two decimal places)",
     "images": [
       {
         "src": "/pyq/2025-cs2/q56-1.webp",
         "width": 1072,
-        "height": 179,
+        "height": 181,
         "page": 43
       }
     ]
@@ -1077,7 +1077,7 @@
       {
         "src": "/pyq/2025-cs2/q57-1.webp",
         "width": 1072,
-        "height": 622,
+        "height": 416,
         "page": 43
       }
     ]
@@ -1096,7 +1096,7 @@
       {
         "src": "/pyq/2025-cs2/q58-1.webp",
         "width": 1072,
-        "height": 273,
+        "height": 230,
         "page": 44
       }
     ]
@@ -1115,7 +1115,7 @@
       {
         "src": "/pyq/2025-cs2/q59-1.webp",
         "width": 1072,
-        "height": 908,
+        "height": 755,
         "page": 44
       }
     ]
@@ -1134,7 +1134,7 @@
       {
         "src": "/pyq/2025-cs2/q60-1.webp",
         "width": 1072,
-        "height": 317,
+        "height": 275,
         "page": 45
       }
     ]
@@ -1153,7 +1153,7 @@
       {
         "src": "/pyq/2025-cs2/q61-1.webp",
         "width": 1072,
-        "height": 863,
+        "height": 379,
         "page": 45
       }
     ]
@@ -1172,7 +1172,7 @@
       {
         "src": "/pyq/2025-cs2/q62-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 751,
         "page": 46
       }
     ]
@@ -1191,7 +1191,7 @@
       {
         "src": "/pyq/2025-cs2/q63-1.webp",
         "width": 1072,
-        "height": 735,
+        "height": 692,
         "page": 47
       }
     ]
@@ -1210,7 +1210,7 @@
       {
         "src": "/pyq/2025-cs2/q64-1.webp",
         "width": 1072,
-        "height": 445,
+        "height": 275,
         "page": 47
       }
     ]
@@ -1229,7 +1229,7 @@
       {
         "src": "/pyq/2025-cs2/q65-1.webp",
         "width": 1072,
-        "height": 1193,
+        "height": 250,
         "page": 48
       }
     ]

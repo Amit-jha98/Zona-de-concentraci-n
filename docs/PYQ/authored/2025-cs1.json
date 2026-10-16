@@ -1,0 +1,2836 @@
+[
+  {
+    "id": "2025-cs1-q1",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 1,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Ravi had ______ younger brother who taught at ______ university. He was widely regarded as ______ honorable man. Select the option with the correct sequence of articles to fill in the blanks.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q01-1.webp",
+        "width": 1072,
+        "height": 568,
+        "page": 1
+      }
+    ],
+    "options": [
+      "a; a; an",
+      "the; an; a",
+      "a; an; a",
+      "an; an; a"
+    ],
+    "lessonIds": [
+      "ga-verbal"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. ‘Younger’ begins with a consonant sound /y/, so use ‘a younger brother’. ‘University’ likewise starts with /y/, giving ‘a university’.\n2. The h in ‘honorable’ is silent; its initial sound is a vowel, requiring ‘an honorable man’.\n3. The sequence is **a; a; an, A**. Article choice follows pronunciation rather than the written first letter.",
+    "pitfall": "",
+    "testedConcept": "Verbal ability, grammar and comprehension",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q2",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 2,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "The CEO’s decision to downsize the workforce was considered myopic because it sacrificed long - term stability to accommodate short - term gains. Select the most appropriate option that can replace the word “myopic” without changing the meaning of the sentence.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q02-1.webp",
+        "width": 1072,
+        "height": 592,
+        "page": 2
+      }
+    ],
+    "options": [
+      "visionary",
+      "shortsighted",
+      "progressive",
+      "i nnovative"
+    ],
+    "lessonIds": [
+      "ga-verbal"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. The sentence criticizes sacrificing long-term stability for immediate gains. ‘Myopic’ figuratively means concerned only with the near term.\n2. ‘Shortsighted’ preserves that criticism. Visionary suggests long-term foresight, while progressive and innovative describe different positive qualities.\n3. Choose **B, shortsighted**.",
+    "pitfall": "",
+    "testedConcept": "Verbal ability, grammar and comprehension",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q3",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 3,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "The average marks obtained by a class in an examination were calculated as 30.8. However, while checking the marks entered, the teacher found that the marks of one student were entered incorrectly as 24 instead of 42. After correcting the marks, the average becomes 31.4. How many students does the class have?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q03-1.webp",
+        "width": 1072,
+        "height": 570,
+        "page": 3
+      }
+    ],
+    "options": [
+      "25",
+      "28",
+      "30",
+      "32"
+    ],
+    "lessonIds": [
+      "ga-quantitative"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. Correcting 24 to 42 increases the total marks by 18. The mean increases by 31.4−30.8=0.6.\n2. If there are n students, the total increase is 0.6n=18.\n3. Thus n=18/0.6=**30, C**. The number of students does not change when one recorded mark is corrected.",
+    "pitfall": "",
+    "testedConcept": "Quantitative aptitude and data interpretation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q4",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 4,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Consider the relationships among P, Q, R, S, and T: • P is the brother of Q. • S is the daughter of Q. • T is the sister of S. • R is the mother of Q. The following statements are made based on the relationships given above. (1) R is the grandmother of S. (2) P is the uncle of S and T. (3) R has only one son. (4) Q has only one daughter. Which one of the following options is correct?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q04-1.webp",
+        "width": 1072,
+        "height": 902,
+        "page": 4
+      }
+    ],
+    "options": [
+      "Both (1) and (2) are true.",
+      "Both (1) and (3) are true.",
+      "Only (3) is true.",
+      "Only (4) is true."
+    ],
+    "lessonIds": [
+      "ga-reasoning"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. R is Q’s mother and S is Q’s daughter, so R is S’s grandmother: (1) is true. P is Q’s brother, making him uncle to Q’s daughters S and T: (2) is true.\n2. The information does not restrict R to one son, so (3) is not established.\n3. Q has at least daughters S and T, contradicting (4). Choose **A: (1) and (2)**.",
+    "pitfall": "",
+    "testedConcept": "Analytical and logical reasoning",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q5",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 5,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "According to the map shown in the figure, w hich one of the following statement s is correct? Note: The figure shown is representative. Library Canteen Physics Lab Hospital 1st Main Road 5th Cross Road Chemistry Hostel s Lab N Classrooms W E S",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q05-1.webp",
+        "width": 1072,
+        "height": 1005,
+        "page": 5
+      }
+    ],
+    "options": [
+      "The l ibrary is located to the northwest of the canteen .",
+      "The h ospital is located to the east of the chemistry lab .",
+      "The c hemistry lab is to the southeast of physics lab .",
+      "The c lassrooms and canteen are next to each other ."
+    ],
+    "lessonIds": [
+      "ga-spatial"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. Use the indicated compass: north is up and east is right. Relative positions, rather than the orientation of a road, determine directions.\n2. The chemistry lab is below and to the right of the physics lab, placing it southeast of that lab.\n3. Thus **C** is correct; the other proposed relative positions do not match the map.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Spatial and visual reasoning",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q6",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 6,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "“I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one’s pocket: the pocket - knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past.” (From G.K. Chesterton’s “A Piece of Chalk”) Based only on the information provided in the above passage, which one of the following statements is true?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q06-1.webp",
+        "width": 1072,
+        "height": 738,
+        "page": 6
+      }
+    ],
+    "options": [
+      "The author of the passage carries a mirror in his pocket to reflect upon things.",
+      "The author of the passage had decided to write a poem on epics.",
+      "The pocket - knife is described as the infant of the sword.",
+      "Epics are described as too inconvenient to write."
+    ],
+    "lessonIds": [
+      "ga-verbal"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. The passage explicitly calls the pocket-knife ‘the infant of the sword’. Option C restates that description.\n2. ‘Reflected’ means thought about, not a literal pocket mirror. The proposed poems concern pocket contents, not poems about epics.\n3. The author says the work would be long and the age of epics is past, not that epics are physically inconvenient to write. Choose **C**.",
+    "pitfall": "",
+    "testedConcept": "Verbal ability, grammar and comprehension",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q7",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 7,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "In the diagram, the lines QR and ST are parallel to each other. The shortest distance between these two lines is half the shortest distance between the point P and line QR. What is the ratio of the area of the triangle PST to the area of the trapezium SQRT? Note: The figure shown is representative. P S T Q R",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q07-1.webp",
+        "width": 1072,
+        "height": 895,
+        "page": 7
+      }
+    ],
+    "options": [
+      "1 3",
+      "1 4",
+      "2 5",
+      "1 2"
+    ],
+    "lessonIds": [
+      "ga-quantitative"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. Let the altitude from P to QR be h. The distance from ST to QR is h/2, so P’s altitude to ST is also h/2.\n2. Parallel ST and QR make triangles PST and PQR similar, with linear scale 1/2 and area ratio 1/4.\n3. The trapezium has the remaining 3/4 of the larger triangle’s area. Required ratio=(1/4)/(3/4)=**1/3, A**.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Quantitative aptitude and data interpretation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q8",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 8,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "A fair six - faced dice, with the faces labelled ‘1’, ‘2’, ‘3’, ‘4’, ‘5’, and ‘6’, is rolled thrice. What is the probability of rolling ‘6’ exactly once?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q08-1.webp",
+        "width": 1072,
+        "height": 617,
+        "page": 8
+      }
+    ],
+    "options": [
+      "75 216",
+      "1 6",
+      "1 18",
+      "25 216"
+    ],
+    "lessonIds": [
+      "ga-quantitative"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. Select which of three rolls shows 6: three choices.\n2. For each choice, its probability is (1/6)(5/6)², since both other rolls must avoid 6. The three events are disjoint.\n3. Probability=3×(1/6)×25/36=**75/216, A**. Using 25/216 alone would omit the choice of successful roll.",
+    "pitfall": "",
+    "testedConcept": "Quantitative aptitude and data interpretation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q9",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 9,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "A square paper, shown in figure (I), is folded along the dotted lines as shown in the figures (II) and (III). Then a few cuts are made as shown in figure (IV). Which one of the following patterns will be obtained when the paper is unfolded? Note: The figures shown are representative. (I) (I I ) (I II ) (I V )",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q09-1.webp",
+        "width": 1072,
+        "height": 1105,
+        "page": 9
+      }
+    ],
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "lessonIds": [
+      "ga-spatial"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. Undo the second diagonal fold by reflecting every cut across that fold line, then undo the first fold by another reflection. A cut on a fold joins its own mirror; an interior cut appears separately in each reflected layer.\n2. The triangular boundary cuts point outward at the four sides. The rectangular cuts give square holes at one opposite corner pair and reflected L-shaped pairs at the other.\n3. These positions and orientations match **A**. B rotates square holes into diamonds; C reverses triangular directions; D merges distinct interior holes.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Spatial and visual reasoning",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q10",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 10,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 2,
+    "prompt": "A shop has 4 distinct flavors of ice - cream . One can purchase any number of scoops of any flavor . The order in which the scoops are purchased is inconsequential. If one wants to purchase 3 scoops of ice - cream, i n how many ways can one make th at purchase?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q10-1.webp",
+        "width": 1072,
+        "height": 669,
+        "page": 10
+      }
+    ],
+    "options": [
+      "4",
+      "20",
+      "24",
+      "48 Q.1 1 – Q. 3 5 Carry ONE mark Each"
+    ],
+    "lessonIds": [
+      "ga-quantitative"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Let xi be the number of scoops of flavour i. The purchase is determined by a nonnegative integer solution x1+x2+x3+x4=3.\n2. Stars and bars gives binomial(3+4−1,4−1)=binomial(6,3)=20.\n3. Hence **B**. Ordering scoops would overcount the same purchase; repetition of a flavour is allowed.",
+    "pitfall": "",
+    "testedConcept": "Quantitative aptitude and data interpretation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q11",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 11,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Suppose a program is running on a non - pipelined single processor computer system. The computer is connected to an external device that can interrupt the processor asynchronously. The processor needs to execute the interrupt service routine (ISR) to serve this interrupt. The following steps (not necessarily in order) are taken b y the processor when the interrupt arrives: (i) The processor saves the content of the program counter. (ii) The program counter is loaded with the start address of the ISR. (iii) The processor finishes the present instruction. Which ONE of the following is the CORRECT sequence of steps? ( A ) (iii), (i), (ii) ( B ) (i), (iii), (ii)\n( C ) (i), (ii), (iii) ( D ) (iii), (ii), (i)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q11-1.webp",
+        "width": 1072,
+        "height": 512,
+        "page": 10
+      },
+      {
+        "src": "/pyq/2025-cs1/q11-2.webp",
+        "width": 1072,
+        "height": 215,
+        "page": 11
+      }
+    ],
+    "options": [
+      "Option (A) in the original question below",
+      "Option (B) in the original question below",
+      "Option (C) in the original question below",
+      "Option (D) in the original question below"
+    ],
+    "lessonIds": [
+      "interrupts-dma"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. In the stated nonpipelined model, an asynchronous interrupt is handled after completing the current instruction. That establishes (iii) first.\n2. Save the program counter for the interrupted program before overwriting it, then load the ISR’s starting address.\n3. The order is **(iii),(i),(ii), A**. Saving after the ISR address is loaded would lose the return location.",
+    "pitfall": "",
+    "testedConcept": "I/O interfaces, interrupts and DMA",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q12",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 12,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "Which ONE of the following statements is FALSE regarding the symbol table?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q12-1.webp",
+        "width": 1072,
+        "height": 427,
+        "page": 12
+      }
+    ],
+    "options": [
+      "Symbol tabl e is responsible for keeping track of the scope of variables.",
+      "Symbol table can be implemented using a binary search tree.",
+      "Symbo l table is not required after the parsing phase.",
+      "Symbol table is created during the lexical analysis phase."
+    ],
+    "lessonIds": [
+      "lexical-analysis"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. The symbol table records identifiers, scopes and attributes and can use a search-tree implementation. Entries may begin during lexical analysis and be enriched by later phases.\n2. Semantic checks, type checking, intermediate-code generation and later code generation still need information about those symbols.\n3. Therefore ‘not required after parsing’ is the false statement, **C**.",
+    "pitfall": "",
+    "testedConcept": "Lexical analysis",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q13",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 13,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Which ONE of the following techniques used in compiler code optimization uses live variable analysis?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q13-1.webp",
+        "width": 1072,
+        "height": 452,
+        "page": 13
+      }
+    ],
+    "options": [
+      "Run - time function call management",
+      "Register assignment to variables",
+      "Strength reduction",
+      "Constant folding"
+    ],
+    "lessonIds": [
+      "liveness-analysis"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Two variables whose values are simultaneously live cannot safely share the same register. Liveness intervals or an interference graph express these constraints.\n2. Register allocation/assignment uses this information to reuse registers for nonoverlapping lifetimes and spill when necessary.\n3. Hence **B**. Constant folding and strength reduction rely on different analyses; call management is not the listed allocation optimization.",
+    "pitfall": "",
+    "testedConcept": "Liveness analysis and dead code",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q14",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 14,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Consider a demand paging memory management system with 32 - bit logical address, 20 - bit physical address, and page size of 2048 bytes. Assuming that the memory is byte addressable , what is the maximum number of entries in the page table? 21",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q14-1.webp",
+        "width": 1072,
+        "height": 501,
+        "page": 14
+      }
+    ],
+    "options": [
+      "$2^{21}$",
+      "$2^{20}$",
+      "$2^{22}$",
+      "$2^{24}$"
+    ],
+    "lessonIds": [
+      "paging"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. Page size 2048=2¹¹ bytes consumes 11 offset bits of the 32-bit logical address.\n2. The virtual page number has 32−11=21 bits, allowing 2²¹ virtual pages and hence that many entries in a full per-process page table.\n3. Choose **2²¹, A**. Physical address width limits physical frames, not the number of virtual-page entries.",
+    "pitfall": "",
+    "testedConcept": "Memory management, paging and address translation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q15",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 15,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 1,
+    "prompt": "A schedule of three database transactions T 1 , T 2 , and T 3 is shown . R i ( A ) and W i ( A ) denote read and write of data item A by transaction T i , i = 1 , 2 , 3 . The transaction T 1 aborts at the end. Wh ich other transaction(s) will be required to be rolled back? R 1 ( X ) W 1 ( Y ) R 2 ( X ) R 2 ( Y ) R 3 ( Y ) ABORT ( T 1 )",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q15-1.webp",
+        "width": 1072,
+        "height": 503,
+        "page": 15
+      }
+    ],
+    "options": [
+      "Only T 2",
+      "Only T 3",
+      "Both T 2 and T 3",
+      "Neither T 2 nor T 3"
+    ],
+    "lessonIds": [
+      "concurrency-recovery"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. T1 writes Y without committing. T2 then reads that version of Y, creating a dependency on uncommitted T1.\n2. T3 also reads the Y written by T1. When T1 aborts, both transactions have used a value that must be undone.\n3. Cascading rollback affects **both T2 and T3, C**. Their reads of X do not remove this dependency.",
+    "pitfall": "",
+    "testedConcept": "Locking, concurrency control and recoverability",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q16",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 16,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Identify the ONE CORRECT matching between the OSI layers and the ir corresponding functionalities as shown . OSI Layers Functionalities (a) Network layer (I) Packet routing (b) Transport layer (II) Framing and error handling (c) Datalink layer (III) Host to host communication ( A ) (a) - (I), (b) - (II), (c) - (III) ( B ) ( a ) - (I) , ( b ) - (III) , ( c ) - (II) ( C ) (a) - (II), (b) - (I), (c) - (III) ( D ) (a) - (III), (b) - (II), (c) - (I)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q16-1.webp",
+        "width": 1072,
+        "height": 710,
+        "page": 16
+      }
+    ],
+    "options": [
+      "Option (A) in the original question below",
+      "Option (B) in the original question below",
+      "Option (C) in the original question below",
+      "Option (D) in the original question below"
+    ],
+    "lessonIds": [
+      "network-layering"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Routing packets across networks is a network-layer function: (a)→I.\n2. Transport provides end-to-end communication services, corresponding to the question’s host-to-host label III. Data link groups bits into frames and handles link-level errors: (c)→II.\n3. Thus **(a)–I,(b)–III,(c)–II, B**.",
+    "pitfall": "",
+    "testedConcept": "Layering, encapsulation and protocol services",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q17",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 17,
+    "type": "MCQ",
+    "officialKey": "D",
+    "marks": 1,
+    "prompt": "g ( . ) is a function from A to B , f ( . ) is a function from B to C , and their composition defined as f ( g ( . ) ) is a mapping from A to C . If f ( . ) and f ( g ( . ) ) ar e onto ( surjective) functions, which ONE of the following is TRUE about the function g ( . ) ?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q17-1.webp",
+        "width": 1072,
+        "height": 531,
+        "page": 17
+      }
+    ],
+    "options": [
+      "g ( . ) must be an onto (surjective) function.",
+      "g ( . ) must be a one - to - one (injective) function.",
+      "g ( . ) must be a bijective function, that is, both one - to - one and onto.",
+      "g ( . ) is not required to be a one - to - one or onto function."
+    ],
+    "lessonIds": [
+      "functions"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      3
+    ],
+    "solution": "1. Let A={0,1}, B={u,v}, C={c}. Set g(0)=g(1)=u and f(u)=f(v)=c. Then f and f∘g are both surjective.\n2. Yet g is neither injective (both inputs map to u) nor surjective (v is missed). This meets every premise and refutes all compulsory claims in A–C.\n3. Choose **D**: neither property is required of g.",
+    "pitfall": "",
+    "testedConcept": "Functions, injections and surjections",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q18",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 18,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 1,
+    "prompt": "Let G be any undirected graph with positive edge weights, and T be a minimum spanning tree of G . For any two vertices , u and v , let d 1 ( u , v ) and d 2 ( u , v ) be the shortest distances between u and v in G and T , respectively. W hich ONE of the option s is CORRECT for all possible G , T , u and v ?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q18-1.webp",
+        "width": 1072,
+        "height": 505,
+        "page": 18
+      }
+    ],
+    "options": [
+      "d 1 ( u , v ) = d 2 ( u , v )",
+      "d 1 ( u , v ) ≤ d 2 ( u , v )",
+      "d 1 ( u , v ) ≥ d 2 ( u , v )",
+      "d 1 ( u , v ) ≠ d 2 ( u , v )"
+    ],
+    "lessonIds": [
+      "shortest-paths"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Every path in spanning tree T is also a path in G, because T uses only edges of G.\n2. Minimizing over all G paths can therefore produce no greater distance than minimizing over the restricted paths in T: d1(u,v)≤d2(u,v).\n3. Equality can occur, for example when G itself is a tree; strict inequality can occur when a useful non-tree edge is absent. Thus **B** is the universal statement.",
+    "pitfall": "",
+    "testedConcept": "Shortest paths: Dijkstra, Bellman–Ford and Floyd–Warshall",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q19",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 19,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "Consider the following context - free grammar G , where S , A , and B are the variables (non - terminals), a and b are the terminal symbols, S is the start variable , and the rules of G are described as: S → aaB | Abb A → a | aA B → b | bB Which ONE of the language s L ( G ) is accepted by G ? 2 n n 2",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q19-1.webp",
+        "width": 1072,
+        "height": 669,
+        "page": 19
+      }
+    ],
+    "options": [
+      "L ( G ) = { a b | n ≥ 1 } ∪ { a b | n ≥ 1 } n 2 n 2 n n",
+      "L ( G ) = { a b | n ≥ 1 } ∪ { a b | n ≥ 1 } n n",
+      "L ( G ) = { a b | n ≥ 1 } 2 n 2 n",
+      "L ( G ) = { a b | n ≥ 1 }"
+    ],
+    "lessonIds": [
+      "context-free-grammars"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. A→a|aA generates exactly aⁿ with n≥1; B→b|bB generates bⁿ with n≥1.\n2. S→aaB therefore generates a²bⁿ, while S→Abb generates aⁿb².\n3. Taking their union gives **{a²bⁿ:n≥1}∪{aⁿb²:n≥1}, A**. Neither branch enforces equal arbitrary a and b counts.",
+    "pitfall": "",
+    "testedConcept": "Context-free grammars and derivations",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q20",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 20,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 1,
+    "prompt": "T(0)=1 and T(n)=2T(n−1)+n·2ⁿ for n>0. Find its tight asymptotic order.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q20-1.webp",
+        "width": 1072,
+        "height": 500,
+        "page": 20
+      }
+    ],
+    "options": [
+      "T ( n ) = Θ ( n 2 ) n",
+      "T ( n ) = Θ ( n 2 ) 2 n",
+      "T ( n ) = Θ ( ( log n ) 2 ) n",
+      "T ( n ) = Θ ( 4 )"
+    ],
+    "lessonIds": [
+      "algorithm-recurrences"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. Divide T(n)=2T(n−1)+n·2ⁿ by 2ⁿ and define U(n)=T(n)/2ⁿ. The recurrence becomes U(n)=U(n−1)+n with U(0)=1.\n2. Summing yields U(n)=1+n(n+1)/2=Θ(n²).\n3. Therefore **T(n)=Θ(n²2ⁿ), A**.",
+    "pitfall": "",
+    "testedConcept": "Divide-and-conquer recurrence analysis",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q21",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 21,
+    "type": "MSQ",
+    "officialKey": "B;D",
+    "marks": 1,
+    "prompt": "+ Consider the following B tree with 5 nodes, in which a node can store at mos t 3 key values. + T he value 23 is now inserted in the B tree. Which of the following options(s) is/are CORRECT?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q21-1.webp",
+        "width": 1072,
+        "height": 623,
+        "page": 21
+      }
+    ],
+    "options": [
+      "None of the nodes will split.",
+      "At least one node will split and redistribute.",
+      "The total number o f nodes will remain same.",
+      "The height of the tree will increase."
+    ],
+    "lessonIds": [
+      "b-plus-trees"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      3
+    ],
+    "solution": "1. Inserting 23 targets the rightmost leaf [20,21,22], already at its maximum of three keys. That leaf must split and send a separator to its parent.\n2. The root already holds three keys and cannot accept the extra separator without splitting. A new root is required.\n3. At least one node splits and the height increases; the node count also grows. Select **B,D**.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "B-trees and B+ trees",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q22",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 22,
+    "type": "MSQ",
+    "officialKey": "B;D",
+    "marks": 1,
+    "prompt": "Consider the 3 - way handshaking protocol for TCP connection establishme nt. Let the three packets exchanged during the connection establishment be denoted as P1, P2, and P3 , in order. Which of the following option(s) is/are TRUE with respect to TCP header flags that are set in the packets ?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q22-1.webp",
+        "width": 1072,
+        "height": 503,
+        "page": 22
+      }
+    ],
+    "options": [
+      "P3 : SYN = 1, ACK = 1",
+      "P2: SYN = 1, ACK = 1",
+      "P2 : SYN = 0, ACK = 1",
+      "P1 : SYN = 1"
+    ],
+    "lessonIds": [
+      "tcp-flow-control"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      3
+    ],
+    "solution": "1. The active opener sends P1 with SYN=1. The peer responds P2 with SYN=1,ACK=1.\n2. P3 acknowledges the peer’s SYN with ACK=1 but does not send another SYN, so A is false. C also misstates P2.\n3. The true choices are **B,D**.",
+    "pitfall": "",
+    "testedConcept": "TCP reliability, handshake and flow control",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q23",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 23,
+    "type": "MSQ",
+    "officialKey": "A;D",
+    "marks": 1,
+    "prompt": "Consider the given system of linear equations for variables x and y , where k is a real - valued constant . Which of the following option(s) is/are CORRECT? x + ky = 1 kx + y = − 1",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q23-1.webp",
+        "width": 1072,
+        "height": 574,
+        "page": 23
+      }
+    ],
+    "options": [
+      "There is exactly one value of k for which the above system of equations has no solution.",
+      "There exist an infinite number of values of k for which the system of equations has no solution.",
+      "There exists exactly one value of k for which the system of equations has exactly one so l ution .",
+      "There exists exactly one value of k for which the system of equations has an infinite number of solutions."
+    ],
+    "lessonIds": [
+      "linear-equations"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      3
+    ],
+    "solution": "1. The coefficient determinant is 1−k². For every k≠±1, it is nonzero and the solution is unique.\n2. For k=1 the equations have the same left side but right sides 1 and −1, so no solution exists. For k=−1, the second equation is the negative of the first, giving infinitely many solutions.\n3. Exactly one k gives no solution and exactly one gives infinitely many: **A,D**.",
+    "pitfall": "",
+    "testedConcept": "Systems of linear equations",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q24",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 24,
+    "type": "MSQ",
+    "officialKey": "B;D",
+    "marks": 1,
+    "prompt": "Let X b e a 3 - variable Boolean function that produces output as ‘ 1 ’ when at least two of the input variables are ‘ 1 ’ . Which of the follo wing statement(s) is/are CORRECT , where a , b , c , d , e are Boolean variables?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q24-1.webp",
+        "width": 1072,
+        "height": 480,
+        "page": 24
+      }
+    ],
+    "options": [
+      "X ( a , b , X ( c , d , e ) ) = X ( X ( a , b , c ) , d , e )",
+      "X ( a , b , X ( a , b , c ) ) = X ( a , b , c )",
+      "X ( a , b , X ( a , c , d ) ) = ( X ( a , b , a ) AND X ( c , d , c ) )",
+      "X ( a , b , c ) = X ( a , X ( a , b , c ) , X ( a , c , c ) )"
+    ],
+    "lessonIds": [
+      "boolean-algebra"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      3
+    ],
+    "solution": "1. Write X as the three-input majority function. For B, if a=b both sides equal a; if a≠b majority(a,b,c)=c and both sides equal c. Thus B holds.\n2. X(a,c,c)=c. For D, if a=c both sides equal a; otherwise X(a,b,c)=b and the right side is again X(a,b,c). Thus D holds.\n3. A fails at (a,b,c,d,e)=(0,0,0,1,1), giving 0 versus 1. C fails at (0,1,1,1), giving 1 versus 0. Select **B,D**.",
+    "pitfall": "",
+    "testedConcept": "Boolean algebra and logic gates",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q25",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 25,
+    "type": "MSQ",
+    "officialKey": "B;D",
+    "marks": 1,
+    "prompt": "The number − 6 can be represented as 1010 in 4 - bit 2’s complement representation. Which of the following is/are CORRECT 2’s complement representation(s) of − 6 ?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q25-1.webp",
+        "width": 1072,
+        "height": 453,
+        "page": 25
+      }
+    ],
+    "options": [
+      "1000 1010 in 8 - bits",
+      "1111 1010 in 8 - bits",
+      "1000 0000 0000 1010 in 16 - bits",
+      "1111 1111 1111 1010 in 16 - bits"
+    ],
+    "lessonIds": [
+      "number-systems"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      3
+    ],
+    "solution": "1. Widening a two’s-complement integer requires repeating its sign bit. The sign bit of 1010 is 1.\n2. Eight-bit sign extension is 11111010=250−256=−6. Sixteen-bit extension is 1111111111111010=65530−65536=−6.\n3. Adding only one leading 1 and filling with zeros instead changes the value. Select **B,D**.",
+    "pitfall": "",
+    "testedConcept": "Binary, octal, hexadecimal and signed representations",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q26",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 26,
+    "type": "MSQ",
+    "officialKey": "A;B",
+    "marks": 1,
+    "prompt": "Which of the fo llowing statement(s) is/are TRU E for any binary search tree (BST) having n distinct integers?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q26-1.webp",
+        "width": 1072,
+        "height": 453,
+        "page": 26
+      }
+    ],
+    "options": [
+      "The maximum length of a path from the root node to any other node is ( n − 1 ) .",
+      "An inorder traversal will always produce a sorted sequence of elements.",
+      "Finding an element takes O ( log 2 n ) time in the worst case.",
+      "Every BST is also a Min - Heap."
+    ],
+    "lessonIds": [
+      "binary-search-trees"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      1
+    ],
+    "solution": "1. A BST with n nodes can be a chain, with maximum possible root-to-node path length n−1 edges. A is the worst-case height bound accepted here.\n2. Inorder traversal is sorted because every left-subtree key is smaller and every right-subtree key larger than its root: B.\n3. An unbalanced chain needs O(n) worst-case search, not O(log n); the BST rule also does not make each parent the minimum of its children. C,D are false. Select **A,B**.",
+    "pitfall": "",
+    "testedConcept": "Binary search trees",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q27",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 27,
+    "type": "MSQ",
+    "officialKey": "A;B;C",
+    "marks": 1,
+    "prompt": "A partial data path of a processor is given in the figu re, where RA, RB, and RZ are 32 - bit registers. Which option(s) is/are CORRECT related to arithmetic operations using the data path as shown?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q27-1.webp",
+        "width": 1072,
+        "height": 870,
+        "page": 27
+      }
+    ],
+    "options": [
+      "The data path can implement arithmetic operations involving two registers.",
+      "The data path can implement arithmetic operations involving one register and one immediate value.",
+      "The data path can implement arithmetic operations involving two immediate values.",
+      "The data path can only implement arithmetic operations involving one register and one immediate value."
+    ],
+    "lessonIds": [
+      "alu-design"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      1,
+      2
+    ],
+    "solution": "1. Each ALU input has an independent multiplexer selecting a register or an immediate value.\n2. Selecting both registers gives register–register arithmetic; selecting one immediate gives register–immediate arithmetic; selecting both immediates gives immediate–immediate arithmetic. All can write the result to RZ.\n3. Thus **A,B,C** are supported, and the restrictive ‘only’ claim in D is false.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "ALU and datapath design",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q28",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 28,
+    "type": "MSQ",
+    "officialKey": "D",
+    "marks": 1,
+    "prompt": "A regular language L is accepted by a non - deterministic finite automaton (NFA) with n states. Which of the following statement(s) is/are FALSE?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q28-1.webp",
+        "width": 1072,
+        "height": 455,
+        "page": 28
+      }
+    ],
+    "options": [
+      "L may have an accepting NFA with < n states.",
+      "L may have an accepting DFA with < n states. n",
+      "There exists a DFA with ≤ 2 states that accepts L . n",
+      "Every DFA that accepts L has > 2 states."
+    ],
+    "lessonIds": [
+      "nfa"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      3
+    ],
+    "solution": "1. The given n-state NFA need not be minimal; a smaller NFA or DFA may recognize the same language, so A,B are possible.\n2. Subset construction always gives an equivalent DFA with at most 2ⁿ subsets/states, confirming C.\n3. D contradicts this bound by claiming every DFA needs more than 2ⁿ states. The false statement is **D**.",
+    "pitfall": "",
+    "testedConcept": "Nondeterminism and subset construction",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q29",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 29,
+    "type": "NAT",
+    "officialKey": "21 to 21",
+    "marks": 1,
+    "prompt": "Suppose in a multiprogramming environment, the following C program segment is executed. A process goes into I/O queue whenever an I/O related operation is performed. Assume that there will always be a context switch whenever a process requests for an I/O , and also whenever the process returns from an I/O . T he number of times the process will enter the ready queue during its lifetime ( not counting the time the process enters the ready queue when it is run initially ) is _______ . (Answer in integer) int main() { int x=0,i=0; scanf( \" %d \" ,&x) ; for(i=0; i<20; i++) { x = x+20; printf( \" %d \\ n \" ,x); } return 0; }",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q29-1.webp",
+        "width": 1072,
+        "height": 592,
+        "page": 29
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "processes"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          21,
+          21
+        ]
+      ]
+    },
+    "solvedAnswer": "21",
+    "solution": "1. Each I/O request moves the running process into a waiting/I/O state, not immediately into Ready. Completion of that I/O moves it into Ready.\n2. There is one scanf and twenty printf operations, with the problem explicitly requiring a context switch on every I/O request and return.\n3. Each of those 21 returns adds one Ready-queue entry. Excluding initial admission, the answer is **21**.",
+    "pitfall": "",
+    "testedConcept": "Processes, fork and process states",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q30",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 30,
+    "type": "NAT",
+    "officialKey": "195 to 195",
+    "marks": 1,
+    "prompt": "Let S be the set of all ternary strings defined over the alphabet { a , b , c } . Consider all strings in S that contain at least one occurrence of two consecutive symbols, that is, “aa”, “bb” or “cc”. The number of such strings of length 5 that are possible is _______. (Answer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q30-1.webp",
+        "width": 1072,
+        "height": 227,
+        "page": 30
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "counting"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          195,
+          195
+        ]
+      ]
+    },
+    "solvedAnswer": "195",
+    "solution": "1. There are 3⁵=243 ternary strings of length 5. Count the complement: strings with no equal adjacent symbols.\n2. Choose the first symbol in 3 ways and each later symbol in 2 ways to avoid matching its predecessor. This gives 3×2⁴=48 strings.\n3. The required count with at least one aa,bb or cc is 243−48=**195**.",
+    "pitfall": "",
+    "testedConcept": "Counting and inclusion–exclusion",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q31",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 31,
+    "type": "NAT",
+    "officialKey": "-2.1 to -1.9",
+    "marks": 1,
+    "prompt": "f(x)=ax+b for x<1 and f(x)=x³+x²+1 for x≥1. If f is differentiable everywhere, find b to one decimal place.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q31-1.webp",
+        "width": 1072,
+        "height": 291,
+        "page": 31
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "continuity-differentiability"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          -2.1,
+          -1.9
+        ]
+      ]
+    },
+    "solvedAnswer": "-2",
+    "solution": "1. At x=1 the right branch x³+x²+1 has value 3 and derivative 3x²+2x=5.\n2. Differentiability forces the left derivative a=5 and continuity forces a+b=3.\n3. Thus b=3−5=**−2.0**. Matching values alone would not determine both constants.",
+    "pitfall": "",
+    "testedConcept": "Continuity and differentiability",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q32",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 32,
+    "type": "NAT",
+    "officialKey": "0.49 to 0.51",
+    "marks": 1,
+    "prompt": "A box contains 5 coins: 4 regular coins and 1 fake coin. When a regular coin is tossed, the probability P ( h ead ) = 0 . 5 and for a fake coin, P ( h ead ) = 1 . You pick a coin at random and toss it twice, and get two heads. The probability that the coin you have chosen is the fake coin is _______. ( ro unded off to two decimal places)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q32-1.webp",
+        "width": 1072,
+        "height": 158,
+        "page": 32
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "conditional-bayes"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          0.49,
+          0.51
+        ]
+      ]
+    },
+    "solvedAnswer": "0.5",
+    "solution": "1. Let F be the fake coin and H2 be two heads. P(F)=1/5, P(H2|F)=1, and P(H2|regular)=1/4.\n2. Total P(H2)=(1/5)×1+(4/5)×(1/4)=2/5.\n3. Bayes gives P(F|H2)=(1/5)/(2/5)=**0.50**. Two heads increase the fake coin’s probability above its prior 0.20.",
+    "pitfall": "",
+    "testedConcept": "Conditional probability and Bayes’ theorem",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q33",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 33,
+    "type": "NAT",
+    "officialKey": "435 to 435",
+    "marks": 1,
+    "prompt": "The pseudocode of a function fun() is given below: fun(int A[0,...,n - 1]){ for i=0 to n - 2 for j=0 to n - i - 2 if (A[j]>A[j+1]) then swap A[j] and A[j+1] } Let A [ 0 , ... , 29 ] be an array storing 30 distinct integers in descending order. The number of swap operations that will be performed, if the function fun() is called with A [ 0 , ... , 29 ] as argument, is __________. (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q33-1.webp",
+        "width": 1072,
+        "height": 399,
+        "page": 33
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "comparison-sorting"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          435,
+          435
+        ]
+      ]
+    },
+    "solvedAnswer": "435",
+    "solution": "1. This is bubble sort. Each adjacent inversion removed by a swap decreases the inversion count by exactly one, and sorting removes them all.\n2. A descending array of 30 distinct integers has an inversion for every pair: binomial(30,2)=30×29/2.\n3. Hence **435 swaps** occur.",
+    "pitfall": "",
+    "testedConcept": "Comparison sorting and stability",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q34",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 34,
+    "type": "NAT",
+    "officialKey": "25 to 25",
+    "marks": 1,
+    "prompt": "#include <stdio.h> void foo(int *p, int x) { *p=x; } int main(){ int *z ; int a = 20, b = 25; z = &a; foo (z, b); printf(\"%d\",a); return 0; } The output of the given C program is __________. (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q34-1.webp",
+        "width": 1072,
+        "height": 449,
+        "page": 34
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "c-pointers"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          25,
+          25
+        ]
+      ]
+    },
+    "solvedAnswer": "25",
+    "solution": "1. z=&a points to the variable a in main. Passing z copies the address into p, not the integer stored at that address.\n2. foo executes *p=x with x=b=25, modifying main’s a through that pointer.\n3. The printed value is **25**. Passing the pointer by value still permits modification of the pointed-to object.",
+    "pitfall": "",
+    "testedConcept": "C pointers, arrays and pointer arithmetic",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q35",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 35,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 1,
+    "prompt": "The height of any rooted tree is defined as the maximum number of edges in the path from the root node to any leaf node. Suppose a Min - H eap T stores 32 keys. T he height of T is _____________. (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q35-1.webp",
+        "width": 1072,
+        "height": 248,
+        "page": 35
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "binary-heaps"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    "solvedAnswer": "5",
+    "solution": "1. A binary heap is a complete binary tree: levels before the last are full. Levels of edge-heights 0 through 4 hold 1+2+4+8+16=31 nodes.\n2. The 32nd node occupies level 5, and the height is measured in edges as specified.\n3. Height=floor(log₂32)=**5**, independent of min-heap key ordering.",
+    "pitfall": "",
+    "testedConcept": "Binary heaps and priority queues",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q36",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 36,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Consider a memory system with 1M bytes of main memory and 16K bytes of cache memory . Assume that the processor generates 20 - bit memory address, and the cache block size is 16 bytes. If the cache uses direct mapping, how many bits will be 10 required to store all the tag values? [Assume memory is byte addressable, 1K=2 , 20 1M=2 .] 10",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q36-1.webp",
+        "width": 1072,
+        "height": 529,
+        "page": 36
+      }
+    ],
+    "options": [
+      "$6\\times2^{10}$",
+      "$8\\times2^{10}$",
+      "$2^{12}$",
+      "$2^{14}$"
+    ],
+    "lessonIds": [
+      "cache-mapping"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. Cache size 16 KiB with 16-byte blocks gives 2¹⁴/2⁴=2¹⁰ cache lines and ten index bits. Block offset takes four bits.\n2. From a 20-bit address, tag bits per line=20−10−4=6.\n3. All tags together require **6×2¹⁰ bits, A**. This excludes valid and other status bits because the question asks only for tags.",
+    "pitfall": "",
+    "testedConcept": "Cache mapping and address fields",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q37",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 37,
+    "type": "MCQ",
+    "officialKey": "B",
+    "marks": 2,
+    "prompt": "A processor has 64 general - purpose registers and 50 distinct instruction types. An instruction is encoded in 32 - bits. What is the maximum number of bits that can be used to store the imm ediate operand for the given instruction? ADD R1, #25 // R1 = R1 + 25",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q37-1.webp",
+        "width": 1072,
+        "height": 523,
+        "page": 37
+      }
+    ],
+    "options": [
+      "16",
+      "20",
+      "22",
+      "24"
+    ],
+    "lessonIds": [
+      "instruction-set"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Fifty operation types require ceil(log₂50)=6 opcode bits. Sixty-four registers require 6 bits for the register operand.\n2. ADD R1,#25 reads and writes the same register, so only one register field is needed in the specified instruction.\n3. Maximum immediate width=32−6−6=**20 bits, B**.",
+    "pitfall": "",
+    "testedConcept": "Instruction sets and instruction formats",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q38",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 38,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "A computer has two processors, M 1 and M 2 . Four processes P 1 , P 2 , P 3 , P 4 with CPU bursts of 20, 16, 25, and 10 milliseconds, respectively, arrive at the same time and these are the only processes in the system. The scheduler uses non - preemptive priority scheduling , with priorities decided as follows : • M 1 uses priority of execution for the processes as , P 1 > P 3 > P 2 > P 4 , i.e., P 1 and P 4 have highest and lowest priorities, respectively. • M 2 uses priority of execution for the processes as , P 2 > P 3 > P 4 > P 1 , i.e., P 2 and P 1 have highest and lowest priorities, respectively. A process P i is scheduled to a processor M k , if the processor is free and no other process P j is waiting with higher priority. At any given point of time, a process can be allocated to any one of the free processors without violating the execution priority rules. Ignore the context switch time. What will be the average waiting time of the process es in milliseconds?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q38-1.webp",
+        "width": 1072,
+        "height": 777,
+        "page": 38
+      }
+    ],
+    "options": [
+      "9.00",
+      "8.75",
+      "6.50",
+      "7.50"
+    ],
+    "lessonIds": [
+      "cpu-scheduling"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. At time 0, M1 selects P1 (20 ms) and M2 selects P2 (16 ms), each its highest-priority available job. Their waiting times are zero.\n2. At t=16, M2 becomes free and selects P3, whose wait is 16 ms. At t=20 M1 becomes free and runs the remaining P4, whose wait is 20 ms.\n3. Average waiting=(0+0+16+20)/4=**9.00 ms, A**.",
+    "pitfall": "",
+    "testedConcept": "CPU scheduling and performance metrics",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q39",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 39,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Consider two relations describing teams and players in a sports league: • teams ( tid , tname ) : tid , tnam e are team - id and team - name, respectively • players ( pid , pname , tid ) : pid , pname , and tid denote player - id, player - name and the team - id of the player, respectively Which ONE of the following tuple relational calculus queries returns the name of the players who play for the team having tname as ′ MI ′ ?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q39-1.webp",
+        "width": 1072,
+        "height": 601,
+        "page": 39
+      }
+    ],
+    "options": [
+      "{ p . pname | p ∈ players ∧ ∃ t ( t ∈ teams ∧ p . tid = t . tid ∧ t . tname = ′ MI ′ ) }",
+      "{ p . pname | p ∈ teams ∧ ∃ t ( t ∈ players ∧ p . tid = t . tid ∧ t . tname = ′ MI ′ ) }",
+      "{ p . pname | p ∈ players ∧ ∃ t ( t ∈ teams ∧ t . tname = ′ MI ′ ) }",
+      "{ p . pname | p ∈ teams ∧ ∃ t ( t ∈ players ∧ t . tname = ′ MI ′ ) }"
+    ],
+    "lessonIds": [
+      "tuple-calculus"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. The result must project pname from a tuple p in players, not from teams. That eliminates B,D.\n2. A player qualifies only when there exists a team tuple t with p.tid=t.tid and t.tname='MI'. A includes both this join condition and the name condition.\n3. C merely asserts that an MI team exists and would admit unrelated players. The correct query is **A**.",
+    "pitfall": "",
+    "testedConcept": "Tuple relational calculus and safety",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q40",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 40,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "A packet with the destination IP address 145.36.109.70 arrives at a router wh ose routing table is shown . Which interface will the packet be forwarded to?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q40-1.webp",
+        "width": 1072,
+        "height": 705,
+        "page": 40
+      }
+    ],
+    "options": [
+      "E3",
+      "E1",
+      "E2",
+      "E5"
+    ],
+    "lessonIds": [
+      "ipv4-cidr"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. The destination matches 145.36.0.0/16. Its third octet 109 lies in 64–127, so it also matches 145.36.64.0/18.\n2. It does not match the /17 beginning at 128 or the /24 at third octet 255.\n3. The longest matching entry is /18, mapped to **E3, A**.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "IPv4 addressing, CIDR and longest-prefix matching",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q41",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 41,
+    "type": "MCQ",
+    "officialKey": "D",
+    "marks": 2,
+    "prompt": "A has rows (1,1) and (1,−1). What are the eigenvalues of A¹³?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q41-1.webp",
+        "width": 1072,
+        "height": 442,
+        "page": 41
+      }
+    ],
+    "options": [
+      "1 , − 1",
+      "2 √ 2 , − 2 √ 2",
+      "4 √ 2 , − 4 √ 2",
+      "64 √ 2 , − 64 √ 2"
+    ],
+    "lessonIds": [
+      "eigenvalues"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      3
+    ],
+    "solution": "1. For A=[[1,1],[1,−1]], direct multiplication gives A²=2I. Its eigenvalues are ±√2.\n2. Raising A to power 13 raises those eigenvalues to the 13th power: (±√2)¹³=±2⁶√2.\n3. Hence the eigenvalues of A¹³ are **64√2 and −64√2, D**.",
+    "pitfall": "",
+    "testedConcept": "Eigenvalues and eigenvectors",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q42",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 42,
+    "type": "MCQ",
+    "officialKey": "A",
+    "marks": 2,
+    "prompt": "Consider the following four variable Boolean function in sum - of - product form F ( b 3 , b 2 , b 1 , b 0 ) = ∑ ( 0 , 2 , 4 , 8 , 10 , 11 , 12 ) . where the value of the function is computed by considering b 3 b 2 b 1 b 0 as a 4 - bit binary number, where b 3 denotes the most significant bit and b 0 denotes the least significant bit. Note that there are no don’t care terms. Which ONE of the following options is the CORRECT minimized Boolean expression for F ?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q42-1.webp",
+        "width": 1072,
+        "height": 603,
+        "page": 42
+      }
+    ],
+    "options": [
+      "b ̅ 1 b ̅ 0 + b ̅ 2 b ̅ 0 + b 1 b ̅ 2 b 3",
+      "b ̅ 1 b ̅ 0 + b ̅ 2 b ̅ 0",
+      "b ̅ 2 b ̅ 0 + b 1 b 2 b 3",
+      "b ̅ 0 b ̅ 2 + b ̅ 3"
+    ],
+    "lessonIds": [
+      "karnaugh-maps"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0
+    ],
+    "solution": "1. On a four-variable K-map, group minterms {0,4,8,12} to get ¬b1¬b0. Group {0,2,8,10} to get ¬b2¬b0.\n2. Minterm 11 still needs coverage; pairing {10,11} gives b3¬b2b1. No group can include adjacent zero minterms because there are no don’t-cares.\n3. Their sum is **¬b1¬b0+¬b2¬b0+b1¬b2b3, A**. Omitting the last term misses 11.",
+    "pitfall": "",
+    "testedConcept": "Karnaugh maps",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q43",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 43,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Let G ( V , E ) be an undirected and unweighted graph with 100 vertices. Let d ( u , v ) d e note the number of edges in a shortest path betw een vertices u and v in V . Let the maximum value of d ( u , v ) , u , v ∈ V such that u ≠ v , be 30 . Let T be any breadth - first - search tree of G . W hich ONE of the given option s is CORRECT for every such graph G ?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q43-1.webp",
+        "width": 1072,
+        "height": 531,
+        "page": 43
+      }
+    ],
+    "options": [
+      "The height of T is exactly 15 .",
+      "The height of T is exactly 30 .",
+      "The height of T is at least 15 .",
+      "The height of T is at least 30 ."
+    ],
+    "lessonIds": [
+      "graph-traversals"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. A BFS tree rooted at r has height h=maxv d(r,v). Let u,v be a pair at the graph diameter 30.\n2. Triangle inequality gives 30=d(u,v)≤d(u,r)+d(r,v)≤2h. Thus h≥15. Also h≤30, but the exact value depends on the root and graph.\n3. Only **at least 15, C** is guaranteed.",
+    "pitfall": "",
+    "testedConcept": "Breadth-first and depth-first search",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q44",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 44,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Consider the following two languages over the alphabet { a , b } : + + L 1 = { αβα | α ∈ { a , b } AND β ∈ { a , b } } + + L 2 = { αβα | α ∈ { a } AND β ∈ { a , b } } Which ONE of the following statements is CORRECT?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q44-1.webp",
+        "width": 1072,
+        "height": 570,
+        "page": 44
+      }
+    ],
+    "options": [
+      "Both L 1 and L 2 are regular languages.",
+      "L 1 is a regular language but L 2 is not a regular language.",
+      "L 1 is not a regular language but L 2 is a regular language.",
+      "Neither L 1 nor L 2 is a regular language."
+    ],
+    "lessonIds": [
+      "pumping-regular"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. L2 is regular: choosing α=a shows every string starting and ending in a with a nonempty middle qualifies; conversely any allowed α forces this property. Thus L2=a(a+b)+a.\n2. Intersect L1 with the regular language a+ba+b. A word aᵖbaᑫb belongs precisely when q>p≥1: the repeated prefix/suffix must be aᵖb and the middle aᑫ⁻ᵖ must be nonempty.\n3. This intersection is nonregular: for pumping length p, pumping the initial a-run of aᵖbaᵖ⁺¹b sufficiently many times makes its first run at least as long as the second, leaving the intersection. Hence L1 is nonregular and **C** is correct.",
+    "pitfall": "",
+    "testedConcept": "Pumping lemma for regular languages",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q45",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 45,
+    "type": "MCQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Consider the following two languages over the alphabet { a , b , c } , where m and n are natural numbers . m m m + n L 1 = { a b c | m , n ≥ 1 } m n m + n L 2 = { a b c | m , n ≥ 1 } Which ONE of the following statements is CORRECT?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q45-1.webp",
+        "width": 1072,
+        "height": 596,
+        "page": 45
+      }
+    ],
+    "options": [
+      "Both L 1 and L 2 are context - free languages.",
+      "L 1 is a context - free language but L 2 is not a context - free language.",
+      "L 1 is not a context - free language but L 2 is a context - free language.",
+      "Neither L 1 nor L 2 are context - free languages."
+    ],
+    "lessonIds": [
+      "cfl-pumping-closure"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. L2={aᵐbⁿcᵐ⁺ⁿ:m,n≥1} is context-free. A PDA pushes for each a and b, checks phase order, then pops once per c and accepts when counts match.\n2. L1={aᵐbᵐcᵐ⁺ⁿ:m,n≥1} is not context-free. For pumping length p, use aᵖbᵖcᵖ⁺¹. A pumping window of length at most p cannot touch both the a and c blocks.\n3. Pumping that changes unequal a/b counts violates a=b; pumping both a,b equally upward makes c≤a; pumping only c downward makes c≤a. Every allowed split fails some pumping value. Thus **C**.",
+    "pitfall": "",
+    "testedConcept": "CFL pumping lemma and closure properties",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q46",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 46,
+    "type": "MSQ",
+    "officialKey": "A;D",
+    "marks": 2,
+    "prompt": "Which of the following statement(s) is/are TRUE while computing First and Follow during top down parsing by a compiler?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q46-1.webp",
+        "width": 1072,
+        "height": 503,
+        "page": 46
+      }
+    ],
+    "options": [
+      "For a production A → ε , ε will be added to First ( A ) .",
+      "If there is any input right end marker , it will be added to First ( S ) , where S is the start symbol.",
+      "For a production A → ε , ε will be added to Follow ( A ) .",
+      "If there is any input right end marker , it will be added to Follow ( S ) , where S is the start symbol."
+    ],
+    "lessonIds": [
+      "first-follow"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          0,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      0,
+      3
+    ],
+    "solution": "1. An epsilon production permits the nonterminal to derive the empty string, so epsilon enters FIRST(A): A is true.\n2. FOLLOW lists terminals that can occur after a nonterminal; it never includes epsilon, making C false.\n3. The end marker belongs in FOLLOW of the start symbol, not automatically its FIRST set. D is true; B false. Select **A,D**.",
+    "pitfall": "",
+    "testedConcept": "FIRST, FOLLOW and predictive parsing",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q47",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 47,
+    "type": "MSQ",
+    "officialKey": "B;C",
+    "marks": 2,
+    "prompt": "Consider a relational schema team ( name , city , owner ) , with functional dependencies { name → city , name → owner } . The relation team is decomposed into two relations, t 1 ( name , city ) and t 2 ( name , owner ) . Which of the following statement(s) is/are TRUE?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q47-1.webp",
+        "width": 1072,
+        "height": 527,
+        "page": 47
+      }
+    ],
+    "options": [
+      "The relation team is NOT in BCNF.",
+      "The relation s t 1 and t 2 are in BCNF.",
+      "The decomposition constitutes a lossless join.",
+      "The relation team is NOT in 3 NF."
+    ],
+    "lessonIds": [
+      "decomposition"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      2
+    ],
+    "solution": "1. name determines every attribute of team, so it is a key. The nontrivial dependencies have a superkey determinant, making the original schema BCNF and therefore also 3NF. A,D are false.\n2. The projected dependencies make name a key in each two-attribute component, so both are BCNF: B.\n3. Their intersection is {name}, which determines both components. The binary lossless-join criterion holds: C. Select **B,C**.",
+    "pitfall": "",
+    "testedConcept": "Lossless decomposition and dependency preservation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q48",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 48,
+    "type": "MSQ",
+    "officialKey": "B;D",
+    "marks": 2,
+    "prompt": "Which of the following predicate logic formulae/formula is/are CORRECT representation(s) of the statement: “ Everyone has exactly one mother ”? The meanings of the predicates used are: • mot h er ( y , x ) : y is the mother of x • noteq ( x , y ) : x and y are not equal",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q48-1.webp",
+        "width": 1072,
+        "height": 584,
+        "page": 48
+      }
+    ],
+    "options": [
+      "∀ x ∃ y ∃ z ( mot h er ( y , x ) ∧ ¬ mot h er ( z , x ) )",
+      "∀ x ∃ y [ mot h er ( y , x ) ∧ ∀ z ( noteq ( z , y ) → ¬ mot h er ( z , x ) ) ]",
+      "∀ x ∀ y [ mot h er ( y , x ) → ∃ z ( mot h er ( z , x ) ∧ ¬ noteq ( z , y ) ) ]",
+      "∀ x ∃ y [ mot h er ( y , x ) ∧ ¬ ∃ z ( noteq ( z , y ) ∧ mot h er ( z , x ) ) ]"
+    ],
+    "lessonIds": [
+      "first-order-logic"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1,
+      3
+    ],
+    "solution": "1. Exactly one requires both existence of a mother y and exclusion of every distinct z from also being a mother. B states these two conditions directly.\n2. D states existence together with ‘there does not exist a different mother’, which is equivalent to that exclusion.\n3. A only excludes some nonmother and permits several mothers. C can hold with no mothers at all and also permits multiple mothers by choosing z=y. Select **B,D**.",
+    "pitfall": "",
+    "testedConcept": "First-order logic and quantifiers",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q49",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 49,
+    "type": "MSQ",
+    "officialKey": "B",
+    "marks": 2,
+    "prompt": "A = { 0 , 1 , 2 , 3 , ... } is the set of non - negative integers . Let Ϝ be the set of functions from A to itself. For any two functions , f 1 , f 2 ∈ Ϝ , we define ( f 1 ⨀ f 2 ) ( n ) = f 1 ( n ) + f 2 ( n ) for every number n in A . Which of the following is/are CORRECT about the mathematical structure ( Ϝ , ⨀ ) ?",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q49-1.webp",
+        "width": 1072,
+        "height": 507,
+        "page": 49
+      }
+    ],
+    "options": [
+      "( Ϝ , ⨀ ) is an Abelian group .",
+      "( Ϝ , ⨀ ) is an Abelian monoid .",
+      "( Ϝ , ⨀ ) is a non - Abelian group .",
+      "( Ϝ , ⨀ ) is a non - Abelian monoid ."
+    ],
+    "lessonIds": [
+      "monoids"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          1
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      1
+    ],
+    "solution": "1. Pointwise addition of nonnegative-integer-valued functions is closed, associative and commutative because integer addition has those properties. The constant-zero function is an identity.\n2. A nonzero function lacks an additive inverse within this set: its negative would have negative values. Therefore the structure is not a group.\n3. It is an **Abelian monoid, B**, not a non-Abelian structure.",
+    "pitfall": "",
+    "testedConcept": "Semigroups and monoids",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q50",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 50,
+    "type": "MSQ",
+    "officialKey": "C",
+    "marks": 2,
+    "prompt": "Consider the following deterministic finite automaton (DFA) defined over the alphabet, Σ = { a , b } . Identify which of the following language ( s ) is/are accepted by the given DFA.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q50-1.webp",
+        "width": 1072,
+        "height": 654,
+        "page": 50
+      }
+    ],
+    "options": [
+      "The set of all strings containing an even number of b ’ s.",
+      "The set of all strings containing the pattern bab .",
+      "The set of all strings ending with the pattern bab .",
+      "The set of all strings not containing the pattern aba ."
+    ],
+    "lessonIds": [
+      "dfa"
+    ],
+    "accepted": {
+      "kind": "choice",
+      "alternatives": [
+        [
+          2
+        ]
+      ]
+    },
+    "solvedAnswer": [
+      2
+    ],
+    "solution": "1. The states track the longest suffix of the consumed input that is also a prefix of bab: epsilon, b, ba, or bab. Only the complete-pattern state is accepting.\n2. After later symbols, transitions can leave that accepting state, so merely containing bab somewhere does not guarantee acceptance.\n3. Acceptance means the input **ends in bab, C**. Counts of b or avoidance of aba do not characterize this suffix condition.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Deterministic finite automata",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q51",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 51,
+    "type": "NAT",
+    "officialKey": "65468 to 65468",
+    "marks": 2,
+    "prompt": "A disk of size 512M bytes is divided into blocks of 64K bytes. A file is stored in the disk using linked allocation. In linked allocation, each data block reserves 4 bytes to store the pointer to the next data block. The link part of the last data block co ntains a NULL pointer (also of 4 bytes). Suppose a file of 1M bytes needs to be 10 20 stored in the disk. Assume, 1K = 2 and 1M = 2 . The amount of space in bytes that will be wasted due to internal fragmentation is ______ . (Answer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q51-1.webp",
+        "width": 1072,
+        "height": 276,
+        "page": 51
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "file-systems"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          65468,
+          65468
+        ]
+      ]
+    },
+    "solvedAnswer": "65468",
+    "solution": "1. Each 65536-byte block reserves four bytes for its link, leaving 65532 data bytes. Sixteen blocks hold 1,048,512 bytes, 64 short of the 1 MiB file, so seventeen blocks are required.\n2. The last block stores those 64 data bytes and its four-byte NULL link.\n3. Unused payload space=65536−4−64=**65468 bytes**. Link fields are allocated metadata, not unused internal-fragment space.",
+    "pitfall": "",
+    "testedConcept": "File systems and allocation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q52",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 52,
+    "type": "NAT",
+    "officialKey": "6 to 6",
+    "marks": 2,
+    "prompt": "Refer to the given 3 - address code sequence. This code sequence is s plit into basic blocks. The num ber of basic blocks is ________ . (A nswer in integer) 1001: i = 1 1002: j = 1 1003: t1 = 10*i 1004: t2 = t1+j 1005: t3 = 8*t2 1006: t4 = t3 - 88 1007: a[t4] = 0.0 1008: j = j+1 1009: if j <= 10 goto 1003 1010: i = i+1 1011: if i <= 10 goto 1002 1012: i = 1 1013: t5 = i - 1 1014: t6 = 88*t5 1015: a[t6] = 1.0 1016: i = i+1 1017: if i <= 10 goto 1013",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q52-1.webp",
+        "width": 1072,
+        "height": 712,
+        "page": 52
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "basic-blocks"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          6,
+          6
+        ]
+      ]
+    },
+    "solvedAnswer": "6",
+    "solution": "1. Leaders are the first instruction 1001, branch targets 1002,1003,1013, and instructions following conditional branches 1010,1012.\n2. The blocks are [1001], [1002], [1003–1009], [1010–1011], [1012], [1013–1017]. Branch instructions end their blocks.\n3. There are **6 basic blocks**.",
+    "pitfall": "",
+    "testedConcept": "Basic blocks and local optimization",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q53",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 53,
+    "type": "NAT",
+    "officialKey": "11.83 to 11.87",
+    "marks": 2,
+    "prompt": "A computer has a memory hierarchy consisting of two - level cache (L1 and L2) and a main memory. If the processor needs to access data from memory, it first looks into L1 cache. If the data is not found in L1 cache, it goes to L2 cache. If it fails to get th e data from L2 cache, it goes to main memory, where the data is definitely available. Hit rates and access times of various memory units ar e shown in the figure. T he average memory access time in nanoseconds ( ns ) is ________. ( ro unded off to two decimal pl aces)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q53-1.webp",
+        "width": 1072,
+        "height": 880,
+        "page": 53
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "memory-hierarchy"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          11.83,
+          11.87
+        ]
+      ]
+    },
+    "solvedAnswer": "11.85",
+    "solution": "1. L1 hits have probability 0.95 and total access time 10 ns. L2 hits have probability 0.05×0.85 and stated total time 20 ns. Main-memory access has probability 0.05×0.15 and stated total time 200 ns.\n2. These times already include earlier miss penalties, so do not add those times again.\n3. Average=0.95×10+0.05×0.85×20+0.05×0.15×200=**11.85 ns**.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Memory hierarchy and performance",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q54",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 54,
+    "type": "NAT",
+    "officialKey": "6 to 6",
+    "marks": 2,
+    "prompt": "In optimal page replacement algorithm, information about all future page references is available to the operating system (OS). A modification of the optimal page replacem ent algorithm is as follows: The OS correctly predicts only up to next 4 page references (including the current page) at the time of allocating a frame to a page. A process accesses the pages in the following order of page numbers : 1 , 3 , 2 , 4 , 2 , 3 , 1 , 2 , 4 , 3 , 1 , 4 . If the system has three memory frames that are initially empty, the number of page faults that will occur during execution of the process is ________ . (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q54-1.webp",
+        "width": 1072,
+        "height": 462,
+        "page": 54
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "virtual-memory"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          6,
+          6
+        ]
+      ]
+    },
+    "solvedAnswer": "6",
+    "solution": "1. The first references 1,3,2 fill the frames, causing three faults. On reference 4, look ahead through [4,2,3,1] and evict 1, whose next use is latest. This is fault four.\n2. References 2,3 hit. On reference 1, use [1,2,4,3] and evict 3, giving fault five; 2,4 then hit.\n3. Reference 3 causes fault six; page 2 has no further use and can be evicted. Final 1,4 hit. Total=**6**.",
+    "pitfall": "",
+    "testedConcept": "Virtual memory and page replacement",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q55",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 55,
+    "type": "NAT",
+    "officialKey": "26 to 26",
+    "marks": 2,
+    "prompt": "Consider the following database tables of a sports league. player(pid,pname,age) team(tid,tname,city,cid) coach(cid,cname) members(pid,tid) An instance of the table and a n SQL query are given . player coach team members SELECT MIN(P.age) FROM player P WHERE P.pid IN ( SELECT M.pid FROM team T, coach C, members M WHERE C.cname = ' Mark ' AND T.cid = C.cid AND M.tid = T.tid ) T he value retu rned by the given SQL query is ______ . ( A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q55-1.webp",
+        "width": 1072,
+        "height": 813,
+        "page": 55
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "sql-grouping"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          26,
+          26
+        ]
+      ]
+    },
+    "solvedAnswer": "26",
+    "solution": "1. Coach Mark has cid=102. Joining team on that cid selects team 10 (MI).\n2. Joining members on tid=10 yields player IDs 1 and 3, whose ages are 31 and 26. Other teams and players are excluded before the outer MIN.\n3. MIN(age)=**26**, not the globally youngest player’s age 24.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "SQL grouping, aggregation and subqueries",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q56",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 56,
+    "type": "NAT",
+    "officialKey": "0.949 to 0.952",
+    "marks": 2,
+    "prompt": "Suppose a 5 - bit message is transmitted from a source to a destination through a noisy channel. The probability that a bit of the message gets flipped during transmission is 0.01. Flipping of each bit is indep endent of one another. T he probability that the message is delivered error - free to the destination is ______ . ( rounded off to three decimal places )",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q56-1.webp",
+        "width": 1072,
+        "height": 251,
+        "page": 56
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "binomial-distribution"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          0.949,
+          0.952
+        ]
+      ]
+    },
+    "solvedAnswer": "0.951",
+    "solution": "1. Each bit survives unchanged with probability 1−0.01=0.99.\n2. The five bit events are independent, and the whole message is error-free only if all five survive, so probability=0.99⁵=0.9509900499.\n3. Rounding to three decimals gives **0.951**. The complement would be the probability of at least one flipped bit.",
+    "pitfall": "",
+    "testedConcept": "Binomial distribution",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q57",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 57,
+    "type": "NAT",
+    "officialKey": "7 to 7",
+    "marks": 2,
+    "prompt": "Suppose a message of size 15000 bytes is transmitted from a source to a destination using IPv4 protocol via two routers as sh own in the figure . Each router has a defined maximum transmission unit (MTU) as shown in the figur e, including IP header. The number of fragments that will be delivered to the destination is ________ . (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q57-1.webp",
+        "width": 1072,
+        "height": 560,
+        "page": 57
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "ipv4-fragmentation"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          7,
+          7
+        ]
+      ]
+    },
+    "solvedAnswer": "7",
+    "solution": "1. With the usual 20-byte IPv4 header, MTU 5000 permits nonfinal payloads of floor(4980/8)×8=4976 bytes. A 15000-byte message produces three such payloads and a small final remainder.\n2. At MTU 3000, each 4976-byte fragment splits into payloads 2976 and 2000. The small final fragment already fits.\n3. Routers do not merge/reassemble fragments, so the receiver gets 3×2+1=**7 fragments**. The count is unchanged whether the original 15000 figure includes its first header.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "IPv4 fragmentation",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q58",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 58,
+    "type": "NAT",
+    "officialKey": "0.300 to 0.302",
+    "marks": 2,
+    "prompt": "A continuous variable has density Cx² on [1,4] and zero outside. Find P(2≤x≤3), rounded to three decimals.",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q58-1.webp",
+        "width": 1072,
+        "height": 226,
+        "page": 58
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "random-variables"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          0.3,
+          0.302
+        ]
+      ]
+    },
+    "solvedAnswer": "0.302",
+    "solution": "1. Normalize the density: 1=C∫₁⁴x²dx=C(64−1)/3=21C, giving C=1/21.\n2. The required probability is (1/21)∫₂³x²dx=(1/21)(27−8)/3=19/63.\n3. Numerically 19/63≈0.301587, which rounds to **0.302**.",
+    "pitfall": "",
+    "testedConcept": "Random variables, PMFs and CDFs",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q59",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 59,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 2,
+    "prompt": "Consider a finite state machine (FSM) with one input X and one output f , represented by the given state transit ion table. T he minimum number of stat es required to realize this FSM is ________ . (A nswer in integer) Present state Next state Output f X = 0 X = 1 X = 0 X = 1 A F B 0 0 B D C 0 0 C F E 0 0 D G A 1 0 E D C 0 0 F F B 1 1 G G H 0 1 H G A 1 0",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q59-1.webp",
+        "width": 1072,
+        "height": 650,
+        "page": 59
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "fsm-design"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    "solvedAnswer": "5",
+    "solution": "1. Initially partition by output pairs: {A,B,C,E}→00, {D,H}→10, {F}→11, {G}→01.\n2. Comparing next-state classes splits the first group into {A,C} and {B,E}. D,H remain equivalent because both transition to G,A. A,C point to F and equivalent B/E states; B,E both point to D,C.\n3. The stable five classes are **{A,C},{B,E},{D,H},{F},{G}**, so five states suffice and are necessary.",
+    "pitfall": "",
+    "testedConcept": "Finite-state circuit design",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q60",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 60,
+    "type": "NAT",
+    "officialKey": "7 to 8",
+    "marks": 2,
+    "prompt": "Consider the given sequential circuit designed using D - Flip - flops. The circuit is initialized with some value (initial state). T he number of distinct states the circuit will go through before retu rning back to the initial state is _________ . (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q60-1.webp",
+        "width": 1072,
+        "height": 602,
+        "page": 60
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "counters-registers"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          7,
+          8
+        ]
+      ]
+    },
+    "solvedAnswer": "8",
+    "solution": "1. The inverted feedback makes a four-bit Johnson counter: (Q0,Q1,Q2,Q3)next=(¬Q3,Q0,Q1,Q2).\n2. From 0000 the cycle is 0000→1000→1100→1110→1111→0111→0011→0001→0000, eight distinct states. Four steps complement any starting state, and another four restore it, so no shorter divisor of eight works.\n3. The natural distinct-state count is **8**. The final key accepts 7–8, accommodating counting only states visited after leaving the initial state.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Counters, registers and timing",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q61",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 61,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 2,
+    "prompt": "#include <stdio.h> int foo(int S[],int size) { if (size == 0) return 0; if(size == 1) return 1; if(S[0] != S[1]) return 1+foo(S+1,size - 1); return foo(S+1, siz e - 1) ; } int main() { int A[ ]={0,1,2,2,2,0,0,1,1} ; printf(\"%d\",foo(A,9)) ; return 0 ; } The value printed by the given C program is _______ . (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q61-1.webp",
+        "width": 1072,
+        "height": 449,
+        "page": 61
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "recursion"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    "solvedAnswer": "5",
+    "solution": "1. The recursion moves one array element right on every call. It adds 1 at each boundary where consecutive values differ, plus 1 for the final single-element suffix.\n2. The input’s runs are [0],[1],[2,2,2],[0,0],[1,1], giving four changes and one final run.\n3. The function returns the number of runs, **5**.",
+    "pitfall": "",
+    "testedConcept": "Recursion and call-stack tracing",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q62",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 62,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 2,
+    "prompt": "Let LIST be a datatype for an implementation of linked list defined as follows: typedef struct list { int data; struct list *next; } LIST; Suppose a program has created two linked lists, L1 and L2, whose contents are given in the figure below (code for creating L1 and L2 is not provided here). L1 contains 9 nodes, and L2 contains 7 nodes. Consider the following C program segment that modifies the list L1. The number of nodes that will be there in L1 aft er the execution of t he code segment is ________ . (A nswer in integer) int find (int query, LIST * list) { while (list != NULL) { if (list - >data == query) return 1; list = list - >next; } return 0; } int main () { ... ... ... ptr1=L1; ptr2=L2; while ( ptr1 - >next != NULL ) { query = ptr1 - >next - >data; if (find (query, L2)) ptr1 - >next = ptr1 - >next - >next; else ptr1 = ptr1 - >next; } ... ... ... return 0; }",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q62-1.webp",
+        "width": 1072,
+        "height": 1096,
+        "page": 62
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "linked-lists"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    "solvedAnswer": "5",
+    "solution": "1. The loop tests ptr1->next, so the first node of L1 is never considered for deletion. Each later node is removed if its value occurs anywhere in L2.\n2. From L1=[1,7,12,3,9,5,11,15,8], it removes 12,9,11,15. It retains the head 1 even though 1 occurs in L2.\n3. The remaining reachable list is [1,7,3,5,8], with **5 nodes**. Unlinking is not the same as freeing memory.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Singly and doubly linked lists",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q63",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 63,
+    "type": "NAT",
+    "officialKey": "46 to 46",
+    "marks": 2,
+    "prompt": "Consider the following C program: #include <stdio.h> int gate (int n) { int d, t, newnum, turn ; newnum = turn = 0; t=1; while (n>=t) t *= 10; t /=10; while (t>0) { d = n/t ; n = n%t ; t /= 10; if (turn) newnum = 10*newnum + d ; turn = (turn + 1) % 2 ; } return newnum; } int main () { printf (\"%d\", gate(14362)) ; return 0; } The value printed by the given C program is _______ . (A nswer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q63-1.webp",
+        "width": 1072,
+        "height": 721,
+        "page": 63
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "c-types-control"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          46,
+          46
+        ]
+      ]
+    },
+    "solvedAnswer": "46",
+    "solution": "1. t is initialized to the highest decimal place of n. Each loop extracts the current most significant digit, removes it with n%=t and divides t by ten.\n2. turn starts at 0 and alternates. The digits 1,4,3,6,2 are examined in order; only positions with turn=1, digits 4 and 6, are appended to newnum.\n3. The resulting number is **46**.",
+    "pitfall": "",
+    "testedConcept": "C types, expressions and control flow",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q64",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 64,
+    "type": "NAT",
+    "officialKey": "5 to 5",
+    "marks": 2,
+    "prompt": "T he maximum value of x such that the edge between the nodes B and C is included in every minimum spanni ng tree of the given graph is _________ . (answer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q64-1.webp",
+        "width": 1072,
+        "height": 446,
+        "page": 64
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "minimum-spanning-trees"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    "solvedAnswer": "5",
+    "solution": "1. Excluding BC, a path between B and C is B–D–A–C, with weights 1,6,3. Its largest edge weight is 6, the smallest possible bottleneck among alternative B–C paths.\n2. If x<6, BC is the unique lightest edge across cut {B,D}|{A,C}, so every MST contains it. At x=6, an equally weighted MST can instead use AD.\n3. For integer x, the largest value strictly below 6 is **5**.",
+    "pitfall": "",
+    "hasDiagram": true,
+    "testedConcept": "Minimum spanning trees: Kruskal and Prim",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  },
+  {
+    "id": "2025-cs1-q65",
+    "paperId": "2025-cs1",
+    "year": 2025,
+    "set": "CS1",
+    "number": 65,
+    "type": "NAT",
+    "officialKey": "10 to 11",
+    "marks": 2,
+    "prompt": "In a double hashing scheme, h 1 ( k ) = k mod 11 and h 2 ( k ) = 1 + ( k mod 7 ) are the auxiliary hash functions. The size m of the hash table is 11 . The hash function for the i - th probe in the open address table is [ h 1 ( k ) + i h 2 ( k ) ] mod m . The following keys are inserted in the give n order: 63, 50, 25, 79, 67, 24. The slot at which key 24 gets stored is ___________. ( Answer in integer)",
+    "images": [
+      {
+        "src": "/pyq/2025-cs1/q65-1.webp",
+        "width": 1072,
+        "height": 274,
+        "page": 64
+      }
+    ],
+    "options": [],
+    "lessonIds": [
+      "hashing"
+    ],
+    "accepted": {
+      "kind": "number",
+      "ranges": [
+        [
+          10,
+          11
+        ]
+      ]
+    },
+    "solvedAnswer": "10",
+    "solution": "1. Initial slots for 63,50,25,79,67 are 8,6,3,2,1 respectively; they are distinct, so no earlier probes displace them.\n2. For 24, h1=2 and h2=1+(24 mod 7)=4. Probe i=0 gives slot 2 occupied by 79; i=1 gives 6 occupied by 50; i=2 gives (2+8) mod11=10, free.\n3. Key 24 is stored at zero-based **slot 10**, within the official accepted 10–11 interval.",
+    "pitfall": "",
+    "testedConcept": "Hashing and collision resolution",
+    "uncertainty": "",
+    "reviewStatus": "authored",
+    "reviewNote": "Worked solution authored against the supplied paper and final answer key. Original question images retained for diagrams and typesetting."
+  }
+]

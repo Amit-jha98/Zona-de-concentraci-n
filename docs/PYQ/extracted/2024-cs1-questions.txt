@@ -32,7 +32,7 @@ Q. 10 The least number of squares to be added in the figure to make AB a line of
 3 Q.1 1 Let 𝑓 : ℝ → ℝ be a function such that 𝑓 ( 𝑥 ) = max { 𝑥 , 𝑥 } , 𝑥 ∈ ℝ , where ℝ is the set of all real numbers. The set of all points where 𝑓 ( 𝑥 ) is NOT differentiable is (A) { − 1 , 1 , 2 } (B) { − 2 , − 1 , 1 } (C) { 0 , 1 } (D) { − 1 , 0 , 1 }
 
 2024-cs1-q12 | MCQ 1m | KEY B
-Q.12 The product of all eigenvalues of the matrix [ 4 5 6 ] is 7 8 9 (A) − 1 (B) 0 (C) 1 (D) 2
+1 2 3 Q.12 The product of all eigenvalues of the matrix [ 4 5 6 ] is 7 8 9 (A) − 1 (B) 0 (C) 1 (D) 2
 
 2024-cs1-q13 | MCQ 1m | KEY B
 Q.13 Consider a system that uses 5 bit s for representing signed integers in 2’s c omplement format . In this system, two integers 𝐴 and 𝐵 are represented as 𝐴 =01010 and 𝐵 =11010. Which one of the following operations will result in either an arithmetic overflow or an arithmetic underflow? (A) 𝐴 + 𝐵 (B) 𝐴 − 𝐵 (C) 𝐵 − 𝐴 (D) 2 ∗ 𝐵

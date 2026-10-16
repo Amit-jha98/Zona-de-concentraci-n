@@ -20,13 +20,19 @@
 
 ## Verification scope
 
+The PYQ follow-up covers all seven supplied CS papers (2023–2026): **455 questions with final-key scoring, original question images, topic mappings and authored worked solutions**. Seven original-paper mocks and three mixed mocks each preserve 65 questions, 100 marks and 180 minutes. Mixed mocks use disjoint source questions and balance subject marks. Answers, flags and the absolute deadline survive reload; an expired attempt submits on return. Solutions and the doubt tutor appear after submission.
+
+All 150 concepts (146 syllabus lessons and four aptitude supplements) have an expanded exam method, worked problem, conditions and an additional original numerical drill. Combined with the foundation checks there are **755 questions**. The supplied PYQs map to 131 concepts; the remaining topics explicitly retain original practice. The source audit and exact mappings are in `PYQ/README.md` and `PYQ/coverage.json`. Image crops now retain multi-line opening givens, and plain questions use readable text with an expandable original; diagram/code questions retain the original layout and mobile enlargement.
+
+Gemini is reserved for explicitly submitted student doubts. Opening a lesson/chat or selecting a suggested prompt makes no model request. Static notes, solutions and content builds use no Gemini quota. Successful identical conversations cache for six hours, concurrent duplicates coalesce, and output is bounded to 1536 tokens. Per-IP/concurrency limits and a default 18-request UTC daily budget apply per instance; these in-memory controls are not a distributed Vercel quota. Tutor tests use fixtures. No model request was made after the user specified doubt-only usage.
+
 The homepage crash follow-up fixes a missing-category dereference: the motivation entry had been commented out while `HomeFeed` still read its query. Home feed lookups now use the shared registry, missing categories are skipped safely, and the replacement has a legacy alias. A browser regression removes the category from the served module and confirms that other homepage sections still work without a React error.
 
 The motivation feed is replaced by lifestyle/self-improvement talks from verified original TED, YaleCourses and Royal Institution channel IDs. Both search providers and playback metadata enforce relevant topics, a five-minute minimum, and exclusions for Shorts/reels/compilations. Live verification returned 19 qualifying talks across all three sources and independently rechecked a sample's original publisher/duration before playback. See `self-improvement-verification.json`. The pasted missing-package errors occurred during dependency installation; package resolution, clean Vite build and development browser startup now succeed.
 
-The Vercel download follow-up adds a real serverless API entry point and rewrite. The previous public deployment's `/api/health` returned 404. Hosted media preparation is awaited within its invocation, followed by multipart upload and a private job manifest in Vercel Blob. File access issues a scoped signed URL, so video bytes bypass the function response body. The local persistent queue remains available for local hosting.
+The Vercel download follow-up adds a real serverless API entry point and rewrite. The previous public deployment's `/api/health` returned 404. Hosted media preparation is awaited within its invocation, followed by an authenticated Cloudinary video upload and private raw job manifest. File access issues an expiring signed attachment URL, so video bytes bypass the function response body. Intermediate chunk acknowledgements cannot publish an unfinished upload. The local persistent queue remains available without cloud storage configured.
 
-Cloud regressions cover fresh function instances, failed uploads, cancellation, expiry, cleanup, content reapproval, parsed Vercel request bodies, redirects and JSON file links. A real short CS download produced a 4,935,896-byte MP4 containing video and audio. Production redeployment and a real Blob transfer require the project's storage connection; no account credentials were available here. Setup, operational bounds and verification steps are in `VERCEL_SETUP.md`.
+Cloud regressions cover fresh function instances, failed uploads, cancellation, expiry, cleanup, content reapproval, parsed Vercel request bodies, redirects and JSON file links. A real short CS download previously produced a 4,935,896-byte MP4 containing video and audio. Corrected Cloudinary credentials now pass a real authenticated JSON round trip and small MP4 upload/read/signed-download check; temporary assets were deleted (`cloudinary-verification.json`). The live Vercel health check reports cloud downloads available with Cloudinary and the tutor configured. This does not verify a fresh end-to-end YouTube download on Vercel. Setup, operational bounds and redeployment steps are in `VERCEL_SETUP.md`.
 
 The content-scope follow-up adds one shared policy for CS education, exam preparation, motivation, soft skills and music. It filters both search providers, all channel feeds, old library items, topic candidates and related videos. Server metadata approval gates playback and new downloads; existing download files are checked again before serving. A cached title or pasted link cannot skip approval. Unexpected navigation inside the embedded player stops playback.
 
@@ -44,7 +50,7 @@ The YouTube Data API path is exercised with provider fixtures because no real AP
 
 A real download was checked using a short public video. FFmpeg merged separate audio/video streams and the result had an MP4 file signature; see download-verification.json. The browser suite separately tests queue-to-file interface states using fixtures.
 
-The production app is designed to run with its Node backend on the local loopback interface. This task does not deploy the app or create native App Store/Windows packages. The installable web app uses the same responsive interface.
+The production app runs with its Node API, either on a local server or in the same Vercel project as the frontend. These latest workspace changes have not been deployed automatically. No native App Store/Windows packages were created; the installable web app uses the responsive interface. Mobile fullscreen requests landscape, unlocks on exit and holds a wake lock while playback is active, where browser support permits.
 
 ## Evidence files
 
@@ -57,11 +63,10 @@ The production app is designed to run with its Node backend on the local loopbac
 
 ## Final check results
 
-- 18 unit/service tests passed.
-- 18 browser tests passed across desktop and mobile.
-- 4 affected discovery/layout tests passed again after final visual polish.
+- 68 unit/service tests passed.
+- 60 browser tests passed across desktop and mobile, including all six new exam/practice scenarios on both viewports. The Windows test-server process required explicit cleanup after the assertions completed; the runner then exited successfully.
 - Oxlint completed with no warnings or errors.
-- Production build completed.
-- Production desktop/mobile checks: no horizontal overflow or page exceptions, four focused lecture candidates on the checked lesson, written notes reload offline.
-- Live feeds: all six configured channels responded; 83 relevant recent entries returned.
-- Real MP4 download: 533,915 bytes, with an AV1 video stream and AAC audio stream. The persisted file endpoint returned the same bytes after restart.
+- Vercel production build completed, including checksum-verified yt-dlp and the FFmpeg executable check.
+- Desktop/mobile practice and exam screens fit their viewports. The bank and visited topic guides/question images use offline caches; updated JSON is fetched first to avoid keeping stale corrections after deployment.
+- Live Vercel `/api/health`: HTTP 200, `hosting: vercel`, Cloudinary downloads available, tutor configured. An unrelated sports query returns HTTP 403 `CONTENT_NOT_ALLOWED`. These read-only checks consumed no Gemini quota.
+- Real Cloudinary authenticated upload and signed MP4 download succeeded; verification assets were removed. This check is independent of YouTube cloud-IP restrictions.

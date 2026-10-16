@@ -12,6 +12,8 @@ const load = async (path) => getDocument({ data: new Uint8Array(await readFile(`
 await mkdir("public/pyq", { recursive: true });
 await mkdir("docs/PYQ/extracted", { recursive: true });
 const catalog = [];
+const keysOnly = process.argv.includes("--keys-only");
+const previousCatalog = keysOnly ? JSON.parse(await readFile("docs/PYQ/extracted/catalog.json", "utf8")) : null;
 for (const source of papers) {
   const pdf = await load(source.paper);
   const keyPdf = await load(source.key);
@@ -22,11 +24,22 @@ for (const source of papers) {
   }
   const keys = {};
   for (const line of keyText.split("\n")) {
-    const match = line.trim().match(/^(\d{1,2})\s+\d+\s+(MCQ|MSQ|NAT)\s+(?:GA|CS\s*(?:-\s*)?[12]?)\s+(.+?)\s+([12])\s*$/);
+    const match = line.trim().match(/^(\d{1,2})\s+\d+\s+(MCQ|MSQ|NAT)\s+(?:GA|CS(?:\s*-\s*[12]|[12])?)\s+(.+?)\s+([12])\s*$/);
     if (!match) continue;
     keys[Number(match[1])] = { type: match[2], officialKey: match[3].trim(), marks: Number(match[4]) };
   }
   if (Object.keys(keys).length !== 65) throw new Error(`${source.id}: expected 65 official keys, got ${Object.keys(keys).length}`);
+  if (keysOnly) {
+    const paper = previousCatalog.find((paper) => paper.id === source.id);
+    const questions = paper.questions.map((question) => ({ ...question, ...keys[question.number] }));
+    catalog.push({ ...paper, questions });
+    await writeFile(`docs/PYQ/extracted/${source.id}-questions.json`, JSON.stringify(questions, null, 2));
+    await writeFile(`docs/PYQ/extracted/${source.id}-questions.txt`, questions.map((q) => `${q.id} | ${q.type} ${q.marks}m | KEY ${q.officialKey}\n${q.prompt}`).join("\n\n"));
+    await pdf.destroy();
+    await keyPdf.destroy();
+    console.log(JSON.stringify({ id: source.id, keys: Object.keys(keys).length }));
+    continue;
+  }
   await mkdir(`public/pyq/${source.id}`, { recursive: true });
   const pages = [];
   const markers = [];
@@ -55,6 +68,19 @@ for (const source of papers) {
   }
   markers.sort((a, b) => a.number - b.number);
   if (markers.length !== 65) throw new Error(`${source.id}: found ${markers.length} question markers: ${markers.map((item) => item.number).join(",")}`);
+  // Some PDFs vertically centre Q.n beside a multi-line opening paragraph.
+  // Walk back through that paragraph; using the label's y-coordinate alone
+  // crops away givens (e.g. the 4 MHz clock in 2024 CS2 Q11).
+  for (const marker of markers) {
+    const data = pages[marker.page - 1];
+    const rows = [...new Set(data.items.filter((item) => item.x > data.width * 0.18 && item.height > 3 && item.y > 55 && item.y <= marker.top + 5).map((item) => Math.round(item.y)))].sort((a, b) => b - a);
+    let top = marker.top;
+    for (const row of rows) {
+      if (top - row > 27) break;
+      top = Math.min(top, row);
+    }
+    marker.top = top;
+  }
   const questions = [];
   for (let index = 0; index < markers.length; index++) {
     const start = markers[index];
@@ -77,9 +103,23 @@ for (const source of papers) {
       const context = canvas.getContext("2d");
       const page = await pdf.getPage(number);
       await page.render({ canvasContext: context, viewport: page.getViewport({ scale }), transform: [1, 0, 0, 1, 0, -top * scale] }).promise;
+      // Keep the whole question/table while trimming unused page space after it.
+      // The watermark within the retained source remains part of the image.
+      const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
+      let lastInk = canvas.height - 1;
+      for (; lastInk > 40; lastInk--) {
+        let dark = 0;
+        for (let x = 0; x < canvas.width; x += 3) {
+          const at = (lastInk * canvas.width + x) * 4;
+          if (pixels[at] < 140 && pixels[at + 1] < 140 && pixels[at + 2] < 140) dark++;
+        }
+        if (dark > 3) break;
+      }
+      const cropped = createCanvas(canvas.width, Math.min(canvas.height, lastInk + 18));
+      cropped.getContext("2d").drawImage(canvas, 0, 0);
       const filename = `q${String(start.number).padStart(2, "0")}-${images.length + 1}.webp`;
-      await writeFile(`public/pyq/${source.id}/${filename}`, canvas.toBuffer("image/webp", 88));
-      images.push({ src: `/pyq/${source.id}/${filename}`, width: canvas.width, height: canvas.height, page: number });
+      await writeFile(`public/pyq/${source.id}/${filename}`, cropped.toBuffer("image/webp", 88));
+      images.push({ src: `/pyq/${source.id}/${filename}`, width: cropped.width, height: cropped.height, page: number });
     }
     if (!images.length) throw new Error(`${source.id} Q${start.number}: no source image`);
     questions.push({ id: `${source.id}-q${start.number}`, paperId: source.id, year: source.year, set: source.set, number: start.number, ...keys[start.number], prompt: transcripts.join("\n"), images });

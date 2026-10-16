@@ -57,7 +57,7 @@ Q.18 Let 𝐺 be any undirected graph with positive edge weights, and 𝑇 be a 
 Q. 19 Consider the following context - free grammar 𝐺 , where 𝑆 , 𝐴 , and 𝐵 are the variables (non - terminals), 𝑎 and 𝑏 are the terminal symbols, 𝑆 is the start variable , and the rules of 𝐺 are described as: 𝑆 → 𝑎𝑎𝐵 | 𝐴𝑏𝑏 𝐴 → 𝑎 | 𝑎𝐴 𝐵 → 𝑏 | 𝑏𝐵 Which ONE of the language s 𝐿 ( 𝐺 ) is accepted by 𝐺 ? 2 𝑛 𝑛 2 (A) 𝐿 ( 𝐺 ) = { 𝑎 𝑏 | 𝑛 ≥ 1 } ∪ { 𝑎 𝑏 | 𝑛 ≥ 1 } 𝑛 2 𝑛 2 𝑛 𝑛 (B) 𝐿 ( 𝐺 ) = { 𝑎 𝑏 | 𝑛 ≥ 1 } ∪ { 𝑎 𝑏 | 𝑛 ≥ 1 } 𝑛 𝑛 (C) 𝐿 ( 𝐺 ) = { 𝑎 𝑏 | 𝑛 ≥ 1 } 2 𝑛 2 𝑛 (D) 𝐿 ( 𝐺 ) = { 𝑎 𝑏 | 𝑛 ≥ 1 }
 
 2025-cs1-q20 | MCQ 1m | KEY A
-Q.20 𝑛 𝑇 ( 𝑛 ) = 2 𝑇 ( 𝑛 − 1 ) + 𝑛 2 for 𝑛 > 0 , 𝑇 ( 0 ) = 1 . Which ONE of the following options is CORRECT? 2 𝑛 (A) 𝑇 ( 𝑛 ) = Θ ( 𝑛 2 ) 𝑛 (B) 𝑇 ( 𝑛 ) = Θ ( 𝑛 2 ) 2 𝑛 (C) 𝑇 ( 𝑛 ) = Θ ( ( log 𝑛 ) 2 ) 𝑛 (D) 𝑇 ( 𝑛 ) = Θ ( 4 )
+Consider the following recurrence relation: Q.20 𝑛 𝑇 ( 𝑛 ) = 2 𝑇 ( 𝑛 − 1 ) + 𝑛 2 for 𝑛 > 0 , 𝑇 ( 0 ) = 1 . Which ONE of the following options is CORRECT? 2 𝑛 (A) 𝑇 ( 𝑛 ) = Θ ( 𝑛 2 ) 𝑛 (B) 𝑇 ( 𝑛 ) = Θ ( 𝑛 2 ) 2 𝑛 (C) 𝑇 ( 𝑛 ) = Θ ( ( log 𝑛 ) 2 ) 𝑛 (D) 𝑇 ( 𝑛 ) = Θ ( 4 )
 
 2025-cs1-q21 | MSQ 1m | KEY B;D
 + Q. 21 Consider the following 𝐵 tree with 5 nodes, in which a node can store at mos t 3 key values. + T he value 23 is now inserted in the 𝐵 tree. Which of the following options(s) is/are CORRECT? (A) None of the nodes will split. (B) At least one node will split and redistribute. (C) The total number o f nodes will remain same. (D) The height of the tree will increase.
@@ -66,7 +66,7 @@ Q.20 𝑛 𝑇 ( 𝑛 ) = 2 𝑇 ( 𝑛 − 1 ) + 𝑛 2 for 𝑛 > 0 , 𝑇 ( 0
 Q.22 Consider the 3 - way handshaking protocol for TCP connection establishme nt. Let the three packets exchanged during the connection establishment be denoted as P1, P2, and P3 , in order. Which of the following option(s) is/are TRUE with respect to TCP header flags that are set in the packets ? (A) P3 : SYN = 1, ACK = 1 (B) P2: SYN = 1, ACK = 1 (C) P2 : SYN = 0, ACK = 1 (D) P1 : SYN = 1
 
 2025-cs1-q23 | MSQ 1m | KEY A;D
-Q.23 real - valued constant . Which of the following option(s) is/are CORRECT? 𝑥 + 𝑘𝑦 = 1 𝑘𝑥 + 𝑦 = − 1 (A) There is exactly one value of 𝑘 for which the above system of equations has no solution. (B) There exist an infinite number of values of 𝑘 for which the system of equations has no solution. (C) There exists exactly one value of 𝑘 for which the system of equations has exactly one so l ution . (D) There exists exactly one value of 𝑘 for which the system of equations has an infinite number of solutions.
+Consider the given system of linear equations for variables 𝑥 and 𝑦 , where 𝑘 is a Q.23 real - valued constant . Which of the following option(s) is/are CORRECT? 𝑥 + 𝑘𝑦 = 1 𝑘𝑥 + 𝑦 = − 1 (A) There is exactly one value of 𝑘 for which the above system of equations has no solution. (B) There exist an infinite number of values of 𝑘 for which the system of equations has no solution. (C) There exists exactly one value of 𝑘 for which the system of equations has exactly one so l ution . (D) There exists exactly one value of 𝑘 for which the system of equations has an infinite number of solutions.
 
 2025-cs1-q24 | MSQ 1m | KEY B;D
 Q. 24 Let 𝑋 b e a 3 - variable Boolean function that produces output as ‘ 1 ’ when at least two of the input variables are ‘ 1 ’ . Which of the follo wing statement(s) is/are CORRECT , where 𝑎 , 𝑏 , 𝑐 , 𝑑 , 𝑒 are Boolean variables? (A) 𝑋 ( 𝑎 , 𝑏 , 𝑋 ( 𝑐 , 𝑑 , 𝑒 ) ) = 𝑋 ( 𝑋 ( 𝑎 , 𝑏 , 𝑐 ) , 𝑑 , 𝑒 ) (B) 𝑋 ( 𝑎 , 𝑏 , 𝑋 ( 𝑎 , 𝑏 , 𝑐 ) ) = 𝑋 ( 𝑎 , 𝑏 , 𝑐 ) (C) 𝑋 ( 𝑎 , 𝑏 , 𝑋 ( 𝑎 , 𝑐 , 𝑑 ) ) = ( 𝑋 ( 𝑎 , 𝑏 , 𝑎 ) AND 𝑋 ( 𝑐 , 𝑑 , 𝑐 ) ) (D) 𝑋 ( 𝑎 , 𝑏 , 𝑐 ) = 𝑋 ( 𝑎 , 𝑋 ( 𝑎 , 𝑏 , 𝑐 ) , 𝑋 ( 𝑎 , 𝑐 , 𝑐 ) )
@@ -120,7 +120,7 @@ Q. 39 Consider two relations describing 𝑡𝑒𝑎𝑚𝑠 and 𝑝𝑙𝑎�
 Q. 40 A packet with the destination IP address 145.36.109.70 arrives at a router wh ose routing table is shown . Which interface will the packet be forwarded to? (A) E3 (B) E1 (C) E2 (D) E5
 
 2025-cs1-q41 | MCQ 2m | KEY D
-Q.41 1 1 𝐴 = [ ] 1 − 1 13 What are the eigenvalues of the matrix 𝐴 ? (A) 1 , − 1 (B) 2 √ 2 , − 2 √ 2 (C) 4 √ 2 , − 4 √ 2 (D) 64 √ 2 , − 64 √ 2
+Let 𝐴 be a 2 × 2 matrix as given . Q.41 1 1 𝐴 = [ ] 1 − 1 13 What are the eigenvalues of the matrix 𝐴 ? (A) 1 , − 1 (B) 2 √ 2 , − 2 √ 2 (C) 4 √ 2 , − 4 √ 2 (D) 64 √ 2 , − 64 √ 2
 
 2025-cs1-q42 | MCQ 2m | KEY A
 Q. 42 Consider the following four variable Boolean function in sum - of - product form 𝐹 ( 𝑏 3 , 𝑏 2 , 𝑏 1 , 𝑏 0 ) = ∑ ( 0 , 2 , 4 , 8 , 10 , 11 , 12 ) . where the value of the function is computed by considering 𝑏 3 𝑏 2 𝑏 1 𝑏 0 as a 4 - bit binary number, where 𝑏 3 denotes the most significant bit and 𝑏 0 denotes the least significant bit. Note that there are no don’t care terms. Which ONE of the following options is the CORRECT minimized Boolean expression for 𝐹 ? (A) 𝑏 ̅ 1 𝑏 ̅ 0 + 𝑏 ̅ 2 𝑏 ̅ 0 + 𝑏 1 𝑏 ̅ 2 𝑏 3 (B) 𝑏 ̅ 1 𝑏 ̅ 0 + 𝑏 ̅ 2 𝑏 ̅ 0 (C) 𝑏 ̅ 2 𝑏 ̅ 0 + 𝑏 1 𝑏 2 𝑏 3 (D) 𝑏 ̅ 0 𝑏 ̅ 2 + 𝑏 ̅ 3

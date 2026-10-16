@@ -1,0 +1,907 @@
+{
+  "questions": 455,
+  "papers": 7,
+  "mocks": 10,
+  "topics": [
+    {
+      "id": "propositional-logic",
+      "title": "Propositional logic",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "first-order-logic",
+      "title": "First-order logic and quantifiers",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "sets",
+      "title": "Sets and set operations",
+      "primary": 0,
+      "total": 1
+    },
+    {
+      "id": "relations",
+      "title": "Relations and equivalence classes",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "functions",
+      "title": "Functions, injections and surjections",
+      "primary": 2,
+      "total": 3
+    },
+    {
+      "id": "partial-orders",
+      "title": "Partial orders and Hasse diagrams",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "lattices",
+      "title": "Lattices",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "monoids",
+      "title": "Semigroups and monoids",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "groups",
+      "title": "Groups and cyclic groups",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "graph-connectivity",
+      "title": "Graph connectivity",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "graph-matching",
+      "title": "Graph matching",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "graph-colouring",
+      "title": "Graph colouring",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "counting",
+      "title": "Counting and inclusion–exclusion",
+      "primary": 4,
+      "total": 5
+    },
+    {
+      "id": "recurrences",
+      "title": "Recurrence relations",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "generating-functions",
+      "title": "Generating functions",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "matrices",
+      "title": "Matrices and matrix rank",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "determinants",
+      "title": "Determinants and invertibility",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "linear-equations",
+      "title": "Systems of linear equations",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "eigenvalues",
+      "title": "Eigenvalues and eigenvectors",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "lu-decomposition",
+      "title": "LU decomposition",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "limits",
+      "title": "Limits",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "continuity-differentiability",
+      "title": "Continuity and differentiability",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "maxima-minima",
+      "title": "Maxima and minima",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "mean-value-theorem",
+      "title": "Mean value theorem",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "integration",
+      "title": "Definite and indefinite integration",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "conditional-bayes",
+      "title": "Conditional probability and Bayes’ theorem",
+      "primary": 7,
+      "total": 7
+    },
+    {
+      "id": "random-variables",
+      "title": "Random variables, PMFs and CDFs",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "mean-variance",
+      "title": "Expectation, variance and standard deviation",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "median-mode",
+      "title": "Mean, median and mode",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "uniform-distribution",
+      "title": "Uniform distribution",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "normal-distribution",
+      "title": "Normal distribution",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "exponential-distribution",
+      "title": "Exponential distribution",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "poisson-distribution",
+      "title": "Poisson distribution",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "binomial-distribution",
+      "title": "Binomial distribution",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "boolean-algebra",
+      "title": "Boolean algebra and logic gates",
+      "primary": 5,
+      "total": 6
+    },
+    {
+      "id": "algebraic-minimization",
+      "title": "Algebraic minimization and canonical forms",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "karnaugh-maps",
+      "title": "Karnaugh maps",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "tabular-minimization",
+      "title": "Tabular minimization: Quine–McCluskey",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "adders",
+      "title": "Half adders, full adders and carry propagation",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "multiplexers-decoders",
+      "title": "Multiplexers, decoders and encoders",
+      "primary": 3,
+      "total": 4
+    },
+    {
+      "id": "latches-flipflops",
+      "title": "Latches and flip-flops",
+      "primary": 1,
+      "total": 2
+    },
+    {
+      "id": "fsm-design",
+      "title": "Finite-state circuit design",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "counters-registers",
+      "title": "Counters, registers and timing",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "number-systems",
+      "title": "Binary, octal, hexadecimal and signed representations",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "fixed-point",
+      "title": "Fixed-point arithmetic and overflow",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "floating-point",
+      "title": "IEEE 754 floating-point representation",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "instruction-set",
+      "title": "Instruction sets and instruction formats",
+      "primary": 7,
+      "total": 7
+    },
+    {
+      "id": "addressing-modes",
+      "title": "Addressing modes",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "alu-design",
+      "title": "ALU and datapath design",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "hardwired-control",
+      "title": "Hardwired control units",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "microprogrammed-control",
+      "title": "Microprogrammed control units",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "memory-interfacing",
+      "title": "Memory interfacing and address decoding",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "memory-hierarchy",
+      "title": "Memory hierarchy and performance",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "cache-mapping",
+      "title": "Cache mapping and address fields",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "cache-policies",
+      "title": "Cache replacement and write policies",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "interrupts-dma",
+      "title": "I/O interfaces, interrupts and DMA",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "instruction-pipelining",
+      "title": "Instruction pipelining and throughput",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "pipeline-hazards",
+      "title": "Pipeline hazards and forwarding",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "c-types-control",
+      "title": "C types, expressions and control flow",
+      "primary": 4,
+      "total": 5
+    },
+    {
+      "id": "c-pointers",
+      "title": "C pointers, arrays and pointer arithmetic",
+      "primary": 6,
+      "total": 6
+    },
+    {
+      "id": "c-memory",
+      "title": "C functions, scope and dynamic memory",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "recursion",
+      "title": "Recursion and call-stack tracing",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "arrays",
+      "title": "Arrays and multidimensional storage",
+      "primary": 2,
+      "total": 3
+    },
+    {
+      "id": "stacks",
+      "title": "Stacks and expression evaluation",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "queues",
+      "title": "Queues and circular queues",
+      "primary": 0,
+      "total": 2
+    },
+    {
+      "id": "linked-lists",
+      "title": "Singly and doubly linked lists",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "trees-traversals",
+      "title": "Trees and binary-tree traversals",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "binary-search-trees",
+      "title": "Binary search trees",
+      "primary": 6,
+      "total": 7
+    },
+    {
+      "id": "binary-heaps",
+      "title": "Binary heaps and priority queues",
+      "primary": 6,
+      "total": 7
+    },
+    {
+      "id": "graph-representations",
+      "title": "Graph representations",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "asymptotic-analysis",
+      "title": "Asymptotic time and space complexity",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "algorithm-recurrences",
+      "title": "Divide-and-conquer recurrence analysis",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "searching",
+      "title": "Linear and binary search",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "comparison-sorting",
+      "title": "Comparison sorting and stability",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "quicksort",
+      "title": "Quicksort and partitioning",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "noncomparison-sorting",
+      "title": "Counting and radix sorting",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "hashing",
+      "title": "Hashing and collision resolution",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "divide-conquer",
+      "title": "Divide-and-conquer design",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "greedy",
+      "title": "Greedy algorithms and exchange arguments",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "dynamic-programming",
+      "title": "Dynamic programming and state design",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "graph-traversals",
+      "title": "Breadth-first and depth-first search",
+      "primary": 6,
+      "total": 6
+    },
+    {
+      "id": "minimum-spanning-trees",
+      "title": "Minimum spanning trees: Kruskal and Prim",
+      "primary": 7,
+      "total": 7
+    },
+    {
+      "id": "shortest-paths",
+      "title": "Shortest paths: Dijkstra, Bellman–Ford and Floyd–Warshall",
+      "primary": 3,
+      "total": 4
+    },
+    {
+      "id": "dfa",
+      "title": "Deterministic finite automata",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "nfa",
+      "title": "Nondeterminism and subset construction",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "regular-expressions",
+      "title": "Regular expressions and closure",
+      "primary": 7,
+      "total": 7
+    },
+    {
+      "id": "dfa-minimization",
+      "title": "DFA equivalence and minimization",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "pumping-regular",
+      "title": "Pumping lemma for regular languages",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "context-free-grammars",
+      "title": "Context-free grammars and derivations",
+      "primary": 7,
+      "total": 7
+    },
+    {
+      "id": "pushdown-automata",
+      "title": "Pushdown automata",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "cfl-pumping-closure",
+      "title": "CFL pumping lemma and closure properties",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "turing-machines",
+      "title": "Turing machines and recognizable languages",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "undecidability",
+      "title": "Undecidability and reductions",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "lexical-analysis",
+      "title": "Lexical analysis",
+      "primary": 4,
+      "total": 5
+    },
+    {
+      "id": "first-follow",
+      "title": "FIRST, FOLLOW and predictive parsing",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "ll-parsing",
+      "title": "LL(1) parsing and grammar transformations",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "lr-parsing",
+      "title": "Bottom-up LR, SLR and LALR parsing",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "syntax-directed-translation",
+      "title": "Syntax-directed translation and attributes",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "runtime-environments",
+      "title": "Runtime environments and activation records",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "intermediate-code",
+      "title": "Intermediate code generation",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "basic-blocks",
+      "title": "Basic blocks and local optimization",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "constant-propagation",
+      "title": "Constant propagation",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "liveness-analysis",
+      "title": "Liveness analysis and dead code",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "common-subexpressions",
+      "title": "Common subexpression elimination",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "system-calls",
+      "title": "System calls and execution modes",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "processes",
+      "title": "Processes, fork and process states",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "threads",
+      "title": "Threads and multithreading",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "ipc",
+      "title": "Inter-process communication",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "race-conditions",
+      "title": "Critical sections and race conditions",
+      "primary": 1,
+      "total": 2
+    },
+    {
+      "id": "semaphores",
+      "title": "Mutexes, semaphores and classical synchronization",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "deadlocks",
+      "title": "Deadlock conditions, prevention and avoidance",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "cpu-scheduling",
+      "title": "CPU scheduling and performance metrics",
+      "primary": 6,
+      "total": 6
+    },
+    {
+      "id": "io-scheduling",
+      "title": "I/O and disk scheduling",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "paging",
+      "title": "Memory management, paging and address translation",
+      "primary": 9,
+      "total": 9
+    },
+    {
+      "id": "virtual-memory",
+      "title": "Virtual memory and page replacement",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "file-systems",
+      "title": "File systems and allocation",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "er-model",
+      "title": "Entity–relationship modelling",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "relational-model",
+      "title": "Relational model, keys and integrity constraints",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "relational-algebra",
+      "title": "Relational algebra",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "tuple-calculus",
+      "title": "Tuple relational calculus and safety",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "sql-joins",
+      "title": "SQL SELECT, joins and NULL",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "sql-grouping",
+      "title": "SQL grouping, aggregation and subqueries",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "functional-dependencies",
+      "title": "Functional dependencies and attribute closure",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "normal-forms",
+      "title": "Normal forms: 1NF, 2NF, 3NF and BCNF",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "decomposition",
+      "title": "Lossless decomposition and dependency preservation",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "file-organization",
+      "title": "File organization and index fundamentals",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "b-plus-trees",
+      "title": "B-trees and B+ trees",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "transactions",
+      "title": "Transactions and ACID",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "serializability",
+      "title": "Conflict serializability",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "concurrency-recovery",
+      "title": "Locking, concurrency control and recoverability",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "network-layering",
+      "title": "Layering, encapsulation and protocol services",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "network-switching",
+      "title": "Circuit, packet and virtual-circuit switching",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "network-performance",
+      "title": "Delay, throughput and bandwidth–delay product",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "error-detection",
+      "title": "Error detection: parity, checksum and CRC",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "flow-control-arq",
+      "title": "Link flow control and ARQ",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "medium-access",
+      "title": "Medium access control",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "ethernet",
+      "title": "Ethernet and switching",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "routing",
+      "title": "Distance-vector and link-state routing",
+      "primary": 2,
+      "total": 2
+    },
+    {
+      "id": "ipv4-cidr",
+      "title": "IPv4 addressing, CIDR and longest-prefix matching",
+      "primary": 6,
+      "total": 6
+    },
+    {
+      "id": "ipv4-fragmentation",
+      "title": "IPv4 fragmentation",
+      "primary": 4,
+      "total": 4
+    },
+    {
+      "id": "nat",
+      "title": "Network address translation",
+      "primary": 1,
+      "total": 1
+    },
+    {
+      "id": "tcp-flow-control",
+      "title": "TCP reliability, handshake and flow control",
+      "primary": 5,
+      "total": 5
+    },
+    {
+      "id": "tcp-congestion",
+      "title": "TCP congestion control",
+      "primary": 3,
+      "total": 3
+    },
+    {
+      "id": "socket-api",
+      "title": "Socket API and client–server communication",
+      "primary": 0,
+      "total": 0
+    },
+    {
+      "id": "dns",
+      "title": "DNS resolution and records",
+      "primary": 1,
+      "total": 2
+    },
+    {
+      "id": "http",
+      "title": "HTTP semantics and persistent connections",
+      "primary": 2,
+      "total": 3
+    },
+    {
+      "id": "ga-verbal",
+      "title": "Verbal ability, grammar and comprehension",
+      "primary": 17,
+      "total": 17
+    },
+    {
+      "id": "ga-quantitative",
+      "title": "Quantitative aptitude and data interpretation",
+      "primary": 27,
+      "total": 27
+    },
+    {
+      "id": "ga-reasoning",
+      "title": "Analytical and logical reasoning",
+      "primary": 13,
+      "total": 13
+    },
+    {
+      "id": "ga-spatial",
+      "title": "Spatial and visual reasoning",
+      "primary": 13,
+      "total": 13
+    }
+  ]
+}

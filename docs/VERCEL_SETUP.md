@@ -1,50 +1,55 @@
 # Deploy EduBrowse as one Vercel project
 
-The existing deployment at https://study-zone-gamma.vercel.app returned `404 NOT_FOUND` for `/api/health` on 15 October 2026. It deployed the Vite frontend without the app's Node API. Running `npm start` on a laptop cannot fix that deployment.
+Keep the Vercel root directory at the repository root. This project includes the React frontend and the Node API in one deployment; a frontend-only upload cannot run downloads or the tutor.
 
-The repository now includes `api/handler.js`, a same-origin API rewrite, a Vercel build command that installs the official checksum-verified Linux yt-dlp executable, and packaged FFmpeg. Keep the project root at the repository root, not `src` or `dist`.
+## Server environment
 
-## Configure and redeploy
+Set these in Vercel Project → Settings → Environment Variables for the environments you use, then redeploy:
 
-1. Commit and push the complete updated project, including `api/`, `server/`, `shared/`, `vercel.json`, `package.json` and `package-lock.json`.
-2. In **Vercel → Project → Storage**, create a **Private Blob** store and connect it to this project for Production (and Preview if used). Keep its generated environment variables server-side. The SDK supports the store's automatic OIDC configuration (`BLOB_STORE_ID`) or `BLOB_READ_WRITE_TOKEN`. Do not prefix any of these with `VITE_`.
-3. In **Settings → Environment Variables**, set `CRON_SECRET` to a new random secret of at least 32 characters. Vercel's daily cleanup cron uses it to authenticate. Keep it out of Git. Optional: add `YOUTUBE_API_KEY` for official live search instead of keyless search.
-4. In **Settings → Build and Deployment**, use **Vite**, root **repository root**, build command **`npm run build:vercel`**, output directory **`dist`**. Remove any dashboard override that uses only `npm run build`; the committed configuration supplies the correct command. Use Node 22 or newer and Fluid Compute. Leave the FFmpeg/yt-dlp path variables unset so the bundled Linux tools are selected.
-5. Redeploy the new commit. If an old dependency cache contains a binary from another platform, redeploy without the build cache. Do not upload Windows `.exe` files.
+- `CLOUDINARY_URL`: the complete value from your Cloudinary dashboard, or all three of `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`.
+- `GEMINI_API_KEY`: a standard Gemini API key. The service-account `keys.json` is not used.
+- `GEMINI_MODEL`: optional; defaults to `gemini-3.1-flash-lite`.
+- `GEMINI_DAILY_REQUEST_LIMIT`: optional; defaults to 18 upstream doubt requests per UTC day per running server instance. Set 0 to disable new requests. This is a conservative local budget, not a distributed account-wide quota.
+- `CRON_SECRET`: a random server secret for the daily expired-download cleanup route.
+- `YOUTUBE_API_KEY`: optional, for official live discovery instead of keyless search.
 
-## Verify after redeployment
+Never use a `VITE_` prefix for these secrets. Local `.env`, service-account files and credential files are excluded from Vercel uploads and blocked by the development file server. Local `.env` values are not automatically copied into your Vercel environment.
 
-Open `/api/health` on the deployed domain. It should return JSON with `hosting: "vercel"`, `downloads.mode: "cloud"`, and `downloads.available: true`. A missing storage connection or missing tools produces a specific setup message.
+## Build settings
 
-Open an allowed video, select 360p for the first check, and choose **Download video**. Keep the preparation window open. After preparation finishes, **Downloads → Save file** requests a short-lived signed URL and downloads directly from private Blob storage. The API returns a small JSON response or redirect; it never proxies the video bytes.
+Use Vite, Node 22.12 or newer, build command `npm run build:vercel`, output `dist`. The committed `vercel.json` configures the API function and routing. The build installs a checksum-verified Linux yt-dlp executable and packages FFmpeg. Remove any dashboard override that builds only the frontend. Do not set Windows executable paths on Vercel.
 
-To check the deployment with a script:
+Commit/deploy `public/gate-pyq-bank.json`, all files in `public/gate-exam-notes/`, and `public/pyq/` together. Vercel bundles the bank and note JSON for server-side tutor context; question images are frontend static assets. PDFs and authoring documents in `docs/` are not required in the function bundle. Standard builds use the committed material and make no Gemini content-generation calls.
+
+## Cloudinary downloads
+
+Downloads use authenticated Cloudinary video assets and authenticated raw JSON manifests under `edubrowse-downloads/`. The function finishes media preparation and upload before publishing a completed job. Other instances can read the durable manifest. Save file returns a short-lived signed attachment URL; video bytes do not pass through the Vercel response.
+
+The hosted limit is 100 MiB merged media, 75 MiB per source stream, and 270 seconds of preparation in a function configured for 300 seconds. Closing preparation cancels the request; failures remove temporary and partially published files. Jobs expire after 24 hours; daily authenticated cleanup removes expired assets. Account storage/upload limits still apply. Lower quality or shorter lessons may be necessary.
+
+Cloudinary credentials were verified locally with an authenticated JSON round trip, a real small MP4 upload and signed download; temporary verification assets were deleted. See `cloudinary-verification.json`. The chunked uploader ignores intermediate `done:false` responses and publishes only after final completion.
+
+YouTube may reject a particular download from a cloud-server IP or change available formats. Those failures are reported; storing in Cloudinary cannot bypass an upstream restriction. Save only media you own or are permitted to download.
+
+## Gemini use and limits
+
+Only pressing Send in the doubt tutor calls Gemini. Opening a topic, opening chat, clicking a suggested prompt, taking a quiz, reviewing static explanations and building the app make no Gemini request. Suggested prompts only populate the editor.
+
+Successful identical conversations cache for six hours, and simultaneous duplicates share one upstream request. Failed requests are not cached or automatically retried. Replies use at most 1536 output tokens. Topic IDs and review-question membership are verified server-side; the browser cannot submit a replacement system prompt or API credential. Request and concurrency limits bound abuse.
+
+The in-memory cache and daily budget are per instance and reset on cold starts; they are not an account-wide quota on Vercel. Google's configured project quota remains the final limit. Keep the project on the intended free tier and use its account quota controls if a global ceiling is needed. There is no automatic paid-provider fallback. Tutor tests use mocked responses and consume no quota.
+
+## Verify after deployment
+
+1. Open `/api/health`: expect JSON, `hosting: "vercel"`, `downloads.mode: "cloud"`, `downloads.storage: "cloudinary"`, `downloads.available: true`, and `tutor.configured: true`.
+2. Open `/#/mocks` and a lesson: ten mocks, the question images and expanded notes should load.
+3. For a permitted short video, prepare 360p and use Downloads → Save file. The resulting signed Cloudinary URL should save an actual MP4.
+4. Send one real topic doubt when you want to verify the live tutor. Opening the panel alone is deliberately not a test of the key.
+
+Read-only route check:
 
 ```sh
 node scripts/check-vercel.mjs https://study-zone-gamma.vercel.app
 ```
 
-The script checks routing/configuration without creating billable download jobs. It exits unsuccessfully if a required capability is missing.
-
-## Download behavior and limits
-
-The hosted path awaits media preparation and multipart upload within the same function request. It publishes a completed job only after both media and its private manifest are stored. Subsequent requests can read the job on any function instance. No background queue, local job file, sticky session or separate backend service is needed.
-
-Downloads are bounded to **150 MiB** of merged media and **270 seconds** of total preparation inside a function configured for 300 seconds. Each source stream is bounded to 75 MiB to leave room for merging in temporary storage. Some files below 150 MiB can therefore still exceed the per-stream bound. Try 360p or a shorter lesson if a limit is reached. Quality means the best available resolution up to the selection. Audio is included.
-
-Closing the preparation dialog aborts the request. Failed preparations remove local temporary files and any partially published storage objects. Files expire in the app after 24 hours; an authenticated daily cron removes old stored objects, so physical retention can be up to roughly 48 hours. Blob storage and function usage follow the connected Vercel plan's pricing. The cleanup route only touches the `edubrowse-downloads/` prefix.
-
-YouTube can block data-center IPs, require authentication, remove videos or change formats. These return explicit errors rather than a false completed job. A YouTube Data API key supports discovery, but does not grant media-download access or fix an upstream IP block. The application cannot guarantee that every YouTube video will download.
-
-Local `npm run dev` / `npm start` still use the existing persistent local queue. Hosted and local job records are separate.
-
-## Validation performed here
-
-- Unit/service tests exercise durable storage across fresh instances, approval before downloading, cleanup after upload failure, expiry, cancellation, signed-file routing, Vercel-parsed JSON bodies and missing configuration.
-- Desktop/mobile browser tests cover preparation, actionable setup failures and the file redirect.
-- The final suite passed **32 unit/service tests and 32 browser tests**, plus lint and production build.
-- The real hosted media-preparation command was exercised locally using a short CS lesson, producing a 4,935,896-byte MP4 with AV1 video and AAC audio. See `cloud-media-verification.json`.
-- The production build and Vercel build pipeline passed locally using the existing verified downloader. Fresh tool downloads hit intermittent GitHub connection timeouts in this Windows workspace; the installer now retries and uses GitHub's official asset API. The fresh Linux tool installation must still run in Vercel's build environment.
-- No Vercel account or connected Blob credentials were available in this workspace. This source update has not been redeployed, and an end-to-end production Blob transfer remains to be verified after the connection and redeploy.
-
-References: [Vercel function limits](https://vercel.com/docs/functions/limitations), [Blob SDK and storage setup](https://vercel.com/docs/vercel-blob/using-blob-sdk), [private signed URLs](https://vercel.com/docs/vercel-blob/vercel-signed-urls).
+These local source changes have not been deployed automatically. End-to-end production checks must follow redeployment with the server environment configured.

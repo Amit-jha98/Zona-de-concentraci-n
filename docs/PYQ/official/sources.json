@@ -2,41 +2,49 @@
   {
     "id": "2024-cs1-paper",
     "url": "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS124S5.pdf",
-    "bytes": 834514
+    "bytes": 834514,
+    "sha256": "18cf9ac15c01bdbf9d767c7a402d63234a28ae91c8ec227090ba5a5fdef121dd"
   },
   {
     "id": "2024-cs2-paper",
     "url": "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS224S6.pdf",
-    "bytes": 886167
+    "bytes": 886167,
+    "sha256": "b5012f2e7da399f4129e9ac5c1713493e3374ba9c9d30d600383dc535b3b5072"
   },
   {
     "id": "2024-cs1-key",
     "url": "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS1FinalAnswerKey.pdf",
-    "bytes": 313008
+    "bytes": 313008,
+    "sha256": "f713276ef5a4cc59d6c5925ba7e4c72f6f669ab6866956cc45cb8f3e0f5817cf"
   },
   {
     "id": "2024-cs2-key",
     "url": "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf",
-    "bytes": 313035
+    "bytes": 313035,
+    "sha256": "04ccb9fdda662d4c6674451525c73c5f599fce05ce6010f752a0803b5dad6948"
   },
   {
     "id": "2025-cs1-paper",
-    "url": "https://gate2027.iitm.ac.in/static/doc/download/2025/CS1.pdf",
-    "error": "2025-cs1-paper: HTTP 404"
+    "url": "https://gate2025.iitr.ac.in/doc/2025/2025_QP/CS1.pdf",
+    "bytes": 1024592,
+    "sha256": "81a6517cc058c3a471dce9a39a6bb2291f4fff9aa7ebebe6a5f337f61e25ee81"
   },
   {
     "id": "2025-cs2-paper",
-    "url": "https://gate2027.iitm.ac.in/static/doc/download/2025/CS2.pdf",
-    "error": "2025-cs2-paper: HTTP 404"
+    "url": "https://gate2025.iitr.ac.in/doc/2025/2025_QP/CS2.pdf",
+    "bytes": 784221,
+    "sha256": "6ed18668acb46b636ca0badf132d904756e4377a9972e8484a05eaebe9f17ddd"
   },
   {
     "id": "2025-cs1-key",
-    "url": "https://gate2027.iitm.ac.in/static/doc/download/2025/CS1_Keys.pdf",
-    "error": "2025-cs1-key: HTTP 404"
+    "url": "https://gate2025.iitr.ac.in/doc/2025/2025_Key/CS1_Keys.pdf",
+    "bytes": 209008,
+    "sha256": "5de4a3171f8e9629832f2080b178e802fc81945e44826ac45e82c635d9959f2e"
   },
   {
     "id": "2025-cs2-key",
-    "url": "https://gate2027.iitm.ac.in/static/doc/download/2025/CS2_Keys.pdf",
-    "error": "2025-cs2-key: HTTP 404"
+    "url": "https://gate2025.iitr.ac.in/doc/2025/2025_Key/CS2_Keys.pdf",
+    "bytes": 209004,
+    "sha256": "cd046a9c634aad151adff94bae3addbcb846fb8ab78710e415c684b4b8bb966a"
   }
 ]

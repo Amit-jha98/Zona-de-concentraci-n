@@ -48,6 +48,7 @@ export function createCloudinaryStorage({ client = cloudinary, fetchImpl = fetch
       try {
         return await new Promise((resolve, reject) => {
           const callback = (error, result) => {
+            if (!error && result?.done === false) return;
             if (abortSignal?.aborted) {
               if (result?.public_id) void remove(pathname).catch(() => {});
               reject(abortSignal.reason);

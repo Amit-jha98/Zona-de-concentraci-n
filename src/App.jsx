@@ -259,7 +259,7 @@ export default function App() {
       path: "/gate",
       label: "GATE CS 2027",
       icon: GraduationCap,
-      active: route.path === "/gate" || !!currentLesson,
+      active: route.path === "/gate" || !!currentLesson || route.path === "/mocks" || route.path.startsWith("/mock/"),
     },
     {
       path: "/?category=interview",
@@ -590,7 +590,7 @@ export default function App() {
             path: "/gate",
             label: "Study track",
             icon: GraduationCap,
-            active: route.path === "/gate" || !!currentLesson,
+            active: route.path === "/gate" || !!currentLesson || route.path === "/mocks" || route.path.startsWith("/mock/"),
           },
           {
             path: "/saved",

@@ -1,10 +1,11 @@
-const CACHE = "edubrowse-shell-v5";
+const CACHE = "edubrowse-shell-v6";
 const SHELL = [
   "/",
   "/app-icon.svg",
   "/favicon.svg",
   "/manifest.webmanifest",
   "/gate-topic-videos.json",
+  "/gate-pyq-bank.json",
   "/CS_GATE2027_Syllabus.pdf",
 ];
 self.addEventListener("install", (event) => {
@@ -53,8 +54,15 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(() => caches.match("/")),
     );
+  } else if (url.pathname === "/gate-pyq-bank.json" || url.pathname === "/gate-topic-videos.json" || url.pathname.startsWith("/gate-exam-notes/")) {
+    event.respondWith(fetch(request, { cache: "no-cache" }).then(async (response) => {
+      if (!response.ok) throw new Error("Study content unavailable");
+      (await caches.open(CACHE)).put(request, response.clone());
+      return response;
+    }).catch(async () => (await caches.match(request)) || new Response(JSON.stringify({ error: "Load this study material once while online." }), { status: 503, headers: { "Content-Type": "application/json" } })));
   } else if (
     url.pathname.startsWith("/assets/") ||
+    url.pathname.startsWith("/pyq/") ||
     SHELL.includes(url.pathname)
   ) {
     event.respondWith(

@@ -6,10 +6,10 @@ const files = [
   ["2024-cs2-paper", "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS224S6.pdf"],
   ["2024-cs1-key", "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS1FinalAnswerKey.pdf"],
   ["2024-cs2-key", "https://gate2024.iisc.ac.in/wp-content/uploads/2024/CS2FinalAnswerKey.pdf"],
-  ["2025-cs1-paper", "https://gate2027.iitm.ac.in/static/doc/download/2025/CS1.pdf"],
-  ["2025-cs2-paper", "https://gate2027.iitm.ac.in/static/doc/download/2025/CS2.pdf"],
-  ["2025-cs1-key", "https://gate2027.iitm.ac.in/static/doc/download/2025/CS1_Keys.pdf"],
-  ["2025-cs2-key", "https://gate2027.iitm.ac.in/static/doc/download/2025/CS2_Keys.pdf"],
+  ["2025-cs1-paper", "https://gate2025.iitr.ac.in/doc/2025/2025_QP/CS1.pdf"],
+  ["2025-cs2-paper", "https://gate2025.iitr.ac.in/doc/2025/2025_QP/CS2.pdf"],
+  ["2025-cs1-key", "https://gate2025.iitr.ac.in/doc/2025/2025_Key/CS1_Keys.pdf"],
+  ["2025-cs2-key", "https://gate2025.iitr.ac.in/doc/2025/2025_Key/CS2_Keys.pdf"],
 ];
 const results = await Promise.allSettled(files.map(async ([id, url]) => {
   const response = await fetch(url, { signal: AbortSignal.timeout(45000) });

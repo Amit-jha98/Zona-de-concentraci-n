@@ -85,7 +85,7 @@ Q.28 Let 3 2 f ( x ) = x + 15 x − 33 x − 36 be a real-valued function. Which
 2023-cs-q29 | MSQ 1m | KEY A, C
 2 Q.29 Let f and g be functions of natural numbers given by f ( n ) = n and g ( n ) = n . Which of the following statements is/are TRUE? (A) f ∈ O ( g ) (B) f ∈ Ω( g ) (C) f ∈ o ( g ) (D) f ∈ Θ( g )
 
-2023-cs-q30 | NAT 1m | KEY to 2 OR 4 to 4
+2023-cs-q30 | NAT 1m | KEY 2 to 2 OR 4 to 4
 Q.30 Let A be the adjacency matrix of the graph with vertices { 1 , 2 , 3 , 4 , 5 } . 3 5 2 1 4 Let λ 1 , λ 2 , λ 3 , λ 4 , and λ 5 be the five eigenvalues of A . Note that these eigenvalues need not be distinct. The value of λ 1 + λ 2 + λ 3 + λ 4 + λ 5 = .
 
 2023-cs-q31 | NAT 1m | KEY 0 to 0
@@ -178,7 +178,7 @@ Q.59 Consider a sequence a of elements a 0 = 1, a 1 = 5, a 2 = 7, a 3 = 8, a 4 =
 2023-cs-q60 | NAT 2m | KEY 2.374 to 2.376
 Q.60 Consider the syntax directed translation given by the following grammar and se- mantic rules. Here N , I , F and B are non-terminals. N is the starting non-terminal, and #, 0 and 1 are lexical tokens corresponding to input letters “#”, “0” and “1”, respectively. X. val denotes the synthesized attribute (a numeric value) associated with a non-terminal X . I 1 and F 1 denote occurrences of I and F on the right hand side of a production, respectively. For the tokens 0 and 1 , 0 . val = 0 and 1 . val = 1. N → I # F N. val = I. val + F. val I → I 1 B I. val = (2 I 1 . val ) + B. val I → B I. val = B. val 1 F → B F 1 F. val = ( B. val + F . val ) 2 1 1 F → B F. val = B. val 2 B → 0 B. val = 0 . val B → 1 B. val = 1 . val The value computed by the translation scheme for the input string 10#011 is . (Rounded off to three decimal places)
 
-2023-cs-q61 | NAT 2m | KEY to 2
+2023-cs-q61 | NAT 2m | KEY 2 to 2
 Q.61 Consider the following table named Student in a relational database. The primary key of this table is rollNum. Student rollNum name gender marks 1 Naman M 62 2 Aliya F 70 3 Aliya F 80 4 James M 82 5 Swati F 65 The SQL query below is executed on this database. SELECT * FROM Student WHERE gender = ‘F’ AND marks > 65; The number of rows returned by the query is .
 
 2023-cs-q62 | NAT 2m | KEY 6 to 6

@@ -8,7 +8,7 @@ import {
 import { downloadService } from "./download-service.mjs";
 import { cloudDownloads } from "./cloud-downloads.mjs";
 import { VIDEO_ID } from "../shared/video.js";
-import { answerTopicQuestion, createTutorLimiter } from "./tutor.mjs";
+import { createCachedTutor, createTutorLimiter } from "./tutor.mjs";
 import { geminiConfigured } from "./gemini-client.mjs";
 
 function send(res, status, data) {
@@ -57,6 +57,7 @@ async function readBody(req, limit = 4096) {
 
 let activeSearches = 0;
 const tutorLimiter = createTutorLimiter();
+const topicTutor = createCachedTutor();
 export async function apiHandler(req, res, next) {
   if (!req.url.startsWith("/api/")) return next?.();
   try {
@@ -85,7 +86,7 @@ export async function apiHandler(req, res, next) {
       const disconnect = () => { if (!res.writableEnded) controller.abort(); };
       res.on("close", disconnect);
       try {
-        const reply = await answerTopicQuestion(data, { signal: AbortSignal.any([controller.signal, AbortSignal.timeout(55000)]) });
+        const reply = await topicTutor(data, { signal: AbortSignal.any([controller.signal, AbortSignal.timeout(55000)]) });
         if (!res.destroyed) return send(res, 200, reply);
         return;
       } finally {
