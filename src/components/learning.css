@@ -8,6 +8,40 @@
   border: 1px solid var(--line-strong);
   border-radius: 10px;
 }
+.course-analysis { margin: 36px 0; padding: 28px 0; border-block: 1px solid var(--line); }
+.analysis-controls { display: flex; flex-wrap: wrap; gap: 16px; margin: 24px 0 16px; }
+.analysis-controls label, .practice-tools label { display: grid; gap: 7px; font-size: 12px; color: var(--secondary); }
+.analysis-controls select { max-width: 100%; min-height: 42px; }
+.analysis-table-scroll { max-width: 100%; overflow-x: auto; }
+.analysis-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
+.analysis-table caption { text-align: left; color: var(--secondary); font-size: 12px; padding: 0 0 12px; }
+.analysis-table th, .analysis-table td { border-bottom: 1px solid var(--line); padding: 14px 10px; }
+.analysis-table thead th { color: var(--secondary); font-weight: 500; white-space: nowrap; }
+.analysis-table tbody th { font-weight: 500; min-width: 200px; }
+.analysis-table small { display: block; color: var(--secondary); margin-top: 5px; font-size: 11px; font-weight: 400; }
+.analysis-table td { font-variant-numeric: tabular-nums; }
+.analysis-show { margin-top: 18px; }
+.analysis-method { font-size: 12px; color: var(--secondary); margin-top: 20px; line-height: 1.7; }
+.analysis-method summary, .topic-evidence summary { cursor: pointer; }
+.topic-evidence { margin: 22px 0; padding: 16px 0; border-block: 1px solid var(--line); font-size: 12px; line-height: 1.7; color: var(--secondary); }
+.topic-evidence p { margin: 8px 0; }
+.priority-label { display: inline-block; color: var(--text); font-size: 11px; font-weight: 600; }
+.priority-label.vvi { color: var(--accent); }
+.prerequisite { display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 12px; }
+.lecture-mode { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 24px; }
+.lecture-mode .button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.video-study-plan { padding: 20px; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 26px; font-size: 13px; line-height: 1.7; }
+.video-study-plan h3 { margin: 0 0 8px; font-size: 16px; }
+.video-study-plan p { color: var(--secondary); }
+.video-study-plan ol { padding-left: 20px; }
+.practice-tools { display: flex; align-items: end; gap: 24px; margin: 20px 0 28px; }
+.practice-tools p { font-size: 12px; color: var(--secondary); max-width: 420px; line-height: 1.6; margin: 0; }
+@media (max-width: 650px) {
+  .analysis-controls { display: grid; grid-template-columns: 1fr; }
+  .analysis-table { font-size: 12px; }
+  .analysis-table tbody th { min-width: 170px; }
+  .practice-tools { align-items: stretch; flex-direction: column; gap: 12px; }
+}
 .gate-exam-entry h2 { margin: 6px 0; font-size: 21px; }
 .gate-exam-entry p, .aptitude-supplement > p { color: var(--secondary); margin: 0; }
 .gate-exam-entry > .button { flex-shrink: 0; }

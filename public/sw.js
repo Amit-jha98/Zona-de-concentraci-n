@@ -1,4 +1,4 @@
-const CACHE = "edubrowse-shell-v6";
+const CACHE = "edubrowse-shell-v7";
 const SHELL = [
   "/",
   "/app-icon.svg",
@@ -6,6 +6,8 @@ const SHELL = [
   "/manifest.webmanifest",
   "/gate-topic-videos.json",
   "/gate-pyq-bank.json",
+  "/gate-pyq-analysis.json",
+  "/gate-topic-practice-videos.json",
   "/CS_GATE2027_Syllabus.pdf",
 ];
 self.addEventListener("install", (event) => {
@@ -54,7 +56,7 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(() => caches.match("/")),
     );
-  } else if (url.pathname === "/gate-pyq-bank.json" || url.pathname === "/gate-topic-videos.json" || url.pathname.startsWith("/gate-exam-notes/")) {
+  } else if (url.pathname === "/gate-pyq-bank.json" || url.pathname === "/gate-pyq-analysis.json" || url.pathname === "/gate-topic-practice-videos.json" || url.pathname === "/gate-topic-videos.json" || url.pathname.startsWith("/gate-exam-notes/")) {
     event.respondWith(fetch(request, { cache: "no-cache" }).then(async (response) => {
       if (!response.ok) throw new Error("Study content unavailable");
       (await caches.open(CACHE)).put(request, response.clone());

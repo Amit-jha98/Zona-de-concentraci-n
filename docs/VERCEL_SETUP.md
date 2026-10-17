@@ -19,7 +19,7 @@ Never use a `VITE_` prefix for these secrets. Local `.env`, service-account file
 
 Use Vite, Node 22.12 or newer, build command `npm run build:vercel`, output `dist`. The committed `vercel.json` configures the API function and routing. The build installs a checksum-verified Linux yt-dlp executable and packages FFmpeg. Remove any dashboard override that builds only the frontend. Do not set Windows executable paths on Vercel.
 
-Commit/deploy `public/gate-pyq-bank.json`, all files in `public/gate-exam-notes/`, and `public/pyq/` together. Vercel bundles the bank and note JSON for server-side tutor context; question images are frontend static assets. PDFs and authoring documents in `docs/` are not required in the function bundle. Standard builds use the committed material and make no Gemini content-generation calls.
+Commit/deploy `public/gate-pyq-bank.json`, `public/gate-pyq-analysis.json`, `public/gate-topic-practice-videos.json`, all files in `public/gate-exam-notes/`, and `public/pyq/` together. Vercel bundles the bank and note JSON for server-side tutor context; question images are frontend static assets. PDFs and authoring documents in `docs/` are not required in the function bundle. Standard builds use the committed material and make no Gemini content-generation calls.
 
 ## Cloudinary downloads
 
@@ -42,7 +42,7 @@ The in-memory cache and daily budget are per instance and reset on cold starts; 
 ## Verify after deployment
 
 1. Open `/api/health`: expect JSON, `hosting: "vercel"`, `downloads.mode: "cloud"`, `downloads.storage: "cloudinary"`, `downloads.available: true`, and `tutor.configured: true`.
-2. Open `/#/mocks` and a lesson: ten mocks, the question images and expanded notes should load.
+2. Open `/#/mocks` and a lesson: ten mocks, the question images, expanded notes, format-filtered practice and the overview PYQ priority table should load.
 3. For a permitted short video, prepare 360p and use Downloads → Save file. The resulting signed Cloudinary URL should save an actual MP4.
 4. Send one real topic doubt when you want to verify the live tutor. Opening the panel alone is deliberately not a test of the key.
 

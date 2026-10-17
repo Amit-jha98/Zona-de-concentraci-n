@@ -12,7 +12,7 @@ All 455 worked explanations are authored in `scripts/author-*.mjs`. Answers are 
 
 Each question has one primary lesson and up to two secondary mappings. The full bank reaches **131 of 150 concepts** (146 syllabus lessons plus 4 General Aptitude supplements). A topic with no direct PYQ in these supplied years is labelled as such; no past question is invented. [coverage.json](coverage.json) records exact primary and total counts per topic.
 
-Every lesson has an expanded exam method, a worked problem, conditions/edge cases and an additional original numerical exercise. Together with foundation checks this gives **300 original questions plus 455 PYQs**. The notes are authored in `scripts/notes/`; no Gemini request is made while compiling, reading or practising this content.
+Every lesson has an expanded exam method, a worked problem, conditions/edge cases and an additional original numerical exercise. Additional depth now adds three varied MCQ/MSQ/NAT questions per topic and 44 transfer problems, for **794 original questions plus 455 PYQs (1,249 total)**. See [the full 455-question analysis](course-analysis.md) and [course review](../GATE_2027_REVIEW.md). The notes and additional questions are authored in `scripts/notes/` and `scripts/depth/`; no Gemini request is made while compiling, reading or practising this content.
 
 ## Scoring and mocks
 

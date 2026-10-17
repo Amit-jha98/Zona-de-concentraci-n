@@ -521,7 +521,7 @@ export default function App() {
               />
             ) : currentLesson ? (
               <GateLesson
-                key={currentLesson}
+                key={currentLesson+":"+(route.params.tab||"notes")}
                 id={currentLesson}
                 tab={route.params.tab}
                 progress={progress}

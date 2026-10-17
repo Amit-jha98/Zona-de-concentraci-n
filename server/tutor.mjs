@@ -50,7 +50,9 @@ export async function answerTopicQuestion(data, { signal, generate = generateGem
     topic: lesson.title,
     section: lesson.sectionTitle,
     notes: lesson.notes,
-    examGuide: extraNotes.examGuide,
+    // Reviewed-question context already includes that question's own solution.
+    // Avoid sending unrelated practice walkthroughs with every student doubt.
+    examGuide: extraNotes.examGuide?.filter(section=>!["Worked question patterns","Work through the supplied PYQs"].includes(section.title)),
     relationship: lesson.formula,
     example: lesson.example,
     pitfall: lesson.pitfall,

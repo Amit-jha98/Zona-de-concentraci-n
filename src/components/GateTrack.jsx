@@ -37,6 +37,7 @@ import VideoCard, { SkeletonGrid } from "./ui/VideoCard.jsx";
 import TopicPractice from "./TopicPractice.jsx";
 import TopicTutor from "./TopicTutor.jsx";
 import RichText from "./ui/RichText.jsx";
+import CourseAnalysis, { TopicEvidence } from "./CourseAnalysis.jsx";
 import "./learning.css";
 
 export function GateOverview({ progress }) {
@@ -105,12 +106,8 @@ export function GateOverview({ progress }) {
             </strong>
             <p>
               {GATE_SECTIONS.length} sections · {GATE_LESSONS.length} concept
-              lessons · {GATE_LESSONS.reduce((n, l) => n + l.quiz.length, 0)}{" "}
-              explained questions
+              lessons · PYQs & explained MCQ, MSQ and NAT practice
             </p>
-            <span className="small-text">
-              Mapped to GATE-cs Syllabus.
-            </span>
           </div>
         </div>
         <div className="gate-summary-progress">
@@ -137,6 +134,7 @@ export function GateOverview({ progress }) {
         </button>
       </div>
       <section className="gate-exam-entry" aria-label="Mock exam preparation"><div><span className="eyebrow">PUT YOUR PREPARATION TO THE TEST</span><h2>Practise full GATE papers</h2><p>Timed PYQ mocks, official-key scoring, worked solutions and topic-by-topic review.</p></div><button className="button button-dark" onClick={() => navigate("/mocks")}>Open mock exams<ArrowRight size={17} /></button></section>
+      <CourseAnalysis />
       {revision.length > 0 && (
         <div className="revision-strip">
           <Lightbulb size={19} />
@@ -290,9 +288,11 @@ export function GateLesson({
       : "notes",
   );
   const [language, setLanguage] = useState("");
+  const [videoMode,setVideoMode]=useState("concept");
   const [liveRequested, setLiveRequested] = useState(false);
-  const candidates = useTopicCandidates(id);
-  const videos = useVideos(lesson?.videoQuery || "", {
+  const candidates = useTopicCandidates(id,videoMode);
+  const lectureQuery=videoMode==="practice"?(lesson?.videoPlan?.practiceQuery||lesson?.videoQuery):lesson?.videoQuery;
+  const videos = useVideos(lectureQuery || "", {
     duration: "concept",
     language,
     enabled: tab === "videos" && liveRequested,
@@ -382,16 +382,11 @@ export function GateLesson({
             Learn the idea, work through an example, and check your
             understanding.
           </p>
-          {index > 0 && (
+          <TopicEvidence value={lesson.pyqAnalysis}/>
+          {lesson.prerequisites?.length > 0 && (
             <p className="prerequisite">
               Suggested before this:{" "}
-              <button
-                onClick={() =>
-                  navigate(`/lesson/${EXAM_LESSONS[index - 1].id}`)
-                }
-              >
-                {EXAM_LESSONS[index - 1].title}
-              </button>
+              {lesson.prerequisites.map(prerequisite=><button key={prerequisite} onClick={()=>navigate("/lesson/"+prerequisite)}>{LESSON_BY_ID[prerequisite].title}</button>)}
             </p>
           )}
           <div
@@ -543,6 +538,8 @@ export function GateLesson({
                     <option value="hi">Hindi</option>
                   </select>
                 </div>
+                <div className="lecture-mode" role="group" aria-label="Lecture type">{[["concept","Learn the concept"],["practice","Solve GATE problems"]].map(([mode,label])=><button key={mode} className="button" aria-pressed={videoMode===mode} onClick={()=>{setVideoMode(mode);setLiveRequested(false);}}>{label}</button>)}</div>
+                {lesson.videoPlan&&<section className="video-study-plan" aria-label="Video study plan"><h3>{videoMode==="concept"?"What to understand":"What to practise"}</h3><p>{lesson.videoPlan.focus}</p><ol>{lesson.videoPlan.checkpoints.map(step=><li key={step}>{step}</li>)}</ol><p>{lesson.videoPlan.task}</p></section>}
                 <p className="search-query">
                   <Search size={15} />
                   {lesson.title}
@@ -591,7 +588,7 @@ export function GateLesson({
                 <div className="lesson-bottom-actions">
                   <a
                     className="button"
-                    href={`https://www.youtube.com/results?search_query=${encodeURIComponent(lesson.videoQuery)}`}
+                    href={`https://www.youtube.com/results?search_query=${encodeURIComponent(lectureQuery)}`}
                     target="_blank"
                     rel="noreferrer"
                   >

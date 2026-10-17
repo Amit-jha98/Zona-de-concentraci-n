@@ -89,3 +89,43 @@ test("a lesson without a directly mapped PYQ still has complete original practic
   await expect(page.locator('[data-question-id="tabular-minimization-exam-1"]')).toBeVisible();
   await expect(page.getByText(/No question in the supplied/)).toBeVisible();
 });
+
+test("PYQ priorities expose evidence and subject filters without hiding the syllabus",async({page})=>{
+  await page.goto("/#/gate");
+  const analysis=page.getByRole("region",{name:"PYQ priorities",exact:true});
+  await expect(analysis.getByRole("table")).toBeVisible();
+  await analysis.getByLabel("Subject",{exact:true}).selectOption("systems");
+  await analysis.getByLabel("Priority",{exact:true}).selectOption("vvi");
+  await expect(analysis.getByRole("button",{name:"Study Memory management, paging and address translation",exact:true})).toBeVisible();
+  await analysis.getByRole("button",{name:"Study Memory management, paging and address translation",exact:true}).click();
+  await expect(page.getByRole("heading",{name:"Memory management, paging and address translation",exact:true})).toBeVisible();
+  await expect(page.getByRole("region",{name:"This topic in the supplied papers"})).toContainText("9 primary questions");
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+});
+
+test("new varied drills grade and persist, and same-topic PYQ links open practice",async({page})=>{
+  const notes=JSON.parse(readFileSync(new URL("../../public/gate-exam-notes/hashing.json",import.meta.url)));
+  await page.goto("/#/lesson/hashing");
+  await expect(page.getByRole("heading",{name:"Mental model and derivation",exact:true})).toBeVisible();
+  await page.getByRole("link",{name:"Open the original question and try it",exact:true}).first().click();
+  await expect(page.getByRole("tab",{name:"Practice",exact:true})).toHaveAttribute("aria-selected","true");
+  await page.getByLabel("Question format",{exact:true}).selectOption("MCQ");
+  const q=notes.advancedQuiz.find(q=>q.type==="MCQ");
+  const card=page.locator('[data-question-id="'+q.id+'"]');
+  await card.getByRole("radio").nth(q.accepted.alternatives[0][0]).check();
+  await card.getByRole("button",{name:"Check answer",exact:true}).click();
+  await expect(card).toContainText("Correct — work through the reasoning.");
+  await page.reload();
+  await expect(page.locator('[data-question-id="'+q.id+'"]')).toContainText("Correct — work through the reasoning.");
+  await page.getByLabel("Question format",{exact:true}).selectOption("MSQ");
+  await expect(page.locator(".advanced-practice .pyq-card")).toHaveCount(1);
+});
+
+test("video modes have focused study tasks and independent topic queries",async({page})=>{
+  await page.goto("/#/lesson/cache-mapping?tab=videos");
+  await expect(page.getByRole("region",{name:"Video study plan"})).toContainText("cache tag index offset");
+  await page.getByRole("button",{name:"Solve GATE problems",exact:true}).click();
+  await expect(page.getByRole("button",{name:"Solve GATE problems",exact:true})).toHaveAttribute("aria-pressed","true");
+  await expect(page.getByRole("link",{name:/Search this topic on YouTube/})).toHaveAttribute("href",/cache%20tag%20index/);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+});

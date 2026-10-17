@@ -78,7 +78,7 @@ Do not prefix a server key with `VITE_`. A key entered in Settings is kept in se
 
 All 146 lessons have short lecture candidates checked against YouTube metadata. Title matching is not an editorial review of complete lectures; availability can change. The supplied papers add **455 PYQs with final-key scoring, retained original question images, topic mappings and worked explanations**. There are **7 complete original papers and 3 mixed timed mocks**, each 65 questions, 100 marks and 180 minutes. Mixed mocks do not overlap each other. Explanations are app-authored study material, not official institute solutions.
 
-A correct foundation response enables completion. Missed concept checks and topic practice appear in revision prompts. A separate **4-lesson General Aptitude supplement** supports full papers without changing the ten-section CS syllabus. All **150 lessons** have an expanded exam guide and an additional original numerical problem, making **300 original questions plus 455 PYQs**. The supplied papers directly map to 131 lesson concepts; the other concepts retain original practice rather than fabricated PYQs.
+A correct foundation response enables completion. Missed concept checks and topic practice appear in revision prompts. A separate **4-lesson General Aptitude supplement** supports full papers without changing the ten-section CS syllabus. All **150 lessons** now include deeper theory, a solving procedure, prerequisites, worked patterns and four or five exam drills, making **794 original questions plus 455 PYQs (1,249 total)**. This update adds 494 questions, including a transfer problem for each of 44 recurring concepts. The supplied papers directly map to 131 lesson concepts; the other concepts retain original practice rather than fabricated PYQs.
 
 Mocks autosave responses and their absolute deadline on this device. Reloading or leaving does not restart the timer. Review includes MCQ negative marks, exact-set MSQ scoring, inclusive numerical ranges, marks-to-all questions, flags, worked solutions and topic links. Study backups include the most recent 30 mock attempts.
 
@@ -90,7 +90,9 @@ Recompile all authored material **offline** after editing the source files:
 npm run pyq:build
 ```
 
-The authored solutions are in `scripts/author-*.mjs`, guides in `scripts/notes/`, and provenance/coverage in [the PYQ audit](docs/PYQ/README.md). Static `public/gate-pyq-bank.json`, `public/gate-exam-notes/` and `public/pyq/` must be deployed together. The ordinary app build consumes these committed files.
+The course overview includes a primary-topic PYQ priority table with year-balanced marks, subject filters and transparent VVI criteria. All 455 questions are analysed in [the course review](docs/GATE_2027_REVIEW.md). All 150 concepts have short video candidates; a separate practice mode adds 203 distinct checked clips across 109 topics and live focused searches for every topic.
+
+The authored solutions are in `scripts/author-*.mjs`, guides in `scripts/notes/` and `scripts/depth/`, and provenance/coverage in [the PYQ audit](docs/PYQ/README.md). Static `public/gate-pyq-bank.json`, `public/gate-pyq-analysis.json`, `public/gate-topic-practice-videos.json`, `public/gate-exam-notes/` and `public/pyq/` must be deployed together. The ordinary app build consumes these committed files.
 
 See [the complete topic mapping](docs/syllabus-coverage.md), [the extracted PDF text](docs/syllabus-source.txt), and [the video coverage report](docs/topic-video-report.json).
 
