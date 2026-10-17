@@ -9,6 +9,7 @@ import {
 import { STARTER_VIDEOS } from "../src/data/library.js";
 import { getCategory, CATEGORIES } from "../src/data/library.js";
 import { SELF_IMPROVEMENT_SOURCES } from "../shared/selfImprovement.js";
+import { EXAM_LESSONS } from "../src/data/gate/index.js";
 
 test("each supported domain qualifies independently and categories stay separate", () => {
   for (const [title, scope, metadata = {}] of [
@@ -157,13 +158,13 @@ test("category aliases resolve consistently and removed categories are absent ra
   assert.equal(new Set(CATEGORIES.map((c) => c.id)).size, CATEGORIES.length);
 });
 
-test("the scope policy preserves every starter and short-video coverage for all 146 GATE lessons", () => {
+test("the scope policy preserves every starter and short-video coverage for all syllabus and aptitude lessons", () => {
   for (const video of STARTER_VIDEOS)
     assert.ok(isAllowedVideo(video), video.title);
   const catalog = JSON.parse(
     readFileSync("public/gate-topic-videos.json", "utf8"),
   );
-  assert.equal(Object.keys(catalog.lessons).length, 146);
+  assert.equal(Object.keys(catalog.lessons).length, EXAM_LESSONS.length);
   for (const [id, entry] of Object.entries(catalog.lessons))
     assert.ok(
       entry.items.some((video) => isAllowedVideo(video)),

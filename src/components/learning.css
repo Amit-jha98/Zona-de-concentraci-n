@@ -20,6 +20,8 @@
 .analysis-table tbody th { font-weight: 500; min-width: 200px; }
 .analysis-table small { display: block; color: var(--secondary); margin-top: 5px; font-size: 11px; font-weight: 400; }
 .analysis-table td { font-variant-numeric: tabular-nums; }
+.analysis-topic-link { color: inherit; font: inherit; text-align: left; line-height: 1.6; }
+.analysis-topic-link:hover { color: var(--accent); text-decoration: underline; }
 .analysis-show { margin-top: 18px; }
 .analysis-method { font-size: 12px; color: var(--secondary); margin-top: 20px; line-height: 1.7; }
 .analysis-method summary, .topic-evidence summary { cursor: pointer; }
@@ -39,7 +41,10 @@
 @media (max-width: 650px) {
   .analysis-controls { display: grid; grid-template-columns: 1fr; }
   .analysis-table { font-size: 12px; }
-  .analysis-table tbody th { min-width: 170px; }
+  .analysis-table tbody th { min-width: 0; width: 58%; }
+  .analysis-table .analysis-year { display: none; }
+  .analysis-table thead th { white-space: normal; }
+  .analysis-table th, .analysis-table td { padding: 12px 6px; }
   .practice-tools { align-items: stretch; flex-direction: column; gap: 12px; }
 }
 .gate-exam-entry h2 { margin: 6px 0; font-size: 21px; }

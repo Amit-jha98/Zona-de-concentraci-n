@@ -52,4 +52,4 @@ Read-only route check:
 node scripts/check-vercel.mjs https://study-zone-gamma.vercel.app
 ```
 
-These local source changes have not been deployed automatically. End-to-end production checks must follow redeployment with the server environment configured.
+A connected Vercel Git integration starts a deployment after a push. Confirm its completion, then run the production checks above with the server environment configured.

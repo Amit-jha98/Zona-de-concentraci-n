@@ -22,7 +22,7 @@
 
 The PYQ follow-up covers all seven supplied CS papers (2023–2026): **455 questions with final-key scoring, original question images, topic mappings and authored worked solutions**. Seven original-paper mocks and three mixed mocks each preserve 65 questions, 100 marks and 180 minutes. Mixed mocks use disjoint source questions and balance subject marks. Answers, flags and the absolute deadline survive reload; an expired attempt submits on return. Solutions and the doubt tutor appear after submission.
 
-All 150 concepts (146 syllabus lessons and four aptitude supplements) have an expanded exam method, worked problem, conditions and an additional original numerical drill. Combined with the foundation checks there are **755 questions**. The supplied PYQs map to 131 concepts; the remaining topics explicitly retain original practice. The source audit and exact mappings are in `PYQ/README.md` and `PYQ/coverage.json`. Image crops now retain multi-line opening givens, and plain questions use readable text with an expandable original; diagram/code questions retain the original layout and mobile enlargement.
+All 150 concepts (146 syllabus lessons and four aptitude supplements) now have deeper theory, prerequisite links, a solving procedure, worked patterns and four or five exam drills. This update adds 494 questions; combined with foundation checks there are **794 original questions plus 455 PYQs (1,249 total)**. The overview shows year-balanced topic priorities; 44 concepts qualify as VVI by the documented recurrence rule, each with an additional transfer problem. See `GATE_2027_REVIEW.md` and `PYQ/course-analysis.md` for complete evidence. All 150 topics have short video candidates, and 109 have additional practice-mode clips. Image crops retain multi-line givens; diagrams/code retain the original layout and mobile enlargement.
 
 Gemini is reserved for explicitly submitted student doubts. Opening a lesson/chat or selecting a suggested prompt makes no model request. Static notes, solutions and content builds use no Gemini quota. Successful identical conversations cache for six hours, concurrent duplicates coalesce, and output is bounded to 1536 tokens. Per-IP/concurrency limits and a default 18-request UTC daily budget apply per instance; these in-memory controls are not a distributed Vercel quota. Tutor tests use fixtures. No model request was made after the user specified doubt-only usage.
 
@@ -50,7 +50,7 @@ The YouTube Data API path is exercised with provider fixtures because no real AP
 
 A real download was checked using a short public video. FFmpeg merged separate audio/video streams and the result had an MP4 file signature; see download-verification.json. The browser suite separately tests queue-to-file interface states using fixtures.
 
-The production app runs with its Node API, either on a local server or in the same Vercel project as the frontend. These latest workspace changes have not been deployed automatically. No native App Store/Windows packages were created; the installable web app uses the responsive interface. Mobile fullscreen requests landscape, unlocks on exit and holds a wake lock while playback is active, where browser support permits.
+The production app runs with its Node API, either on a local server or in the same Vercel project as the frontend. A connected Vercel Git integration can deploy pushed commits; verify completion before treating a source update as live. No native App Store/Windows packages were created; the installable web app uses the responsive interface. Mobile fullscreen requests landscape, unlocks on exit and holds a wake lock while playback is active, where browser support permits.
 
 ## Evidence files
 
@@ -63,8 +63,8 @@ The production app runs with its Node API, either on a local server or in the sa
 
 ## Final check results
 
-- 68 unit/service tests passed.
-- 60 browser tests passed across desktop and mobile, including all six new exam/practice scenarios on both viewports. The Windows test-server process required explicit cleanup after the assertions completed; the runner then exited successfully.
+- 72 unit/service tests passed, including full-bank integrity, year-balanced priorities, prerequisite-cycle checks, independent transfer-problem calculations and short-video coverage for all 150 topics.
+- 66 browser tests passed across desktop and mobile. Four affected priority/layout checks passed again after the final mobile table adjustment. Tests used an existing local server, avoiding the earlier Windows test-server teardown problem.
 - Oxlint completed with no warnings or errors.
 - Vercel production build completed, including checksum-verified yt-dlp and the FFmpeg executable check.
 - Desktop/mobile practice and exam screens fit their viewports. The bank and visited topic guides/question images use offline caches; updated JSON is fetched first to avoid keeping stale corrections after deployment.

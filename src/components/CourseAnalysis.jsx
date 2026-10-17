@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
 import useCourseAnalysis from "../hooks/useCourseAnalysis.js";
 import { navigate } from "../hooks/useRoute.js";
 const labels = {
@@ -123,32 +122,22 @@ export default function CourseAnalysis() {
             <tr>
               <th scope="col">Topic</th>
               <th scope="col">Questions</th>
-              <th scope="col">Years</th>
+              <th scope="col" className="analysis-year">Years</th>
               <th scope="col">Mean marks/year</th>
-              <th scope="col">Study</th>
             </tr>
           </thead>
           <tbody>
             {topics.slice(0, all ? topics.length : 8).map((t) => (
               <tr key={t.id}>
                 <th scope="row">
-                  <span>{t.title}</span>
+                  <button className="analysis-topic-link" onClick={()=>navigate("/lesson/"+t.id)} aria-label={"Study "+t.title}>{t.title}</button>
                   <small>
-                    {t.sectionTitle} · {labels[t.priority]}
+                    {t.sectionTitle} · {labels[t.priority]} · {t.years.length}/4 years
                   </small>
                 </th>
                 <td>{t.primaryCount}</td>
-                <td>{t.years.length}/4</td>
+                <td className="analysis-year">{t.years.length}/4</td>
                 <td>{t.meanMarks.toFixed(2)}</td>
-                <td>
-                  <button
-                    className="text-button"
-                    onClick={() => navigate("/lesson/" + t.id)}
-                    aria-label={"Study " + t.title}
-                  >
-                    <ArrowRight size={17} />
-                  </button>
-                </td>
               </tr>
             ))}
           </tbody>
